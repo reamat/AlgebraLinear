@@ -30,7 +30,7 @@ Para informações sobre como compilar o código fonte, leia o arquivo `README.m
 
 ### Compatibilidade
 
-O código LaTeX do livro deve permitir sua compilação tanto com `latex` como com `pdflatex`.
+O código LaTeX do livro deve permitir sua compilação com `pdflatex`.
 
 #### Instruções LaTeX não compatíveis
 
@@ -53,25 +53,21 @@ Fazemos a conversão do livro de código LaTeX para HTML usando o pacote [TeX4ht
 
 ### Figuras
 
-Os arquivos das figuras devem ser fornecidos em formato `EPS` e `PNG` sendo armazenados no subdiretório `semanaXX/figuras`, onde `semanaXX/figuras` é o diretório do capítulo que a figura pertence. As figuras devem ser fornecidas no tamanho desejado para o livro, i.e. evite definir o tamanho da figura no código LaTeX. Para uma vizualização conformável em celulares, recomendamos que a figura tenha largura inferior a 320px.
+Os arquivos das figuras devem ser fornecidos em formato `PNG` sendo armazenados no subdiretório `SemanaXX`, onde `SemanaXX` é o diretório do tópico da semana que a figura se refere. As figuras devem ser fornecidas no tamanho desejado para o livro, i.e. evite definir o tamanho da figura no código LaTeX. Para uma vizualização conformável em celulares, recomendamos que a figura tenha largura inferior a 320px.
 
 A inclusão de uma figura no código LaTex deve ser feita da seguinte forma:
 
     \begin{figure}
         \centering
-	    \includegraphics{semanaXX/figuras/figfoo}
-		\caption{Descrição da figura figfoo.}
-		\label{fig:figfoo}
-	\end{figure}
+	\includegraphics{figfoo}
+	\caption{Descrição da figura figfoo.}
+	\label{fig:figfoo}
+    \end{figure}
 
-Não insira figuras dentro de outros ambientes como, por exemplo, `ex`, `teo`, `sol` e outros.
+Não insira figuras dentro de outros ambientes.
 
-Sempre que possível, forneça o código fonte da figura armazenando-o na pasta `semanaXX/figuras/figfoo`. Nesta mesma pasta, crie um arquivo README.md com uma descrição da figura e a linceça da mesma, a qual deve ser compatível com a CC-BY-SA 3.0.
+Sempre que possível, forneça o código fonte da figura armazenando-o na pasta `SemanaXX/figfoo`, sendo figfoo.png o arquivo da figura. Nesta mesma pasta, crie um arquivo README.md com uma descrição da figura e a linceça da mesma, a qual deve ser compatível com a CC-BY-SA 3.0.
 
 ### Equações e símbolos matemáticos
 
 As equações e símbolos matemáticos estão escritos usando a coleção de pacotes [AMS-LaTeX](http://www.ams.org/publications/authors/tex/amslatex).
-
-#### Uso da vírgula
-
-O livro usa o pacote LaTeX [`icomma`](https://www.ctan.org/pkg/icomma). Desta forma, para que um espaço apareça após uma vírgula é necessário por o espaço no código LaTeX. Por exemplo, o código LaTeX `$1,24$` produz o número 1,24, enquanto o código `$1, 24$` porduz os números 1 e 24 separados por uma vírgula e um espaço.
