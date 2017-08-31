@@ -1,176 +1,176 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass{article} %%DM%%Escolher document class and options article, etc
+\documentclass[../livro.tex]{subfiles} %%DM%%Escolher document class and options article, etc
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%Pacotes básicos para MathEnvir%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%Pacotes básicos para MathEnvir%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{amsmath}   %%AMS primary package (includes amstext, amsopn, amsbsy), provides various features for displayed equations and %%other mathematical constructs.
-%%%%OPTIONS FOR THE AMSMATH PACKAGE
-\usepackage{amscd}     %%Provides a CD environment for simple commutative diagrams (no support for diagonal arrows).
-\usepackage{amsxtra}   %%Provides certain odds and ends such as \fracwithdelims and \accentedsymbol, for compatibility with documents %%created using version 1.1.
-\usepackage{amsthm}    %%Enhanced version of \newtheorem command for defining theorem-like environments
-\usepackage{amssymb}   %%Provides an extended symbol collection (includes amsfonts). For example, \barwedge, \boxdot, \boxminus, %%\boxplus, \boxtimes, \Cap, \Cup (and many more), the arrow \leadsto, and some other symbols such as \Box and \Diamond.
+% \usepackage{amsmath}   %%AMS primary package (includes amstext, amsopn, amsbsy), provides various features for displayed equations and %%other mathematical constructs.
+% %%%%OPTIONS FOR THE AMSMATH PACKAGE
+% \usepackage{amscd}     %%Provides a CD environment for simple commutative diagrams (no support for diagonal arrows).
+% \usepackage{amsxtra}   %%Provides certain odds and ends such as \fracwithdelims and \accentedsymbol, for compatibility with documents %%created using version 1.1.
+% \usepackage{amsthm}    %%Enhanced version of \newtheorem command for defining theorem-like environments
+% \usepackage{amssymb}   %%Provides an extended symbol collection (includes amsfonts). For example, \barwedge, \boxdot, \boxminus, %%\boxplus, \boxtimes, \Cap, \Cup (and many more), the arrow \leadsto, and some other symbols such as \Box and \Diamond.
 
-\usepackage{latexsym}  %%makes few additional characters available: \Box \Join \Box \Diamond \leadsto \sqsubset \sqsupset \lhd \unlhd %%\rhd \unrhd
+% \usepackage{latexsym}  %%makes few additional characters available: \Box \Join \Box \Diamond \leadsto \sqsubset \sqsupset \lhd \unlhd %%\rhd \unrhd
 
-\usepackage[makeroom]{cancel}   % Cancelar termos em equações
+% \usepackage[makeroom]{cancel}   % Cancelar termos em equações
 
-\usepackage{enumerate}
+% \usepackage{enumerate}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%Links -- Só funciona para .pdf%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%Links -- Só funciona para .pdf%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\usepackage{hyperref}  %% for references %%Options below
-%\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, linktoc=page, pdftitle={Shadowing}, pdfauthor={D. Marcon}}
+% %\usepackage{hyperref}  %% for references %%Options below
+% %\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, linktoc=page, pdftitle={Shadowing}, pdfauthor={D. Marcon}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%Color, graphicx, margin (geometry)%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-\usepackage[dvips]{graphicx}
-\usepackage{color}            %%Textcolor, color definitions, etc
-
-%\definecolor{light-blue}{rgb}{0.8,0.85,1}     %%Numbers between 0 and 1
-%\definecolor{mygrey}{gray}{0.75}              %%Numbers between 0 and 1
-
-\usepackage{verbatim}         %%Adds text from other files, comment environment
-
-\usepackage{xpatch}           %%Bold theorem titles
-\makeatletter
-   \xpatchcmd{\@thm}{\fontseries\mddefault\upshape}{}{}{} %same font as thm-header
-\makeatother
-
-\usepackage[margin=1in]{geometry}  %%Margins  %%Possible to use \newgeometry to modify small parts mid-document
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%Color, graphicx, margin (geometry)%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+% \usepackage[dvips]{graphicx}
+% %\usepackage{color}            %%Textcolor, color definitions, etc
 
-\usepackage{tgbonum}
+% %\definecolor{light-blue}{rgb}{0.8,0.85,1}     %%Numbers between 0 and 1
+% %\definecolor{mygrey}{gray}{0.75}              %%Numbers between 0 and 1
+
+% \usepackage{verbatim}         %%Adds text from other files, comment environment
+
+% \usepackage{xpatch}           %%Bold theorem titles
+% \makeatletter
+%    \xpatchcmd{\@thm}{\fontseries\mddefault\upshape}{}{}{} %same font as thm-header
+% \makeatother
+
+% \usepackage[margin=1in]{geometry}  %%Margins  %%Possible to use \newgeometry to modify small parts mid-document
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%Para escrever português%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%\usepackage[utf8]{inputenc}  %%encoding
-%\usepackage[T1]{fontenc}     %%encoding
-
-\usepackage[portuguese]{babel}   %%Portuguese-specific commands
+% \usepackage{tgbonum}
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%Theorem styles, numbering%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%Para escrever português%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\theoremstyle{plain}
-\newtheorem{theorem}{Teorema}              %%section, chapter, etc
-\newtheorem{proposition}[theorem]{Proposição}      %%everything below obeys theorem because: [theorem]
-\newtheorem{lemma}[theorem]{Lema}
-\newtheorem{corollary}[theorem]{Corolário}
-\newtheorem{maintheorem}{Teorema}                   %%number doesn't obey order
-\renewcommand{\themaintheorem}{\Alph{maintheorem}}
-\newtheorem{maincorollary}{Corolário}
-\newtheorem{conjecture}{Conjectura}
-\newtheorem*{claim}{Afirmação}
+% %\usepackage[utf8]{inputenc}  %%encoding
+% %\usepackage[T1]{fontenc}     %%encoding
 
-\newtheorem*{desloct}{Segundo Teorema de Deslocamento -- Deslocamento em $t$}     %%Sem numeração e com o nome desejado
-
-\theoremstyle{definition}
-\newtheorem{remark}[theorem]{Observação}
-\newtheorem{example}[theorem]{Exemplo}
-\newtheorem{definition}[theorem]{Definição}
-\newtheorem{exercise}{Exercício}
+% \usepackage[portuguese]{babel}   %%Portuguese-specific commands
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%New Commands%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newcommand{\mb}[1]{\mathbb{#1}}
-\newcommand{\bC}{\mathbb{C}}
-\newcommand{\bE}{\mathbb{E}}
-\newcommand{\bK}{\mathbb{K}}
-\newcommand{\bN}{\mathbb{N}}
-\newcommand{\bP}{\mathbb{P}}
-\newcommand{\bQ}{\mathbb{Q}}
-\newcommand{\bR}{\mathbb{R}}
-\newcommand{\bS}{\mathbb{S}}
-\newcommand{\bT}{\mathbb{T}}
-\newcommand{\bZ}{\mathbb{Z}}
-
-\newcommand{\cE}{\mathcal{E}}
-\newcommand{\cF}{\mathcal{F}}
-\newcommand{\cH}{\mathcal{H}}
-\newcommand{\cL}{\mathcal{L}}
-\newcommand{\cM}{\mathcal{M}}
-\newcommand{\cO}{\mathcal{O}}
-\newcommand{\cP}{\mathcal{P}}
-\newcommand{\cQ}{\mathcal{Q}}
-\newcommand{\cR}{\mathcal{R}}
-\newcommand{\cS}{\mathcal{S}}
-
-\newcommand{\al} {\alpha}       \newcommand{\Al}{\Alpha}
-\newcommand{\be} {\beta}        \newcommand{\Be}{\Beta}
-\newcommand{\ga} {\gamma}       \newcommand{\Ga}{\Gamma}
-\newcommand{\de} {\delta}       \newcommand{\De}{\Delta}
-\newcommand{\ep} {\epsilon}
-\newcommand{\eps}{\varepsilon}
-\newcommand{\ze} {\zeta}
-\newcommand{\vte}{\vartheta}
-\newcommand{\iot}{\iota}
-\newcommand{\ka} {\kappa}
-\newcommand{\la} {\lambda}      \newcommand{\La}{\Lambda}
-\newcommand{\vpi}{\varpi}
-%\newcommand{\ro} {\rho}
-\newcommand{\vro}{\varrho}
-\newcommand{\si} {\sigma}       \newcommand{\Si}{\Sigma}
-\newcommand{\vsi}{\varsigma}
-\newcommand{\ups}{\upsilon}     \newcommand{\Up}{\Upsilon}
-\newcommand{\vphi}{\varphi}
-\newcommand{\om} {\omega}       \newcommand{\Om}{\Omega}
-
-\newcommand{\ang}{\operatorname{angle}}
-\newcommand{\closu}{\operatorname{clos}}
-\newcommand{\const}{\operatorname{const}}
-\newcommand{\curl}{\operatorname{curl}}
-\newcommand{\dd}{\, \mathrm{d}}
-\newcommand{\diam}{\operatorname{diam}}
-\newcommand{\Div}{\operatorname{div}}
-\newcommand{\dist}{\operatorname{dist}}
-\newcommand{\grad}{\operatorname{grad}}
-\newcommand{\fr}{\partial}
-\newcommand{\graph}{\operatorname{graph}}
-\newcommand{\id}{\operatorname{Id}}
-\newcommand{\inter}{\operatorname{int}}
-\newcommand{\Leb}{\operatorname{Leb}}
-\newcommand{\length}{\operatorname{length}}
-\newcommand{\Lip}{\operatorname{Lip}}
-\newcommand{\res}{\operatornamewithlimits{Res}}
-\newcommand{\rot}{\operatorname{rot}}
-\newcommand{\sen}{\operatorname{sen}}
-\newcommand{\senh}{\operatorname{senh}}
-\newcommand{\Span}{\operatorname{Span}}
-\newcommand{\spec}{\operatorname{spec}}
-\newcommand{\supp}{\operatorname{supp}}
-\newcommand{\var}{\operatornamewithlimits{{var}}}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%Theorem styles, numbering%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\everymath{\displaystyle}
+% \theoremstyle{plain}
+% \newtheorem{theorem}{Teorema}              %%section, chapter, etc
+% \newtheorem{proposition}[theorem]{Proposição}      %%everything below obeys theorem because: [theorem]
+% \newtheorem{lemma}[theorem]{Lema}
+% \newtheorem{corollary}[theorem]{Corolário}
+% \newtheorem{maintheorem}{Teorema}                   %%number doesn't obey order
+% \renewcommand{\themaintheorem}{\Alph{maintheorem}}
+% \newtheorem{maincorollary}{Corolário}
+% \newtheorem{conjecture}{Conjectura}
+% \newtheorem*{claim}{Afirmação}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%% INFO  DO  ARTIGO %%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \newtheorem*{desloct}{Segundo Teorema de Deslocamento -- Deslocamento em $t$}     %%Sem numeração e com o nome desejado
 
-\title{Álgebra Linear -- Semana 01}
-%\author{}
-\date{\today}
+% \theoremstyle{definition}
+% \newtheorem{remark}[theorem]{Observação}
+% \newtheorem{example}[theorem]{Exemplo}
+% \newtheorem{definition}[theorem]{Definição}
+% \newtheorem{exercise}{Exercício}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%New Commands%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \newcommand{\mb}[1]{\mathbb{#1}}
+% \newcommand{\bC}{\mathbb{C}}
+% \newcommand{\bE}{\mathbb{E}}
+% \newcommand{\bK}{\mathbb{K}}
+% \newcommand{\bN}{\mathbb{N}}
+% \newcommand{\bP}{\mathbb{P}}
+% \newcommand{\bQ}{\mathbb{Q}}
+% \newcommand{\bR}{\mathbb{R}}
+% \newcommand{\bS}{\mathbb{S}}
+% \newcommand{\bT}{\mathbb{T}}
+% \newcommand{\bZ}{\mathbb{Z}}
+
+% \newcommand{\cE}{\mathcal{E}}
+% \newcommand{\cF}{\mathcal{F}}
+% \newcommand{\cH}{\mathcal{H}}
+% \newcommand{\cL}{\mathcal{L}}
+% \newcommand{\cM}{\mathcal{M}}
+% \newcommand{\cO}{\mathcal{O}}
+% \newcommand{\cP}{\mathcal{P}}
+% \newcommand{\cQ}{\mathcal{Q}}
+% \newcommand{\cR}{\mathcal{R}}
+% \newcommand{\cS}{\mathcal{S}}
+
+% \newcommand{\al} {\alpha}       \newcommand{\Al}{\Alpha}
+% \newcommand{\be} {\beta}        \newcommand{\Be}{\Beta}
+% \newcommand{\ga} {\gamma}       \newcommand{\Ga}{\Gamma}
+% \newcommand{\de} {\delta}       \newcommand{\De}{\Delta}
+% \newcommand{\ep} {\epsilon}
+% \newcommand{\eps}{\varepsilon}
+% \newcommand{\ze} {\zeta}
+% \newcommand{\vte}{\vartheta}
+% \newcommand{\iot}{\iota}
+% \newcommand{\ka} {\kappa}
+% \newcommand{\la} {\lambda}      \newcommand{\La}{\Lambda}
+% \newcommand{\vpi}{\varpi}
+% %\newcommand{\ro} {\rho}
+% \newcommand{\vro}{\varrho}
+% \newcommand{\si} {\sigma}       \newcommand{\Si}{\Sigma}
+% \newcommand{\vsi}{\varsigma}
+% \newcommand{\ups}{\upsilon}     \newcommand{\Up}{\Upsilon}
+% \newcommand{\vphi}{\varphi}
+% \newcommand{\om} {\omega}       \newcommand{\Om}{\Omega}
+
+% \newcommand{\ang}{\operatorname{angle}}
+% \newcommand{\closu}{\operatorname{clos}}
+% \newcommand{\const}{\operatorname{const}}
+% \newcommand{\curl}{\operatorname{curl}}
+% \newcommand{\dd}{\, \mathrm{d}}
+% \newcommand{\diam}{\operatorname{diam}}
+% \newcommand{\Div}{\operatorname{div}}
+% \newcommand{\dist}{\operatorname{dist}}
+% \newcommand{\grad}{\operatorname{grad}}
+% \newcommand{\fr}{\partial}
+% \newcommand{\graph}{\operatorname{graph}}
+% \newcommand{\id}{\operatorname{Id}}
+% \newcommand{\inter}{\operatorname{int}}
+% \newcommand{\Leb}{\operatorname{Leb}}
+% \newcommand{\length}{\operatorname{length}}
+% \newcommand{\Lip}{\operatorname{Lip}}
+% \newcommand{\res}{\operatornamewithlimits{Res}}
+% \newcommand{\rot}{\operatorname{rot}}
+% \newcommand{\sen}{\operatorname{sen}}
+% \newcommand{\senh}{\operatorname{senh}}
+% \newcommand{\Span}{\operatorname{Span}}
+% \newcommand{\spec}{\operatorname{spec}}
+% \newcommand{\supp}{\operatorname{supp}}
+% \newcommand{\var}{\operatornamewithlimits{{var}}}
+
+
+% \everymath{\displaystyle}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%% INFO  DO  ARTIGO %%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \title{Álgebra Linear -- Semana 01}
+% %\author{}
+% \date{\today}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -178,14 +178,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
-\maketitle
-\tableofcontents
 
-\section{Estrutura do Curso}
+%\maketitle
+%\tableofcontents
 
-Ver plano de ensino e/ ou plataforma Moodle.
+% \section{Estrutura do Curso}
 
-\section{Sistemas Lineares}
+% Ver plano de ensino e/ou plataforma Moodle.
+
+\chapter{Sistemas Lineares}
 
 Começamos nosso estudo diretamente com um exemplo:
 
