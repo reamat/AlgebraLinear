@@ -14,11 +14,15 @@
 %%%%%%%%Pacotes básicos para MathEnvir%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage{amsmath}   %%AMS primary package (includes amstext, amsopn, amsbsy), provides various features for displayed equations and %%other mathematical constructs.
+
+\usepackage{amsmath}%%AMS primary package (includes amstext, amsopn, amsbsy), provides various features for displayed equations and %%other mathematical constructs.
+
 %%%%OPTIONS FOR THE AMSMATH PACKAGE
 \usepackage{amscd}     %%Provides a CD environment for simple commutative diagrams (no support for diagonal arrows).
 \usepackage{amsxtra}   %%Provides certain odds and ends such as \fracwithdelims and \accentedsymbol, for compatibility with documents %%created using version 1.1.
+
 \usepackage{amsthm}    %%Enhanced version of \newtheorem command for defining theorem-like environments
+
 \usepackage{amssymb}   %%Provides an extended symbol collection (includes amsfonts). For example, \barwedge, \boxdot, \boxminus, %%\boxplus, \boxtimes, \Cap, \Cup (and many more), the arrow \leadsto, and some other symbols such as \Box and \Diamond.
 
 \usepackage{latexsym}  %%makes few additional characters available: \Box \Join \Box \Diamond \leadsto \sqsubset \sqsupset \lhd \unlhd %%\rhd \unrhd
@@ -26,13 +30,6 @@
 \usepackage[makeroom]{cancel}   % Cancelar termos em equações
 
 \usepackage{enumerate}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%Links -- Só funciona para .pdf%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%\usepackage{hyperref}  %% for references %%Options below
-%\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, linktoc=page, pdftitle={Shadowing}, pdfauthor={D. Marcon}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%Color, graphicx, margin (geometry)%%%%%%
@@ -55,7 +52,7 @@
 \usepackage[margin=1in]{geometry}  %%Margins  %%Possible to use \newgeometry to modify small parts mid-document
 
 
-
+%font
 \usepackage{tgbonum}
 
 
@@ -64,12 +61,7 @@
 %%%%%%%%%%%Para escrever português%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-%\usepackage[utf8]{inputenc}  %%encoding
-%\usepackage[T1]{fontenc}     %%encoding
-
 \usepackage[portuguese]{babel}   %%Portuguese-specific commands
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -146,6 +138,7 @@
 
 \newcommand{\ang}{\operatorname{angle}}
 \newcommand{\closu}{\operatorname{clos}}
+\newcommand{\Col}{\operatorname{Col}}
 \newcommand{\const}{\operatorname{const}}
 \newcommand{\curl}{\operatorname{curl}}
 \newcommand{\dd}{\, \mathrm{d}}
@@ -160,6 +153,7 @@
 \newcommand{\Leb}{\operatorname{Leb}}
 \newcommand{\length}{\operatorname{length}}
 \newcommand{\Lip}{\operatorname{Lip}}
+\newcommand{\proj}{\operatorname{proj}}
 \newcommand{\res}{\operatornamewithlimits{Res}}
 \newcommand{\rot}{\operatorname{rot}}
 \newcommand{\sen}{\operatorname{sen}}
@@ -177,6 +171,11 @@
 
 %define a marcação dos capítulos
 \addto\captionsportuguese{\renewcommand{\chaptername}{}}
+%\addto\captionsportuguese{\renewcommand{\chaptermark}{}}
+
+%%%% no blank pages between chapters %%%%
+\let\cleardoublepage\clearpage
+
 
 %pacote de modulação
 \usepackage{subfiles}
@@ -190,21 +189,47 @@
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{\tiny{Licença CC-BY-SA-3.0. Contato: \url{livroscolaborativos@gmail.com}}}
 
-\title{Álgebra Linear\\\small{Um Livro Colaborativo}}
-\author{}
-\date{\today}
+\newcommand{\emconstrucao}{
+  \begin{center}
+    Em construção ... Caso deseja colaborar com a escrita deste livro, veja como em:
+
+    \url{https://github.com/livroscolaborativos/AlgebraLinear}
+  \end{center}
+}
 
 \begin{document}
 
 %diretório de origem
 \newcommand{\dir}{.}
 
+\frontmatter
+
+\title{Álgebra Linear\\\small{Um Livro Colaborativo}}
+
+\author{}
+
+\date{\today}
+
 \maketitle
 
+\include{organizadores}
+\include{licenca}
+\include{nota_organizadores}
+\include{prefacio}
+
+
 \tableofcontents
+\addcontentsline{toc}{chapter}{Sumário}
+
+\mainmatter
 
 %Inclui os capítulos
 \subfile{Semana01/semana01.tex}
 \subfile{Semana02/semana02.tex}
+\subfile{Semana03/semana03.tex}
+\subfile{Semana04/semana04.tex}
+
+\subfile{Semana12/semana12.tex}
+\subfile{Semana13/semana13.tex}
 
 \end{document}
