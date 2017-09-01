@@ -26,3 +26,12 @@ ou pela lista de e-mails:
 
 Iremos cuidar para analisar seu aviso o mais prontamente possível e removeremos o material que não esteja de acordo com a licença [CC-BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/).
 
+## Compilação
+
+O livro está escrito em linguagem de marcação [LaTeX](http://www.latex-project.org/) e pode ser compilado com o programa `pdflatex` como segue:
+
+    pdflatex livro.tex
+    pdflatex livro.tex
+    pdflatex livro.tex
+
+Isto gera o arquivo `livro.pdf` com a versão completa do livro no formato PDF. Alternativamente, cada capítulo pode compilado separadamente.
