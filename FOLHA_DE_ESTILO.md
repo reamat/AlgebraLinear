@@ -12,7 +12,6 @@ Também, o [repositório GitHub do livro](http://github.com/livroscolaborativos/Al
 
 <livroscolaborativos@gmail.com>
 
-
 ## Regionalização e Estilo de Escrita
 
 O livro está escrito em língua portuguesa, seguindo os costumes linguísticos brasileiros. Dá-se prioridade à ortografia prevista no Acordo Ortográfico de 1990.
@@ -20,7 +19,6 @@ O livro está escrito em língua portuguesa, seguindo os costumes linguísticos bra
 ### Capitalização de nomes de métodos
 
 Deve-se usar maiúscula apenas em nomes próprios, ex: método de Newton, métodos dos mínimos quadrados.
-
 
 ## Código fonte LaTeX
 
@@ -59,7 +57,7 @@ A inclusão de uma figura no código LaTex deve ser feita da seguinte forma:
 
     \begin{figure}
         \centering
-	\includegraphics{figfoo}
+	\includegraphics{\dir/SemanaXX/figfoo.png}
 	\caption{Descrição da figura figfoo.}
 	\label{fig:figfoo}
     \end{figure}
