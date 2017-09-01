@@ -39,7 +39,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\usepackage[dvips]{graphicx}
+\usepackage[dvips,pdftex]{graphicx}
 %\usepackage{color}            %%Textcolor, color definitions, etc
 
 %\definecolor{light-blue}{rgb}{0.8,0.85,1}     %%Numbers between 0 and 1
@@ -171,9 +171,24 @@
 
 \everymath{\displaystyle}
 
-\addto\captionsportuguese{\renewcommand{\chaptername}{Semana}}
+%ligações
+\usepackage[pdfborder={0 0 0 [0 0]},colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue]{hyperref}
 
+
+%define a marcação dos capítulos
+\addto\captionsportuguese{\renewcommand{\chaptername}{}}
+
+%pacote de modulação
 \usepackage{subfiles}
+
+%cabeçalho e rodapé
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{Álgebra Linear - Um Livro Colaborativo}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{\tiny{Licença CC-BY-SA-3.0. Contato: \url{livroscolaborativos@gmail.com}}}
 
 \title{Álgebra Linear\\\small{Um Livro Colaborativo}}
 \author{}
@@ -181,9 +196,15 @@
 
 \begin{document}
 
+%diretório de origem
+\newcommand{\dir}{.}
+
 \maketitle
+
 \tableofcontents
 
-\subfile{./Semana01/semana01.tex}
+%Inclui os capítulos
+\subfile{Semana01/semana01.tex}
+\subfile{Semana02/semana02.tex}
 
 \end{document}
