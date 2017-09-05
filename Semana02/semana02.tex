@@ -20,7 +20,7 @@ Existem maneiras diferentes de representar e de interpretar elementos de Álgebra
 
 \section{Vetores}
 
-Um \textbf{vetor} no espaço tridimensional é um objeto com magnitude, direção e sentido bem definidos (não importa o ponto inicial).
+Um \textbf{vetor} no espaço tridimensional é um objeto com magnitude, direção e sentido bem definidos. Assim sendo, ao representar um vetor como na figura abaixo, não importa onde está o seu ponto inicial. Todas as setas representam o mesmo vetor.
 
 \begin{figure}[h!]
 \begin{center}
@@ -65,7 +65,11 @@ Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referên
     1 \\
   \end{array}
 \right].
-\]
+\] 
+
+
+\noindent Intuitivamente, podemos pensar que o sistema de coordenadas Cartesiano fixa a origem como sendo o ponto inicial do vetor e o ponto $(v_1, v_2, v_3)$ do espaço tridimensional como o ponto final. 
+
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=0.2\linewidth]{\dir/Semana02/semana02-coord.png}
@@ -73,6 +77,17 @@ Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referên
 \end{figure}
 
 No livro ``Álgebra Linear e suas Aplicações'', de David Lay, vetores são representados por letras em negrito. Nestas notas, utilizamos uma setinha em cima da letra para indicar um vetor.
+
+Raramente vamos confundir o ponto $(v_1, v_2, v_3)$ com o vetor
+\[
+\left[
+\begin{array}{c}
+v_1 \\
+v_2 \\
+v_3 \\
+\end{array}
+\right].
+\] De qualquer maneira, é bom estar atento, pois outros textos podem fazê-lo.
 
 O conjunto de todos os vetores com três componentes como acima é chamado de $\bR^3$ (leia-se ``erre três''). Em coordenadas, se tivermos
 \[
@@ -164,7 +179,7 @@ Mais geralmente, um vetor $\vec{v}$ do conjunto $\bR^n$ pode ser pensado como um
   \vdots \\
     0 \\
   \end{array}
-\right], \quad  \cdots,
+\right],   \cdots, \quad
 \vec{e}_{n-1} =
 \left[
   \begin{array}{c}
@@ -237,7 +252,7 @@ Na linguagem da seção anterior, nós dizemos que dois vetores são iguais quando t
       2
     \end{array}
   \right].
-\end{equation*} Além disso, desta forma surge o \textbf{produto de uma matriz por um vetor}:
+\end{equation*} Além disso, é desta forma que surge naturalmente o \textbf{produto de uma matriz por um vetor}:
 \begin{equation*}
   \left[
     \begin{array}{cc}
@@ -257,12 +272,12 @@ Na linguagem da seção anterior, nós dizemos que dois vetores são iguais quando t
       2
     \end{array}
   \right],
-\end{equation*} definido de modo que as duas últimas equações acima signifiquem a mesma coisa. Esta última notação é conhecida como a \textbf{forma matricial} do sistema linear.
+\end{equation*} definido de modo que as duas últimas igualdades acima signifiquem a mesma coisa. Esta última notação é conhecida como a \textbf{forma matricial} do sistema linear.
 
 
 
 
-\begin{example}
+\begin{example}\label{example1}
 O sistema, que já apareceu nas notas da semana anterior
 \[
 \left\{
@@ -321,7 +336,7 @@ A = \left[
     10   \\
   \end{array}
 \right].
-\]
+\] Chegamos a esta conclusão colocando os coeficientes da primeira variável $x_1$ na primeira coluna, os coeficientes da segunda variável $x_2$ na segunda coluna e os coeficientes da terceira variável $x_3$ na terceira coluna$. \ \lhd$
 \end{example}
 
 
@@ -456,7 +471,7 @@ Vamos ilustrar este fato na figura abaixo.
 \includegraphics[width=0.4\linewidth]{\dir/Semana02/semana02-comblinear3.png}
 \end{center}
 \end{figure}
-Por exemplo, para representar o vetor $\vec{v}$ como combinação linear de $\vec{v}_1$ e $\vec{v}_2$, podemos traçar retas paralelas aos vetores, passando pela origem e pela extremidade do vetor $\vec{v}$, como na figura da direita. Assim, pela interpretação geométrica da soma de vetores (ver início das notas), sabemos que $\vec{v}$ é a soma dos vetores em azul. Mas estes, por construção, são colineares aos vetores iniciais e logo múltiplos destes. Concluimos que
+Por exemplo, para representar o vetor $\vec{v}$ como combinação linear de $\vec{v}_1$ e $\vec{v}_2$, podemos traçar retas paralelas aos vetores, passando pela origem e pela extremidade do vetor $\vec{v}$, como na figura da direita. Assim, pela interpretação geométrica da soma de vetores (ver início deste capítulo), sabemos que $\vec{v}$ é a soma dos vetores em azul. Mas estes, por construção, são colineares aos vetores iniciais e logo múltiplos destes. Concluimos que
 \[
 \vec{v} = \alpha \vec{v}_1 + \beta \vec{v}_2,
 \] isto é, $\vec{v}$ é uma combinação linear de $\vec{v}_1$ e $\vec{v}_2$. $\ \lhd$
@@ -586,7 +601,7 @@ x_1 \left[
     b_{m} \\
   \end{array}
 \right].
-\] Mas isto é resolver um sistema linear! Portanto novo conceito está intimamente relacionado com tudo o que já tínhamos visto antes.
+\] Mas isto é resolver um sistema linear! Portanto este conceito (aparentemente) novo está intimamente relacionado com tudo o que já tínhamos visto antes.
 
 
 O \textbf{espaço gerado} por todas as combinações lineares dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ é denotado por $\Span \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_k \}$.
@@ -612,6 +627,90 @@ A associação feita acima pode ser resumida como:
 \text{Resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o} \\ \text{vetor $\vec{b}$ pertence ao espaço gerado pelas colunas de $A$.}
 \end{split}}
 \] Desta forma, tudo o que já vimos sobre existência de soluções para sistemas lineares pode ser ``traduzido'' para o contexto de combinações lineares e espaços gerados (faça as traduções!).
+
+
+\begin{example}
+Considere o sistema linear do Exemplo \ref{example1}:
+\[
+\left\{
+\begin{array}{ll}
+x_1 + 2x_2 + x_3 = 12 \\
+x_1 -3x_2 + 5x_3 = 1 \\
+2x_1 - x_2 + 3x_3 = 10
+\end{array}
+\right.
+\] 
+\begin{enumerate}[$(i)$]
+\item Vimos ques este sistema pode ser representado em \textbf{forma matricial} por
+\[
+\left[
+\begin{array}{ccc}
+1 &  2 & 1  \\
+1 & -3 & 5  \\
+2 & -1 & 3  \\
+\end{array}
+\right]
+\left[
+\begin{array}{c}
+x_1   \\
+x_2  \\
+x_3 \\
+\end{array}
+\right] =
+\left[
+\begin{array}{c}
+12   \\
+1  \\
+10   \\
+\end{array}
+\right].
+\] Este formato é interessante principalmente para uma análise mais teórica. Podemos escalonar a matriz para decidir sobre a existência de soluções. Podemos também encarar o sistema como uma equação \textit{aparentemente} escalar $A \vec{x} = \vec{b}$; por exemplo, mais adiante no nosso curso, vamos tentar entender quando que pode fazer sentido escrever a solução como $\vec{x} = A^{-1} \vec{b}$; isto é o que se faria em uma equação linear escalar (adiantando: nem sempre se pode fazer isso!).
+\item Também podemos representar o sistema como uma \textbf{matriz aumentada associada}:
+\[
+\left[
+\begin{array}{ccc|c}
+1 &  2 & 1 & 12 \\
+1 & -3 & 5 &  1 \\
+2 & -1 & 3 & 10 \\
+\end{array}
+\right].
+\] Esta notação é boa para a resolução do sistema. Escalonando a matriz aumentada associada, conseguiremos dizer se o sistema possui solução (no caso em que uma linha da forma escalonada for contraditória), se o sistema possui apenas uma solução (quando todas as colunas referentes às variáveis do sistema possuem posição de pivô) ou então se existem infinitas soluções (caso sem linhas contraditórias em que existem colunas sem posição de pivô -- assocaidas com variáveis livres).
+\item Outra forma possível é a \textbf{forma vetorial} (equivalentemente \textbf{combinação linear das colunas} da matriz associada)
+\[
+x_1
+\left[
+\begin{array}{c}
+1   \\
+1  \\
+2   \\
+\end{array}
+\right] + x_2 
+\left[
+\begin{array}{c}
+  2   \\
+ -3   \\
+ -1   \\
+\end{array}
+\right] + x_3 
+\left[
+\begin{array}{c}
+ 1  \\
+ 5  \\
+ 3  \\
+\end{array}
+\right] = 
+\left[
+\begin{array}{c}
+12   \\
+1  \\
+10   \\
+\end{array}
+\right].
+\] Esta maneira de representar o sistema é favorável para descrições geométricas, pois já vimos como interpretar geometricamente combinações lineares de vetores. Também será interessante futuramente no curso quando a imagem de transformações lineares.
+\end{enumerate}  O entendimento dessas interpretações diferentes facilita (e muito!) o entendimento de vários conceitos que veremos mais adiante no nosso curso de Álgebra Linear.
+% É importante que saibamos passar de uma representação para outra sem dificuldades.
+\end{example}
+
 
 
 \end{document} 
