@@ -1,5 +1,6 @@
 *.aux
 *.log
 *.toc
+*.out
 *~
 ./Semana*/*.pdf
