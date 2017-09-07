@@ -4,7 +4,7 @@
 *.out
 *~
 ./Semana*/*.pdf
-./html
+html
 *.html
 *.4ct
 *.4tc
