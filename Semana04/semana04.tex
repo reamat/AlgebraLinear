@@ -15,8 +15,7 @@
 
 
 A operação de soma de matrizes e de multiplicação por escalar são definidas da mesma forma que definimos estas operações para vetores. Na soma, basta somar componente a componente, enquanto que na multiplicação por escalar o que fazemos é multiplicar todas as componentes da matriz pelo escalar (número) dado. Desta forma, por exemplo,
-\[
-\begin{split}
+\begin{align*}
 \left[
 \begin{array}{cccc}
 1 & -1 & \pi & 0 \\
@@ -46,8 +45,8 @@ A operação de soma de matrizes e de multiplicação por escalar são definidas da m
 6 & 8 & 4 & -2 \\
 \end{array}
 \right]
-\end{split}
-\] enquanto
+\end{align*}
+enquanto
 \[
 5\cdot \left[
 \begin{array}{cccc}
@@ -913,14 +912,17 @@ Matrizes inversas têm uma importância mais teórica no nosso curso, como veremos 
 
 
 Vamos, nesta subseção, verificar que
-\[
-\boxed{
-	\begin{split}
-	&\text{A matriz $A$ é invertível se, e somente se, o sistema linear $A \vec{x} = \vec{b}$ possui}  \\
-	&\text{exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$.}
-	\end{split}
-}
-\]
+% \[
+% \boxed{
+% 	\begin{split}
+% 	&\text{A matriz $A$ é invertível se, e somente se, o sistema linear $A \vec{x} = \vec{b}$ possui}  \\
+% 	&\text{exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$.}
+% 	\end{split}
+% }
+% \]
+\begin{center}
+  ''a matriz $A$ é invertível se, e somente se, o sistema linear $A \vec{x} = \vec{b}$ possui exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$.''
+\end{center}
 
 \noindent $\implies\!\!)$ Se $A$ é invertível, então conseguimos resolver todos os sistemas
 \[
@@ -941,13 +943,11 @@ b_1 \vec{e}_1 + b_2 \vec{e}_2 + \cdots + b_n \vec{e}_n,
 \[
 \vec{x} = b_1 \vec{x}_1 + b_2 \vec{x}_2 + \cdots + b_n \vec{x}_n,
 \] já que pela linearidade do produto da matriz $A$ por vetores, temos
-\[
-\begin{split}
+\begin{align*}
 A  \vec{x} & = b_1 A\vec{x}_1 + b_2 A\vec{x}_2 + \cdots + b_n A\vec{x}_n, \\
 & = b_1 \vec{e}_1 + b_2 \vec{e}_2 + \cdots + b_n \vec{e}_n \\
 & = \vec{b}.
-\end{split}
-\]
+\end{align*}
 
 \noindent $\Longleftarrow)$ Reciprocamente, suponhamos que o sistema possua exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$. Em particular, podemos resolver os sitemas
 \[

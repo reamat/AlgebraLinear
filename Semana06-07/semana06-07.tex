@@ -109,24 +109,16 @@ Várias propriedades interessantes aparecem naturalmente como consequência da def
 \[
 (x_1-k_1) \vec{v}_1 + (x_2-k_2) \vec{v}_2 + \cdots + (x_d-k_d) \vec{v}_d = \vec{v} - \vec{v} = \vec{0}.
 \] Sendo a base $\cB$ formada por vetores LI, concluimos que os coeficientes devem ser nulos, isto é, $x_1=k_1, x_2=k_2,\dots,x_d=k_d$. Portanto,
-\[
-\boxed{
-	\begin{split}
-	\text{Todo vetor pode ser representado de maneira única \, } \\
-	\text{como combinação linear dos elementos de uma base.}
-	\end{split}
-}
-\]
+
+\begin{center}
+  ''todo vetor pode ser representado de maneira única como combinação linear dos elementos de uma base.''
+\end{center}
 
 Uma segunda propriedade que é fundamental é a seguinte:
-\[
-\boxed{
-	\begin{split}
-	\text{Toda base de um espaço vetorial fixado } \\
-	\text{possui o mesmo número de elementos.}
-	\end{split}
-}
-\]
+\begin{center}
+  ''toda base de um espaço vetorial fixado possui o mesmo número de elementos.''
+\end{center}
+
 \begin{proof}[Justificativa] Se tivéssemos duas bases $\cB_1 = \{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_d\} \subset V$ e $\cB_2 = \{\vec{w}_1, \vec{w}_2, \dots, \vec{w}_k\} \subset V$ de um espaço vetorial $V$ com $k<d$, nós poderíamos escrever os elementos da base $\cB_1$ como combinações lineares dos elementos da base $\cB_2$:
 	\[
 	\left\{
@@ -346,15 +338,9 @@ Vimos que o espaço nulo (núcleo) de uma matriz $A$ de ordem $m \times n$ é o con
 \end{example}
 
 É sempre possível obter uma base para $\Nul A$ desta forma. Enfatizamos esta propriedade abaixo:
-\[
-\boxed{
-	\begin{split}
-	\text{Uma base para $\Nul A$ pode ser encontrada por escalonamento ao resol- } \\
-	\text{ver o sistema homogêneo associado à matriz $A$. Além disso, a dimensão} \\
-	\text{do espaço nulo é igual ao número de variáveis livres do sistema.} \qquad
-	\end{split}
-}
-\]
+\begin{center}
+  ''uma base para $\Nul A$ pode ser encontrada por escalonamento ao resolver o sistema homogêneo associado à matriz $A$. Além disso, a dimensão do espaço nulo é igual ao número de variáveis livres do sistema.''
+\end{center}
 
 \subsection{Espaço coluna}
 
@@ -370,15 +356,10 @@ A =
 \right] \rightsquigarrow
 \Col A = \Span \{ \vec{a}_1, \vec{a}_2, \dots, \vec{a}_n\}.
 \] Desta forma, a definição de $\Col A$ já deixa claro um conjunto gerador: as colunas de $A$!. Para determinar uma base, nós devemos ``excluir'' as colunas que podem ser geradas pelas demais, de modo a obter um conjunto linearmente independente.
-\[
-\boxed{
-	\begin{split}
-	\text{Uma base para $\Col A$ é formada pelas colunas pivô da matriz $A$. Para descobrir quais são }\ \ \\
-	\text{as colunas pivô, procedemos por escalonamento. As \textit{colunas da matriz original} formam uma} \\
-	\text{base de $\Col A$. A dimensão do espaço coluna é igual ao número de colunas pivô da matriz. }
-	\end{split}
-}
-\]
+
+\begin{center}
+  ''Uma base para $\Col A$ é formada pelas colunas pivô da matriz $A$. Para descobrir quais são as colunas pivô, procedemos por escalonamento. As \textit{colunas da matriz original} formam uma base de $\Col A$. A dimensão do espaço coluna é igual ao número de colunas pivô da matriz.''
+\end{center}
 
 \begin{example}
 	Encontrar uma base para o espaço coluna da matriz
@@ -536,12 +517,11 @@ v_{m1} & v_{m2} & \cdots & v_{mn} \\
 \end{array}
 \right].
 \] Funciona porque 
-\[
-\begin{split}
+\begin{align*}
 b_1 \vec{v}_1 + b_2 \vec{v}_2 + \cdots + b_n \vec{v}_n & = \sum_{j=1}^{n} b_j \vec{v}_j = \sum_{j=1}^{n} b_j \sum_{i=1}^{n} v_{ij} \vec{e}_i  = \sum_{i=1}^{n} \bigg(\sum_{j=1}^{n} b_j v_{ij}\bigg) \vec{e}_i \\
 & = \bigg(\sum_{j=1}^{n} b_j v_{1j}\bigg) \vec{e}_1 + \bigg(\sum_{j=1}^{n} b_j v_{2j}\bigg) \vec{e}_2 + \cdots + \bigg(\sum_{j=1}^{n} b_j v_{nj}\bigg) \vec{e}_n.
-\end{split}
-\] Assim, devemos ter
+\end{align*}
+Assim, devemos ter
 \[
 \left\{
 \begin{array}{lcl}
