@@ -24,7 +24,7 @@ A \vec{v} = \lambda \vec{v}.
 Geometricamente, $\vec{v}$ é um vetor que não muda de direção quando aplicamos a matriz $A$. No entanto, quando permitimos que $\lambda$ seja um número complexo, esta interpretação geométrica é perdida.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.3 \linewidth]{\dir/Semana10/semana10-eigen.png}
+		\includegraphics[width=0.3 \linewidth]{\dir/Semana10/semana10-eigen}
 	\end{center}
 \end{figure}
 
@@ -51,16 +51,15 @@ Observamos que, se $\vec{v}$ for um autovetor de uma matriz $A$ associado a um a
 \]
 
 Vamos analisar uma forma de encontrar os autovalores de uma matriz $A$ de forma sistemática. Temos as seguintes equivalências:
-\[
-\begin{split}
+\begin{align*}
 & \lambda \text{ é um autovalor de $A$} \\
 \iff & \text{existe } \vec{v} \neq \vec{0} \text{ tal que } A \vec{v} = \lambda \vec{v} \\
 \iff & \text{existe } \vec{v} \neq \vec{0} \text{ tal que } (A - \lambda I)\vec{v} = \vec{0} \\
 \iff & \text{o sistema homogêneo } (A - \lambda I)\vec{v} = \vec{0} \text{ admite solução não trivial} \\
 \iff & A - \lambda I \text{ não é invertível} \\
 \iff & \det (A - \lambda I) = 0.
-\end{split}
-\] Esta última equação pode ser utilizada para encontrar os autovalores: são as raízes do \textbf{polinômio característico}
+\end{align*}
+Esta última equação pode ser utilizada para encontrar os autovalores: são as raízes do \textbf{polinômio característico}
 \[
 p(\lambda) = \det (A - \lambda I).
 \] A equação $\det (A - \lambda I) = 0$ é também chamada de \textbf{equação característica}. Observe, pelas propriedades dos determinantes, que $p$ é de fato um polinômio e tem grau $n$, que é igual a ordem da matriz $A$. É assim consequência do Teorema Fundamental da Álgebra que existem no máximo $n$ autovalores reais (já que um polinômio de grau $n\ge 1$ possui exatamente $n$ raízes complexas).
@@ -103,8 +102,7 @@ p(\lambda) = \det (A - \lambda I).
 	\end{array}
 	\right].
 	\] Precisamos calcular
-	\[
-	\begin{split}
+        \begin{align*}
 	p(\lambda) = \det (A-\lambda I) & = \det
 	\left[
 	\begin{array}{ccc}
@@ -136,8 +134,8 @@ p(\lambda) = \det (A - \lambda I).
 	& = (5-\lambda)\big[ \lambda^2 + 10 \lambda + 21 \big] + 32 \lambda + 12 \cdot 8 - 64\lambda - 12\cdot 16 \\
 	& = -\lambda^3 - 5 \lambda^2 + 29 \lambda + 105  - 32 \lambda - 96 \\
 	& = -\lambda^3 - 5 \lambda^2 - 3 \lambda + 9.
-	\end{split}
-	\] As possíveis raízes racionais desse polinômio só podem ser os divisores do termo independente acima: $\pm 1, \pm 3, \pm9$. Verificamos que $1$ é raiz. Logo, dividindo $p(\lambda)$ por $\lambda - 1$:
+          \end{align*}
+          As possíveis raízes racionais desse polinômio só podem ser os divisores do termo independente acima: $\pm 1, \pm 3, \pm9$. Verificamos que $1$ é raiz. Logo, dividindo $p(\lambda)$ por $\lambda - 1$:
 	\[
 	-\lambda^3 - 5 \lambda^2 - 3 \lambda + 9 = -(\lambda - 1)(\lambda^2 + 6\lambda + 9) = -(\lambda - 1)(\lambda + 3)^2.
 	\] Portanto, os autovalores de $A$ são $\lambda_1 = 1$ e $\lambda_2 = 3$. Observamos que $3$ é uma raiz de multiplicidade $2$ do polinômio característico. $\, \lhd$
@@ -564,8 +562,7 @@ P = \begin{bmatrix}
 	-1&-1&-2 \\ -1&0&-2 \\ 1&1&3
 	\end{bmatrix}
 	\] e temos
-	\[
-	\begin{split}
+          \begin{align*}
 	P^{-1} A P & =
 	\begin{bmatrix}
 	-1&-1&-2 \\ -1&0&-2 \\ 1&1&3
@@ -586,8 +583,7 @@ P = \begin{bmatrix}
 	\begin{bmatrix}
 	1&0&0 \\ 0&-3&0 \\ 0&0&-3
 	\end{bmatrix}. \ \lhd
-	\end{split}
-	\]
+          \end{align*}
 \end{example}
 
 Nem todas as matrizes são diagonalizáveis, como acima. Já vimos que isto é possível quando uma base de autovetores existe. No exemplo

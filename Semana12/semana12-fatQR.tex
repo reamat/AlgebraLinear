@@ -21,7 +21,7 @@ Na última semana, estudamos projeções ortogonais e vimos que a projeção ortogona
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-proj.png}
+\includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-proj}
 \end{center}
 \end{figure}
 \noindent Vamos trabalhar geométricamente: suponhamos que o plano
@@ -65,8 +65,7 @@ Vamos calcular a projeção do vetor
  1\\0\\2
 \end{bmatrix}.
 \] Comlculamos
-\[
-\begin{split}
+  \begin{align*}
 \proj_W \vec{y} & = \frac{\vec{y} \cdot \vec{w}_1}{\vec{w}_1 \cdot \vec{w}_1} \ \vec{w}_1 + \frac{\vec{y} \cdot \vec{w}_2}{\vec{w}_2 \cdot \vec{w}_2} \ \vec{w}_2 = \frac{3-7}{9 + 49} \ \vec{w}_1 + \frac{1 + 2}{1+4} \ \vec{w}_2 \\
                 & = -\frac{2}{29}
                 \begin{bmatrix}
@@ -79,8 +78,7 @@ Vamos calcular a projeção do vetor
 \begin{bmatrix}
  3/5 \\ -6/29 \\ 244/145
 \end{bmatrix}.
-\end{split}
-\]
+  \end{align*}
 \end{example}
 
 
@@ -117,8 +115,7 @@ Calcular a projeção do vetor
  0\\0\\2\\4\\ 1
 \end{bmatrix}.
 \] Devemos calcular
-\[
-\begin{split}
+  \begin{align*}
 \proj_W \vec{y} & = \frac{\vec{y} \cdot \vec{w}_1}{\vec{w}_1 \cdot \vec{w}_1} \ \vec{w}_1 + \frac{\vec{y} \cdot \vec{w}_2}{\vec{w}_2 \cdot \vec{w}_2} \ \vec{w}_2 + \frac{\vec{y} \cdot \vec{w}_3}{\vec{w}_3 \cdot \vec{w}_3} \ \vec{w}_3\\
                 & = \frac{ - 1 -18 }{ 16 + 1 + 36 } \ \vec{w}_1 + \frac{ 1 - 2 - 2 }{ 1 + 4 + 1 } \ \vec{w}_2 + \frac{ -2-12+2 }{ 4 + 16 + 1 } \ \vec{w}_3 \\
                 & = -\frac{19}{53} \begin{bmatrix}
@@ -131,8 +128,8 @@ Calcular a projeção do vetor
 \begin{bmatrix}
  -1/2 \\ -76/53 \\ -2784/1113 \\ -4938/1113 \\ -1/12
 \end{bmatrix}.
-\end{split}
-\]Confira estas contas com uma calculadora (os coeficientes dos vetores nem sempre são bonitinhos!)
+  \end{align*}
+Confira estas contas com uma calculadora (os coeficientes dos vetores nem sempre são bonitinhos!)
 \end{example}
 
 
@@ -144,7 +141,7 @@ A projeção ortogonal pode ser utilizada para calcular distâncias entre o pontos 
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-dist.png}
+\includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-dist}
 \end{center}
 \end{figure}
 
@@ -167,7 +164,7 @@ Dado qualquer outro vetor $\vec{w} \in W$, o Teorema de Pitágoras implica que (v
 \] Em outras palavras, $\|\vec{y} - \proj_{W} \vec{y}\|$ é de fato a menor distância entre $P$ e elementos de $W$.
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-dist-justif.png}
+\includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-dist-justif}
 \end{center}
 \end{figure}
 \end{proof}
@@ -189,8 +186,7 @@ Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{u}
 1 \\ 2 \\ -1 \\ 0 \\ 7
 \end{bmatrix}
 \]e vamos calcular $\|\vec{y} - \proj_W \vec{y}\|$:
-\[
-\begin{split}
+  \begin{align*}
 \vec{y} - \proj_W \vec{y} & = \vec{y} - \frac{\vec{y} \cdot \vec{u}}{\vec{u} \cdot \vec{u}} \ \vec{u} - \frac{\vec{y} \cdot \vec{v}}{\vec{v} \cdot \vec{v}} \ \vec{v}  =
 \begin{bmatrix}
 1 \\ 2 \\ -1 \\ 0 \\ 7
@@ -213,14 +209,12 @@ Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{u}
 \begin{bmatrix}
 -4/3 \\ 16/5 \\ -17/3 \\ 0 \\ -34/15
 \end{bmatrix}
-\end{split}
-\] Desta forma, a distância de $P$ a $W$ é
-\[
-\begin{split}
+  \end{align*}
+  Desta forma, a distância de $P$ a $W$ é
+  \begin{align*}
 \dist (P,W) & = \|\vec{y} - \proj_{W} \vec{y}\| = \sqrt{\frac{16}{9} + \frac{256}{25} + \frac{289}{9} + \frac{1156}{225}} = \sqrt{\frac{ 16\cdot 25 + 256\cdot 9 + 289 \cdot 25 + 1156}{225}} \\
            & = \frac{ \sqrt{11085} }{15} \simeq 7,02.
-\end{split}
-\]
+  \end{align*}
 \end{example}
 
 
@@ -261,7 +255,7 @@ O processo consiste em fixar qualquer um dos vetores como o primeiro dos vetores
 \] é ortogonal a $\vec{v}_1$, como ilustra a figura.
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-gram1.png}
+\includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-gram1}
 \end{center}
 \end{figure}
 
@@ -295,7 +289,7 @@ No próximo passo do processo, o terceiro vetor pode ser obtido como
 \]
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-gram2.png}
+\includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-gram2}
 \end{center}
 \end{figure}
 
@@ -465,8 +459,7 @@ A =
  -41
 \end{bmatrix}.
 \] O Processo começa como:
-\[
-\begin{split}
+\begin{align*}
 \vec{u}_1 & = \vec{v}_1 =
 \begin{bmatrix}
 12 \\
@@ -499,10 +492,9 @@ A =
  158  \\
  30
 \end{bmatrix}
-\end{split}
-\] Em seguida (conferir estas contas com o auxílio de uma calculadora)
-\[
-\begin{split}
+  \end{align*}
+ Em seguida (conferir estas contas com o auxílio de uma calculadora)
+  \begin{align*}
 \vec{u}_3 & = \vec{v}_3 - \frac{\vec{v}_3 \cdot \vec{u}_1}{\vec{u}_1 \cdot \vec{u}_1} \, \vec{u}_1 - \frac{\vec{v}_3 \cdot \vec{u}_2}{\vec{u}_2 \cdot \vec{u}_2} \, \vec{u}_2 = \begin{bmatrix}
   4 \\
  -68 \\
@@ -537,8 +529,8 @@ A =
  6/5  \\
  -33
 \end{bmatrix}.
-\end{split}
-\] Para obter uma base ortonormal para o espaço coluna, vamos ainda considerar
+  \end{align*}
+  Para obter uma base ortonormal para o espaço coluna, vamos ainda considerar
 \[
 \frac{\vec{u}_1}{\|\vec{u}_1\|}, \frac{\vec{u}_2}{\|\vec{u}_2\|}, \frac{\vec{u}_3}{\|\vec{u}_3\|}.
 \] Calculamos

@@ -379,8 +379,7 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	4 & 2 & 3 \\
 	\end{bmatrix}.
 	\] O polinômio característico de $A$ é 
-	\[
-	\begin{split}
+          \begin{align*}
 	p(\lambda) = \det (A - \lambda I ) & = 
 	\det 
 	\begin{bmatrix}
@@ -392,8 +391,8 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	& = (3-\lambda) \left[ \lambda^2 - 9 \lambda + 14 \right] -28 + 4 \lambda - 112 + 16 \lambda  \\
 	& = 3\lambda^2 - 27 \lambda + 42  - \left[ \lambda^3 - 9 \lambda^2 + 14 \lambda \right] + 20 \lambda - 140  \\
 	& = -\lambda^3 + 12 \lambda^2 - 21 \lambda - 98.
-	\end{split}
-	\] Como sabemos, dificilmente conseguiríamos encontrar as raízes deste polinômio com precisão. De qualquer forma, raízes racionais (este exemplo foi construido artificialmente) deste polinômio só podem ser divisores de $98$ dividido pelos divisores de $-1$, isto é: $\pm 1, \pm 2, \pm 7, \pm 14, \pm 21$. Testando os primeiros, vemos que $-2$ é uma raiz. Pela divisão de polinômios, fatoramos
+          \end{align*}
+ Como sabemos, dificilmente conseguiríamos encontrar as raízes deste polinômio com precisão. De qualquer forma, raízes racionais (este exemplo foi construido artificialmente) deste polinômio só podem ser divisores de $98$ dividido pelos divisores de $-1$, isto é: $\pm 1, \pm 2, \pm 7, \pm 14, \pm 21$. Testando os primeiros, vemos que $-2$ é uma raiz. Pela divisão de polinômios, fatoramos
 	\[
 	p(\lambda) = -(\lambda + 2) (\lambda^2 - 14 \lambda + 49) = -(\lambda + 2)(\lambda - 7)^2.
 	\] Logo, os autovalores de $A$ são $-2$ (simples) e $7$ (duplo).
@@ -822,7 +821,7 @@ Já conhecemos alguns exemplos:
 \end{itemize} Graficamente, vemos alguns exemplos na figura abaixo.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.2\linewidth]{\dir/Semana14-15/semana14-circulo.png} \ \ \includegraphics[width=0.3\linewidth]{\dir/Semana14-15/semana14-elipse.png} \ \ \includegraphics[width=0.3\linewidth]{\dir/Semana14-15/semana14-hiperbole.png}
+		\includegraphics[width=0.2\linewidth]{\dir/Semana14-15/semana14-circulo} \ \ \includegraphics[width=0.3\linewidth]{\dir/Semana14-15/semana14-elipse} \ \ \includegraphics[width=0.3\linewidth]{\dir/Semana14-15/semana14-hiperbole}
 	\end{center}
 \end{figure}
 
@@ -903,7 +902,7 @@ Já conhecemos alguns exemplos:
 	16 y_1^2 + 36 y_2^2 = 144 \ \leftrightsquigarrow \ \frac{y_1^2}{(144/16)} + \frac{y_1^2}{(144/36)} = 1 \ \leftrightsquigarrow \ \frac{y_1^2}{3^2} + \frac{y_1^2}{2^2} = 1.
 	\] Esta equação é pode ser agora identificada como uma elipse nos ``novos eixos'' $\vec{v}_1$ e $\vec{v}_2$.
 	\begin{center}
-		\includegraphics[width=0.5\linewidth]{\dir/Semana14-15/semana14-conicas2.png}
+		\includegraphics[width=0.5\linewidth]{\dir/Semana14-15/semana14-conicas2}
 	\end{center}
 	
 	\noindent Observamos que quando a coordenada $y_1 = 0$ devemos ter que $y_2^2 = 2^2$, de modo que deve ser $\vec{x} = y_1 \vec{v}_1 + y_2 \vec{v}_2 = \pm 2 \vec{v}_2$, como na figura. Este é o análogo da análise que normalmente fazemos, só que agora na base ortonormal $\{\vec{v}_1, \vec{v}_2\}$

@@ -11,9 +11,24 @@
 \documentclass[a4paper]{book}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%Definições para compilação%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\ifispdf        % O layout será pdf?
+\newif\ifishtml       % O layout será html?
+
+\def\tfn{config.knd}   % Arquivo que guarda as definições do tipo de saída
+\def \tdata{}          % Definições do tipo de saída: book, slide ou html.
+
+\openin1=\tfn\relax    % Leitura das definições de saída
+\read1 to \tdata
+\closein1
+
+\tdata                 % Definições de saída
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%Pacotes básicos para MathEnvir%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \usepackage{amsmath}%%AMS primary package (includes amstext, amsopn, amsbsy), provides various features for displayed equations and %%other mathematical constructs.
 
@@ -36,7 +51,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+\ifispdf
 \usepackage[dvips,pdftex]{graphicx}
+\fi
+\ifishtml
+\usepackage[dvips]{graphicx}
+\fi
+
 %\usepackage{color}            %%Textcolor, color definitions, etc
 
 %\definecolor{light-blue}{rgb}{0.8,0.85,1}     %%Numbers between 0 and 1

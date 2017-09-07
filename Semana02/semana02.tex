@@ -24,7 +24,7 @@ Um \textbf{vetor} no espaço tridimensional é um objeto com magnitude, direção e 
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.3\linewidth]{\dir/Semana02/semana02-vetor.png}
+\includegraphics[width=0.3\linewidth]{\dir/Semana02/semana02-vetor}
 \end{center}
 \end{figure}
 
@@ -72,7 +72,7 @@ Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referên
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.2\linewidth]{\dir/Semana02/semana02-coord.png}
+\includegraphics[width=0.2\linewidth]{\dir/Semana02/semana02-coord}
 \end{center}
 \end{figure}
 
@@ -120,7 +120,7 @@ O conjunto de todos os vetores com três componentes como acima é chamado de $\bR
 \] Geometricamente, isto pode ser interpretado como segue:
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.3\linewidth]{\dir/Semana02/semana02-soma.png}
+\includegraphics[width=0.3\linewidth]{\dir/Semana02/semana02-soma}
 \end{center}
 \end{figure}
 
@@ -137,7 +137,7 @@ k \vec{v} :=
 \] Geometricamente,
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.3\linewidth]{\dir/Semana02/semana02-escalar.png}
+\includegraphics[width=0.3\linewidth]{\dir/Semana02/semana02-escalar}
 \end{center}
 \end{figure}
 
@@ -467,8 +467,8 @@ Para os vetores
 Vamos ilustrar este fato na figura abaixo.
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.4\linewidth]{\dir/Semana02/semana02-comblinear1.png}
-\includegraphics[width=0.4\linewidth]{\dir/Semana02/semana02-comblinear3.png}
+\includegraphics[width=0.4\linewidth]{\dir/Semana02/semana02-comblinear1}
+\includegraphics[width=0.4\linewidth]{\dir/Semana02/semana02-comblinear3}
 \end{center}
 \end{figure}
 Por exemplo, para representar o vetor $\vec{v}$ como combinação linear de $\vec{v}_1$ e $\vec{v}_2$, podemos traçar retas paralelas aos vetores, passando pela origem e pela extremidade do vetor $\vec{v}$, como na figura da direita. Assim, pela interpretação geométrica da soma de vetores (ver início deste capítulo), sabemos que $\vec{v}$ é a soma dos vetores em azul. Mas estes, por construção, são colineares aos vetores iniciais e logo múltiplos destes. Concluimos que
@@ -617,16 +617,26 @@ O \textbf{espaço gerado} por todas as combinações lineares dos vetores $\vec{v}_
 \section{Sistemas lineares e combinações lineares das colunas}
 
 A associação feita acima pode ser resumida como:
-\[
-\boxed{\begin{split}
-\text{Resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o} \\ \text{vetor $\vec{b}$ é uma combinação linear das colunas de $A$.}
-\end{split}}
-\] ou ainda
-\[
-\boxed{\begin{split}
-\text{Resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o} \\ \text{vetor $\vec{b}$ pertence ao espaço gerado pelas colunas de $A$.}
-\end{split}}
-\] Desta forma, tudo o que já vimos sobre existência de soluções para sistemas lineares pode ser ``traduzido'' para o contexto de combinações lineares e espaços gerados (faça as traduções!).
+% \[
+% \boxed{\begin{eqnarray*}
+% \text{Resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o} \\ \text{vetor $\vec{b}$ é uma combinação linear das colunas de $A$.}
+% \end{eqnarray*}}
+%\]
+\begin{center}
+  ''resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir
+  se o vetor $\vec{b}$ é uma combinação linear das colunas de $A$''
+\end{center}
+ou ainda
+\begin{center}
+  ''resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o vetor $\vec{b}$ pertence ao espaço gerado pelas colunas de $A$''
+\end{center}
+% \[
+% \boxed{\begin{split}
+% \text{Resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o} \\ \text{vetor $\vec{b}$ pertence ao espaço gerado pelas colunas de $A$.}
+% \end{split}}
+% \]
+
+Desta forma, tudo o que já vimos sobre existência de soluções para sistemas lineares pode ser ``traduzido'' para o contexto de combinações lineares e espaços gerados (faça as traduções!).
 
 
 \begin{example}

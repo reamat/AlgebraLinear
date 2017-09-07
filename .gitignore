@@ -4,3 +4,13 @@
 *.out
 *~
 ./Semana*/*.pdf
+./html
+*.html
+*.4ct
+*.4tc
+*.css
+*.dvi
+*.idv
+*.lg
+*.tmp
+*.xref

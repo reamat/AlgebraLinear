@@ -28,10 +28,44 @@ Iremos cuidar para analisar seu aviso o mais prontamente possível e removeremos 
 
 ## Compilação
 
-O livro está escrito em linguagem de marcação [LaTeX](http://www.latex-project.org/) e pode ser compilado com o programa `pdflatex` como segue:
+O livro está escrito em linguagem de marcação [LaTeX](http://www.latex-project.org/).
+
+### Formato PDF
+
+Antes de compilar o livro, certifique-se que o arquivo `config.knd` contém exatamente o texto:
+
+      \ispdftrue \ishtmlfalse
+
+Então, para compilar o livro basta executar:
 
     pdflatex livro.tex
     pdflatex livro.tex
     pdflatex livro.tex
 
 Isto gera o arquivo `livro.pdf` com a versão completa do livro no formato PDF. Alternativamente, cada capítulo pode compilado separadamente.
+
+### Formato HTML
+
+Antes de compilar o livro, certifique-se que o arquivo `config.knd` contém exatamente o texto:
+
+      \ispdffalse \ishtmltrue
+
+Então, crie uma pasta `html` no diretório principal do livro e compile-o com a seguinte sequência de comandos:
+
+       latex livro
+       latex livro
+       latex livro
+       mk4ht htlatex livro "myconfig,3,notoc*" "" "-d./html/"
+
+### Sistema Linux
+
+No Linux é possível usar o `Makefile` para compiar o livro:
+
+* Formato PDF:
+
+        $ make
+
+* Formato HTML
+
+        $ make html
+
