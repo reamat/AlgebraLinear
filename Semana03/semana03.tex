@@ -1,176 +1,6 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%Pacotes básicos para MathEnvir%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \usepackage{amsmath}   %%AMS primary package (includes amstext, amsopn, amsbsy), provides various features for displayed equations and %%other mathematical constructs.
-% %%%%OPTIONS FOR THE AMSMATH PACKAGE
-% \usepackage{amscd}     %%Provides a CD environment for simple commutative diagrams (no support for diagonal arrows).
-% \usepackage{amsxtra}   %%Provides certain odds and ends such as \fracwithdelims and \accentedsymbol, for compatibility with documents %%created using version 1.1.
-% \usepackage{amsthm}    %%Enhanced version of \newtheorem command for defining theorem-like environments
-% \usepackage{amssymb}   %%Provides an extended symbol collection (includes amsfonts). For example, \barwedge, \boxdot, \boxminus, %%\boxplus, \boxtimes, \Cap, \Cup (and many more), the arrow \leadsto, and some other symbols such as \Box and \Diamond.
-
-% \usepackage{latexsym}  %%makes few additional characters available: \Box \Join \Box \Diamond \leadsto \sqsubset \sqsupset \lhd \unlhd %%\rhd \unrhd
-
-% \usepackage[makeroom]{cancel}   % Cancelar termos em equações
-
-% \usepackage{enumerate}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%Links -- Só funciona para .pdf%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \usepackage{hyperref}  %% for references %%Options below
-% \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, linktoc=page, pdftitle={Shadowing}, pdfauthor={D. Marcon}}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%Color, graphicx, margin (geometry)%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% \usepackage[dvips]{graphicx}
-% \usepackage{color}            %%Textcolor, color definitions, etc
-
-% %\definecolor{light-blue}{rgb}{0.8,0.85,1}     %%Numbers between 0 and 1
-% %\definecolor{mygrey}{gray}{0.75}              %%Numbers between 0 and 1
-
-% \usepackage{verbatim}         %%Adds text from other files, comment environment
-
-% \usepackage{xpatch}           %%Bold theorem titles
-% \makeatletter
-%    \xpatchcmd{\@thm}{\fontseries\mddefault\upshape}{}{}{} %same font as thm-header
-% \makeatother
-
-% \usepackage[margin=1in]{geometry}  %%Margins  %%Possible to use \newgeometry to modify small parts mid-document
-
-
-
-% \usepackage{tgbonum}
-
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%Para escrever português%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% %\usepackage[utf8]{inputenc}  %%encoding
-% %\usepackage[T1]{fontenc}     %%encoding
-
-% \usepackage[portuguese]{babel}   %%Portuguese-specific commands
-
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%Theorem styles, numbering%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% \theoremstyle{plain}
-% \newtheorem{theorem}{Teorema}              %%section, chapter, etc
-% \newtheorem{proposition}[theorem]{Proposição}      %%everything below obeys theorem because: [theorem]
-% \newtheorem{lemma}[theorem]{Lema}
-% \newtheorem{corollary}[theorem]{Corolário}
-% \newtheorem{maintheorem}{Teorema}                   %%number doesn't obey order
-% \renewcommand{\themaintheorem}{\Alph{maintheorem}}
-% \newtheorem{maincorollary}{Corolário}
-% \newtheorem{conjecture}{Conjectura}
-% \newtheorem*{claim}{Afirmação}
-
-% \newtheorem*{desloct}{Segundo Teorema de Deslocamento -- Deslocamento em $t$}     %%Sem numeração e com o nome desejado
-
-% \theoremstyle{definition}
-% \newtheorem{remark}[theorem]{Observação}
-% \newtheorem{example}[theorem]{Exemplo}
-% \newtheorem{definition}[theorem]{Definição}
-% \newtheorem{exercise}{Exercício}
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%New Commands%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \newcommand{\mb}[1]{\mathbb{#1}}
-% \newcommand{\bC}{\mathbb{C}}
-% \newcommand{\bE}{\mathbb{E}}
-% \newcommand{\bK}{\mathbb{K}}
-% \newcommand{\bN}{\mathbb{N}}
-% \newcommand{\bP}{\mathbb{P}}
-% \newcommand{\bQ}{\mathbb{Q}}
-% \newcommand{\bR}{\mathbb{R}}
-% \newcommand{\bS}{\mathbb{S}}
-% \newcommand{\bT}{\mathbb{T}}
-% \newcommand{\bZ}{\mathbb{Z}}
-
-% \newcommand{\cE}{\mathcal{E}}
-% \newcommand{\cF}{\mathcal{F}}
-% \newcommand{\cH}{\mathcal{H}}
-% \newcommand{\cL}{\mathcal{L}}
-% \newcommand{\cM}{\mathcal{M}}
-% \newcommand{\cO}{\mathcal{O}}
-% \newcommand{\cP}{\mathcal{P}}
-% \newcommand{\cQ}{\mathcal{Q}}
-% \newcommand{\cR}{\mathcal{R}}
-% \newcommand{\cS}{\mathcal{S}}
-
-% \newcommand{\al} {\alpha}       \newcommand{\Al}{\Alpha}
-% \newcommand{\be} {\beta}        \newcommand{\Be}{\Beta}
-% \newcommand{\ga} {\gamma}       \newcommand{\Ga}{\Gamma}
-% \newcommand{\de} {\delta}       \newcommand{\De}{\Delta}
-% \newcommand{\ep} {\epsilon}
-% \newcommand{\eps}{\varepsilon}
-% \newcommand{\ze} {\zeta}
-% \newcommand{\vte}{\vartheta}
-% \newcommand{\iot}{\iota}
-% \newcommand{\ka} {\kappa}
-% \newcommand{\la} {\lambda}      \newcommand{\La}{\Lambda}
-% \newcommand{\vpi}{\varpi}
-% %\newcommand{\ro} {\rho}
-% \newcommand{\vro}{\varrho}
-% \newcommand{\si} {\sigma}       \newcommand{\Si}{\Sigma}
-% \newcommand{\vsi}{\varsigma}
-% \newcommand{\ups}{\upsilon}     \newcommand{\Up}{\Upsilon}
-% \newcommand{\vphi}{\varphi}
-% \newcommand{\om} {\omega}       \newcommand{\Om}{\Omega}
-
-% \newcommand{\ang}{\operatorname{angle}}
-% \newcommand{\closu}{\operatorname{clos}}
-% \newcommand{\const}{\operatorname{const}}
-% \newcommand{\curl}{\operatorname{curl}}
-% \newcommand{\dd}{\, \mathrm{d}}
-% \newcommand{\diam}{\operatorname{diam}}
-% \newcommand{\Div}{\operatorname{div}}
-% \newcommand{\dist}{\operatorname{dist}}
-% \newcommand{\grad}{\operatorname{grad}}
-% \newcommand{\fr}{\partial}
-% \newcommand{\graph}{\operatorname{graph}}
-% \newcommand{\id}{\operatorname{Id}}
-% \newcommand{\inter}{\operatorname{int}}
-% \newcommand{\Leb}{\operatorname{Leb}}
-% \newcommand{\length}{\operatorname{length}}
-% \newcommand{\Lip}{\operatorname{Lip}}
-% \newcommand{\res}{\operatornamewithlimits{Res}}
-% \newcommand{\rot}{\operatorname{rot}}
-% \newcommand{\sen}{\operatorname{sen}}
-% \newcommand{\senh}{\operatorname{senh}}
-% \newcommand{\Span}{\operatorname{Span}}
-% \newcommand{\spec}{\operatorname{spec}}
-% \newcommand{\supp}{\operatorname{supp}}
-% \newcommand{\var}{\operatornamewithlimits{{var}}}
-
-
-% \everymath{\displaystyle}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%% INFO  DO  ARTIGO %%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% \title{Álgebra Linear -- Semana 03}
-% \author{}
-% \date{10 de Abril de 2017}
+\documentclass[../livro.tex]{subfiles} 
 
 
 %define o diretório principal
@@ -205,7 +35,7 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{v}.
     x_{2} \\
     x_{3} \\
     \vdots \\
-    x_{m} \\
+    x_{k} \\
   \end{array}
 \right] =
 \left[
@@ -214,7 +44,7 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{v}.
     b_{2} \\
     b_{3} \\
     \vdots \\
-    b_{m} \\
+    b_{k} \\
   \end{array}
 \right].
 \]
@@ -225,7 +55,7 @@ Agora, dizemos que os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m
 \] De fato, imaginem que pelo menos um dos coeficientes acima fosse diferente de zero, digamos $x_2 \neq 0$. Daí podemos dividir por $x_2$ e conseguiríamos escrever o vetor $\vec{v}_2$ como combinação linear dos demais:
 \[
 \vec{v}_2 = - \frac{x_1}{x_2} \, \vec{v}_1 - \frac{x_3}{x_2} \, \vec{v}_3 - \cdots - \frac{x_k}{x_2} \, \vec{v}_k.
-\] Se os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ não forem linearmente independentes, então nós dizemos que eles são \textbf{linearmente dependentes}.
+\] Se os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ não forem linearmente independentes, então nós dizemos que eles são \textbf{linearmente dependentes (LD)}.
 
 \begin{example}\label{exp:1}
 Vamos verificar se os vetores
@@ -308,7 +138,7 @@ Resolver a equação vetorial equivale a resolver o sistema linear
     0 \\
   \end{array}
 \right]
-\] É fácil de ver que a única solução deste sistema é a trivial e, portanto, os vetores são LI. Se este sistema não fosse fácil de resolver, devemos começar a resolvê-lo por escalonamento. Se existissem variáveis livres, então existiriam infinitas soluções. $\ \lhd$
+\] É fácil de ver que a única solução deste sistema é a trivial e, portanto, os vetores são LI. Se este sistema não fosse fácil de resolver, deveríamos começar a resolvê-lo por escalonamento, como de costume. $\ \lhd$
 \end{example}
 
 \begin{example}\label{exp:2}
@@ -417,16 +247,14 @@ O argumento que utilizamos no Exemplo \ref{exp:2} acima é geral e se aplica em v
 Façamos agora algumas observações gerais sobre independência linear:
 \begin{itemize}
   \item O vetor nulo, mesmo que sozinho, é LD. Se $\vec{v} = \vec{0}$ estiver em um conjunto de vetores, este conjunto será automaticamente LD.
-  \item Ao considerarmos apenas dois vetores $\vec{u}$ e $\vec{v}$, dizer que estes vetores são LD significa que eles são múltiplos um dou outro e, portanto, colineares.
-  \item Veremos mais adiante no curso, que a dimensão do espaço gerado por vetores linearmente independentes é exatamente o número de vetores. Desta maneira, concluiremos, por exemplo, que o conjunto gerado por dois vetores do espaço tridimensional é um espaço linear de dimensão dois: um plano.
+  \item Ao considerarmos apenas dois vetores $\vec{u}$ e $\vec{v}$, dizer que estes vetores são LD significa que eles são múltiplos um do outro e, portanto, colineares.
+  \item Veremos mais adiante no curso que a dimensão do espaço gerado por vetores linearmente independentes é exatamente o número de vetores. Desta maneira, concluiremos, por exemplo, que o conjunto gerado por dois vetores do espaço tridimensional é um espaço linear de dimensão dois: um plano.
 \end{itemize}
 
 
 \section{Independência linear e sistemas lineares}
 
-Na última semana, vimos que resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o vetor $\vec{b}$ é uma combinação linear das colunas de $A$.
-
-A situação da seção anterior é a de decidir se os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ são LI ou LD. Isto, consequentemente, equivale a decidir se existe solução não trivial do sistema linear homogêneo
+Na última semana (capítulo anterior), vimos que resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o vetor $\vec{b}$ é uma combinação linear das colunas de $A$. Na seção anterior, introduzimos a questão de decidir se os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ são LI ou LD. Isto, consequentemente\footnote{Lembra que uma equação vetorial pode ser reescrita como uma equação matricial!}, equivale a decidir se existe solução não trivial para o sistema linear homogêneo
 \[
 A \vec{x} = \vec{0},
 \] onde a matriz $A$ é formada com os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ como colunas.
@@ -435,10 +263,10 @@ A \vec{x} = \vec{0},
 Naturalmente, podemos traduzir os exemplos da seção anterior desta forma. Ou seja no Exemplo \ref{exp:1}, temos que a matriz
 \[
 A = \left[
-  \begin{array}{cccc}
-    1 & 1 & 1 & -1 \\
-    0 & 1 & 1 & 2  \\
-    1 & 0 & 1 & 1  \\
+  \begin{array}{ccc}
+    1 & 1 & 1  \\
+    0 & 1 & 1   \\
+    1 & 0 & 1  \\
   \end{array}
 \right]
 \] tem as colunas linearmente independentes (LI). Por outro lado, as colunas da matriz
@@ -456,7 +284,8 @@ B = \left[
 Podemos pensar ainda de outra forma. Considere uma matriz $A$ de ordem $m\times n.$ Para decidir se as colunas de $A$ são LI, devemos procurar por soluções não triviais do sistema linear cuja matriz associada é $A$. Ao resolver um \textbf{sistema homogêneo} por escalonamento, sabemos que
 \begin{itemize}
   \item Se existirem mais colunas do que linhas ($i.e. \ m<n$), então as colunas de $A$ são necessariamente LD.
-  \item Se existirem mais linhas do que colunas ($i.e. \ m>n$), procedemos por escalonamento. Se todas as colunas da matriz $A$ possuirem posição de pivô, então as colunas são LI (pois daí a única solução do sistema homogêneo é a trivial). No caso de alguma coluna não possuir posição de pivô, o sistema homogêneo possui pelo menos uma variável livre; logo, as colunas de $A$ são LD.
+  \item Se existirem mais linhas do que colunas ($i.e. \ m>n$), procedemos por escalonamento. Se todas as colunas da matriz $A$ possuirem posição de pivô, então as colunas são LI (pois daí a única solução do sistema homogêneo é a trivial). 
+  \item No caso de alguma coluna não possuir posição de pivô, o sistema homogêneo possui pelo menos uma variável livre; logo, as colunas de $A$ são LD.
 \end{itemize}
 
 \begin{example}
@@ -490,7 +319,7 @@ A \sim \left[
    0&0&0&0&0\\
 \end{array}
 \right],
-\] que possui uma variável livre (e portanto outras soluções que não a trivial). $\ \lhd$
+\] possui uma variável livre (e portanto outras soluções que não a trivial). $\ \lhd$
 \end{example}
 
 
@@ -501,20 +330,23 @@ A \sim \left[
 Uma \textbf{transformação linear} é um tipo especial de função que associa um vetor a outro vetor
 \[
 T: \{ \text{vetores} \} \to \{ \text{vetores} \}
-\] e com a propriedade adicional
+\] e com a propriedade adicional:
 \[
 T\big( a \vec{u} + b \vec{v} \big) = aT(\vec{u}) + bT(\vec{v}), \quad \text{para todos } a, b \in \bR \quad \text{e todos } \vec{u}, \vec{v}.
 \]
-Em geral, pensamos em uma transformação linear como ``transformando um vetor em outro''.
+Em geral, pensamos em uma transformação linear como ``transformando um vetor em outro'' de forma linear, isto é, satisfazendo a propriedade acima.
 
 
 \begin{example}
-A aplicação $T: \bR^3 \to \bR^3$ dada por $T(\vec{u}) = 3\vec{u}$ é a transformação linear que transforma um vetor de $\bR^3$ no vetor que tem o triplo do comprimento.
+A aplicação $T: \bR^3 \to \bR^3$ dada por $T(\vec{u}) = 3\vec{u}$ é a transformação linear que transforma um vetor de $\bR^3$ no vetor que tem o triplo do comprimento. Utilizamos a própria fórmula da transformada para verificar que a tranformação $T$ é de fato linear:
+\[
+T\big( a \vec{u} + b \vec{v} \big) = 3 ( a \vec{u} + b \vec{v} ) = a \cdot 3 \vec{u} + b \cdot 3 \vec{v} = aT(\vec{u}) + bT(\vec{v}). \lhd
+\]
 \end{example}
 
 
 \begin{example}\label{exp:4}
-Também é linear a transformação que faz uma rotação de um ângulo $\pi / 2$. Voltaremos a este exmeplo com mais detalhes na seção seguinte.
+Também é linear a transformação que faz uma rotação de um ângulo $\pi / 2$. Tente se convencer geometricamente que esta transformação é uma transformação linear. Voltaremos a este exmeplo com mais detalhes na seção seguinte$. \ \lhd$
 \end{example}
 
 
@@ -531,7 +363,7 @@ T(x_1, x_2) = (x_1 - 3 x_2, 3x_1 + 5x_2, -x_1 + x_2).
     1 \\
     -1 \\
   \end{array}
-\right] \quad \text{e}
+\right] \quad \text{e} \quad 
 \vec{v} =
 \left[
   \begin{array}{c}
@@ -555,7 +387,7 @@ T\big(\vec{u}\big) =
     -2 \\
     -2 \\
   \end{array}
-\right] \quad \text{e}\quad
+\right] \quad \text{e} \quad
 T\big(\vec{v}\big) =
 \left[
   \begin{array}{c}
@@ -570,7 +402,7 @@ T\big(\vec{v}\big) =
     15 \\
      3 \\
   \end{array}
-\right].
+\right].\lhd
 \]
 \end{example}
 
@@ -721,7 +553,7 @@ T(\vec{x}) = \left[
     x_2 \\
     x_3 \\
   \end{array}
-\right].
+\right]. \lhd
 \]
 \end{example}
 
@@ -772,12 +604,12 @@ T(\vec{x}) = \left[
 \section{Transformações injetoras, sobrejetoras e invertíveis}
 
 
-Como de costume, dada uma função $f: A \to B$, diz-se que $A$ é o domínio de $f$ enquanto $B$ é o contradomínio. A imagem de $f$ é um subconjunto de $B$: todos os elementos $y \in B$ tais que $f(x) = y$ ou, intuitivamente, ``todos os elementos de $B$ que são atingidos pela função $f$''.
+Como de costume, dada uma função $f: A \to B$, diz-se que $A$ é o domínio de $f$ enquanto $B$ é o contradomínio. A imagem de $f$ é o subconjunto de $B$ que consiste de todos os elementos $y \in B$ tais que $f(x) = y$ ou, intuitivamente, que consiste de ``todos os elementos de $B$ que são atingidos pela função $f$''.
 
 Na hora de decidir se uma função é invertível ou não, duas propriedades são essenciais:
 \begin{enumerate}[$1)$]
-  \item cada elemento de $B$ ser a imagem de no máximo um elemento de $A$, caso em que $f$ é dita \textbf{injetora};
-  \item a imagem de $f$ ser igual ao contradomínio, caso em que $f$ diz-se \textbf{sobrejetora}.
+  \item cada elemento de $B$ ser a imagem de no máximo um elemento de $A$, caso em que $f$ é dita \textbf{injetora} ou \textbf{injetiva};
+  \item a imagem de $f$ ser igual ao contradomínio, caso em que $f$ diz-se \textbf{sobrejetora} ou \textbf{sobrejetiva}.
 \end{enumerate}
 
 Quando estas duas propriedades são satisfeitas, isto é, quando a função $f$ é injetora e sobrejetora, vale que $f$ é \textbf{invertível}: podemos encontrar uma função $f^{-1} : B \to A$ que satisfaz
@@ -785,7 +617,7 @@ Quando estas duas propriedades são satisfeitas, isto é, quando a função $f$ é in
 f^{-1}\big( f (x)\big) = x, \ \text{para todo } x \in A  \quad \text{e} \quad f\big( f^{-1} (y)\big) = y, \ \text{para todo } y \in B.
 \] Ao tentarmos encontrar uma \textbf{função inversa} $f^{-1}$, as propriedades de ser injetora e sobrejetora, aparecem naturalmente.
 
-Vamos analisar quando que transformações lineares são injetoras, sobrejetoras e/ou invertíveis.
+Estas definições são usuais para funções quaisquer. A partir de agora, vamos analisar quando que transformações lineares são injetoras, sobrejetoras e/ou invertíveis. Vamos ver, em particular, que é bem mais fácil estudar tais propriedades para transformações lineares.
 
 \subsection{Transformações lineares injetoras}
 
@@ -797,15 +629,22 @@ T(\vec{x}) = \vec{b}
 A\vec{x} = \vec{b}.
 \] Recaimos novamente em um sistema linear!
 
-No caso particular em que $\vec{b} = \vec{0}$, o sistema homogêneo $A\vec{x} = \vec{0}$ sempre possui a solução trivial $\vec{x} = \vec{0}$. Neste caso, para que a transformação linear seja injetora devemos verificar que esta é a única solução de $A\vec{x} = \vec{0}$. Na verdade, é possível verificar (ver livro David C. Lay):
+No caso particular em que $\vec{b} = \vec{0}$, o sistema homogêneo $A\vec{x} = \vec{0}$ sempre possui a solução trivial $\vec{x} = \vec{0}$. Neste caso, para que a transformação linear seja injetora devemos verificar que esta é a única solução de $A\vec{x} = \vec{0}$. Na verdade, é possível verificar que:
 \[
 \boxed{\text{$T$ é injetora se, e somente se, $A\vec{x} = \vec{0}$ possui apenas a solução trivial.}}
 \] Em particular, este caso somente é possível se $n \le m$ (reler observações que seguem o Exemplo 3).
 
+\begin{proof}[Justificativa da afirmação]
+Vamos provar matematicamente que, se soubermos que $A\vec{x} = \vec{0}$ possui apenas a solução trivial, então vale que $A\vec{x} = \vec{b}$ possui no máximo uma solução, para qualquer escolha de vetor $\vec{b}$. Isto, por sua vez, implica que $T$ é injetora. Caso não existam soluções ou caso exista apenas uma, nada há para provar. Suponhamos que então que existem infinitas soluções (esta seria a única outra possibilidade). Em particular, existiriam duas distintas:
+\[
+\vec{x}_1 \neq \vec{x}_2 \text{ tais que } A \vec{x}_1 = \vec{b} \text{ e também } A \vec{x}_2 = \vec{b}.
+\] Por linearidade, temos então que $A (\vec{x}_1 - \vec{x}_2) = \vec{b} - \vec{b} = \vec{0}$. No entanto, nossa hipótese garante que somente existe a solução trivial para a equação $A\vec{x} = \vec{0}$, de modo que deveríamos ter $\vec{x}_1 = \vec{x}_2$. Em outras palavras, se $A\vec{x} = \vec{0}$ possuir apenas a solução trivial, então não existe mais do que uma solução para $A\vec{x} = \vec{b}$. Portanto, $T$ é injetora.
+\end{proof}
+
 Notem que a afirmação acima é também equivalente a
 \[
 \boxed{\text{$T$ é injetora se, e somente se, as colunas de $A$ são linearmente independentes.}}
-\]
+\] Vamos deixar exemplos de injetividade para a subseção seguinte (ver Exemplos \ref{exp:injsob1} e \ref{exp:injsob2}).
 
 
 \subsection{Transformações lineares sobrejetoras}
@@ -813,7 +652,7 @@ Notem que a afirmação acima é também equivalente a
 A transformação linear $T: \bR^n \to \bR^m$ é sobrejetora quando, para todo $\vec{b} \in \bR^n$, a equação
 \[
 T(\vec{x}) = \vec{b}
-\] possui alguma solução (comparar com a definição anterior). Seja $A$ a matriz de ordem $m\times n$ associada a $T$. Assim, para verificar que $T$ é sobrejetora, devemos verificar que, para qualquer $\vec{b} \in \bR^m$, o sistema linear
+\] possui alguma solução (comparar com a definição no início desta seção). Seja $A$ a matriz de ordem $m\times n$ associada a $T$. Assim, para verificar que $T$ é sobrejetora, devemos verificar que, para qualquer $\vec{b} \in \bR^m$, o sistema linear
 \[
 A\vec{x} = \vec{b}
 \] possui ao menos uma solução (uma ou infinitas). Isto é equivalente a:
@@ -824,7 +663,7 @@ A\vec{x} = \vec{b}
 \] Em particular, este caso somente é possível se $n \ge m$ (veremos mais adiante no curso -- a imagem da transformação $T: \bR^n \to \bR^m$ será de dimensão no máximo igual a $n$).
 
 
-\begin{example}
+\begin{example}\label{exp:injsob1}
 Considere a transformação linear $T$ cuja matriz associada é
 \[
 A = \left[
@@ -850,7 +689,7 @@ A \vec{x} = \vec{b} \iff
 \end{example}
 
 
-\begin{example}
+\begin{example}\label{exp:injsob2}
 Considere a transformação linear $T$ cuja matriz associada é
 \[
 A = \left[

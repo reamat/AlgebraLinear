@@ -1,0 +1,3 @@
+Comentar melhor que {transformações lineares} equivalente {matrizes}.
+
+Mais exemplos: TL nem injetiva nem sobrejetiva; TL injetiva e sobrejetiva
