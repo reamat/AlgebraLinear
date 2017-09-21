@@ -104,31 +104,25 @@ a_{m1} x_{1} + a_{m2} x_{2} + \cdots  a_{mn} x_{n} \\
 
 Vamos generalizar este procedimento para definir o produto entre duas matrizes de qualquer ordem. Por exemplo, se $A$ é como acima e $B$ é uma matriz $B$ de ordem $n \times 2$, o que vamos fazer é pensar nas colunas de $B$ como dois vetores $\vec{b}_1$ e $\vec{b}_2$ e realizar os produtos como já estamos acostumados. O resultado será uma matriz cujas colunas são $A \vec{b}_1$ e $A \vec{b}_2$:
 \[
-\left[
-\begin{array}{cccc}
+\begin{bmatrix}
 a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &        & \vdots \\
 a_{m1} & a_{m2} & \cdots & a_{mn} \\
-\end{array}
-\right]
-\left[
-\begin{array}{cc}
+\end{bmatrix}
+\begin{bmatrix} 
 x_{1} & y_1 \\
 x_{2} & y_2 \\
 \vdots & \vdots \\
 x_{n} & y_n \\
-\end{array}
-\right] =
-\left[
-\begin{array}{cc}
-a_{11} x_{1} + a_{12} x_{2} + \cdots  a_{1n} x_{n} & a_{11} y_{1} + a_{12} y_{2} + \cdots  a_{1n} y_{n}\\
-a_{21} x_{1} + a_{22} x_{2} + \cdots  a_{2n} x_{n} & a_{21} y_{1} + a_{22} y_{2} + \cdots  a_{2n} y_{n}\\
+\end{bmatrix} =
+\begin{bmatrix}
+a_{11} x_{1} + a_{12} x_{2} + \cdots + a_{1n} x_{n} & a_{11} y_{1} + a_{12} y_{2} + \cdots + a_{1n} y_{n}\\
+a_{21} x_{1} + a_{22} x_{2} + \cdots + a_{2n} x_{n} & a_{21} y_{1} + a_{22} y_{2} + \cdots + a_{2n} y_{n}\\
 \vdots & \vdots \\
-a_{m1} x_{1} + a_{m2} x_{2} + \cdots  a_{mn} x_{n} & a_{m1} y_{1} + a_{m2} y_{2} + \cdots  a_{mn} y_{n}\\
-\end{array}
-\right].
-\] O resultado é portanto uma matriz de ordem $m\times 2$
+a_{m1} x_{1} + a_{m2} x_{2} + \cdots + a_{mn} x_{n} & a_{m1} y_{1} + a_{m2} y_{2} + \cdots + a_{mn} y_{n}\\
+\end{bmatrix}.
+\] O resultado é portanto uma matriz de ordem $m\times 2$.
 
 
 De forma mais geral, podemos multiplicar uma matriz $A$ de ordem $m \times n$ por qualquer outra matriz de ordem $n \times p$ e o resultado obtido será uma matriz de ordem $m \times p$. É fácil de lembrar: o número de colunas da primeira matriz deve ser igual ao número de linhas da segunda matriz e a matriz resultante terá por ordem o que  ``sobrar'':
@@ -187,18 +181,18 @@ Vamos mostrar algumas contas que exemplificam tanto o procedimento quanto alguma
 	6-3\pi   & -6 + 8\pi &   -1   &  -2 - 6 \pi  \\
 	50      &  138      &  33    &  232         \\
 	\end{array}
-	\right].-
-	\] O elemento $(AB)_{ij}$ da linha i e coluna j da matriz $AB$, pode ser obtido ao ``multiplicar'' a linha $i$ de $A$ pela coluna $j$ de B:
+	\right].
+	\] O elemento $(AB)_{ij}$ da linha $i$ e coluna $j$ da matriz $AB$, pode ser obtido ao ``multiplicar''\footnote{O leitor já familiarizado com geometria analítica pode identificar o elemento $ij$ da matriz resultante como o produto escalar entre a linha $i$ de $A$ e a coluna $j$ de $B$.} a linha $i$ de $A$ pela coluna $j$ de B:
 	\[
-	\begin{array}{llllll}
-	(AB)_{11} & = 1\cdot 1 & + (-1)\cdot(-5)  & + \pi \cdot (-3) & + 0\cdot 0    & = 6-3\pi, \\
-	(AB)_{12} & = 1\cdot 4 & + (-1)\cdot 10   & + \pi \cdot 8    & + 0\cdot 2    & = -6 + 8 \pi, \\
-	(AB)_{13} & = 1\cdot 1 & + (-1)\cdot 2    & + \pi \cdot 0    & + 0\cdot (-2) & = -1, \\
-	(AB)_{14} & = 1\cdot 9 & + (-1)\cdot 11   & + \pi \cdot (-6) & + 0\cdot 0    & = -2-6\pi, \\
-	(AB)_{21} & = 11\cdot 1& + 11\cdot(-5)    & + (-2)\cdot(-3)  & + 0\cdot 0    & = 50, \\
-	(AB)_{22} & = 11\cdot 4& + 11\cdot 10     & + (-2)\cdot 8    & + 0\cdot 2    & = 138, \\
-	(AB)_{23} & = 11\cdot 1& + 11\cdot 2      & + (-2)\cdot 0    & + 0\cdot (-2) & = 33, \\
-	(AB)_{24} & = 11\cdot 9& + 11\cdot 11     & + (-2)\cdot (-6) & + 0\cdot 0    & = 232. \\
+	\begin{array}{ccccccccccc}
+	(AB)_{11} & = & 1\cdot 1 & + & (-1)\cdot(-5)  & + & \pi \cdot (-3) & + & 0\cdot 0    & = & 6-3\pi \\
+	(AB)_{12} & = & 1\cdot 4 & + & (-1)\cdot 10   & + & \pi \cdot 8    & + & 0\cdot 2    & = & -6 + 8 \pi \\
+	(AB)_{13} & = & 1\cdot 1 & + & (-1)\cdot 2    & + & \pi \cdot 0    & + & 0\cdot (-2) & = & -1 \\
+	(AB)_{14} & = & 1\cdot 9 & + & (-1)\cdot 11   & + & \pi \cdot (-6) & + & 0\cdot 0    & = & -2-6\pi \\
+	(AB)_{21} & = & 11\cdot 1& + & 11\cdot(-5)    & + & (-2)\cdot(-3)  & + & 0\cdot 0    & = & 50 \\
+	(AB)_{22} & = & 11\cdot 4& + & 11\cdot 10     & + & (-2)\cdot 8    & + & 0\cdot 2    & = & 138 \\
+	(AB)_{23} & = & 11\cdot 1& + & 11\cdot 2      & + & (-2)\cdot 0    & + & 0\cdot (-2) & = & 33 \\
+	(AB)_{24} & = & 11\cdot 9& + & 11\cdot 11     & + & (-2)\cdot (-6) & + & 0\cdot 0    & = & 232. \\
 	\end{array}
 	\] Observamos, a partir deste exemplo, que \textbf{o produto de matrizes não é comutativo}. De fato, as matrizes $AB$ e $BA$ sequer tem a mesma ordem. Além disto, pode ser que seja possível calcular $AB$, mas não $BA$. Pense, por exemplo, em uma matriz $A$ de ordem $3 \times 2$ e em outra matriz $B$ de ordem $2 \times 5$.
 \end{example}
@@ -210,7 +204,7 @@ Vamos mostrar algumas contas que exemplificam tanto o procedimento quanto alguma
 	Uma propriedade de \textbf{matrizes quadradas}, isto é, matrizes cujo número de linhas e de colunas é igual, é que o produto delas fornece uma terceira matriz com a mesma ordem:
 	\[
 	[\cdots]_{n \times \cancel{n}} \, [\cdots]_{\cancel{n} \times n} = [\cdots]_{n \times n}.
-	\] Mesmo neste caso, o produto de matrizes \textbf{não é comutativo}: é possível encontrar matrizes tais que $AB \neq BA$. Por exemplo,
+	\] Mesmo neste caso, o produto de matrizes \textbf{pode não ser comutativo}: é possível encontrar matrizes tais que $AB \neq BA$. Por exemplo,
 	\[
 	\left[
 	\begin{array}{cc}
@@ -285,7 +279,7 @@ b_2 & c_2 \\
 b_{n} & c_{n}\\
 \end{array}
 \right]
-\] como a forma matricial de escrever que dois sistemas lineares que possuem a mesma matriz associada:
+\] como a forma matricial de escrever dois sistemas lineares que possuem a mesma matriz associada:
 \[
 A =
 \left[
@@ -295,7 +289,7 @@ a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &        & \vdots \\
 a_{m1} & a_{m2} & \cdots & a_{mn} \\
 \end{array}
-\right], \quad A \vec{x} = \vec{b}, \quad A \vec{y} = \vec{c}.
+\right]: \quad A \vec{x} = \vec{b}, \quad A \vec{y} = \vec{c}.
 \] (por quê?) É possível de resolver os dois sistemas concomitantemente ao escrever uma matriz aumentada generalizada:
 \[
 \left[
@@ -306,7 +300,7 @@ a_{21} & a_{22} & \cdots & a_{2n} & b_2 & c_2\\
 a_{m1} & a_{m2} & \cdots & a_{mn} & b_{n} & c_{n}\\
 \end{array}
 \right]
-\] A análise das soluções é feita da mesma forma que aprendemos nas notas da primeira semana. Observem que esta é uma forma de economizar as contas e não precisar escalonar duas vezes a matriz!
+\] A análise das soluções é feita da mesma forma que aprendemos nas notas da primeira semana. Observem que esta é uma forma de economizar as contas e não precisar escalonar duas vezes a matriz $A$ associada!
 
 \begin{exercise}
 	Escrever dois sistemas lineares que possuem a mesma matriz associada. Resolver usando a matriz aumentada generalizada acima.
@@ -344,7 +338,7 @@ A \textbf{matriz transposta} de uma matriz $A$, de ordem $m\times n$, é a matriz
 	9  & 4  & 4   & 4 \\
 	\end{array}
 	\right]
-	\] são as matrizes
+	\] são, respectivamente, as matrizes
 	\[
 	A^T = \left[
 	\begin{array}{ccc}
@@ -377,7 +371,7 @@ Valem as seguintes propriedades:
 \end{itemize}
 
 \begin{exercise}
-	Verifique estas propriedades com exemplos.
+	Verifique que estas propriedades são válidas em alguns exemplos (escolha algumas matrizes para fazer as contas).
 \end{exercise}
 
 
@@ -400,8 +394,8 @@ I_3 =
 
 Existindo a matriz identidade, outra pergunta natural é se existe um inverso multiplicativo. Para números reais, qualquer número não nulo possui:
 \[
-x \in \bR, x \neq 0 \implies x^{-1} = \frac{1}{x} \ \text{é este inverso.}
-\]
+x \in \bR, x \neq 0 \implies x^{-1} = \frac{1}{x} \ \text{é um inverso multiplicativo,}
+\] isto é, satisfaz $x\cdot x^{-1} = 1$.
 
 Vamos procurar por \textbf{matrizes inversas}: dada uma matriz $A$, queremos encontrar uma matriz $A^{-1}$ de modo que
 \[
@@ -545,7 +539,7 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 \] Nesta última expressão, definimos o \textbf{determinante} de uma matriz de ordem $2\times 2$:
 \[
 \det A = ad - bc
-\] e, como foi necessário dicidir por este valor:
+\] e, como foi necessário dividir por este valor, concluimos que:
 \[
 \boxed{\text{só existe a matriz inversa de $A$ caso $\det A \neq 0$.}}
 \]
@@ -558,7 +552,7 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 		\item Em seguida, trocamos de lugar os elementos da diagonal principal ($a$ e $d$).
 		\item Finalmente, trocamos o sinal dos elementos da outra diagonal.
 	\end{itemize}
-	\textbf{Atenção!} Este método apenas funciona para matrizes quadradas de ordem 2!
+	\textbf{Atenção!} Este método apenas funciona para matrizes quadradas de ordem $2\times 2$!
 \end{remark}
 
 \begin{example}\label{exp:2x2}
@@ -601,7 +595,7 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 	1/4 & 1/4 \\
 	\end{array}
 	\right].
-	\](trocamos de lugar os elementos da diagonal principal e de sinal dos elementos da outra diagonal).
+	\](trocamos de lugar os elementos da diagonal principal e de sinal os elementos da outra diagonal).
 	
 	Façamos o mesmo para a matriz $B$:
 	\[
@@ -626,7 +620,7 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 	Já para a matriz $C$, temos
 	\[
 	\det C = (-1) \cdot 2 - 2 \cdot (-1) = 0
-	\] e portanto $C$ não é invertível (isto é, não existe a inversa $C^{-1}$).
+	\] e portanto $C$ não é invertível (isto é, não existe a matriz inversa $C^{-1}$)$. \ \lhd$
 \end{example}
 
 
@@ -634,7 +628,7 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 
 \subsection{Algoritmo para ordem maior}
 
-Seja a matriz
+Considere uma matriz de ordem $n \times n$:
 \[
 A =
 \left[
@@ -642,7 +636,7 @@ A =
 a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &        & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn} \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
 \end{array}
 \right].
 \] Para obter a matriz inversa, devemos ter:
@@ -652,7 +646,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} \\
 a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &        & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn} \\
+a_{n1} & a_{n2} & \cdots & a_{nn} \\
 \end{array}
 \right]
 \left[
@@ -660,7 +654,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} \\
 x_{11} & x_{12} & \cdots & x_{1n} \\
 x_{21} & x_{22} & \cdots & x_{2n} \\
 \vdots & \vdots &        & \vdots \\
-x_{m1} & x_{m2} & \cdots & x_{mn} \\
+x_{n1} & x_{n2} & \cdots & x_{nn} \\
 \end{array}
 \right]
 =
@@ -672,9 +666,9 @@ x_{m1} & x_{m2} & \cdots & x_{mn} \\
 0   &    0   & \cdots &    1   \\
 \end{array}
 \right].
-\] Da mesma forma que na seção anterior, devemos resolver simultaneamente os sistemas
+\] Da mesma forma que na seção anterior, isto é equivalente a resolver simultaneamente os sistemas:
 \[
-A \vec{x}_1 = \vec{e}_1, \quad A \vec{x}_2 = \vec{e}_2, \cdots, A \vec{x}_n = \vec{e}_n,
+A \vec{x}_1 = \vec{e}_1, \quad A \vec{x}_2 = \vec{e}_2, \dots, A \vec{x}_n = \vec{e}_n,
 \] onde $\vec{x}_1, \vec{x}_2, \dots, \vec{x}_n$ são as colunas da matriz inversa $A^{-1}$. Assim, devemos escrever a matriz aumentada associada a estes sistemas lineares:
 \[
 \left[
@@ -688,7 +682,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 \] ou, de forma mais sucinta,
 \[
 \big[ \, A \ | \ I \ \big].
-\] E este é o algoritmo de resolução: Deixar a matriz $A$ em forma escalonada reduzida (até chagar na matriz identidade) de modo que as soluções obtidas já serão a matriz inversa de $A$:
+\] E este é o algoritmo de resolução: Deixar a matriz $A$ em forma escalonada reduzida (até chegar na matriz identidade) de modo que as soluções obtidas já serão a matriz inversa de $A$:
 \[
 \big[ \, I \ | \ A^{-1} \ \big].
 \]
@@ -696,7 +690,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 \begin{remark}
 	Para que seja possível encontrar as soluções, como indicado acima, a forma escalonada da matriz $A$ deve possuir $n$ posições de pivô (caso contrário, algum dos sistemas acima seria impossível), de modo que todas as colunas de $A$ são colunas pivô.
 	
-	Se $A$ possuir alguma coluna que não tenha posição de pivô, podemos parar imediatamente o algoritmo, pois isto significa que a matriz não é invertível,
+	Se $A$ possuir alguma coluna sem posição de pivô, podemos parar imediatamente o algoritmo, pois isto significa que a matriz não é invertível.
 \end{remark}
 
 
@@ -790,7 +784,19 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	3/2 & -1/2 & -1/2 & 1/2 \\
 	\end{array}
 	\right].
-	\] Verifique como exercício que esta matriz é de fato a matriz inversa de $A$, isto é, calcule o produto $A \cdot A^{-1}$ e verifique que resulta em $I_4$. $\ \lhd$
+	\] Verifique como exercício que esta matriz é de fato a matriz inversa de $A$, isto é, calcule o produto $A \cdot A^{-1}$ e verifique que resulta em $I_4$. 
+	
+	Notamos que, caso nosso único interesse fosse decidir se $A$ é invertível, sem necessariamente calcular sua inversa, poderíamos ter feito o escalonamento de $A$ (nem precisa ser da matriz aumentada $\big[ \, I \ | \ A^{-1} \ \big]$) e parado o processo quando chegamos em
+	\[
+	A \sim \left[
+	\begin{array}{cccc}
+	2 & 1 & 1 & 0 \\
+	0 & 1 & 1 & 1 \\
+	0 & 0 & 2 & 2 \\
+	0 & 0 & 0 & 2 \\
+	\end{array}
+	\right],
+	\] pois já está claro que todas as colunas possuem posição de pivô. $\ \lhd$
 \end{example}
 
 
@@ -911,7 +917,7 @@ Matrizes inversas têm uma importância mais teórica no nosso curso, como veremos 
 \subsection{Uma primeira caracterização de matrizes invertíveis}\label{sec:inversa}
 
 
-Vamos, nesta subseção, verificar que
+Vamos, nesta subseção, verificar (provar de forma rigorosa) que
 % \[
 % \boxed{
 % 	\begin{split}
@@ -921,10 +927,10 @@ Vamos, nesta subseção, verificar que
 % }
 % \]
 \begin{center}
-  ''a matriz $A$ é invertível se, e somente se, o sistema linear $A \vec{x} = \vec{b}$ possui exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$.''
+  ``a matriz $A$ é invertível se, e somente se, o sistema linear $A \vec{x} = \vec{b}$ possui exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$.''
 \end{center}
 
-\noindent $\implies\!\!)$ Se $A$ é invertível, então conseguimos resolver todos os sistemas
+\noindent $(\!\implies\!\!)$ Se $A$ é invertível, então conseguimos resolver todos os sistemas
 \[
 A \vec{x}_1 = \vec{e}_1, \quad A \vec{x}_2 = \vec{e}_2, \cdots, A \vec{x}_n = \vec{e}_n
 \] concomitantemente. De fato, qualquer vetor $\vec{b}$ pode ser escrito como
@@ -937,7 +943,7 @@ b_2 \\
 \vdots \\
 b_n \\
 \end{array}
-\right]
+\right] = 
 b_1 \vec{e}_1 + b_2 \vec{e}_2 + \cdots + b_n \vec{e}_n,
 \] e daí verificamos que se pode construir uma solução $\vec{x}$ pela fórmula
 \[
@@ -949,10 +955,18 @@ A  \vec{x} & = b_1 A\vec{x}_1 + b_2 A\vec{x}_2 + \cdots + b_n A\vec{x}_n, \\
 & = \vec{b}.
 \end{align*}
 
-\noindent $\Longleftarrow)$ Reciprocamente, suponhamos que o sistema possua exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$. Em particular, podemos resolver os sitemas
+\noindent $(\!\Longleftarrow)$ Reciprocamente, suponhamos que o sistema possua exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$. Em particular, podemos resolver os sitemas
 \[
 A \vec{x}_1 = \vec{e}_1, \quad A \vec{x}_2 = \vec{e}_2, \cdots, A \vec{x}_n = \vec{e}_n
-\] e escrever a matriz inversa de acordo com o nosso algoritmo.
+\] e escrever a matriz inversa de acordo com o nosso algoritmo:
+\[
+A^{-1} = 
+\begin{bmatrix}
+\ |  &  |  &   & | \ \\
+\ \vec{x}_1  &  \vec{x}_2 & \cdots & \vec{x}_n \ \\
+\ |  &  |  &   & | \ \\
+\end{bmatrix}.
+\]
 
 
 
