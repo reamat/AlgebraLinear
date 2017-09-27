@@ -15,7 +15,7 @@
 
 \section{Interpretações de sistemas lineares e de matrizes invertíveis}
 
-Uma das belezas da Álgebra Linear é que diversos conceitos podem ser interpretados de maneiras diferentes. Assim, propriedades intuitivas de uma formulação do problema podem ser traduzidas para outras formulações onde estas propriedades não são tão aparentes.
+Uma das belezas da Álgebra Linear é que diversos conceitos podem ser interpretados de maneiras diferentes. Assim, propriedades intuitivas de uma formulação de um certo problema podem ser traduzidas para outras formulações onde estas propriedades nem sempre são tão aparentes.
 
 Um sistema linear pode ser reescrito de diversas maneiras.
 \begin{enumerate}[1.]
@@ -28,7 +28,7 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	x_2 + 2x_3 & = -2
 	\end{array}
 	\right..
-	\]Aparece na formulação ou modelagem do problema.
+	\] Aparece geralmente na formulação ou na modelagem do problema. As variáveis $x_1, x_2, x_3$ indicam as variáveis que estamos interessados em analisar e o problema específico no fornece os coeficientes do sistema.
 	\item \textbf{Matriz aumentada associada}:
 	\[
 	\left[
@@ -38,7 +38,7 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	0 & 1 & 2 & -2 \\
 	\end{array}
 	\right]
-	\] Esta forma é adequada para resolver o sistema por escalonamento (também conhecido como método de eliminação gaussiana).
+	\] Esta forma é adequada para resolver o sistema por escalonamento (também conhecido como método de eliminação gaussiana). Poderíamos fazer eliminação gaussiana sem recorrer à matriz aumentada associada, mas isto implicaria em ter que ficar reescrevendo as variáveis independentes a todo momento, além de tomar certo cuidado para não se confundir com os coeficientes nulos. O escalonamento de uma matriz torna o procedimento mais automatizado e minimiza as chances de erro.
 	\item  \textbf{Forma matricial}:
 	\[
 	\left[
@@ -62,7 +62,7 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	-2  \\
 	\end{array}
 	\right]  \quad \text{ ou } \quad A \vec{x} = \vec{b}.
-	\] Nesta forma, aparece o produto de uma matriz por um vetor. Depois podemos considerar produto de matrizes e a resolução de sistemas lineares concomitantemente (ver também as notas da Semana 04). Caso a matriz $A$ acima seja invertível, sabemos que o sistema possui apenas uma solução e que
+	\] Nesta forma, aparece o produto de uma matriz por um vetor. Depois podemos considerar produto de matrizes e a resolução de sistemas lineares concomitantemente (ver também capítulo da Semana 04). Caso a matriz $A$ acima seja invertível, sabemos que o sistema possui apenas uma solução e que
 	\[
 	\vec{x} =  A^{-1} \vec{b}.
 	\]
@@ -96,7 +96,7 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	-2  \\
 	\end{array}
 	\right]
-	\] Aqui, há uma interpretação geométrica. Estudar a existência de soluções do sistema linear é equivalente a se perguntar se o vetor
+	\] Aqui, há uma interpretação mais geométrica. Estudar a existência de soluções do sistema linear é equivalente a se perguntar se o vetor
 	\[
 	\vec{b} =
 	\left[
@@ -195,7 +195,7 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{quad
 	\right]
 	\] Estas continhas iniciais já revelam muito! Por exemplo:
 	\begin{itemize}
-		\item Chegamos à forma escalonada e não há linhas do tipo $[0 \ 0 \ 0 \ | \ 1]$; logo, o sistema possui solução;
+		\item Chegamos à forma escalonada e não há linha do tipo $[0 \ 0 \ 0 \ | \ 1]$; logo, o sistema possui solução;
 		\item De fato, podemos dizer mais: já que todas as colunas da matriz $A$ possuem posição de pivô, existe apenas uma solução;
 		\item Podemos dizer mais ainda: já que todas as colunas da matriz $A$ possuem posição de pivô, o sistema possuiria solução, quaisquer que fossem os números do lado direito da igualdade, isto é, as coordenadas do vetor $\vec{b}$;
 		\item Todas as colunas da matriz $A$ possuem posição de pivô e portanto a forma escalonada reduzida da matriz $A$ será a matriz identidade $I_3$. Em particular, seria possível obter a matriz inversa a $A$, desde que começássemos escalonando a matriz $[A \ |  I_3 ]$.
@@ -326,7 +326,7 @@ O teorema é utilizado na prática da mesma maneira que fizemos na seção anterior.
 \section{Espaços vetoriais}
 
 
-Um espaço vetorial (sobre o conjunto $\bR$ de escalares) é um conjunto $V$ equipado com as operações de soma de vetores e de multiplicação por escalar e que satisfazem as propriedades usuais dos espaços $\bR^n$. A ideia é que vários conjuntos possuem a estrutura parecida com a dos espaços $\bR^n$ e esta abordagem permite que façamos uma análise sistemática de todos estes casos
+Um espaço vetorial (sobre o conjunto $\bR$ de escalares) é um conjunto $V$ equipado com as operações de soma de vetores e de multiplicação por escalar e que satisfazem as propriedades usuais dos espaços $\bR^n$. A ideia é que vários conjuntos mais abstratos possuem a estrutura parecida com a dos espaços $\bR^n$ e esta abordagem permite que façamos uma análise sistemática de todos estes casos.
 
 De forma mais precisa, um \textbf{espaço vetorial sobre $\bR$} é um conjunto $V$, cujos elementos são chamados vetores, equipado com duas operações:
 \begin{itemize}
@@ -352,7 +352,7 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\bR$} é um conjunto $V$
 
 
 \begin{example}
-	O conjunto de todas as matrizes de ordem $m\times n$ é um espaço vetorial, com as operações naturais que já utilizamos anteriormente: Se
+	O conjunto $M_{m\times n}$ de todas as matrizes de ordem $m\times n$ é um espaço vetorial, com as operações naturais que já utilizamos anteriormente: Se
 	\[
 	A =
 	\left[
@@ -362,7 +362,7 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\bR$} é um conjunto $V$
 	\vdots & \vdots &        & \vdots \\
 	a_{m1} & a_{m2} & \cdots & a_{mn} \\
 	\end{array}
-	\right]. \quad \text{e} \quad
+	\right] \quad \text{e} \quad
 	B =
 	\left[
 	\begin{array}{cccc}
@@ -392,7 +392,7 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\bR$} é um conjunto $V$
 	k\cdot a_{m1} & k\cdot a_{m2} & \cdots & k\cdot a_{mn} \\
 	\end{array}
 	\right].
-	\] É imediato verificar as 8 propriedades acima (faça!).
+	\] É imediato verificar que valem todas as 8 propriedades acima (faça!).
 \end{example}
 
 
@@ -466,7 +466,7 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não precisamo
 	x \\
 	2x \\
 	\end{array}
-	\right] = 2 \cdot
+	\right] = x \cdot
 	\left[
 	\begin{array}{c}
 	1 \\
@@ -537,7 +537,7 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não precisamo
 
 
 \begin{example}
-	O conjunto $\cP (\bR)$ das funções polinmomiais com coeficientes reais é um subespaço do espaço das funções contínuas do Exemplo \ref{funções}. De fato, o polinômio nulo está neste espaço. Além disso, dados dois polinômios
+	O conjunto $\cP (\bR)$ das funções polinomiais com coeficientes reais é um subespaço do espaço das funções contínuas do Exemplo \ref{funções}. De fato, o polinômio nulo está neste espaço. Além disso, dados dois polinômios
 	\[
 	p(x) = a_n x^n + \cdots a_2 x^2 + a_1 x + a_0 \quad \text{e} \quad q(x) = b_m x^m + \cdots b_2 x^2 + b_1 x + b_0,
 	\] sabemos que $a \cdot p + b \cdot q$ vai ser um polinômio cujo grau é no máximo o maior dos valores $m$ ou $n$.
