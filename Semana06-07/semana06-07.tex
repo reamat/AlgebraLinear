@@ -25,10 +25,10 @@ Nós vimos que um espaço vetorial (sobre o conjunto $\bR$ de escalares) é um conj
 
 
 Uma \textbf{base} para um espaço vetorial $V$ é um conjunto $\cB$ que:
-\begin{itemize}
+\begin{enumerate}[(a)]
 	\item gera $V$ e;
 	\item é linearmente independente.
-\end{itemize}
+\end{enumerate}
 
 
 \begin{example}
@@ -59,7 +59,7 @@ Uma \textbf{base} para um espaço vetorial $V$ é um conjunto $\cB$ que:
 	1
 	\end{array}
 	\right]
-	\] formam um conjunto linearmente independentes. E também é verdade que eles geram $\bR^n$, pois qualquer vetor pode ser escrito como combinação linear deles:
+	\] formam um conjunto linearmente independente. E também é verdade que eles geram $\bR^n$, pois qualquer vetor pode ser escrito como combinação linear deles:
 	\[
 	\vec{v} =
 	\left[
@@ -102,24 +102,29 @@ Uma \textbf{base} para um espaço vetorial $V$ é um conjunto $\cB$ que:
 Várias propriedades interessantes aparecem naturalmente como consequência da definição de base. Suponhamos que um conjunto $\cB = \{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_d\} \subset V$ seja uma base de um espaço vetorial $V$. Já que $\Span \cB = V$, qualquer elemento de $V$ pode ser representado como
 \[
 \vec{v} = x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_d \vec{v}_d.
-\] Além disso, o fato de ser $\cB$ um conjunto linearmente independente nos diz que esta forma de representar o vetor $\vec{v}$ é única! De fato, vamos verificar que qualquer outra representação é, na verdade, a mesa que tínhamos acima: se tivermos
+\] Além disso, o fato de ser $\cB$ um conjunto linearmente independente nos diz que esta forma de representar o vetor $\vec{v}$ é única! De fato, vamos verificar que qualquer representação é, na realidade, a mesma representação que tínhamos acima: se tivermos
 \[
 \vec{v} = k_1 \vec{v}_1 + k_2 \vec{v}_2 + \cdots + k_d \vec{v}_d,
 \] deveremos também ter
 \[
 (x_1-k_1) \vec{v}_1 + (x_2-k_2) \vec{v}_2 + \cdots + (x_d-k_d) \vec{v}_d = \vec{v} - \vec{v} = \vec{0}.
-\] Sendo a base $\cB$ formada por vetores LI, concluimos que os coeficientes devem ser nulos, isto é, $x_1=k_1, x_2=k_2,\dots,x_d=k_d$. Portanto,
+\] Sendo a base $\cB$ formada por vetores LI, concluimos que os coeficientes da combinação linear acima devem ser nulos, isto é, $x_1=k_1, x_2=k_2,\dots,x_d=k_d$. Portanto,
+\[ 
+\boxed{
+	\begin{array}{c}
+\text{Todo vetor pode ser representado de maneira única como combinação linear} \\ \text{dos elementos de uma base.}
+	\end{array}
+}
+\]
+Uma segunda propriedade fundamental é a seguinte:
+\[ 
+\boxed{
+	\text{Toda base de um espaço vetorial fixado possui o mesmo número de elementos.}
+}
+\]
 
-\begin{center}
-  ''todo vetor pode ser representado de maneira única como combinação linear dos elementos de uma base.''
-\end{center}
 
-Uma segunda propriedade que é fundamental é a seguinte:
-\begin{center}
-  ''toda base de um espaço vetorial fixado possui o mesmo número de elementos.''
-\end{center}
-
-\begin{proof}[Justificativa] Se tivéssemos duas bases $\cB_1 = \{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_d\} \subset V$ e $\cB_2 = \{\vec{w}_1, \vec{w}_2, \dots, \vec{w}_k\} \subset V$ de um espaço vetorial $V$ com $k<d$, nós poderíamos escrever os elementos da base $\cB_1$ como combinações lineares dos elementos da base $\cB_2$:
+\begin{proof}[Justificativa] Sejam duas bases $\cB_1 = \{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_d\} \subset V$ e $\cB_2 = \{\vec{w}_1, \vec{w}_2, \dots, \vec{w}_k\} \subset V$ do mesmo espaço vetorial $V$. Nós podemos escrever os elementos da base $\cB_1$ como combinações lineares dos elementos da base $\cB_2$:
 	\[
 	\left\{
 	\begin{array}{rcl}
@@ -129,7 +134,7 @@ Uma segunda propriedade que é fundamental é a seguinte:
 	\vec{v}_d &=& a_{1d} \vec{w}_1 + a_{2d} \vec{w}_2 + \cdots + a_{kd} \vec{w}_k \\
 	\end{array}
 	\right.
-	\] O problema é que, se tivéssemos $k<d$, então a equação 
+	\] O problema é que, se tivéssemos quantidades diferentes de vetores nas bases, digamos $k<d$, então a equação 
 	\begin{equation}\label{1111}
 	b_1 \vec{v}_1 + b_2 \vec{v}_2 + \cdots + b_d \vec{v}_d = \vec{0}
 	\end{equation} possuiria soluções não triviais, contradizendo o fato de ser $\cB_1$ um conjunto linearmente independente. De fato, utilizando que $\cB_1$ é linearmente independente, encontrar $b_1, b_2, \dots, b_k$ na equação \eqref{1111} fica equivalente a resolver
@@ -164,9 +169,9 @@ Uma segunda propriedade que é fundamental é a seguinte:
 \end{proof}
 
 
-O número de elementos de uma base de $V$ é chamado de \textbf{dimensão} do espaço vetorial $V$. A dimensão de $V$, pelo que vimos até agora, indica o número de parâmetros necessários para representar qualquer vetor de $V$.
+O número de elementos de uma base do espaço vetorial $V$ é chamado de \textbf{dimensão} de $V$. Graças à propriedade acima, tanto faz a base que considerarmos, pois todas tem o mesmo número de elementos. A dimensão de $V$, pelo que vimos até agora, indica o número de parâmetros necessários para representar qualquer vetor de $V$.
 
-Quando um vetor $\vec{v}$ é escrito em termos dos elementos de uma base, é comum utilizarmos a notação
+Quando um vetor $\vec{v}$ é escrito em termos dos elementos de uma base $\cB = \{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_d\}$, é comum utilizarmos a notação
 \[
 \vec{v} = x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots  + x_d \vec{v}_d =
 \left[
@@ -231,7 +236,7 @@ x_d \\
 	Em um curso de equações diferenciais, se aprende que o conjunto de todas as soluções de uma equação linear de segunda ordem da forma
 	\[
 	y''(t) + f(x) y'(x) + g(x) y(x) = 0
-	\] é uma espaço vetorial cuja dimensão é 2. Desta forma, sabendo que $y_1(x) = e^{2x}$ e $y_2 (x) = e^{-x}$ satisfazem a equação
+	\] é uma espaço vetorial cuja dimensão é 2. Desta forma, por exemplo, sabendo que $y_1(x) = e^{2x}$ e $y_2 (x) = e^{-x}$ satisfazem a equação
 	\begin{equation}\label{eqn:edo}
 	y''(t) - y'(x) -2 y(x) = 0,
 	\end{equation} podemos concluir que todas as soluções desta EDO podem ser escritas como combinação linear destas duas:
@@ -338,9 +343,16 @@ Vimos que o espaço nulo (núcleo) de uma matriz $A$ de ordem $m \times n$ é o con
 \end{example}
 
 É sempre possível obter uma base para $\Nul A$ desta forma. Enfatizamos esta propriedade abaixo:
-\begin{center}
-  ''uma base para $\Nul A$ pode ser encontrada por escalonamento ao resolver o sistema homogêneo associado à matriz $A$. Além disso, a dimensão do espaço nulo é igual ao número de variáveis livres do sistema.''
-\end{center}
+
+\[
+\boxed{
+\begin{array}{c}
+\text{Uma base para $\Nul A$ pode ser encontrada por escalonamento ao resolver o sistema} \\
+\text{homogêneo associado à matriz $A$. Além disso, a dimensão do espaço nulo é igual ao} \\
+\text{número de variáveis livres do sistema.}
+\end{array}
+}
+\]
 
 \subsection{Espaço coluna}
 
@@ -355,11 +367,18 @@ A =
 \end{array}
 \right] \rightsquigarrow
 \Col A = \Span \{ \vec{a}_1, \vec{a}_2, \dots, \vec{a}_n\}.
-\] Desta forma, a definição de $\Col A$ já deixa claro um conjunto gerador: as colunas de $A$!. Para determinar uma base, nós devemos ``excluir'' as colunas que podem ser geradas pelas demais, de modo a obter um conjunto linearmente independente.
+\] Desta forma, a definição de $\Col A$ já deixa claro um conjunto gerador: as colunas de $A$! Para determinar uma base, nós devemos ``excluir'' as colunas que podem ser geradas pelas demais, de modo a obter um conjunto linearmente independente.
+\[
+\boxed{
+	\begin{array}{c}
+	\text{Uma base para $\Col A$ é formada pelas colunas pivô da matriz $A$. Para descobrir} \\
+	\text{quais são as colunas pivô, procedemos por escalonamento. As \textit{colunas da matriz} } \\
+	\text{\textit{original} formam uma base de $\Col A$. A dimensão do espaço coluna é } \\
+	\text{igual ao número de colunas pivô da matriz.}
+	\end{array}
+}
+\]
 
-\begin{center}
-  ''Uma base para $\Col A$ é formada pelas colunas pivô da matriz $A$. Para descobrir quais são as colunas pivô, procedemos por escalonamento. As \textit{colunas da matriz original} formam uma base de $\Col A$. A dimensão do espaço coluna é igual ao número de colunas pivô da matriz.''
-\end{center}
 
 \begin{example}
 	Encontrar uma base para o espaço coluna da matriz
@@ -426,7 +445,7 @@ Nas seções anteriores, vimos que
 \]
 \[
 \operatorname{dim} \Nul A = \text{ número de variáveis livres do sistema homogêneo associado}.
-\] Ora, mas ou uma coluna é pivô ou sua variável associada é livre, de modo que temos o
+\] Ora, mas ou uma coluna é pivô ou sua variável associada pode ser considerada uma variável livre, de modo que temos o
 
 \begin{theorem}[Teorema do núcleo e da imagem]
 	Para qualquer matriz $A$ de ordem $m\times n$, temos
@@ -488,7 +507,7 @@ b_2 \\
 b_n \\
 \end{array}
 \right]_{\cB} = b_1 \vec{v}_1 + b_2 \vec{v}_2 + \cdots + b_n \vec{v}_n,
-\] podemos obter as coordenadas usuais (na base canônica) de $\vec{x}$ de forma sistemática. Queremos descobrir $x_1, x_2, \dots, x_n$ tais que 
+\] podemos obter as coordenadas usuais (na base canônica) de $\vec{x}$ de forma sistemática. Em outras palavras, queremos encontrar $x_1, x_2, \dots, x_n$ tais que 
 \[
 \vec{x} = \left[
 \begin{array}{c}
@@ -513,7 +532,7 @@ A =
 v_{11} & v_{12} & \cdots & v_{1n} \\
 v_{21} & v_{22} & \cdots & v_{2n} \\
 \vdots & \vdots &        & \vdots \\
-v_{m1} & v_{m2} & \cdots & v_{mn} \\
+v_{n1} & v_{n2} & \cdots & v_{nn} \\
 \end{array}
 \right].
 \] Funciona porque 
@@ -538,7 +557,7 @@ A matriz $A$ construida como acima é chamada de \textbf{matriz de mudança de coo
 A matriz de mudança de coordenadas da base canônica para a base $\cB$ pode ser obtida a partir da inversa de $A$:
 \[
 [\vec{x}]_{\cB} = A^{-1} \cdot \vec{x}.
-\]
+\] (Notamos que a matriz $A$ é necessariamente invertível, já que suas colunas são elementos de uma base; em particular, são linearmente independentes).
 
 \begin{example}
 	Consideramos a seguinte base para $\bR^2$:
@@ -712,7 +731,7 @@ A matriz de mudança de coordenadas da base canônica para a base $\cB$ pode ser o
 	b_1  \\
 	b_2  \\
 	\end{array}
-	\right]
+	\right].
 	\]
 \end{remark}
 
