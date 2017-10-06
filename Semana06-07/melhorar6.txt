@@ -3,3 +3,5 @@ mais exemplos começo?
 Justificar geradores espaço coluna
 
 mais exemplos do teo nucleo e imagem?
+
+Colocar um exemplo 3x3 ou 4x4 de matriz de mudança de coordenadas?
