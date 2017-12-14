@@ -14,24 +14,24 @@
 
 
 
-\section{Método dos Mínimos Quadrados}
+\section{Método dos mínimos quadrados}
 
-Sistemas lineares aparecem como modelos matemáticos de vários fenômenos e em várias situações. Acontece que alguns sistemas simplesmente não possuem soluções e ficamos sem saber como proceder. O \textbf{Método dos Mínimos Quadrados} é uma técnica que nos permite, de forma aproximada, retirar alguma informação desses sistemas impossíveis. A terminologia se deve ao fato de que, como veremos, este método minimiza a soma dos quadrados dos erros obtidos na aproximação.
+Sistemas lineares aparecem como modelos matemáticos de vários fenômenos e em várias situações. Acontece que alguns sistemas simplesmente não possuem soluções e ficamos sem saber como proceder. O \textbf{método dos mínimos quadrados} é uma técnica que nos permite, de forma aproximada, retirar alguma informação desses sistemas impossíveis. A terminologia se deve ao fato de que, como veremos, este método minimiza a soma dos quadrados dos erros obtidos na aproximação.
 
 Como sabemos, resolver o sistema linear
 \[
 A \vec{x} = \vec{b}
-\] consiste em encontrar um vetor $\vec{x}$ que satisfaça a esta equação. Na terminologia que construimos ao longo do curso, isto significa que $\vec{b}$ pertence ao espaço coluna da matriz $A$, isto é, $\vec{b} \in \Col A$. Desta forma, não é possível resolver o sistema quando $\vec{b} \not\in \Col A$. 
+\] consiste em encontrar um vetor $\vec{x}$ que satisfaça a esta equação. Na terminologia que construimos ao longo do curso, é equivalente dizer que $\vec{b}$ pertence ao espaço coluna da matriz $A$, isto é, $\vec{b} \in \Col A$. Desta forma, não é possível resolver o sistema quando $\vec{b} \not\in \Col A$. Representamos esta situação na figura abaixo.
 \begin{figure}[h!]
   \begin{center}
-    \includegraphics[width=0.6\linewidth]{\dir/Semana13/semana13-proj-col}
+    \includegraphics[width=0.8\linewidth]{\dir/Semana13/semana13-proj-col}
   \end{center}
 \end{figure}
 
-O Método dos Mínimos Quadrados consiste em olhar para o vetor $\vec{p} = \proj_{\Col A} \vec{b}$ e resolver o sistema linear associado
+O método dos mínimos quadrados consiste em olhar para o vetor $\vec{p} = \proj_{\Col A} \vec{b}$ e resolver o sistema linear associado
 \[
 A \vec{x} = \vec{p}.
-\] Esta solução de $A \vec{x} = \vec{p}$ é chamada de \textbf{solução de mínimos quadrados}. A ideia é (ver figura) considerar o vetor em $\Col A$ que é ``mais próximo'' de $\vec{b}$ e cujo sistema linear associado possua solução. Neste contexto, estamos pensando em mais próximo no sentido que
+\] Esta solução de $A \vec{x} = \vec{p}$ é chamada de \textbf{solução de mínimos quadrados}. A ideia é (ver figura) considerar o vetor pertencente a $\Col A$ que é o ``mais próximo'' possível de $\vec{b}$ e cujo sistema linear associado possua solução. Neste contexto, estamos pensando em mais próximo no sentido 
 \[
 \| \vec{b} - \proj_{\Col A} \vec{b} \| \le \| \vec{b} - \vec{c} \|, \text{ para qualquer } \vec{c}\, \in \Col A,
 \] isto é, no sentido de ser a projeção a melhor aproximação de $\vec{b}$ no espaço coluna de $A$. Escrevendo os vetores em coordenadas:
@@ -39,15 +39,15 @@ A \vec{x} = \vec{p}.
 \vec{b} =
 \begin{bmatrix}
   b_1 \\ b_2 \\ \vdots \\ b_n
-\end{bmatrix} \ \text{e} \
+\end{bmatrix} \quad \text{e} \quad 
 \proj_{\Col A} \vec{b} =
 \begin{bmatrix}
   p_1 \\ p_2 \\ \vdots \\ p_n
 \end{bmatrix},
-\] temos que o valor
+\] podemos definir o valor
 \[
-\| \vec{b} - \proj_{\Col A} \vec{b} \| = \sum_{i=1}^n (b_i - p_i)^2
-\] é chamado de \textbf{erro da aproximação}. Logo, como anunciado, a soma dos quadrados dos erros obtidos cada componente é o mínimo possível.
+\| \vec{b} - \proj_{\Col A} \vec{b} \| = \sqrt{\sum_{i=1}^n (b_i - p_i)^2}
+\] como o \textbf{erro da aproximação} ou \textbf{erro  quadrático}. Logo, como anunciado, a soma dos quadrados dos erros obtidos cada componente é o mínimo possível.
 
 
 \begin{example}\label{exp:minquad1}
@@ -80,7 +80,7 @@ A \vec{x} = \vec{p}.
   \end{bmatrix} .
   \] Vamos tentar encontrar, conforme descrito acima, uma solução de mínimos quadrados. Passos a serem realizados:
   \begin{itemize}
-  \item Para calcular a projeção de $\vec{b}$ sobre $\Col A$, precisamos, em primeiro lugar, obter uma base ortogonal do espaço $\Col A$; isto pode ser feito pelo Processo de Gram--Schmidt;
+  \item Para calcular a projeção de $\vec{b}$ sobre $\Col A$, precisamos, em primeiro lugar, obter uma base ortogonal do espaço $\Col A$; isto pode ser feito pelo processo de Gram--Schmidt;
   \item Calcular a projeção $\vec{p} = \proj_{\Col A} \vec{b}$;
   \item Resolver o sistema linear $A \vec{x} = \vec{p}$.
   \end{itemize} Embora seja possível realizar estes três passos, temos de convir que seria muito trabalhoso. Por isto, vamos analisar um pouco mais da teoria para encontrar um método mais eficaz$. \ \lhd$
@@ -101,16 +101,16 @@ A =
   | & | &   & |
 \end{bmatrix}, \qquad \left( \text{que,  em particular, implica }
   A^T = \begin{bmatrix}
-    \text{---} & \vec{a}_1  & \text{---} \\
-    \text{---} & \vec{a}_2  & \text{---} \\
-    & \vdots     &  \\
-    \text{---} & \vec{a}_n  & \text{---}
+    \ \text{---} & \vec{a}_1  & \text{---} \ \\
+    \ \text{---} & \vec{a}_2  & \text{---} \ \\
+    \ & \vdots     &  \ \\
+    \ \text{---} & \vec{a}_n  & \text{---}\ 
   \end{bmatrix}\right)
 \] devemos ter
 \[
 \vec{a}_j \cdot \big(\vec{b} - \vec{p}\big) = 0, \text{ para todo } j  \ \  \iff \ \
 A^T (\vec{b} - \vec{p}) = \vec{0} \ \ \iff \ \ A^T \vec{b} = A^T \vec{p} = A^T A\vec{x}.
-\] Esta última linha é válida porque o produto escalar $\vec{a}_j \cdot \big(\vec{b} - \vec{p}\big)$ é justamente a entrada $j$ do vetor obtido ao multiplicar $A^T(\vec{b} - \vec{p})$.
+\] Esta última linha é válida porque o produto escalar $\vec{a}_j \cdot \big(\vec{b} - \vec{p}\big)$ é justamente a entrada $j$ do vetor obtido ao multiplicar $A^T(\vec{b} - \vec{p})$. Além disso, $A \vec{x} = \vec{p}.$
 
 Concluimos, desta forma, que, se $\vec{x}$ é uma solução de mínimos quadrados, ou seja, se $A \vec{x} = \vec{p}$, então necessariamente
 \begin{equation}\label{minquad}
@@ -185,7 +185,7 @@ Tudo isto implica que podemos utilizar a equação \eqref{minquad} para encontrar 
   \begin{bmatrix}
     3/2 \\ -1/2 \\ 1/4
   \end{bmatrix}.
-  \] Observe como isto é muito menos trabalhoso do que o método que havíamos esquematizado quando discutimos este sistema no Exemplo \ref{exp:minquad1}$. \ \lhd$
+  \] Observe como isto é muito menos trabalhoso do que o método que havíamos esquematizado no Exemplo \ref{exp:minquad1}$. \ \lhd$
 \end{example}
 
 \begin{exercise}
@@ -199,7 +199,7 @@ Tudo isto implica que podemos utilizar a equação \eqref{minquad} para encontrar 
 Nossa aproximação linear foi encontrada de modo a minimizar o erro quadrático. Para encontrar o erro, deveríamos calcular
 \[
 \| \vec{b} - \proj_{\vec{\Col A}} \vec{b} \|.
-\] No entanto, resolvemos de outra maneira e não calculamos a projeção. Observando que a solução de mínimos quadrados satisfaz $A \vec{x} = \proj_{\vec{\Col A}} \vec{b}$, podemos calcular o erro por
+\] No entanto, note que não precisamos calcular a projeção. Observando que a solução de mínimos quadrados satisfaz $A \vec{x} = \proj_{\vec{\Col A}} \vec{b}$, podemos calcular o erro por
 \[
 \text{erro } = \| \vec{b} - A \vec{x} \|,
 \] onde $\vec{x}$ é a solução de mínimos quadrados.
@@ -225,56 +225,25 @@ A \vec{x} =
 \end{bmatrix}
 \]
 \[
-\implies \text{erro } = \| \vec{b} - A \vec{x} \| = \sqrt{\frac{25}{4} + 1 + \frac{1}{4}} = \frac{\sqrt{30}}{2}.
+\implies \text{erro } = \| \vec{b} - A \vec{x} \| = \sqrt{\frac{25}{4} + 1 + \frac{1}{4}} = \frac{\sqrt{30}}{2} \simeq 2,74.
 \]
 
 
 % \newpage
 
-\section{Fatoração QR e Mínimos Quadrados}
-
-Vimos que o processo de Gram-Schmidt nos permite escrever uma matriz $A$ cujas linhas são linearmente independentes na forma $A=QR$, onde Q é uma matriz ortogonal, $R$ é triangular superior invertível, e as colunas de $Q$ formam uma base ortonormal para o espaço-coluna de $A$. Chamamos esta fatoração de $A$ de fatoração QR. 
-
-A fatoração QR tem uma importante aplicação na solução de problemas em mínimos quadrados. Ocorre que, em muitos problemas, a matriz $A^T A$ é uma matriz {\it mal-condicionada}, ou seja uma matriz que é muito sensível aos erros de aproximação cometidos em cálculos numéricos usualmente executados no tratamento de problemas aplicados. 
-Os exemplos que virão a seguir nos mostram situações em que há uma grande variação de magnitude entre as entradas da matriz $A^T A$, e isto costuma ser fonte de instabilidade numérica.
-
-Para isso, a fatoração $QR$ oferece uma solução alternativa em mínimos quadrados para um sistema linear $Ax=b$:
-Se $A=QR$, então 
-$$
-A^T=R^T Q^T$$
-% \;\; \mbox{e}
-e
-$$  A^T A= R^T Q^T Q R= R^T R,
-$$ 
-onde usamos o fato de que $Q^{-1}=Q^T$.
-Assim as equações normais $A^T A \vec{x} = A^T \vec{b}$ se reduzem a 
-$$ R^T R \vec{x} = R^T Q^T \vec{b}.$$
-Ainda, como $R$ é invertível podemos eliminar (cancelar) $R^T$ na equação acima, %ficando com a seguinte expressão para a solução em mínimos quadrados
-obtendo o seguinte:
-\begin{theorem}
-  Se $A=QR$ com $Q$ ortogonal e $R$ triangular superior invertível, então 
-  a solução em mínimos quadrados do sistema $Ax=b$ é única e dada pela solução do sistema
-  $$  R \vec{x} =  Q^T \vec{b}.$$
-\end{theorem}
-
-Note que o fato de $R$ ser triangular superior torna a resolução do sistema acima pouco custosa do ponto de vista computacional.
-
-Alternativamente temos uma expressão explícita para solução em mínimos quadrados: $$   \vec{x} = R^{-1} Q^T \vec{b}.$$
-
-É importante notar que existem algoritmos para fatoração QR que são \it{numéricamente estáveis}, ou seja pouco suscetiveis a erros de aproximação ou arredondamento. Tais algorimos são diferentes do processo de Gram Schmidt usual.
 
 
 \section{Regressão Linear Simples}
 
-Vamos apresentar uma aplicação de algumas das técnicas da seção anterior à Estatística ou Econometria. Uma \textbf{regressão linear simples} é uma equação, tipicamente da forma
+Vamos apresentar uma aplicação de algumas das técnicas do método de mínimos quadrados à Estatística ou Econometria. Uma \textbf{regressão linear simples} é uma equação, tipicamente da forma
 \[
 y = a + b x,
-\] para estimar os valores $(x,y)$ apenas conhecendo alguns valores específicos $(x_1, y_1), (x_2, y_2), \dots,$ $(x_k, y_k)$. A ideia é tentar capturar como que mudanças na variável independente $x$ afetam a variável dependente $y$.
+\] para estimar os valores $(x,y)$ apenas conhecendo alguns valores específicos $(x_1, y_1), (x_2, y_2), \dots,$ $(x_k, y_k)$. A ideia é tentar capturar como que mudanças na variável independente $x$ afetam a variável dependente $y$ (neste caso, supondo que esta dependência é linear).
 
-\begin{example}\footnote{Exemplo adaptado de https://onlinecourses.science.psu.edu/stat501/node/257}\label{exp:idade}
-  Com o intuito de analisar se é razoável supor que há um relação linear entre a idade de um motorista e quão longe ele consegue ver, uma empresa (Last Resource, Inc., Bellefonte, PA) coletou dados de 30 motoristas. Para simplificar as nossas contas, vamos listar abaixo \textit{apenas alguns} destes dados.
-  \begin{center}
-    \begin{tabular}{|c|c|}
+\begin{example}\footnote{Exemplo adaptado de \url{https://onlinecourses.science.psu.edu/stat501/node/257}}\label{exp:idade}
+Com o intuito de analisar se é razoável supor que há um relação linear entre a idade de um motorista e quão longe ele consegue ver, uma empresa (Last Resource, Inc., Bellefonte, PA) coletou dados de 30 motoristas. Para simplificar as nossas contas, vamos listar abaixo \textit{apenas alguns} destes dados.
+\begin{center}
+ \begin{tabular}{|c|c|}
       \hline
       % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
       Idade & Distância (em $m$) \\ \hline
@@ -284,13 +253,13 @@ y = a + b x,
       49 & 380 \\
       66 & 350 \\
       \hline
-    \end{tabular}
-  \end{center} Podemos pensar em $y$ como a distância e em $x$ como a idade. Gostaríamos de achar uma relacção linear da forma
-  \[
+  \end{tabular}
+\end{center} Podemos pensar em $y$ como a distância e em $x$ como a idade. Gostaríamos de achar uma relação linear da forma
+\[
   y = a + b x.
-  \] Desta forma, os dados obtidos implicam que  
-  \[
-  \left\{
+\] Desta forma, os dados obtidos implicam que  
+\[
+\left\{
     \begin{array}{ll}
       b + 20 a = 590 \\
       b + 32 a = 410 \\
@@ -298,7 +267,7 @@ y = a + b x,
       b + 49 a = 380 \\
       b + 66 a = 350
     \end{array}
-  \right. \ \ \leftrightsquigarrow \ \
+  \right. \ \ \leftrightsquigarrow \ \ \
   \begin{bmatrix}
     1 & 20 \\
     1 & 32 \\
@@ -312,7 +281,7 @@ y = a + b x,
   \begin{bmatrix}
     590 \\ 410 \\ 460 \\ 380 \\ 350
   \end{bmatrix}
-  \] Ora, dificilmente um sistema linear com duas incógnitas e cinco equações terá solução (só terá solução se todos os pontos do conjunto de dados estiverem alinhados em uma reta perfeita!). Vamos procurar por uma solução de mínimos quadrados. Isto é \textbf{regressão linear simpes}.
+  \] Ora, dificilmente um sistema linear com duas incógnitas e cinco equações terá solução (só terá solução se todos os pontos do conjunto de dados estiverem perfeitamente alinhados em uma reta!). Consequentemente, vamos procurar por uma solução de mínimos quadrados. Isto é \textbf{regressão linear simpes}.
 
   Denotando
   \[
@@ -401,12 +370,13 @@ y = a + b x,
     868.45 \\
     949.2 \\
   \end{bmatrix} \simeq \proj_{\Col A} \vec{b} \implies \text{ erro } = \| \vec{b} - A\vec{x} \| \simeq 947.3
-  \] Na figura abaixo, mostramos um esboço da reta que melhor aproxima os dados deste exemplo$. \ \lhd$
+  \]
   \begin{figure}[h!]
     \begin{center}
       \includegraphics[width=1\linewidth]{\dir/Semana13/semana13-idade}
     \end{center}
   \end{figure}
+ Na figura, mostramos um esboço da reta que melhor aproxima os dados deste exemplo$. \ \lhd$
 \end{example}
 
 
@@ -486,7 +456,7 @@ De uma maneira geral, para encontrar uma \textbf{reta de melhor ajuste} a uma qu
 \section{Regressão não linear}
 
 
-Podemos também procurar (em contraste com a seção anterior) por funções não lineares que se ajustem a um conjunto de pontos. Por exemplo, dado um certo conjunto de pontos
+Podemos também procurar (em contraste com a subseção anterior) por funções não lineares que se ajustem a um conjunto de pontos. Por exemplo, dado um certo conjunto de pontos
 \[
 (x_1, y_1), \ (x_2, y_2), \ \dots, (x_k, y_k),
 \] vamos procurar por uma parábola
@@ -581,7 +551,8 @@ y = a + bx + cx^2
     0 & 1 & 0 & -1505841055/105110139 \\
     0 & 0 & 1 & 11779375/105110139 \\
   \end{bmatrix}.
-  \] Logo, aproximando estas frações, obtemos
+  \] 
+  Logo, aproximando estas frações, obtemos
   \[
   \left\{
     \begin{array}{ll}
@@ -590,17 +561,19 @@ y = a + bx + cx^2
       c \simeq  0.112 \\
     \end{array}
   \right.
-  \] e a parábola desejada é, aproximadamente
+  \] 
+  \begin{figure}[h!]
+  	\begin{center}
+  		\includegraphics[width=1\linewidth]{\dir/Semana13/semana13-idade-parabola}
+  	\end{center}
+  \end{figure}
+  e a parábola desejada é, aproximadamente
   \[
   y = 812.934 - 14.326 x + 0.112 x^2.
   \]
-  \begin{figure}[h!]
-    \begin{center}
-      \includegraphics[width=1\linewidth]{\dir/Semana13/semana13-idade-parabola}
-    \end{center}
-  \end{figure}
+  
 
-  \noindent Observamos que, apesar de o erro quadrático ser provavelmente menor, esta parábola se torna crescente a partir de um certo momento, fazendo com que o modelo não seja tão razoável para idades maiores. Por exemplo, é pouco provável que (na média), pessoas com 95 anos vejam a uma distância maior do que pessoas de 65 anos, como sugere a parábola acima.
+  \noindent Observamos que, apesar de o erro quadrático ser provavelmente menor neste exemplo, esta parábola se torna crescente a partir de um certo momento, fazendo com que o modelo não seja tão razoável para idades maiores. Por exemplo, é pouco provável que (na média), pessoas com 95 anos vejam a uma distância maior do que pessoas de 65 anos, como sugere a parábola acima.
 \end{example}
 
 
@@ -642,7 +615,7 @@ z = a + b x + c y,
 
 
 \begin{example}
-  Uma pesquisa com $214$ mulheres na em uma universidade americana\footnote{Referência: \verb"https://onlinecourses.science.psu.edu/stat501/node/292"} coletou informações sobre a altura das participantes, assim como a altura de seus pais. Abaixo, listamos \textit{apenas alguns destes dados}, para que nossas contas não fiquem tão extensas. Fizemos também uma mudança de unidades nas alturas (de polegadas) para centímetros,
+  Uma pesquisa com $214$ mulheres em uma universidade americana\footnote{Referência: \verb"\url{https://onlinecourses.science.psu.edu/stat501/node/292}"} coletou informações sobre a altura das participantes, assim como a altura de seus pais. Abaixo, listamos \textit{apenas alguns destes dados}, para que nossas contas não fiquem tão extensas. Fizemos também uma mudança de unidades nas alturas (de polegadas) para centímetros,
   \begin{center}
     \begin{tabular}{|c|c|c|}
       \hline
@@ -741,13 +714,43 @@ z = a + b x + c y,
   \] A equação de melhor ajuste procurada é, portanto, aproximadamente,
   \[
   z \simeq 14.781 + 0.099 x + 0.783 y.
-  \] Tente calcular sua altura $z$ a partir da altura de sua mãe $x$ e de seu pai $y$. O teste deve funcionar melhor para mulheres!
+  \] Tente calcular sua altura $z$ a partir da altura de sua mãe $x$ e de seu pai $y$. O teste deve funcionar melhor para mulheres! Além disso, a aproximação linear deve ser melhor utilizando mais dados nos cálculos.
   \begin{figure}[h!]
     \begin{center}
       \includegraphics[width=1\linewidth]{\dir/Semana13/semana13-alturas}
     \end{center}
   \end{figure}
 \end{example}
+
+\section{Fatoração QR e Mínimos Quadrados}
+
+Vimos que o processo de Gram-Schmidt nos permite escrever uma matriz $A$ cujas linhas são linearmente independentes na forma $A=QR$, onde $Q$ é uma matriz ortogonal, $R$ é triangular superior invertível, e as colunas de $Q$ formam uma base ortonormal para o espaço-coluna de $A$. Chamamos esta fatoração de $A$ de fatoração QR. 
+
+A fatoração QR tem uma importante aplicação na solução de problemas em mínimos quadrados. Ocorre que, em muitos problemas, a matriz $A^T A$ é uma matriz {\it mal-condicionada}, ou seja, uma matriz que é muito sensível aos erros de aproximação cometidos em cálculos numéricos usualmente executados no tratamento de problemas aplicados. 
+Os exemplos que virão a seguir nos mostram situações em que há uma grande variação de magnitude entre as entradas da matriz $A^T A$, e isto costuma ser fonte de instabilidade numérica.
+
+Para isso, a fatoração QR oferece uma solução alternativa em mínimos quadrados para um sistema linear $A\vec{x}= \vec{b}$:
+se $A=QR$, então 
+\[
+A^T=R^T Q^T
+\ \ \mbox{ que implica em } \ \
+A^T A= R^T Q^T Q R= R^T R,
+\]
+onde usamos o fato de que $Q^{-1}=Q^T$.
+Assim as equações normais $A^T A \vec{x} = A^T \vec{b}$ se reduzem a 
+$$ R^T R \vec{x} = R^T Q^T \vec{b}.$$
+Ainda, como $R$ é invertível podemos eliminar (cancelar) $R^T$ na equação acima, %ficando com a seguinte expressão para a solução em mínimos quadrados
+obtendo o seguinte:
+\begin{theorem}
+	Se $A=QR$ com $Q$ ortogonal e $R$ triangular superior invertível, então 
+	a solução em mínimos quadrados do sistema $A\vec{x}= \vec{b}$ é única e dada pela solução do sistema
+	$$  R \vec{x} =  Q^T \vec{b}.$$
+\end{theorem}
+
+Note que o fato de $R$ ser triangular superior torna a resolução do sistema acima pouco custosa do ponto de vista computacional. Alternativamente, temos uma expressão explícita para solução em mínimos quadrados: $$   \vec{x} = R^{-1} Q^T \vec{b}.$$
+
+É importante notar que existem algoritmos para fatoração QR que são \textit{numéricamente estáveis}, ou seja pouco suscetiveis a erros de aproximação ou arredondamento. Tais algorimos são diferentes do processo de Gram Schmidt usual.
+
 
 
 

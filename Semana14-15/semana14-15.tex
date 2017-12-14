@@ -1,211 +1,21 @@
 % Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
+\documentclass[../livro.tex]{subfiles}
 
-%define o diretório principal
-\providecommand{\dir}{..}
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% %%%%%%%% Pacotes básicos para MathEnvir%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-% \usepackage{amsmath}   %%AMS primary package (includes amstext, amsopn, amsbsy), provides various features for displayed equations and %%other mathematical constructs.
-% %%%% OPTIONS FOR THE AMSMATH PACKAGE
-% \usepackage{amscd}     %%Provides a CD environment for simple commutative diagrams (no support for diagonal arrows).
-% \usepackage{amsxtra}   %%Provides certain odds and ends such as \fracwithdelims and \accentedsymbol, for compatibility with documents %%created using version 1.1.
-% \usepackage{amsthm}    %%Enhanced version of \newtheorem command for defining theorem-like environments
-% \usepackage{amssymb}   %%Provides an extended symbol collection (includes amsfonts). For example, \barwedge, \boxdot, \boxminus, %%\boxplus, \boxtimes, \Cap, \Cup (and many more), the arrow \leadsto, and some other symbols such as \Box and \Diamond.
-
-% \usepackage{latexsym}  %%makes few additional characters available: \Box \Join \Box \Diamond \leadsto \sqsubset \sqsupset \lhd \unlhd %%\rhd \unrhd
-
-% \usepackage[makeroom]{cancel}   % Cancelar termos em equações
-
-% \usepackage{enumerate}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% %%%%%%%% Links -- Só funciona para .pdf%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-% % \usepackage{hyperref}  %% for references %%Options below
-% % \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, linktoc=page, pdftitle={Shadowing}, pdfauthor={D. Marcon}}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% %%%%%% Color, graphicx, margin (geometry)%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-
-% \usepackage[dvips]{graphicx}
-% \usepackage{color}            %%Textcolor, color definitions, etc
-
-% % \definecolor{light-blue}{rgb}{0.8,0.85,1}     %%Numbers between 0 and 1
-% % \definecolor{mygrey}{gray}{0.75}              %%Numbers between 0 and 1
-
-% \usepackage{verbatim}         %%Adds text from other files, comment environment
-
-% \usepackage{xpatch}           %%Bold theorem titles
-% \makeatletter
-% \xpatchcmd{\@thm}{\fontseries\mddefault\upshape}{}{}{} %same font as thm-header
-% \makeatother
-
-% \usepackage[margin=1in]{geometry}  %%Margins  %%Possible to use \newgeometry to modify small parts mid-document
-
-
-
-% \usepackage{tgbonum}
-
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% %%%%%%%%%%% Para escrever português%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-
-% % \usepackage[utf8]{inputenc}  %%encoding
-% % \usepackage[T1]{fontenc}     %%encoding
-
-% \usepackage[portuguese]{babel}   %%Portuguese-specific commands
-
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% %%%%%%%%%% Theorem styles, numbering%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-
-% \theoremstyle{plain}
-% \newtheorem{theorem}{Teorema}              %%section, chapter, etc
-% \newtheorem{proposition}[theorem]{Proposição}      %%everything below obeys theorem because: [theorem]
-% \newtheorem{lemma}[theorem]{Lema}
-% \newtheorem{corollary}[theorem]{Corolário}
-% \newtheorem{maintheorem}{Teorema}                   %%number doesn't obey order
-% \renewcommand{\themaintheorem}{\Alph{maintheorem}}
-% \newtheorem{maincorollary}{Corolário}
-% \newtheorem{conjecture}{Conjectura}
-% \newtheorem*{claim}{Afirmação}
-
-% \newtheorem*{desloct}{Segundo Teorema de Deslocamento -- Deslocamento em $t$}     %%Sem numeração e com o nome desejado
-
-% \theoremstyle{definition}
-% \newtheorem{remark}[theorem]{Observação}
-% \newtheorem{example}[theorem]{Exemplo}
-% \newtheorem{definition}[theorem]{Definição}
-% \newtheorem{exercise}{Exercício}
-
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% %%%%%%%%%%%%%%%% New Commands%%%%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-% \newcommand{\mb}[1]{\mathbb{#1}}
-% \newcommand{\bC}{\mathbb{C}}
-% \newcommand{\bE}{\mathbb{E}}
-% \newcommand{\bK}{\mathbb{K}}
-% \newcommand{\bN}{\mathbb{N}}
-% \newcommand{\bP}{\mathbb{P}}
-% \newcommand{\bQ}{\mathbb{Q}}
-% \newcommand{\bR}{\mathbb{R}}
-% \newcommand{\bS}{\mathbb{S}}
-% \newcommand{\bT}{\mathbb{T}}
-% \newcommand{\bZ}{\mathbb{Z}}
-
-% \newcommand{\cB}{\mathcal{B}}
-% \newcommand{\cE}{\mathcal{E}}
-% \newcommand{\cF}{\mathcal{F}}
-% \newcommand{\cH}{\mathcal{H}}
-% \newcommand{\cL}{\mathcal{L}}
-% \newcommand{\cM}{\mathcal{M}}
-% \newcommand{\cO}{\mathcal{O}}
-% \newcommand{\cP}{\mathcal{P}}
-% \newcommand{\cQ}{\mathcal{Q}}
-% \newcommand{\cR}{\mathcal{R}}
-% \newcommand{\cS}{\mathcal{S}}
-
-% \newcommand{\al} {\alpha}       \newcommand{\Al}{\Alpha}
-% \newcommand{\be} {\beta}        \newcommand{\Be}{\Beta}
-% \newcommand{\ga} {\gamma}       \newcommand{\Ga}{\Gamma}
-% \newcommand{\de} {\delta}       \newcommand{\De}{\Delta}
-% \newcommand{\ep} {\epsilon}
-% \newcommand{\eps}{\varepsilon}
-% \newcommand{\ze} {\zeta}
-% \newcommand{\vte}{\vartheta}
-% \newcommand{\iot}{\iota}
-% \newcommand{\ka} {\kappa}
-% \newcommand{\la} {\lambda}      \newcommand{\La}{\Lambda}
-% \newcommand{\vpi}{\varpi}
-% % \newcommand{\ro} {\rho}
-% \newcommand{\vro}{\varrho}
-% \newcommand{\si} {\sigma}       \newcommand{\Si}{\Sigma}
-% \newcommand{\vsi}{\varsigma}
-% \newcommand{\ups}{\upsilon}     \newcommand{\Up}{\Upsilon}
-% \newcommand{\vphi}{\varphi}
-% \newcommand{\om} {\omega}       \newcommand{\Om}{\Omega}
-
-% \newcommand{\ang}{\operatorname{angle}}
-% \newcommand{\closu}{\operatorname{clos}}
-% \newcommand{\Col}{\operatorname{Col}}
-% \newcommand{\const}{\operatorname{const}}
-% \newcommand{\curl}{\operatorname{curl}}
-% \newcommand{\dd}{\, \mathrm{d}}
-% \newcommand{\diam}{\operatorname{diam}}
-% \newcommand{\Dim}{\operatorname{dim}}
-% \newcommand{\Div}{\operatorname{div}}
-% \newcommand{\dist}{\operatorname{dist}}
-% \newcommand{\grad}{\operatorname{grad}}
-% \newcommand{\fr}{\partial}
-% \newcommand{\graph}{\operatorname{graph}}
-% \newcommand{\id}{\operatorname{Id}}
-% \newcommand{\inter}{\operatorname{int}}
-% \newcommand{\Leb}{\operatorname{Leb}}
-% \newcommand{\length}{\operatorname{length}}
-% \newcommand{\Lip}{\operatorname{Lip}}
-% \newcommand{\Nul}{\operatorname{Nul}}
-% \newcommand{\proj}{\operatorname{proj}}
-% \newcommand{\res}{\operatornamewithlimits{Res}}
-% \newcommand{\rot}{\operatorname{rot}}
-% \newcommand{\sen}{\operatorname{sen}}
-% \newcommand{\senh}{\operatorname{senh}}
-% \newcommand{\Span}{\operatorname{Span}}
-% \newcommand{\spec}{\operatorname{spec}}
-% \newcommand{\supp}{\operatorname{supp}}
-% \newcommand{\var}{\operatornamewithlimits{{var}}}
-% \newcommand{\intd}{\operatornamewithlimits{{\iint}}}
-
-
-% \everymath{\displaystyle}
-
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-% %%%%%%%%%%%% INFO  DO  ARTIGO %%%%%%%%%%%%%%%
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-
-% \title{Álgebra Linear -- Semana 13}
-% \author{}
-% \date{20 de Junho de 2017}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
-%%%%%%%%%%%% INICIO DO DOCUMENTO%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\providecommand{\dir}{..}  %define o diretório principal
 
 \begin{document}
 
-% \maketitle
-% \tableofcontents
-
-% \vspace{0.5cm}
-
 \chapter{Semanas 14 e 15}
-
-
 
 \section{Matrizes simétricas}
 
-Uma \textbf{matriz simétrica} é uma matriz que é igual à sua transposta. Para que isto faça sentido, podemos apenas considerar matrizes quadradas. De forma mais precisa, se $A = [\, a_{ij} \, ]$ é uma matriz de orden $n \times n$, nós dizemos que $A$ é simétrica quando $A = A^T$.
+Uma \textbf{matriz simétrica} é uma matriz que é igual à sua transposta. Para que esta definição faça sentido, apenas podemos considerar matrizes que são quadradas. De forma mais precisa, se $A = \begin{bmatrix} a_{ij} \end{bmatrix}$ é uma matriz de orden $n \times n$, nós dizemos que $A$ é simétrica quando $A = A^T$.
 
 Formas equivalentes de dizer que $A$ é simétrica incluem:
 \begin{enumerate}[$(1)$]
 	\item $A = A^T$;
-	\item para todos os índices $i,j \in \{1,2,\dots,n\}$, temos $a_{ij} = a_{ji}$;
+	\item para todos os índices $i,j \in \{1,2,\dots,n\}$, temos que $a_{ij} = a_{ji}$;
 	\item as colunas de $A$ são iguais às linhas de $A^T$;
 	\item as linhas de $A$ são iguais às colunas de $A^T$.
 \end{enumerate}
@@ -244,14 +54,14 @@ Formas equivalentes de dizer que $A$ é simétrica incluem:
 	\] não são. Deve-se tomar o cuidado de verificar a simetria \textit{com relação à diagonal principal}. Qualquer outro tipo de simetria não deve interferir na nossa análise$. \ \lhd$
 \end{example}
 
-Um dos resultados mais importantes de Álgebra Linear é o Teorema Espectral, que diz que toda matriz simétrica é diagonalizável por uma base de autovalores que é ortonormal. De forma mais precisa:
+Um dos resultados mais importantes de Álgebra Linear é o Teorema Espectral, que diz que toda matriz simétrica é diagonalizável por uma base de autovetores que é ortonormal. De forma mais precisa:
 
 \begin{teoespectral}
 	Suponhamos que $A$ é uma matriz simétrica com coeficientes reais. Então:
 	\begin{enumerate}[$(i)$]
 		\item todos os autovalores de $A$ são reais;
 		\item autovetores associados a autovalores distintos são ortogonais.
-		\item a dimensão do autoespaço associado a um autovalor é igual à multiplicidade deste autovalor;
+		\item a dimensão do autoespaço associado a um autovalor é igual à multiplicidade deste autovalor como raiz do polinômio característico;
 		\item existe uma base ortonormal de $\bR^n$ formada por autovetores de $A$;
 		\item $A$ é diagonalizável por uma matriz de mudança de coordenadas ortonormal $P$: a matriz $P$ cujas colunas são os autovetores (ortonormais) de $A$ é tal que 
 		\[
@@ -260,7 +70,7 @@ Um dos resultados mais importantes de Álgebra Linear é o Teorema Espectral, que 
 	\end{enumerate}
 \end{teoespectral}
 
-Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de mais nada, faremos alguns exemplos e aplicações que justificam a importância do Teorema espectral. No entanto, é fortemente aconselhado que o leitor acompanhe os elementos da demonstração, para efetivamente entender as propriedades essenciais das matrizes simétricas.
+Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de mais nada, faremos alguns exemplos e aplicações que justificam a importância do Teorema Espectral. No entanto, é fortemente aconselhado que o leitor acompanhe os elementos da demonstração, para efetivamente entender as propriedades essenciais das matrizes simétricas.
 
 \begin{example}
 	Considere
@@ -392,7 +202,7 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	& = 3\lambda^2 - 27 \lambda + 42  - \left[ \lambda^3 - 9 \lambda^2 + 14 \lambda \right] + 20 \lambda - 140  \\
 	& = -\lambda^3 + 12 \lambda^2 - 21 \lambda - 98.
           \end{align*}
- Como sabemos, dificilmente conseguiríamos encontrar as raízes deste polinômio com precisão. De qualquer forma, raízes racionais (este exemplo foi construido artificialmente) deste polinômio só podem ser divisores de $98$ dividido pelos divisores de $-1$, isto é: $\pm 1, \pm 2, \pm 7, \pm 14, \pm 21$. Testando os primeiros, vemos que $-2$ é uma raiz. Pela divisão de polinômios, fatoramos
+ Como sabemos, se os coeficientes da matriz simétrica acima fossem escolhidos de maneira aleatória, dificilmente conseguiríamos encontrar as raízes deste polinômio com precisão. De qualquer forma, quaisquer raízes racionais (este exemplo foi construido artificialmente) deste polinômio só podem ser divisores de $98$ dividido pelos divisores de $-1$, isto é: $\pm 1, \pm 2, \pm 7, \pm 14, \pm 21$. Testando os primeiros, vemos que $-2$ é uma raiz. Pela divisão de polinômios, fatoramos
 	\[
 	p(\lambda) = -(\lambda + 2) (\lambda^2 - 14 \lambda + 49) = -(\lambda + 2)(\lambda - 7)^2.
 	\] Logo, os autovalores de $A$ são $-2$ (simples) e $7$ (duplo).
@@ -542,7 +352,7 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	1/3  & -2/\sqrt{5} & 2/(3\sqrt{5}) \\ 
 	-2/3 &       0     & 5/(3\sqrt{5})
 	\end{bmatrix},
-	\] que, neste caso (matriz simétrica), pode ser obtida ortogonal. Sendo $P$ ortogonal, tem-se $P^{-1} = P^T$ e portanto $P^{-1} A P =  D$, isto é,
+	\] que, neste caso (em que $A$ é matriz simétrica), pode ser obtida ortogonal. Sendo $P$ ortogonal, tem-se $P^{-1} = P^T$ e portanto $P^{T} A P =  D$, isto é,
 	\[
 	\begin{bmatrix}
 	2/3  & 1/\sqrt{5}  & 4/(3\sqrt{5}) \\ 
@@ -574,7 +384,7 @@ Enfatizamos ainda mais uma vez a aplicação do Teorema Espectral: ele afirma que,
 \subsection{Formas quadráticas}
 
 
-Nesta seção, apresentamos uma aplicação de matrizes simétricas. Uma \textbf{forma quadrática} em $\bR^n$ é uma função polinomial em que todos os termos são de grau 2.
+Nesta seção, apresentamos uma aplicação matemática de matrizes simétricas. Uma \textbf{forma quadrática} em $\bR^n$ é uma função polinomial em que todos os termos são de grau 2.
 
 \begin{example}\label{exemplo1}
 	A função $Q : \bR^2 \to \bR$, definida por 
@@ -623,7 +433,7 @@ Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij} x_i x_j = \sum_{i
 	\end{array}}
 \]
 
-\noindent Uma outra forma de escrever a mesma coisa é
+\noindent Uma outra forma de escrever a mesma coisa (verifique a última igualdade como exercício) é
 \[
 Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 \]
@@ -693,9 +503,9 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 	\] Assim como anteriormente, observe que
 	\begin{itemize}
 		\item os coeficientes de $x_1^2$, de $x_2^2$ e de $x_3^2$ aparecem na diagonal principal;
-		\item o coeficiente do termo misto $x_1 x_2$ aparece (dividido por $2$) nas posições $a_{12}$ e $a_{21}$ da matriz $A$;
-		\item o coeficiente do termo misto $x_1 x_3$ aparece (dividido por $2$) nas posições $a_{13}$ e $a_{31}$ da matriz $A$;
-		\item o coeficiente do termo misto $x_2 x_3$ aparece (dividido por $2$) nas posições $a_{23}$ e $a_{32}$ da matriz $A$.
+		\item o coeficiente do termo misto $x_1 x_2$ aparece (dividido por $2$) nas posições $a_{12}$ e $a_{21}$ de $A$;
+		\item o coeficiente do termo misto $x_1 x_3$ aparece (dividido por $2$) nas posições $a_{13}$ e $a_{31}$ de $A$;
+		\item o coeficiente do termo misto $x_2 x_3$ aparece (dividido por $2$) nas posições $a_{23}$ e $a_{32}$ de $A$.
 	\end{itemize} Faça as contas para verificar a igualdade acima!$ \ \lhd$
 \end{example}
 
@@ -703,10 +513,10 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 
 \subsection{Diagonalização de formas quadráticas}
 
-Embora não tenhamos dito explicitamente, estávamos trabalhando na base canônica de $\bR^n$. Da forma usual, é possível fazer mudança de coordenadas. Do ponto de vista da matriz $A$, que é simétrica e portanto diagonalizável, a base dos autovetores associados é a mais natural de todas. Suponhamos que 
+Embora não tenhamos dito explicitamente, estávamos trabalhando na base canônica de $\bR^n$. Da forma usual, é possível fazer mudança de coordenadas. Do ponto de vista da matriz $A$, que é simétrica e portanto diagonalizável, a base (ortonormal) de autovetores associados é a mais natural de todas. Suponhamos que 
 \[
 Q(\vec{x}) = \vec{x}^T A \vec{x}
-\] e seja $\cB = \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_n\}$ uma base de $\bR^n$ formada por autovetores da matriz $A$. Desta forma,
+\] e que $\cB = \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_n\}$ é base ortonormal de $\bR^n$ formada por autovetores de $A$. Desta forma,
 \[
 P = 
 \begin{bmatrix}
@@ -714,7 +524,7 @@ P =
 \vec{v}_1 & \vec{v}_2 & \cdots & \vec{v}_n \\
 | & | &   & |  \\
 \end{bmatrix} \ \text{satisfaz} \ P^{-1}AP = D,
-\] onde $D$ é a matriz diagonal, com os respectivos autovalores na diagonal principal. Além disso, podemos encontrar uma matriz $P$ com estas propriedades e que é ortogonal: $P^T = P^{-1}$. O vetor $\vec{x}$ pode ser representado na base $\cB$:
+\] onde $D$ é a matriz diagonal, com os respectivos autovalores na diagonal principal. Além disso, $P$ é ortogonal: $P^T = P^{-1}$. O vetor $\vec{x}$ pode ser representado na base $\cB$ por:
 \[
 \vec{x} = y_1 \vec{v}_1 + y_2 \vec{v}_2 + \cdots + y_n \vec{v}_n = P\vec{y}, \quad \text{onde denotamos} \quad \vec{y} = 
 \begin{bmatrix}
@@ -728,7 +538,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 \vec{x}^T A \vec{x} = (\vec{y}^T P^T) A (P \vec{y}) = \vec{y}^T (P^T A P) \vec{y} = \vec{y}^T D \vec{y}.
 \] Isto significa que, ao mudar da base canônica (componentes $x_i$) para a base $\cB$ (componentes $y_i$), temos
 \[
-\sum_{i,j=1}^{n} b_{ij} x_i x_j = \vec{x}^T A \vec{x} = \vec{y}^T D \vec{y} = \sum_{i=1}^{n} \lambda_i y_i^2,
+\sum_{i,j=1}^{n} a_{ij} x_i x_j = \vec{x}^T A \vec{x} = \vec{y}^T D \vec{y} = \sum_{i=1}^{n} \lambda_i y_i^2,
 \] onde os números $\lambda_i \in \bR$ são os autovalores da matriz $A$ (são reais porque a matriz é simétrica). Em outras palavras, a base (ortonormal) de autovetores de $A$ deixou transformou a nossa forma quadrática original em uma que não possui mais termos mistos, muito mais simples de trabalhar.
 
 
@@ -784,7 +594,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 		\begin{bmatrix}
 		-2 \\ 1
 		\end{bmatrix} \rightsquigarrow
-		\vec{v}_1 = \begin{bmatrix}
+		\vec{v}_2 = \begin{bmatrix}
 		-2/\sqrt{5} \\ 1/\sqrt{5}
 		\end{bmatrix} .
 		\]
@@ -808,7 +618,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 
 \subsection{Aplicação à classificação de cônicas}
 
-Nesta subseção, nos restringiremos à formas quadráticas em $\bR^2$. Uma \textbf{curva de nível} de uma forma quadrática, também conhecida como uma \textbf{cônica}, é um conjunto definido implicitamente pela equação
+Nesta subseção, nos restringimos a formas quadráticas em $\bR^2$. Uma \textbf{curva de nível} de uma forma quadrática, também conhecida como uma \textbf{cônica}, é um conjunto definido implicitamente pela equação
 \[
 Q(x_1, x_2) = k \quad \leftrightsquigarrow \quad ax_1^2 + bx_1x_2 + cx_2^2 = k,
 \] onde $k$ é uma constante. Em outras palavras, uma curva de nível é o conjunto de todos os pontos $(x_1, x_2)$ que satisfazem $Q(x_1, x_2) = k$.
@@ -911,7 +721,7 @@ Já conhecemos alguns exemplos:
 
 \section{Problemas de otimização restritos à esfera}
 
-Nesta seção, vamos estudar alguns problemas de otimização bem específicos. Mais precisamente, vamos aprender a encontrar valores de máximo e mínimo de formas quadráticas
+Nesta seção, estudamos alguns problemas de otimização bem específicos. Mais precisamente, podemos encontrar valores de máximo e mínimo de formas quadráticas
 \[
 Q(\vec{x}) = \vec{x}^T A \vec{x}
 \] sujeitos à restrição 
@@ -951,7 +761,7 @@ P^{-1} A P = D =
 \] Logo, $\lambda_n$ é uma cota superior para $\vec{y}^T D \vec{y}$. Além disso, já que $D$ é uma matriz diagonal, esta cota superior é atingida pelo vetor $\vec{y} = \vec{e}_n$, o último vetor da base canônica de $\bR^n$. Traduzindo estas informações para a variável $\vec{x}$, temos que $\lambda_n$ é o valor máximo de $\vec{x}^T A \vec{x}$ (pois é igual a $\vec{y}^T D \vec{y}$) na esfera unitária. Além disso, este valor máximo é atingido quando $\vec{x} = P \vec{e}_n = \vec{v}_n$, um autovetor unitário associado com o maior autovalor $\lambda_n$.
 
 \begin{exercise}
-	Fazer toda a análise acima para o problema de minimização. Dica: olhar para o menor autovalor.
+	Fazer toda a análise acima para o problema de minimização. \textit{Dica}: olhar para o menor autovalor.
 \end{exercise}
 
 
@@ -1028,7 +838,7 @@ P^{-1} A P = D =
 	\] O método dos multiplicadores de Lagrange nos dá uma condição necessária: se um ponto é de máximo/mínimo com restrição, então existe uma constante $\lambda$ tal que, neste ponto,
 	\[
 	\vec{\nabla} f = \lambda \vec{\nabla} g.
-	\] Esta constante $\lambda$ é conhecida como um \textbf{multiplicador de Lagrange}. Como mencionamos, esta é uma condição necessária, de modo que não garante que o ponto é de mínimo/máximo. Na prática, depois de encontrarmos $\vec{x}$ e possíveis valores de $\lambda$, podemos testar para ver quais são os de mínimo e quais são os de máximo.
+	\] Esta constante $\lambda$ é conhecida como um \textbf{multiplicador de Lagrange}. Como mencionamos, esta é uma condição necessária, de modo que não garante que o ponto é de mínimo/máximo. Na prática, depois de encontrarmos os possíveis valores de $\vec{x}$ e de $\lambda$, podemos substituir na função para ver quais são os pontos de mínimo e quais são os de máximo.
 	
 	Vejamos como esta técnica se aplicaria no Exemplo \ref{otimiz} que já resolvemos acima. Vamos considerar $f(x_1,x_2,x_3) = Q(x_1,x_2,x_3)$ e $g(x_1,x_2,x_3) = x_1^2 + x_2^2 + x_3^2 - 1$ Se estivermos em um ponto de máximo, então existe a constante $\lambda$ como acima. Calculamos:
 	\[
@@ -1054,13 +864,13 @@ P^{-1} A P = D =
 	\begin{bmatrix}
 	x_1 \\ x_2 \\ x_3
 	\end{bmatrix}.
-	\] Chegamos, por outro caminho, à mesma conclusão: $\lambda$ deve ser um autovalor e $\vec{x}$ um autovetor (unitário) associado$. \ \lhd$
+	\] Chegamos, por outro caminho, à mesma conclusão: $\lambda$ deve ser um autovalor e $\vec{x}$ um autovetor (unitário, já que $g(x_1,x_2,x_3) = 0$) associado$. \ \lhd$
 \end{remark}
 
 
-\section{Matrizes simétricas e demonstração do Teorema Espectral}
+\section{Matrizes simétricas e prova do Teorema Espectral}
 
-Nesta seção vamos utilizar a notação $\langle \vec{u}, \vec{v} \rangle$ para o produto escalar, ao invés de $\vec{u} \cdot \vec{v}$, para enfatizar qual é o vetor $\vec{u}$ e qual é o vetor $\vec{v}$ (quando um deles está sendo multiplicado por uma matriz).
+Nesta seção vamos utilizar a notação $\langle \vec{u}, \vec{v} \rangle$ para o produto escalar, ao invés de $\vec{u} \cdot \vec{v}$, para enfatizar qual é o vetor $\vec{u}$ e qual é o vetor $\vec{v}$ (em especial quando um deles está sendo multiplicado por uma matriz).
 
 %Vejamos mais uma maneira equivalente de se dizer que uma matriz é simétrica.
 \begin{remark}\label{sse}
@@ -1071,9 +881,9 @@ Nesta seção vamos utilizar a notação $\langle \vec{u}, \vec{v} \rangle$ para o p
 	\[
 	\langle A \vec{x}, \vec{y} \rangle = \langle\vec{x}, A \vec{y}\rangle, \quad \text{ para todos } \vec{x}, \vec{y} \in \bR^n.
 	\]
-	Outras formas de escrever esta mesma coisa seria (concorda?) são
+	Outras formas de escrever esta mesma coisa (concorda?) são
 	\[
-	A \vec{x} \cdot \vec{y} = \vec{x} \cdot A \vec{y}, \quad \text{ para todos } \vec{x}, \vec{y} \in \bR^n.
+	A \vec{x} \cdot \vec{y} = \vec{x} \cdot A \vec{y}, \quad \text{ para todos } \vec{x}, \vec{y} \in \bR^n
 	\] e 
 	\[
 	\vec{y}^T A \vec{x} = \vec{x}^T A \vec{y}, \quad \text{ para todos } \vec{x}, \vec{y} \in \bR^n.
@@ -1084,7 +894,7 @@ Nesta seção vamos utilizar a notação $\langle \vec{u}, \vec{v} \rangle$ para o p
 	A observação anterior nos permite estender a definição de matriz simétrica para transformações lineares, pois é independente do sistema de coordenadas utilizado (depende apenas de uma escolha de produto interno/escalar). 
 \end{remark}
 
-A equivalência que foi apresentada na Observação \ref{sse} é muito útil na análise de matrizes simétricas. Vamos ver como se aplica diversas vezes na demonstração do Teorema Espectral que será dividida em três proposições preliminares. Cada uma delas apresenta, em ordem, o procedimento usual que viemos utilizando para diagonalizar matrizes: análise dos autovalores, construção dos autoespaços e verificação de que é possível formar uma base de autovetores. Neste caso de uma matriz simétrica, veremos que, além de tudo, é possível encontrar uma bsae ortonormal de autovetores.
+A equivalência que foi apresentada na Observação \ref{sse} é muito útil na análise de matrizes simétricas. Vamos ver como se aplica diversas vezes na demonstração do Teorema Espectral que será dividida em três proposições preliminares. Cada uma delas apresenta, em ordem, o procedimento usual que viemos utilizando para diagonalizar matrizes: análise dos autovalores, construção dos autoespaços e verificação de que é possível formar uma base de autovetores. Neste caso de uma matriz simétrica, veremos que, além de tudo, é possível encontrar uma base ortonormal de autovetores.
 
 \begin{proposition}\label{reais}
 	Os autovalores de uma matriz simétrica $A$, de entradas reais, são números reais.
@@ -1190,14 +1000,14 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na análi
 	\] Chamamos os coeficientes restantes de $b_{ij}$ simplesmente porque não nos interessa muito quanto valem (notamos, no entanto, que a simetria de $A$ implica que $b_{ij} = b_{ji}$). Observamos que 
 	\[
 	\det \left( A - \lambda I \right) = \det \left( Q^{-1} (A - \lambda I) Q \right) =	\det \left( \hat{A} - \lambda I \right) = (\lambda_1 - \lambda) \cdot \det (B - \lambda I),
-	\] onde $B$ é a matriz de ordem $(n-1)\times (n-1)$ dada por $(b_{ij})$. Além disso, se a multiplicidade de $\lambda_1$ como autovalor de $A$ for maior do que $1$, devemos ter, pela igualdade acima, que $\lambda_1$ também é um autovalor de $B$. Desta forma, $\hat{A}$ possui um autovetor unitário $\vec{v}_2$ associado com $\lambda_1$ que está contido em $\Span \{ \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}$ e, portanto, é distinto de (e ortogonal a) $\vec{v}_1$.
+	\] onde $B$ é a matriz de ordem $(n-1)\times (n-1)$ dada por $(b_{ij})$. Além disso, se a multiplicidade de $\lambda_1$ como autovalor de $A$ for maior do que $1$, devemos ter, pela igualdade acima, que $\lambda_1$ também é um autovalor de $B$. Desta forma, $\hat{A}$ possui um autovetor unitário $\vec{v}_2$ associado com $\lambda_1$ que está contido em $\Span \{ \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}$ e, portanto, é distinto e linearmente independente a $\vec{v}_1$. O processo de Gram-Schmidt permite obter $\{\vec{v}_1, \vec{v}_2\}$ ortonormais.
 	
 	A partir daí, repetimos o processo completando o conjunto $\{\vec{v}_1, \vec{v}_2\}$ a uma base ortonormal $\{ \vec{v}_1, \vec{v}_2, \vec{y}_3, \dots, \vec{y}_n \}$ de $\bR^n$. Daí vamos obter um terceiro autovetor ortogonal aos anteriores e unitário. Procedemos desta meneira até encontrar $k$ autovetores ortogonais e unitários associados ao autovalor $\lambda_1$. Assim, o autoespaço $\Nul (A - \lambda_1 I)$ tem dimensão $k$, que é igual à multiplicidade do autovalor $\lambda_1$.
 \end{proof}
 
 \subsection{Prova do Teorema Espectral}
 
-O Teorema Fundamental da Álgebra afirma que todo polinômio não constante de grau $n$ possui exatamente $n$ raízes complexas. Sendo assim, qualquer matriz $A$ de ordem $n\times n$ possui $n$ autovalores complexos. No entanto, sendo $A$ uma matriz simétrica, a Proposição \ref{reais} garante que todas estes $n$ autovalores são reais. Vamos denotar por
+O Teorema Fundamental da Álgebra afirma que todo polinômio não constante de grau $n$ possui exatamente $n$ raízes complexas. Sendo assim, qualquer matriz $A$ de ordem $n\times n$ possui $n$ autovalores complexos. No entanto, sendo $A$ uma matriz simétrica, a Proposição \ref{reais} garante que todas estes $n$ autovalores são todos reais. Vamos denotar por
 \[
 \lambda_1, \lambda_2, \dots, \lambda_k \in \bR
 \] os autovalores distintos de $A$ e por $m_1, m_2, \dots, m_k$ suas respectivas multiplicidades. Temos, em particular, que $m_1 + m_2 + \cdots + m_k = n$.
@@ -1205,7 +1015,7 @@ O Teorema Fundamental da Álgebra afirma que todo polinômio não constante de grau
 Pela Proposição \ref{dimens}, a dimensão do autoespaço associado a $\lambda_1$ é $m_1$. Podemos encontrar (da maneira usual, por escalonamento) uma base de autovetores
 \[
 \Nul (A - \lambda_1 I) = \Span \{ \vec{u}_1, \vec{u}_2, \dots, \vec{u}_{m_1} \}.
-\] Estes autovetores, possivelmente não sõ ortogonais, mas, aplicando o Processo de Gram-Schmidt, podemo obter uma base ortonormal de $\Nul (A - \lambda_1 I)$:
+\] Estes autovetores, possivelmente não são ortogonais, mas, aplicando o Processo de Gram-Schmidt, podemo obter uma base ortonormal de $\Nul (A - \lambda_1 I)$:
 \[
 \Nul (A - \lambda_1 I) = \Span \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_{m_1} \}.
 \] Fazendo este mesmo procedimento para cada um dos autovalores, obtemos $n$ autovetores, que, consequentemente, formam uma base para $\bR^n$. Logo, $A$ é diagonalizável.
