@@ -130,15 +130,17 @@ a_{11} & a_{12} & a_{13} \\
 0 & A_{33} & A_{32} \\ 
 0 & 0 & A_{22} A_{33} - A_{32} A_{23} \\
 \end{bmatrix}.
-\end{equation} Nosso raciocínio é que nossa matriz $A$ é uma matriz invertível se esta última coluna possuir uma posição de pivô, isto é, se $A_{22} A_{33} - A_{32} A_{23} \neq 0$. Este último pode ser escrito mais explicitamente como
-\[
-\begin{split}
-A_{22} A_{33} - A_{32} A_{23} & = (a_{11} a_{22} - a_{21} a_{12}) (a_{11} a_{33} - a_{31} a_{13}) - (a_{11} a_{32} - a_{31} a_{12}) (a_{11} a_{23} - a_{21} a_{13}) \\
-       & =  a_{11}^2 a_{22} a_{33} - a_{11} a_{22} a_{31} a_{13} - a_{21} a_{12} a_{11} a_{33} + \cancel{a_{21} a_{12} a_{31} a_{13}} + \\
-       & \quad  - a_{11}^2 a_{32} a_{23} + a_{11} a_{32} a_{21} a_{13} + a_{31} a_{12} a_{11} a_{23} - \cancel{a_{31} a_{12} a_{21} a_{13}} \\
-       & = a_{11} \big( a_{11} a_{22} a_{33} - a_{22} a_{31} a_{13} - a_{21} a_{12} a_{33} - a_{11} a_{32} a_{23} + a_{32} a_{21} a_{13} + a_{31} a_{12} a_{23} \big)
-\end{split}
-\] Destas considerações, segue que $A$ é invertível sempre que
+\end{equation} 
+Nosso raciocínio é que nossa matriz $A$ é uma matriz invertível se esta última coluna possuir uma posição de pivô, isto é, se $A_{22} A_{33} - A_{32} A_{23} \neq 0$. Este último pode ser escrito mais explicitamente como
+\begin{equation*}
+  \begin{split}
+    A_{22} A_{33} - A_{32} A_{23} & = (a_{11} a_{22} - a_{21} a_{12}) (a_{11} a_{33} - a_{31} a_{13}) - (a_{11} a_{32} - a_{31} a_{12}) (a_{11} a_{23} - a_{21} a_{13}) \\
+    & =  a_{11}^2 a_{22} a_{33} - a_{11} a_{22} a_{31} a_{13} - a_{21} a_{12} a_{11} a_{33} + \cancel{a_{21} a_{12} a_{31} a_{13}} + \\
+    & \quad  - a_{11}^2 a_{32} a_{23} + a_{11} a_{32} a_{21} a_{13} + a_{31} a_{12} a_{11} a_{23} - \cancel{a_{31} a_{12} a_{21} a_{13}} \\
+    & = a_{11} \big( a_{11} a_{22} a_{33} - a_{22} a_{31} a_{13} - a_{21} a_{12} a_{33} - a_{11} a_{32} a_{23} + a_{32} a_{21} a_{13} + a_{31} a_{12} a_{23} \big)
+  \end{split}
+\end{equation*}
+Destas considerações, segue que $A$ é invertível sempre que
 \[
 a_{11} a_{22} a_{33} - a_{22} a_{31} a_{13} - a_{21} a_{12} a_{33} - a_{11} a_{32} a_{23} + a_{32} a_{21} a_{13} + a_{31} a_{12} a_{23} \neq 0.
 \] Definimos o \textbf{determinante} de uma matriz $A$ de ordem $3 \times 3$ por (note que apenas mudamos a ordem dos termos):
@@ -147,7 +149,7 @@ a_{11} a_{22} a_{33} - a_{22} a_{31} a_{13} - a_{21} a_{12} a_{33} - a_{11} a_{3
 \] Existe uma forma de memorização deste determinante que usualmente é ensinado no ensino médio. No entanto, vamos utilizar um outro método que poderá ser aplicado para matrizes de qualquer ordem!
 
 Observamos que a expressão acima está cheia de simetrias, por exemplo, cada um dos elementos da matriz $A$ aparece exatamente duas vezes. Além disso, aparece uma vez com sinal positivo e outra com sinal negativo. Podemos escrever:
-\[
+\begin{equation*}
 \begin{split}
 \det A & = a_{11} \big( a_{22} a_{33} - a_{32} a_{23} \big) - a_{12} \big( a_{21} a_{33} + a_{31} a_{23} \big) + a_{13} \big( a_{21} a_{32} - a_{31} a_{22}\big). \\
        & = a_{11} \cdot \det \begin{bmatrix}
@@ -161,7 +163,8 @@ Observamos que a expressão acima está cheia de simetrias, por exemplo, cada um d
        a_{31} & a_{32} \\
        \end{bmatrix}
 \end{split}
-\] Esta última fórmula (que é apenas uma outra forma de escrever a nossa definição de determinante de uma matriz de ordem $3 \times 3$), apesar de aparentemente complicada, nos permite entender como que os coeficientes de uma matriz aparecem na definição de $\det A$. Vamos escrever novamente:
+\end{equation*}
+Esta última fórmula (que é apenas uma outra forma de escrever a nossa definição de determinante de uma matriz de ordem $3 \times 3$), apesar de aparentemente complicada, nos permite entender como que os coeficientes de uma matriz aparecem na definição de $\det A$. Vamos escrever novamente:
 \[
 \det \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
@@ -253,7 +256,7 @@ A = \begin{bmatrix}
 0 & 2 
 \end{matrix} \right|.
 \] Agora, já sabemos como calcular determinantes de matrizes $2 \times 2$, que é o que nos resta fazer:
-\[
+\begin{equation*}
 \begin{split}
 \left| \begin{matrix}
 2 & 4 & 3  \\
@@ -262,7 +265,7 @@ A = \begin{bmatrix}
 \end{matrix} \right| & = 2 \big( 2\cdot 1 - 2 \cdot (-1)  \big) - 4 \big( 1 \cdot 1 - 0 \cdot (-1) \big) + 3 \big( 1 \cdot 2 - 0 \cdot 2 \big) \\
                      & = 2 \cdot 4 - 4 \cdot 1 + 3 \cdot 2 = 10. \ \lhd
 \end{split}
-\]
+\end{equation*}
 \end{example}
 
 
@@ -275,7 +278,7 @@ A = \begin{bmatrix}
 	0 & 2 & 1
 	\end{bmatrix}.
 	\] A notação de ``barrinhas'' para o determinante é particularmente adequada para escrever o determinante como aparece na fórmula \eqref{detminor}, pois assim podemos ir mentalmente desconsiderando (ou tapando com um lápis) as linhas e colunas que não devemos escrever (indentifique que tudo o que fizemos foi escrever a fórmula \eqref{detminor}):
-	\[
+        \begin{equation}
 	\begin{split}
 	\det B = \left| \begin{matrix}
 	1 & -3 & -4  \\
@@ -292,7 +295,8 @@ A = \begin{bmatrix}
 	0 & 2 
 	\end{matrix} \right| \\ & = 2 + 3 \cdot 1  -4 \cdot 2 = -3.
 	\end{split}
-	\] Analise com atenção como os sinais alternam, independentemente dos sinais dos coeficientes da matriz!$ \ \lhd$
+      \end{equation}
+ Analise com atenção como os sinais alternam, independentemente dos sinais dos coeficientes da matriz!$ \ \lhd$
 \end{example}
 
 
@@ -511,7 +515,7 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde qu
 	-2 & 2 &  1
 	\end{matrix}\right| + 0.
 	\] Perceba que os dois zeros evitaram que calculássemos dois determinantes de ordem 3. Em seguida, calculamos cada um dos determinantes de ordem 3 (no primeiro deles, escolhemos a segunda coluna, por possuir dois zeros; no segundo, qualquer escolha seria parecida, já que a matriz não tem entradas nulas -- escolhemos a terceira coluna):
-	\[
+        \begin{equation}
 	\begin{split}
     \left| \begin{matrix}
     -2 & 3 & 0  & 4 \\
@@ -547,7 +551,7 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde qu
         \end{matrix}\right| \right) \\
          & = (-1) \cdot (-5) + \Big( 4 \cdot 10 - 1 \cdot 2 + 1 \cdot (-13)\Big) = 30. \ \lhd
 	\end{split}
-	\]
+      \end{equation}
 \end{example}
 
 \begin{example}\label{exp:det2}
@@ -626,7 +630,8 @@ Análise dos sinais da quinta coluna:
 \end{matrix}
 \right|.
 \] Finalmente, temos dois determinantes de matrizes de ordem $3 \times 3$ para calcular:
-\[
+
+\begin{equation}
 \begin{split}
 \det A & = 2 \cdot 4 \cdot 
 \left| 
@@ -649,7 +654,7 @@ Análise dos sinais da quinta coluna:
 \right) \\
      & = 8 \cdot (-2) - 8 (-2 + - 3 \cdot 0) = -16 + 16 = 0. \lhd
 \end{split}
-\]
+\end{equation}
 \end{example}
 
 Estes exemplos já devem deixar claro que o cálculo de determinantes é demasiado trabalhoso, exceto em alguns casos que a matriz tem muitas entradas nulas. Veremos nas próximas seções algumas propriedades e aplicações.
@@ -1030,7 +1035,8 @@ z = \phi_3 (\rho, \theta, \phi) = \rho \cos \phi.
 \cos \phi         &            0                  &    -\rho \sen \phi  \\
 \end{bmatrix}.
 \] cujo Jacobiano é (usando, por exemplo a segunda coluna para expandir em cofatores)
-\[
+
+\begin{equation}
 \begin{split}
 J\phi & = \left| \rho \sen \phi \sen \theta
 \left| 
@@ -1049,7 +1055,8 @@ J\phi & = \left| \rho \sen \phi \sen \theta
 & =  \left| \rho \sen \phi \sen \theta \Big (- \rho \sen \theta \Big) + \rho \sen \phi \cos \theta \Big(- \rho \cos \theta \Big) \right|  = \left|  - \rho^2 \sen \phi \Big( \sen^2 \theta + \cos^2 \theta \Big) \right| \\
 & = \left| - \rho^2 \sen \phi \right| = \rho^2 \sen \phi.
 \end{split}
-\] Na última igualdade, utilizamos que $\phi \in (0,\pi)$ implica $\sen \phi > 0$, de modo que o valor absoluto está considerado corretamente. Portanto, a fórmula de mudança de variáveis implica que, em coordenadas polares:
+\end{equation}
+Na última igualdade, utilizamos que $\phi \in (0,\pi)$ implica $\sen \phi > 0$, de modo que o valor absoluto está considerado corretamente. Portanto, a fórmula de mudança de variáveis implica que, em coordenadas polares:
 \[
 \iiint_R f \, \dd A = \iint_R f(x,y, z) \, \dd x \dd y \dd z = \iiint_{\phi^{-1}(R)} f(\rho \sen \phi \cos \theta, \rho \sen \phi \sen \theta, \rho \cos \phi) \, \rho^2 \sen \phi \, \dd \rho \dd \theta \dd \phi,
 \] como é de costume em cursos de cálculo.

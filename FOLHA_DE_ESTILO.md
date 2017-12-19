@@ -34,7 +34,7 @@ O código LaTeX do livro deve permitir sua compilação com `pdflatex`.
 
 Fazemos a conversão do livro de código LaTeX para HTML usando o pacote [TeX4ht](https://www.tug.org/tex4ht/). Os ambientes matemáticos são convertidos para [MathMl](https://www.w3.org/Math/) e então renderizados usando [MathJax](https://www.mathjax.org/). Para que a conversão funcione de forma apropriada deve-se observar as seguintes questões:
 
-* Não usar o ambiente `split`: no lugar use o ambiente `align` ou o `eqnarray` dentro de um ambiente `equation`.
+* Ambientes matemáticos válidos são: `equation`, `align` e `eqnarray`. Não use `$$ $$` ou `[\ \]`.
 
 * Não usar `array` para composição de tabelas. A alternativa é usar o ambiente `tabular`, por exemplo:
 

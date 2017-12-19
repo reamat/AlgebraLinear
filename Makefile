@@ -14,10 +14,12 @@ pdf: livro.tex
 	pdflatex livro	
 	pdflatex livro
 
-html: livro.tex
+html: livro.html
+
+livro.html: livro.tex
+	rm -f html/*
 	cp config-html.knd config.knd
 	mkdir -p html
-	rm -f html/*
 	latex livro
 	latex livro
 	latex livro
