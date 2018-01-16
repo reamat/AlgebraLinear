@@ -77,12 +77,15 @@
 \usepackage{tgbonum}
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%Para escrever português%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage[portuguese]{babel}   %%Portuguese-specific commands
+\ifishtml
+\usepackage[T1]{fontenc}
+\fi
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -217,7 +220,7 @@
   \begin{center}
     Em construção ... Caso deseja colaborar com a escrita deste livro, veja como em:
 
-    \url{https://github.com/livroscolaborativos/AlgebraLinear}
+    \url{https://github.com/reamat/AlgebraLinear}
   \end{center}
 }
 

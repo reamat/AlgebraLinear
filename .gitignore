@@ -3,7 +3,6 @@
 *.toc
 *.out
 *~
-./Semana*/*.pdf
 html
 *.html
 *.4ct
@@ -14,3 +13,4 @@ html
 *.lg
 *.tmp
 *.xref
+*.pdf
