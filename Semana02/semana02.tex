@@ -1,8 +1,8 @@
-%Este trabalho est· licenciado sob a LicenÁa Creative Commons AtribuiÁ„o-CompartilhaIgual 3.0 N„o Adaptada. Para ver uma cÛpia desta licenÁa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+%Este trabalho est√° licenciado sob a Licen√ßa Creative Commons Atribui√ß√£o-CompartilhaIgual 3.0 N√£o Adaptada. Para ver uma c√≥pia desta licen√ßa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 \documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
-%define o diretÛrio principal
+%define o diret√≥rio principal
 \providecommand{\dir}{..}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,12 +15,12 @@
 
 \vspace{0.5cm}
 
-Existem maneiras diferentes de representar e de interpretar elementos de ¡lgebra Linear. Nesta parte, vemos algumas das principais.
+Existem maneiras diferentes de representar e de interpretar elementos de √Ålgebra Linear. Nesta parte, vemos algumas das principais.
 
 
 \section{Vetores}
 
-Um \textbf{vetor} no espaÁo tridimensional È um objeto com magnitude, direÁ„o e sentido bem definidos. Assim sendo, ao representar um vetor como na figura abaixo, n„o importa onde est· o seu ponto inicial. Todas as setas representam o mesmo vetor.
+Um \textbf{vetor} no espa√ßo tridimensional √© um objeto com magnitude, dire√ß√£o e sentido bem definidos. Assim sendo, ao representar um vetor como na figura abaixo, n√£o importa onde est√° o seu ponto inicial. Todas as setas representam o mesmo vetor.
 
 \begin{figure}[h!]
 \begin{center}
@@ -28,14 +28,14 @@ Um \textbf{vetor} no espaÁo tridimensional È um objeto com magnitude, direÁ„o e 
 \end{center}
 \end{figure}
 
-Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referÍncia, podemos introduzir coordenadas:
+Fixando o sistema de coordenadas Cartesiano usual e usando a origem como refer√™ncia, podemos introduzir coordenadas:
 \[
 \vec{v} =
 \left[
   \begin{array}{c}
     v_1 \\
     v_2 \\
-    v_3 \\
+    v_3
   \end{array}
 \right]
 = v_1 \vec{e_1} + v_2 \vec{e_2} + v_3 \vec{e_3},
@@ -46,7 +46,7 @@ Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referÍn
   \begin{array}{c}
     1 \\
     0 \\
-    0 \\
+    0
   \end{array}
 \right], \quad
 \vec{e_2} =
@@ -54,7 +54,7 @@ Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referÍn
   \begin{array}{c}
     0 \\
     1 \\
-    0 \\
+    0
   \end{array}
 \right] \quad  \text{e} \quad
 \vec{e_3} =
@@ -62,13 +62,13 @@ Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referÍn
   \begin{array}{c}
     0 \\
     0 \\
-    1 \\
+    1
   \end{array}
 \right].
 \] 
 
 
-\noindent Intuitivamente, podemos pensar que o sistema de coordenadas Cartesiano fixa a origem como sendo o ponto inicial do vetor e o ponto $(v_1, v_2, v_3)$ do espaÁo tridimensional como o ponto final. 
+\noindent Intuitivamente, podemos pensar que o sistema de coordenadas Cartesiano fixa a origem como sendo o ponto inicial do vetor e o ponto $(v_1, v_2, v_3)$ do espa√ßo tridimensional como o ponto final. 
 
 \begin{figure}[h!]
 \begin{center}
@@ -76,7 +76,7 @@ Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referÍn
 \end{center}
 \end{figure}
 
-No livro ``¡lgebra Linear e suas AplicaÁıes'', de David Lay, vetores s„o representados por letras em negrito. Nestas notas, utilizamos uma setinha em cima da letra para indicar um vetor.
+No livro ``√Ålgebra Linear e suas Aplica√ß√µes'', de David Lay, vetores s√£o representados por letras em negrito. Nestas notas, utilizamos uma setinha em cima da letra para indicar um vetor.
 
 Raramente vamos confundir o ponto $(v_1, v_2, v_3)$ com o vetor
 \[
@@ -84,19 +84,19 @@ Raramente vamos confundir o ponto $(v_1, v_2, v_3)$ com o vetor
 \begin{array}{c}
 v_1 \\
 v_2 \\
-v_3 \\
+v_3
 \end{array}
 \right].
-\] De qualquer maneira, È bom estar atento, pois outros textos podem fazÍ-lo.
+\] De qualquer maneira, √© bom estar atento, pois outros textos podem faz√™-lo.
 
-O conjunto de todos os vetores com trÍs componentes como acima È chamado de $\bR^3$ (leia-se ``erre trÍs''). Em coordenadas, se tivermos
+O conjunto de todos os vetores com tr√™s componentes como acima √© chamado de $\bR^3$ (leia-se ``erre tr√™s''). Em coordenadas, se tivermos
 \[
 \vec{v} =
 \left[
   \begin{array}{c}
     v_1 \\
     v_2 \\
-    v_3 \\
+    v_3
   \end{array}
 \right]  \quad  \text{e} \quad
 \vec{w} =
@@ -104,7 +104,7 @@ O conjunto de todos os vetores com trÍs componentes como acima È chamado de $\bR
   \begin{array}{c}
     w_1 \\
     w_2 \\
-    w_3 \\
+    w_3
   \end{array}
 \right],
 \] podemos definir a \textbf{soma de vetores} componente a componente:
@@ -114,7 +114,7 @@ O conjunto de todos os vetores com trÍs componentes como acima È chamado de $\bR
   \begin{array}{c}
     v_1 + w_1 \\
     v_2 + w_2 \\
-    v_3 + w_3 \\
+    v_3 + w_3
   \end{array}
 \right].
 \] Geometricamente, isto pode ser interpretado como segue:
@@ -124,14 +124,14 @@ O conjunto de todos os vetores com trÍs componentes como acima È chamado de $\bR
 \end{center}
 \end{figure}
 
-A \textbf{multiplicaÁ„o} do vetor $\vec{v}$ \textbf{por escalar} $k \in \bR$ È definida como:
+A \textbf{multiplica√ß√£o} do vetor $\vec{v}$ \textbf{por escalar} $k \in \bR$ √© definida como:
 \[
 k \vec{v} :=
 \left[
   \begin{array}{c}
     k v_1 \\
     k v_2 \\
-    k v_3 \\
+    k v_3
   \end{array}
 \right].
 \] Geometricamente,
@@ -143,7 +143,7 @@ k \vec{v} :=
 
 
 
-Estas consideraÁıes que fizemos tambÈm s„o v·lidas para outro n˙mero de componentes, com a possÌvel perda de visualizaÁ„o geomÈtrica, no caso de quatro ou mais componentes.
+Estas considera√ß√µes que fizemos tamb√©m s√£o v√°lidas para outro n√∫mero de componentes, com a poss√≠vel perda de visualiza√ß√£o geom√©trica, no caso de quatro ou mais componentes.
 
 Mais geralmente, um vetor $\vec{v}$ do conjunto $\bR^n$ pode ser pensado como um objeto com $n$ componentes:
 \[
@@ -154,7 +154,7 @@ Mais geralmente, um vetor $\vec{v}$ do conjunto $\bR^n$ pode ser pensado como um
     v_2 \\
    \vdots \\
     v_{n-1} \\
-    v_n \\
+    v_n
   \end{array}
 \right]
 = v_1 \vec{e}_1 + v_2 \vec{e}_2 + \cdots + v_{n-1} \vec{e}_{n-1} + v_{n} \vec{e}_{n},
@@ -167,7 +167,7 @@ Mais geralmente, um vetor $\vec{v}$ do conjunto $\bR^n$ pode ser pensado como um
     0 \\
   \vdots \\
     0 \\
-    0 \\
+    0
   \end{array}
 \right], \quad
 \vec{e}_2 =
@@ -177,7 +177,7 @@ Mais geralmente, um vetor $\vec{v}$ do conjunto $\bR^n$ pode ser pensado como um
     1 \\
     0 \\
   \vdots \\
-    0 \\
+    0
   \end{array}
 \right],   \cdots, \quad
 \vec{e}_{n-1} =
@@ -187,7 +187,7 @@ Mais geralmente, um vetor $\vec{v}$ do conjunto $\bR^n$ pode ser pensado como um
     0 \\
   \vdots \\
     1 \\
-    0 \\
+    0
   \end{array}
 \right], \quad
 \vec{e}_n =
@@ -197,10 +197,10 @@ Mais geralmente, um vetor $\vec{v}$ do conjunto $\bR^n$ pode ser pensado como um
     0 \\
   \vdots \\
     0 \\
-    1 \\
+    1
   \end{array}
 \right].
-\] A soma de vetores È dada em coordenadas por:
+\] A soma de vetores √© dada em coordenadas por:
 \[
 \vec{v} + \vec{w} :=
 \left[
@@ -209,10 +209,10 @@ Mais geralmente, um vetor $\vec{v}$ do conjunto $\bR^n$ pode ser pensado como um
     v_2 + w_2 \\
     \vdots \\
     v_{n-1} + w_{n-1} \\
-    v_n + w_n \\
+    v_n + w_n
   \end{array}
 \right].
-\] A multiplicaÁ„o por escalar por:
+\] A multiplica√ß√£o por escalar por:
 \[
 k \vec{v} :=
 \left[
@@ -221,16 +221,16 @@ k \vec{v} :=
     k v_2 \\
     \vdots \\
     k v_{n-1} \\
-    k v_n \\
+    k v_n
   \end{array}
 \right].
 \]
 
 
 
-\subsection{RepresentaÁ„o matricial para sistemas Lineares}
+\subsection{Representa√ß√£o matricial para sistemas Lineares}
 
-Na linguagem da seÁ„o anterior, nÛs dizemos que dois vetores s„o iguais quando todas as suas componentes s„o iguais. Desta forma, podemos interpretar as equaÁıes de um sistema linear
+Na linguagem da se√ß√£o anterior, n√≥s dizemos que dois vetores s√£o iguais quando todas as suas componentes s√£o iguais. Desta forma, podemos interpretar as equa√ß√µes de um sistema linear
 \begin{equation*}
   \left\{
     \begin{array}{rcl}
@@ -238,7 +238,7 @@ Na linguagem da seÁ„o anterior, nÛs dizemos que dois vetores s„o iguais quando t
       2x-y&=&-2
     \end{array}
   \right.
-\end{equation*} como uma igualdade entre vetores de $\bR^2$, isto È, de vetores com duas componentes:
+\end{equation*} como uma igualdade entre vetores de $\bR^2$, isto √©, de vetores com duas componentes:
 \begin{equation*}
   \left[
     \begin{array}{c}
@@ -252,12 +252,12 @@ Na linguagem da seÁ„o anterior, nÛs dizemos que dois vetores s„o iguais quando t
       2
     \end{array}
   \right].
-\end{equation*} AlÈm disso, È desta forma que surge naturalmente o \textbf{produto de uma matriz por um vetor}:
+\end{equation*} Al√©m disso, √© desta forma que surge naturalmente o \textbf{produto de uma matriz por um vetor}:
 \begin{equation*}
   \left[
     \begin{array}{cc}
       1 & 3 \\
-      2 & -1 \\
+      2 & -1
     \end{array}
   \right]
   \left[
@@ -272,13 +272,13 @@ Na linguagem da seÁ„o anterior, nÛs dizemos que dois vetores s„o iguais quando t
       2
     \end{array}
   \right],
-\end{equation*} definido de modo que as duas ˙ltimas igualdades acima signifiquem a mesma coisa. Esta ˙ltima notaÁ„o È conhecida como a \textbf{forma matricial} do sistema linear.
+\end{equation*} definido de modo que as duas √∫ltimas igualdades acima signifiquem a mesma coisa. Esta √∫ltima nota√ß√£o √© conhecida como a \textbf{forma matricial} do sistema linear.
 
 
 
 
 \begin{example}\label{example1}
-O sistema, que j· apareceu nas notas da semana anterior
+O sistema, que j√° apareceu nas notas da semana anterior
 \[
 \left\{
   \begin{array}{ll}
@@ -293,21 +293,21 @@ O sistema, que j· apareceu nas notas da semana anterior
   \begin{array}{ccc}
     1 &  2 & 1  \\
     1 & -3 & 5  \\
-    2 & -1 & 3  \\
+    2 & -1 & 3
   \end{array}
 \right]
 \left[
   \begin{array}{c}
     x_1   \\
     x_2  \\
-    x_3 \\
+    x_3
   \end{array}
 \right] =
 \left[
   \begin{array}{c}
     12   \\
     1  \\
-    10   \\
+    10
   \end{array}
 \right].
 \] De forma mais sucinta,
@@ -326,21 +326,21 @@ A = \left[
   \begin{array}{c}
     x_1   \\
     x_2  \\
-    x_3 \\
+    x_3
   \end{array}
 \right], \ \text{ e } \
 \vec{b} = \left[
   \begin{array}{c}
     12   \\
     1  \\
-    10   \\
+    10
   \end{array}
 \right].
-\] Chegamos a esta conclus„o colocando os coeficientes da primeira vari·vel $x_1$ na primeira coluna, os coeficientes da segunda vari·vel $x_2$ na segunda coluna e os coeficientes da terceira vari·vel $x_3$ na terceira coluna$. \ \lhd$
+\] Chegamos a esta conclus√£o colocando os coeficientes da primeira vari√°vel $x_1$ na primeira coluna, os coeficientes da segunda vari√°vel $x_2$ na segunda coluna e os coeficientes da terceira vari√°vel $x_3$ na terceira coluna$. \ \lhd$
 \end{example}
 
 
-Mais geralmente, uma matriz do tipo $m\times n$ (leia-se ``$m$ por $n$'') È uma matriz com $m$ linhas e $n$ colunas:
+Mais geralmente, uma matriz do tipo $m\times n$ (leia-se ``$m$ por $n$'') √© uma matriz com $m$ linhas e $n$ colunas:
 \[
 A = \left(a_{ij}\right) =
 \begin{bmatrix}
@@ -349,7 +349,7 @@ a_{21}&a_{22}&\cdots &a_{2n}\\
 \vdots &\vdots &\ddots &\vdots \\
 a_{m1}&a_{m2}&\cdots &a_{mn}
 \end{bmatrix}
-\] e pode estar associada a um sistema com $m$ equaÁıes e $n$ vari·veis, j· que o produto
+\] e pode estar associada a um sistema com $m$ equa√ß√µes e $n$ vari√°veis, j√° que o produto
 \[
 \left[
   \begin{array}{cccc}
@@ -364,7 +364,7 @@ a_{m1}&a_{m2}&\cdots &a_{mn}
     x_1 \\
     x_2 \\
     \vdots \\
-    x_n \\
+    x_n
   \end{array}
 \right] =
 \left[
@@ -372,7 +372,7 @@ a_{m1}&a_{m2}&\cdots &a_{mn}
     b_1 \\
     b_2 \\
     \vdots \\
-    b_m \\
+    b_m
   \end{array}
 \right],
 \] quando visto componente a componente, representa:
@@ -391,12 +391,12 @@ a_{m1}&a_{m2}&\cdots &a_{mn}
 
 
 
-\section{CombinaÁıes lineares de vetores}
+\section{Combina√ß√µes lineares de vetores}
 
-Uma \textbf{combinaÁ„o linear} dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ È um vetor da forma:
+Uma \textbf{combina√ß√£o linear} dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ √© um vetor da forma:
 \[
 \vec{v} = x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \sum_{i=1}^k x_i \vec{v}_i,
-\] onde $x_1, x_2, \dots, x_k$ s„o n˙meros reais. Em outras palavras, uma combinaÁ„o linear È uma soma de m˙ltiplos dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$.
+\] onde $x_1, x_2, \dots, x_k$ s√£o n√∫meros reais. Em outras palavras, uma combina√ß√£o linear √© uma soma de m√∫ltiplos dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$.
 
 
 \begin{example}
@@ -405,64 +405,64 @@ Para os vetores
 \vec{v}_1 = \left[
   \begin{array}{c}
     1 \\
-    -1 \\
+    -1
   \end{array}
 \right] \quad \text{e} \quad
 \vec{v}_2 = \left[
   \begin{array}{c}
     1 \\
-    3 \\
+    3
   \end{array}
 \right],
-\] algumas combinaÁıes lineares s„o:
+\] algumas combina√ß√µes lineares s√£o:
 \begin{itemize}
   \item $\vec{v}_1 + \vec{v}_2 =
   \left[
   \begin{array}{c}
     1 \\
-    -1 \\
+    -1
   \end{array}
 \right] +
 \left[
   \begin{array}{c}
     1 \\
-    3 \\
+    3
   \end{array}
 \right] =
 \left[
   \begin{array}{c}
     2 \\
-    2 \\
+    2
   \end{array}
 \right];$
   \item $ 4 \vec{v}_1 = 4 \vec{v}_1 + 0 \vec{v}_2 =
   4 \left[
   \begin{array}{c}
     1 \\
-    -1 \\
+    -1
   \end{array}
 \right] =
 \left[
   \begin{array}{c}
     4 \\
-    -4 \\
+    -4
   \end{array}
 \right];$
   \item $ \vec{v}_2 = 0\vec{v}_1 + 1\vec{v}_2 =
    \left[
   \begin{array}{c}
     1 \\
-    3 \\
+    3
   \end{array}
 \right];$
   \item $0\vec{v}_1 + 0 \vec{v}_2 =
   \left[
   \begin{array}{c}
     0 \\
-    0 \\
+    0
   \end{array}
 \right] = \vec{0}.$
-\end{itemize} \textbf{Geometricamente}, qualquer vetor do plano pode ser representado como combinaÁ„o linear de vetores que n„o s„o colineares.
+\end{itemize} \textbf{Geometricamente}, qualquer vetor do plano pode ser representado como combina√ß√£o linear de vetores que n√£o s√£o colineares.
 
 Vamos ilustrar este fato na figura abaixo.
 \begin{figure}[h!]
@@ -471,18 +471,18 @@ Vamos ilustrar este fato na figura abaixo.
 \includegraphics[width=0.4\linewidth]{\dir/Semana02/semana02-comblinear3}
 \end{center}
 \end{figure}
-Por exemplo, para representar o vetor $\vec{v}$ como combinaÁ„o linear de $\vec{v}_1$ e $\vec{v}_2$, podemos traÁar retas paralelas aos vetores, passando pela origem e pela extremidade do vetor $\vec{v}$, como na figura da direita. Assim, pela interpretaÁ„o geomÈtrica da soma de vetores (ver inÌcio deste capÌtulo), sabemos que $\vec{v}$ È a soma dos vetores em azul. Mas estes, por construÁ„o, s„o colineares aos vetores iniciais e logo m˙ltiplos destes. Concluimos que
+Por exemplo, para representar o vetor $\vec{v}$ como combina√ß√£o linear de $\vec{v}_1$ e $\vec{v}_2$, podemos tra√ßar retas paralelas aos vetores, passando pela origem e pela extremidade do vetor $\vec{v}$, como na figura da direita. Assim, pela interpreta√ß√£o geom√©trica da soma de vetores (ver in√≠cio deste cap√≠tulo), sabemos que $\vec{v}$ √© a soma dos vetores em azul. Mas estes, por constru√ß√£o, s√£o colineares aos vetores iniciais e logo m√∫ltiplos destes. Concluimos que
 \[
 \vec{v} = \alpha \vec{v}_1 + \beta \vec{v}_2,
-\] isto È, $\vec{v}$ È uma combinaÁ„o linear de $\vec{v}_1$ e $\vec{v}_2$. $\ \lhd$
+\] isto √©, $\vec{v}$ √© uma combina√ß√£o linear de $\vec{v}_1$ e $\vec{v}_2$. $\ \lhd$
 \end{example}
 
 
 
-De forma mais geral, nÛs dizemos que um vetor $\vec{v} \in \bR^m$ È combinaÁ„o linear dos $k$ vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ quando conseguirmos encontrar n˙meros reais $x_1, x_2, \dots, x_k$ tais que
+De forma mais geral, n√≥s dizemos que um vetor $\vec{v} \in \bR^m$ √© combina√ß√£o linear dos $k$ vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ quando conseguirmos encontrar n√∫meros reais $x_1, x_2, \dots, x_k$ tais que
 \[
 x_1 \vec{v}_1 + x_2 \vec{v}_2 + \dots + x_k \vec{v}_k = \vec{v}.
-\] NÛs vamos nos referir a este tipo de equaÁ„o por \textbf{equaÁ„o vetorial}. Para decidir se um vetor È combinaÁ„o linear de outros, devemos decidir se existem estes n˙meros reais $x_1, x_2, \dots, x_k$. Escrevendo em coordenadas:
+\] N√≥s vamos nos referir a este tipo de equa√ß√£o por \textbf{equa√ß√£o vetorial}. Para decidir se um vetor √© combina√ß√£o linear de outros, devemos decidir se existem estes n√∫meros reais $x_1, x_2, \dots, x_k$. Escrevendo em coordenadas:
 \[
 \vec{v}_1 =
 \left[
@@ -491,7 +491,7 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \dots + x_k \vec{v}_k = \vec{v}.
     v_{21} \\
     v_{31} \\
     \vdots \\
-    v_{m1} \\
+    v_{m1}
   \end{array}
 \right], \
 \vec{v}_2 =
@@ -501,7 +501,7 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \dots + x_k \vec{v}_k = \vec{v}.
     v_{22} \\
     v_{32} \\
     \vdots \\
-    v_{m2} \\
+    v_{m2}
   \end{array}
 \right], \
 \vec{v}_3 =
@@ -511,7 +511,7 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \dots + x_k \vec{v}_k = \vec{v}.
     v_{23} \\
     v_{33} \\
     \vdots \\
-    v_{m3} \\
+    v_{m3}
   \end{array}
 \right], \ \cdots, \
 \vec{v}_k =
@@ -521,7 +521,7 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \dots + x_k \vec{v}_k = \vec{v}.
     v_{2k} \\
     v_{3k} \\
     \vdots \\
-    v_{mk} \\
+    v_{mk}
   \end{array}
 \right], \
 \vec{v} =
@@ -531,10 +531,10 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \dots + x_k \vec{v}_k = \vec{v}.
     b_{2} \\
     b_{3} \\
     \vdots \\
-    b_{m} \\
+    b_{m}
   \end{array}
 \right],
-\] vemos que encontrar os coeficientes da combinaÁ„o linear, caso estes existam, equivale a resolver a equaÁ„o vetorial
+\] vemos que encontrar os coeficientes da combina√ß√£o linear, caso estes existam, equivale a resolver a equa√ß√£o vetorial
 \[
 x_1 \left[
   \begin{array}{c}
@@ -542,7 +542,7 @@ x_1 \left[
     v_{21} \\
     v_{31} \\
     \vdots \\
-    v_{m1} \\
+    v_{m1}
   \end{array}
 \right] + x_2
 \left[
@@ -551,7 +551,7 @@ x_1 \left[
     v_{22} \\
     v_{32} \\
     \vdots \\
-    v_{m2} \\
+    v_{m2}
   \end{array}
 \right] + x_3
 \left[
@@ -560,7 +560,7 @@ x_1 \left[
     v_{23} \\
     v_{33} \\
     \vdots \\
-    v_{m3} \\
+    v_{m3}
   \end{array}
 \right] + \cdots + x_k
 \left[
@@ -569,7 +569,7 @@ x_1 \left[
     v_{2k} \\
     v_{3k} \\
     \vdots \\
-    v_{mk} \\
+    v_{mk}
   \end{array}
 \right] =
 \left[
@@ -578,10 +578,10 @@ x_1 \left[
     b_{2} \\
     b_{3} \\
     \vdots \\
-    b_{m} \\
+    b_{m}
   \end{array}
 \right],
-\] que, por sua vez, È equivalente a
+\] que, por sua vez, √© equivalente a
 \[
 \left[
   \begin{array}{c}
@@ -589,7 +589,7 @@ x_1 \left[
    v_{21} x_1 + v_{22} x_2 + v_{23} x_3 + \cdots + v_{2k} x_k  \\
    v_{31} x_1 + v_{32} x_2 + v_{33} x_3 + \cdots + v_{3k} x_k  \\
    \vdots  \\
-   v_{m1} x_1 + v_{m2} x_2 + v_{m3} x_3 + \cdots + v_{mk} x_k  \\
+   v_{m1} x_1 + v_{m2} x_2 + v_{m3} x_3 + \cdots + v_{mk} x_k
   \end{array}
 \right] =
 \left[
@@ -598,45 +598,45 @@ x_1 \left[
     b_{2} \\
     b_{3} \\
     \vdots \\
-    b_{m} \\
+    b_{m}
   \end{array}
 \right].
-\] Mas isto È resolver um sistema linear! Portanto este conceito (aparentemente) novo est· intimamente relacionado com tudo o que j· tÌnhamos visto antes.
+\] Mas isto √© resolver um sistema linear! Portanto este conceito (aparentemente) novo est√° intimamente relacionado com tudo o que j√° t√≠nhamos visto antes.
 
 
-O \textbf{espaÁo gerado} por todas as combinaÁıes lineares dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ È denotado por $\Span \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_k \}$.
+O \textbf{espa√ßo gerado} por todas as combina√ß√µes lineares dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ √© denotado por $\Span \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_k \}$.
 
 \begin{itemize}
-\item Vimos que o conjunto gerado pelos dois vetores do exemplo anterior È o plano inteiro, isto È, $\Span \{ \vec{v}_1, \vec{v}_2 \} = \bR^2$.
-\item Nota que o vetor nulo sempre pertence ao espaÁo gerado, assim como todos os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$.
-\item O conjunto gerado por apenas um vetor n„o nulo representa uma reta.
+\item Vimos que o conjunto gerado pelos dois vetores do exemplo anterior √© o plano inteiro, isto √©, $\Span \{ \vec{v}_1, \vec{v}_2 \} = \bR^2$.
+\item Nota que o vetor nulo sempre pertence ao espa√ßo gerado, assim como todos os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$.
+\item O conjunto gerado por apenas um vetor n√£o nulo representa uma reta.
 \end{itemize}
 
 
 
-\section{Sistemas lineares e combinaÁıes lineares das colunas}
+\section{Sistemas lineares e combina√ß√µes lineares das colunas}
 
-A associaÁ„o feita acima pode ser resumida como:
+A associa√ß√£o feita acima pode ser resumida como:
 % \[
 % \boxed{\begin{eqnarray*}
-% \text{Resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o} \\ \text{vetor $\vec{b}$ È uma combinaÁ„o linear das colunas de $A$.}
+% \text{Resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o} \\ \text{vetor $\vec{b}$ √© uma combina√ß√£o linear das colunas de $A$.}
 % \end{eqnarray*}}
 %\]
 \begin{center}
   ''resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir
-  se o vetor $\vec{b}$ È uma combinaÁ„o linear das colunas de $A$''
+  se o vetor $\vec{b}$ √© uma combina√ß√£o linear das colunas de $A$''
 \end{center}
 ou ainda
 \begin{center}
-  ''resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o vetor $\vec{b}$ pertence ao espaÁo gerado pelas colunas de $A$''
+  ''resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o vetor $\vec{b}$ pertence ao espa√ßo gerado pelas colunas de $A$''
 \end{center}
 % \[
 % \boxed{\begin{split}
-% \text{Resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o} \\ \text{vetor $\vec{b}$ pertence ao espaÁo gerado pelas colunas de $A$.}
+% \text{Resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o} \\ \text{vetor $\vec{b}$ pertence ao espa√ßo gerado pelas colunas de $A$.}
 % \end{split}}
 % \]
 
-Desta forma, tudo o que j· vimos sobre existÍncia de soluÁıes para sistemas lineares pode ser ``traduzido'' para o contexto de combinaÁıes lineares e espaÁos gerados (faÁa as traduÁıes!).
+Desta forma, tudo o que j√° vimos sobre exist√™ncia de solu√ß√µes para sistemas lineares pode ser ``traduzido'' para o contexto de combina√ß√µes lineares e espa√ßos gerados (fa√ßa as tradu√ß√µes!).
 
 
 \begin{example}
@@ -657,70 +657,70 @@ x_1 -3x_2 + 5x_3 = 1 \\
 \begin{array}{ccc}
 1 &  2 & 1  \\
 1 & -3 & 5  \\
-2 & -1 & 3  \\
+2 & -1 & 3
 \end{array}
 \right]
 \left[
 \begin{array}{c}
 x_1   \\
 x_2  \\
-x_3 \\
+x_3
 \end{array}
 \right] =
 \left[
 \begin{array}{c}
 12   \\
 1  \\
-10   \\
+10
 \end{array}
 \right].
-\] Este formato È interessante principalmente para uma an·lise mais teÛrica. Podemos escalonar a matriz para decidir sobre a existÍncia de soluÁıes. Podemos tambÈm encarar o sistema como uma equaÁ„o \textit{aparentemente} escalar $A \vec{x} = \vec{b}$; por exemplo, mais adiante no nosso curso, vamos tentar entender quando que pode fazer sentido escrever a soluÁ„o como $\vec{x} = A^{-1} \vec{b}$; isto È o que se faria em uma equaÁ„o linear escalar (adiantando: nem sempre se pode fazer isso!).
-\item TambÈm podemos representar o sistema como uma \textbf{matriz aumentada associada}:
+\] Este formato √© interessante principalmente para uma an√°lise mais te√≥rica. Podemos escalonar a matriz para decidir sobre a exist√™ncia de solu√ß√µes. Podemos tamb√©m encarar o sistema como uma equa√ß√£o \textit{aparentemente} escalar $A \vec{x} = \vec{b}$; por exemplo, mais adiante no nosso curso, vamos tentar entender quando que pode fazer sentido escrever a solu√ß√£o como $\vec{x} = A^{-1} \vec{b}$; isto √© o que se faria em uma equa√ß√£o linear escalar (adiantando: nem sempre se pode fazer isso!).
+\item Tamb√©m podemos representar o sistema como uma \textbf{matriz aumentada associada}:
 \[
 \left[
 \begin{array}{ccc|c}
 1 &  2 & 1 & 12 \\
 1 & -3 & 5 &  1 \\
-2 & -1 & 3 & 10 \\
+2 & -1 & 3 & 10
 \end{array}
 \right].
-\] Esta notaÁ„o È boa para a resoluÁ„o do sistema. Escalonando a matriz aumentada associada, conseguiremos dizer se o sistema possui soluÁ„o (no caso em que uma linha da forma escalonada for contraditÛria), se o sistema possui apenas uma soluÁ„o (quando todas as colunas referentes ‡s vari·veis do sistema possuem posiÁ„o de pivÙ) ou ent„o se existem infinitas soluÁıes (caso sem linhas contraditÛrias em que existem colunas sem posiÁ„o de pivÙ -- assocaidas com vari·veis livres).
-\item Outra forma possÌvel È a \textbf{forma vetorial} (equivalentemente \textbf{combinaÁ„o linear das colunas} da matriz associada)
+\] Esta nota√ß√£o √© boa para a resolu√ß√£o do sistema. Escalonando a matriz aumentada associada, conseguiremos dizer se o sistema possui solu√ß√£o (no caso em que uma linha da forma escalonada for contradit√≥ria), se o sistema possui apenas uma solu√ß√£o (quando todas as colunas referentes √†s vari√°veis do sistema possuem posi√ß√£o de piv√¥) ou ent√£o se existem infinitas solu√ß√µes (caso sem linhas contradit√≥rias em que existem colunas sem posi√ß√£o de piv√¥ -- assocaidas com vari√°veis livres).
+\item Outra forma poss√≠vel √© a \textbf{forma vetorial} (equivalentemente \textbf{combina√ß√£o linear das colunas} da matriz associada)
 \[
 x_1
 \left[
 \begin{array}{c}
 1   \\
 1  \\
-2   \\
+2 
 \end{array}
 \right] + x_2 
 \left[
 \begin{array}{c}
   2   \\
  -3   \\
- -1   \\
+ -1
 \end{array}
 \right] + x_3 
 \left[
 \begin{array}{c}
  1  \\
  5  \\
- 3  \\
+ 3
 \end{array}
 \right] = 
 \left[
 \begin{array}{c}
 12   \\
 1  \\
-10   \\
+10
 \end{array}
 \right].
-\] Esta maneira de representar o sistema È favor·vel para descriÁıes geomÈtricas, pois j· vimos como interpretar geometricamente combinaÁıes lineares de vetores. TambÈm ser· interessante futuramente no curso quando a imagem de transformaÁıes lineares.
-\end{enumerate}  O entendimento dessas interpretaÁıes diferentes facilita (e muito!) o entendimento de v·rios conceitos que veremos mais adiante no nosso curso de ¡lgebra Linear.
-% … importante que saibamos passar de uma representaÁ„o para outra sem dificuldades.
+\] 
+
+Esta maneira de representar o sistema √© favor√°vel para descri√ß√µes geom√©tricas, pois j√° vimos como interpretar geometricamente combina√ß√µes lineares de vetores. Tamb√©m ser√° interessante futuramente no curso quando a imagem de transforma√ß√µes lineares.
+\end{enumerate}  O entendimento dessas interpreta√ß√µes diferentes facilita (e muito!) o entendimento de v√°rios conceitos que veremos mais adiante no nosso curso de √Ålgebra Linear.
+% √â importante que saibamos passar de uma representa√ß√£o para outra sem dificuldades.
 \end{example}
-
-
 
 \end{document} 
