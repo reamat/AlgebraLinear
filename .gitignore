@@ -3,6 +3,7 @@
 *.toc
 *.out
 *~
+*#
 html
 *.html
 *.4ct

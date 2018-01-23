@@ -216,13 +216,53 @@
 \fancyhead[R]{\thepage}
 \fancyfoot[C]{\tiny{Licença CC-BY-SA-3.0. Contato: \url{livroscolaborativos@gmail.com}}}
 
-\newcommand{\emconstrucao}{
-  \begin{center}
-    Em construção ... Caso deseja colaborar com a escrita deste livro, veja como em:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   CONVITES À EDIÇÃO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-    \url{https://github.com/reamat/AlgebraLinear}
+\newcommand{\emconstrucao}{
+  \begin{tabular}{|c|}\hline
+    Em construção ... Gostaria de participar na escrita deste livro? Veja como em:\\
+    \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
+  \end{tabular}
+}
+
+\newcommand{\construirSec}{
+\begin{center}
+  Esta seção (ou subseção) está sugerida. Participe da sua escrita. Veja como em:\\
+  \url{https://www.ufrgs.br/reamat/participe.html}  
+\end{center}
+}
+
+\newcommand{\construirExeresol}{
+  \begin{center}
+    \begin{tabular}{|c|}\hline
+      Esta seção carece de exercícios resolvidos. Participe da sua escrita.\\
+      Veja como em:\\
+      \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
+    \end{tabular}
   \end{center}
 }
+
+\newcommand{\construirExer}{
+  \begin{center}
+    \begin{tabular}{|c|}\hline
+      Esta seção carece de exercícios. Participe da sua escrita.\\
+      Veja como em:\\
+      \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
+    \end{tabular}
+  \end{center}
+}
+
+\newcommand{\construirResp}{
+\begin{center}
+  Este exercício está sem resposta sugerida. Proponha uma resposta. Veja como em:\\
+  \url{https://www.ufrgs.br/reamat/participe.html}  
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
@@ -232,21 +272,25 @@
 \frontmatter
 
 \title{Álgebra Linear\\\small{Um Livro Colaborativo}}
-
 \author{}
-
 \date{\today}
+
+\ifispdf
+\addcontentsline{toc}{chapter}{Capa}
+\fi
 
 \maketitle
 
 \include{organizadores}
+\include{colaboradores}
 \include{licenca}
 \include{nota_organizadores}
 \include{prefacio}
 
-
+\ifispdf
 \tableofcontents
 \addcontentsline{toc}{chapter}{Sumário}
+\fi
 
 \mainmatter
 
@@ -266,8 +310,5 @@
 \subfile{Semana14-15/semana14-15.tex}
 
 \backmatter
-
-\include{colaboradores}
-
 
 \end{document}
