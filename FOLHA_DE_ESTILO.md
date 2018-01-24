@@ -1,42 +1,42 @@
 # Folha de estilo
 
-Este documento contÈm informaÁıes sobre os padrıes de estilo de escrita e organizaÁ„o do livro colaborativo. Antes de submeter uma colaboraÁ„o, verifique que seu trabalho est· de acordo com todos os pontos observados nesta folha de estilo.
+Este documento cont√©m informa√ß√µes sobre os padr√µes de estilo de escrita e organiza√ß√£o do livro colaborativo. Antes de submeter uma colabora√ß√£o, verifique que seu trabalho est√° de acordo com todos os pontos observados nesta folha de estilo.
 
-Estamos muito mais interessados em melhorar o conte˙do do livro (tando em qualidade como em quantidade) e menos interessados em melhorar a sua estÈtica. Portanto, busque manter o cÛdigo LaTeX o mais simples possÌvel buscando potencializar a colaboraÁ„o de outras pessoas e de forma a se obter um resultado que permita uma leitura objetiva e agrad·vel do livro.
+Estamos muito mais interessados em melhorar o conte√∫do do livro (tando em qualidade como em quantidade) e menos interessados em melhorar a sua est√©tica. Portanto, busque manter o c√≥digo LaTeX o mais simples poss√≠vel buscando potencializar a colabora√ß√£o de outras pessoas e de forma a se obter um resultado que permita uma leitura objetiva e agrad√°vel do livro.
 
-Qualquer d˙vida, escreva em nossa lista de discuss„o:
+Qualquer d√∫vida, escreva em nossa lista de discuss√£o:
 
 <livro_colaborativo@googlegroups.com>
 
-TambÈm, o [repositÛrio GitHub do livro](http://github.com/livroscolaborativos/AlgebraLinear) contÈm ferramentas de comunicaÁ„o com os organizadores, bem como, È possÌvel contatar os organizadores de forma privada atravÈs do e-mail:
+Tamb√©m, o [reposit√≥rio GitHub do livro](http://github.com/livroscolaborativos/AlgebraLinear) cont√©m ferramentas de comunica√ß√£o com os organizadores, bem como, √© poss√≠vel contatar os organizadores de forma privada atrav√©s do e-mail:
 
 <livroscolaborativos@gmail.com>
 
-## RegionalizaÁ„o e Estilo de Escrita
+## Regionaliza√ß√£o e Estilo de Escrita
 
-O livro est· escrito em lÌngua portuguesa, seguindo os costumes linguÌsticos brasileiros. D·-se prioridade ‡ ortografia prevista no Acordo Ortogr·fico de 1990.
+O livro est√° escrito em l√≠ngua portuguesa, seguindo os costumes lingu√≠sticos brasileiros. D√°-se prioridade √† ortografia prevista no Acordo Ortogr√°fico de 1990.
 
-### CapitalizaÁ„o de nomes de mÈtodos
+### Capitaliza√ß√£o de nomes de m√©todos
 
-Deve-se usar mai˙scula apenas em nomes prÛprios, ex: mÈtodo de Newton, mÈtodos dos mÌnimos quadrados.
+Deve-se usar mai√∫scula apenas em nomes pr√≥prios, ex: m√©todo de Newton, m√©todos dos m√≠nimos quadrados.
 
-## CÛdigo fonte LaTeX
+## C√≥digo fonte LaTeX
 
-O livro est· escrito em [LaTex](https://latex-project.org/) e os tÛpicos est„o organizados por semanas letivas.
+O livro est√° escrito em [LaTex](https://latex-project.org/) e os t√≥picos est√£o organizados por semanas letivas.
 
-Para informaÁıes sobre como compilar o cÛdigo fonte, leia o arquivo `README.md`.
+Para informa√ß√µes sobre como compilar o c√≥digo fonte, leia o arquivo `README.md`.
 
 ### Compatibilidade
 
-O cÛdigo LaTeX do livro deve permitir sua compilaÁ„o com `pdflatex`.
+O c√≥digo LaTeX do livro deve permitir sua compila√ß√£o com `pdflatex`.
 
-#### InstruÁıes LaTeX n„o compatÌveis
+#### Instru√ß√µes LaTeX n√£o compat√≠veis
 
-Fazemos a convers„o do livro de cÛdigo LaTeX para HTML usando o pacote [TeX4ht](https://www.tug.org/tex4ht/). Os ambientes matem·ticos s„o convertidos para [MathMl](https://www.w3.org/Math/) e ent„o renderizados usando [MathJax](https://www.mathjax.org/). Para que a convers„o funcione de forma apropriada deve-se observar as seguintes questıes:
+Fazemos a convers√£o do livro de c√≥digo LaTeX para HTML usando o pacote [TeX4ht](https://www.tug.org/tex4ht/). Os ambientes matem√°ticos s√£o convertidos para [MathMl](https://www.w3.org/Math/) e ent√£o renderizados usando [MathJax](https://www.mathjax.org/). Para que a convers√£o funcione de forma apropriada deve-se observar as seguintes quest√µes:
 
-* Ambientes matem·ticos v·lidos s„o: `equation`, `align` e `eqnarray`. N„o use `$$ $$` ou `[\ \]`.
+* Ambientes matem√°ticos v√°lidos s√£o: `equation`, `align` e `eqnarray`. N√£o use `$$ $$` ou `[\ \]`.
 
-* N„o usar `array` para composiÁ„o de tabelas. A alternativa È usar o ambiente `tabular`, por exemplo:
+* N√£o usar `array` para composi√ß√£o de tabelas. A alternativa √© usar o ambiente `tabular`, por exemplo:
 
     \begin{center}
       \begin{tabular}{r|c|c}
@@ -47,7 +47,7 @@ Fazemos a convers„o do livro de cÛdigo LaTeX para HTML usando o pacote [TeX4ht](
       \end{tabular}
     \end{center}
 
-* N„o colocar instruÁ„o para nova linha ao final de matrizes. Um exemplo do que n„o fazer È:
+* N√£o colocar instru√ß√£o para nova linha ao final de matrizes. Um exemplo do que n√£o fazer √©:
 
 	\begin{bmatrix}
 		1 & 2 \\
@@ -61,25 +61,25 @@ no lugar, use
 		3 & 4
 	\end{bmatrix}
 
-* N„o colocar `label` dentro de colchetes.
+* N√£o colocar `label` dentro de colchetes.
 
 ### Figuras
 
-Os arquivos das figuras devem ser fornecidos em formato `PNG` sendo armazenados no subdiretÛrio `SemanaXX`, onde `SemanaXX` È o diretÛrio do tÛpico da semana que a figura se refere. As figuras devem ser fornecidas no tamanho desejado para o livro, i.e. evite definir o tamanho da figura no cÛdigo LaTeX. Para uma vizualizaÁ„o conform·vel em celulares, recomendamos que a figura tenha largura inferior a 320px.
+Os arquivos das figuras devem ser fornecidos em formato `PNG` sendo armazenados no subdiret√≥rio `SemanaXX`, onde `SemanaXX` √© o diret√≥rio do t√≥pico da semana que a figura se refere. As figuras devem ser fornecidas no tamanho desejado para o livro, i.e. evite definir o tamanho da figura no c√≥digo LaTeX. Para uma vizualiza√ß√£o conform√°vel em celulares, recomendamos que a figura tenha largura inferior a 320px.
 
-A inclus„o de uma figura no cÛdigo LaTex deve ser feita da seguinte forma:
+A inclus√£o de uma figura no c√≥digo LaTex deve ser feita da seguinte forma:
 
     \begin{figure}
         \centering
 	\includegraphics{\dir/SemanaXX/figfoo.png}
-	\caption{DescriÁ„o da figura figfoo.}
+	\caption{Descri√ß√£o da figura figfoo.}
 	\label{fig:figfoo}
     \end{figure}
 
-N„o insira figuras dentro de outros ambientes.
+N√£o insira figuras dentro de outros ambientes.
 
-Sempre que possÌvel, forneÁa o cÛdigo fonte da figura armazenando-o na pasta `SemanaXX/figfoo`, sendo figfoo.png o arquivo da figura. Nesta mesma pasta, crie um arquivo README.md com uma descriÁ„o da figura e a linceÁa da mesma, a qual deve ser compatÌvel com a CC-BY-SA 3.0.
+Sempre que poss√≠vel, forne√ßa o c√≥digo fonte da figura armazenando-o na pasta `SemanaXX/figfoo`, sendo figfoo.png o arquivo da figura. Nesta mesma pasta, crie um arquivo README.md com uma descri√ß√£o da figura e a lince√ßa da mesma, a qual deve ser compat√≠vel com a CC-BY-SA 3.0.
 
-### EquaÁıes e sÌmbolos matem·ticos
+### Equa√ß√µes e s√≠mbolos matem√°ticos
 
-As equaÁıes e sÌmbolos matem·ticos est„o escritos usando a coleÁ„o de pacotes [AMS-LaTeX](http://www.ams.org/publications/authors/tex/amslatex).
+As equa√ß√µes e s√≠mbolos matem√°ticos est√£o escritos usando a cole√ß√£o de pacotes [AMS-LaTeX](http://www.ams.org/publications/authors/tex/amslatex).

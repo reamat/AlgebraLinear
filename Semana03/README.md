@@ -1,11 +1,11 @@
 # AlgebraLinear/Semana03
 
-SubdiretÛrio com o material referente ao capÌtulo "Semana 3" do livro "¡lgebra Linear - Um Livro Colaborativo".
+Subdiret√≥rio com o material referente ao cap√≠tulo "Semana 3" do livro "√Ålgebra Linear - Um Livro Colaborativo".
 
 ## Contato
 
 <livroscolaborativos@gmail.com>
 
-## LicenÁa
+## Licen√ßa
 
-Este trabalho est· licenciado sob a LicenÁa Creative Commons AtribuiÁ„o-CompartilhaIgual 3.0 N„o Adaptada. Para ver uma cÛpia desta licenÁa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+Este trabalho est√° licenciado sob a Licen√ßa Creative Commons Atribui√ß√£o-CompartilhaIgual 3.0 N√£o Adaptada. Para ver uma c√≥pia desta licen√ßa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.

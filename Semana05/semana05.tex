@@ -1,8 +1,8 @@
-%Este trabalho est· licenciado sob a LicenÁa Creative Commons AtribuiÁ„o-CompartilhaIgual 3.0 N„o Adaptada. Para ver uma cÛpia desta licenÁa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+%Este trabalho est√° licenciado sob a Licen√ßa Creative Commons Atribui√ß√£o-CompartilhaIgual 3.0 N√£o Adaptada. Para ver uma c√≥pia desta licen√ßa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 \documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
-%define o diretÛrio principal
+%define o diret√≥rio principal
 \providecommand{\dir}{..}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -13,9 +13,9 @@
 
 \chapter{Semana 5}
 
-\section{InterpretaÁıes de sistemas lineares e de matrizes invertÌveis}
+\section{Interpreta√ß√µes de sistemas lineares e de matrizes invert√≠veis}
 
-Uma das belezas da ¡lgebra Linear È que diversos conceitos podem ser interpretados de maneiras diferentes. Assim, propriedades intuitivas de uma formulaÁ„o de um certo problema podem ser traduzidas para outras formulaÁıes onde estas propriedades nem sempre s„o t„o aparentes.
+Uma das belezas da √Ålgebra Linear √© que diversos conceitos podem ser interpretados de maneiras diferentes. Assim, propriedades intuitivas de uma formula√ß√£o de um certo problema podem ser traduzidas para outras formula√ß√µes onde estas propriedades nem sempre s√£o t√£o aparentes.
 
 Um sistema linear pode ser reescrito de diversas maneiras.
 \begin{enumerate}[1.]
@@ -28,7 +28,7 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	x_2 + 2x_3 & = -2
 	\end{array}
 	\right..
-	\] Aparece geralmente na formulaÁ„o ou na modelagem do problema. As vari·veis $x_1, x_2, x_3$ indicam as vari·veis que estamos interessados em analisar e o problema especÌfico no fornece os coeficientes do sistema.
+	\] Aparece geralmente na formula√ß√£o ou na modelagem do problema. As vari√°veis $x_1, x_2, x_3$ indicam as vari√°veis que estamos interessados em analisar e o problema espec√≠fico no fornece os coeficientes do sistema.
 	\item \textbf{Matriz aumentada associada}:
 	\[
 	\left[
@@ -38,7 +38,7 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	0 & 1 & 2 & -2 \\
 	\end{array}
 	\right]
-	\] Esta forma È adequada para resolver o sistema por escalonamento (tambÈm conhecido como mÈtodo de eliminaÁ„o gaussiana). PoderÌamos fazer eliminaÁ„o gaussiana sem recorrer ‡ matriz aumentada associada, mas isto implicaria em ter que ficar reescrevendo as vari·veis independentes a todo momento, alÈm de tomar certo cuidado para n„o se confundir com os coeficientes nulos. O escalonamento de uma matriz torna o procedimento mais automatizado e minimiza as chances de erro.
+	\] Esta forma √© adequada para resolver o sistema por escalonamento (tamb√©m conhecido como m√©todo de elimina√ß√£o gaussiana). Poder√≠amos fazer elimina√ß√£o gaussiana sem recorrer √† matriz aumentada associada, mas isto implicaria em ter que ficar reescrevendo as vari√°veis independentes a todo momento, al√©m de tomar certo cuidado para n√£o se confundir com os coeficientes nulos. O escalonamento de uma matriz torna o procedimento mais automatizado e minimiza as chances de erro.
 	\item  \textbf{Forma matricial}:
 	\[
 	\left[
@@ -62,11 +62,11 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	-2  \\
 	\end{array}
 	\right]  \quad \text{ ou } \quad A \vec{x} = \vec{b}.
-	\] Nesta forma, aparece o produto de uma matriz por um vetor. Depois podemos considerar produto de matrizes e a resoluÁ„o de sistemas lineares concomitantemente (ver tambÈm capÌtulo da Semana 04). Caso a matriz $A$ acima seja invertÌvel, sabemos que o sistema possui apenas uma soluÁ„o e que
+	\] Nesta forma, aparece o produto de uma matriz por um vetor. Depois podemos considerar produto de matrizes e a resolu√ß√£o de sistemas lineares concomitantemente (ver tamb√©m cap√≠tulo da Semana 04). Caso a matriz $A$ acima seja invert√≠vel, sabemos que o sistema possui apenas uma solu√ß√£o e que
 	\[
 	\vec{x} =  A^{-1} \vec{b}.
 	\]
-	\item  \textbf{Forma vetorial} ou \textbf{combinaÁ„o linear das colunas}:
+	\item  \textbf{Forma vetorial} ou \textbf{combina√ß√£o linear das colunas}:
 	\[
 	x_1 \left[
 	\begin{array}{ccc}
@@ -96,7 +96,7 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	-2  \\
 	\end{array}
 	\right]
-	\] Aqui, h· uma interpretaÁ„o mais geomÈtrica. Estudar a existÍncia de soluÁıes do sistema linear È equivalente a se perguntar se o vetor
+	\] Aqui, h√° uma interpreta√ß√£o mais geom√©trica. Estudar a exist√™ncia de solu√ß√µes do sistema linear √© equivalente a se perguntar se o vetor
 	\[
 	\vec{b} =
 	\left[
@@ -106,7 +106,7 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	-2  \\
 	\end{array}
 	\right]
-	\] pode ser escrito como combinaÁ„o linear dos vetores
+	\] pode ser escrito como combina√ß√£o linear dos vetores
 	\[
 	\vec{v}_1 = \left[
 	\begin{array}{ccc}
@@ -129,28 +129,28 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	2  \\
 	\end{array}
 	\right],
-	\] que s„o as colunas da matriz $A$. Logo, resolver o sistema linear È equivalente a perguntar se $\vec{b}$ est· no espaÁo gerado por $\vec{v}_1, \vec{v}_2$ e $\vec{v}_3$, isto È, se $\vec{b} \in \Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$.
-	\item \textbf{TransformaÁıes lineares}: Decidir se $\vec{b}$ pertence ‡ imagem da transformaÁ„o linear $T: \bR^3 \to \bR^3$, definida por:
+	\] que s√£o as colunas da matriz $A$. Logo, resolver o sistema linear √© equivalente a perguntar se $\vec{b}$ est√° no espa√ßo gerado por $\vec{v}_1, \vec{v}_2$ e $\vec{v}_3$, isto √©, se $\vec{b} \in \Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$.
+	\item \textbf{Transforma√ß√µes lineares}: Decidir se $\vec{b}$ pertence √† imagem da transforma√ß√£o linear $T: \bR^3 \to \bR^3$, definida por:
 	\[
 	T(x_1, x_2, x_3) = (7x_1 - 3x_2, 3x_1 - x_2 + x_3, x_2 + 2x_3).
-	\] Apesar de esta ser apenas uma outra maneira de escrever a forma matricial, ela tem uma interpretaÁ„o diferente, j· que traz a linguagem de teoria de funÁıes para o contexto de ¡lgebra Linear. De fato, vemos que a matriz canÙnica associada a $T$ È $A$, de modo que
+	\] Apesar de esta ser apenas uma outra maneira de escrever a forma matricial, ela tem uma interpreta√ß√£o diferente, j√° que traz a linguagem de teoria de fun√ß√µes para o contexto de √Ålgebra Linear. De fato, vemos que a matriz can√¥nica associada a $T$ √© $A$, de modo que
 	\[
 	T(\vec{x}) = A \vec{x}
-	\] e os conceitos introduzidos anteriormente podem ser traduzidos de forma natural. Por exemplo, combinando as interpretaÁıes das formas matricial e vetorial, podemos dizer que s„o equivalentes:
+	\] e os conceitos introduzidos anteriormente podem ser traduzidos de forma natural. Por exemplo, combinando as interpreta√ß√µes das formas matricial e vetorial, podemos dizer que s√£o equivalentes:
 	\begin{itemize}
-		\item existir soluÁ„o do sistema linear $A \vec{x} = \vec{b}$;
+		\item existir solu√ß√£o do sistema linear $A \vec{x} = \vec{b}$;
 		\item vetor $\vec{b}$ pertencer ao conjunto gerado pelas colunas da matriz $A$;
-		\item vetor $\vec{b}$ pertencer ‡ imagem da transformaÁ„o linear $T(\vec{x}) = A \vec{x}$.
+		\item vetor $\vec{b}$ pertencer √† imagem da transforma√ß√£o linear $T(\vec{x}) = A \vec{x}$.
 	\end{itemize}
 \end{enumerate}
 
 
-Vamos analisar dois sistemas lineares, com todas as ferramentas que estudamos atÈ agora e com dois objetivos principais: familiarizar ainda mais os leitores com os conceitos atÈ ent„o introduzidos e preparar o caminho para o resultado da subseÁ„o seguinte sobre matrizes invertÌveis.
+Vamos analisar dois sistemas lineares, com todas as ferramentas que estudamos at√© agora e com dois objetivos principais: familiarizar ainda mais os leitores com os conceitos at√© ent√£o introduzidos e preparar o caminho para o resultado da subse√ß√£o seguinte sobre matrizes invert√≠veis.
 
-Os exemplos abaixo s„o de sistemas lineares cuja matriz associada È \textbf{quadrada}, j· que estamos estudando matrizes invertÌveis, que devem ser quadradas. De qualquer maneira, alguns raciocÌnios podem ser adaptados para quaisquer sistemas (quais?).
+Os exemplos abaixo s√£o de sistemas lineares cuja matriz associada √© \textbf{quadrada}, j√° que estamos estudando matrizes invert√≠veis, que devem ser quadradas. De qualquer maneira, alguns racioc√≠nios podem ser adaptados para quaisquer sistemas (quais?).
 
 \begin{example}
-	Seja o sistema linear dado acima, cuja matriz aumentada associada È
+	Seja o sistema linear dado acima, cuja matriz aumentada associada √©
 	\[
 	\left[
 	\begin{array}{ccc|c}
@@ -159,7 +159,7 @@ Os exemplos abaixo s„o de sistemas lineares cuja matriz associada È \textbf{quad
 	0 & 1 & 2 & -2 \\
 	\end{array}
 	\right].
-	\] Nossa tÈcnica b·sica de escalonamento permite fazer uma an·lise de todos os pontos de vista acima. Os primeiros passos do escalonamento podem ser:
+	\] Nossa t√©cnica b√°sica de escalonamento permite fazer uma an√°lise de todos os pontos de vista acima. Os primeiros passos do escalonamento podem ser:
 	\[
 	\xrightarrow{\ell_2 \leftrightarrow \ell_3}
 	\left[
@@ -193,30 +193,30 @@ Os exemplos abaixo s„o de sistemas lineares cuja matriz associada È \textbf{quad
 	0 & 0 & 3 & -2 \\
 	\end{array}
 	\right]
-	\] Estas continhas iniciais j· revelam muito! Por exemplo:
+	\] Estas continhas iniciais j√° revelam muito! Por exemplo:
 	\begin{itemize}
-		\item Chegamos ‡ forma escalonada e n„o h· linha do tipo $[0 \ 0 \ 0 \ | \ 1]$; logo, o sistema possui soluÁ„o;
-		\item De fato, podemos dizer mais: j· que todas as colunas da matriz $A$ possuem posiÁ„o de pivÙ, existe apenas uma soluÁ„o;
-		\item Podemos dizer mais ainda: j· que todas as colunas da matriz $A$ possuem posiÁ„o de pivÙ, o sistema possuiria soluÁ„o, quaisquer que fossem os n˙meros do lado direito da igualdade, isto È, as coordenadas do vetor $\vec{b}$;
-		\item Todas as colunas da matriz $A$ possuem posiÁ„o de pivÙ e portanto a forma escalonada reduzida da matriz $A$ ser· a matriz identidade $I_3$. Em particular, seria possÌvel obter a matriz inversa a $A$, desde que comeÁ·ssemos escalonando a matriz $[A \ |  I_3 ]$.
-	\end{itemize} Agora, vejamos como poderÌamos reescrever estas conclusıes utilizando os conceitos estudados nas semanas anteriores:
+		\item Chegamos √† forma escalonada e n√£o h√° linha do tipo $[0 \ 0 \ 0 \ | \ 1]$; logo, o sistema possui solu√ß√£o;
+		\item De fato, podemos dizer mais: j√° que todas as colunas da matriz $A$ possuem posi√ß√£o de piv√¥, existe apenas uma solu√ß√£o;
+		\item Podemos dizer mais ainda: j√° que todas as colunas da matriz $A$ possuem posi√ß√£o de piv√¥, o sistema possuiria solu√ß√£o, quaisquer que fossem os n√∫meros do lado direito da igualdade, isto √©, as coordenadas do vetor $\vec{b}$;
+		\item Todas as colunas da matriz $A$ possuem posi√ß√£o de piv√¥ e portanto a forma escalonada reduzida da matriz $A$ ser√° a matriz identidade $I_3$. Em particular, seria poss√≠vel obter a matriz inversa a $A$, desde que come√ß√°ssemos escalonando a matriz $[A \ |  I_3 ]$.
+	\end{itemize} Agora, vejamos como poder√≠amos reescrever estas conclus√µes utilizando os conceitos estudados nas semanas anteriores:
 	\begin{itemize}
-		\item Para todo $\vec{b} \in \bR^3$, o sistema $A \vec{x} = \vec{b}$ possui exatamente uma soluÁ„o;
-		\item Todo vetor $\vec{b} \in \bR^3$ pode ser escrito como combinaÁ„o linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
-		\item Todo vetor $\vec{b} \in \bR^3$ pertence a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$, espaÁo gerado pelas colunas de $A$;
+		\item Para todo $\vec{b} \in \bR^3$, o sistema $A \vec{x} = \vec{b}$ possui exatamente uma solu√ß√£o;
+		\item Todo vetor $\vec{b} \in \bR^3$ pode ser escrito como combina√ß√£o linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
+		\item Todo vetor $\vec{b} \in \bR^3$ pertence a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$, espa√ßo gerado pelas colunas de $A$;
 		\item $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\} = \bR^3$;
-		\item $A$ È equivalente por linhas ‡ matriz identidade $I_3$;
-		\item $A$ È invertÌvel;
-		\item A imagem da transformaÁ„o linear $T(\vec{x}) = A \vec{x}$ È todo o espaÁo $\bR^3$, isto È, $T$ È sobrejetora;
-		\item A equaÁ„o $T(\vec{x}) = \vec{b}$ possui no m·ximo uma soluÁ„o para cada $\vec{b} \in \bR^3$ (de fato, possui exatamente uma!), de modo que $T$ È injetora;
-		\item $T$ È invertÌvel, j· que È ao mesmo tempo injetora e sobrejetora.
-	\end{itemize} Todas estas conclusıes vieram de alguns passos que levaram a matriz $A$ ‡ sua forma escalonada. Como veremos adiante, ainda mais coisas poderiam ser ditas! $\ \lhd$
+		\item $A$ √© equivalente por linhas √† matriz identidade $I_3$;
+		\item $A$ √© invert√≠vel;
+		\item A imagem da transforma√ß√£o linear $T(\vec{x}) = A \vec{x}$ √© todo o espa√ßo $\bR^3$, isto √©, $T$ √© sobrejetora;
+		\item A equa√ß√£o $T(\vec{x}) = \vec{b}$ possui no m√°ximo uma solu√ß√£o para cada $\vec{b} \in \bR^3$ (de fato, possui exatamente uma!), de modo que $T$ √© injetora;
+		\item $T$ √© invert√≠vel, j√° que √© ao mesmo tempo injetora e sobrejetora.
+	\end{itemize} Todas estas conclus√µes vieram de alguns passos que levaram a matriz $A$ √† sua forma escalonada. Como veremos adiante, ainda mais coisas poderiam ser ditas! $\ \lhd$
 \end{example}
 
 
 
 \begin{example}
-	Analisamos agora o sistema linear cuja matriz aumentada assciada È
+	Analisamos agora o sistema linear cuja matriz aumentada assciada √©
 	\[
 	\left[
 	\begin{array}{ccc|c}
@@ -225,7 +225,7 @@ Os exemplos abaixo s„o de sistemas lineares cuja matriz associada È \textbf{quad
 	3 & -1 & 2 & 0 \\
 	\end{array}
 	\right].
-	\] Nossa tÈcnica b·sica de escalonamento permite fazer uma an·lise de todos os pontos de vista acima. Os primeiros passos do escalonamento podem ser:
+	\] Nossa t√©cnica b√°sica de escalonamento permite fazer uma an√°lise de todos os pontos de vista acima. Os primeiros passos do escalonamento podem ser:
 	\[
 	\xrightarrow{-3\ell_1 + \ell_3 \text{ em } \ell_3}
 	\left[
@@ -242,10 +242,10 @@ Os exemplos abaixo s„o de sistemas lineares cuja matriz associada È \textbf{quad
 	0 &  0 & 0 & 0 \\
 	\end{array}
 	\right].
-	\] Assim como no exemplo anterior, estas contas tambÈm revelam toda a estrutura do sistema linear e de sua matriz associada.
+	\] Assim como no exemplo anterior, estas contas tamb√©m revelam toda a estrutura do sistema linear e de sua matriz associada.
 	\begin{itemize}
-		\item Este sistema possui infinitas soluÁıes, pois possui uma vari·vel livre;
-		\item Nem todas as colunas da matriz $A$ possuem posiÁ„o de pivÙ. Consequentemente, escolhas diferentes do vetor $\vec{b}$, poderiam resultar em um sistema impossÌvel. De fato, foi uma coincidÍncia que nossa ˙ltima conta foi $(-2)\cdot (-3) + (-6)$, que resultou em um zero. Neste exemplo, qualquer variaÁ„o na segunda componente de $\vec{b}$ nos daria um sistema impossÌvel:
+		\item Este sistema possui infinitas solu√ß√µes, pois possui uma vari√°vel livre;
+		\item Nem todas as colunas da matriz $A$ possuem posi√ß√£o de piv√¥. Consequentemente, escolhas diferentes do vetor $\vec{b}$, poderiam resultar em um sistema imposs√≠vel. De fato, foi uma coincid√™ncia que nossa √∫ltima conta foi $(-2)\cdot (-3) + (-6)$, que resultou em um zero. Neste exemplo, qualquer varia√ß√£o na segunda componente de $\vec{b}$ nos daria um sistema imposs√≠vel:
 		\[
 		\left[
 		\begin{array}{ccc|c}
@@ -270,65 +270,65 @@ Os exemplos abaixo s„o de sistemas lineares cuja matriz associada È \textbf{quad
 		\end{array}
 		\right].
 		\]
-		\item … um fato geral: se \emph{nem todas} as colunas de $A$ possuem posiÁ„o de pivÙ, podemos encontrar vetores $\vec{b}$ de modo que o sistema seja impossÌvel e vetores $\vec{b}$ cujo sistema possua infinitas soluÁıes;
-		\item A forma escalonada reduzida de $A$ n„o È a identidade, isto È, $A$ n„o È equivalente por linhas a $I_3$. Em particular, $A$ n„o È invertÌvel.
-	\end{itemize} Vamos reescrever estas conclusıes como no exemplo anterior:
+		\item √â um fato geral: se \emph{nem todas} as colunas de $A$ possuem posi√ß√£o de piv√¥, podemos encontrar vetores $\vec{b}$ de modo que o sistema seja imposs√≠vel e vetores $\vec{b}$ cujo sistema possua infinitas solu√ß√µes;
+		\item A forma escalonada reduzida de $A$ n√£o √© a identidade, isto √©, $A$ n√£o √© equivalente por linhas a $I_3$. Em particular, $A$ n√£o √© invert√≠vel.
+	\end{itemize} Vamos reescrever estas conclus√µes como no exemplo anterior:
 	\begin{itemize}
-		\item Existe $\vec{b}_1 \in \bR^3$ tal que o sistema $A \vec{x} = \vec{b}_1$ possui infinitas soluÁıes e existe $\vec{b}_2 \in \bR^3$ tal que o sistema $A \vec{x} = \vec{b}_2$ possui infinitas soluÁıes;
-		\item Nem todo vetor $\vec{b} \in \bR^3$ pode ser escrito como combinaÁ„o linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
-		\item Existe $\vec{b} \in \bR^3$ n„o pertencente a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$;
+		\item Existe $\vec{b}_1 \in \bR^3$ tal que o sistema $A \vec{x} = \vec{b}_1$ possui infinitas solu√ß√µes e existe $\vec{b}_2 \in \bR^3$ tal que o sistema $A \vec{x} = \vec{b}_2$ possui infinitas solu√ß√µes;
+		\item Nem todo vetor $\vec{b} \in \bR^3$ pode ser escrito como combina√ß√£o linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
+		\item Existe $\vec{b} \in \bR^3$ n√£o pertencente a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$;
 		\item $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\} \neq \bR^3$;
-		\item $A$ n„o È equivalente por linhas ‡ matriz identidade $I_3$;
-		\item $A$ n„o È invertÌvel;
-		\item A imagem da transformaÁ„o linear $T(\vec{x}) = A \vec{x}$ n„o È todo o espaÁo $\bR^3$, isto È, $T$ n„o È sobrejetora;
-		\item A equaÁ„o $T(\vec{x}) = \vec{b}$ pode possuir mais de uma soluÁ„o, de modo que $T$ n„o È injetora;
-		\item $T$ n„o È invertÌvel, j· que n„o È injetora e nem sobrejetora.  $\ \lhd$
+		\item $A$ n√£o √© equivalente por linhas √† matriz identidade $I_3$;
+		\item $A$ n√£o √© invert√≠vel;
+		\item A imagem da transforma√ß√£o linear $T(\vec{x}) = A \vec{x}$ n√£o √© todo o espa√ßo $\bR^3$, isto √©, $T$ n√£o √© sobrejetora;
+		\item A equa√ß√£o $T(\vec{x}) = \vec{b}$ pode possuir mais de uma solu√ß√£o, de modo que $T$ n√£o √© injetora;
+		\item $T$ n√£o √© invert√≠vel, j√° que n√£o √© injetora e nem sobrejetora.  $\ \lhd$
 	\end{itemize}
 \end{example}
 
 
-\subsection{CaracterizaÁıes de matrizes invertÌveis}
+\subsection{Caracteriza√ß√µes de matrizes invert√≠veis}
 
 
-A discuss„o feita na seÁ„o anterior È v·lida para matrizes quadradas de forma geral e vamos enunciar isto em um grande Teorema. A prova deste resultado abaixo segue as mesmas ideias dos exemplos da seÁ„o anterior. N„o faremos a prova, mas È importante que o leitor esteja familiarizado com estas ideias.
+A discuss√£o feita na se√ß√£o anterior √© v√°lida para matrizes quadradas de forma geral e vamos enunciar isto em um grande Teorema. A prova deste resultado abaixo segue as mesmas ideias dos exemplos da se√ß√£o anterior. N√£o faremos a prova, mas √© importante que o leitor esteja familiarizado com estas ideias.
 
 
 \begin{theorem}
-	Seja $A$ uma matriz quadrada de ordem $n\times n$. As afirmaÁıes abaixo s„o equivalentes (ou todas falsas ou todas verdadeiras):
+	Seja $A$ uma matriz quadrada de ordem $n\times n$. As afirma√ß√µes abaixo s√£o equivalentes (ou todas falsas ou todas verdadeiras):
 	\begin{enumerate}
-		\item $A$ È invertÌvel;
+		\item $A$ √© invert√≠vel;
 		\item Existe uma matriz $B$ tal que $AB = I_n$;
 		\item Existe uma matriz $C$ tal que $CA = I_n$;
-		\item $A$ È equivalente por linhas ‡ matriz identidade $I_n$;
-		\item $A$ tem $n$ posiÁıes de pivÙ;
-		\item Para todo $\vec{b} \in \bR^3$, o sistema $A \vec{x} = \vec{b}$ possui exatamente uma soluÁ„o;
-		\item O sistema $A \vec{x} = \vec{0}$ possui somente a soluÁ„o trivial;
-		\item As colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$ s„o linearmente independentes;
-		\item Todo vetor $\vec{b} \in \bR^3$ pode ser escrito como combinaÁ„o linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
-		\item Todo vetor $\vec{b} \in \bR^3$ pertence a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$, espaÁo gerado pelas colunas de $A$;
+		\item $A$ √© equivalente por linhas √† matriz identidade $I_n$;
+		\item $A$ tem $n$ posi√ß√µes de piv√¥;
+		\item Para todo $\vec{b} \in \bR^3$, o sistema $A \vec{x} = \vec{b}$ possui exatamente uma solu√ß√£o;
+		\item O sistema $A \vec{x} = \vec{0}$ possui somente a solu√ß√£o trivial;
+		\item As colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$ s√£o linearmente independentes;
+		\item Todo vetor $\vec{b} \in \bR^3$ pode ser escrito como combina√ß√£o linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
+		\item Todo vetor $\vec{b} \in \bR^3$ pertence a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$, espa√ßo gerado pelas colunas de $A$;
 		\item As colunas de $A$ geram $\bR^n$: $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\} = \bR^3$;
-		\item $T(\vec{x}) = A \vec{x}$ È sobrejetora;
-		\item $T(\vec{x}) = A \vec{x}$ È injetora;
-		\item $T(\vec{x}) = A \vec{x}$ È invertÌvel,
-		\item $A^T$ È invertÌvel.
+		\item $T(\vec{x}) = A \vec{x}$ √© sobrejetora;
+		\item $T(\vec{x}) = A \vec{x}$ √© injetora;
+		\item $T(\vec{x}) = A \vec{x}$ √© invert√≠vel,
+		\item $A^T$ √© invert√≠vel.
 	\end{enumerate}
 \end{theorem}
 
 \begin{exercise}
-	Justificar, baseando-se nos exemplos da seÁ„o anterior, o porquÍ das afirmaÁıes acima serem equivalentes.
+	Justificar, baseando-se nos exemplos da se√ß√£o anterior, o porqu√™ das afirma√ß√µes acima serem equivalentes.
 \end{exercise}
 
-O teorema È utilizado na pr·tica da mesma maneira que fizemos na seÁ„o anterior.
+O teorema √© utilizado na pr√°tica da mesma maneira que fizemos na se√ß√£o anterior.
 
 
 
 
-\section{EspaÁos vetoriais}
+\section{Espa√ßos vetoriais}
 
 
-Um espaÁo vetorial (sobre o conjunto $\bR$ de escalares) È um conjunto $V$ equipado com as operaÁıes de soma de vetores e de multiplicaÁ„o por escalar e que satisfazem as propriedades usuais dos espaÁos $\bR^n$. A ideia È que v·rios conjuntos mais abstratos possuem a estrutura parecida com a dos espaÁos $\bR^n$ e esta abordagem permite que faÁamos uma an·lise sistem·tica de todos estes casos.
+Um espa√ßo vetorial (sobre o conjunto $\bR$ de escalares) √© um conjunto $V$ equipado com as opera√ß√µes de soma de vetores e de multiplica√ß√£o por escalar e que satisfazem as propriedades usuais dos espa√ßos $\bR^n$. A ideia √© que v√°rios conjuntos mais abstratos possuem a estrutura parecida com a dos espa√ßos $\bR^n$ e esta abordagem permite que fa√ßamos uma an√°lise sistem√°tica de todos estes casos.
 
-De forma mais precisa, um \textbf{espaÁo vetorial sobre $\bR$} È um conjunto $V$, cujos elementos s„o chamados vetores, equipado com duas operaÁıes:
+De forma mais precisa, um \textbf{espa√ßo vetorial sobre $\bR$} √© um conjunto $V$, cujos elementos s√£o chamados vetores, equipado com duas opera√ß√µes:
 \begin{itemize}
 	\item Soma entre vetores, que satisfaz
 	\begin{enumerate}
@@ -337,22 +337,22 @@ De forma mais precisa, um \textbf{espaÁo vetorial sobre $\bR$} È um conjunto $V$
 		\item Inverso aditivo: para cada $v \in V$, existe o inverso $u= -v \in V$, que satisfaz $v+u=0$;
 		\item Comutatividade: $u+v = v+u$, para quaisquer $u, v \in V$;
 	\end{enumerate}
-	\item MultiplicaÁ„o de vetor por escalar, que satisfaz
+	\item Multiplica√ß√£o de vetor por escalar, que satisfaz
 	\begin{enumerate}
-		\item[5.] Associatividade da multiplicaÁ„o por escalar: $a\cdot (b\cdot v)=(a\cdot b)\cdot v$, para quaisquer $a,b \in \bR$ e qualquer $v \in V$;
-		\item[6.] Vale que $1 \cdot v = v$, ou seja, a unidade dos n˙meros reais n„o altera os vetores de $V$;
-		\item[7.] Distributiva de um escalar em relaÁ„o ‡ soma de vetores: $a \cdot (u+v) = a\cdot v+a\cdot u$, para qualquer $a \in \bR$ e quaisquer $u,v \in V$;
-		\item[8.] Distributiva da soma de escalares em relaÁ„o a um vetor: $(a+b) \cdot v = a \cdot v+b \cdot v$, para quaisquer $a,b \in \bR$ e qualquer $v \in V$.
+		\item[5.] Associatividade da multiplica√ß√£o por escalar: $a\cdot (b\cdot v)=(a\cdot b)\cdot v$, para quaisquer $a,b \in \bR$ e qualquer $v \in V$;
+		\item[6.] Vale que $1 \cdot v = v$, ou seja, a unidade dos n√∫meros reais n√£o altera os vetores de $V$;
+		\item[7.] Distributiva de um escalar em rela√ß√£o √† soma de vetores: $a \cdot (u+v) = a\cdot v+a\cdot u$, para qualquer $a \in \bR$ e quaisquer $u,v \in V$;
+		\item[8.] Distributiva da soma de escalares em rela√ß√£o a um vetor: $(a+b) \cdot v = a \cdot v+b \cdot v$, para quaisquer $a,b \in \bR$ e qualquer $v \in V$.
 	\end{enumerate}
 \end{itemize}
 
 \begin{example}
-	Naturalmente, $\bR$, $\bR^2$, $\bR^3$, ..., $\bR^n$ s„o espaÁos vetoriais sobre $\bR$, j· que as propriedades acima foram todas inspiradas nas propriedades v·lidas para vetores de $\bR^n$.
+	Naturalmente, $\bR$, $\bR^2$, $\bR^3$, ..., $\bR^n$ s√£o espa√ßos vetoriais sobre $\bR$, j√° que as propriedades acima foram todas inspiradas nas propriedades v√°lidas para vetores de $\bR^n$.
 \end{example}
 
 
 \begin{example}
-	O conjunto $M_{m\times n}$ de todas as matrizes de ordem $m\times n$ È um espaÁo vetorial, com as operaÁıes naturais que j· utilizamos anteriormente: Se
+	O conjunto $M_{m\times n}$ de todas as matrizes de ordem $m\times n$ √© um espa√ßo vetorial, com as opera√ß√µes naturais que j√° utilizamos anteriormente: Se
 	\[
 	A =
 	\left[
@@ -392,41 +392,43 @@ De forma mais precisa, um \textbf{espaÁo vetorial sobre $\bR$} È um conjunto $V$
 	k\cdot a_{m1} & k\cdot a_{m2} & \cdots & k\cdot a_{mn} \\
 	\end{array}
 	\right].
-	\] … imediato verificar que valem todas as 8 propriedades acima (faÁa!).
+	\] √â imediato verificar que valem todas as 8 propriedades acima (fa√ßa!).
 \end{example}
 
 
-\begin{example}\label{funÁıes}
-	O conjunto de todas as funÁıes de um intervalo $I$ em $\bR$
-	\[
-	\cF (I;\bR) = \big\{ f: I \to \bR \text{ funÁıes} \big\}.
-	\] forma um espaÁo vetorial sobre $\bR$, com as operaÁıes:
-	\begin{itemize}
-		\item Dadas duas funÁıes $f$ e $g$, a funÁ„o $f+g : I \to \bR$ È definida por
-		\[
-		\big( f+g \big) (x) = f(x) + g(x).
-		\]
-		\item Dada uma funÁ„o $f$ e um n˙mero real $k$, a funÁ„o $k \cdot f : I \to \bR$ È definida por
-		\[
-		\big( k \cdot f \big) (x) = k \cdot f(x).
-		\]
-	\end{itemize}
+\begin{example}\label{funcoes}
+  O conjunto de todas as fun√ß√µes de um intervalo $I$ em $\bR$
+  \begin{equation}
+    \mathcal{F} (I;\bR) = \left\{ f: I \to \bR \text{fun√ß√µes} \right\}.  
+  \end{equation}
+  forma um espa√ßo vetorial sobre $\bR$, com as opera√ß√µes:
+  \begin{itemize}
+  \item Dadas duas fun√ß√µes $f$ e $g$, a fun√ß√£o $f+g : I \to \bR$ √© definida por
+    \[
+    \big( f+g \big) (x) = f(x) + g(x).
+    \]
+  \item Dada uma fun√ß√£o $f$ e um n√∫mero real $k$, a fun√ß√£o $k \cdot f : I \to \bR$ √© definida por
+    \[
+    \big( k \cdot f \big) (x) = k \cdot f(x).
+    \]
+  \end{itemize}
 \end{example}
 
 
 \begin{exercise}
-	Justifique que o espaÁo gerado por dois elementos $\Span \{ \vec{u}, \vec{v} \}$ È um espaÁo vetorial.
+	Justifique que o espa√ßo gerado por dois elementos $\Span \{ \vec{u}, \vec{v} \}$ √© um espa√ßo vetorial.
 \end{exercise}
 
 
-\subsection{SubespaÁos vetoriais}
+\subsection{Subespa√ßos vetoriais}
 
-Consideramos $V$ um espaÁo vetorial e $H\subseteq V$ um subconjunto. NÛs dizemos que $H$ È uma \textbf{subespaÁo vetorial de} $V$ se, alÈm de ser um subconjunto, $H$ È por si sÛ um espaÁo vetorial.
+Consideramos $V$ um espa√ßo vetorial e $H\subseteq V$ um subconjunto. N√≥s dizemos que $H$ √© uma \textbf{subespa√ßo vetorial de} $V$ se, al√©m de ser um subconjunto, $H$ √© por si s√≥ um espa√ßo vetorial.
 
-Na pr·tica, para decidir se um subconjunto $H$ È subespaÁo de $V$, n„o precisamos verificar todas as oito propriedades da definiÁ„o de espaÁo vetorial. Temos o seguinte:
+Na pr√°tica, para decidir se um subconjunto $H$ √© subespa√ßo de $V$, n√£o precisamos verificar todas as oito propriedades da defini√ß√£o de espa√ßo vetorial. Temos o seguinte:
 
-\begin{theorem}[CritÈrio para subespaÁos]
-	Um subconjunto $H \subseteq V$ È subespaÁo de $V$ se, e somente se, as duas propriedades abaixo s„o verificadas:
+%\begin{theorem}[Crit√©rio para subespa√ßos]
+\begin{theorem}
+	Um subconjunto $H \subseteq V$ √© subespa√ßo de $V$ se, e somente se, as duas propriedades abaixo s√£o verificadas:
 	\begin{itemize}
 		\item $0 \in H$;
 		\item $a\cdot u + b \cdot v \in V$ para quaisquer $a, b \in \bR$ e quaisquer $u,v \in V$.
@@ -435,25 +437,25 @@ Na pr·tica, para decidir se um subconjunto $H$ È subespaÁo de $V$, n„o precisamo
 
 
 \begin{example}\label{reta}
-	A reta $H_1 = \{y = 2x\}$ em $\bR^2$ È um subespaÁo de $\bR^2$. Temos que
+	A reta $H_1 = \{y = 2x\}$ em $\bR^2$ √© um subespa√ßo de $\bR^2$. Temos que
 	\begin{itemize}
-		\item $\vec{0} = (0,0)$ pertence a reta, pois satisfaz a equaÁ„o da reta: $0 = 2\cdot 0$;
-		\item se $(x_1, y_1)$ e $(x_2, y_2)$ pertencem ‡ reta, vamos verificar que $(ax_1 + b x_2, ay_1 + b y_2)$ tambÈm pertence:
+		\item $\vec{0} = (0,0)$ pertence a reta, pois satisfaz a equa√ß√£o da reta: $0 = 2\cdot 0$;
+		\item se $(x_1, y_1)$ e $(x_2, y_2)$ pertencem √† reta, vamos verificar que $(ax_1 + b x_2, ay_1 + b y_2)$ tamb√©m pertence:
 		\[
 		ay_1 + b y_2 = a \cdot (2x_1) + b\cdot (2x_2) = 2 (ax_1 + b x_2).
-		\] Portanto, $H$ È um subespaÁo de $\bR^2$.
+		\] Portanto, $H$ √© um subespa√ßo de $\bR^2$.
 	\end{itemize}
 \end{example}
 
 \begin{example}
-	A reta $H_2 = \{y = 2x + 3\}$ \underline{n„o} È um subespaÁo de $\bR^2$. De fato, $\vec{0} = (0,0)$ n„o pertence a reta. De um modo geral, as retas que passam pela origem s„o subespaÁos e as retas que n„o passam pela origem n„o s„o.
+	A reta $H_2 = \{y = 2x + 3\}$ \underline{n√£o} √© um subespa√ßo de $\bR^2$. De fato, $\vec{0} = (0,0)$ n√£o pertence a reta. De um modo geral, as retas que passam pela origem s√£o subespa√ßos e as retas que n√£o passam pela origem n√£o s√£o.
 \end{example}
 
 
 \begin{example}
-	Mais geralmente, para $\vec{u}, \vec{v} \in \bR^n$, o espaÁo gerado $\Span \{\vec{u}, \vec{v}\}$ È um subespaÁo de $\bR^n$. Caso os vetores sejam LI, este espaÁo pode ser pensado como o plano que contÈm os vetores $\vec{u}, \vec{v}$ dentro de $\bR^n$ (por quÍ?).
+	Mais geralmente, para $\vec{u}, \vec{v} \in \bR^n$, o espa√ßo gerado $\Span \{\vec{u}, \vec{v}\}$ √© um subespa√ßo de $\bR^n$. Caso os vetores sejam LI, este espa√ßo pode ser pensado como o plano que cont√©m os vetores $\vec{u}, \vec{v}$ dentro de $\bR^n$ (por qu√™?).
 	
-	PoderÌamos argumentar que a reta do Exemplo \ref{reta} È um subespaÁo, pois todos os pontos da reta satisfazem:
+	Poder√≠amos argumentar que a reta do Exemplo \ref{reta} √© um subespa√ßo, pois todos os pontos da reta satisfazem:
 	\[
 	\left[
 	\begin{array}{c}
@@ -473,7 +475,7 @@ Na pr·tica, para decidir se um subconjunto $H$ È subespaÁo de $V$, n„o precisamo
 	2 \\
 	\end{array}
 	\right],
-	\] isto È, $H = \Span \left\{ \left[
+	\] isto √©, $H = \Span \left\{ \left[
 	\begin{array}{c}
 	1 \\
 	2 \\
@@ -483,7 +485,7 @@ Na pr·tica, para decidir se um subconjunto $H$ È subespaÁo de $V$, n„o precisamo
 
 
 \begin{example}
-	Um plano que passa pela origem $2x - y + 3z = 0$ È um subespaÁo de $\bR^3$, pois podemos escrever pontos do plano como
+	Um plano que passa pela origem $2x - y + 3z = 0$ √© um subespa√ßo de $\bR^3$, pois podemos escrever pontos do plano como
 	\[
 	\left[
 	\begin{array}{c}
@@ -513,7 +515,7 @@ Na pr·tica, para decidir se um subconjunto $H$ È subespaÁo de $V$, n„o precisamo
 	1 \\
 	\end{array}
 	\right],
-	\] isto È,
+	\] isto √©,
 	\[
 	H = \Span \left\{
 	\left[
@@ -531,16 +533,16 @@ Na pr·tica, para decidir se um subconjunto $H$ È subespaÁo de $V$, n„o precisamo
 	\end{array}
 	\right]
 	\right\}
-	\] Por outro lado, um plano que n„o passa pela origem, eg, $2x - y + 3z = 1$, n„o pode ser um subespaÁo, pois $\vec{0} \not\in H$.
+	\] Por outro lado, um plano que n√£o passa pela origem, eg, $2x - y + 3z = 1$, n√£o pode ser um subespa√ßo, pois $\vec{0} \not\in H$.
 \end{example}
 
 
 
 \begin{example}
-	O conjunto $\cP (\bR)$ das funÁıes polinomiais com coeficientes reais È um subespaÁo do espaÁo das funÁıes contÌnuas do Exemplo \ref{funÁıes}. De fato, o polinÙmio nulo est· neste espaÁo. AlÈm disso, dados dois polinÙmios
+	O conjunto $\cP (\bR)$ das fun√ß√µes polinomiais com coeficientes reais √© um subespa√ßo do espa√ßo das fun√ß√µes cont√≠nuas do Exemplo \ref{funcoes}. De fato, o polin√¥mio nulo est√° neste espa√ßo. Al√©m disso, dados dois polin√¥mios
 	\[
 	p(x) = a_n x^n + \cdots a_2 x^2 + a_1 x + a_0 \quad \text{e} \quad q(x) = b_m x^m + \cdots b_2 x^2 + b_1 x + b_0,
-	\] sabemos que $a \cdot p + b \cdot q$ vai ser um polinÙmio cujo grau È no m·ximo o maior dos valores $m$ ou $n$.
+	\] sabemos que $a \cdot p + b \cdot q$ vai ser um polin√¥mio cujo grau √© no m√°ximo o maior dos valores $m$ ou $n$.
 \end{example}
 
 
@@ -548,26 +550,26 @@ Na pr·tica, para decidir se um subconjunto $H$ È subespaÁo de $V$, n„o precisamo
 	Considere o conjunto
 	\[
 	\cP_3 (\bR) = \{ p(x) = a_3 x^3 + \cdots a_2 x^2 + a_1 x + a_0 \text{ tais que } a_0, a_1, a_2, a_3 \in \bR \}
-	\] o conjunto de todos os polinÙmios de grau 3. Mostre que:
+	\] o conjunto de todos os polin√¥mios de grau 3. Mostre que:
 	\begin{enumerate}
-		\item $\cP_3 (\bR)$ È um subespaÁo de $\cP (\bR)$;
-		\item $\cP_3 (\bR)$ È um subespaÁo de $\cF (I;\bR)$.
-	\end{enumerate} … possÌvel generalizar estas conclusıes para o conjunto $\cP_n (\bR)$ dos polinÙmios de grau $n$?
+		\item $\cP_3 (\bR)$ √© um subespa√ßo de $\cP (\bR)$;
+		\item $\cP_3 (\bR)$ √© um subespa√ßo de $\cF (I;\bR)$.
+	\end{enumerate} √â poss√≠vel generalizar estas conclus√µes para o conjunto $\cP_n (\bR)$ dos polin√¥mios de grau $n$?
 \end{exercise}
 
 
-\subsection{EspaÁo nulo}
+\subsection{Espa√ßo nulo}
 
-O \textbf{espaÁo nulo} de uma matriz $A$ de ordem $m \times n$ È o conjunto definido por
+O \textbf{espa√ßo nulo} de uma matriz $A$ de ordem $m \times n$ √© o conjunto definido por
 \[
 \Nul A = \big\{ \vec{x} \in \bR^n \, | \, A\vec{x} = \vec{0}  \big\}.
-\] Para verificar que $\Nul A$ È um subespaÁo de $\bR^n$, consideramos $\vec{u}, \vec{v} \in \Nul A$ e $a,b \in \bR$. Queremos ver que $a\vec{u} + b\vec{v}$ tambÈm pertence a $\Nul A$: Pela linearidade do produto de matrizes, temos
+\] Para verificar que $\Nul A$ √© um subespa√ßo de $\bR^n$, consideramos $\vec{u}, \vec{v} \in \Nul A$ e $a,b \in \bR$. Queremos ver que $a\vec{u} + b\vec{v}$ tamb√©m pertence a $\Nul A$: Pela linearidade do produto de matrizes, temos
 \[
 A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + b \cdot \vec{0} = \vec{0}.
-\] Portanto, como tambÈm $\vec{0} \in \Nul A$, concluimos que $\Nul A$ È subespaÁo de $\bR^n$.
+\] Portanto, como tamb√©m $\vec{0} \in \Nul A$, concluimos que $\Nul A$ √© subespa√ßo de $\bR^n$.
 
 \begin{example}[Retirado do David C. Lay]
-	Encontrar um conjunto gerador para o espaÁo nulo da matriz
+	Encontrar um conjunto gerador para o espa√ßo nulo da matriz
 	\[
 	\left[
 	\begin{array}{ccccc}
@@ -576,7 +578,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	2  & -4 & 5  & 8 & -4 \\
 	\end{array}
 	\right]
-	\] NÛs queremos determinar as soluÁıes do sistema linear homogÍneo
+	\] N√≥s queremos determinar as solu√ß√µes do sistema linear homog√™neo
 	\[
 	\left[
 	\begin{array}{ccccc}
@@ -601,7 +603,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	0 \\
 	\end{array}
 	\right].
-	\] PoderÌamos escrever a matriz associada aumentada e escalonar, mas como este È um sistema homogÍneo, n„o faz diferenÁa escrevermos a ˙ltima coluna com os zeros ou n„o (nenhuma operaÁ„o elementar far· com que desapareÁam os zeros). Logo, vamos obter a forma escalonada reduzida da matriz $A$ (contas como exercÌcio):
+	\] Poder√≠amos escrever a matriz associada aumentada e escalonar, mas como este √© um sistema homog√™neo, n√£o faz diferen√ßa escrevermos a √∫ltima coluna com os zeros ou n√£o (nenhuma opera√ß√£o elementar far√° com que desapare√ßam os zeros). Logo, vamos obter a forma escalonada reduzida da matriz $A$ (contas como exerc√≠cio):
 	\[
 	\left[
 	\begin{array}{ccccc}
@@ -705,18 +707,18 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	\] 
 \end{example}
 
-Uma das import‚ncias teÛricas do espaÁo nulo È
+Uma das import√¢ncias te√≥ricas do espa√ßo nulo √©
 
 \begin{proposition}
-	Seja $A$ uma matriz $m\times n$. Ent„o a aplicaÁ„o linear $\vec{x} \mapsto A \vec{x}$ È injetora se, e somente se, $\Nul A = \{ 0 \}.$
+	Seja $A$ uma matriz $m\times n$. Ent√£o a aplica√ß√£o linear $\vec{x} \mapsto A \vec{x}$ √© injetora se, e somente se, $\Nul A = \{ 0 \}.$
 \end{proposition}
 
-Em outras palavras, caso o sistema linear homogÍneo $A \vec{x} = \vec{0}$ possua somente a soluÁ„o trivial, podemos inferir que $A \vec{x} = \vec{b}$ possui no m·ximo uma soluÁ„o, para qualquer $\vec{b}$!
+Em outras palavras, caso o sistema linear homog√™neo $A \vec{x} = \vec{0}$ possua somente a solu√ß√£o trivial, podemos inferir que $A \vec{x} = \vec{b}$ possui no m√°ximo uma solu√ß√£o, para qualquer $\vec{b}$!
 
-\subsection{EspaÁo coluna}
+\subsection{Espa√ßo coluna}
 
 
-O \textbf{espaÁo coluna} de uma matriz $A$ de ordem $m \times n$ È o espaÁo gerado pelas colunas de $A$:
+O \textbf{espa√ßo coluna} de uma matriz $A$ de ordem $m \times n$ √© o espa√ßo gerado pelas colunas de $A$:
 \[
 A =
 \left[
@@ -730,21 +732,21 @@ A =
 \]
 
 \begin{exercise}
-	Verificar que $\Col A$ È um subespaÁo de $\bR^n$.
+	Verificar que $\Col A$ √© um subespa√ßo de $\bR^n$.
 \end{exercise}
 
 Lembrando ainda que
 \[
 x_1 \vec{a}_1 + x_2 \vec{a}_2 + \cdots + x_n \vec{a}_n = \vec{b} \iff A \vec{x} = \vec{b},
-\] podemos reescrever a definiÁ„o como 
+\] podemos reescrever a defini√ß√£o como 
 \[
 \Col A = \{ \vec{b} \in \bR^m \ | \ \text{existe } \vec{x} \text{ tal que } \vec{b} = A \vec{x} \}.
-\] O espaÁo coluna trata portanto de vetores na imagem da aplicaÁ„o linear. Temos:
+\] O espa√ßo coluna trata portanto de vetores na imagem da aplica√ß√£o linear. Temos:
 
 \begin{proposition}
-	Seja $A$ uma matriz $m\times n$. Ent„o a aplicaÁ„o linear $\vec{x} \mapsto A \vec{x}$ È sobrejetora se, e somente se, $\Col A = \bR^m.$
+	Seja $A$ uma matriz $m\times n$. Ent√£o a aplica√ß√£o linear $\vec{x} \mapsto A \vec{x}$ √© sobrejetora se, e somente se, $\Col A = \bR^m.$
 \end{proposition}
 
-A definiÁ„o do espaÁo coluna j· deixa claro um conjunto gerador (as colunas de $A$!). N„o precisamos fazer c·lculos como fizemos para encontrar geradores para $\Nul A$.
+A defini√ß√£o do espa√ßo coluna j√° deixa claro um conjunto gerador (as colunas de $A$!). N√£o precisamos fazer c√°lculos como fizemos para encontrar geradores para $\Nul A$.
 
 \end{document} 

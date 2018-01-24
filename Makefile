@@ -1,10 +1,10 @@
-#Este trabalho est· licenciado sob a LicenÁa Creative Commons AtribuiÁ„o-CompartilhaIgual 3.0 N„o Adaptada. Para ver uma cÛpia desta licenÁa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+#Este trabalho est√° licenciado sob a Licen√ßa Creative Commons Atribui√ß√£o-CompartilhaIgual 3.0 N√£o Adaptada. Para ver uma c√≥pia desta licen√ßa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 ########################################
 #
-# ATEN«√O
+# ATEN√á√ÉO
 #
-# POR SEGURAN«A, N√O EDITE ESTE ARQUIVO.
+# POR SEGURAN√áA, N√ÉO EDITE ESTE ARQUIVO.
 #
 ########################################
 
@@ -13,6 +13,12 @@ pdf: livro.tex
 	pdflatex livro
 	pdflatex livro	
 	pdflatex livro
+
+dvi: livro.tex
+	cp config-pdf.knd config.knd
+	latex livro
+	latex livro	
+	latex livro
 
 html: livro.html
 
@@ -23,7 +29,7 @@ livro.html: livro.tex
 	latex livro
 	latex livro
 	latex livro
-	mk4ht htlatex livro "myconfig,3,notoc*" "" "-d./html/"
+	htlatex livro "myconfig,3,notoc*" " -cunihtf" "-d./html/"
 	cp config-pdf.knd config.knd
 
 .PHONY: clean

@@ -1,4 +1,4 @@
-% Este trabalho est· licenciado sob a LicenÁa Creative Commons AtribuiÁ„o-CompartilhaIgual 3.0 N„o Adaptada. Para ver uma cÛpia desta licenÁa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+% Este trabalho est√° licenciado sob a Licen√ßa Creative Commons Atribui√ß√£o-CompartilhaIgual 3.0 N√£o Adaptada. Para ver uma c√≥pia desta licen√ßa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 \documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
@@ -14,27 +14,27 @@
 
 
 
-\section{MÈtodo dos mÌnimos quadrados}
+\section{M√©todo dos m√≠nimos quadrados}
 
-Sistemas lineares aparecem como modelos matem·ticos de v·rios fenÙmenos e em v·rias situaÁıes. Acontece que alguns sistemas simplesmente n„o possuem soluÁıes e ficamos sem saber como proceder. O \textbf{mÈtodo dos mÌnimos quadrados} È uma tÈcnica que nos permite, de forma aproximada, retirar alguma informaÁ„o desses sistemas impossÌveis. A terminologia se deve ao fato de que, como veremos, este mÈtodo minimiza a soma dos quadrados dos erros obtidos na aproximaÁ„o.
+Sistemas lineares aparecem como modelos matem√°ticos de v√°rios fen√¥menos e em v√°rias situa√ß√µes. Acontece que alguns sistemas simplesmente n√£o possuem solu√ß√µes e ficamos sem saber como proceder. O \textbf{m√©todo dos m√≠nimos quadrados} √© uma t√©cnica que nos permite, de forma aproximada, retirar alguma informa√ß√£o desses sistemas imposs√≠veis. A terminologia se deve ao fato de que, como veremos, este m√©todo minimiza a soma dos quadrados dos erros obtidos na aproxima√ß√£o.
 
 Como sabemos, resolver o sistema linear
 \[
 A \vec{x} = \vec{b}
-\] consiste em encontrar um vetor $\vec{x}$ que satisfaÁa a esta equaÁ„o. Na terminologia que construimos ao longo do curso, È equivalente dizer que $\vec{b}$ pertence ao espaÁo coluna da matriz $A$, isto È, $\vec{b} \in \Col A$. Desta forma, n„o È possÌvel resolver o sistema quando $\vec{b} \not\in \Col A$. Representamos esta situaÁ„o na figura abaixo.
+\] consiste em encontrar um vetor $\vec{x}$ que satisfa√ßa a esta equa√ß√£o. Na terminologia que construimos ao longo do curso, √© equivalente dizer que $\vec{b}$ pertence ao espa√ßo coluna da matriz $A$, isto √©, $\vec{b} \in \Col A$. Desta forma, n√£o √© poss√≠vel resolver o sistema quando $\vec{b} \not\in \Col A$. Representamos esta situa√ß√£o na figura abaixo.
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[width=0.8\linewidth]{\dir/Semana13/semana13-proj-col}
   \end{center}
 \end{figure}
 
-O mÈtodo dos mÌnimos quadrados consiste em olhar para o vetor $\vec{p} = \proj_{\Col A} \vec{b}$ e resolver o sistema linear associado
+O m√©todo dos m√≠nimos quadrados consiste em olhar para o vetor $\vec{p} = \proj_{\Col A} \vec{b}$ e resolver o sistema linear associado
 \[
 A \vec{x} = \vec{p}.
-\] Esta soluÁ„o de $A \vec{x} = \vec{p}$ È chamada de \textbf{soluÁ„o de mÌnimos quadrados}. A ideia È (ver figura) considerar o vetor pertencente a $\Col A$ que È o ``mais prÛximo'' possÌvel de $\vec{b}$ e cujo sistema linear associado possua soluÁ„o. Neste contexto, estamos pensando em mais prÛximo no sentido 
+\] Esta solu√ß√£o de $A \vec{x} = \vec{p}$ √© chamada de \textbf{solu√ß√£o de m√≠nimos quadrados}. A ideia √© (ver figura) considerar o vetor pertencente a $\Col A$ que √© o ``mais pr√≥ximo'' poss√≠vel de $\vec{b}$ e cujo sistema linear associado possua solu√ß√£o. Neste contexto, estamos pensando em mais pr√≥ximo no sentido 
 \[
 \| \vec{b} - \proj_{\Col A} \vec{b} \| \le \| \vec{b} - \vec{c} \|, \text{ para qualquer } \vec{c}\, \in \Col A,
-\] isto È, no sentido de ser a projeÁ„o a melhor aproximaÁ„o de $\vec{b}$ no espaÁo coluna de $A$. Escrevendo os vetores em coordenadas:
+\] isto √©, no sentido de ser a proje√ß√£o a melhor aproxima√ß√£o de $\vec{b}$ no espa√ßo coluna de $A$. Escrevendo os vetores em coordenadas:
 \[
 \vec{b} =
 \begin{bmatrix}
@@ -47,7 +47,7 @@ A \vec{x} = \vec{p}.
 \] podemos definir o valor
 \[
 \| \vec{b} - \proj_{\Col A} \vec{b} \| = \sqrt{\sum_{i=1}^n (b_i - p_i)^2}
-\] como o \textbf{erro da aproximaÁ„o} ou \textbf{erro  quadr·tico}. Logo, como anunciado, a soma dos quadrados dos erros obtidos cada componente È o mÌnimo possÌvel.
+\] como o \textbf{erro da aproxima√ß√£o} ou \textbf{erro  quadr√°tico}. Logo, como anunciado, a soma dos quadrados dos erros obtidos cada componente √© o m√≠nimo poss√≠vel.
 
 
 \begin{example}\label{exp:minquad1}
@@ -70,7 +70,7 @@ A \vec{x} = \vec{p}.
   \begin{bmatrix}
     3 \\ 2 \\ 0 \\ 0
   \end{bmatrix} = \vec{b}.
-  \] Este sistema È claramente impossÌvel, pois a primeira equaÁ„o È inconsistente com a ˙ltima. De forma mais autom·tica, um passo no escalonamento da matriz aumentada associada revelaria a mesma conclus„o:
+  \] Este sistema √© claramente imposs√≠vel, pois a primeira equa√ß√£o √© inconsistente com a √∫ltima. De forma mais autom√°tica, um passo no escalonamento da matriz aumentada associada revelaria a mesma conclus√£o:
   \[
   [\, A \ | \ \vec{b} \, ] = \begin{bmatrix}
     1 & 1 & -2 & 3 \\ 1 & 0 & -2 & 2 \\ 0 & 1 & 2 & 0 \\ -1 & -1 & 2 & 0
@@ -78,21 +78,21 @@ A \vec{x} = \vec{p}.
   \begin{bmatrix}
     1 & 1 & -2 & 3 \\ 1 & 0 & -2 & 2 \\ 0 & 1 & 2 & 0 \\ 0 & 0 & 0 & 3
   \end{bmatrix} .
-  \] Vamos tentar encontrar, conforme descrito acima, uma soluÁ„o de mÌnimos quadrados. Passos a serem realizados:
+  \] Vamos tentar encontrar, conforme descrito acima, uma solu√ß√£o de m√≠nimos quadrados. Passos a serem realizados:
   \begin{itemize}
-  \item Para calcular a projeÁ„o de $\vec{b}$ sobre $\Col A$, precisamos, em primeiro lugar, obter uma base ortogonal do espaÁo $\Col A$; isto pode ser feito pelo processo de Gram--Schmidt;
-  \item Calcular a projeÁ„o $\vec{p} = \proj_{\Col A} \vec{b}$;
+  \item Para calcular a proje√ß√£o de $\vec{b}$ sobre $\Col A$, precisamos, em primeiro lugar, obter uma base ortogonal do espa√ßo $\Col A$; isto pode ser feito pelo processo de Gram--Schmidt;
+  \item Calcular a proje√ß√£o $\vec{p} = \proj_{\Col A} \vec{b}$;
   \item Resolver o sistema linear $A \vec{x} = \vec{p}$.
-  \end{itemize} Embora seja possÌvel realizar estes trÍs passos, temos de convir que seria muito trabalhoso. Por isto, vamos analisar um pouco mais da teoria para encontrar um mÈtodo mais eficaz$. \ \lhd$
+  \end{itemize} Embora seja poss√≠vel realizar estes tr√™s passos, temos de convir que seria muito trabalhoso. Por isto, vamos analisar um pouco mais da teoria para encontrar um m√©todo mais eficaz$. \ \lhd$
 \end{example}
 
 Suponhamos que:
 \begin{itemize}
-\item $A$ È uma matriz $m \times n$,
+\item $A$ √© uma matriz $m \times n$,
 \item $\vec{x} \in \bR^n$,
 \item $\vec{b} \in \bR^m$ e
-\item o sistema $A \vec{x} = \vec{b}$ n„o possui soluÁ„o.
-\end{itemize} A soluÁ„o de mÌnimos quadrados È a soluÁ„o de $A \vec{x} = \vec{p}$, onde $\vec{p} = \proj_{\Col A} \vec{b}$. Observamos, por outro lado, que, sendo $\vec{p}\,$ a projeÁ„o sobre o espaÁo coluna de $A$, o vetor $\vec{b} - \vec{p}\,$ deve ser ortogonal a todos os elementos de $\Col A$. Em particular, se escrevermos $A$ em termos de suas colunas
+\item o sistema $A \vec{x} = \vec{b}$ n√£o possui solu√ß√£o.
+\end{itemize} A solu√ß√£o de m√≠nimos quadrados √© a solu√ß√£o de $A \vec{x} = \vec{p}$, onde $\vec{p} = \proj_{\Col A} \vec{b}$. Observamos, por outro lado, que, sendo $\vec{p}\,$ a proje√ß√£o sobre o espa√ßo coluna de $A$, o vetor $\vec{b} - \vec{p}\,$ deve ser ortogonal a todos os elementos de $\Col A$. Em particular, se escrevermos $A$ em termos de suas colunas
 \[
 A =
 \begin{bmatrix}
@@ -110,18 +110,18 @@ A =
 \[
 \vec{a}_j \cdot \big(\vec{b} - \vec{p}\big) = 0, \text{ para todo } j  \ \  \iff \ \
 A^T (\vec{b} - \vec{p}) = \vec{0} \ \ \iff \ \ A^T \vec{b} = A^T \vec{p} = A^T A\vec{x}.
-\] Esta ˙ltima linha È v·lida porque o produto escalar $\vec{a}_j \cdot \big(\vec{b} - \vec{p}\big)$ È justamente a entrada $j$ do vetor obtido ao multiplicar $A^T(\vec{b} - \vec{p})$. AlÈm disso, $A \vec{x} = \vec{p}.$
+\] Esta √∫ltima linha √© v√°lida porque o produto escalar $\vec{a}_j \cdot \big(\vec{b} - \vec{p}\big)$ √© justamente a entrada $j$ do vetor obtido ao multiplicar $A^T(\vec{b} - \vec{p})$. Al√©m disso, $A \vec{x} = \vec{p}.$
 
-Concluimos, desta forma, que, se $\vec{x}$ È uma soluÁ„o de mÌnimos quadrados, ou seja, se $A \vec{x} = \vec{p}$, ent„o necessariamente
+Concluimos, desta forma, que, se $\vec{x}$ √© uma solu√ß√£o de m√≠nimos quadrados, ou seja, se $A \vec{x} = \vec{p}$, ent√£o necessariamente
 \begin{equation}\label{minquad}
   \boxed{A^T A\vec{x} = A^T \vec{b}.}
 \end{equation}
 
-\begin{exercise}[TeÛrico]
-  Justifique que o conjunto de soluÁıes do sistema \eqref{minquad} coincide com o conjunto das soluÁıes de mÌnimos quadrados do sistema $A \vec{x} = \vec{b}$.
+\begin{exercise}[Te√≥rico]
+  Justifique que o conjunto de solu√ß√µes do sistema \eqref{minquad} coincide com o conjunto das solu√ß√µes de m√≠nimos quadrados do sistema $A \vec{x} = \vec{b}$.
 \end{exercise}
 
-Tudo isto implica que podemos utilizar a equaÁ„o \eqref{minquad} para encontrar as soluÁıes de mÌnimos quadrados de $A \vec{x} = \vec{b}$. 
+Tudo isto implica que podemos utilizar a equa√ß√£o \eqref{minquad} para encontrar as solu√ß√µes de m√≠nimos quadrados de $A \vec{x} = \vec{b}$. 
 
 \begin{example}[De volta ao Exemplo \ref{exp:minquad1}]\label{exp:minquad2}
   Calculamos
@@ -177,7 +177,7 @@ Tudo isto implica que podemos utilizar a equaÁ„o \eqref{minquad} para encontrar 
   \] Assim,
   \[
   x_3 = \frac{1}{4} \implies 5x_2 + 6 \cdot \frac{1}{4} = -1 \implies x_2 = -\frac{1}{2} \implies 3 x_1 - 1 - \frac{3}{2}  = 5 \implies x_1 = \frac{3}{2}.
-  \] Portanto, uma soluÁ„o de mÌnimos quadrados È
+  \] Portanto, uma solu√ß√£o de m√≠nimos quadrados √©
   \[
   \begin{bmatrix}
     x_1 \\ x_2 \\ x_3
@@ -185,24 +185,24 @@ Tudo isto implica que podemos utilizar a equaÁ„o \eqref{minquad} para encontrar 
   \begin{bmatrix}
     3/2 \\ -1/2 \\ 1/4
   \end{bmatrix}.
-  \] Observe como isto È muito menos trabalhoso do que o mÈtodo que havÌamos esquematizado no Exemplo \ref{exp:minquad1}$. \ \lhd$
+  \] Observe como isto √© muito menos trabalhoso do que o m√©todo que hav√≠amos esquematizado no Exemplo \ref{exp:minquad1}$. \ \lhd$
 \end{example}
 
 \begin{exercise}
-  Colocar em pr·tica o mÈtodo discutido no Exemplo \ref{exp:minquad1} e comparar o resultado com o que obtivemos no Exemplo \ref{exp:minquad2}.
+  Colocar em pr√°tica o m√©todo discutido no Exemplo \ref{exp:minquad1} e comparar o resultado com o que obtivemos no Exemplo \ref{exp:minquad2}.
 \end{exercise}
 
 \begin{remark}
-  Caso a matriz $A$ j· seja uma matriz ortogonal, podemos calcular projeÁıes diretamente, pois uma base ortogonal para $\Col A$ j· estÈ disponÌvel desde o comeÁo. Neste caso, ambos os mÈtodos exigiriam um trabalho parecido.
+  Caso a matriz $A$ j√° seja uma matriz ortogonal, podemos calcular proje√ß√µes diretamente, pois uma base ortogonal para $\Col A$ j√° est√© dispon√≠vel desde o come√ßo. Neste caso, ambos os m√©todos exigiriam um trabalho parecido.
 \end{remark}
 
-Nossa aproximaÁ„o linear foi encontrada de modo a minimizar o erro quadr·tico. Para encontrar o erro, deverÌamos calcular
+Nossa aproxima√ß√£o linear foi encontrada de modo a minimizar o erro quadr√°tico. Para encontrar o erro, dever√≠amos calcular
 \[
 \| \vec{b} - \proj_{\vec{\Col A}} \vec{b} \|.
-\] No entanto, note que n„o precisamos calcular a projeÁ„o. Observando que a soluÁ„o de mÌnimos quadrados satisfaz $A \vec{x} = \proj_{\vec{\Col A}} \vec{b}$, podemos calcular o erro por
+\] No entanto, note que n√£o precisamos calcular a proje√ß√£o. Observando que a solu√ß√£o de m√≠nimos quadrados satisfaz $A \vec{x} = \proj_{\vec{\Col A}} \vec{b}$, podemos calcular o erro por
 \[
 \text{erro } = \| \vec{b} - A \vec{x} \|,
-\] onde $\vec{x}$ È a soluÁ„o de mÌnimos quadrados.
+\] onde $\vec{x}$ √© a solu√ß√£o de m√≠nimos quadrados.
 
 No Exemplo \ref{exp:minquad2} acima, podemos calcular o erro desta forma. De fato,
 \[
@@ -233,20 +233,20 @@ A \vec{x} =
 
 
 
-\section{Regress„o Linear Simples}
+\section{Regress√£o Linear Simples}
 
-Vamos apresentar uma aplicaÁ„o de algumas das tÈcnicas do mÈtodo de mÌnimos quadrados ‡ EstatÌstica ou Econometria. Uma \textbf{regress„o linear simples} È uma equaÁ„o, tipicamente da forma
+Vamos apresentar uma aplica√ß√£o de algumas das t√©cnicas do m√©todo de m√≠nimos quadrados √† Estat√≠stica ou Econometria. Uma \textbf{regress√£o linear simples} √© uma equa√ß√£o, tipicamente da forma
 \[
 y = a + b x,
-\] para estimar os valores $(x,y)$ apenas conhecendo alguns valores especÌficos $(x_1, y_1), (x_2, y_2), \dots,$ $(x_k, y_k)$. A ideia È tentar capturar como que mudanÁas na vari·vel independente $x$ afetam a vari·vel dependente $y$ (neste caso, supondo que esta dependÍncia È linear).
+\] para estimar os valores $(x,y)$ apenas conhecendo alguns valores espec√≠ficos $(x_1, y_1), (x_2, y_2), \dots,$ $(x_k, y_k)$. A ideia √© tentar capturar como que mudan√ßas na vari√°vel independente $x$ afetam a vari√°vel dependente $y$ (neste caso, supondo que esta depend√™ncia √© linear).
 
 \begin{example}\footnote{Exemplo adaptado de \url{https://onlinecourses.science.psu.edu/stat501/node/257}}\label{exp:idade}
-Com o intuito de analisar se È razo·vel supor que h· um relaÁ„o linear entre a idade de um motorista e qu„o longe ele consegue ver, uma empresa (Last Resource, Inc., Bellefonte, PA) coletou dados de 30 motoristas. Para simplificar as nossas contas, vamos listar abaixo \textit{apenas alguns} destes dados.
+Com o intuito de analisar se √© razo√°vel supor que h√° um rela√ß√£o linear entre a idade de um motorista e qu√£o longe ele consegue ver, uma empresa (Last Resource, Inc., Bellefonte, PA) coletou dados de 30 motoristas. Para simplificar as nossas contas, vamos listar abaixo \textit{apenas alguns} destes dados.
 \begin{center}
  \begin{tabular}{|c|c|}
       \hline
       % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-      Idade & Dist‚ncia (em $m$) \\ \hline
+      Idade & Dist√¢ncia (em $m$) \\ \hline
       20 & 590 \\
       32 & 410 \\
       41 & 460 \\
@@ -254,7 +254,7 @@ Com o intuito de analisar se È razo·vel supor que h· um relaÁ„o linear entre a i
       66 & 350 \\
       \hline
   \end{tabular}
-\end{center} Podemos pensar em $y$ como a dist‚ncia e em $x$ como a idade. GostarÌamos de achar uma relaÁ„o linear da forma
+\end{center} Podemos pensar em $y$ como a dist√¢ncia e em $x$ como a idade. Gostar√≠amos de achar uma rela√ß√£o linear da forma
 \[
   y = a + b x.
 \] Desta forma, os dados obtidos implicam que  
@@ -281,7 +281,7 @@ Com o intuito de analisar se È razo·vel supor que h· um relaÁ„o linear entre a i
   \begin{bmatrix}
     590 \\ 410 \\ 460 \\ 380 \\ 350
   \end{bmatrix}
-  \] Ora, dificilmente um sistema linear com duas incÛgnitas e cinco equaÁıes ter· soluÁ„o (sÛ ter· soluÁ„o se todos os pontos do conjunto de dados estiverem perfeitamente alinhados em uma reta!). Consequentemente, vamos procurar por uma soluÁ„o de mÌnimos quadrados. Isto È \textbf{regress„o linear simpes}.
+  \] Ora, dificilmente um sistema linear com duas inc√≥gnitas e cinco equa√ß√µes ter√° solu√ß√£o (s√≥ ter√° solu√ß√£o se todos os pontos do conjunto de dados estiverem perfeitamente alinhados em uma reta!). Consequentemente, vamos procurar por uma solu√ß√£o de m√≠nimos quadrados. Isto √© \textbf{regress√£o linear simpes}.
 
   Denotando
   \[
@@ -345,12 +345,12 @@ Com o intuito de analisar se È razo·vel supor que h· um relaÁ„o linear entre a i
       b \simeq -4.75
     \end{array}
   \right..
-  \] Os n˙meros s„o feios, mas as contas feitas foram as que sempre fizemos ao escalonar uma matriz atÈ sua forma escalonada reduzida.
+  \] Os n√∫meros s√£o feios, mas as contas feitas foram as que sempre fizemos ao escalonar uma matriz at√© sua forma escalonada reduzida.
 
-  A conclus„o È que a reta de mÌnimos quadrados que melhor aproxima os nossos dados È a reta
+  A conclus√£o √© que a reta de m√≠nimos quadrados que melhor aproxima os nossos dados √© a reta
   \[
   y = a + b x = 635.7 - 4.75 x.
-  \] O erro de mÌnimos quadrados nesta aproximaÁ„o (ou norma do resÌduo) pode ser calculado como
+  \] O erro de m√≠nimos quadrados nesta aproxima√ß√£o (ou norma do res√≠duo) pode ser calculado como
   \[
   A \vec{x} = \begin{bmatrix}
     1 & 20 \\
@@ -376,7 +376,7 @@ Com o intuito de analisar se È razo·vel supor que h· um relaÁ„o linear entre a i
       \includegraphics[width=1\linewidth]{\dir/Semana13/semana13-idade}
     \end{center}
   \end{figure}
- Na figura, mostramos um esboÁo da reta que melhor aproxima os dados deste exemplo$. \ \lhd$
+ Na figura, mostramos um esbo√ßo da reta que melhor aproxima os dados deste exemplo$. \ \lhd$
 \end{example}
 
 
@@ -384,7 +384,7 @@ Com o intuito de analisar se È razo·vel supor que h· um relaÁ„o linear entre a i
 De uma maneira geral, para encontrar uma \textbf{reta de melhor ajuste} a uma quantidade de pontos (dados coletados de algum problema)
 \[
 (x_1, y_1), \ (x_2, y_2), \ \dots, (x_k, y_k),
-\] devemos procurar pela soluÁ„o $(a,b)$ de mÌnimos quadrados do sistema linear
+\] devemos procurar pela solu√ß√£o $(a,b)$ de m√≠nimos quadrados do sistema linear
 \[
 \left\{
   \begin{array}{rl}
@@ -441,10 +441,10 @@ De uma maneira geral, para encontrar uma \textbf{reta de melhor ajuste} a uma qu
   \begin{bmatrix}
     30\\114
   \end{bmatrix}.
-  \] A soluÁ„o de mÌnimos quadrados, que È a soluÁ„o de $A^T A \vec{x} = A^T\vec{b}$, È dada por
+  \] A solu√ß√£o de m√≠nimos quadrados, que √© a solu√ß√£o de $A^T A \vec{x} = A^T\vec{b}$, √© dada por
   \[
   b = 54/25 = 2.16, \\ a = 33/100 = 0.33.
-  \] A reta procurada È portanto $y = 0.33 x + 2.16$.
+  \] A reta procurada √© portanto $y = 0.33 x + 2.16$.
   \begin{figure}[h!]
     \begin{center}
       \includegraphics[width=0.5\linewidth]{\dir/Semana13/semana13-reta}
@@ -453,16 +453,16 @@ De uma maneira geral, para encontrar uma \textbf{reta de melhor ajuste} a uma qu
 \end{example}
 
 
-\section{Regress„o n„o linear}
+\section{Regress√£o n√£o linear}
 
 
-Podemos tambÈm procurar (em contraste com a subseÁ„o anterior) por funÁıes n„o lineares que se ajustem a um conjunto de pontos. Por exemplo, dado um certo conjunto de pontos
+Podemos tamb√©m procurar (em contraste com a subse√ß√£o anterior) por fun√ß√µes n√£o lineares que se ajustem a um conjunto de pontos. Por exemplo, dado um certo conjunto de pontos
 \[
 (x_1, y_1), \ (x_2, y_2), \ \dots, (x_k, y_k),
-\] vamos procurar por uma par·bola
+\] vamos procurar por uma par√°bola
 \[
 y = a + bx + cx^2
-\] que melhor se ajuste a este conjunto de pontos, no sentido de que a soma dos quadrados dos erros seja a menor possÌvel. Isto corrensponde a procurar pela soluÁ„o $(a,b, c)$ de mÌnimos quadrados do seguinte sistema linear
+\] que melhor se ajuste a este conjunto de pontos, no sentido de que a soma dos quadrados dos erros seja a menor poss√≠vel. Isto corrensponde a procurar pela solu√ß√£o $(a,b, c)$ de m√≠nimos quadrados do seguinte sistema linear
 \[
 \left\{
   \begin{array}{rl}
@@ -484,13 +484,13 @@ y = a + bx + cx^2
 \begin{bmatrix}
   y_1 \\ y_2 \\ \vdots \\ y_k
 \end{bmatrix}.
-\] Vejamos como ficaria a par·bola que se ajusta aos dados do Exemplo \ref{exp:idade}:
+\] Vejamos como ficaria a par√°bola que se ajusta aos dados do Exemplo \ref{exp:idade}:
 
 \begin{example}
-  Nossos pontos no Exemplo \ref{exp:idade} s„o
+  Nossos pontos no Exemplo \ref{exp:idade} s√£o
   \[
   (20, 590), \ (32, 410), \ (41, 460), \ (49, 380), \ (66, 350).
-  \] Para encontrar a par·bola de melhor ajuste como acima, devemos procurar pela soluÁ„o de mÌnimos quadrados do sistema
+  \] Para encontrar a par√°bola de melhor ajuste como acima, devemos procurar pela solu√ß√£o de m√≠nimos quadrados do sistema
   \[
   \begin{bmatrix}
     1 & 20 & 400 \\
@@ -505,7 +505,7 @@ y = a + bx + cx^2
   \begin{bmatrix}
     590 \\ 410 \\ 460 \\ 380 \\ 350
   \end{bmatrix} \ \leftrightsquigarrow \ A \vec{x} = \vec{b}.
-  \] Calculamos (com o auxÌlio de uma calculadora)
+  \] Calculamos (com o aux√≠lio de uma calculadora)
   \[
   A^T A =
   \begin{bmatrix}
@@ -539,7 +539,7 @@ y = a + bx + cx^2
   \begin{bmatrix}
     2190 \\ 85500 \\ 3866080
   \end{bmatrix}
-  \] e resolvemos (escalonando, por exemplo, com o auxÌlio de um computador)
+  \] e resolvemos (escalonando, por exemplo, com o aux√≠lio de um computador)
   \[
   \begin{bmatrix}
     5 & 208 & 9862 & 2190 \\
@@ -552,7 +552,7 @@ y = a + bx + cx^2
     0 & 0 & 1 & 11779375/105110139 \\
   \end{bmatrix}.
   \] 
-  Logo, aproximando estas fraÁıes, obtemos
+  Logo, aproximando estas fra√ß√µes, obtemos
   \[
   \left\{
     \begin{array}{ll}
@@ -567,28 +567,28 @@ y = a + bx + cx^2
   		\includegraphics[width=1\linewidth]{\dir/Semana13/semana13-idade-parabola}
   	\end{center}
   \end{figure}
-  e a par·bola desejada È, aproximadamente
+  e a par√°bola desejada √©, aproximadamente
   \[
   y = 812.934 - 14.326 x + 0.112 x^2.
   \]
   
 
-  \noindent Observamos que, apesar de o erro quadr·tico ser provavelmente menor neste exemplo, esta par·bola se torna crescente a partir de um certo momento, fazendo com que o modelo n„o seja t„o razo·vel para idades maiores. Por exemplo, È pouco prov·vel que (na mÈdia), pessoas com 95 anos vejam a uma dist‚ncia maior do que pessoas de 65 anos, como sugere a par·bola acima.
+  \noindent Observamos que, apesar de o erro quadr√°tico ser provavelmente menor neste exemplo, esta par√°bola se torna crescente a partir de um certo momento, fazendo com que o modelo n√£o seja t√£o razo√°vel para idades maiores. Por exemplo, √© pouco prov√°vel que (na m√©dia), pessoas com 95 anos vejam a uma dist√¢ncia maior do que pessoas de 65 anos, como sugere a par√°bola acima.
 \end{example}
 
 
 
-\section{Regress„o linear m˙ltipla}
+\section{Regress√£o linear m√∫ltipla}
 
-Uma \textbf{regress„o linear m˙ltipla} È o problema an·logo ‡ regress„o linear simples no caso em que a vari·vel dependente pode depender de mais fatores independentes. Tipicamente, queremos encontrar uma equaÁ„o afim que melhor se ajusta a alguns dados conhecidos.
+Uma \textbf{regress√£o linear m√∫ltipla} √© o problema an√°logo √† regress√£o linear simples no caso em que a vari√°vel dependente pode depender de mais fatores independentes. Tipicamente, queremos encontrar uma equa√ß√£o afim que melhor se ajusta a alguns dados conhecidos.
 
 No caso especial em que $y$ depende de apenas outros dois fatores, escreveremos
 \[
 z = a + b x + c y,
-\] que, geometricamente, representa um plano no espaÁo tridimensional $\bR^3$. Seja agora uma conjunto de dados:
+\] que, geometricamente, representa um plano no espa√ßo tridimensional $\bR^3$. Seja agora uma conjunto de dados:
 \[
 (x_1, y_1, z_1), \ (x_1, y_1, z_1), \dots, (x_k, y_k, z_k).
-\] Queremos encontrar coeficientes $(a,b,c)$ que satisfaÁam:
+\] Queremos encontrar coeficientes $(a,b,c)$ que satisfa√ßam:
 \[
 \left\{
   \begin{array}{c}
@@ -610,17 +610,17 @@ z = a + b x + c y,
 \begin{bmatrix}
   z_1 \\ z_2 \\ \vdots \\ z_k
 \end{bmatrix}.
-\] Quanto maior o n˙mero de dados, mais prov·vel de o sistema ser impossÌvel (podemos fazer a analogia geomÈtrica de que por trÍs pontos n„o colineares no espaÁo passa um ˙nico plano; se aumentarmos o n˙mero de pontos, mais difÌcil que haja um plano contendo todos eles). Por isto, procuramos por uma soluÁ„o de mÌnimos quadrados.
+\] Quanto maior o n√∫mero de dados, mais prov√°vel de o sistema ser imposs√≠vel (podemos fazer a analogia geom√©trica de que por tr√™s pontos n√£o colineares no espa√ßo passa um √∫nico plano; se aumentarmos o n√∫mero de pontos, mais dif√≠cil que haja um plano contendo todos eles). Por isto, procuramos por uma solu√ß√£o de m√≠nimos quadrados.
 
 
 
 \begin{example}
-  Uma pesquisa com $214$ mulheres em uma universidade americana\footnote{ReferÍncia: \verb"\url{https://onlinecourses.science.psu.edu/stat501/node/292}"} coletou informaÁıes sobre a altura das participantes, assim como a altura de seus pais. Abaixo, listamos \textit{apenas alguns destes dados}, para que nossas contas n„o fiquem t„o extensas. Fizemos tambÈm uma mudanÁa de unidades nas alturas (de polegadas) para centÌmetros,
+  Uma pesquisa com $214$ mulheres em uma universidade americana\footnote{Refer√™ncia: \verb"\url{https://onlinecourses.science.psu.edu/stat501/node/292}"} coletou informa√ß√µes sobre a altura das participantes, assim como a altura de seus pais. Abaixo, listamos \textit{apenas alguns destes dados}, para que nossas contas n√£o fiquem t√£o extensas. Fizemos tamb√©m uma mudan√ßa de unidades nas alturas (de polegadas) para cent√≠metros,
   \begin{center}
     \begin{tabular}{|c|c|c|}
       \hline
       % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
-      Altura & Altura M„e & Altura Pai \\ \hline
+      Altura & Altura M√£e & Altura Pai \\ \hline
       152 & 155 & 165 \\
       162 & 155 & 160 \\
       165 & 170 & 173 \\
@@ -629,7 +629,7 @@ z = a + b x + c y,
       183 & 165 & 183 \\
       \hline
     \end{tabular}
-  \end{center} Queremos encontrar uma soluÁ„o de mÌnimos quadrados para o sistema linear
+  \end{center} Queremos encontrar uma solu√ß√£o de m√≠nimos quadrados para o sistema linear
   \[
   \begin{bmatrix}
     1 & 155 & 165 \\
@@ -711,10 +711,10 @@ z = a + b x + c y,
       c \simeq  0.783  \\
     \end{array}
   \right.
-  \] A equaÁ„o de melhor ajuste procurada È, portanto, aproximadamente,
+  \] A equa√ß√£o de melhor ajuste procurada √©, portanto, aproximadamente,
   \[
   z \simeq 14.781 + 0.099 x + 0.783 y.
-  \] Tente calcular sua altura $z$ a partir da altura de sua m„e $x$ e de seu pai $y$. O teste deve funcionar melhor para mulheres! AlÈm disso, a aproximaÁ„o linear deve ser melhor utilizando mais dados nos c·lculos.
+  \] Tente calcular sua altura $z$ a partir da altura de sua m√£e $x$ e de seu pai $y$. O teste deve funcionar melhor para mulheres! Al√©m disso, a aproxima√ß√£o linear deve ser melhor utilizando mais dados nos c√°lculos.
   \begin{figure}[h!]
     \begin{center}
       \includegraphics[width=1\linewidth]{\dir/Semana13/semana13-alturas}
@@ -722,34 +722,34 @@ z = a + b x + c y,
   \end{figure}
 \end{example}
 
-\section{FatoraÁ„o QR e MÌnimos Quadrados}
+\section{Fatora√ß√£o QR e M√≠nimos Quadrados}
 
-Vimos que o processo de Gram-Schmidt nos permite escrever uma matriz $A$ cujas linhas s„o linearmente independentes na forma $A=QR$, onde $Q$ È uma matriz ortogonal, $R$ È triangular superior invertÌvel, e as colunas de $Q$ formam uma base ortonormal para o espaÁo-coluna de $A$. Chamamos esta fatoraÁ„o de $A$ de fatoraÁ„o QR. 
+Vimos que o processo de Gram-Schmidt nos permite escrever uma matriz $A$ cujas linhas s√£o linearmente independentes na forma $A=QR$, onde $Q$ √© uma matriz ortogonal, $R$ √© triangular superior invert√≠vel, e as colunas de $Q$ formam uma base ortonormal para o espa√ßo-coluna de $A$. Chamamos esta fatora√ß√£o de $A$ de fatora√ß√£o QR. 
 
-A fatoraÁ„o QR tem uma importante aplicaÁ„o na soluÁ„o de problemas em mÌnimos quadrados. Ocorre que, em muitos problemas, a matriz $A^T A$ È uma matriz {\it mal-condicionada}, ou seja, uma matriz que È muito sensÌvel aos erros de aproximaÁ„o cometidos em c·lculos numÈricos usualmente executados no tratamento de problemas aplicados. 
-Os exemplos que vir„o a seguir nos mostram situaÁıes em que h· uma grande variaÁ„o de magnitude entre as entradas da matriz $A^T A$, e isto costuma ser fonte de instabilidade numÈrica.
+A fatora√ß√£o QR tem uma importante aplica√ß√£o na solu√ß√£o de problemas em m√≠nimos quadrados. Ocorre que, em muitos problemas, a matriz $A^T A$ √© uma matriz {\it mal-condicionada}, ou seja, uma matriz que √© muito sens√≠vel aos erros de aproxima√ß√£o cometidos em c√°lculos num√©ricos usualmente executados no tratamento de problemas aplicados. 
+Os exemplos que vir√£o a seguir nos mostram situa√ß√µes em que h√° uma grande varia√ß√£o de magnitude entre as entradas da matriz $A^T A$, e isto costuma ser fonte de instabilidade num√©rica.
 
-Para isso, a fatoraÁ„o QR oferece uma soluÁ„o alternativa em mÌnimos quadrados para um sistema linear $A\vec{x}= \vec{b}$:
-se $A=QR$, ent„o 
+Para isso, a fatora√ß√£o QR oferece uma solu√ß√£o alternativa em m√≠nimos quadrados para um sistema linear $A\vec{x}= \vec{b}$:
+se $A=QR$, ent√£o 
 \[
 A^T=R^T Q^T
 \ \ \mbox{ que implica em } \ \
 A^T A= R^T Q^T Q R= R^T R,
 \]
 onde usamos o fato de que $Q^{-1}=Q^T$.
-Assim as equaÁıes normais $A^T A \vec{x} = A^T \vec{b}$ se reduzem a 
+Assim as equa√ß√µes normais $A^T A \vec{x} = A^T \vec{b}$ se reduzem a 
 $$ R^T R \vec{x} = R^T Q^T \vec{b}.$$
-Ainda, como $R$ È invertÌvel podemos eliminar (cancelar) $R^T$ na equaÁ„o acima, %ficando com a seguinte express„o para a soluÁ„o em mÌnimos quadrados
+Ainda, como $R$ √© invert√≠vel podemos eliminar (cancelar) $R^T$ na equa√ß√£o acima, %ficando com a seguinte express√£o para a solu√ß√£o em m√≠nimos quadrados
 obtendo o seguinte:
 \begin{theorem}
-	Se $A=QR$ com $Q$ ortogonal e $R$ triangular superior invertÌvel, ent„o 
-	a soluÁ„o em mÌnimos quadrados do sistema $A\vec{x}= \vec{b}$ È ˙nica e dada pela soluÁ„o do sistema
+	Se $A=QR$ com $Q$ ortogonal e $R$ triangular superior invert√≠vel, ent√£o 
+	a solu√ß√£o em m√≠nimos quadrados do sistema $A\vec{x}= \vec{b}$ √© √∫nica e dada pela solu√ß√£o do sistema
 	$$  R \vec{x} =  Q^T \vec{b}.$$
 \end{theorem}
 
-Note que o fato de $R$ ser triangular superior torna a resoluÁ„o do sistema acima pouco custosa do ponto de vista computacional. Alternativamente, temos uma express„o explÌcita para soluÁ„o em mÌnimos quadrados: $$   \vec{x} = R^{-1} Q^T \vec{b}.$$
+Note que o fato de $R$ ser triangular superior torna a resolu√ß√£o do sistema acima pouco custosa do ponto de vista computacional. Alternativamente, temos uma express√£o expl√≠cita para solu√ß√£o em m√≠nimos quadrados: $$   \vec{x} = R^{-1} Q^T \vec{b}.$$
 
-… importante notar que existem algoritmos para fatoraÁ„o QR que s„o \textit{numÈricamente est·veis}, ou seja pouco suscetiveis a erros de aproximaÁ„o ou arredondamento. Tais algorimos s„o diferentes do processo de Gram Schmidt usual.
+√â importante notar que existem algoritmos para fatora√ß√£o QR que s√£o \textit{num√©ricamente est√°veis}, ou seja pouco suscetiveis a erros de aproxima√ß√£o ou arredondamento. Tais algorimos s√£o diferentes do processo de Gram Schmidt usual.
 
 
 
