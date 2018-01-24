@@ -1,9 +1,9 @@
-%Este trabalho est· licenciado sob a LicenÁa Creative Commons AtribuiÁ„o-CompartilhaIgual 3.0 N„o Adaptada. Para ver uma cÛpia desta licenÁa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+%Este trabalho est√° licenciado sob a Licen√ßa Creative Commons Atribui√ß√£o-CompartilhaIgual 3.0 N√£o Adaptada. Para ver uma c√≥pia desta licen√ßa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-% ATEN«√O: N√O EDITE ESTE ARQUIVO
+% ATEN√á√ÉO: N√ÉO EDITE ESTE ARQUIVO
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -11,23 +11,32 @@
 \documentclass[a4paper]{book}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%DefiniÁıes para compilaÁ„o%%%%%%%%%%%%
+%%%%%%%%Defini√ß√µes para compila√ß√£o%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newif\ifispdf        % O layout ser· pdf?
-\newif\ifishtml       % O layout ser· html?
+\newif\ifispdf        % O layout ser√° pdf?
+\newif\ifishtml       % O layout ser√° html?
 
-\def\tfn{config.knd}   % Arquivo que guarda as definiÁıes do tipo de saÌda
-\def \tdata{}          % DefiniÁıes do tipo de saÌda: book, slide ou html.
+\def\tfn{config.knd}   % Arquivo que guarda as defini√ß√µes do tipo de sa√≠da
+\def \tdata{}          % Defini√ß√µes do tipo de sa√≠da: book, slide ou html.
 
-\openin1=\tfn\relax    % Leitura das definiÁıes de saÌda
+\openin1=\tfn\relax    % Leitura das defini√ß√µes de sa√≠da
 \read1 to \tdata
 \closein1
 
-\tdata                 % DefiniÁıes de saÌda
+\tdata                 % Defini√ß√µes de sa√≠da
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%Para escrever portugu√™s%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[portuguese]{babel}   %%Portuguese-specific commands
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%Pacotes b·sicos para MathEnvir%%%%%%%%
+%%%%%%%%Pacotes b√°sicos para MathEnvir%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{amsmath}%%AMS primary package (includes amstext, amsopn, amsbsy), provides various features for displayed equations and %%other mathematical constructs.
@@ -42,7 +51,7 @@
 
 \usepackage{latexsym}  %%makes few additional characters available: \Box \Join \Box \Diamond \leadsto \sqsubset \sqsupset \lhd \unlhd %%\rhd \unrhd
 
-\usepackage[makeroom]{cancel}   % Cancelar termos em equaÁıes
+\usepackage[makeroom]{cancel}   % Cancelar termos em equa√ß√µes
 
 \usepackage{enumerate}
 
@@ -52,7 +61,7 @@
 
 
 \ifispdf
-\usepackage[dvips,pdftex]{graphicx}
+\usepackage[dvips]{graphicx}
 \fi
 \ifishtml
 \usepackage[dvips]{graphicx}
@@ -77,16 +86,6 @@
 \usepackage{tgbonum}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%Para escrever portuguÍs%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\usepackage[portuguese]{babel}   %%Portuguese-specific commands
-\ifishtml
-\usepackage[T1]{fontenc}
-\fi
-
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%Theorem styles, numbering%%%%%%%%%%
@@ -95,22 +94,22 @@
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Teorema}              %%section, chapter, etc
-\newtheorem{proposition}[theorem]{ProposiÁ„o}      %%everything below obeys theorem because: [theorem]
+\newtheorem{proposition}[theorem]{Proposi√ß√£o}      %%everything below obeys theorem because: [theorem]
 \newtheorem{lemma}[theorem]{Lema}
-\newtheorem{corollary}[theorem]{Corol·rio}
+\newtheorem{corollary}[theorem]{Corol√°rio}
 \newtheorem{maintheorem}{Teorema}                   %%number doesn't obey order
 \renewcommand{\themaintheorem}{\Alph{maintheorem}}
-\newtheorem{maincorollary}{Corol·rio}
+\newtheorem{maincorollary}{Corol√°rio}
 \newtheorem{conjecture}{Conjectura}
-\newtheorem*{claim}{AfirmaÁ„o}
+\newtheorem*{claim}{Afirma√ß√£o}
 
-\newtheorem*{teoespectral}{Teorema Espectral}     %%Sem numeraÁ„o e com o nome desejado
+\newtheorem*{teoespectral}{Teorema Espectral}     %%Sem numera√ß√£o e com o nome desejado
 
 \theoremstyle{definition}
-\newtheorem{remark}[theorem]{ObservaÁ„o}
+\newtheorem{remark}[theorem]{Observa√ß√£o}
 \newtheorem{example}[theorem]{Exemplo}
-\newtheorem{definition}[theorem]{DefiniÁ„o}
-\newtheorem{exercise}{ExercÌcio}
+\newtheorem{definition}[theorem]{Defini√ß√£o}
+\newtheorem{exercise}{Exerc√≠cio}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -192,11 +191,11 @@
 
 \everymath{\displaystyle}
 
-%ligaÁıes
+%liga√ß√µes
 \usepackage[pdfborder={0 0 0 [0 0]},colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue]{hyperref}
 
 
-%define a marcaÁ„o dos capÌtulos
+%define a marca√ß√£o dos cap√≠tulos
 \addto\captionsportuguese{\renewcommand{\chaptername}{}}
 %\addto\captionsportuguese{\renewcommand{\chaptermark}{}}
 
@@ -204,32 +203,32 @@
 \let\cleardoublepage\clearpage
 
 
-%pacote de modulaÁ„o
+%pacote de modula√ß√£o
 \usepackage{subfiles}
 
-%cabeÁalho e rodapÈ
+%cabe√ßalho e rodap√©
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhead{}
 \fancyfoot{}
-\fancyhead[L]{¡lgebra Linear - Um Livro Colaborativo}
+\fancyhead[L]{√Ålgebra Linear - Um Livro Colaborativo}
 \fancyhead[R]{\thepage}
-\fancyfoot[C]{\tiny{LicenÁa CC-BY-SA-3.0. Contato: \url{livroscolaborativos@gmail.com}}}
+\fancyfoot[C]{\tiny{Licen√ßa CC-BY-SA-3.0. Contato: \url{livroscolaborativos@gmail.com}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   CONVITES ¿ EDI«√O
+%   CONVITES √Ä EDI√á√ÉO
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\emconstrucao}{
   \begin{tabular}{|c|}\hline
-    Em construÁ„o ... Gostaria de participar na escrita deste livro? Veja como em:\\
+    Em constru√ß√£o ... Gostaria de participar na escrita deste livro? Veja como em:\\
     \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
   \end{tabular}
 }
 
 \newcommand{\construirSec}{
 \begin{center}
-  Esta seÁ„o (ou subseÁ„o) est· sugerida. Participe da sua escrita. Veja como em:\\
+  Esta se√ß√£o (ou subse√ß√£o) est√° sugerida. Participe da sua escrita. Veja como em:\\
   \url{https://www.ufrgs.br/reamat/participe.html}  
 \end{center}
 }
@@ -237,7 +236,7 @@
 \newcommand{\construirExeresol}{
   \begin{center}
     \begin{tabular}{|c|}\hline
-      Esta seÁ„o carece de exercÌcios resolvidos. Participe da sua escrita.\\
+      Esta se√ß√£o carece de exerc√≠cios resolvidos. Participe da sua escrita.\\
       Veja como em:\\
       \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
     \end{tabular}
@@ -247,7 +246,7 @@
 \newcommand{\construirExer}{
   \begin{center}
     \begin{tabular}{|c|}\hline
-      Esta seÁ„o carece de exercÌcios. Participe da sua escrita.\\
+      Esta se√ß√£o carece de exerc√≠cios. Participe da sua escrita.\\
       Veja como em:\\
       \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
     \end{tabular}
@@ -256,7 +255,7 @@
 
 \newcommand{\construirResp}{
 \begin{center}
-  Este exercÌcio est· sem resposta sugerida. Proponha uma resposta. Veja como em:\\
+  Este exerc√≠cio est√° sem resposta sugerida. Proponha uma resposta. Veja como em:\\
   \url{https://www.ufrgs.br/reamat/participe.html}  
 \end{center}
 }
@@ -266,12 +265,12 @@
 
 \begin{document}
 
-%diretÛrio de origem
+%diret√≥rio de origem
 \newcommand{\dir}{.} 
 
 \frontmatter
 
-\title{¡lgebra Linear\\\small{Um Livro Colaborativo}}
+\title{√Ålgebra Linear\\\small{Um Livro Colaborativo}}
 \author{}
 \date{\today}
 
@@ -289,12 +288,12 @@
 
 \ifispdf
 \tableofcontents
-\addcontentsline{toc}{chapter}{Sum·rio}
+\addcontentsline{toc}{chapter}{Sum√°rio}
 \fi
 
 \mainmatter
 
-%Inclui os capÌtulos
+%Inclui os cap√≠tulos
 \subfile{Semana01/semana01.tex}
 \subfile{Semana02/semana02.tex}
 \subfile{Semana03/semana03.tex}

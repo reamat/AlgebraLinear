@@ -1,9 +1,9 @@
-%Este trabalho est· licenciado sob a LicenÁa Creative Commons AtribuiÁ„o-CompartilhaIgual 3.0 N„o Adaptada. Para ver uma cÛpia desta licenÁa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+%Este trabalho est√° licenciado sob a Licen√ßa Creative Commons Atribui√ß√£o-CompartilhaIgual 3.0 N√£o Adaptada. Para ver uma c√≥pia desta licen√ßa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 \documentclass[../livro.tex]{subfiles} 
 
 
-%define o diretÛrio principal
+%define o diret√≥rio principal
 \providecommand{\dir}{..}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -14,12 +14,12 @@
 
 \chapter{Semana 3}
 
-\section{DependÍncia e independÍncia linear}
+\section{Depend√™ncia e independ√™ncia linear}
 
-NÛs vimos, por definiÁ„o, que um vetor $\vec{v} \in \bR^m$ È combinaÁ„o linear dos $k$ vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ quando conseguirmos encontrar n˙meros reais $x_1, x_2, \dots, x_k$ tais que
+N√≥s vimos, por defini√ß√£o, que um vetor $\vec{v} \in \bR^m$ √© combina√ß√£o linear dos $k$ vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ quando conseguirmos encontrar n√∫meros reais $x_1, x_2, \dots, x_k$ tais que
 \[
 x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{v}.
-\] Vimos tambÈm que para decidir se um vetor È combinaÁ„o linear de outros, devemos verificar se existem estes n˙meros reais $x_1, x_2, \dots, x_k$. Em coordenadas, isto È equivalente a resolver o sistema linear:
+\] Vimos tamb√©m que para decidir se um vetor √© combina√ß√£o linear de outros, devemos verificar se existem estes n√∫meros reais $x_1, x_2, \dots, x_k$. Em coordenadas, isto √© equivalente a resolver o sistema linear:
 \[
 \left[
   \begin{array}{ccccc}
@@ -49,13 +49,13 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{v}.
 \right].
 \]
 
-Agora, dizemos que os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ s„o \textbf{linearmente independentes (LI)} se nenhum dos vetores puder ser escrito combinaÁ„o linear dos demais. Uma forma de escrever isto matematicamente È a seguinte:
+Agora, dizemos que os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ s√£o \textbf{linearmente independentes (LI)} se nenhum dos vetores puder ser escrito combina√ß√£o linear dos demais. Uma forma de escrever isto matematicamente √© a seguinte:
 \[
-\boxed{\text{Se } x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{0}, \text{ ent„o } x_1 = x_2 = \cdots = x_k = 0.}
-\] De fato, imaginem que pelo menos um dos coeficientes acima fosse diferente de zero, digamos $x_2 \neq 0$. DaÌ podemos dividir por $x_2$ e conseguirÌamos escrever o vetor $\vec{v}_2$ como combinaÁ„o linear dos demais:
+\boxed{\text{Se } x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{0}, \text{ ent√£o } x_1 = x_2 = \cdots = x_k = 0.}
+\] De fato, imaginem que pelo menos um dos coeficientes acima fosse diferente de zero, digamos $x_2 \neq 0$. Da√≠ podemos dividir por $x_2$ e conseguir√≠amos escrever o vetor $\vec{v}_2$ como combina√ß√£o linear dos demais:
 \[
 \vec{v}_2 = - \frac{x_1}{x_2} \, \vec{v}_1 - \frac{x_3}{x_2} \, \vec{v}_3 - \cdots - \frac{x_k}{x_2} \, \vec{v}_k.
-\] Se os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ n„o forem linearmente independentes, ent„o nÛs dizemos que eles s„o \textbf{linearmente dependentes (LD)}.
+\] Se os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ n√£o forem linearmente independentes, ent√£o n√≥s dizemos que eles s√£o \textbf{linearmente dependentes (LD)}.
 
 \begin{example}\label{exp:1}
 Vamos verificar se os vetores
@@ -81,9 +81,9 @@ Vamos verificar se os vetores
     1 \\
   \end{array}
 \right]
-\] s„o LI ou LD.
+\] s√£o LI ou LD.
 
-Para verificar se s„o LI, nÛs devemos considerar a equaÁ„o vetorial
+Para verificar se s√£o LI, n√≥s devemos considerar a equa√ß√£o vetorial
 \[
 x_1 \left[
   \begin{array}{c}
@@ -113,9 +113,9 @@ x_3\left[
     0 \\
   \end{array}
 \right].
-\] Como a equaÁ„o È homogÍnea, temos pelo menos a soluÁ„o trivial: $x_1 = 0$, $x_2=0$ e $x_3 = 0$. Se esta for a ˙nica soluÁ„o, ent„o os vetores s„o LI. Se existir alguma outra soluÁ„o que n„o seja a trivial, ent„o os vetores s„o LD.
+\] Como a equa√ß√£o √© homog√™nea, temos pelo menos a solu√ß√£o trivial: $x_1 = 0$, $x_2=0$ e $x_3 = 0$. Se esta for a √∫nica solu√ß√£o, ent√£o os vetores s√£o LI. Se existir alguma outra solu√ß√£o que n√£o seja a trivial, ent√£o os vetores s√£o LD.
 
-Resolver a equaÁ„o vetorial equivale a resolver o sistema linear
+Resolver a equa√ß√£o vetorial equivale a resolver o sistema linear
 \[
 \left[
   \begin{array}{ccc}
@@ -138,7 +138,7 @@ Resolver a equaÁ„o vetorial equivale a resolver o sistema linear
     0 \\
   \end{array}
 \right]
-\] … f·cil de ver que a ˙nica soluÁ„o deste sistema È a trivial e, portanto, os vetores s„o LI. Se este sistema n„o fosse f·cil de resolver, deverÌamos comeÁar a resolvÍ-lo por escalonamento, como de costume. $\ \lhd$
+\] √â f√°cil de ver que a √∫nica solu√ß√£o deste sistema √© a trivial e, portanto, os vetores s√£o LI. Se este sistema n√£o fosse f√°cil de resolver, dever√≠amos come√ßar a resolv√™-lo por escalonamento, como de costume. $\ \lhd$
 \end{example}
 
 \begin{example}\label{exp:2}
@@ -172,7 +172,7 @@ Analisamos agora os vetores
     1 \\
   \end{array}
 \right].
-\] Como no exemplo anterior, para verificar se s„o LI, nÛs devemos considerar a equaÁ„o vetorial
+\] Como no exemplo anterior, para verificar se s√£o LI, n√≥s devemos considerar a equa√ß√£o vetorial
 \[
 x_1 \left[
   \begin{array}{c}
@@ -209,9 +209,9 @@ x_4\left[
     0 \\
   \end{array}
 \right].
-\] Como a equaÁ„o È homogÍnea, temos pelo menos a soluÁ„o trivial: $x_1 = 0$, $x_2=0$ e $x_3 = 0$. Se esta for a ˙nica soluÁ„o, ent„o os vetores s„o LI. Se existir alguma outra soluÁ„o que n„o seja a trivial, ent„o os vetores s„o LD.
+\] Como a equa√ß√£o √© homog√™nea, temos pelo menos a solu√ß√£o trivial: $x_1 = 0$, $x_2=0$ e $x_3 = 0$. Se esta for a √∫nica solu√ß√£o, ent√£o os vetores s√£o LI. Se existir alguma outra solu√ß√£o que n√£o seja a trivial, ent√£o os vetores s√£o LD.
 
-Resolver a equaÁ„o vetorial equivale a resolver o sistema linear
+Resolver a equa√ß√£o vetorial equivale a resolver o sistema linear
 \[
 \left[
   \begin{array}{cccc}
@@ -235,32 +235,32 @@ Resolver a equaÁ„o vetorial equivale a resolver o sistema linear
     0 \\
   \end{array}
 \right].
-\] Em um sistema com mais vari·veis do que equaÁıes, podemos n„o ter soluÁıes (no caso de alguma linha inconsistente) ou podemos ter infinitas soluÁıes (no caso de haver vari·veis livres). N„o È possÌvel ter unicidade. Como j· sabemos que em um sistema homogÍneo, sempre temos pelo menos a soluÁ„o trivial $x_1 = 0$, $x_2=0$, $x_3=0$ e $x_4 = 0$, podemos concluir que existem infinitas soluÁıes. Logo, o conjunto de vetores È LD.
+\] Em um sistema com mais vari√°veis do que equa√ß√µes, podemos n√£o ter solu√ß√µes (no caso de alguma linha inconsistente) ou podemos ter infinitas solu√ß√µes (no caso de haver vari√°veis livres). N√£o √© poss√≠vel ter unicidade. Como j√° sabemos que em um sistema homog√™neo, sempre temos pelo menos a solu√ß√£o trivial $x_1 = 0$, $x_2=0$, $x_3=0$ e $x_4 = 0$, podemos concluir que existem infinitas solu√ß√µes. Logo, o conjunto de vetores √© LD.
 \end{example}
 
-O argumento que utilizamos no Exemplo \ref{exp:2} acima È geral e se aplica em v·rias situaÁıes. Temos
+O argumento que utilizamos no Exemplo \ref{exp:2} acima √© geral e se aplica em v√°rias situa√ß√µes. Temos
 \[
-\boxed{\text{Se $k>m$, ent„o os vetores } \vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m \text{ s„o necessariamente LD.}}
-\] Desta forma, n„o existem quatro vetores LI em $\bR^3$. N„o conseguirÌamos encontrar sete vetores LI em $\bR^5$ e assim por diante.
+\boxed{\text{Se $k>m$, ent√£o os vetores } \vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m \text{ s√£o necessariamente LD.}}
+\] Desta forma, n√£o existem quatro vetores LI em $\bR^3$. N√£o conseguir√≠amos encontrar sete vetores LI em $\bR^5$ e assim por diante.
 
 
-FaÁamos agora algumas observaÁıes gerais sobre independÍncia linear:
+Fa√ßamos agora algumas observa√ß√µes gerais sobre independ√™ncia linear:
 \begin{itemize}
-  \item O vetor nulo, mesmo que sozinho, È LD. Se $\vec{v} = \vec{0}$ estiver em um conjunto de vetores, este conjunto ser· automaticamente LD.
-  \item Ao considerarmos apenas dois vetores $\vec{u}$ e $\vec{v}$, dizer que estes vetores s„o LD significa que eles s„o m˙ltiplos um do outro e, portanto, colineares.
-  \item Veremos mais adiante no curso que a dimens„o do espaÁo gerado por vetores linearmente independentes È exatamente o n˙mero de vetores. Desta maneira, concluiremos, por exemplo, que o conjunto gerado por dois vetores do espaÁo tridimensional È um espaÁo linear de dimens„o dois: um plano.
+  \item O vetor nulo, mesmo que sozinho, √© LD. Se $\vec{v} = \vec{0}$ estiver em um conjunto de vetores, este conjunto ser√° automaticamente LD.
+  \item Ao considerarmos apenas dois vetores $\vec{u}$ e $\vec{v}$, dizer que estes vetores s√£o LD significa que eles s√£o m√∫ltiplos um do outro e, portanto, colineares.
+  \item Veremos mais adiante no curso que a dimens√£o do espa√ßo gerado por vetores linearmente independentes √© exatamente o n√∫mero de vetores. Desta maneira, concluiremos, por exemplo, que o conjunto gerado por dois vetores do espa√ßo tridimensional √© um espa√ßo linear de dimens√£o dois: um plano.
 \end{itemize}
 
 
-\section{IndependÍncia linear e sistemas lineares}
+\section{Independ√™ncia linear e sistemas lineares}
 
-Na ˙ltima semana (capÌtulo anterior), vimos que resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o vetor $\vec{b}$ È uma combinaÁ„o linear das colunas de $A$. Na seÁ„o anterior, introduzimos a quest„o de decidir se os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ s„o LI ou LD. Isto, consequentemente\footnote{Lembra que uma equaÁ„o vetorial pode ser reescrita como uma equaÁ„o matricial!}, equivale a decidir se existe soluÁ„o n„o trivial para o sistema linear homogÍneo
+Na √∫ltima semana (cap√≠tulo anterior), vimos que resolver o sistema linear $A \vec{x} = \vec{b}$ equivale a decidir se o vetor $\vec{b}$ √© uma combina√ß√£o linear das colunas de $A$. Na se√ß√£o anterior, introduzimos a quest√£o de decidir se os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ s√£o LI ou LD. Isto, consequentemente\footnote{Lembra que uma equa√ß√£o vetorial pode ser reescrita como uma equa√ß√£o matricial!}, equivale a decidir se existe solu√ß√£o n√£o trivial para o sistema linear homog√™neo
 \[
 A \vec{x} = \vec{0},
-\] onde a matriz $A$ È formada com os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ como colunas.
+\] onde a matriz $A$ √© formada com os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ como colunas.
 
 \begin{example}
-Naturalmente, podemos traduzir os exemplos da seÁ„o anterior desta forma. Ou seja no Exemplo \ref{exp:1}, temos que a matriz
+Naturalmente, podemos traduzir os exemplos da se√ß√£o anterior desta forma. Ou seja no Exemplo \ref{exp:1}, temos que a matriz
 \[
 A = \left[
   \begin{array}{ccc}
@@ -278,18 +278,18 @@ B = \left[
     1 & 0 & 1 & 1  \\
   \end{array}
 \right]
-\] do Exemplo \ref{exp:2} s„o linearmente dependentes (LD). $\ \lhd$
+\] do Exemplo \ref{exp:2} s√£o linearmente dependentes (LD). $\ \lhd$
 \end{example}
 
-Podemos pensar ainda de outra forma. Considere uma matriz $A$ de ordem $m\times n.$ Para decidir se as colunas de $A$ s„o LI, devemos procurar por soluÁıes n„o triviais do sistema linear cuja matriz associada È $A$. Ao resolver um \textbf{sistema homogÍneo} por escalonamento, sabemos que
+Podemos pensar ainda de outra forma. Considere uma matriz $A$ de ordem $m\times n.$ Para decidir se as colunas de $A$ s√£o LI, devemos procurar por solu√ß√µes n√£o triviais do sistema linear cuja matriz associada √© $A$. Ao resolver um \textbf{sistema homog√™neo} por escalonamento, sabemos que
 \begin{itemize}
-  \item Se existirem mais colunas do que linhas ($i.e. \ m<n$), ent„o as colunas de $A$ s„o necessariamente LD.
-  \item Se existirem mais linhas do que colunas ($i.e. \ m>n$), procedemos por escalonamento. Se todas as colunas da matriz $A$ possuirem posiÁ„o de pivÙ, ent„o as colunas s„o LI (pois daÌ a ˙nica soluÁ„o do sistema homogÍneo È a trivial). 
-  \item No caso de alguma coluna n„o possuir posiÁ„o de pivÙ, o sistema homogÍneo possui pelo menos uma vari·vel livre; logo, as colunas de $A$ s„o LD.
+  \item Se existirem mais colunas do que linhas ($i.e. \ m<n$), ent√£o as colunas de $A$ s√£o necessariamente LD.
+  \item Se existirem mais linhas do que colunas ($i.e. \ m>n$), procedemos por escalonamento. Se todas as colunas da matriz $A$ possuirem posi√ß√£o de piv√¥, ent√£o as colunas s√£o LI (pois da√≠ a √∫nica solu√ß√£o do sistema homog√™neo √© a trivial). 
+  \item No caso de alguma coluna n√£o possuir posi√ß√£o de piv√¥, o sistema homog√™neo possui pelo menos uma vari√°vel livre; logo, as colunas de $A$ s√£o LD.
 \end{itemize}
 
 \begin{example}
-Decidir se as colunas de $A$ s„o LI:
+Decidir se as colunas de $A$ s√£o LI:
 \[
 A = \left[
 \begin{array}{rrrr}
@@ -299,7 +299,7 @@ A = \left[
    -2&1&2&-3
 \end{array}
 \right].
-\] Como as colunas de $A$ s„o quatro vetores de $\bR^4$, pode ser que sejam LI (caso tivesse uma coluna a mais, saberÌamos automaticamente serem LD). Aplicando o algoritmo de escalonamento, sabemos que
+\] Como as colunas de $A$ s√£o quatro vetores de $\bR^4$, pode ser que sejam LI (caso tivesse uma coluna a mais, saber√≠amos automaticamente serem LD). Aplicando o algoritmo de escalonamento, sabemos que
 \[
 A \sim \left[
 \begin{array}{cccc}
@@ -309,7 +309,7 @@ A \sim \left[
    0&0&0&0\\
 \end{array}
 \right].
-\] Notando que a ˙ltima coluna n„o possui posiÁ„o de pivÙ, concluimos que as colunas de $A$ s„o LD. Isto pois, neste caso, o sistema linear homogÍneo associado, $A \vec{x} = \vec{0}$, cuja matriz aumentada associada È
+\] Notando que a √∫ltima coluna n√£o possui posi√ß√£o de piv√¥, concluimos que as colunas de $A$ s√£o LD. Isto pois, neste caso, o sistema linear homog√™neo associado, $A \vec{x} = \vec{0}$, cuja matriz aumentada associada √©
 \[
 \left[
 \begin{array}{cccc|c}
@@ -319,26 +319,26 @@ A \sim \left[
    0&0&0&0&0\\
 \end{array}
 \right],
-\] possui uma vari·vel livre (e portanto outras soluÁıes que n„o a trivial). $\ \lhd$
+\] possui uma vari√°vel livre (e portanto outras solu√ß√µes que n√£o a trivial). $\ \lhd$
 \end{example}
 
 
 
-\section{TransformaÁıes lineares}
+\section{Transforma√ß√µes lineares}
 
 
-Uma \textbf{transformaÁ„o linear} È um tipo especial de funÁ„o que associa um vetor a outro vetor
+Uma \textbf{transforma√ß√£o linear} √© um tipo especial de fun√ß√£o que associa um vetor a outro vetor
 \[
 T: \{ \text{vetores} \} \to \{ \text{vetores} \}
 \] e com a propriedade adicional:
 \[
 T\big( a \vec{u} + b \vec{v} \big) = aT(\vec{u}) + bT(\vec{v}), \quad \text{para todos } a, b \in \bR \quad \text{e todos } \vec{u}, \vec{v}.
 \]
-Em geral, pensamos em uma transformaÁ„o linear como ``transformando um vetor em outro'' de forma linear, isto È, satisfazendo a propriedade acima.
+Em geral, pensamos em uma transforma√ß√£o linear como ``transformando um vetor em outro'' de forma linear, isto √©, satisfazendo a propriedade acima.
 
 
 \begin{example}
-A aplicaÁ„o $T: \bR^3 \to \bR^3$ dada por $T(\vec{u}) = 3\vec{u}$ È a transformaÁ„o linear que transforma um vetor de $\bR^3$ no vetor que tem o triplo do comprimento. Utilizamos a prÛpria fÛrmula da transformada para verificar que a tranformaÁ„o $T$ È de fato linear:
+A aplica√ß√£o $T: \bR^3 \to \bR^3$ dada por $T(\vec{u}) = 3\vec{u}$ √© a transforma√ß√£o linear que transforma um vetor de $\bR^3$ no vetor que tem o triplo do comprimento. Utilizamos a pr√≥pria f√≥rmula da transformada para verificar que a tranforma√ß√£o $T$ √© de fato linear:
 \[
 T\big( a \vec{u} + b \vec{v} \big) = 3 ( a \vec{u} + b \vec{v} ) = a \cdot 3 \vec{u} + b \cdot 3 \vec{v} = aT(\vec{u}) + bT(\vec{v}). \lhd
 \]
@@ -346,16 +346,16 @@ T\big( a \vec{u} + b \vec{v} \big) = 3 ( a \vec{u} + b \vec{v} ) = a \cdot 3 \ve
 
 
 \begin{example}\label{exp:4}
-TambÈm È linear a transformaÁ„o que faz uma rotaÁ„o de um ‚ngulo $\pi / 2$. Tente se convencer geometricamente que esta transformaÁ„o È uma transformaÁ„o linear. Voltaremos a este exmeplo com mais detalhes na seÁ„o seguinte$. \ \lhd$
+Tamb√©m √© linear a transforma√ß√£o que faz uma rota√ß√£o de um √¢ngulo $\pi / 2$. Tente se convencer geometricamente que esta transforma√ß√£o √© uma transforma√ß√£o linear. Voltaremos a este exmeplo com mais detalhes na se√ß√£o seguinte$. \ \lhd$
 \end{example}
 
 
 
 \begin{example}\label{exp:7}
-Consideramos a transformaÁ„o $T: \bR^2 \to \bR^3$, que transforma vetores de $\bR^2$ em vetores de $\bR^3$, dada pela fÛrmula
+Consideramos a transforma√ß√£o $T: \bR^2 \to \bR^3$, que transforma vetores de $\bR^2$ em vetores de $\bR^3$, dada pela f√≥rmula
 \[
 T(x_1, x_2) = (x_1 - 3 x_2, 3x_1 + 5x_2, -x_1 + x_2).
-\] Nota que, excepcionalmente, estamos representando os vetores como linhas. … comum quando tratamos de transformaÁıes lineares. Esta fÛrmula nos diz, por exemplo, que os vetores
+\] Nota que, excepcionalmente, estamos representando os vetores como linhas. √â comum quando tratamos de transforma√ß√µes lineares. Esta f√≥rmula nos diz, por exemplo, que os vetores
 \[
 \vec{u} =
 \left[
@@ -371,7 +371,7 @@ T(x_1, x_2) = (x_1 - 3 x_2, 3x_1 + 5x_2, -x_1 + x_2).
     3 \\
   \end{array}
 \right]
-\] s„o transformados nos vetores
+\] s√£o transformados nos vetores
 \[
 T\big(\vec{u}\big) =
 \left[
@@ -412,13 +412,13 @@ T\big(\vec{v}\big) =
 
 
 
-\section{Matriz de uma transformaÁ„o linear}
+\section{Matriz de uma transforma√ß√£o linear}
 
 
-Voltemos ‡ transformaÁ„o linear
+Voltemos √† transforma√ß√£o linear
 \[
 T(x_1, x_2) = (x_1 - 3 x_2, 3x_1 + 5x_2, -x_1 + x_2)
-\] do Exemplo \ref{exp:7}. Lembramos que um vetor qualquer de $\bR^2$ pode ser escrito como combinaÁ„o linear dos vetores
+\] do Exemplo \ref{exp:7}. Lembramos que um vetor qualquer de $\bR^2$ pode ser escrito como combina√ß√£o linear dos vetores
 \[
 \vec{e}_1 =
 \left[
@@ -455,10 +455,10 @@ x_2 \left[
     1\\
   \end{array}
 \right] = x_1 \vec{e}_1 + x_2 \vec{e}_2.
-\] Logo, utilizando a propriedade de a transformaÁ„o ser linear, temos que
+\] Logo, utilizando a propriedade de a transforma√ß√£o ser linear, temos que
 \[
 T( \vec{u} ) = T\big( x_1 \vec{e}_1 + x_2 \vec{e}_2 \big) = x_1 T(\vec{e}_1) + x_2 T(\vec{e}_2).
-\] Calculamos $T(\vec{e}_1)$ e $T(\vec{e}_2)$ pela fÛrmula dada da transformaÁ„o linear:
+\] Calculamos $T(\vec{e}_1)$ e $T(\vec{e}_2)$ pela f√≥rmula dada da transforma√ß√£o linear:
 \[
 T(\vec{e}_1) =
 \left[
@@ -506,13 +506,13 @@ x_1 \left[
     x_2 \\
   \end{array}
 \right].
-\] Desta forma, associamos uma matriz de ordem $3 \times 2$ ‡ transformaÁ„o linear $T: \bR^2 \to \bR^3$.
+\] Desta forma, associamos uma matriz de ordem $3 \times 2$ √† transforma√ß√£o linear $T: \bR^2 \to \bR^3$.
 
-O procedimento que aplicamos acima n„o È particular do exemplo que analisamos, de modo que È sempre possÌvel associar a uma transformaÁ„o linear $T: \bR^n \to \bR^m$ uma matriz $A$ de ordem $m\times n$, chamada \textbf{matriz canÙnica associada ‡ transformaÁ„o linear} $T$ ou apenas \textbf{matriz associada} a $T$, cujas colunas s„o os vetores $T(\vec{e}_1), T(\vec{e}_2), T(\vec{e}_3), \dots, T(\vec{e}_n) \in \bR^m$ (e portanto $n$ colunas com $m$ componentes cada).
+O procedimento que aplicamos acima n√£o √© particular do exemplo que analisamos, de modo que √© sempre poss√≠vel associar a uma transforma√ß√£o linear $T: \bR^n \to \bR^m$ uma matriz $A$ de ordem $m\times n$, chamada \textbf{matriz can√¥nica associada √† transforma√ß√£o linear} $T$ ou apenas \textbf{matriz associada} a $T$, cujas colunas s√£o os vetores $T(\vec{e}_1), T(\vec{e}_2), T(\vec{e}_3), \dots, T(\vec{e}_n) \in \bR^m$ (e portanto $n$ colunas com $m$ componentes cada).
 
 
 \begin{example}
-A transformaÁ„o linear $T: \bR^3 \to \bR^3$, $T(\vec{u}) = 5 \vec{u}$, satisfaz
+A transforma√ß√£o linear $T: \bR^3 \to \bR^3$, $T(\vec{u}) = 5 \vec{u}$, satisfaz
 \[
 T(\vec{e}_1) =
 \left[
@@ -559,10 +559,10 @@ T(\vec{x}) = \left[
 
 
 \begin{example}\label{exp:rotacao}
-O mÈtodo acima pode tambÈm ser aplicado para conseguirmos uma fÛrmula para transformaÁıes lineares como as do Exemplo \ref{exp:4}. Vamos considerar a aplicaÁ„o $T: \bR^2 \to \bR^2$ definida por
+O m√©todo acima pode tamb√©m ser aplicado para conseguirmos uma f√≥rmula para transforma√ß√µes lineares como as do Exemplo \ref{exp:4}. Vamos considerar a aplica√ß√£o $T: \bR^2 \to \bR^2$ definida por
 \[
-T(\vec{x}) = \text{rotaÁ„o no sentido anti-hor·rio de $\vec{x}$ por um ‚ngulo } \theta \in (0, 2\pi).
-\] A matriz da transformaÁ„o linear tem por colunas a imagem por $T$ dos vetores $\vec{e}_1$ e $\vec{e}_2$. Observamos que (ver figura)
+T(\vec{x}) = \text{rota√ß√£o no sentido anti-hor√°rio de $\vec{x}$ por um √¢ngulo } \theta \in (0, 2\pi).
+\] A matriz da transforma√ß√£o linear tem por colunas a imagem por $T$ dos vetores $\vec{e}_1$ e $\vec{e}_2$. Observamos que (ver figura)
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=0.8\linewidth]{\dir/Semana03/semana03-rot}
@@ -601,70 +601,70 @@ T(\vec{x}) = \left[
 
 
 
-\section{TransformaÁıes injetoras, sobrejetoras e invertÌveis}
+\section{Transforma√ß√µes injetoras, sobrejetoras e invert√≠veis}
 
 
-Como de costume, dada uma funÁ„o $f: A \to B$, diz-se que $A$ È o domÌnio de $f$ enquanto $B$ È o contradomÌnio. A imagem de $f$ È o subconjunto de $B$ que consiste de todos os elementos $y \in B$ tais que $f(x) = y$ ou, intuitivamente, que consiste de ``todos os elementos de $B$ que s„o atingidos pela funÁ„o $f$''.
+Como de costume, dada uma fun√ß√£o $f: A \to B$, diz-se que $A$ √© o dom√≠nio de $f$ enquanto $B$ √© o contradom√≠nio. A imagem de $f$ √© o subconjunto de $B$ que consiste de todos os elementos $y \in B$ tais que $f(x) = y$ ou, intuitivamente, que consiste de ``todos os elementos de $B$ que s√£o atingidos pela fun√ß√£o $f$''.
 
-Na hora de decidir se uma funÁ„o È invertÌvel ou n„o, duas propriedades s„o essenciais:
+Na hora de decidir se uma fun√ß√£o √© invert√≠vel ou n√£o, duas propriedades s√£o essenciais:
 \begin{enumerate}[$1)$]
-  \item cada elemento de $B$ ser a imagem de no m·ximo um elemento de $A$, caso em que $f$ È dita \textbf{injetora} ou \textbf{injetiva};
-  \item a imagem de $f$ ser igual ao contradomÌnio, caso em que $f$ diz-se \textbf{sobrejetora} ou \textbf{sobrejetiva}.
+  \item cada elemento de $B$ ser a imagem de no m√°ximo um elemento de $A$, caso em que $f$ √© dita \textbf{injetora} ou \textbf{injetiva};
+  \item a imagem de $f$ ser igual ao contradom√≠nio, caso em que $f$ diz-se \textbf{sobrejetora} ou \textbf{sobrejetiva}.
 \end{enumerate}
 
-Quando estas duas propriedades s„o satisfeitas, isto È, quando a funÁ„o $f$ È injetora e sobrejetora, vale que $f$ È \textbf{invertÌvel}: podemos encontrar uma funÁ„o $f^{-1} : B \to A$ que satisfaz
+Quando estas duas propriedades s√£o satisfeitas, isto √©, quando a fun√ß√£o $f$ √© injetora e sobrejetora, vale que $f$ √© \textbf{invert√≠vel}: podemos encontrar uma fun√ß√£o $f^{-1} : B \to A$ que satisfaz
 \[
 f^{-1}\big( f (x)\big) = x, \ \text{para todo } x \in A  \quad \text{e} \quad f\big( f^{-1} (y)\big) = y, \ \text{para todo } y \in B.
-\] Ao tentarmos encontrar uma \textbf{funÁ„o inversa} $f^{-1}$, as propriedades de ser injetora e sobrejetora, aparecem naturalmente.
+\] Ao tentarmos encontrar uma \textbf{fun√ß√£o inversa} $f^{-1}$, as propriedades de ser injetora e sobrejetora, aparecem naturalmente.
 
-Estas definiÁıes s„o usuais para funÁıes quaisquer. A partir de agora, vamos analisar quando que transformaÁıes lineares s„o injetoras, sobrejetoras e/ou invertÌveis. Vamos ver, em particular, que È bem mais f·cil estudar tais propriedades para transformaÁıes lineares.
+Estas defini√ß√µes s√£o usuais para fun√ß√µes quaisquer. A partir de agora, vamos analisar quando que transforma√ß√µes lineares s√£o injetoras, sobrejetoras e/ou invert√≠veis. Vamos ver, em particular, que √© bem mais f√°cil estudar tais propriedades para transforma√ß√µes lineares.
 
-\subsection{TransformaÁıes lineares injetoras}
+\subsection{Transforma√ß√µes lineares injetoras}
 
-A transformaÁ„o linear $T: \bR^n \to \bR^m$ È injetora quando, para $\vec{b} \in \bR^m$, a equaÁ„o
+A transforma√ß√£o linear $T: \bR^n \to \bR^m$ √© injetora quando, para $\vec{b} \in \bR^m$, a equa√ß√£o
 \[
 T(\vec{x}) = \vec{b}
-\] possuir uma ˙nica soluÁ„o ou nenhuma (no m·ximo uma -- comparar com a definiÁ„o acima). Como vimos, existe uma matriz $A$ de ordem $m\times n$ associada ‡ transformaÁ„o linear $T$, de modo que temos que analisar as soluÁıes de
+\] possuir uma √∫nica solu√ß√£o ou nenhuma (no m√°ximo uma -- comparar com a defini√ß√£o acima). Como vimos, existe uma matriz $A$ de ordem $m\times n$ associada √† transforma√ß√£o linear $T$, de modo que temos que analisar as solu√ß√µes de
 \[
 A\vec{x} = \vec{b}.
 \] Recaimos novamente em um sistema linear!
 
-No caso particular em que $\vec{b} = \vec{0}$, o sistema homogÍneo $A\vec{x} = \vec{0}$ sempre possui a soluÁ„o trivial $\vec{x} = \vec{0}$. Neste caso, para que a transformaÁ„o linear seja injetora devemos verificar que esta È a ˙nica soluÁ„o de $A\vec{x} = \vec{0}$. Na verdade, È possÌvel verificar que:
+No caso particular em que $\vec{b} = \vec{0}$, o sistema homog√™neo $A\vec{x} = \vec{0}$ sempre possui a solu√ß√£o trivial $\vec{x} = \vec{0}$. Neste caso, para que a transforma√ß√£o linear seja injetora devemos verificar que esta √© a √∫nica solu√ß√£o de $A\vec{x} = \vec{0}$. Na verdade, √© poss√≠vel verificar que:
 \[
-\boxed{\text{$T$ È injetora se, e somente se, $A\vec{x} = \vec{0}$ possui apenas a soluÁ„o trivial.}}
-\] Em particular, este caso somente È possÌvel se $n \le m$ (reler observaÁıes que seguem o Exemplo 3).
+\boxed{\text{$T$ √© injetora se, e somente se, $A\vec{x} = \vec{0}$ possui apenas a solu√ß√£o trivial.}}
+\] Em particular, este caso somente √© poss√≠vel se $n \le m$ (reler observa√ß√µes que seguem o Exemplo 3).
 
-\begin{proof}[Justificativa da afirmaÁ„o]
-Vamos provar matematicamente que, se soubermos que $A\vec{x} = \vec{0}$ possui apenas a soluÁ„o trivial, ent„o vale que $A\vec{x} = \vec{b}$ possui no m·ximo uma soluÁ„o, para qualquer escolha de vetor $\vec{b}$. Isto, por sua vez, implica que $T$ È injetora. Caso n„o existam soluÁıes ou caso exista apenas uma, nada h· para provar. Suponhamos que ent„o que existem infinitas soluÁıes (esta seria a ˙nica outra possibilidade). Em particular, existiriam duas distintas:
+\begin{proof}[Justificativa da afirma√ß√£o]
+Vamos provar matematicamente que, se soubermos que $A\vec{x} = \vec{0}$ possui apenas a solu√ß√£o trivial, ent√£o vale que $A\vec{x} = \vec{b}$ possui no m√°ximo uma solu√ß√£o, para qualquer escolha de vetor $\vec{b}$. Isto, por sua vez, implica que $T$ √© injetora. Caso n√£o existam solu√ß√µes ou caso exista apenas uma, nada h√° para provar. Suponhamos que ent√£o que existem infinitas solu√ß√µes (esta seria a √∫nica outra possibilidade). Em particular, existiriam duas distintas:
 \[
-\vec{x}_1 \neq \vec{x}_2 \text{ tais que } A \vec{x}_1 = \vec{b} \text{ e tambÈm } A \vec{x}_2 = \vec{b}.
-\] Por linearidade, temos ent„o que $A (\vec{x}_1 - \vec{x}_2) = \vec{b} - \vec{b} = \vec{0}$. No entanto, nossa hipÛtese garante que somente existe a soluÁ„o trivial para a equaÁ„o $A\vec{x} = \vec{0}$, de modo que deverÌamos ter $\vec{x}_1 = \vec{x}_2$. Em outras palavras, se $A\vec{x} = \vec{0}$ possuir apenas a soluÁ„o trivial, ent„o n„o existe mais do que uma soluÁ„o para $A\vec{x} = \vec{b}$. Portanto, $T$ È injetora.
+\vec{x}_1 \neq \vec{x}_2 \text{ tais que } A \vec{x}_1 = \vec{b} \text{ e tamb√©m } A \vec{x}_2 = \vec{b}.
+\] Por linearidade, temos ent√£o que $A (\vec{x}_1 - \vec{x}_2) = \vec{b} - \vec{b} = \vec{0}$. No entanto, nossa hip√≥tese garante que somente existe a solu√ß√£o trivial para a equa√ß√£o $A\vec{x} = \vec{0}$, de modo que dever√≠amos ter $\vec{x}_1 = \vec{x}_2$. Em outras palavras, se $A\vec{x} = \vec{0}$ possuir apenas a solu√ß√£o trivial, ent√£o n√£o existe mais do que uma solu√ß√£o para $A\vec{x} = \vec{b}$. Portanto, $T$ √© injetora.
 \end{proof}
 
-Notem que a afirmaÁ„o acima È tambÈm equivalente a
+Notem que a afirma√ß√£o acima √© tamb√©m equivalente a
 \[
-\boxed{\text{$T$ È injetora se, e somente se, as colunas de $A$ s„o linearmente independentes.}}
-\] Vamos deixar exemplos de injetividade para a subseÁ„o seguinte (ver Exemplos \ref{exp:injsob1} e \ref{exp:injsob2}).
+\boxed{\text{$T$ √© injetora se, e somente se, as colunas de $A$ s√£o linearmente independentes.}}
+\] Vamos deixar exemplos de injetividade para a subse√ß√£o seguinte (ver Exemplos \ref{exp:injsob1} e \ref{exp:injsob2}).
 
 
-\subsection{TransformaÁıes lineares sobrejetoras}
+\subsection{Transforma√ß√µes lineares sobrejetoras}
 
-A transformaÁ„o linear $T: \bR^n \to \bR^m$ È sobrejetora quando, para todo $\vec{b} \in \bR^n$, a equaÁ„o
+A transforma√ß√£o linear $T: \bR^n \to \bR^m$ √© sobrejetora quando, para todo $\vec{b} \in \bR^n$, a equa√ß√£o
 \[
 T(\vec{x}) = \vec{b}
-\] possui alguma soluÁ„o (comparar com a definiÁ„o no inÌcio desta seÁ„o). Seja $A$ a matriz de ordem $m\times n$ associada a $T$. Assim, para verificar que $T$ È sobrejetora, devemos verificar que, para qualquer $\vec{b} \in \bR^m$, o sistema linear
+\] possui alguma solu√ß√£o (comparar com a defini√ß√£o no in√≠cio desta se√ß√£o). Seja $A$ a matriz de ordem $m\times n$ associada a $T$. Assim, para verificar que $T$ √© sobrejetora, devemos verificar que, para qualquer $\vec{b} \in \bR^m$, o sistema linear
 \[
 A\vec{x} = \vec{b}
-\] possui ao menos uma soluÁ„o (uma ou infinitas). Isto È equivalente a:
+\] possui ao menos uma solu√ß√£o (uma ou infinitas). Isto √© equivalente a:
 
 
 \[
-\boxed{\text{$T$ È sobrejetora se, e somente se, as colunas de $A$ geram todo o espaÁo $\bR^m$.}}
-\] Em particular, este caso somente È possÌvel se $n \ge m$ (veremos mais adiante no curso -- a imagem da transformaÁ„o $T: \bR^n \to \bR^m$ ser· de dimens„o no m·ximo igual a $n$).
+\boxed{\text{$T$ √© sobrejetora se, e somente se, as colunas de $A$ geram todo o espa√ßo $\bR^m$.}}
+\] Em particular, este caso somente √© poss√≠vel se $n \ge m$ (veremos mais adiante no curso -- a imagem da transforma√ß√£o $T: \bR^n \to \bR^m$ ser√° de dimens√£o no m√°ximo igual a $n$).
 
 
 \begin{example}\label{exp:injsob1}
-Considere a transformaÁ„o linear $T$ cuja matriz associada È
+Considere a transforma√ß√£o linear $T$ cuja matriz associada √©
 \[
 A = \left[
   \begin{array}{rrrr}
@@ -673,9 +673,9 @@ A = \left[
     0  & 0 & 0 & 3 \\
   \end{array}
 \right].
-\] Como s„o quatro colunas de $\bR^3$, vemos que as colunas s„o LD e, portanto, $T$ n„o È injetora.
+\] Como s√£o quatro colunas de $\bR^3$, vemos que as colunas s√£o LD e, portanto, $T$ n√£o √© injetora.
 
-Por outro lado, a matriz j· est· em forma escalonada. Vamos analisar se o sistema
+Por outro lado, a matriz j√° est√° em forma escalonada. Vamos analisar se o sistema
 \[
 A \vec{x} = \vec{b} \iff
 \left[
@@ -685,12 +685,12 @@ A \vec{x} = \vec{b} \iff
     0  & 0 & 0 & 3& b_3\\
   \end{array}
 \right]
-\] possui soluÁ„o para todo $\vec{b} \in \bR^3$. De fato, o sistema possui soluÁ„o (j· que nenhuma linha da sua forma escalonada È inconsistente). Em verdade, o sistema possui uma vari·vel livre. Logo, $T$ È sobrejetora.
+\] possui solu√ß√£o para todo $\vec{b} \in \bR^3$. De fato, o sistema possui solu√ß√£o (j√° que nenhuma linha da sua forma escalonada √© inconsistente). Em verdade, o sistema possui uma vari√°vel livre. Logo, $T$ √© sobrejetora.
 \end{example}
 
 
 \begin{example}\label{exp:injsob2}
-Considere a transformaÁ„o linear $T$ cuja matriz associada È
+Considere a transforma√ß√£o linear $T$ cuja matriz associada √©
 \[
 A = \left[
   \begin{array}{rrrr}
@@ -699,14 +699,14 @@ A = \left[
     0  & -4 \\
   \end{array}
 \right].
-\] Como s„o somente duas colunas, È f·cil ver que uma n„o È m˙ltipla da outra: por causa das primeiras componentes, podemos pensar que a primeira coluna È trÍs vezes a primeira, mas verificando a segunda linha j· n„o d· certo $3\cdot 7 \neq 5$. Logo, as colunas s„o LI e a transformaÁ„o $T$ È injetora.
+\] Como s√£o somente duas colunas, √© f√°cil ver que uma n√£o √© m√∫ltipla da outra: por causa das primeiras componentes, podemos pensar que a primeira coluna √© tr√™s vezes a primeira, mas verificando a segunda linha j√° n√£o d√° certo $3\cdot 7 \neq 5$. Logo, as colunas s√£o LI e a transforma√ß√£o $T$ √© injetora.
 
-Por outro lado,  as colunas de $A$ geram um espaÁo de dimens„o no m·ximo 2; logo, n„o geram $\bR^3$. Portanto, $T$ n„o È sobrejetora.
+Por outro lado,  as colunas de $A$ geram um espa√ßo de dimens√£o no m√°ximo 2; logo, n√£o geram $\bR^3$. Portanto, $T$ n√£o √© sobrejetora.
 \end{example}
 
 
-\subsection{TransformaÁıes lineares invertÌveis}
+\subsection{Transforma√ß√µes lineares invert√≠veis}
 
-Pelas observaÁıes das ˙ltimas subseÁıes, sÛ È possÌvel da transformaÁ„o linear $T: \bR^n \to \bR^m$ ser invertÌvel quando $m=n$, pois $T$ dever· ser ao mesmo tempo injetora e sobrejetora. Veremos na semana seguinte um mÈtodo para calcular a transformaÁ„o inversa $T^{-1}$, que ser· tambÈm uma transformaÁ„o linear.
+Pelas observa√ß√µes das √∫ltimas subse√ß√µes, s√≥ √© poss√≠vel da transforma√ß√£o linear $T: \bR^n \to \bR^m$ ser invert√≠vel quando $m=n$, pois $T$ dever√° ser ao mesmo tempo injetora e sobrejetora. Veremos na semana seguinte um m√©todo para calcular a transforma√ß√£o inversa $T^{-1}$, que ser√° tamb√©m uma transforma√ß√£o linear.
 
 \end{document} 

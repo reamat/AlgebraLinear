@@ -1,23 +1,23 @@
-% Este trabalho est· licenciado sob a LicenÁa Creative Commons AtribuiÁ„o-CompartilhaIgual 3.0 N„o Adaptada. Para ver uma cÛpia desta licenÁa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+% Este trabalho est√° licenciado sob a Licen√ßa Creative Commons Atribui√ß√£o-CompartilhaIgual 3.0 N√£o Adaptada. Para ver uma c√≥pia desta licen√ßa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 \documentclass[../livro.tex]{subfiles}
 
-\providecommand{\dir}{..}  %define o diretÛrio principal
+\providecommand{\dir}{..}  %define o diret√≥rio principal
 
 \begin{document}
 
 \chapter{Semanas 14 e 15}
 
-\section{Matrizes simÈtricas}
+\section{Matrizes sim√©tricas}
 
-Uma \textbf{matriz simÈtrica} È uma matriz que È igual ‡ sua transposta. Para que esta definiÁ„o faÁa sentido, apenas podemos considerar matrizes que s„o quadradas. De forma mais precisa, se $A = \begin{bmatrix} a_{ij} \end{bmatrix}$ È uma matriz de orden $n \times n$, nÛs dizemos que $A$ È simÈtrica quando $A = A^T$.
+Uma \textbf{matriz sim√©trica} √© uma matriz que √© igual √† sua transposta. Para que esta defini√ß√£o fa√ßa sentido, apenas podemos considerar matrizes que s√£o quadradas. De forma mais precisa, se $A = \begin{bmatrix} a_{ij} \end{bmatrix}$ √© uma matriz de orden $n \times n$, n√≥s dizemos que $A$ √© sim√©trica quando $A = A^T$.
 
-Formas equivalentes de dizer que $A$ È simÈtrica incluem:
+Formas equivalentes de dizer que $A$ √© sim√©trica incluem:
 \begin{enumerate}[$(1)$]
 	\item $A = A^T$;
-	\item para todos os Ìndices $i,j \in \{1,2,\dots,n\}$, temos que $a_{ij} = a_{ji}$;
-	\item as colunas de $A$ s„o iguais ‡s linhas de $A^T$;
-	\item as linhas de $A$ s„o iguais ‡s colunas de $A^T$.
+	\item para todos os √≠ndices $i,j \in \{1,2,\dots,n\}$, temos que $a_{ij} = a_{ji}$;
+	\item as colunas de $A$ s√£o iguais √†s linhas de $A^T$;
+	\item as linhas de $A$ s√£o iguais √†s colunas de $A^T$.
 \end{enumerate}
 
 \begin{example}
@@ -36,7 +36,7 @@ Formas equivalentes de dizer que $A$ È simÈtrica incluem:
 	-3 & -1 & 4 \\
 	0 &  4 & 6
 	\end{bmatrix} \checkmark
-	\] s„o simÈtricas, enquanto  as matrizes
+	\] s√£o sim√©tricas, enquanto  as matrizes
 	\[
 	\begin{bmatrix}
 	1 & -3 \\
@@ -51,26 +51,26 @@ Formas equivalentes de dizer que $A$ È simÈtrica incluem:
 	4 & -1 & -3 \\
 	0 &  4 &  1
 	\end{bmatrix} \textsc{x}
-	\] n„o s„o. Deve-se tomar o cuidado de verificar a simetria \textit{com relaÁ„o ‡ diagonal principal}. Qualquer outro tipo de simetria n„o deve interferir na nossa an·lise$. \ \lhd$
+	\] n√£o s√£o. Deve-se tomar o cuidado de verificar a simetria \textit{com rela√ß√£o √† diagonal principal}. Qualquer outro tipo de simetria n√£o deve interferir na nossa an√°lise$. \ \lhd$
 \end{example}
 
-Um dos resultados mais importantes de ¡lgebra Linear È o Teorema Espectral, que diz que toda matriz simÈtrica È diagonaliz·vel por uma base de autovetores que È ortonormal. De forma mais precisa:
+Um dos resultados mais importantes de √Ålgebra Linear √© o Teorema Espectral, que diz que toda matriz sim√©trica √© diagonaliz√°vel por uma base de autovetores que √© ortonormal. De forma mais precisa:
 
 \begin{teoespectral}
-	Suponhamos que $A$ È uma matriz simÈtrica com coeficientes reais. Ent„o:
+	Suponhamos que $A$ √© uma matriz sim√©trica com coeficientes reais. Ent√£o:
 	\begin{enumerate}[$(i)$]
-		\item todos os autovalores de $A$ s„o reais;
-		\item autovetores associados a autovalores distintos s„o ortogonais.
-		\item a dimens„o do autoespaÁo associado a um autovalor È igual ‡ multiplicidade deste autovalor como raiz do polinÙmio caracterÌstico;
+		\item todos os autovalores de $A$ s√£o reais;
+		\item autovetores associados a autovalores distintos s√£o ortogonais.
+		\item a dimens√£o do autoespa√ßo associado a um autovalor √© igual √† multiplicidade deste autovalor como raiz do polin√¥mio caracter√≠stico;
 		\item existe uma base ortonormal de $\bR^n$ formada por autovetores de $A$;
-		\item $A$ È diagonaliz·vel por uma matriz de mudanÁa de coordenadas ortonormal $P$: a matriz $P$ cujas colunas s„o os autovetores (ortonormais) de $A$ È tal que 
+		\item $A$ √© diagonaliz√°vel por uma matriz de mudan√ßa de coordenadas ortonormal $P$: a matriz $P$ cujas colunas s√£o os autovetores (ortonormais) de $A$ √© tal que 
 		\[
 		P^{T} A P = P^{-1} A P = D.
 		\]
 	\end{enumerate}
 \end{teoespectral}
 
-NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de mais nada, faremos alguns exemplos e aplicaÁıes que justificam a import‚ncia do Teorema Espectral. No entanto, È fortemente aconselhado que o leitor acompanhe os elementos da demonstraÁ„o, para efetivamente entender as propriedades essenciais das matrizes simÈtricas.
+N√≥s vamos apresentar uma prova deste resultado no final destas notas. Antes de mais nada, faremos alguns exemplos e aplica√ß√µes que justificam a import√¢ncia do Teorema Espectral. No entanto, √© fortemente aconselhado que o leitor acompanhe os elementos da demonstra√ß√£o, para efetivamente entender as propriedades essenciais das matrizes sim√©tricas.
 
 \begin{example}
 	Considere
@@ -79,13 +79,13 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	1 & -5 \\
 	-5 &  1
 	\end{bmatrix}.
-	\] O polinÙmio caracterÌstico È
+	\] O polin√¥mio caracter√≠stico √©
 	\[
 	\det \begin{bmatrix}
 	1-\lambda & -4 \\
 	-4 & 5-\lambda
 	\end{bmatrix} = (1-\lambda)^2 - 25 = \lambda^2 - 2 \lambda - 24
-	\] cujas raÌzes s„o $6$ e  $-4$. Os autovetores s„o calculados como
+	\] cujas ra√≠zes s√£o $6$ e  $-4$. Os autovetores s√£o calculados como
 	\[
 	A + 4 I = 
 	\begin{bmatrix}
@@ -99,7 +99,7 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	\left\{
 	\begin{array}{l}
 	v_1 = v_2 \\ 
-	\text{uma vari·vel livre}
+	\text{uma vari√°vel livre}
 	\end{array}
 	\right. \implies \vec{v}_1 = v_2
 	\begin{bmatrix}
@@ -120,14 +120,14 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	\left\{
 	\begin{array}{l}
 	v_2 = - v_1 \\ 
-	\text{uma vari·vel livre}
+	\text{uma vari√°vel livre}
 	\end{array}
 	\right. \implies \vec{v}_2 = v_2
 	\begin{bmatrix}
 	1 \\
 	-1
 	\end{bmatrix}.
-	\] Uma base de autovetores È
+	\] Uma base de autovetores √©
 	\[
 	\left\lbrace 
 	\begin{bmatrix}
@@ -139,7 +139,7 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	-1
 	\end{bmatrix}
 	\right\rbrace.
-	\] Observe que s„o de fato reais os autovalores e que os autovetores associados s„o ortogonais (faÁa a conta!). Se quisermos uma base ortonormal para $\bR^2$ formada por autovetores, normalizamos os que j· obtivemos:
+	\] Observe que s√£o de fato reais os autovalores e que os autovetores associados s√£o ortogonais (fa√ßa a conta!). Se quisermos uma base ortonormal para $\bR^2$ formada por autovetores, normalizamos os que j√° obtivemos:
 	\[
 	\bR^2 = \Span \left\lbrace 
 	\begin{bmatrix}
@@ -151,7 +151,7 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	-1/\sqrt{2}
 	\end{bmatrix}
 	\right\rbrace.
-	\] Lembrando do nosso processo de diagonalizaÁ„o, sabemos que
+	\] Lembrando do nosso processo de diagonaliza√ß√£o, sabemos que
 	\[
 	P =  
 	\begin{bmatrix}
@@ -175,12 +175,12 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	-4 & 0 \\
 	0  & 6
 	\end{bmatrix}.
-	\] A matriz $P$ que montamos acima È uma matriz ortogonal (de modo que $P^{-1} = P^T$), pois sabemos que autovetores associados com autovalores distintos s„o ortogonais e fizemos a normalizaÁ„o dos autovetores (lembra que uma matriz ortogonal deve ter colunas ortonormais)$. \ \lhd$
+	\] A matriz $P$ que montamos acima √© uma matriz ortogonal (de modo que $P^{-1} = P^T$), pois sabemos que autovetores associados com autovalores distintos s√£o ortogonais e fizemos a normaliza√ß√£o dos autovetores (lembra que uma matriz ortogonal deve ter colunas ortonormais)$. \ \lhd$
 \end{example}
 
 
 \begin{example}
-	Vamos aplicar o procedimento de diagonalizaÁ„o para encontrar uma base ortonormal de autovetores de uma matriz de ordem $3 \times 3$. Considere a matriz simÈtrica
+	Vamos aplicar o procedimento de diagonaliza√ß√£o para encontrar uma base ortonormal de autovetores de uma matriz de ordem $3 \times 3$. Considere a matriz sim√©trica
 	\[
 	A = 
 	\begin{bmatrix}
@@ -188,7 +188,7 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	-2 & 6 & 2 \\
 	4 & 2 & 3 \\
 	\end{bmatrix}.
-	\] O polinÙmio caracterÌstico de $A$ È 
+	\] O polin√¥mio caracter√≠stico de $A$ √© 
           \begin{align*}
 	p(\lambda) = \det (A - \lambda I ) & = 
 	\det 
@@ -202,12 +202,12 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	& = 3\lambda^2 - 27 \lambda + 42  - \left[ \lambda^3 - 9 \lambda^2 + 14 \lambda \right] + 20 \lambda - 140  \\
 	& = -\lambda^3 + 12 \lambda^2 - 21 \lambda - 98.
           \end{align*}
- Como sabemos, se os coeficientes da matriz simÈtrica acima fossem escolhidos de maneira aleatÛria, dificilmente conseguirÌamos encontrar as raÌzes deste polinÙmio com precis„o. De qualquer forma, quaisquer raÌzes racionais (este exemplo foi construido artificialmente) deste polinÙmio sÛ podem ser divisores de $98$ dividido pelos divisores de $-1$, isto È: $\pm 1, \pm 2, \pm 7, \pm 14, \pm 21$. Testando os primeiros, vemos que $-2$ È uma raiz. Pela divis„o de polinÙmios, fatoramos
+ Como sabemos, se os coeficientes da matriz sim√©trica acima fossem escolhidos de maneira aleat√≥ria, dificilmente conseguir√≠amos encontrar as ra√≠zes deste polin√¥mio com precis√£o. De qualquer forma, quaisquer ra√≠zes racionais (este exemplo foi construido artificialmente) deste polin√¥mio s√≥ podem ser divisores de $98$ dividido pelos divisores de $-1$, isto √©: $\pm 1, \pm 2, \pm 7, \pm 14, \pm 21$. Testando os primeiros, vemos que $-2$ √© uma raiz. Pela divis√£o de polin√¥mios, fatoramos
 	\[
 	p(\lambda) = -(\lambda + 2) (\lambda^2 - 14 \lambda + 49) = -(\lambda + 2)(\lambda - 7)^2.
-	\] Logo, os autovalores de $A$ s„o $-2$ (simples) e $7$ (duplo).
+	\] Logo, os autovalores de $A$ s√£o $-2$ (simples) e $7$ (duplo).
 	\begin{itemize}
-		\item AutoespaÁo associado com o autovalor $-2$:
+		\item Autoespa√ßo associado com o autovalor $-2$:
 		\[
 		A + 2 I = 
 		\begin{bmatrix}
@@ -234,17 +234,17 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 		\begin{array}{l}
 		v_1 = 2 v_2 \\
 		v_3 = - 2 v_2 \\
-		\text{1 vari·vel livre}
+		\text{1 vari√°vel livre}
 		\end{array}
 		\right. 
-		\] Assim, um autovetor associado È ($v_2 = 1$)
+		\] Assim, um autovetor associado √© ($v_2 = 1$)
 		\[
 		\vec{v}_1 = 
 		\begin{bmatrix}
 		2 \\ 1 \\ -2
 		\end{bmatrix}.
 		\]
-		\item AutoespaÁo associado com o autovalor $7$:
+		\item Autoespa√ßo associado com o autovalor $7$:
 		\[
 		A - 7 I = 
 		\begin{bmatrix}
@@ -265,7 +265,7 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 		\left\lbrace 
 		\begin{array}{l}
 		v_2 = - 2 v_1 + 2 v_3  \\
-		\text{2 vari·veis livres}
+		\text{2 vari√°veis livres}
 		\end{array}
 		\right. 
 		\] Assim, qualquer autovetor pode ser escrito parametricamente como
@@ -282,7 +282,7 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 		\begin{bmatrix}
 		0 \\ 2 \\ 1
 		\end{bmatrix}.
-		\] J· era de se esperar que encontrarÌamos duas vari·veis livres, porque sabemos (item $(iii)$ do Teorema Espectral) que deve ser dois a dimens„o do autoespaÁo associado com um autovalor de multiplicidade dois.\footnote{Enfatizamos que isto n„o È verdade para qualquer matriz, apenas para as simÈtricas!} Concluimos que uma base para o autoespaÁo $\Nul (A - 7I)$ È
+		\] J√° era de se esperar que encontrar√≠amos duas vari√°veis livres, porque sabemos (item $(iii)$ do Teorema Espectral) que deve ser dois a dimens√£o do autoespa√ßo associado com um autovalor de multiplicidade dois.\footnote{Enfatizamos que isto n√£o √© verdade para qualquer matriz, apenas para as sim√©tricas!} Concluimos que uma base para o autoespa√ßo $\Nul (A - 7I)$ √©
 		\[
 		\left\lbrace
 		\vec{v}_2 = \begin{bmatrix}
@@ -295,9 +295,9 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 		\]
 	\end{itemize}
 	
-	Observamos que, em concord‚ncia com o item $(ii)$ do Teorema Espectral, autovetores associados a autovalores distintos s„o ortogonais: temos que $\vec{v}_1$ È ortogonal a cada um dos vetores $\vec{v}_2$ e $\vec{v}_3$ (faÁa as contas!). No entanto, estes trÍs vetores n„o s„o ortogonais, pois os dois autovetores que est„o associados com o mesmo autovalor satisfazem $\vec{v}_2 \cdot \vec{v}_3 = -4 \neq 0.$
+	Observamos que, em concord√¢ncia com o item $(ii)$ do Teorema Espectral, autovetores associados a autovalores distintos s√£o ortogonais: temos que $\vec{v}_1$ √© ortogonal a cada um dos vetores $\vec{v}_2$ e $\vec{v}_3$ (fa√ßa as contas!). No entanto, estes tr√™s vetores n√£o s√£o ortogonais, pois os dois autovetores que est√£o associados com o mesmo autovalor satisfazem $\vec{v}_2 \cdot \vec{v}_3 = -4 \neq 0.$
 	
-	O fato de que os trÍs autovetores que encontramos n„o s„o ortogonais n„o contradiz o Teorema Espectral. Pelo que vimos, o autoespaÁo associado com o autovalor $7$ tem dimens„o dois. Encontramos uma base da maneira usual, mas ocorre que esta base n„o È ortogonal. Para obter uma base ortogonal, aplicamos o procedimento de Gram-Schmidt:
+	O fato de que os tr√™s autovetores que encontramos n√£o s√£o ortogonais n√£o contradiz o Teorema Espectral. Pelo que vimos, o autoespa√ßo associado com o autovalor $7$ tem dimens√£o dois. Encontramos uma base da maneira usual, mas ocorre que esta base n√£o √© ortogonal. Para obter uma base ortogonal, aplicamos o procedimento de Gram-Schmidt:
 	\[
 	\vec{u}_2 = \vec{v}_2 = 
 	\begin{bmatrix}
@@ -331,7 +331,7 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	4 \\ 2 \\ 5
 	\end{bmatrix}
 	\right\rbrace.
-	\] È uma base ortogonal de $\bR^3$ formada por autovalores da matriz $A$. Para obter uma base ortonormal, basta normalizar cada um dos vetores da base:
+	\] √© uma base ortogonal de $\bR^3$ formada por autovalores da matriz $A$. Para obter uma base ortonormal, basta normalizar cada um dos vetores da base:
 	\[
 	\left\lbrace
 	\begin{bmatrix}
@@ -344,7 +344,7 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	4/(3\sqrt{5}) \\ 2/(3\sqrt{5}) \\ 5/(3\sqrt{5})
 	\end{bmatrix}
 	\right\rbrace.
-	\] Pelo mÈtodo de diagonalizaÁ„o de matrizes, concluimos que $A$ pode ser diagonalizada pela matriz 
+	\] Pelo m√©todo de diagonaliza√ß√£o de matrizes, concluimos que $A$ pode ser diagonalizada pela matriz 
 	\[
 	P = 
 	\begin{bmatrix}
@@ -352,7 +352,7 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 	1/3  & -2/\sqrt{5} & 2/(3\sqrt{5}) \\ 
 	-2/3 &       0     & 5/(3\sqrt{5})
 	\end{bmatrix},
-	\] que, neste caso (em que $A$ È matriz simÈtrica), pode ser obtida ortogonal. Sendo $P$ ortogonal, tem-se $P^{-1} = P^T$ e portanto $P^{T} A P =  D$, isto È,
+	\] que, neste caso (em que $A$ √© matriz sim√©trica), pode ser obtida ortogonal. Sendo $P$ ortogonal, tem-se $P^{-1} = P^T$ e portanto $P^{T} A P =  D$, isto √©,
 	\[
 	\begin{bmatrix}
 	2/3  & 1/\sqrt{5}  & 4/(3\sqrt{5}) \\ 
@@ -378,69 +378,69 @@ NÛs vamos apresentar uma prova deste resultado no final destas notas. Antes de m
 \end{example}
 
 
-Enfatizamos ainda mais uma vez a aplicaÁ„o do Teorema Espectral: ele afirma que, no caso de uma matriz simÈtrica $A$, o procedimento que aplicamos nos exemplos acima sempre vai funcionar! Teremos todos os autovalores reais. Sendo um autovalor $\lambda$ de multiplicidade $m$, seremos capazes de encontrar $m$ autovetores linearmente independentes, que geram o autoespaÁo $\Nul (A - \lambda I)$. Estes podem ser ortonormalizados pelo processo de Gram-Schmidt. AlÈm disso, associados a autovalores distintos, temos autovetores ortogonais, de modo que seremos capazes de obter uma base ortonormal de autovetores de $A$.
+Enfatizamos ainda mais uma vez a aplica√ß√£o do Teorema Espectral: ele afirma que, no caso de uma matriz sim√©trica $A$, o procedimento que aplicamos nos exemplos acima sempre vai funcionar! Teremos todos os autovalores reais. Sendo um autovalor $\lambda$ de multiplicidade $m$, seremos capazes de encontrar $m$ autovetores linearmente independentes, que geram o autoespa√ßo $\Nul (A - \lambda I)$. Estes podem ser ortonormalizados pelo processo de Gram-Schmidt. Al√©m disso, associados a autovalores distintos, temos autovetores ortogonais, de modo que seremos capazes de obter uma base ortonormal de autovetores de $A$.
 
 
-\subsection{Formas quadr·ticas}
+\subsection{Formas quadr√°ticas}
 
 
-Nesta seÁ„o, apresentamos uma aplicaÁ„o matem·tica de matrizes simÈtricas. Uma \textbf{forma quadr·tica} em $\bR^n$ È uma funÁ„o polinomial em que todos os termos s„o de grau 2.
+Nesta se√ß√£o, apresentamos uma aplica√ß√£o matem√°tica de matrizes sim√©tricas. Uma \textbf{forma quadr√°tica} em $\bR^n$ √© uma fun√ß√£o polinomial em que todos os termos s√£o de grau 2.
 
 \begin{example}\label{exemplo1}
-	A funÁ„o $Q : \bR^2 \to \bR$, definida por 
+	A fun√ß√£o $Q : \bR^2 \to \bR$, definida por 
 	\[
 	Q(x_1, x_2) = 3 x_1^2 + x_1x_2
-	\] È uma forma quadr·tica em $\bR^2$, j· que cada um dos termos tem grau 2.
+	\] √© uma forma quadr√°tica em $\bR^2$, j√° que cada um dos termos tem grau 2.
 	
-	Mais geralmente, qualquer forma quadr·tica em $\bR^2$ pode ser escrita como
+	Mais geralmente, qualquer forma quadr√°tica em $\bR^2$ pode ser escrita como
 	\[
 	Q(x_1, x_2) = a x_1^2 + 2 b x_1x_2 + cx_2^2,
-	\] onde $a,b,c \in \bR$, j· que os trÍs termos acima s„o todos os possÌveis monÙmios de grau dois em duas vari·veis $x_1$ e $x_2$. O coeficiente $2$ que aparece no segundo termo È motivado pela fÛrmula mais geral (\ref{geral}) abaixo (observe que cada termo $x_i x_j$ aparece duas vezes na soma).
+	\] onde $a,b,c \in \bR$, j√° que os tr√™s termos acima s√£o todos os poss√≠veis mon√¥mios de grau dois em duas vari√°veis $x_1$ e $x_2$. O coeficiente $2$ que aparece no segundo termo √© motivado pela f√≥rmula mais geral (\ref{geral}) abaixo (observe que cada termo $x_i x_j$ aparece duas vezes na soma).
 \end{example}
 
 
 
 
 \begin{example}\label{exemplo2}
-	A funÁ„o $Q : \bR^3 \to \bR$, definida por 
+	A fun√ß√£o $Q : \bR^3 \to \bR$, definida por 
 	\[
 	Q(x_1, x_2, x_3) = x_2^2 - x_3^2 + 3 x_1 x_2 - 8 x_1 x_3
-	\] È uma forma quadr·tica em $\bR^3$. Qualquer forma quadr·tica em $\bR^3$ pode ser escrita como
+	\] √© uma forma quadr√°tica em $\bR^3$. Qualquer forma quadr√°tica em $\bR^3$ pode ser escrita como
 	\[
 	Q(x_1, x_2) = a x_1^2 + b x_2^2 + cx_3^2 + 2 dx_1x_2 +2  ex_1x_3 +2  fx_2x_3,
 	\] onde $a,b,c, d, e, f \in \bR$.
 \end{example}
 
 
-De forma geral, uma forma quadr·tica $Q :\bR^n \to \bR$ pode ser escrita como
+De forma geral, uma forma quadr√°tica $Q :\bR^n \to \bR$ pode ser escrita como
 \begin{equation}\label{geral}
 Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij} x_i x_j,
-\end{equation} onde cada um dos coeficientes $a_{ij}$ s„o n˙meros reais. Podemos tambÈm supor que a matriz $A = (a_{ij})$ È simÈtrica.\footnote{Caso  $Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} \sum_{j=1}^{n} b_{ij} x_i x_j$ com uma matriz $B = (b_{ij})$  n„o  simÈtrica, podemos escrever $Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} b_{ii} x_i^2 + \sum_{i < j} (b_{ij} + b_{ji}) x_i x_j$. Definindo $a_{ij} = \frac{b_{ij} + b_{ji}}{2}$ temos tambÈm $Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} a_{ii} x_i^2 + 2 \sum_{i < j} a_{ij} x_i x_j$. Esta forma È mais semelhante com as dos exemplos acima. Note como aparece o coeficiente 2 nos termos com $i \neq j$. Finalmente, observamos que $A = (a_{ij})$ È uma matriz simÈtrica e que $\sum_{i=1}^{n} \sum_{j=1}^{n} b_{ij} x_i x_j = \sum_{i=1}^{n} a_{ii} x_i^2 + 2 \sum_{i < j} a_{ij} x_i x_j = \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij} x_i x_j.$}
+\end{equation} onde cada um dos coeficientes $a_{ij}$ s√£o n√∫meros reais. Podemos tamb√©m supor que a matriz $A = (a_{ij})$ √© sim√©trica.\footnote{Caso  $Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} \sum_{j=1}^{n} b_{ij} x_i x_j$ com uma matriz $B = (b_{ij})$  n√£o  sim√©trica, podemos escrever $Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} b_{ii} x_i^2 + \sum_{i < j} (b_{ij} + b_{ji}) x_i x_j$. Definindo $a_{ij} = \frac{b_{ij} + b_{ji}}{2}$ temos tamb√©m $Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} a_{ii} x_i^2 + 2 \sum_{i < j} a_{ij} x_i x_j$. Esta forma √© mais semelhante com as dos exemplos acima. Note como aparece o coeficiente 2 nos termos com $i \neq j$. Finalmente, observamos que $A = (a_{ij})$ √© uma matriz sim√©trica e que $\sum_{i=1}^{n} \sum_{j=1}^{n} b_{ij} x_i x_j = \sum_{i=1}^{n} a_{ii} x_i^2 + 2 \sum_{i < j} a_{ij} x_i x_j = \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij} x_i x_j.$}
 
 
-Notamos o seguinte: se $A$ È uma matriz de ordem $m \times n$ e $\vec{x} \in \bR^n$ È um vetor com $n$ componentes, ent„o o vetor $A \vec{x}$, que È o produto de $A$ por $\vec{x}$, tem na sua $i$-Èsima componente o produto escalar entre a linha $i$ de $A$ e o vetor $\vec{x}$:
+Notamos o seguinte: se $A$ √© uma matriz de ordem $m \times n$ e $\vec{x} \in \bR^n$ √© um vetor com $n$ componentes, ent√£o o vetor $A \vec{x}$, que √© o produto de $A$ por $\vec{x}$, tem na sua $i$-√©sima componente o produto escalar entre a linha $i$ de $A$ e o vetor $\vec{x}$:
 \[
 \left( A \vec{x} \right)_i = \text{componente $i$ de } A \vec{x} = \sum_{j=1}^{n} a_{ij} x_j.
 \] Dessa forma, temos
 \[
 Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij} x_i x_j = \sum_{i=1}^{n} \left( A \vec{x} \right)_i x_i  =  \left( A \vec{x} \right) \cdot \vec{x}.
-\] E aÌ est· a relaÁ„o entre as formas quadr·ticas e matrizes simÈtricas. Acabamos de verificar que:
+\] E a√≠ est√° a rela√ß√£o entre as formas quadr√°ticas e matrizes sim√©tricas. Acabamos de verificar que:
 \[
 \boxed{\begin{array}{c}
-	\text{Qualquer forma quadr·tica em $\bR^n$ pode ser escrita na forma} \\
+	\text{Qualquer forma quadr√°tica em $\bR^n$ pode ser escrita na forma} \\
 	Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x}, \\
-	\text{onde $A$ È uma matriz simÈtrica de ordem $n\times n$.}
+	\text{onde $A$ √© uma matriz sim√©trica de ordem $n\times n$.}
 	\end{array}}
 \]
 
-\noindent Uma outra forma de escrever a mesma coisa (verifique a ˙ltima igualdade como exercÌcio) È
+\noindent Uma outra forma de escrever a mesma coisa (verifique a √∫ltima igualdade como exerc√≠cio) √©
 \[
 Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 \]
 
 
 \begin{example}
-	Voltamos a analisar os Exemplos \ref{exemplo1} e \ref{exemplo2} acima. Uma forma quadr·tica em $\bR^2$ pode ser escrita na forma
+	Voltamos a analisar os Exemplos \ref{exemplo1} e \ref{exemplo2} acima. Uma forma quadr√°tica em $\bR^2$ pode ser escrita na forma
 	\[
 	Q(x_1, x_2) = a x_1^2 + 2 b x_1x_2 + cx_2^2 = 
 	\begin{bmatrix}
@@ -465,7 +465,7 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 	\begin{bmatrix}
 	x_1 \\ x_2
 	\end{bmatrix}.
-	\] Observe como o coeficiente do termo misto $x_1 x_2$ aparece (dividido por $2$) nas posiÁıes $a_{12}$ e $a_{21}$ da matriz $A$. Os coeficientes de $x_1^2$ e de $x_2^2$ aparecem na diagonal principal. Antes de prosseguir, faremos uma conta para verificar que de fato tudo est· de acordo:
+	\] Observe como o coeficiente do termo misto $x_1 x_2$ aparece (dividido por $2$) nas posi√ß√µes $a_{12}$ e $a_{21}$ da matriz $A$. Os coeficientes de $x_1^2$ e de $x_2^2$ aparecem na diagonal principal. Antes de prosseguir, faremos uma conta para verificar que de fato tudo est√° de acordo:
 	\[
 	\begin{bmatrix}
 	x_1 & x_2
@@ -503,20 +503,20 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 	\] Assim como anteriormente, observe que
 	\begin{itemize}
 		\item os coeficientes de $x_1^2$, de $x_2^2$ e de $x_3^2$ aparecem na diagonal principal;
-		\item o coeficiente do termo misto $x_1 x_2$ aparece (dividido por $2$) nas posiÁıes $a_{12}$ e $a_{21}$ de $A$;
-		\item o coeficiente do termo misto $x_1 x_3$ aparece (dividido por $2$) nas posiÁıes $a_{13}$ e $a_{31}$ de $A$;
-		\item o coeficiente do termo misto $x_2 x_3$ aparece (dividido por $2$) nas posiÁıes $a_{23}$ e $a_{32}$ de $A$.
-	\end{itemize} FaÁa as contas para verificar a igualdade acima!$ \ \lhd$
+		\item o coeficiente do termo misto $x_1 x_2$ aparece (dividido por $2$) nas posi√ß√µes $a_{12}$ e $a_{21}$ de $A$;
+		\item o coeficiente do termo misto $x_1 x_3$ aparece (dividido por $2$) nas posi√ß√µes $a_{13}$ e $a_{31}$ de $A$;
+		\item o coeficiente do termo misto $x_2 x_3$ aparece (dividido por $2$) nas posi√ß√µes $a_{23}$ e $a_{32}$ de $A$.
+	\end{itemize} Fa√ßa as contas para verificar a igualdade acima!$ \ \lhd$
 \end{example}
 
 
 
-\subsection{DiagonalizaÁ„o de formas quadr·ticas}
+\subsection{Diagonaliza√ß√£o de formas quadr√°ticas}
 
-Embora n„o tenhamos dito explicitamente, est·vamos trabalhando na base canÙnica de $\bR^n$. Da forma usual, È possÌvel fazer mudanÁa de coordenadas. Do ponto de vista da matriz $A$, que È simÈtrica e portanto diagonaliz·vel, a base (ortonormal) de autovetores associados È a mais natural de todas. Suponhamos que 
+Embora n√£o tenhamos dito explicitamente, est√°vamos trabalhando na base can√¥nica de $\bR^n$. Da forma usual, √© poss√≠vel fazer mudan√ßa de coordenadas. Do ponto de vista da matriz $A$, que √© sim√©trica e portanto diagonaliz√°vel, a base (ortonormal) de autovetores associados √© a mais natural de todas. Suponhamos que 
 \[
 Q(\vec{x}) = \vec{x}^T A \vec{x}
-\] e que $\cB = \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_n\}$ È base ortonormal de $\bR^n$ formada por autovetores de $A$. Desta forma,
+\] e que $\cB = \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_n\}$ √© base ortonormal de $\bR^n$ formada por autovetores de $A$. Desta forma,
 \[
 P = 
 \begin{bmatrix}
@@ -524,7 +524,7 @@ P =
 \vec{v}_1 & \vec{v}_2 & \cdots & \vec{v}_n \\
 | & | &   & |  \\
 \end{bmatrix} \ \text{satisfaz} \ P^{-1}AP = D,
-\] onde $D$ È a matriz diagonal, com os respectivos autovalores na diagonal principal. AlÈm disso, $P$ È ortogonal: $P^T = P^{-1}$. O vetor $\vec{x}$ pode ser representado na base $\cB$ por:
+\] onde $D$ √© a matriz diagonal, com os respectivos autovalores na diagonal principal. Al√©m disso, $P$ √© ortogonal: $P^T = P^{-1}$. O vetor $\vec{x}$ pode ser representado na base $\cB$ por:
 \[
 \vec{x} = y_1 \vec{v}_1 + y_2 \vec{v}_2 + \cdots + y_n \vec{v}_n = P\vec{y}, \quad \text{onde denotamos} \quad \vec{y} = 
 \begin{bmatrix}
@@ -533,17 +533,17 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 \begin{bmatrix}
 \vec{x}
 \end{bmatrix}_{\cB}.
-\] Agora, vamos escrever a forma quadr·tica na base $\cB$, isto È, em termos do vetor $\vec{y}$ (lembre que $\vec{x} = P \vec{y} \implies \vec{x}^T = \vec{y}^T P^T$):
+\] Agora, vamos escrever a forma quadr√°tica na base $\cB$, isto √©, em termos do vetor $\vec{y}$ (lembre que $\vec{x} = P \vec{y} \implies \vec{x}^T = \vec{y}^T P^T$):
 \[
 \vec{x}^T A \vec{x} = (\vec{y}^T P^T) A (P \vec{y}) = \vec{y}^T (P^T A P) \vec{y} = \vec{y}^T D \vec{y}.
-\] Isto significa que, ao mudar da base canÙnica (componentes $x_i$) para a base $\cB$ (componentes $y_i$), temos
+\] Isto significa que, ao mudar da base can√¥nica (componentes $x_i$) para a base $\cB$ (componentes $y_i$), temos
 \[
 \sum_{i,j=1}^{n} a_{ij} x_i x_j = \vec{x}^T A \vec{x} = \vec{y}^T D \vec{y} = \sum_{i=1}^{n} \lambda_i y_i^2,
-\] onde os n˙meros $\lambda_i \in \bR$ s„o os autovalores da matriz $A$ (s„o reais porque a matriz È simÈtrica). Em outras palavras, a base (ortonormal) de autovetores de $A$ deixou transformou a nossa forma quadr·tica original em uma que n„o possui mais termos mistos, muito mais simples de trabalhar.
+\] onde os n√∫meros $\lambda_i \in \bR$ s√£o os autovalores da matriz $A$ (s√£o reais porque a matriz √© sim√©trica). Em outras palavras, a base (ortonormal) de autovetores de $A$ deixou transformou a nossa forma quadr√°tica original em uma que n√£o possui mais termos mistos, muito mais simples de trabalhar.
 
 
 \begin{example}
-	Considere a forma quadr·tica
+	Considere a forma quadr√°tica
 	\[
 	Q(x_1, x_2) = 6x_1^2 - 2 x_1x_2 + 4 x_2^2 \quad \leftrightsquigarrow \quad Q(\vec{x}) = \vec{x}^T A \vec{x}, \quad \text{onde} \quad
 	A = 
@@ -551,18 +551,18 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 	6 & -2 \\
 	-2 &  3
 	\end{bmatrix}.
-	\] Vamos fazer uma mudanÁa de coordenadas que transforma a forma quadr·tica $Q$ em uma forma sem termos mistos. Os autovalores de $A$ s„o as raÌzes de
+	\] Vamos fazer uma mudan√ßa de coordenadas que transforma a forma quadr√°tica $Q$ em uma forma sem termos mistos. Os autovalores de $A$ s√£o as ra√≠zes de
 	\[
 	p(\lambda) = \det (A- \lambda I) = (6 - \lambda)(3 - \lambda) - 4 = \lambda^2 - 9 \lambda + 14.
 	\] Assim,
 	\[
 	\lambda = \frac{9 \pm \sqrt{81 - 56}}{2} = \frac{9 \pm 5}{2} \implies \lambda_1 = 2, \lambda_2 = 7.
-	\] J· sabemos que, ao obter uma base ortonormal de autovetores e escrevermos $\vec{x}$ nesta base, a saber $\vec{x} = P\vec{y}$, teremos
+	\] J√° sabemos que, ao obter uma base ortonormal de autovetores e escrevermos $\vec{x}$ nesta base, a saber $\vec{x} = P\vec{y}$, teremos
 	\[
 	Q(\vec{x}) = Q (P\vec{y}) = 2 y_1^2 + 7 y_2^2.
 	\] Vamos verificar neste exemplo que isto de fato acontece.
 	\begin{itemize}
-		\item Autovetor unit·rio associado ao autovalor $\lambda_1 = 2$:
+		\item Autovetor unit√°rio associado ao autovalor $\lambda_1 = 2$:
 		\[
 		A -2I = 
 		\begin{bmatrix}
@@ -580,7 +580,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 		1/\sqrt{5} \\ 2/\sqrt{5}
 		\end{bmatrix} .
 		\]
-		\item Autovetor unit·rio associado ao autovalor $\lambda_2 = 7$:
+		\item Autovetor unit√°rio associado ao autovalor $\lambda_2 = 7$:
 		\[
 		A -2I = 
 		\begin{bmatrix}
@@ -598,7 +598,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 		-2/\sqrt{5} \\ 1/\sqrt{5}
 		\end{bmatrix} .
 		\]
-	\end{itemize}  Portanto, encontramos uma base ortonormal (de modo que $P$ abaixo È matriz ortogonal e satisfaz $P = P^T$) e podemos escrever
+	\end{itemize}  Portanto, encontramos uma base ortonormal (de modo que $P$ abaixo √© matriz ortogonal e satisfaz $P = P^T$) e podemos escrever
 	\[
 	P = 
 	\begin{bmatrix}
@@ -616,18 +616,18 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 
 
 
-\subsection{AplicaÁ„o ‡ classificaÁ„o de cÙnicas}
+\subsection{Aplica√ß√£o √† classifica√ß√£o de c√¥nicas}
 
-Nesta subseÁ„o, nos restringimos a formas quadr·ticas em $\bR^2$. Uma \textbf{curva de nÌvel} de uma forma quadr·tica, tambÈm conhecida como uma \textbf{cÙnica}, È um conjunto definido implicitamente pela equaÁ„o
+Nesta subse√ß√£o, nos restringimos a formas quadr√°ticas em $\bR^2$. Uma \textbf{curva de n√≠vel} de uma forma quadr√°tica, tamb√©m conhecida como uma \textbf{c√¥nica}, √© um conjunto definido implicitamente pela equa√ß√£o
 \[
 Q(x_1, x_2) = k \quad \leftrightsquigarrow \quad ax_1^2 + bx_1x_2 + cx_2^2 = k,
-\] onde $k$ È uma constante. Em outras palavras, uma curva de nÌvel È o conjunto de todos os pontos $(x_1, x_2)$ que satisfazem $Q(x_1, x_2) = k$.
+\] onde $k$ √© uma constante. Em outras palavras, uma curva de n√≠vel √© o conjunto de todos os pontos $(x_1, x_2)$ que satisfazem $Q(x_1, x_2) = k$.
 
-J· conhecemos alguns exemplos:
+J√° conhecemos alguns exemplos:
 \begin{itemize}
-	\item $x_1^2 + x_2^2 = r^2$ representa um cÌrculo de raio $r$;
+	\item $x_1^2 + x_2^2 = r^2$ representa um c√≠rculo de raio $r$;
 	\item $\frac{x_1^2}{a^2} + \frac{x_2^2}{b^2} = 1$ representa uma elipse;
-	\item $\frac{x_1^2}{a^2} - \frac{x_2^2}{b^2} = 1$ representa uma hipÈrbole.
+	\item $\frac{x_1^2}{a^2} - \frac{x_2^2}{b^2} = 1$ representa uma hip√©rbole.
 \end{itemize} Graficamente, vemos alguns exemplos na figura abaixo.
 \begin{figure}[h!]
 	\begin{center}
@@ -635,11 +635,11 @@ J· conhecemos alguns exemplos:
 	\end{center}
 \end{figure}
 
-\noindent Vamos ver como que a diagonalizaÁ„o de formas simÈtricas se aplica para conseguirmos identificar cÙnicas de formas quadr·ticas que possuem termos mistos.
+\noindent Vamos ver como que a diagonaliza√ß√£o de formas sim√©tricas se aplica para conseguirmos identificar c√¥nicas de formas quadr√°ticas que possuem termos mistos.
 
 
 \begin{example}
-	Vamos identificar a cÙnica cuja equaÁ„o È
+	Vamos identificar a c√¥nica cuja equa√ß√£o √©
 	\[
 	31 x_1^2 - 10\sqrt{3} x_1x_2 + 21 x_2^2 = 144.
 	\] Podemos escrever
@@ -669,7 +669,7 @@ J· conhecemos alguns exemplos:
 		3 & -\sqrt{3} \\
 		0 &  0
 		\end{bmatrix} \implies 
-		3v_1 = \sqrt{3} v_2 \ \ \xrightarrow[\text{e j· normalizando}]{\text{podemos escolher}} \ \  \vec{v}_1 = 
+		3v_1 = \sqrt{3} v_2 \ \ \xrightarrow[\text{e j√° normalizando}]{\text{podemos escolher}} \ \  \vec{v}_1 = 
 		\begin{bmatrix}
 		1/2 \\ \sqrt{3}/2
 		\end{bmatrix}.
@@ -684,7 +684,7 @@ J· conhecemos alguns exemplos:
 		1 & \sqrt{3} \\
 		0 &  0
 		\end{bmatrix} \implies 
-		v_1 = - \sqrt{3} v_2 \ \ \xrightarrow[\text{e j· normalizando}]{\text{podemos escolher}} \ \  \vec{v}_2 = 
+		v_1 = - \sqrt{3} v_2 \ \ \xrightarrow[\text{e j√° normalizando}]{\text{podemos escolher}} \ \  \vec{v}_2 = 
 		\begin{bmatrix}
 		-\sqrt{3}/2 \\ 1/2
 		\end{bmatrix}.
@@ -695,7 +695,7 @@ J· conhecemos alguns exemplos:
 	\begin{bmatrix}
 	16 & 0 \\ 0 & 26
 	\end{bmatrix}
-	\] Assim, na base de $\bR^2$ determinada por $\{\vec{v}_1, \vec{v}_2\}$, podemos escrever a equaÁ„o da equaÁ„o cÙnica como
+	\] Assim, na base de $\bR^2$ determinada por $\{\vec{v}_1, \vec{v}_2\}$, podemos escrever a equa√ß√£o da equa√ß√£o c√¥nica como
 	\[
 	\vec{x}^T A \vec{x} = \vec{y}^T D \vec{y} \implies 
 	\begin{bmatrix}
@@ -710,34 +710,34 @@ J· conhecemos alguns exemplos:
 	\] Isto pode ser reescrito como
 	\[
 	16 y_1^2 + 36 y_2^2 = 144 \ \leftrightsquigarrow \ \frac{y_1^2}{(144/16)} + \frac{y_1^2}{(144/36)} = 1 \ \leftrightsquigarrow \ \frac{y_1^2}{3^2} + \frac{y_1^2}{2^2} = 1.
-	\] Esta equaÁ„o È pode ser agora identificada como uma elipse nos ``novos eixos'' $\vec{v}_1$ e $\vec{v}_2$.
+	\] Esta equa√ß√£o √© pode ser agora identificada como uma elipse nos ``novos eixos'' $\vec{v}_1$ e $\vec{v}_2$.
 	\begin{center}
 		\includegraphics[width=0.5\linewidth]{\dir/Semana14-15/semana14-conicas2}
 	\end{center}
 	
-	\noindent Observamos que quando a coordenada $y_1 = 0$ devemos ter que $y_2^2 = 2^2$, de modo que deve ser $\vec{x} = y_1 \vec{v}_1 + y_2 \vec{v}_2 = \pm 2 \vec{v}_2$, como na figura. Este È o an·logo da an·lise que normalmente fazemos, sÛ que agora na base ortonormal $\{\vec{v}_1, \vec{v}_2\}$
+	\noindent Observamos que quando a coordenada $y_1 = 0$ devemos ter que $y_2^2 = 2^2$, de modo que deve ser $\vec{x} = y_1 \vec{v}_1 + y_2 \vec{v}_2 = \pm 2 \vec{v}_2$, como na figura. Este √© o an√°logo da an√°lise que normalmente fazemos, s√≥ que agora na base ortonormal $\{\vec{v}_1, \vec{v}_2\}$
 \end{example}
 
 
-\section{Problemas de otimizaÁ„o restritos ‡ esfera}
+\section{Problemas de otimiza√ß√£o restritos √† esfera}
 
-Nesta seÁ„o, estudamos alguns problemas de otimizaÁ„o bem especÌficos. Mais precisamente, podemos encontrar valores de m·ximo e mÌnimo de formas quadr·ticas
+Nesta se√ß√£o, estudamos alguns problemas de otimiza√ß√£o bem espec√≠ficos. Mais precisamente, podemos encontrar valores de m√°ximo e m√≠nimo de formas quadr√°ticas
 \[
 Q(\vec{x}) = \vec{x}^T A \vec{x}
-\] sujeitos ‡ restriÁ„o 
+\] sujeitos √† restri√ß√£o 
 \[
 x_1^2 + x_2^2 + \cdots + x_n^2 = 1,
-\] que caracteriza os pontos $(x_1, x_2, \dots, x_n) \in \bR^n$ que tem comprimento unit·rio, isto È, a esfera de raio 1 e centro na origem em $\bR^n$. Em outras palavras, nosso problema de otimizaÁ„o restrito consiste em achar, na esfera unit·ria, os vetores em que a forma quadr·tica $Q$ assume seu maior valor e seu menor valor.
+\] que caracteriza os pontos $(x_1, x_2, \dots, x_n) \in \bR^n$ que tem comprimento unit√°rio, isto √©, a esfera de raio 1 e centro na origem em $\bR^n$. Em outras palavras, nosso problema de otimiza√ß√£o restrito consiste em achar, na esfera unit√°ria, os vetores em que a forma quadr√°tica $Q$ assume seu maior valor e seu menor valor.
 
 Mais resumidamente, queremos:
 \[
-\text{maximizar/minimizar } Q(\vec{x}) \ \text{sujeito ‡ restriÁ„o} \ \|\vec{x}\|=1.
+\text{maximizar/minimizar } Q(\vec{x}) \ \text{sujeito √† restri√ß√£o} \ \|\vec{x}\|=1.
 \]
 
-\noindent \textbf{Ideia por tr·s do mÈtodo.} Sendo $A$ uma matriz simÈtrica, todos os seus autovalores s„o reais. Vamos orden·-los em forma crescente
+\noindent \textbf{Ideia por tr√°s do m√©todo.} Sendo $A$ uma matriz sim√©trica, todos os seus autovalores s√£o reais. Vamos orden√°-los em forma crescente
 \[
 \lambda_1 \le \lambda_2 \le \cdots \le \lambda_n.
-\] Podemos tambÈm encontrar uma base ortonormal de autovetores e, com eles, formar uma matriz ortogonal que diagonaliza $A$:
+\] Podemos tamb√©m encontrar uma base ortonormal de autovetores e, com eles, formar uma matriz ortogonal que diagonaliza $A$:
 \[
 P =  
 \begin{bmatrix}
@@ -752,24 +752,24 @@ P^{-1} A P = D =
 \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & \cdots & \lambda_n
 \end{bmatrix}.
-\] Nota que $P$, sendo ortogonal, preserva comprimentos (ver ObservaÁ„o \ref{sse} na seÁ„o seguinte). Assim, escrevendo $\vec{x} = P \vec{y}$, temos que $\|\vec{x}\| = 1$ se, e somente se, $\|\vec{y}\| = 1$. AlÈm disso, esta matriz $P$ È a matriz ortogonal que diagonaliza $A$, de modo que, pelo que vimos na seÁ„o anterior,
+\] Nota que $P$, sendo ortogonal, preserva comprimentos (ver Observa√ß√£o \ref{sse} na se√ß√£o seguinte). Assim, escrevendo $\vec{x} = P \vec{y}$, temos que $\|\vec{x}\| = 1$ se, e somente se, $\|\vec{y}\| = 1$. Al√©m disso, esta matriz $P$ √© a matriz ortogonal que diagonaliza $A$, de modo que, pelo que vimos na se√ß√£o anterior,
 \[
 \vec{x}^T A \vec{x} = \vec{y}^T D \vec{y}.
-\] Mas a forma quadr·tica $\vec{y}^T D \vec{y}$ È mais f·cil de maximizar: sendo $\lambda_n$ a maior das entradas da diagonal principal de $D$, temos (j· que cada $\lambda_j \le \lambda_n$ e $\|\vec{y}\| = 1$)
+\] Mas a forma quadr√°tica $\vec{y}^T D \vec{y}$ √© mais f√°cil de maximizar: sendo $\lambda_n$ a maior das entradas da diagonal principal de $D$, temos (j√° que cada $\lambda_j \le \lambda_n$ e $\|\vec{y}\| = 1$)
 \[
 \vec{y}^T D \vec{y} = \lambda_1 y_1^2 + \lambda_2 y_2^2 + \cdots + \lambda_n y_n^2 \le  \lambda_n (y_1^2 +y_2^2 + \cdots + y_n^2) = \lambda_n.
-\] Logo, $\lambda_n$ È uma cota superior para $\vec{y}^T D \vec{y}$. AlÈm disso, j· que $D$ È uma matriz diagonal, esta cota superior È atingida pelo vetor $\vec{y} = \vec{e}_n$, o ˙ltimo vetor da base canÙnica de $\bR^n$. Traduzindo estas informaÁıes para a vari·vel $\vec{x}$, temos que $\lambda_n$ È o valor m·ximo de $\vec{x}^T A \vec{x}$ (pois È igual a $\vec{y}^T D \vec{y}$) na esfera unit·ria. AlÈm disso, este valor m·ximo È atingido quando $\vec{x} = P \vec{e}_n = \vec{v}_n$, um autovetor unit·rio associado com o maior autovalor $\lambda_n$.
+\] Logo, $\lambda_n$ √© uma cota superior para $\vec{y}^T D \vec{y}$. Al√©m disso, j√° que $D$ √© uma matriz diagonal, esta cota superior √© atingida pelo vetor $\vec{y} = \vec{e}_n$, o √∫ltimo vetor da base can√¥nica de $\bR^n$. Traduzindo estas informa√ß√µes para a vari√°vel $\vec{x}$, temos que $\lambda_n$ √© o valor m√°ximo de $\vec{x}^T A \vec{x}$ (pois √© igual a $\vec{y}^T D \vec{y}$) na esfera unit√°ria. Al√©m disso, este valor m√°ximo √© atingido quando $\vec{x} = P \vec{e}_n = \vec{v}_n$, um autovetor unit√°rio associado com o maior autovalor $\lambda_n$.
 
 \begin{exercise}
-	Fazer toda a an·lise acima para o problema de minimizaÁ„o. \textit{Dica}: olhar para o menor autovalor.
+	Fazer toda a an√°lise acima para o problema de minimiza√ß√£o. \textit{Dica}: olhar para o menor autovalor.
 \end{exercise}
 
 
 \begin{example}\label{otimiz}
-	Vamos maximizar a forma quadr·tica 
+	Vamos maximizar a forma quadr√°tica 
 	\[
 	Q(x_1, x_2, x_3) = 7 x_1^2 + x_2^2 + 7x_3^2 - 8 x_1x_2 - 4x_1x_3 - 8 x_2x_3,
-	\] sujeito ‡ restriÁ„o $x_1^2 + x_2^2 + x_3^2 = 1$.
+	\] sujeito √† restri√ß√£o $x_1^2 + x_2^2 + x_3^2 = 1$.
 	
 	Note que podemos escrever
 	\[
@@ -783,7 +783,7 @@ P^{-1} A P = D =
 	-4 &  1 & -4 \\
 	-2 & -4 &  7 \\
 	\end{bmatrix}\vec{x}.
-	\] Precisamos determinar o maior autovalor e um autovetor unit·rio associado. O polinÙmio caracterÌstico de $A$ È dado por 
+	\] Precisamos determinar o maior autovalor e um autovetor unit√°rio associado. O polin√¥mio caracter√≠stico de $A$ √© dado por 
 	\[
 	\det 
 	\begin{bmatrix}
@@ -791,9 +791,9 @@ P^{-1} A P = D =
 	-4 &  1 - \lambda & -4 \\
 	-2 & -4 &  7 - \lambda \\
 	\end{bmatrix} = - \lambda^3 + 15 \lambda^2 - 27 \lambda - 243,
-	\] cujas raÌzes s„o $\lambda_1 = -3$ e $\lambda_2 = 9$. Portanto, o valor m·ximo que a forma quadr·tica $Q$ assume na esfera unit·ria È $9$.
+	\] cujas ra√≠zes s√£o $\lambda_1 = -3$ e $\lambda_2 = 9$. Portanto, o valor m√°ximo que a forma quadr√°tica $Q$ assume na esfera unit√°ria √© $9$.
 	
-	AlÈm disso, sabemos que qualquer um autovetor unit·rio associado com o autovalor $\lambda_2 = 9$ assume este valor m·ximo. Resolvemos
+	Al√©m disso, sabemos que qualquer um autovetor unit√°rio associado com o autovalor $\lambda_2 = 9$ assume este valor m√°ximo. Resolvemos
 	\[
 	A - 9 I = 
 	\begin{bmatrix}
@@ -815,7 +815,7 @@ P^{-1} A P = D =
 	\begin{bmatrix}
 	-1 \\ 0 \\ 1
 	\end{bmatrix}.
-	\] Um autovetor (unit·rio!) possÌvel È
+	\] Um autovetor (unit√°rio!) poss√≠vel √©
 	\[
 	\frac{1}{\sqrt{2}}
 	\begin{bmatrix}
@@ -832,21 +832,21 @@ P^{-1} A P = D =
 
 
 \begin{remark}[Opcional]
-	Em cursos de c·lculo com v·rias vari·veis, estudamos multiplicadores de Lagrange, uma ferramenta para estudar problemas de otimizaÁ„o com restriÁ„o. De uma maneira geral, queremos
+	Em cursos de c√°lculo com v√°rias vari√°veis, estudamos multiplicadores de Lagrange, uma ferramenta para estudar problemas de otimiza√ß√£o com restri√ß√£o. De uma maneira geral, queremos
 	\[
-	\text{minimizar } f(x_1, x_2, \cdots, x_n) \text{ com a restriÁ„o } g(x_1, x_2, \cdots, x_n) = 0.
-	\] O mÈtodo dos multiplicadores de Lagrange nos d· uma condiÁ„o necess·ria: se um ponto È de m·ximo/mÌnimo com restriÁ„o, ent„o existe uma constante $\lambda$ tal que, neste ponto,
+	\text{minimizar } f(x_1, x_2, \cdots, x_n) \text{ com a restri√ß√£o } g(x_1, x_2, \cdots, x_n) = 0.
+	\] O m√©todo dos multiplicadores de Lagrange nos d√° uma condi√ß√£o necess√°ria: se um ponto √© de m√°ximo/m√≠nimo com restri√ß√£o, ent√£o existe uma constante $\lambda$ tal que, neste ponto,
 	\[
 	\vec{\nabla} f = \lambda \vec{\nabla} g.
-	\] Esta constante $\lambda$ È conhecida como um \textbf{multiplicador de Lagrange}. Como mencionamos, esta È uma condiÁ„o necess·ria, de modo que n„o garante que o ponto È de mÌnimo/m·ximo. Na pr·tica, depois de encontrarmos os possÌveis valores de $\vec{x}$ e de $\lambda$, podemos substituir na funÁ„o para ver quais s„o os pontos de mÌnimo e quais s„o os de m·ximo.
+	\] Esta constante $\lambda$ √© conhecida como um \textbf{multiplicador de Lagrange}. Como mencionamos, esta √© uma condi√ß√£o necess√°ria, de modo que n√£o garante que o ponto √© de m√≠nimo/m√°ximo. Na pr√°tica, depois de encontrarmos os poss√≠veis valores de $\vec{x}$ e de $\lambda$, podemos substituir na fun√ß√£o para ver quais s√£o os pontos de m√≠nimo e quais s√£o os de m√°ximo.
 	
-	Vejamos como esta tÈcnica se aplicaria no Exemplo \ref{otimiz} que j· resolvemos acima. Vamos considerar $f(x_1,x_2,x_3) = Q(x_1,x_2,x_3)$ e $g(x_1,x_2,x_3) = x_1^2 + x_2^2 + x_3^2 - 1$ Se estivermos em um ponto de m·ximo, ent„o existe a constante $\lambda$ como acima. Calculamos:
+	Vejamos como esta t√©cnica se aplicaria no Exemplo \ref{otimiz} que j√° resolvemos acima. Vamos considerar $f(x_1,x_2,x_3) = Q(x_1,x_2,x_3)$ e $g(x_1,x_2,x_3) = x_1^2 + x_2^2 + x_3^2 - 1$ Se estivermos em um ponto de m√°ximo, ent√£o existe a constante $\lambda$ como acima. Calculamos:
 	\[
 	\vec{\nabla} Q = \left( 14x_1 - 8x_2 - 4 x_3, 2x_2 - 8 x_1 - 8 x_3, 14x_3 - 4 x_1 - 8 x_2 \right) 
 	\] e 
 	\[
 	\vec{\nabla} g = \left( 2 x_1, 2 x_2, 2 x_3 \right) .
-	\] A condiÁ„o $\vec{\nabla} Q = \lambda \vec{\nabla} g$ nos diz que devemos resolver
+	\] A condi√ß√£o $\vec{\nabla} Q = \lambda \vec{\nabla} g$ nos diz que devemos resolver
 	\[
 	\begin{array}{c}
 	14 x_1 - 8x_2 - 4 x_3 = 2 \lambda x_1 \\
@@ -864,24 +864,24 @@ P^{-1} A P = D =
 	\begin{bmatrix}
 	x_1 \\ x_2 \\ x_3
 	\end{bmatrix}.
-	\] Chegamos, por outro caminho, ‡ mesma conclus„o: $\lambda$ deve ser um autovalor e $\vec{x}$ um autovetor (unit·rio, j· que $g(x_1,x_2,x_3) = 0$) associado$. \ \lhd$
+	\] Chegamos, por outro caminho, √† mesma conclus√£o: $\lambda$ deve ser um autovalor e $\vec{x}$ um autovetor (unit√°rio, j√° que $g(x_1,x_2,x_3) = 0$) associado$. \ \lhd$
 \end{remark}
 
 
-\section{Matrizes simÈtricas e prova do Teorema Espectral}
+\section{Matrizes sim√©tricas e prova do Teorema Espectral}
 
-Nesta seÁ„o vamos utilizar a notaÁ„o $\langle \vec{u}, \vec{v} \rangle$ para o produto escalar, ao invÈs de $\vec{u} \cdot \vec{v}$, para enfatizar qual È o vetor $\vec{u}$ e qual È o vetor $\vec{v}$ (em especial quando um deles est· sendo multiplicado por uma matriz).
+Nesta se√ß√£o vamos utilizar a nota√ß√£o $\langle \vec{u}, \vec{v} \rangle$ para o produto escalar, ao inv√©s de $\vec{u} \cdot \vec{v}$, para enfatizar qual √© o vetor $\vec{u}$ e qual √© o vetor $\vec{v}$ (em especial quando um deles est√° sendo multiplicado por uma matriz).
 
-%Vejamos mais uma maneira equivalente de se dizer que uma matriz È simÈtrica.
+%Vejamos mais uma maneira equivalente de se dizer que uma matriz √© sim√©trica.
 \begin{remark}\label{sse}
-	Uma matriz quadrada $A$, n„o necessariamente simÈtrica, cujos coeficientes s„o reais, satisfaz
+	Uma matriz quadrada $A$, n√£o necessariamente sim√©trica, cujos coeficientes s√£o reais, satisfaz
 	\[
 	\langle A \vec{x}, \vec{y} \rangle = \langle\vec{x}, A^T \vec{y}\rangle, \quad \text{ para todos } \vec{x}, \vec{y} \in \bR^n.
-	\] Isto se pode verificar ao analisar os coeficientes de $A \vec{x}$ e de $A^T \vec{y}$. Assim, uma matriz $A$ de ordem $n \times n$ È \textbf{simÈtrica} se, e somente se, satisfaz
+	\] Isto se pode verificar ao analisar os coeficientes de $A \vec{x}$ e de $A^T \vec{y}$. Assim, uma matriz $A$ de ordem $n \times n$ √© \textbf{sim√©trica} se, e somente se, satisfaz
 	\[
 	\langle A \vec{x}, \vec{y} \rangle = \langle\vec{x}, A \vec{y}\rangle, \quad \text{ para todos } \vec{x}, \vec{y} \in \bR^n.
 	\]
-	Outras formas de escrever esta mesma coisa (concorda?) s„o
+	Outras formas de escrever esta mesma coisa (concorda?) s√£o
 	\[
 	A \vec{x} \cdot \vec{y} = \vec{x} \cdot A \vec{y}, \quad \text{ para todos } \vec{x}, \vec{y} \in \bR^n
 	\] e 
@@ -891,23 +891,23 @@ Nesta seÁ„o vamos utilizar a notaÁ„o $\langle \vec{u}, \vec{v} \rangle$ para o p
 \end{remark}
 
 \begin{remark}
-	A observaÁ„o anterior nos permite estender a definiÁ„o de matriz simÈtrica para transformaÁıes lineares, pois È independente do sistema de coordenadas utilizado (depende apenas de uma escolha de produto interno/escalar). 
+	A observa√ß√£o anterior nos permite estender a defini√ß√£o de matriz sim√©trica para transforma√ß√µes lineares, pois √© independente do sistema de coordenadas utilizado (depende apenas de uma escolha de produto interno/escalar). 
 \end{remark}
 
-A equivalÍncia que foi apresentada na ObservaÁ„o \ref{sse} È muito ˙til na an·lise de matrizes simÈtricas. Vamos ver como se aplica diversas vezes na demonstraÁ„o do Teorema Espectral que ser· dividida em trÍs proposiÁıes preliminares. Cada uma delas apresenta, em ordem, o procedimento usual que viemos utilizando para diagonalizar matrizes: an·lise dos autovalores, construÁ„o dos autoespaÁos e verificaÁ„o de que È possÌvel formar uma base de autovetores. Neste caso de uma matriz simÈtrica, veremos que, alÈm de tudo, È possÌvel encontrar uma base ortonormal de autovetores.
+A equival√™ncia que foi apresentada na Observa√ß√£o \ref{sse} √© muito √∫til na an√°lise de matrizes sim√©tricas. Vamos ver como se aplica diversas vezes na demonstra√ß√£o do Teorema Espectral que ser√° dividida em tr√™s proposi√ß√µes preliminares. Cada uma delas apresenta, em ordem, o procedimento usual que viemos utilizando para diagonalizar matrizes: an√°lise dos autovalores, constru√ß√£o dos autoespa√ßos e verifica√ß√£o de que √© poss√≠vel formar uma base de autovetores. Neste caso de uma matriz sim√©trica, veremos que, al√©m de tudo, √© poss√≠vel encontrar uma base ortonormal de autovetores.
 
 \begin{proposition}\label{reais}
-	Os autovalores de uma matriz simÈtrica $A$, de entradas reais, s„o n˙meros reais.
+	Os autovalores de uma matriz sim√©trica $A$, de entradas reais, s√£o n√∫meros reais.
 \end{proposition}
 
 \begin{proof}
-	Seja $\lambda$ uma raiz do polinÙmio caracterÌstico de $A$, que pode ser um n˙mero real ou um n˙mero complexo. Podemos encontrar um vetor $\vec{v}$, de entradas possivelmente complexas, tal que $A\vec{v} = \lambda \vec{v}$. A menos de um passo de normalizaÁ„o, podemos pensar que $\|\vec{v}\| = 1$. Vamos verificar que de fato $\lambda$ È um n˙mero real. Para isto, vamos mostrar que $\lambda$ È igual ao seu conjugado, $\lambda = \bar{\lambda}$, de forma que a parte imagin·ria de $\lambda$ deve ser igual a zero. Sendo $A$ simÈtrica, temos que
+	Seja $\lambda$ uma raiz do polin√¥mio caracter√≠stico de $A$, que pode ser um n√∫mero real ou um n√∫mero complexo. Podemos encontrar um vetor $\vec{v}$, de entradas possivelmente complexas, tal que $A\vec{v} = \lambda \vec{v}$. A menos de um passo de normaliza√ß√£o, podemos pensar que $\|\vec{v}\| = 1$. Vamos verificar que de fato $\lambda$ √© um n√∫mero real. Para isto, vamos mostrar que $\lambda$ √© igual ao seu conjugado, $\lambda = \bar{\lambda}$, de forma que a parte imagin√°ria de $\lambda$ deve ser igual a zero. Sendo $A$ sim√©trica, temos que
 	\[
 	\overline{\lambda} = \overline{\lambda \|\vec{v}\|^2} = \overline{\langle \lambda \vec{v}, \vec{v} \rangle} = \overline{\langle A \vec{v}, \vec{v} \rangle} = \overline{\langle \vec{v}, A \vec{v} \rangle} = \overline{\langle \vec{v}, \lambda \vec{v} \rangle} = \lambda \overline{\langle \vec{v}, \vec{v} \rangle} = \lambda.
-	\] A simetria de $A$ foi necess·ria (apenas) no quarto sinal de igualdade acima. Ainda, na pen˙ltima igualdade, utilizamos sem muitos coment·rios uma propriedade do produto interno em espaÁos vetoriais com escalares complexos, a saber, que
+	\] A simetria de $A$ foi necess√°ria (apenas) no quarto sinal de igualdade acima. Ainda, na pen√∫ltima igualdade, utilizamos sem muitos coment√°rios uma propriedade do produto interno em espa√ßos vetoriais com escalares complexos, a saber, que
 	\[
 	\langle\vec{u}, \vec{v}\rangle \stackrel{\text{def}}{=} \sum_{i=1}^{n} u_i \overline{v}_i.
-	\] Os conjugados das componentes do segundo vetor aparecem para que a fÛrmula usual para o comprimento continue sendo v·lida:
+	\] Os conjugados das componentes do segundo vetor aparecem para que a f√≥rmula usual para o comprimento continue sendo v√°lida:
 	\[
 	\| \vec{u} \|^2 = \langle\vec{u}, \vec{u}\rangle = \sum_{i=1}^{n} u_i \overline{u}_i = \sum_{i=1}^{n} |u_i|^2.
 	\] Desta forma, continua valendo que
@@ -917,28 +917,28 @@ A equivalÍncia que foi apresentada na ObservaÁ„o \ref{sse} È muito ˙til na an·li
 \end{proof}
 
 \begin{proposition}\label{ortog}
-	Se $A$ È uma matriz simÈtrica, ent„o autovetores associados a autovalores distintos s„o ortogonais.
+	Se $A$ √© uma matriz sim√©trica, ent√£o autovetores associados a autovalores distintos s√£o ortogonais.
 \end{proposition}
 
 \begin{proof}
-	Sejam $\lambda_1$ e  $\lambda_2$ autovalores distintos de $A$ e $\vec{v}_1, \vec{v}_2$ respectivos autovetores. Ent„o (observe que È necess·rio que $A$ seja simÈtrica na segunda e na ˙ltima igualdade!)
+	Sejam $\lambda_1$ e  $\lambda_2$ autovalores distintos de $A$ e $\vec{v}_1, \vec{v}_2$ respectivos autovetores. Ent√£o (observe que √© necess√°rio que $A$ seja sim√©trica na segunda e na √∫ltima igualdade!)
 	\[
 	\lambda_1 \langle \vec{v}_1, \vec{v}_2\rangle = \langle \lambda_1 \vec{v}_1, \vec{v}_2\rangle = \langle A \vec{v}_1, \vec{v}_2\rangle = \langle \vec{v}_1, A \vec{v}_2\rangle = \overline{\lambda}_2 \langle \vec{v}_1, \vec{v}_2\rangle = \lambda_2 \langle \vec{v}_1, \vec{v}_2\rangle,
-	\] de modo que $(\lambda_1 - \lambda_2)\langle \vec{v}_1, \vec{v}_2\rangle = 0$. J· que estamos supondo que os autovalores s„o distintos, $\lambda_1 \neq \lambda_2$, concluimos que $\langle \vec{v}_1, \vec{v}_2\rangle = 0$.
+	\] de modo que $(\lambda_1 - \lambda_2)\langle \vec{v}_1, \vec{v}_2\rangle = 0$. J√° que estamos supondo que os autovalores s√£o distintos, $\lambda_1 \neq \lambda_2$, concluimos que $\langle \vec{v}_1, \vec{v}_2\rangle = 0$.
 \end{proof}
 
 
 \begin{proposition}\label{dimens}
-	Seja $A$ uma matriz simÈtrica. Ent„o, a dimens„o do autoespaÁo associado a um autovalor È igual ‡ multiplicidade deste autovalor.
+	Seja $A$ uma matriz sim√©trica. Ent√£o, a dimens√£o do autoespa√ßo associado a um autovalor √© igual √† multiplicidade deste autovalor.
 \end{proposition}
 
 \begin{proof}
-	Suponhamos que $\lambda_1$ È um autovalor de $A$ de multiplicidade $k$. Seja $\vec{v}_1$ um autovetor unit·rio associado. Podemos encontrar uma base ortonormal de $\bR^n$ da qual $\vec{v}_1$ faz parte, isto È, podemos encontrar vetores unit·rios $\vec{y}_j$ de modo que
+	Suponhamos que $\lambda_1$ √© um autovalor de $A$ de multiplicidade $k$. Seja $\vec{v}_1$ um autovetor unit√°rio associado. Podemos encontrar uma base ortonormal de $\bR^n$ da qual $\vec{v}_1$ faz parte, isto √©, podemos encontrar vetores unit√°rios $\vec{y}_j$ de modo que
 	\[
 	\{ \vec{v}_1, \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}
-	\] È uma base ortonormal de $\bR^n$.
+	\] √© uma base ortonormal de $\bR^n$.
 	
-	Considere a matriz $Q$ cujas colunas s„o os elementos desta base:
+	Considere a matriz $Q$ cujas colunas s√£o os elementos desta base:
 	\[
 	Q = 
 	\begin{bmatrix}
@@ -946,7 +946,7 @@ A equivalÍncia que foi apresentada na ObservaÁ„o \ref{sse} È muito ˙til na an·li
 	\vec{v}_1 & \vec{y}_2 & \vec{y}_3 & \cdots &  \vec{y}_n \\
 	| & | & | & & | \\
 	\end{bmatrix},
-	\] que È, consequentemente, ortogonal. Vamos calcular $Q^{-1} A Q = Q^T A Q$. O produto $AQ$ pode ser interpretado como o produto de $A$ por cada uma das colunas de $Q$:
+	\] que √©, consequentemente, ortogonal. Vamos calcular $Q^{-1} A Q = Q^T A Q$. O produto $AQ$ pode ser interpretado como o produto de $A$ por cada uma das colunas de $Q$:
 	\[
 	AQ = 
 	\begin{bmatrix}
@@ -986,7 +986,7 @@ A equivalÍncia que foi apresentada na ObservaÁ„o \ref{sse} È muito ˙til na an·li
 	\end{bmatrix}
 	\] Observamos que, pela simetria de $A$ e por ser $	\{ \vec{v}_1, \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}$ um conjunto ortonormal, temos 
 	\[
-	\langle \vec{v}_1, A\vec{y}_j \rangle = \langle A\vec{v}_1, \vec{y}_j \rangle = \lambda_1 \langle \vec{v}_1, \vec{y}_j \rangle = 0, \quad \text{para qualquer Ìndice } j.
+	\langle \vec{v}_1, A\vec{y}_j \rangle = \langle A\vec{v}_1, \vec{y}_j \rangle = \lambda_1 \langle \vec{v}_1, \vec{y}_j \rangle = 0, \quad \text{para qualquer √≠ndice } j.
 	\]Logo,
 	\[
 	\implies Q^TAQ =
@@ -997,30 +997,30 @@ A equivalÍncia que foi apresentada na ObservaÁ„o \ref{sse} È muito ˙til na an·li
 	\vdots & \vdots & \vdots & \ddots & \vdots \\
 	0 & b_{n2} & b_{n3} & \cdots & b_{nn} \\
 	\end{bmatrix} \stackrel{\text{def}}{=} \hat{A}.
-	\] Chamamos os coeficientes restantes de $b_{ij}$ simplesmente porque n„o nos interessa muito quanto valem (notamos, no entanto, que a simetria de $A$ implica que $b_{ij} = b_{ji}$). Observamos que 
+	\] Chamamos os coeficientes restantes de $b_{ij}$ simplesmente porque n√£o nos interessa muito quanto valem (notamos, no entanto, que a simetria de $A$ implica que $b_{ij} = b_{ji}$). Observamos que 
 	\[
 	\det \left( A - \lambda I \right) = \det \left( Q^{-1} (A - \lambda I) Q \right) =	\det \left( \hat{A} - \lambda I \right) = (\lambda_1 - \lambda) \cdot \det (B - \lambda I),
-	\] onde $B$ È a matriz de ordem $(n-1)\times (n-1)$ dada por $(b_{ij})$. AlÈm disso, se a multiplicidade de $\lambda_1$ como autovalor de $A$ for maior do que $1$, devemos ter, pela igualdade acima, que $\lambda_1$ tambÈm È um autovalor de $B$. Desta forma, $\hat{A}$ possui um autovetor unit·rio $\vec{v}_2$ associado com $\lambda_1$ que est· contido em $\Span \{ \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}$ e, portanto, È distinto e linearmente independente a $\vec{v}_1$. O processo de Gram-Schmidt permite obter $\{\vec{v}_1, \vec{v}_2\}$ ortonormais.
+	\] onde $B$ √© a matriz de ordem $(n-1)\times (n-1)$ dada por $(b_{ij})$. Al√©m disso, se a multiplicidade de $\lambda_1$ como autovalor de $A$ for maior do que $1$, devemos ter, pela igualdade acima, que $\lambda_1$ tamb√©m √© um autovalor de $B$. Desta forma, $\hat{A}$ possui um autovetor unit√°rio $\vec{v}_2$ associado com $\lambda_1$ que est√° contido em $\Span \{ \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}$ e, portanto, √© distinto e linearmente independente a $\vec{v}_1$. O processo de Gram-Schmidt permite obter $\{\vec{v}_1, \vec{v}_2\}$ ortonormais.
 	
-	A partir daÌ, repetimos o processo completando o conjunto $\{\vec{v}_1, \vec{v}_2\}$ a uma base ortonormal $\{ \vec{v}_1, \vec{v}_2, \vec{y}_3, \dots, \vec{y}_n \}$ de $\bR^n$. DaÌ vamos obter um terceiro autovetor ortogonal aos anteriores e unit·rio. Procedemos desta meneira atÈ encontrar $k$ autovetores ortogonais e unit·rios associados ao autovalor $\lambda_1$. Assim, o autoespaÁo $\Nul (A - \lambda_1 I)$ tem dimens„o $k$, que È igual ‡ multiplicidade do autovalor $\lambda_1$.
+	A partir da√≠, repetimos o processo completando o conjunto $\{\vec{v}_1, \vec{v}_2\}$ a uma base ortonormal $\{ \vec{v}_1, \vec{v}_2, \vec{y}_3, \dots, \vec{y}_n \}$ de $\bR^n$. Da√≠ vamos obter um terceiro autovetor ortogonal aos anteriores e unit√°rio. Procedemos desta meneira at√© encontrar $k$ autovetores ortogonais e unit√°rios associados ao autovalor $\lambda_1$. Assim, o autoespa√ßo $\Nul (A - \lambda_1 I)$ tem dimens√£o $k$, que √© igual √† multiplicidade do autovalor $\lambda_1$.
 \end{proof}
 
 \subsection{Prova do Teorema Espectral}
 
-O Teorema Fundamental da ¡lgebra afirma que todo polinÙmio n„o constante de grau $n$ possui exatamente $n$ raÌzes complexas. Sendo assim, qualquer matriz $A$ de ordem $n\times n$ possui $n$ autovalores complexos. No entanto, sendo $A$ uma matriz simÈtrica, a ProposiÁ„o \ref{reais} garante que todas estes $n$ autovalores s„o todos reais. Vamos denotar por
+O Teorema Fundamental da √Ålgebra afirma que todo polin√¥mio n√£o constante de grau $n$ possui exatamente $n$ ra√≠zes complexas. Sendo assim, qualquer matriz $A$ de ordem $n\times n$ possui $n$ autovalores complexos. No entanto, sendo $A$ uma matriz sim√©trica, a Proposi√ß√£o \ref{reais} garante que todas estes $n$ autovalores s√£o todos reais. Vamos denotar por
 \[
 \lambda_1, \lambda_2, \dots, \lambda_k \in \bR
 \] os autovalores distintos de $A$ e por $m_1, m_2, \dots, m_k$ suas respectivas multiplicidades. Temos, em particular, que $m_1 + m_2 + \cdots + m_k = n$.
 
-Pela ProposiÁ„o \ref{dimens}, a dimens„o do autoespaÁo associado a $\lambda_1$ È $m_1$. Podemos encontrar (da maneira usual, por escalonamento) uma base de autovetores
+Pela Proposi√ß√£o \ref{dimens}, a dimens√£o do autoespa√ßo associado a $\lambda_1$ √© $m_1$. Podemos encontrar (da maneira usual, por escalonamento) uma base de autovetores
 \[
 \Nul (A - \lambda_1 I) = \Span \{ \vec{u}_1, \vec{u}_2, \dots, \vec{u}_{m_1} \}.
-\] Estes autovetores, possivelmente n„o s„o ortogonais, mas, aplicando o Processo de Gram-Schmidt, podemo obter uma base ortonormal de $\Nul (A - \lambda_1 I)$:
+\] Estes autovetores, possivelmente n√£o s√£o ortogonais, mas, aplicando o Processo de Gram-Schmidt, podemo obter uma base ortonormal de $\Nul (A - \lambda_1 I)$:
 \[
 \Nul (A - \lambda_1 I) = \Span \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_{m_1} \}.
-\] Fazendo este mesmo procedimento para cada um dos autovalores, obtemos $n$ autovetores, que, consequentemente, formam uma base para $\bR^n$. Logo, $A$ È diagonaliz·vel.
+\] Fazendo este mesmo procedimento para cada um dos autovalores, obtemos $n$ autovetores, que, consequentemente, formam uma base para $\bR^n$. Logo, $A$ √© diagonaliz√°vel.
 
-AlÈm disso, a ProposiÁ„o \ref{ortog} garante que todo autovetor de um autoespaÁo È ortogonal a todo autovetor de outro autoespaÁo (associado a um autovalor diferente). Temos ent„o $k$ autoespaÁos, cujas bases s„o ortonormais e elementos da base de um autoespaÁo s„o ortogonais aos elementos das outras bases. Segue daÌ que a uni„o das bases dos autoespaÁos, como consideramos, È uma base \textit{ortonormal} para $\bR^n$.
+Al√©m disso, a Proposi√ß√£o \ref{ortog} garante que todo autovetor de um autoespa√ßo √© ortogonal a todo autovetor de outro autoespa√ßo (associado a um autovalor diferente). Temos ent√£o $k$ autoespa√ßos, cujas bases s√£o ortonormais e elementos da base de um autoespa√ßo s√£o ortogonais aos elementos das outras bases. Segue da√≠ que a uni√£o das bases dos autoespa√ßos, como consideramos, √© uma base \textit{ortonormal} para $\bR^n$.
 
 Explicitamente, a matriz
 \[
@@ -1030,7 +1030,7 @@ P =
 \vec{v}_1 & \vec{v}_2 & \cdots &  \vec{v}_n \\
 | & | &  & | \\
 \end{bmatrix}
-\] formada pelos autovetores È ortogonal e 
+\] formada pelos autovetores √© ortogonal e 
 \[
 P^{-1} A P = D = 
 \begin{bmatrix}

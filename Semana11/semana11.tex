@@ -1,8 +1,8 @@
-%Este trabalho est· licenciado sob a LicenÁa Creative Commons AtribuiÁ„o-CompartilhaIgual 3.0 N„o Adaptada. Para ver uma cÛpia desta licenÁa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+%Este trabalho est√° licenciado sob a Licen√ßa Creative Commons Atribui√ß√£o-CompartilhaIgual 3.0 N√£o Adaptada. Para ver uma c√≥pia desta licen√ßa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 \documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
-%define o diretÛrio principal
+%define o diret√≥rio principal
 \providecommand{\dir}{..}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -14,21 +14,21 @@
 \chapter{Semana 11}
 
 
-Nesta semana, nÛs comeÁamos uma abordagem um pouco mais geomÈtrica de espaÁos vetoriais: ‚ngulo entre vetores, comprimento de vetores, ortogonalidade. Estes conceitos j· s„o de nossa familiaridade da geometria euclideana (em $\bR^2$ e $\bR^3$). No entanto, È tambÈm nosso objetivo estender estes conceitos para dimensıes maiores do que $3$.
+Nesta semana, n√≥s come√ßamos uma abordagem um pouco mais geom√©trica de espa√ßos vetoriais: √¢ngulo entre vetores, comprimento de vetores, ortogonalidade. Estes conceitos j√° s√£o de nossa familiaridade da geometria euclideana (em $\bR^2$ e $\bR^3$). No entanto, √© tamb√©m nosso objetivo estender estes conceitos para dimens√µes maiores do que $3$.
 
 
-\section{Comprimento, ‚ngulos e o produto escalar}
+\section{Comprimento, √¢ngulos e o produto escalar}
 
-Se, na base canÙnica (isto È, no sistema de coordenadas usual) do espaÁo $\bR^3$, representamos um vetor por
+Se, na base can√¥nica (isto √©, no sistema de coordenadas usual) do espa√ßo $\bR^3$, representamos um vetor por
 \[
 \vec{v} =
 \begin{bmatrix}
 v_1 \\ v_2 \\ v_3
 \end{bmatrix},
-\] ent„o o seu \textbf{comprimento} (ou \textbf{magnitude} ou \textbf{norma}) È dado por
+\] ent√£o o seu \textbf{comprimento} (ou \textbf{magnitude} ou \textbf{norma}) √© dado por
 \[
 \|\vec{v}\| = \sqrt{v_1^2 + v_2^2 + v_3^2}.
-\] Esta È uma inst‚ncia do Teorema de Pit·goras\footnote{Duas aplicaÁıes do Teorema de Pit·goras usual do plano. Uma para obter o comprimento $\sqrt{v_1^2 + v_2^2}$ da diagonal que est· no plano $xy$ e a outra para obter $\|\vec{v}\|$.}.
+\] Esta √© uma inst√¢ncia do Teorema de Pit√°goras\footnote{Duas aplica√ß√µes do Teorema de Pit√°goras usual do plano. Uma para obter o comprimento $\sqrt{v_1^2 + v_2^2}$ da diagonal que est√° no plano $xy$ e a outra para obter $\|\vec{v}\|$.}.
 
 \begin{figure}[h!]
 	\begin{center}
@@ -36,7 +36,7 @@ v_1 \\ v_2 \\ v_3
 	\end{center}
 \end{figure}
 
-\noindent A definiÁ„o acima pode ser generalizada para dimens„o $n$ qualquer:
+\noindent A defini√ß√£o acima pode ser generalizada para dimens√£o $n$ qualquer:
 \[
 \vec{v} =
 \begin{bmatrix}
@@ -45,21 +45,21 @@ v_1 \\ v_2 \\ \vdots \\ v_n
 \]
 
 
-O \textbf{produto escalar} ou \textbf{produto interno} entre dois vetores $\vec{v}$ e $\vec{w}$ È um n˙mero (tambÈm dito escalar) associado com estes dois vetores. Em coordenadas, se $\vec{v} = (v_1, v_2, v_3)$ e $\vec{w} = (w_1, w_2, w_3)$ s„o vetores do espaÁo tridimensional $\bR^3$, temos
+O \textbf{produto escalar} ou \textbf{produto interno} entre dois vetores $\vec{v}$ e $\vec{w}$ √© um n√∫mero (tamb√©m dito escalar) associado com estes dois vetores. Em coordenadas, se $\vec{v} = (v_1, v_2, v_3)$ e $\vec{w} = (w_1, w_2, w_3)$ s√£o vetores do espa√ßo tridimensional $\bR^3$, temos
 \[
 \vec{v} \cdot \vec{w} = v_1 w_1 + v_2 w_2 + v_3 w_3.
-\] Vejamos que realmente o produto escalar tem a ver com o ‚ngulo entre dois vetores. Isto È uma consequÍncia da Lei dos Cossenos, que nos diz que
+\] Vejamos que realmente o produto escalar tem a ver com o √¢ngulo entre dois vetores. Isto √© uma consequ√™ncia da Lei dos Cossenos, que nos diz que
 \[
 \|\vec{v} - \vec{w}\|^2 = \|\vec{v}\|^2 + \|\vec{w}\|^2 - 2 \|\vec{v}\| \|\vec{w}\| \cos \theta,
-\] onde $\theta$ È o ‚ngulo entre $\vec{v}$ e $\vec{w}$. 
+\] onde $\theta$ √© o √¢ngulo entre $\vec{v}$ e $\vec{w}$. 
 
 	\begin{center}
 		\includegraphics[width=0.7\linewidth]{\dir/Semana11/semana11-cossenos}
 	\end{center}
 
-\noindent Escrevendo estes comprimentos em termos das coordenadas e fazendo os cancelamentos necess·rios, chegamos na seguinte identidade:
+\noindent Escrevendo estes comprimentos em termos das coordenadas e fazendo os cancelamentos necess√°rios, chegamos na seguinte identidade:
 \[
-v_1 w_1 + v_2 w_2 + v_3 w_3 = \|\vec{v}\| \|\vec{w}\| \cos \theta, \quad \text{ isto È,} \quad \vec{v} \cdot \vec{w} = \|\vec{v}\| \|\vec{w}\| \cos \theta.
+v_1 w_1 + v_2 w_2 + v_3 w_3 = \|\vec{v}\| \|\vec{w}\| \cos \theta, \quad \text{ isto √©,} \quad \vec{v} \cdot \vec{w} = \|\vec{v}\| \|\vec{w}\| \cos \theta.
 \]
 
 
@@ -72,13 +72,13 @@ x_1 \\ x_2 \\ \vdots \\ x_n
 \begin{bmatrix}
 y_1 \\ y_2 \\ \vdots \\ y_n
 \end{bmatrix}
-\] vetores de $\bR^n$ representados na base canÙnica, e definimos o \textbf{produto escalar} ou \textbf{produto interno} entre $\vec{x}$ e $\vec{y}$:
+\] vetores de $\bR^n$ representados na base can√¥nica, e definimos o \textbf{produto escalar} ou \textbf{produto interno} entre $\vec{x}$ e $\vec{y}$:
 \[
 \vec{x} \cdot \vec{y} = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n.
-\] O ‚ngulo entre $\vec{x}$ e $\vec{y}$, para $n$ qualquer, pode ent„o ser \textit{definido} pela equaÁ„o
+\] O √¢ngulo entre $\vec{x}$ e $\vec{y}$, para $n$ qualquer, pode ent√£o ser \textit{definido} pela equa√ß√£o
 \[
 \cos \theta = \frac{\vec{x} \cdot \vec{y}}{\|\vec{x}\| \|\vec{y}\|}.
-\] Embora abstratos, estes conceitos s„o bem fundamentados geometricamente. Dois vetores (linearmente independentes) de um espaÁo vetorial $n$-dimensional geram um subespaÁo vetorial de dimens„o $2$. Este pode, por sua vez, pode ser pensado como um plano que passa pela origem de $\bR^n$. Assim, podemos imaginar o ‚ngulo entre estes vetores naturalmente.
+\] Embora abstratos, estes conceitos s√£o bem fundamentados geometricamente. Dois vetores (linearmente independentes) de um espa√ßo vetorial $n$-dimensional geram um subespa√ßo vetorial de dimens√£o $2$. Este pode, por sua vez, pode ser pensado como um plano que passa pela origem de $\bR^n$. Assim, podemos imaginar o √¢ngulo entre estes vetores naturalmente.
 
 \begin{proposition}[Principais propriedades do produto escalar]
 	Para $\vec{x}, \vec{y}, \vec{z} \in \bR^n$ e $c \in \bR$ um escalar, temos as seguintes propriedades
@@ -92,10 +92,10 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 	\end{enumerate}
 \end{proposition}
 
-Estas propriedades s„o todas de f·cil verificaÁ„o (e s„o deixadas para o leitor verificar, como exercÌcio).
+Estas propriedades s√£o todas de f√°cil verifica√ß√£o (e s√£o deixadas para o leitor verificar, como exerc√≠cio).
 
 \begin{example}
-	Considere os vetores de $\bR^5$ escritos na base canÙnica:
+	Considere os vetores de $\bR^5$ escritos na base can√¥nica:
 	\[
 	\vec{x} =
 	\begin{bmatrix}
@@ -110,7 +110,7 @@ Estas propriedades s„o todas de f·cil verificaÁ„o (e s„o deixadas para o leitor 
 	\] Da mesma forma, podemos calcular os comprimentos
 	\[
 	\| \vec{x} \| = \sqrt{(-1)^2 + 2^2 + 0^2 + 3^2 + (-1)^2} = \sqrt{15} \quad \text{e} \quad \| \vec{y} \| = \sqrt{4^2 + 3^2 + (-1)^2 + (-11)^2 + 1^2} = \sqrt{148}.
-	\] Logo, o ‚ngulo $\theta$ entre estes vetores satisfaz (utilizamos uma calculadora para calcular as raÌzes quadradas e a funÁ„o inversa do cosseno):
+	\] Logo, o √¢ngulo $\theta$ entre estes vetores satisfaz (utilizamos uma calculadora para calcular as ra√≠zes quadradas e a fun√ß√£o inversa do cosseno):
 	\[
 	\cos \theta = \frac{\vec{x} \cdot \vec{y}}{\|\vec{x}\| \|\vec{y}\|} = \frac{-31}{\sqrt{15} \, \sqrt{148}} \simeq -0,65794 \implies  \theta \simeq 2,28887634 \textrm{ radianos} \simeq 131,12^{\text{o}}. \ \lhd
 	\]
@@ -123,37 +123,37 @@ Estas propriedades s„o todas de f·cil verificaÁ„o (e s„o deixadas para o leitor 
 	\begin{bmatrix}
 	2 \\ 3 \\ -1
 	\end{bmatrix}.
-	\] J· sabemos a multiplicaÁ„o de um escalar pelo vetor $\vec{u}$ muda o comprimeto (e talvez tambÈm o sentido) do vetor. Por exemplo, se multiplicarmos por $2$, o comprimento ser· multiplicado por $2$; se dividirmos por $3$, o comprimento ser· dividido por $3$. Se nÛs dividirmos pelo prÛprio comprimento de $\vec{u}$ nÛs obtemos um vetor unit·rio. Para verificar analÌticamente, basta utilizar a Propriedade \textit{6} acima:
+	\] J√° sabemos a multiplica√ß√£o de um escalar pelo vetor $\vec{u}$ muda o comprimeto (e talvez tamb√©m o sentido) do vetor. Por exemplo, se multiplicarmos por $2$, o comprimento ser√° multiplicado por $2$; se dividirmos por $3$, o comprimento ser√° dividido por $3$. Se n√≥s dividirmos pelo pr√≥prio comprimento de $\vec{u}$ n√≥s obtemos um vetor unit√°rio. Para verificar anal√≠ticamente, basta utilizar a Propriedade \textit{6} acima:
 	\[
 	c = \frac{1}{\|\vec{u}\|} \implies \left\| \frac{\vec{u}}{\|\vec{u}\|} \right\| = \|c \vec{u} \| = c \|\vec{u}\| = \frac{1}{\|\vec{u}\|}\|\vec{u}\| = 1.
-	\] Ent„o se quisermos encontrar um vetor unit·rio na direÁ„o de $\vec{u}$ acima, calculamos
+	\] Ent√£o se quisermos encontrar um vetor unit√°rio na dire√ß√£o de $\vec{u}$ acima, calculamos
 	\[
 	\|\vec{u}\| = \sqrt{4 + 9 + 1} = \sqrt{14} \quad \rightsquigarrow \quad \vec{v} = \frac{\vec{u}}{\|\vec{u}\|} = \frac{\vec{u}}{\sqrt{14}} =
 	\begin{bmatrix}
 	2/\sqrt{14} \\ 3/\sqrt{14} \\ -1/\sqrt{14}
 	\end{bmatrix}
-	\] È o vetor procurado. Este processo de obter um vetor unit·rio na mesma direÁ„o de um vetor previamente fixado È chamado de \textbf{normalizaÁ„o}. Observe que existem apenas dois vetores unit·rios na mesma direÁ„o de $\vec{u}$, a saber, $\vec{v}$ e $- \vec{v}. \ \lhd$
+	\] √© o vetor procurado. Este processo de obter um vetor unit√°rio na mesma dire√ß√£o de um vetor previamente fixado √© chamado de \textbf{normaliza√ß√£o}. Observe que existem apenas dois vetores unit√°rios na mesma dire√ß√£o de $\vec{u}$, a saber, $\vec{v}$ e $- \vec{v}. \ \lhd$
 \end{example}
 
 
 \section{Ortogonalidade}
 
-Como vimos na seÁ„o anterior, o produto escalar est· relacionado com o ‚ngulo entre dois vetores pela fÛrmula
+Como vimos na se√ß√£o anterior, o produto escalar est√° relacionado com o √¢ngulo entre dois vetores pela f√≥rmula
 \[
 \cos \theta = \frac{\vec{x} \cdot \vec{y}}{\|\vec{x}\| \|\vec{y}\|}.
-\] Quando este ‚ngulo $\theta$ È igual a $\pi /2$ (que È equivalente a $90^o$), vale que $\cos \theta = 0$ e logo $\vec{x} \cdot \vec{y} = 0$.
+\] Quando este √¢ngulo $\theta$ √© igual a $\pi /2$ (que √© equivalente a $90^o$), vale que $\cos \theta = 0$ e logo $\vec{x} \cdot \vec{y} = 0$.
 
-NÛs vamos dizer que os dois vetores $\vec{x}$ e $\vec{y}$ s„o \textbf{ortogonais} quando satisfazem
+N√≥s vamos dizer que os dois vetores $\vec{x}$ e $\vec{y}$ s√£o \textbf{ortogonais} quando satisfazem
 \[
 \vec{x} \cdot \vec{y} = 0.
-\] PoderÌamos tambÈm usar a palavra perpendiculares, mas por algum motivo esta terminologia È bastante menos comum quando lidamos com vetores em espaÁos vetoriais de dimens„o maior do que $3$.
+\] Poder√≠amos tamb√©m usar a palavra perpendiculares, mas por algum motivo esta terminologia √© bastante menos comum quando lidamos com vetores em espa√ßos vetoriais de dimens√£o maior do que $3$.
 
-Dizemos tambÈm que um conjunto de vetores È um \textbf{conjunto ortogonal} se todo par de vetores do conjunto for ortogonal. Em outras palavras, um conjunto $\{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k\}$ È um conjunto ortonogonal se, para qualquer escolha de Ìndices $i \neq j$, tivermos $\vec{v}_i \cdot \vec{v}_j = 0$.
+Dizemos tamb√©m que um conjunto de vetores √© um \textbf{conjunto ortogonal} se todo par de vetores do conjunto for ortogonal. Em outras palavras, um conjunto $\{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k\}$ √© um conjunto ortonogonal se, para qualquer escolha de √≠ndices $i \neq j$, tivermos $\vec{v}_i \cdot \vec{v}_j = 0$.
 
-Se, alÈm de o conjunto ser ortogonal, todos os seus elementos serem unit·rios (estarem normalizados), ent„o nÛs dizemos que o conjunto È um \textbf{conjunto ortonormal}. De outra maneira, um conjunto $\{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k\}$ È um conjunto ortonormal se, para qualquer Ìndice $i$, $\|\vec{v}_i\| = 1$ e, para qualquer escolha de Ìndices $i \neq j$, tivermos $\vec{v}_i \cdot \vec{v}_j = 0$.\footnote{Uma notaÁ„o bastante comum, principalmente em matem·tica e fÌsica, È a do delta de Kronecker:\[ \delta_{ij} = \left\lbrace \begin{array}{l}
+Se, al√©m de o conjunto ser ortogonal, todos os seus elementos serem unit√°rios (estarem normalizados), ent√£o n√≥s dizemos que o conjunto √© um \textbf{conjunto ortonormal}. De outra maneira, um conjunto $\{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k\}$ √© um conjunto ortonormal se, para qualquer √≠ndice $i$, $\|\vec{v}_i\| = 1$ e, para qualquer escolha de √≠ndices $i \neq j$, tivermos $\vec{v}_i \cdot \vec{v}_j = 0$.\footnote{Uma nota√ß√£o bastante comum, principalmente em matem√°tica e f√≠sica, √© a do delta de Kronecker:\[ \delta_{ij} = \left\lbrace \begin{array}{l}
 	1, \text{ se } i = j \\
 	0, \text{ se } i \neq j
-	\end{array} \right. . \] Em notaÁ„o matricial, $I_k = (\delta_{ij})$ È a matriz identidade. Nesta notaÁ„o, podemos dizer, mais sucintamente, que um conjunto $\{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k\}$ È ortonormal se $\vec{v}_i \cdot \vec{v}_j = \delta_{ij}$ para quaisquer $i,j = 1, 2, 3, \dots, k$.}
+	\end{array} \right. . \] Em nota√ß√£o matricial, $I_k = (\delta_{ij})$ √© a matriz identidade. Nesta nota√ß√£o, podemos dizer, mais sucintamente, que um conjunto $\{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k\}$ √© ortonormal se $\vec{v}_i \cdot \vec{v}_j = \delta_{ij}$ para quaisquer $i,j = 1, 2, 3, \dots, k$.}
 
 \begin{example}
 	Os vetores
@@ -164,7 +164,7 @@ Se, alÈm de o conjunto ser ortogonal, todos os seus elementos serem unit·rios (e
 	\vec{y} = \begin{bmatrix}
 	2 \\ 1
 	\end{bmatrix}
-	\] s„o ortogonais, pois $\vec{x} \cdot \vec{y} = (-1)\cdot 2 + 2 \cdot 1 = 0$, enquanto que os vetores
+	\] s√£o ortogonais, pois $\vec{x} \cdot \vec{y} = (-1)\cdot 2 + 2 \cdot 1 = 0$, enquanto que os vetores
 	\[
 	\vec{w} = \begin{bmatrix}
 	1 \\ 2
@@ -172,13 +172,13 @@ Se, alÈm de o conjunto ser ortogonal, todos os seus elementos serem unit·rios (e
 	\vec{z} = \begin{bmatrix}
 	2 \\ 1
 	\end{bmatrix}
-	\] n„o s„o ortogonais, j· que $\vec{w} \cdot \vec{z} = 1\cdot 2 + 2 \cdot 1 = 4$. Nestes casos, podemso dizer que o conjunto $\{\vec{x}, \vec{y}\}$ È um conjunto ortogonal enquanto $\{\vec{w}, \vec{z}\}$ n„o È.
+	\] n√£o s√£o ortogonais, j√° que $\vec{w} \cdot \vec{z} = 1\cdot 2 + 2 \cdot 1 = 4$. Nestes casos, podemso dizer que o conjunto $\{\vec{x}, \vec{y}\}$ √© um conjunto ortogonal enquanto $\{\vec{w}, \vec{z}\}$ n√£o √©.
 \end{example}
 
 
 
 \begin{example}
-	A base canÙnica do espaÁo $\bR^n$:
+	A base can√¥nica do espa√ßo $\bR^n$:
 	\[
 	\vec{e}_1 =
 	\begin{bmatrix}
@@ -196,54 +196,54 @@ Se, alÈm de o conjunto ser ortogonal, todos os seus elementos serem unit·rios (e
 	\begin{bmatrix}
 	0 \\ 0 \\ 0 \\ \vdots \\ 1
 	\end{bmatrix}
-	\] È um conjunto ortogonal, porque quando escolhermos $i\neq j$, temos
+	\] √© um conjunto ortogonal, porque quando escolhermos $i\neq j$, temos
 	\[
 	\vec{e}_i \cdot \vec{e}_j = 1 \cdot 0 + 0 \cdot 1 = 0. 
-	\] … tambÈm ortonormal, j· que, para todo $i$,
+	\] √â tamb√©m ortonormal, j√° que, para todo $i$,
 	\[
 	\| \vec{e}_i\|  = \sqrt{0^2 + 0^2 + \cdots + 1^2 + \cdots + 0^2 + 0^2} = 1. \ \lhd
 	\]
 \end{example}
 
-Uma primeira propriedade de ortogonalidade È uma vers„o para espaÁos vetoriais quaisquer do Teorema de Pit·goras, que aparece naturamente ao considerarmos vetores ortogonais.
+Uma primeira propriedade de ortogonalidade √© uma vers√£o para espa√ßos vetoriais quaisquer do Teorema de Pit√°goras, que aparece naturamente ao considerarmos vetores ortogonais.
 
-\begin{theorem}[Teorema de Pit·goras]
-	Se dois vetores $\vec{x}$ e $\vec{y}$ s„o ortogonais, ent„o
+\begin{theorem}[Teorema de Pit√°goras]
+	Se dois vetores $\vec{x}$ e $\vec{y}$ s√£o ortogonais, ent√£o
 	\[
 	\|\vec{x} + \vec{y}\|^2 = \|\vec{x}\|^2 + \|\vec{y}\|^2.
 	\]
 \end{theorem}
 
 \begin{proof}
-	Esperamos que esta demonstraÁ„o auxilie no compreendimento analÌtico e geomÈtrico dos conceitos que introduzimos atÈ agora. O vetor $\vec{x} + \vec{y} \,$ pode ser considerado a hipotenusa do tri‚ngulo ret‚ngulo de catetos $\vec{x}$ e $\vec{y}$ (fazer uma figura!).
+	Esperamos que esta demonstra√ß√£o auxilie no compreendimento anal√≠tico e geom√©trico dos conceitos que introduzimos at√© agora. O vetor $\vec{x} + \vec{y} \,$ pode ser considerado a hipotenusa do tri√¢ngulo ret√¢ngulo de catetos $\vec{x}$ e $\vec{y}$ (fazer uma figura!).
 	
-	Pelas propriedades do comprimento e do produto escalar, temos que, para \textit{quaisquer} dois vetores $\vec{x}$ e $\vec{y}$ (n„o necessariamente ortogonais), vale que
+	Pelas propriedades do comprimento e do produto escalar, temos que, para \textit{quaisquer} dois vetores $\vec{x}$ e $\vec{y}$ (n√£o necessariamente ortogonais), vale que
 	\[
 	\|\vec{x} + \vec{y}\|^2 = (\vec{x} + \vec{y}) \cdot (\vec{x} + \vec{y}) =  \vec{x} \cdot \vec{x} + \vec{x} \cdot \vec{y} +  \vec{y} \cdot \vec{x} +  \vec{y} \cdot \vec{y} = \|\vec{x}\|^2 + 2 (\vec{x} \cdot \vec{y}) + \|\vec{y}\|^2.
-	\] De certa maneira, esta È uma forma de reescrever a Lei dos Cossenos. Quando os vetores $\vec{x}$ e $\vec{y}$ forem ortogonais, temos $\vec{x} \cdot \vec{y} = 0$, concluimos que
+	\] De certa maneira, esta √© uma forma de reescrever a Lei dos Cossenos. Quando os vetores $\vec{x}$ e $\vec{y}$ forem ortogonais, temos $\vec{x} \cdot \vec{y} = 0$, concluimos que
 	\[
 	\|\vec{x} + \vec{y}\|^2 = \|\vec{x}\|^2 + \|\vec{y}\|^2. \qedhere
 	\]
 \end{proof}
 
 
-Notamos que, de acordo com a nossa definiÁ„o, o vetor nulo È ortogonal a qualquer outro. Vejamos, no entanto, que vetores n„o nulos satisfazem propriedades adicionais.
+Notamos que, de acordo com a nossa defini√ß√£o, o vetor nulo √© ortogonal a qualquer outro. Vejamos, no entanto, que vetores n√£o nulos satisfazem propriedades adicionais.
 
 \begin{theorem}
-	Todo conjunto ortogonal $\{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k\}$ formado por vetores \textit{n„o nulos} È um conjunto linearmente independente (LI).
+	Todo conjunto ortogonal $\{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k\}$ formado por vetores \textit{n√£o nulos} √© um conjunto linearmente independente (LI).
 \end{theorem}
 
 \begin{proof}
-	Considerando uma combinaÁ„o linear
+	Considerando uma combina√ß√£o linear
 	\[
 	c_1 \vec{v}_1 + c_2 \vec{v}_2 + \dots + c_k \vec{v}_k = \vec{0}
-	\] e fazendo o produto escalar com qualquer dos vetores $\vec{v}_j$ na equaÁ„o acima, concluimos que
+	\] e fazendo o produto escalar com qualquer dos vetores $\vec{v}_j$ na equa√ß√£o acima, concluimos que
 	\[
 	(c_1 \vec{v}_1 + c_2 \vec{v}_2 + \dots + c_k \vec{v}_k ) \cdot \vec{v}_j = \vec{0} \cdot \vec{v}_j.
-	\] Agora, a condiÁ„o de ortogonalidade nos diz que $\vec{v}_i \cdot \vec{v}_j = 0$ sempre que $i \neq j$. Portanto,
+	\] Agora, a condi√ß√£o de ortogonalidade nos diz que $\vec{v}_i \cdot \vec{v}_j = 0$ sempre que $i \neq j$. Portanto,
 	\[
 	c_j \| \vec{v}_j \| = c_j (\vec{v}_j \cdot \vec{v}_j) = 0 \stackrel{\vec{v}_j \neq \vec{0}}{\implies} c_j = 0.
-	\] Isto È a definiÁ„o de um conjunto ser LI: qualquer combinaÁ„o linear que resulte no vetor nulo deve ter todos os coeficientes nulos.
+	\] Isto √© a defini√ß√£o de um conjunto ser LI: qualquer combina√ß√£o linear que resulte no vetor nulo deve ter todos os coeficientes nulos.
 \end{proof}
 
 \begin{example}
@@ -269,36 +269,36 @@ O conjunto
 \vec{u}_2 \cdot \vec{u}_3 = 4 - 2 - 2 = 0. 
 \end{split} 
 \end{equation}
-Logo, pelo teorema acima, o conjunto $\{\vec{u}_1, \vec{u}_2,\vec{u}_3\}$ È linearmente independente. Neste exemplo, s„o todos elementos de $\bR^3$; portanto, formam uma base para $\bR^3$ que È tambÈm ortogonal (voltaremos a falar sobre bases ortogonais em breve)$. \ \lhd$
+Logo, pelo teorema acima, o conjunto $\{\vec{u}_1, \vec{u}_2,\vec{u}_3\}$ √© linearmente independente. Neste exemplo, s√£o todos elementos de $\bR^3$; portanto, formam uma base para $\bR^3$ que √© tamb√©m ortogonal (voltaremos a falar sobre bases ortogonais em breve)$. \ \lhd$
 \end{example}
 
-Uma das aplicaÁıes mais importantes do produto escalar reside no fato de nÛs conseguirmos fazer projeÁıes ortogonais em direÁıes fixadas. Por exemplo, suponhamos que em um sistema fÌsico, um vetor $\vec{v}$ representa a forÁa aplicada em um ponto, como na figura abaixo.
+Uma das aplica√ß√µes mais importantes do produto escalar reside no fato de n√≥s conseguirmos fazer proje√ß√µes ortogonais em dire√ß√µes fixadas. Por exemplo, suponhamos que em um sistema f√≠sico, um vetor $\vec{v}$ representa a for√ßa aplicada em um ponto, como na figura abaixo.
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=1\linewidth]{\dir/Semana11/semana11-proj}
 	\end{center}
-\end{figure} GostarÌamos de encontrar a componente do vetor na direÁ„o da reta tracejada. Para isto, podemos considerar um vetor \textit{unit·rio} $\vec{u}$ sobre a reta. Assim, a componente de $\vec{v}$ na direÁ„o de $\vec{u}$ È igual a $k \vec{u}$, onde $k$ tem a ver com o cosseno do ‚ngulo entre os vetores:
+\end{figure} Gostar√≠amos de encontrar a componente do vetor na dire√ß√£o da reta tracejada. Para isto, podemos considerar um vetor \textit{unit√°rio} $\vec{u}$ sobre a reta. Assim, a componente de $\vec{v}$ na dire√ß√£o de $\vec{u}$ √© igual a $k \vec{u}$, onde $k$ tem a ver com o cosseno do √¢ngulo entre os vetores:
 \[
 \cos \theta = \frac{\text{cateto adjacente}}{\text{hipotenusa}} = \frac{k}{\|\vec{v}\|}.
-\] Utilizando novamente que $\vec{u}$ È um vetor unit·rio (isto È, $\|\vec{u}\|=1$), concluimos que
+\] Utilizando novamente que $\vec{u}$ √© um vetor unit√°rio (isto √©, $\|\vec{u}\|=1$), concluimos que
 \[
 k = \|\vec{v}\| \cos \theta = \|\vec{u}\| \|\vec{v}\| \cos \theta = \vec{u} \cdot \vec{v}.
-\] Assim sendo, definimos a \textbf{projeÁ„o ortogonal de $\vec{v}$ em um vetor unit·rio $\vec{u}$} como sendo
+\] Assim sendo, definimos a \textbf{proje√ß√£o ortogonal de $\vec{v}$ em um vetor unit√°rio $\vec{u}$} como sendo
 \[
 \boxed{\proj_{\vec{u}} \vec{v} = (\vec{u} \cdot \vec{v}) \, \vec{u}.}
-\] No \textbf{caso onde $\vec{u}$ n„o est· normalizado}, devemos primeiramente normalizar o vetor, de modo que a projeÁ„o ortogonal È dada por
+\] No \textbf{caso onde $\vec{u}$ n√£o est√° normalizado}, devemos primeiramente normalizar o vetor, de modo que a proje√ß√£o ortogonal √© dada por
 \[
 \boxed{\proj_{\vec{u}} \vec{v} = \bigg( \frac{\vec{u}}{\|\vec{u}\|} \cdot \vec{v} \bigg) \, \frac{\vec{u}}{\|\vec{u}\|} = \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\|^2} \, \vec{u} = \frac{\vec{u} \cdot \vec{v}}{\vec{u} \cdot \vec{u}} \, \vec{u}.}
 \]
 
 \begin{example}\label{canon}
-	Considere vetores no espaÁo de quatro dimensıes $\bR^4$. Vamos determinar a projeÁ„o do vetor $\vec{v} =
+	Considere vetores no espa√ßo de quatro dimens√µes $\bR^4$. Vamos determinar a proje√ß√£o do vetor $\vec{v} =
 	\begin{bmatrix}
 	1 \\ -1 \\ 3 \\ 4
-	\end{bmatrix}$ na direÁ„o da reta que tem a mesma direÁ„o do vetor $\vec{u} =
+	\end{bmatrix}$ na dire√ß√£o da reta que tem a mesma dire√ß√£o do vetor $\vec{u} =
 	\begin{bmatrix}
 	1 \\ 1 \\ 1 \\ -1
-	\end{bmatrix}.$ Observamos inicialmente que $\|\vec{u}\| = \sqrt{4} = 2$ n„o È unit·rio. Temos que
+	\end{bmatrix}.$ Observamos inicialmente que $\|\vec{u}\| = \sqrt{4} = 2$ n√£o √© unit√°rio. Temos que
 	\[
 	\proj_{\vec{u}} \vec{v} =  \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\|^2} \, \vec{u} = \frac{1 - 1 + 3 - 4}{4}
 	\begin{bmatrix}
@@ -311,7 +311,7 @@ k = \|\vec{v}\| \cos \theta = \|\vec{u}\| \|\vec{v}\| \cos \theta = \vec{u} \cdo
 	\begin{bmatrix}
 	1/4 \\ 1/4 \\ 1/4 \\ -1/4
 	\end{bmatrix}.
-	\] A projeÁ„o de $\vec{v}$ sobre o vetor $\vec{e}_3$ da base canÙnica de $\bR^4$ È (observe que $\|\vec{e}_3\| = 1$)
+	\] A proje√ß√£o de $\vec{v}$ sobre o vetor $\vec{e}_3$ da base can√¥nica de $\bR^4$ √© (observe que $\|\vec{e}_3\| = 1$)
 	\[
 	\proj_{\vec{e}_3} \vec{v} = (\vec{e}_3 \cdot \vec{v}) \, \vec{e}_3 = (0 + 0 + 3 + 0)
 	\begin{bmatrix}
@@ -319,28 +319,28 @@ k = \|\vec{v}\| \cos \theta = \|\vec{u}\| \|\vec{v}\| \cos \theta = \vec{u} \cdo
 	\end{bmatrix} = \begin{bmatrix}
 	0 \\ 0 \\ 3 \\ 0
 	\end{bmatrix}.
-	\] Observe que a projeÁ„o sobre o vetor $\vec{e}_3$ da base canÙnica apenas ``enfatiza'' a terceira componente do vetor $\vec{v}$. Isto È bastante natural, pois $\vec{v} \cdot \vec{e}_3$ deve fornecer o comprimento da projeÁ„o de $\vec{v}$ na direÁ„o do vetor unit·rio $\vec{e}_3$, que deve ser igual a terceira componente do vetor. … justamente assim que usamos a base canÙnica para representar vetores geometricamente. De forma geral, podemos escrever
+	\] Observe que a proje√ß√£o sobre o vetor $\vec{e}_3$ da base can√¥nica apenas ``enfatiza'' a terceira componente do vetor $\vec{v}$. Isto √© bastante natural, pois $\vec{v} \cdot \vec{e}_3$ deve fornecer o comprimento da proje√ß√£o de $\vec{v}$ na dire√ß√£o do vetor unit√°rio $\vec{e}_3$, que deve ser igual a terceira componente do vetor. √â justamente assim que usamos a base can√¥nica para representar vetores geometricamente. De forma geral, podemos escrever
 	\[
 	\vec{v} = \big( \vec{v} \cdot \vec{e}_1 \big) \vec{e}_1 + \big( \vec{v} \cdot \vec{e}_2 \big) \vec{e}_2  + \big( \vec{v} \cdot \vec{e}_3 \big) \vec{e}_3  + \big( \vec{v} \cdot \vec{e}_4 \big) \vec{e}_4.
-	\] Este tipo de represetaÁ„o ser· explorado com mais detalhes na prÛxima seÁ„o$. \ \lhd$
+	\] Este tipo de represeta√ß√£o ser√° explorado com mais detalhes na pr√≥xima se√ß√£o$. \ \lhd$
 \end{example}
 
-As projeÁıes ortogonais tambÈm podem ser utilizadas para o c·lculo de dist‚ncias de ponto ‡ retas que passam pela origem: Pela interpretaÁ„o geomÈtrica da subtraÁ„o de vetores, obtemos um vetor perpendicular ‡ reta com a direÁ„o de $\vec{u}$ e que termina onde termina o vetor $\vec{v}$ (ver figura).
+As proje√ß√µes ortogonais tamb√©m podem ser utilizadas para o c√°lculo de dist√¢ncias de ponto √† retas que passam pela origem: Pela interpreta√ß√£o geom√©trica da subtra√ß√£o de vetores, obtemos um vetor perpendicular √† reta com a dire√ß√£o de $\vec{u}$ e que termina onde termina o vetor $\vec{v}$ (ver figura).
 \begin{figure}[h!]
 	\begin{center}
 		\includegraphics[width=1\linewidth]{\dir/Semana11/semana11-dist}
 	\end{center}
 \end{figure}
 
-\noindent Desta maneira, o comprimento deste vetor, a saber $\|\vec{u} - \proj_{\vec{u}} \vec{v}\|$, È a dist‚ncia procurada.\footnote{Lembre: a dist‚ncia de um ponto a uma reta È a menor dist‚ncia entre este ponto e os pontos da reta; por esta raz„o que procuramos um vetor perpendicular ‡ reta.}
+\noindent Desta maneira, o comprimento deste vetor, a saber $\|\vec{u} - \proj_{\vec{u}} \vec{v}\|$, √© a dist√¢ncia procurada.\footnote{Lembre: a dist√¢ncia de um ponto a uma reta √© a menor dist√¢ncia entre este ponto e os pontos da reta; por esta raz√£o que procuramos um vetor perpendicular √† reta.}
 
 \begin{example}
-	Calcular a dist‚ncia do ponto $P = (0,2,3)$ e a reta que passa pela origem e tem a direÁ„o do vetor $\vec{u} =
+	Calcular a dist√¢ncia do ponto $P = (0,2,3)$ e a reta que passa pela origem e tem a dire√ß√£o do vetor $\vec{u} =
 	\begin{bmatrix}
 	1 \\ 2 \\1
 	\end{bmatrix}.$
 	
-	Para isto, consideramos o vetor $\vec{v}$ cujas componentes s„o as componentes do ponto $P$. Assim, estamos na situaÁ„o da discuss„o acima e vale que
+	Para isto, consideramos o vetor $\vec{v}$ cujas componentes s√£o as componentes do ponto $P$. Assim, estamos na situa√ß√£o da discuss√£o acima e vale que
 	\[
 	\proj_{\vec{u}} \vec{v} = \frac{7}{6}
 	\begin{bmatrix}
@@ -363,26 +363,26 @@ As projeÁıes ortogonais tambÈm podem ser utilizadas para o c·lculo de dist‚ncias
 \end{example}
 
 \begin{exercise}
-	Como poderÌamos fazer se a reta n„o passasse pela origem? O mesmo raciocÌnio funciona?
+	Como poder√≠amos fazer se a reta n√£o passasse pela origem? O mesmo racioc√≠nio funciona?
 \end{exercise}
 
 
 \section{Bases ortogonais e ortonormais}
 
 
-Vimos que uma das import‚ncias do produto escalar È estender o conceito de ortogonalidade para espaÁos vetoriais mais gerais. A ortogonalidade traz consigo a noÁ„o de projeÁ„o ortogonal. Agora vamos ver algumas vantagens em se considerar bases de espaÁos vetoriais que s„o tambÈm conjuntos ortogonais; estas s„o conhecidas como \textbf{bases ortogonais}.
+Vimos que uma das import√¢ncias do produto escalar √© estender o conceito de ortogonalidade para espa√ßos vetoriais mais gerais. A ortogonalidade traz consigo a no√ß√£o de proje√ß√£o ortogonal. Agora vamos ver algumas vantagens em se considerar bases de espa√ßos vetoriais que s√£o tamb√©m conjuntos ortogonais; estas s√£o conhecidas como \textbf{bases ortogonais}.
 
 \begin{example}\label{ortonormal}
-	A base canÙnica de $\bR^n$ forma um conjunto ortogonal e È, portanto, uma base ortogonal. Assim como no Exemplo \ref{canon}, È possÌvel representar qualquer vetor $\vec{v}$ como
+	A base can√¥nica de $\bR^n$ forma um conjunto ortogonal e √©, portanto, uma base ortogonal. Assim como no Exemplo \ref{canon}, √© poss√≠vel representar qualquer vetor $\vec{v}$ como
 	\[
 	\vec{v} = \big( \vec{v} \cdot \vec{e}_1 \big) \vec{e}_1 + \big( \vec{v} \cdot \vec{e}_2 \big) \vec{e}_2  + \cdots  + \big( \vec{v} \cdot \vec{e}_n \big) \vec{e}_n.
 	\]
 \end{example}
 
-Vejamos que esta propriedade da base canÙnica È, na realidade, uma propriedade de todas as bases ortogonais:
+Vejamos que esta propriedade da base can√¥nica √©, na realidade, uma propriedade de todas as bases ortogonais:
 
 \begin{theorem}\label{thm:base-ortogonal}
-	Seja $\cB = \{ \vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ uma base ortogonal de $\bR^n$. Ent„o qualquer vetor $\vec{v} \in \bR^n$ pode ser representado como
+	Seja $\cB = \{ \vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ uma base ortogonal de $\bR^n$. Ent√£o qualquer vetor $\vec{v} \in \bR^n$ pode ser representado como
 	\[
 	\vec{v} = \frac{\vec{v} \cdot \vec{v}_1}{\vec{v}_1 \cdot \vec{v}_1} \, \vec{v}_1 + \frac{\vec{v} \cdot \vec{v}_2}{\vec{v}_2 \cdot \vec{v}_2} \, \vec{v}_2  + \cdots  + \frac{\vec{v} \cdot \vec{v}_n}{\vec{v}_n \cdot \vec{v}_n} \, \vec{v}_n.
 	\] Podemos escrever, de outra maneira, que
@@ -391,22 +391,22 @@ Vejamos que esta propriedade da base canÙnica È, na realidade, uma propriedade d
 	\]
 \end{theorem}
 
-Este resultado mostra que bases ortogonais s„o especiais e boas de trabalhar. Lembra que anteriormente, para encontrar os coeficientes de um vetor em uma base, tÌnhamos que encontrar $c_1, c_2, \cdots, c_n$ resolvendo o sistema linear cuja forma vetorial È
+Este resultado mostra que bases ortogonais s√£o especiais e boas de trabalhar. Lembra que anteriormente, para encontrar os coeficientes de um vetor em uma base, t√≠nhamos que encontrar $c_1, c_2, \cdots, c_n$ resolvendo o sistema linear cuja forma vetorial √©
 \[
 c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n = \vec{v}.
-\] O teorema acima afirma, em outras palavras, quando a base È ortogonal, os coeficientes do vetor $\vec{v}$ na base $\cB$ s„o os n˙meros
+\] O teorema acima afirma, em outras palavras, quando a base √© ortogonal, os coeficientes do vetor $\vec{v}$ na base $\cB$ s√£o os n√∫meros
 \[
 c_j = \frac{\vec{v} \cdot \vec{v}_j}{\vec{v}_j \cdot \vec{v}_j}.
 \]
 
 \begin{proof}[Justificativa do Teorema \ref{thm:base-ortogonal}]
-	Se a representaÁ„o do vetor $\vec{v}$ na base $\cB$ for
+	Se a representa√ß√£o do vetor $\vec{v}$ na base $\cB$ for
 	\[
 	\vec{v} = c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n,
-	\] ent„o, fazendo o produto escalar desta express„o com $\vec{v}_j$ e utilizando as propriedades de ortogonalidade, concluimos que
+	\] ent√£o, fazendo o produto escalar desta express√£o com $\vec{v}_j$ e utilizando as propriedades de ortogonalidade, concluimos que
 	\[
 	\vec{v} \cdot \vec{v}_j = \big( c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n \big) \cdot \vec{v}_j = c_1 (\vec{v}_1\cdot \vec{v}_j) + c_2 (\vec{v}_2\cdot \vec{v}_j) + \cdots + c_n (\vec{v}_n\cdot \vec{v}_j) = c_j \big( \vec{v}_j \cdot \vec{v}_j \big),
-	\] pois $\vec{v}_i \cdot \vec{v}_j = 0$ sempre que $i \neq j$. DaÌ, concluimos, como querÌamos, que os coeficientes devem satisfazer
+	\] pois $\vec{v}_i \cdot \vec{v}_j = 0$ sempre que $i \neq j$. Da√≠, concluimos, como quer√≠amos, que os coeficientes devem satisfazer
 	\[
 	c_j = \frac{\vec{v} \cdot \vec{v}_j}{\vec{v}_j \cdot \vec{v}_j}. \qedhere
 	\]
@@ -425,28 +425,28 @@ c_j = \frac{\vec{v} \cdot \vec{v}_j}{\vec{v}_j \cdot \vec{v}_j}.
 	\end{bmatrix}
 	\] formam uma base ortogonal para $\bR^2$.
 	
-	Em primeiro lugar, formam uma base, pois s„o vetores linearmente independentes e s„o dois (que È a dimens„o de $\bR^2$). Agora, calculamos
+	Em primeiro lugar, formam uma base, pois s√£o vetores linearmente independentes e s√£o dois (que √© a dimens√£o de $\bR^2$). Agora, calculamos
 	\[
 	\vec{u} \cdot \vec{v} = 4\cdot (-1) + 2\cdot 2 = 0.
-	\] Segue que $\vec{u}$ e $\vec{v}$ s„o tambÈm ortogonais e, logo, formam uma base ortogonal de $\bR^2$.
+	\] Segue que $\vec{u}$ e $\vec{v}$ s√£o tamb√©m ortogonais e, logo, formam uma base ortogonal de $\bR^2$.
 	
 	Para escrever um vetor $\vec{x} =
 	\begin{bmatrix}
 	2 \\ -7
-	\end{bmatrix}$ nesta base, podemos calcular as projeÁıes nos elementos da base (isto apenas vale se os elementos da base s„o ortogonais!):
+	\end{bmatrix}$ nesta base, podemos calcular as proje√ß√µes nos elementos da base (isto apenas vale se os elementos da base s√£o ortogonais!):
 	\[
 	\vec{x} = \frac{\vec{x} \cdot \vec{u}}{\vec{u} \cdot \vec{u}} \, \vec{u} + \frac{\vec{x} \cdot \vec{v}}{\vec{v} \cdot \vec{v}} \, \vec{v} = \frac{-6}{20} \, \vec{u} + \frac{-16}{5} \, \vec{v} = -0.3 \, \vec{u} -3.2 \, \vec{v}. \ \lhd
 	\]
 \end{example}
 
 
-Observe no exemplo acima que È muito mais f·cil obter as componentes por ortogonalidade do que resolver sistemas lineares. Isto mesmo em dimens„o baixa! Imagine se fosse um sistema $5\times 5$ ou ainda maior.
+Observe no exemplo acima que √© muito mais f√°cil obter as componentes por ortogonalidade do que resolver sistemas lineares. Isto mesmo em dimens√£o baixa! Imagine se fosse um sistema $5\times 5$ ou ainda maior.
 
 
-Note que a base canÙnica, como no Exemplo \ref{ortonormal}, tem a propriedade adicional que $\|\vec{e}_j\| = 1$ para todo Ìndice $j$. Isto fez com que a representaÁ„o de vetores do Teorema \ref{thm:base-ortogonal} assumisse um formato ainda mais simples. Estas bases ortogonais que tem por elementos vetores unit·rios s„o conhecidas como \textbf{bases ortonormais}. Mais explicitamente, uma base ortonormal È uma base $\{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ de um espaÁo vetorial que adicionalmente satisfaz
+Note que a base can√¥nica, como no Exemplo \ref{ortonormal}, tem a propriedade adicional que $\|\vec{e}_j\| = 1$ para todo √≠ndice $j$. Isto fez com que a representa√ß√£o de vetores do Teorema \ref{thm:base-ortogonal} assumisse um formato ainda mais simples. Estas bases ortogonais que tem por elementos vetores unit√°rios s√£o conhecidas como \textbf{bases ortonormais}. Mais explicitamente, uma base ortonormal √© uma base $\{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ de um espa√ßo vetorial que adicionalmente satisfaz
 \[
-\vec{v}_i \cdot \vec{v}_j = 0 \text{ para } i \neq j \text{ e tambÈm } \|\vec{v}_j\| = 1 \text{ para todo } j \ \ \big( \iff \vec{v}_j \cdot \vec{v}_j = 1 \big)
-\] Uma consequÍncia imediata È que, sendo $\{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ uma base ortonormal de $\bR^n$, podemos escrever
+\vec{v}_i \cdot \vec{v}_j = 0 \text{ para } i \neq j \text{ e tamb√©m } \|\vec{v}_j\| = 1 \text{ para todo } j \ \ \big( \iff \vec{v}_j \cdot \vec{v}_j = 1 \big)
+\] Uma consequ√™ncia imediata √© que, sendo $\{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ uma base ortonormal de $\bR^n$, podemos escrever
 \[
 \vec{v} = \big( \vec{v} \cdot \vec{v}_1 \big) \vec{v}_1 + \big( \vec{v} \cdot \vec{v}_2 \big) \vec{v}_2  + \cdots + \big( \vec{v} \cdot \vec{v}_n \big) \vec{v}_n.
 \]
@@ -485,7 +485,7 @@ Note que a base canÙnica, como no Exemplo \ref{ortonormal}, tem a propriedade ad
 \end{example}
 
 
-Observamos finalmente que bases ortogonais podem ser facilmente transformadas em bases ortonormais pelo processo de normalizaÁ„o.
+Observamos finalmente que bases ortogonais podem ser facilmente transformadas em bases ortonormais pelo processo de normaliza√ß√£o.
 
 
 \begin{example}

@@ -1,8 +1,8 @@
-%Este trabalho est· licenciado sob a LicenÁa Creative Commons AtribuiÁ„o-CompartilhaIgual 3.0 N„o Adaptada. Para ver uma cÛpia desta licenÁa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+%Este trabalho est√° licenciado sob a Licen√ßa Creative Commons Atribui√ß√£o-CompartilhaIgual 3.0 N√£o Adaptada. Para ver uma c√≥pia desta licen√ßa, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 \documentclass[../livro.tex]{subfiles} %%DM%%Escolher document class and options article, etc
 
-%define o diretÛrio principal
+%define o diret√≥rio principal
 \providecommand{\dir}{..}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -22,10 +22,10 @@
 
 \section{Sistemas Lineares}
 
-ComeÁamos nosso estudo diretamente com um exemplo:
+Come√ßamos nosso estudo diretamente com um exemplo:
 
 \begin{example}
-Considere o sistema linear que consiste de duas equaÁıes e duas vari·veis
+Considere o sistema linear que consiste de duas equa√ß√µes e duas vari√°veis
 \begin{equation}\label{exp1}
   \left\{
     \begin{array}{rcl}
@@ -33,11 +33,11 @@ Considere o sistema linear que consiste de duas equaÁıes e duas vari·veis
       2x-y&=&-2
     \end{array}
   \right..
-\end{equation} Nosso objetivo È descobrir o valor (ou todos os valores) das vari·veis $x$ e $y$ que satisfazem a ambas equaÁıes.
+\end{equation} Nosso objetivo √© descobrir o valor (ou todos os valores) das vari√°veis $x$ e $y$ que satisfazem a ambas equa√ß√µes.
 
 \vspace{0.2cm}
 
-\noindent\textit{SoluÁ„o 1.} Ao multiplicar toda a primeira equaÁ„o por $-2$, n„o alteramos a soluÁ„o do sistema, pois, caso quisÈssemos voltar ao sistema original, bastaria dividir a primeira equaÁ„o do sistema abaixo por $-2$. Ficamos assim com o sistema
+\noindent\textit{Solu√ß√£o 1.} Ao multiplicar toda a primeira equa√ß√£o por $-2$, n√£o alteramos a solu√ß√£o do sistema, pois, caso quis√©ssemos voltar ao sistema original, bastaria dividir a primeira equa√ß√£o do sistema abaixo por $-2$. Ficamos assim com o sistema
 \begin{equation*}
   \left\{
     \begin{array}{rcl}
@@ -45,7 +45,7 @@ Considere o sistema linear que consiste de duas equaÁıes e duas vari·veis
       2x-y&=&-2
     \end{array}
   \right..
-\end{equation*} Em seguida, somamos as duas equaÁıes e mantemos uma delas.
+\end{equation*} Em seguida, somamos as duas equa√ß√µes e mantemos uma delas.
 \begin{equation*}
   \left\{
     \begin{array}{rcl}
@@ -53,9 +53,9 @@ Considere o sistema linear que consiste de duas equaÁıes e duas vari·veis
       -7y & =& -4
     \end{array}
   \right..
-\end{equation*} Este sistema tambÈm tem as mesmas soluÁıes do anterior, pois podemos a qualquer hora retornar ao sistema original fazendo $($linha 2$)-($linha 1$)$.
+\end{equation*} Este sistema tamb√©m tem as mesmas solu√ß√µes do anterior, pois podemos a qualquer hora retornar ao sistema original fazendo $($linha 2$)-($linha 1$)$.
 
-Em verdade, manter a equaÁ„o da primeira linha multiplicada por $-2$ n„o ajuda em nada na resoluÁ„o do sistema e voltaremos ‡ equaÁ„o original. AlÈm disso, na linha dois j· podemos isolar a vari·vel $y$ e descobrir o seu valor. Ficamos ent„o com o sistema:
+Em verdade, manter a equa√ß√£o da primeira linha multiplicada por $-2$ n√£o ajuda em nada na resolu√ß√£o do sistema e voltaremos √† equa√ß√£o original. Al√©m disso, na linha dois j√° podemos isolar a vari√°vel $y$ e descobrir o seu valor. Ficamos ent√£o com o sistema:
 \begin{equation}\label{exp1-2}
   \left\{
     \begin{array}{rcl}
@@ -65,10 +65,10 @@ Em verdade, manter a equaÁ„o da primeira linha multiplicada por $-2$ n„o ajuda e
   \right..
 \end{equation}
 
-Observamos, finalmente, que a soluÁ„o do ˙ltimo sistema (que È a mesma do sistema original) j· est· muito f·cil de ser obtida. Sabemos o valor de $y$ pela segunda equaÁ„o e, para descobrir o valor de $x$, basta usar a primeira equaÁ„o:
+Observamos, finalmente, que a solu√ß√£o do √∫ltimo sistema (que √© a mesma do sistema original) j√° est√° muito f√°cil de ser obtida. Sabemos o valor de $y$ pela segunda equa√ß√£o e, para descobrir o valor de $x$, basta usar a primeira equa√ß√£o:
 \[
 y = \frac{4}{7} \implies x + 3\cdot \frac{4}{7} = 1 \implies x = 1 - \frac{12}{7} = - \frac{5}{7}.
-\] Podemos escrever a soluÁ„o do sistema como
+\] Podemos escrever a solu√ß√£o do sistema como
 \begin{equation*}
   \left\{
     \begin{array}{rcl}
@@ -79,36 +79,36 @@ y = \frac{4}{7} \implies x + 3\cdot \frac{4}{7} = 1 \implies x = 1 - \frac{12}{7
 \end{equation*}
 \end{example}
 
-O sÌmbolo $\lhd$ acima nas nossas notas indica o fim de uma soluÁ„o, exemplo ou observaÁ„o.
+O s√≠mbolo $\lhd$ acima nas nossas notas indica o fim de uma solu√ß√£o, exemplo ou observa√ß√£o.
 
-Em seguida, fazemos algumas observaÁıes.
+Em seguida, fazemos algumas observa√ß√µes.
 
 \begin{remark}
-O sistema linear como o acima possui duas equaÁıes e duas vari·veis e por isto È conhecido como um sistema linear $2\times 2$ (lÍ-se dois por dois). Mais geralmente, um sistema linear com $m$ equaÁıes e $n$ vari·veis È conhecido como um sistema linear $m \times n$ (lÍ-se $m$ por $n$).
+O sistema linear como o acima possui duas equa√ß√µes e duas vari√°veis e por isto √© conhecido como um sistema linear $2\times 2$ (l√™-se dois por dois). Mais geralmente, um sistema linear com $m$ equa√ß√µes e $n$ vari√°veis √© conhecido como um sistema linear $m \times n$ (l√™-se $m$ por $n$).
 \end{remark}
 
 \begin{remark}
-Sistemas $2\times 2$ s„o dos mais simples de resolver e por isso o mÈtodo acima pode parecer desnecessariamente complicado. Mas, como veremos, este mÈtodo pode ser aplicado para qualquer sistema. Logo, È essencial que se entenda completamente todos os seus passos para um bom acompanhamento do que est· por vir.
+Sistemas $2\times 2$ s√£o dos mais simples de resolver e por isso o m√©todo acima pode parecer desnecessariamente complicado. Mas, como veremos, este m√©todo pode ser aplicado para qualquer sistema. Logo, √© essencial que se entenda completamente todos os seus passos para um bom acompanhamento do que est√° por vir.
 \end{remark}
 
-Vamos analisar a soluÁ„o apresentada acima mais de perto. Para chegar do sistema linear em \eqref{exp1} para o sistema em \eqref{exp1-2}, fizemos uma sequÍncia de operaÁıes que:
+Vamos analisar a solu√ß√£o apresentada acima mais de perto. Para chegar do sistema linear em \eqref{exp1} para o sistema em \eqref{exp1-2}, fizemos uma sequ√™ncia de opera√ß√µes que:
 \begin{itemize}
-  \item \emph{n„o alteram a soluÁ„o do sistema linear original e que;}
-  \item resumidamente, podem ser descritas como \emph{adicionar um m˙ltiplo da linha um na linha dois.}
-\end{itemize} Que a soluÁ„o permanece a mesma pode ser justificado tal qual est· na ``SoluÁ„o 1'' acima.
+  \item \emph{n√£o alteram a solu√ß√£o do sistema linear original e que;}
+  \item resumidamente, podem ser descritas como \emph{adicionar um m√∫ltiplo da linha um na linha dois.}
+\end{itemize} Que a solu√ß√£o permanece a mesma pode ser justificado tal qual est√° na ``Solu√ß√£o 1'' acima.
 
 \vspace{0.2cm}
 
-OperaÁıes nas linhas de um sistema que n„o alteram o conjunto de soluÁıes s„o chamadas de \textbf{operaÁıes elementares}. S„o as seguintes:
+Opera√ß√µes nas linhas de um sistema que n√£o alteram o conjunto de solu√ß√µes s√£o chamadas de \textbf{opera√ß√µes elementares}. S√£o as seguintes:
 \begin{enumerate}
   \item Multiplicar uma linha por uma constante;
   \item Trocar duas linhas de lugar;
-  \item Somar um m˙ltiplo de uma linha a outra linha.
+  \item Somar um m√∫ltiplo de uma linha a outra linha.
 \end{enumerate}
 
 \vspace{0.2cm}
 
-Um artifÌcio que torna todo o processo mais ``autom·tico'' È o de formar uma tabela de n˙meros com os coeficientes do sistema:
+Um artif√≠cio que torna todo o processo mais ``autom√°tico'' √© o de formar uma tabela de n√∫meros com os coeficientes do sistema:
 \begin{equation*}
   \left\{
     \begin{array}{rcl}
@@ -121,7 +121,7 @@ Um artifÌcio que torna todo o processo mais ``autom·tico'' È o de formar uma tab
                                2 & -1 & -2 \\
                              \end{array}
                            \right].
-\end{equation*} A tabela de n˙meros da direita È conhecida como a \textbf{matriz aumentada associada ao sistema linear}. Vamos nos referir ‡s linhas da matriz associada como $\ell_1$ e $\ell_2$. Deste modo, ``adicionar um m˙ltiplo da linha 1 na linha dois'' corresponde a fazer:
+\end{equation*} A tabela de n√∫meros da direita √© conhecida como a \textbf{matriz aumentada associada ao sistema linear}. Vamos nos referir √†s linhas da matriz associada como $\ell_1$ e $\ell_2$. Deste modo, ``adicionar um m√∫ltiplo da linha 1 na linha dois'' corresponde a fazer:
 \[
 \left[
                              \begin{array}{cc|c}
@@ -135,7 +135,7 @@ Um artifÌcio que torna todo o processo mais ``autom·tico'' È o de formar uma tab
                                0 & -7 & -4 \\
                              \end{array}
                            \right].
-\] Para este tipo de operaÁ„o, olhamos para as colunas da matriz associada, fizemos mentalmente (ou em uma folha de rascunho) os c·lculos envolvidos e preenchemos os valores na respectiva linha da nova matriz que est· ‡ direita:
+\] Para este tipo de opera√ß√£o, olhamos para as colunas da matriz associada, fizemos mentalmente (ou em uma folha de rascunho) os c√°lculos envolvidos e preenchemos os valores na respectiva linha da nova matriz que est√° √† direita:
 \[
 (-2)\cdot 1 + 2 = 0, \qquad (-2)\cdot 3 + (-1) = -7, \qquad (-2) \cdot 1 + (-2) = -4.
 \]
@@ -143,7 +143,7 @@ Um artifÌcio que torna todo o processo mais ``autom·tico'' È o de formar uma tab
 
 
 \begin{example}\label{exemplo3por3}
-Consideramos agora um sistema com trÍs equaÁıes e trÍs vari·veis;
+Consideramos agora um sistema com tr√™s equa√ß√µes e tr√™s vari√°veis;
 \[
 \left\{
   \begin{array}{ll}
@@ -152,7 +152,7 @@ Consideramos agora um sistema com trÍs equaÁıes e trÍs vari·veis;
     2x - y + 3z = 10
   \end{array}
 \right. .
-\] Vamos diretamente escrever a matriz aumentada associada ao sistema, que È a matriz com os coeficientes da vari·vel $x$ na primeira coluna, os coeficientes da vari·vel $y$ na segunda coluna, os coeficientes de $z$ na terceira coluna e os coeficientes independentes na ˙ltima coluna:
+\] Vamos diretamente escrever a matriz aumentada associada ao sistema, que √© a matriz com os coeficientes da vari√°vel $x$ na primeira coluna, os coeficientes da vari√°vel $y$ na segunda coluna, os coeficientes de $z$ na terceira coluna e os coeficientes independentes na √∫ltima coluna:
 \[
 \left[
   \begin{array}{ccc|c}
@@ -161,7 +161,7 @@ Consideramos agora um sistema com trÍs equaÁıes e trÍs vari·veis;
     2 & -1 & 3 & 10 \\
   \end{array}
 \right].
-\] Em seguida, utilizamos operaÁıes elementares nas linhas como no exemplo anterior. Ao substituir $-\ell_1 + \ell_2$ em $\ell_2$, obtemos
+\] Em seguida, utilizamos opera√ß√µes elementares nas linhas como no exemplo anterior. Ao substituir $-\ell_1 + \ell_2$ em $\ell_2$, obtemos
 \[
 \left[
   \begin{array}{ccc|c}
@@ -170,7 +170,7 @@ Consideramos agora um sistema com trÍs equaÁıes e trÍs vari·veis;
     2 & -1 & 3 & 10 \\
   \end{array}
 \right].
-\] Ou seja, eliminamos o valor $1$ da primeira posiÁ„o da segunda linha (em outras palavras, eliminamos a vari·vel $x$ da segunda equaÁ„o). Prosseguindo com a eliminaÁ„o dos valores abaixo da diagonal principal da matriz, obtemos:
+\] Ou seja, eliminamos o valor $1$ da primeira posi√ß√£o da segunda linha (em outras palavras, eliminamos a vari√°vel $x$ da segunda equa√ß√£o). Prosseguindo com a elimina√ß√£o dos valores abaixo da diagonal principal da matriz, obtemos:
 \[
 \left[
   \begin{array}{ccc|c}
@@ -195,7 +195,7 @@ Consideramos agora um sistema com trÍs equaÁıes e trÍs vari·veis;
     0 &  0 & -3 & -3 \\
   \end{array}
 \right].
-\] Voltando ‡ notaÁ„o original do sistema, obtemos
+\] Voltando √† nota√ß√£o original do sistema, obtemos
 \[
 \left\{
   \begin{array}{llll}
@@ -204,30 +204,30 @@ Consideramos agora um sistema com trÍs equaÁıes e trÍs vari·veis;
       &    &- 3z& = -3
   \end{array}
 \right.
-\] Por causa do seu formato, este sistema È dito estar em \textbf{forma triangular} ou ainda que o sistema È \textbf{triangular}.
+\] Por causa do seu formato, este sistema √© dito estar em \textbf{forma triangular} ou ainda que o sistema √© \textbf{triangular}.
 
-Como j· tÌnhamos percebido no nosso primeiro exemplo, sistemas triangulares s„o f·ceis de resolver. Pela ˙ltima equaÁ„o concluimos que $z=1$. Subsituindo este valor na segunda equaÁ„o, obtemos
+Como j√° t√≠nhamos percebido no nosso primeiro exemplo, sistemas triangulares s√£o f√°ceis de resolver. Pela √∫ltima equa√ß√£o concluimos que $z=1$. Subsituindo este valor na segunda equa√ß√£o, obtemos
 \[
 - 5y + 4 = -11 \implies y = 3.
-\] Finalmente, substituindo estes dois valores na primeira equaÁ„o, obtemos
+\] Finalmente, substituindo estes dois valores na primeira equa√ß√£o, obtemos
 \[
 x + 2\cdot 3 + 1 = 12 \implies x=5.
-\] Portanto, a soluÁ„o para o sistema È $(x,y,z) = (5,3,1). \lhd$
+\] Portanto, a solu√ß√£o para o sistema √© $(x,y,z) = (5,3,1). \lhd$
 \end{example}
 
 
-Esta tÈcnica de resolver sistemas lineares È importante por ser aplic·vel a sistemas de qualquer ordem e È conhecida como \textbf{escalonamento} ou \textbf{eliminaÁ„o Gaussiana}.
+Esta t√©cnica de resolver sistemas lineares √© importante por ser aplic√°vel a sistemas de qualquer ordem e √© conhecida como \textbf{escalonamento} ou \textbf{elimina√ß√£o Gaussiana}.
 
 \section{Formas escalonadas e formas escalonadas reduzidas}
 
 
-Vimos dois exemplos de como resolver sistemas lineares por escalonamento. Vamos agora introduzir uma terminologia, esperando tornar o mÈtodo mais sistem·tico.
+Vimos dois exemplos de como resolver sistemas lineares por escalonamento. Vamos agora introduzir uma terminologia, esperando tornar o m√©todo mais sistem√°tico.
 
-Dizemos que uma matriz est· em \textbf{forma escalonada} quando
+Dizemos que uma matriz est√° em \textbf{forma escalonada} quando
 \begin{enumerate}
-  \item As linhas que contÈm apenas zeros est„o abaixo das demais.
-  \item O primeiro elemento n„o nulo de uma linha, conhecido como \textbf{elemento lÌder}, est· em uma coluna ‡ direita do elemento lÌder da linha acima.
-\end{enumerate} Estas duas condiÁıes \emph{implicam} que os elementos que est„o abaixo de elementos lÌder s„o todos iguais a zero.
+  \item As linhas que cont√©m apenas zeros est√£o abaixo das demais.
+  \item O primeiro elemento n√£o nulo de uma linha, conhecido como \textbf{elemento l√≠der}, est√° em uma coluna √† direita do elemento l√≠der da linha acima.
+\end{enumerate} Estas duas condi√ß√µes \emph{implicam} que os elementos que est√£o abaixo de elementos l√≠der s√£o todos iguais a zero.
 
 Por exemplo,
 \begin{equation}\label{escalonada1}
@@ -239,7 +239,7 @@ Por exemplo,
 0 & 0 & 0 & 0 & 0
 \end{array}
 \right]
-\end{equation} È uma matriz em forma escalonada. Notamos que os coeficientes $a_1, a_2, a_3, a_4, a_5$ e $a_6$ podem ser quaisquer n˙meros sem alterar o fato de a matriz estar em forma escalonada.
+\end{equation} √© uma matriz em forma escalonada. Notamos que os coeficientes $a_1, a_2, a_3, a_4, a_5$ e $a_6$ podem ser quaisquer n√∫meros sem alterar o fato de a matriz estar em forma escalonada.
 
 Outros exemplos, retirados livro do David C. Lay:
 \[
@@ -260,14 +260,14 @@ Outros exemplos, retirados livro do David C. Lay:
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \blacksquare & a_{24}
 \end{array}
 \right].
-\] Quando uma matriz est· em forma escalonada, as posiÁıes marcadas com $\blacksquare$ s„o chamadas de \textbf{posiÁıes de pivÙ}. Observe que, caso a matriz n„o esteja em forma escalonada, o elemento lÌder de uma linha pode n„o estar na posiÁ„o de pivÙ. Dizemos tambÈm que uma coluna È uma \textbf{coluna pivÙ} quando a coluna possui uma posiÁ„o de pivÙ. Por exemplo, na primeira matriz acima, as duas primeiras colunas s„o colunas pivÙ enquanto a terceira e a quarta n„o s„o.
+\] Quando uma matriz est√° em forma escalonada, as posi√ß√µes marcadas com $\blacksquare$ s√£o chamadas de \textbf{posi√ß√µes de piv√¥}. Observe que, caso a matriz n√£o esteja em forma escalonada, o elemento l√≠der de uma linha pode n√£o estar na posi√ß√£o de piv√¥. Dizemos tamb√©m que uma coluna √© uma \textbf{coluna piv√¥} quando a coluna possui uma posi√ß√£o de piv√¥. Por exemplo, na primeira matriz acima, as duas primeiras colunas s√£o colunas piv√¥ enquanto a terceira e a quarta n√£o s√£o.
 
 \vspace{0.2cm}
 
-Uma matriz estar· em \textbf{forma escalonada reduzida} quando:
+Uma matriz estar√° em \textbf{forma escalonada reduzida} quando:
 \begin{enumerate}
-  \item Est· na forma escalonada;
-  \item Todos os elementos lÌder s„o iguais a 1 e s„o os ˙nicos elementos n„o nulos das suas colunas.
+  \item Est√° na forma escalonada;
+  \item Todos os elementos l√≠der s√£o iguais a 1 e s√£o os √∫nicos elementos n√£o nulos das suas colunas.
 \end{enumerate} Por exemplo,
 \[
 \left[
@@ -277,7 +277,7 @@ Uma matriz estar· em \textbf{forma escalonada reduzida} quando:
    0 & 0 & 0 & 1 & b_{4}
 \end{array}
 \right]
-\] È uma forma escalonada reduzida da matriz da fÛrmula \eqref{escalonada1} acima.
+\] √© uma forma escalonada reduzida da matriz da f√≥rmula \eqref{escalonada1} acima.
 
 Quanto aos outros exemplos, temos
 \[
@@ -301,7 +301,7 @@ Quanto aos outros exemplos, temos
 \]
 
 \begin{remark}
-A forma escalonada reduzida ainda n„o apareceu na seÁ„o anterior quando est·vamos resolvendo sistemas, mas notamos que poderia ter sido utilizada para automatizar ainda mais o processo de resoluÁ„o do sistema. Vamos retomar o Exemplo \ref{exemplo3por3}. Fazendo mais algumas operaÁıes elementares, È possÌvel transformar a matriz aumentada do sistema em uma matriz em forma escalonada reduzida:
+A forma escalonada reduzida ainda n√£o apareceu na se√ß√£o anterior quando est√°vamos resolvendo sistemas, mas notamos que poderia ter sido utilizada para automatizar ainda mais o processo de resolu√ß√£o do sistema. Vamos retomar o Exemplo \ref{exemplo3por3}. Fazendo mais algumas opera√ß√µes elementares, √© poss√≠vel transformar a matriz aumentada do sistema em uma matriz em forma escalonada reduzida:
 \[
 \left[
   \begin{array}{ccc|c}
@@ -344,7 +344,7 @@ A forma escalonada reduzida ainda n„o apareceu na seÁ„o anterior quando est·vamo
     0 &  0 &  1   &  1
   \end{array}
 \right].
-\] A ˙ltima matriz acima est· em forma escalonada reduzida e est· associada ao sistema
+\] A √∫ltima matriz acima est√° em forma escalonada reduzida e est√° associada ao sistema
 \[
 \left\{
   \begin{array}{llll}
@@ -353,20 +353,20 @@ A forma escalonada reduzida ainda n„o apareceu na seÁ„o anterior quando est·vamo
       &   & z & = 1
   \end{array}
 \right.
-\] que, na verdade, j· È a soluÁ„o explÌcita do sistema original$.\lhd$
+\] que, na verdade, j√° √© a solu√ß√£o expl√≠cita do sistema original$.\lhd$
 \end{remark}
 
 \section{Algoritmo de escalonamento}
 
 Sistematicamente, encontramos a forma escalonada de uma matriz aplicando os seguintes passos:
 \begin{enumerate}
-  \item Analisar a primeira coluna pivÙ -- da esquerda para a direita, esta È a primeira coluna que possui algum elemento diferente de zero -- e, se necess·rio, aplicar operaÁıes elementares para que o elemento da primeira linha (esta È a posiÁ„o de pivÙ!) passe a ser diferente de zero;
-  \item A partir de operaÁıes elementares, eliminar todos elementos que est„o abaixo do elemento na posiÁ„o de pivÙ que obtivemos no Passo 1;
-  \item Desconsiderando por um momento a primeira linha, procuramos pela prÛxima coluna pivÙ -- aquela que tem algum elemento n„o nulo \textit{abaixo da primeira linha}. Se necess·rio, aplicar operaÁıes elementares para que, na segunda linha, o elemento passe a ser diferente de zero;
-  \item A partir de operaÁıes elementares, eliminar todos elementos que est„o abaixo do elemento na posiÁ„o de pivÙ que obtivemos no Passo 3;
-  \item Desconsiderando por um momento a primeira e a segunda linhas, procuramos pela prÛxima coluna pivÙ -- aquela que tem algum elemento n„o nulo \textit{abaixo da primeira linha e da segunda linha}. Se necess·rio, aplicar operaÁıes elementares para que, na segunda linha, o elemento passe a ser diferente de zero;
-  \item A partir de operaÁıes elementares, eliminar todos elementos que est„o abaixo do elemento na posiÁ„o de pivÙ que obtivemos no Passo 5 e ssim por diante.
-\end{enumerate} Essencialmente, s„o apenas dois passos que se repetem atÈ que se esgotem as colunas que possuem posiÁ„o de pivÙ. Vejamos um exemplo.
+  \item Analisar a primeira coluna piv√¥ -- da esquerda para a direita, esta √© a primeira coluna que possui algum elemento diferente de zero -- e, se necess√°rio, aplicar opera√ß√µes elementares para que o elemento da primeira linha (esta √© a posi√ß√£o de piv√¥!) passe a ser diferente de zero;
+  \item A partir de opera√ß√µes elementares, eliminar todos elementos que est√£o abaixo do elemento na posi√ß√£o de piv√¥ que obtivemos no Passo 1;
+  \item Desconsiderando por um momento a primeira linha, procuramos pela pr√≥xima coluna piv√¥ -- aquela que tem algum elemento n√£o nulo \textit{abaixo da primeira linha}. Se necess√°rio, aplicar opera√ß√µes elementares para que, na segunda linha, o elemento passe a ser diferente de zero;
+  \item A partir de opera√ß√µes elementares, eliminar todos elementos que est√£o abaixo do elemento na posi√ß√£o de piv√¥ que obtivemos no Passo 3;
+  \item Desconsiderando por um momento a primeira e a segunda linhas, procuramos pela pr√≥xima coluna piv√¥ -- aquela que tem algum elemento n√£o nulo \textit{abaixo da primeira linha e da segunda linha}. Se necess√°rio, aplicar opera√ß√µes elementares para que, na segunda linha, o elemento passe a ser diferente de zero;
+  \item A partir de opera√ß√µes elementares, eliminar todos elementos que est√£o abaixo do elemento na posi√ß√£o de piv√¥ que obtivemos no Passo 5 e ssim por diante.
+\end{enumerate} Essencialmente, s√£o apenas dois passos que se repetem at√© que se esgotem as colunas que possuem posi√ß√£o de piv√¥. Vejamos um exemplo.
 
 \begin{example}\label{escalonada2}
 Considere a matriz
@@ -381,7 +381,7 @@ Considere a matriz
 \end{array}
 \right].
 \]
-\textit{Passo 1.} A primeira coluna pivÙ È a terceira. Escolhemos um elemento n„o nulo da terceira coluna para ocupar a posiÁ„o de pivÙ. Por exemplo, a segunda linha. Trocando a primeira e a segunda linhas de lugar (esta È uma operaÁ„o elementar), obtemos:
+\textit{Passo 1.} A primeira coluna piv√¥ √© a terceira. Escolhemos um elemento n√£o nulo da terceira coluna para ocupar a posi√ß√£o de piv√¥. Por exemplo, a segunda linha. Trocando a primeira e a segunda linhas de lugar (esta √© uma opera√ß√£o elementar), obtemos:
 \[
 \left[
 \begin{array}{rrrrrr}
@@ -393,7 +393,7 @@ Considere a matriz
 \end{array}
 \right].
 \]
-\textit{Passo 2.} Eliminar os elementos abaixo do 2 que est· na posiÁ„o de pivÙ da terceira coluna:
+\textit{Passo 2.} Eliminar os elementos abaixo do 2 que est√° na posi√ß√£o de piv√¥ da terceira coluna:
 \[
 \left[
 \begin{array}{rrrrrr}
@@ -438,7 +438,7 @@ Considere a matriz
 \right].
 \]
 
-\textit{Passo 3.} A partir de agora, vamos essencialmente repetir o processo j· realizado atÈ agora. Notamos que a prÛxima coluna que contÈm elementos n„o nulos (sem olhar para a primeira linha!) È a quarta coluna. Portanto, esta È uma coluna pivÙ e vamos posicionar um elemento n„o nulo na segunda linha. Por exemplo, podemos trocar a segunda e a terceira linhas.
+\textit{Passo 3.} A partir de agora, vamos essencialmente repetir o processo j√° realizado at√© agora. Notamos que a pr√≥xima coluna que cont√©m elementos n√£o nulos (sem olhar para a primeira linha!) √© a quarta coluna. Portanto, esta √© uma coluna piv√¥ e vamos posicionar um elemento n√£o nulo na segunda linha. Por exemplo, podemos trocar a segunda e a terceira linhas.
 \[
 \left[
 \begin{array}{cccccc}
@@ -449,7 +449,7 @@ Considere a matriz
    0&0&0&2&1&5
 \end{array}
 \right].
-\] Antes de prosseguir, podemos ainda simplificar alguns c·lculos multiplicando linhas por escalares (fazer isso È realizar um operaÁ„o elementar!):
+\] Antes de prosseguir, podemos ainda simplificar alguns c√°lculos multiplicando linhas por escalares (fazer isso √© realizar um opera√ß√£o elementar!):
 \[
 \left[
 \begin{array}{cccccc}
@@ -471,7 +471,7 @@ Considere a matriz
 \end{array}
 \right]
 \]
-\textit{Passo 4.} Prosseguimos como no Passo 2 para eliminar todos os elementos que est„o abaixo da posiÁ„o de pivÙ da quarta coluna:
+\textit{Passo 4.} Prosseguimos como no Passo 2 para eliminar todos os elementos que est√£o abaixo da posi√ß√£o de piv√¥ da quarta coluna:
 \[
 \left[
 \begin{array}{cccccc}
@@ -505,7 +505,7 @@ Considere a matriz
 \end{array}
 \right]
 \]
-\textit{Passo 5.} Finalmente, identificamos a coluna 5 como coluna pivÙ e obtemos uma matriz em forma escalonada ao deixar um elemento n„o nulo na posiÁ„o de pivÙ:
+\textit{Passo 5.} Finalmente, identificamos a coluna 5 como coluna piv√¥ e obtemos uma matriz em forma escalonada ao deixar um elemento n√£o nulo na posi√ß√£o de piv√¥:
 \[
 \left[
 \begin{array}{cccccc}
@@ -521,15 +521,15 @@ Considere a matriz
 
 Agora, para obter a forma escalonada reduzida \emph{a partir da forma escalonada}, primeiramente aplicamos os passos acima para obter uma matriz em forma escalonada. Em seguida, aplicamos outros passos iterativos:
 \begin{enumerate}
-  \item ComeÁar pela posiÁ„o de pivÙ mais ‡ \emph{direita} e eliminar os elementos n„o nulos \emph{acima} da posiÁ„o de pivÙ;
-  \item Se necess·rio, dividir a linha pelo valor do elemento lÌder (que est· na posiÁ„o de pivÙ) para que o elemento lÌder fique igual a 1;
-  \item Repetir os primeiros passos para o elemento lÌder na prÛxima (da direita para a esquerda) coluna pivÙ.
+  \item Come√ßar pela posi√ß√£o de piv√¥ mais √† \emph{direita} e eliminar os elementos n√£o nulos \emph{acima} da posi√ß√£o de piv√¥;
+  \item Se necess√°rio, dividir a linha pelo valor do elemento l√≠der (que est√° na posi√ß√£o de piv√¥) para que o elemento l√≠der fique igual a 1;
+  \item Repetir os primeiros passos para o elemento l√≠der na pr√≥xima (da direita para a esquerda) coluna piv√¥.
 \end{enumerate}
 
-Observamos que poderÌamos ter primeiro realizado o Passo 2 e depois o Passo 1 se julg·ssemos que seria mais simples para efetuar os c·lculos.
+Observamos que poder√≠amos ter primeiro realizado o Passo 2 e depois o Passo 1 se julg√°ssemos que seria mais simples para efetuar os c√°lculos.
 
 \begin{example}
-    Voltamos ao Exemplo \ref{escalonada2}. Identificando novamente as posiÁıes de pivÙ:
+    Voltamos ao Exemplo \ref{escalonada2}. Identificando novamente as posi√ß√µes de piv√¥:
 \[
 \left[
 \begin{array}{cccccc}
@@ -540,7 +540,7 @@ Observamos que poderÌamos ter primeiro realizado o Passo 2 e depois o Passo 1 se
    0&0&0&0&0&0
 \end{array}
 \right].
-\] O mais da direita È o $-1$ da quinta coluna. Eliminando os termos n„o nulos acima, obtemos:
+\] O mais da direita √© o $-1$ da quinta coluna. Eliminando os termos n√£o nulos acima, obtemos:
 \[
 \left[
 \begin{array}{cccccc}
@@ -571,7 +571,7 @@ Observamos que poderÌamos ter primeiro realizado o Passo 2 e depois o Passo 1 se
    0&0&0&0&0&0
 \end{array}
 \right].
-\] A prÛxima posiÁ„o de pivÙ mais ‡ direita È o 1 na linha 2, coluna 4. Eliminando o termo n„o nulo acima, obtemos:
+\] A pr√≥xima posi√ß√£o de piv√¥ mais √† direita √© o 1 na linha 2, coluna 4. Eliminando o termo n√£o nulo acima, obtemos:
 \[
 \xrightarrow{-\ell_2 + \ell_1 \text{ em } \ell_1} \quad
 \left[
@@ -598,12 +598,12 @@ Observamos que poderÌamos ter primeiro realizado o Passo 2 e depois o Passo 1 se
 \end{example}
 
 
-\section{ExistÍncia e unicidade de soluÁ„o}
+\section{Exist√™ncia e unicidade de solu√ß√£o}
 
 
-\subsection{Sistemas que possuem apenas uma soluÁ„o}
+\subsection{Sistemas que possuem apenas uma solu√ß√£o}
 
-Os sistemas que vimos atÈ agora possuiam apenas uma soluÁ„o. Esta propriedade, como veremos, nem sempre È v·lida. No entanto, È f·cil de identificar quando um sistema possui soluÁ„o ˙nica analisando a forma escalonada da matriz associada: \textbf{quando todas as colunas referentes ‡s vari·veis da equaÁ„o possuirem posiÁ„o de pivÙ}. Por exemplo,
+Os sistemas que vimos at√© agora possuiam apenas uma solu√ß√£o. Esta propriedade, como veremos, nem sempre √© v√°lida. No entanto, √© f√°cil de identificar quando um sistema possui solu√ß√£o √∫nica analisando a forma escalonada da matriz associada: \textbf{quando todas as colunas referentes √†s vari√°veis da equa√ß√£o possuirem posi√ß√£o de piv√¥}. Por exemplo,
 \[
 \left[
  \begin{array}{cc|c}
@@ -626,7 +626,7 @@ Os sistemas que vimos atÈ agora possuiam apenas uma soluÁ„o. Esta propriedade, c
     0 &  0 &  0 & 1 & 1
   \end{array}
 \right].
-\] De fato, todas as matrizes com esta propriedade tem em sua forma escalonada reduzida a matriz identidade do lado esquerdo da barra que separa as vari·veis e os valores do lado direito da igualdade do sistema:
+\] De fato, todas as matrizes com esta propriedade tem em sua forma escalonada reduzida a matriz identidade do lado esquerdo da barra que separa as vari√°veis e os valores do lado direito da igualdade do sistema:
 \[
 \left[
  \begin{array}{cc|c}
@@ -649,12 +649,12 @@ Os sistemas que vimos atÈ agora possuiam apenas uma soluÁ„o. Esta propriedade, c
     0 &  0 &  0 & 1 & 1
   \end{array}
 \right].
-\] Escrevendo o sistema associado as estas ˙ltimas matrizes, È f·cil de ver que a soluÁ„o ser· ˙nica.
+\] Escrevendo o sistema associado as estas √∫ltimas matrizes, √© f√°cil de ver que a solu√ß√£o ser√° √∫nica.
 
 
-\subsection{Sistemas impossÌveis ou inconsistentes}
+\subsection{Sistemas imposs√≠veis ou inconsistentes}
 
-Nem todo sistema linear possui soluÁ„o. Um exemplo simples deste fato È
+Nem todo sistema linear possui solu√ß√£o. Um exemplo simples deste fato √©
 \begin{equation}\label{sistemaimpossivel}
 \left\{
   \begin{array}{ll}
@@ -662,16 +662,16 @@ Nem todo sistema linear possui soluÁ„o. Um exemplo simples deste fato È
     x+y = 2
   \end{array}
 \right. .
-\end{equation} … claro que $x+y$ n„o pode ser ao mesmo tempo igual a 1 e igual a 2; portanto, o sistema n„o possui soluÁ„o. O fato de o sistema n„o possuir soluÁ„o -- ser \textbf{inconsistente} -- nem sempre È t„o f·cil de ser identificado apenas olhando para o sistema. Mas esta propriedade salta aos olhos quando analisamos a forma escalonada da matriz associada ao sistema. De fato, na matriz escalonada de um sistema inconsistente aparece uma linha da forma
+\end{equation} √â claro que $x+y$ n√£o pode ser ao mesmo tempo igual a 1 e igual a 2; portanto, o sistema n√£o possui solu√ß√£o. O fato de o sistema n√£o possuir solu√ß√£o -- ser \textbf{inconsistente} -- nem sempre √© t√£o f√°cil de ser identificado apenas olhando para o sistema. Mas esta propriedade salta aos olhos quando analisamos a forma escalonada da matriz associada ao sistema. De fato, na matriz escalonada de um sistema inconsistente aparece uma linha da forma
 \[
 \left[
 \begin{array}{ccccc|c}
    0&0&0&0&0&a
 \end{array}
 \right],
-\] com uma constante $a \neq 0$. Esta linha representa no sistema uma equaÁ„o do tipo $0 = a \neq 0$, que È impossÌvel de ser satisfeita.
+\] com uma constante $a \neq 0$. Esta linha representa no sistema uma equa√ß√£o do tipo $0 = a \neq 0$, que √© imposs√≠vel de ser satisfeita.
 
-No sistema da fÛrmula \eqref{sistemaimpossivel} acima, temos a matriz aumentada
+No sistema da f√≥rmula \eqref{sistemaimpossivel} acima, temos a matriz aumentada
 \[
 \left[
 \begin{array}{cc|c}
@@ -686,7 +686,7 @@ No sistema da fÛrmula \eqref{sistemaimpossivel} acima, temos a matriz aumentada
    0 & 0 & 1 \\
 \end{array}
 \right].
-\] Logo, nosso sistema È equivalente ao sistema impossÌvel
+\] Logo, nosso sistema √© equivalente ao sistema imposs√≠vel
 \[
 \left\{
   \begin{array}{rl}
@@ -697,9 +697,9 @@ No sistema da fÛrmula \eqref{sistemaimpossivel} acima, temos a matriz aumentada
 \]
 
 
-\subsection{Sistemas com mais de uma soluÁ„o}
+\subsection{Sistemas com mais de uma solu√ß√£o}
 
-Com exceÁ„o da subseÁ„o anterior, todos os sistemas que resolvemos anteriormente possuiam apenas uma soluÁ„o. Vejamos um exemplo onde este n„o È o caso.
+Com exce√ß√£o da subse√ß√£o anterior, todos os sistemas que resolvemos anteriormente possuiam apenas uma solu√ß√£o. Vejamos um exemplo onde este n√£o √© o caso.
 
 \begin{example}
 Resolver
@@ -711,7 +711,7 @@ Resolver
     3x_1 & -9x_2 & +12x_3 & -9x_4 & +6x_5 &=& 15
   \end{array}
 \right. .
-\] A matriz aumentada associada a este sistema È
+\] A matriz aumentada associada a este sistema √©
 \[
 \left[
   \begin{array}{ccccc|c}
@@ -720,7 +720,7 @@ Resolver
     3 & -9 & 12 & -9 & 6 & 15
   \end{array}
 \right] .
-\] Transformando esta matriz em sua forma escalonada reduzida (faÁa todos os c·lculos!), obtemos
+\] Transformando esta matriz em sua forma escalonada reduzida (fa√ßa todos os c√°lculos!), obtemos
 \[
 \left[
   \begin{array}{ccccc|c}
@@ -729,7 +729,7 @@ Resolver
     0 & 0 &  0 & 0 & 1 &   4
   \end{array}
 \right],
-\] que È equivalente ao sistema linear
+\] que √© equivalente ao sistema linear
 \[
 \left\{
   \begin{array}{rcl}
@@ -738,9 +738,9 @@ Resolver
       x_5 &=& 4
   \end{array}
 \right.
-\] Neste sistema $x_5$ possui um valor fixo igual a 4, mas as outras vari·veis tem dois graus de liberdade. De fato, atribuindo valores quaisquer para $x_3$ e $x_4$, obtemos os valores de $x_1$ e $x_2$ pelas duas primeiras equaÁıes acima e temos uma soluÁ„o do sistema. Diferentes escolhas dos par‚metros $x_3$ e $x_4$ geram soluÁıes diferentes.
+\] Neste sistema $x_5$ possui um valor fixo igual a 4, mas as outras vari√°veis tem dois graus de liberdade. De fato, atribuindo valores quaisquer para $x_3$ e $x_4$, obtemos os valores de $x_1$ e $x_2$ pelas duas primeiras equa√ß√µes acima e temos uma solu√ß√£o do sistema. Diferentes escolhas dos par√¢metros $x_3$ e $x_4$ geram solu√ß√µes diferentes.
 
-Uma forma sistem·tica de analisar a situaÁ„o È a seguinte: As vari·veis correspondentes a colunas que possuem posiÁ„o de pivÙ s„o chamadas de \textbf{vari·veis dependentes} e as demais s„o chamadas de \textbf{vari·veis livres}. Assim, podemos escrever
+Uma forma sistem√°tica de analisar a situa√ß√£o √© a seguinte: As vari√°veis correspondentes a colunas que possuem posi√ß√£o de piv√¥ s√£o chamadas de \textbf{vari√°veis dependentes} e as demais s√£o chamadas de \textbf{vari√°veis livres}. Assim, podemos escrever
 \[
 \left\{
   \begin{array}{l}
@@ -750,15 +750,15 @@ Uma forma sistem·tica de analisar a situaÁ„o È a seguinte: As vari·veis correspo
        x_5  = 4
   \end{array}
 \right.
-\] e o sistema possui infinitas soluÁıes.$\lhd$
+\] e o sistema possui infinitas solu√ß√µes.$\lhd$
 \end{example}
 
 
-\subsection{Conclusıes}
+\subsection{Conclus√µes}
 
-Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \textit{inevitavelmente} que uma das seguintes situaÁıes È v·lida:
+Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \textit{inevitavelmente} que uma das seguintes situa√ß√µes √© v√°lida:
 \begin{itemize}
-  \item Todas as colunas referentes ‡s vari·veis do sistema possuem posiÁ„o de pivÙ, \emph{e.g},
+  \item Todas as colunas referentes √†s vari√°veis do sistema possuem posi√ß√£o de piv√¥, \emph{e.g},
 \[
 \left[
   \begin{array}{ccc|c}
@@ -767,10 +767,10 @@ Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \text
     0 & 0 & 12 & -9
   \end{array}
 \right].
-\] Neste caso, vimos que o sistema possui \textbf{apenas uma soluÁ„o}. Nota que \textit{esta possibilidade apenas È possÌvel se tivermos um sistema com o n˙mero de equaÁıes igual ao n˙mero de vari·veis}.
-  \item Caso a coluna referentes ‡ alguma vari·vel do sistema n„o possua posiÁ„o de pivÙ, teremos duas possibilidades
+\] Neste caso, vimos que o sistema possui \textbf{apenas uma solu√ß√£o}. Nota que \textit{esta possibilidade apenas √© poss√≠vel se tivermos um sistema com o n√∫mero de equa√ß√µes igual ao n√∫mero de vari√°veis}.
+  \item Caso a coluna referentes √† alguma vari√°vel do sistema n√£o possua posi√ß√£o de piv√¥, teremos duas possibilidades
 \begin{enumerate}[$(i)$]
-  \item Alguma coluna n„o È coluna pivÙ mas n„o existem linhas inconsistentes, \emph{e.g},
+  \item Alguma coluna n√£o √© coluna piv√¥ mas n√£o existem linhas inconsistentes, \emph{e.g},
 \[
 \left[
   \begin{array}{ccccc|c}
@@ -779,9 +779,9 @@ Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \text
     0 & 0  &  0 & 12 &  1 & -9
   \end{array}
 \right].
-\] Neste caso, as vari·veis referentes a colunas que n„o s„o pivÙ (na matriz acima, colunas 3 e 5) podem ser consideradas vari·veis livres e o sistema \textbf{possui infinitas soluÁıes}.
+\] Neste caso, as vari√°veis referentes a colunas que n√£o s√£o piv√¥ (na matriz acima, colunas 3 e 5) podem ser consideradas vari√°veis livres e o sistema \textbf{possui infinitas solu√ß√µes}.
 
-  \item Alguma coluna n„o È coluna pivÙ mas existem linhas que s„o inconsistentes, \emph{e.g},
+  \item Alguma coluna n√£o √© coluna piv√¥ mas existem linhas que s√£o inconsistentes, \emph{e.g},
 \[
 \left[
   \begin{array}{ccccc|c}
@@ -790,12 +790,12 @@ Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \text
     0 & 0  &  0 & 0 &  0 & -9
   \end{array}
 \right].
-\] Neste caso, \textbf{n„o existem soluÁıes} para o sistema, pois uma das equaÁıes È impossÌvel de ser satisfeita.
+\] Neste caso, \textbf{n√£o existem solu√ß√µes} para o sistema, pois uma das equa√ß√µes √© imposs√≠vel de ser satisfeita.
 \end{enumerate}
 \end{itemize}
 
 
-Concluimos assim que \textit{um sistema linear ou n„o possui soluÁ„o, ou tem apenas uma soluÁ„o ou ent„o possui infinitas soluÁıes}. S„o estes trÍs todos os casos possÌveis e podemos decidir em qual estamos apenas olhando para a forma escalonada da matriz aumentada associada ao sistema.
+Concluimos assim que \textit{um sistema linear ou n√£o possui solu√ß√£o, ou tem apenas uma solu√ß√£o ou ent√£o possui infinitas solu√ß√µes}. S√£o estes tr√™s todos os casos poss√≠veis e podemos decidir em qual estamos apenas olhando para a forma escalonada da matriz aumentada associada ao sistema.
 
 
 \end{document} 
