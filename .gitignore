@@ -15,3 +15,4 @@ html
 *.tmp
 *.xref
 *.pdf
+*/*.pdf
