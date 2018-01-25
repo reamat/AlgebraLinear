@@ -198,9 +198,9 @@
 \section{Projeção ortogonais sobre subespaços}
 
 Na última semana, estudamos projeções ortogonais e vimos que a projeção ortogonal de $\vec{y}$ na direção de um vetor $\vec{w}$ pode ser calculada por
-\[
+\begin{equation}
 \proj_{\vec{w}} \vec{y} = \frac{\vec{y} \cdot \vec{w}}{\vec{w} \cdot \vec{w}} \ \vec{w}
-\] Gostaríamos de endereçar agora a seguinte questão: como obter a projeção de um vetor $\vec{y} \in \bR^3$ sobre um plano $W$?
+\end{equation} Gostaríamos de endereçar agora a seguinte questão: como obter a projeção de um vetor $\vec{y} \in \bR^3$ sobre um plano $W$?
 
 \begin{figure}[h!]
 \begin{center}
@@ -208,37 +208,37 @@ Na última semana, estudamos projeções ortogonais e vimos que a projeção ort
 \end{center}
 \end{figure}
 \noindent Vamos trabalhar geométricamente: suponhamos que o plano
-\[
+\begin{equation}
 W = \Span \{\vec{w}_1, \vec{w}_2\}
-\] e que os vetores $\vec{w}_1$ e $\vec{w}_2$ são ortogonais. Em outras palavras, $\{\vec{w}_1, \vec{w}_2\}$ é uma base ortogonal de $W$. Como veremos abaixo, o Processo de Gram-Schmidt fornece um algoritmo para obter uma base ortogonal de um espaço vetorial a partir de uma outra base qualquer e, logo, sempre é possível considerar uma base ortogonal.
+\end{equation} e que os vetores $\vec{w}_1$ e $\vec{w}_2$ são ortogonais. Em outras palavras, $\{\vec{w}_1, \vec{w}_2\}$ é uma base ortogonal de $W$. Como veremos abaixo, o Processo de Gram-Schmidt fornece um algoritmo para obter uma base ortogonal de um espaço vetorial a partir de uma outra base qualquer e, logo, sempre é possível considerar uma base ortogonal.
 
 A \textbf{projeção ortogonal sobre o subespaço $W$}, denotada por $\proj_W \vec{y}$, é definida como
-\[
+\begin{equation}
 \proj_W \vec{y} = \proj_{\vec{w}_1} \vec{y} + \proj_{\vec{w}_2} \vec{y} = \frac{\vec{y} \cdot \vec{w}_1}{\vec{w}_1 \cdot \vec{w}_1} \ \vec{w}_1 + \frac{\vec{y} \cdot \vec{w}_2}{\vec{w}_2 \cdot \vec{w}_2} \ \vec{w}_2.
-\] Notamos que este vetor pertence a $W$, já que é uma combinação linear dos elementos de uma base de $W$. Mas mais fundamental é o fato de a projeção ser feita em uma direção ortogonal ao plano: devemos verificar que
-\[
+\end{equation} Notamos que este vetor pertence a $W$, já que é uma combinação linear dos elementos de uma base de $W$. Mas mais fundamental é o fato de a projeção ser feita em uma direção ortogonal ao plano: devemos verificar que
+\begin{equation}
 \vec{y} - \proj_W \vec{y} \ \text{ é ortogonal a }  W.
-\] Qualquer vetor de $W$ pode ser escrito como
-\[
+\end{equation} Qualquer vetor de $W$ pode ser escrito como
+\begin{equation}
 \vec{w} = \frac{\vec{w} \cdot \vec{w}_1}{\vec{w}_1 \cdot \vec{w}_1} \ \vec{w}_1 + \frac{\vec{w} \cdot \vec{w}_2}{\vec{w}_2 \cdot \vec{w}_2} \ \vec{w}_2.
-\]
+\end{equation}
 
 \begin{exercise}
 Utilize as propriedades do produto escalar e a ortogonalidade da base $\{\vec{w}_1, \vec{w}_2\}$ para verificar que
-\[
+\begin{equation}
 \vec{w} \cdot  \big( \vec{y} - \proj_W \vec{y} \big) = 0.
-\]
+\end{equation}
 \end{exercise}
 
 \begin{example}
 Vamos calcular a projeção do vetor
-\[
+\begin{equation}
 \vec{y} =
 \begin{bmatrix}
  1\\1\\1
 \end{bmatrix}
-\] sobre o plano gerado pelos vetores
-\[
+\end{equation} sobre o plano gerado pelos vetores
+\begin{equation}
 \vec{w}_1 =
 \begin{bmatrix}
  0\\3\\-7
@@ -247,8 +247,8 @@ Vamos calcular a projeção do vetor
 \begin{bmatrix}
  1\\0\\2
 \end{bmatrix}.
-\] Comlculamos
-\[
+\end{equation} Comlculamos
+\begin{equation}
 \begin{split}
 \proj_W \vec{y} & = \frac{\vec{y} \cdot \vec{w}_1}{\vec{w}_1 \cdot \vec{w}_1} \ \vec{w}_1 + \frac{\vec{y} \cdot \vec{w}_2}{\vec{w}_2 \cdot \vec{w}_2} \ \vec{w}_2 = \frac{3-7}{9 + 49} \ \vec{w}_1 + \frac{1 + 2}{1+4} \ \vec{w}_2 \\
                 & = -\frac{2}{29}
@@ -263,30 +263,30 @@ Vamos calcular a projeção do vetor
  3/5 \\ -6/29 \\ 244/145
 \end{bmatrix}.
 \end{split}
-\]
+\end{equation}
 \end{example}
 
 
 Desenvolvemos acima o conceito de projeção ortogonal sobre um subespaço do espaço $\bR^3$ de dimensão três apenas pela conveniência da visualização geométrica. Na verdade, o conceito pode ser definido em qualquer dimensão.
 
 Seja $W \subset \bR^n$ um subespaço vetorial de dimensão $k$ e $\{\vec{w}_1, \vec{w}_2, \dots, \vec{w}_k \}$ uma base ortogonal de $W$. Dado um vetor $\vec{y} \in \bR^n$ qualquer, definimos a \textbf{projeção ortogonal de $\vec{y}$ sobre $W$} como
-\[
+\begin{equation}
 \proj_W \vec{y}  = \frac{\vec{y} \cdot \vec{w}_1}{\vec{w}_1 \cdot \vec{w}_1} \ \vec{w}_1 + \frac{\vec{y} \cdot \vec{w}_2}{\vec{w}_2 \cdot \vec{w}_2} \ \vec{w}_2 + \cdots + \frac{\vec{y} \cdot \vec{w}_k}{\vec{w}_k \cdot \vec{w}_k} \ \vec{w}_k
-\] Pode-se verificar, como no Exercício acima, que
-\[
+\end{equation} Pode-se verificar, como no Exercício acima, que
+\begin{equation}
 \vec{w} \cdot  \big( \vec{y} - \proj_W \vec{y} \big) = 0, \ \text{para qualquer } \vec{w} \in W,
-\] isto é, a projeção $\proj_W \vec{y}$ pertence a $W$ e $\vec{y} - \proj_W \vec{y}$ é ortogonal a todo elemento de $W$, assim como nossa intuição esperaria.
+\end{equation} isto é, a projeção $\proj_W \vec{y}$ pertence a $W$ e $\vec{y} - \proj_W \vec{y}$ é ortogonal a todo elemento de $W$, assim como nossa intuição esperaria.
 
 
 \begin{example}
 Calcular a projeção do vetor
-\[
+\begin{equation}
 \vec{y} =
 \begin{bmatrix}
 1 \\ 0 \\ -1 \\ -3 \\ 2
 \end{bmatrix}
-\] sobre o espaço tridimensional gerado pelos vetores
-\[
+\end{equation} sobre o espaço tridimensional gerado pelos vetores
+\begin{equation}
 \vec{w}_1 =
 \begin{bmatrix}
  0\\4\\1 \\ 6 \\0
@@ -299,8 +299,8 @@ Calcular a projeção do vetor
 \begin{bmatrix}
  0\\0\\2\\4\\ 1
 \end{bmatrix}.
-\] Devemos calcular
-\[
+\end{equation} Devemos calcular
+\begin{equation}
 \begin{split}
 \proj_W \vec{y} & = \frac{\vec{y} \cdot \vec{w}_1}{\vec{w}_1 \cdot \vec{w}_1} \ \vec{w}_1 + \frac{\vec{y} \cdot \vec{w}_2}{\vec{w}_2 \cdot \vec{w}_2} \ \vec{w}_2 + \frac{\vec{y} \cdot \vec{w}_3}{\vec{w}_3 \cdot \vec{w}_3} \ \vec{w}_3\\
                 & = \frac{ - 1 -18 }{ 16 + 1 + 36 } \ \vec{w}_1 + \frac{ 1 - 2 - 2 }{ 1 + 4 + 1 } \ \vec{w}_2 + \frac{ -2-12+2 }{ 4 + 16 + 1 } \ \vec{w}_3 \\
@@ -315,7 +315,7 @@ Calcular a projeção do vetor
  -1/2 \\ -76/53 \\ -2784/1113 \\ -4938/1113 \\ -1/12
 \end{bmatrix}.
 \end{split}
-\]Confira estas contas com uma calculadora (os coeficientes dos vetores nem sempre são bonitinhos!)
+\end{equation}Confira estas contas com uma calculadora (os coeficientes dos vetores nem sempre são bonitinhos!)
 \end{example}
 
 
@@ -332,22 +332,22 @@ A projeção ortogonal pode ser utilizada para calcular distâncias entre o pont
 \end{figure}
 
 \noindent Dado um ponto $P = (x_1, x_2, \dots, x_n)$, formamos o vetor
-\[
+\begin{equation}
 \vec{y} =
 \begin{bmatrix}
 x_1 \\ x_2 \\ \vdots \\ x_n
 \end{bmatrix}
-\] cujas componentes são as coordenadas de $P$. Como vimos na seção anterior, o vetor $\vec{y} - \proj_{W} \vec{y}$ é ortogonal ao subespaço $W$. Sendo a distância de $P$ até $W$ denotada por $\dist (P,W)$ e definida como a menor distância entre $P$ e elementos de $W$, temos que
-\[
+\end{equation} cujas componentes são as coordenadas de $P$. Como vimos na seção anterior, o vetor $\vec{y} - \proj_{W} \vec{y}$ é ortogonal ao subespaço $W$. Sendo a distância de $P$ até $W$ denotada por $\dist (P,W)$ e definida como a menor distância entre $P$ e elementos de $W$, temos que
+\begin{equation}
 \dist (P,W) = \|\vec{y} - \proj_{W} \vec{y}\|.
-\]
+\end{equation}
 
 
 \begin{proof}[Justificativa desta afirmação]
 Dado qualquer outro vetor $\vec{w} \in W$, o Teorema de Pitágoras implica que (ver figura)
-\[
+\begin{equation}
 \| \vec{y} - \vec{w} \|^2 = \| \vec{w} - \proj_{W} \vec{y}\|^2 + \| \vec{y} - \proj_{W} \vec{y}\|^2 > \| \vec{y} - \proj_{W} \vec{y}\|^2.
-\] Em outras palavras, $\|\vec{y} - \proj_{W} \vec{y}\|$ é de fato a menor distância entre $P$ e elementos de $W$.
+\end{equation} Em outras palavras, $\|\vec{y} - \proj_{W} \vec{y}\|$ é de fato a menor distância entre $P$ e elementos de $W$.
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-dist-justif.png}
@@ -358,7 +358,7 @@ Dado qualquer outro vetor $\vec{w} \in W$, o Teorema de Pitágoras implica que (
 
 \begin{example}
 Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{u}, \vec{v}\}$ (contido em $\bR^5$) gerado pelos vetores
-\[
+\begin{equation}
 \vec{u} =
 \begin{bmatrix}
 1 \\ 0 \\ 2 \\ 0 \\ 5
@@ -366,13 +366,13 @@ Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{
 \vec{v} = \begin{bmatrix}
 1 \\ -1 \\ 2 \\ 0 \\ 3
 \end{bmatrix}.
-\] Para isto, consideramos o vetor
-\[
+\end{equation} Para isto, consideramos o vetor
+\begin{equation}
 \vec{y} = \begin{bmatrix}
 1 \\ 2 \\ -1 \\ 0 \\ 7
 \end{bmatrix}
-\]e vamos calcular $\|\vec{y} - \proj_W \vec{y}\|$:
-\[
+\end{equation}e vamos calcular $\|\vec{y} - \proj_W \vec{y}\|$:
+\begin{equation}
 \begin{split}
 \vec{y} - \proj_W \vec{y} & = \vec{y} - \frac{\vec{y} \cdot \vec{u}}{\vec{u} \cdot \vec{u}} \ \vec{u} - \frac{\vec{y} \cdot \vec{v}}{\vec{v} \cdot \vec{v}} \ \vec{v}  =
 \begin{bmatrix}
@@ -397,13 +397,13 @@ Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{
 -4/3 \\ 16/5 \\ -17/3 \\ 0 \\ -34/15
 \end{bmatrix}
 \end{split}
-\] Desta forma, a distância de $P$ a $W$ é
-\[
+\end{equation} Desta forma, a distância de $P$ a $W$ é
+\begin{equation}
 \begin{split}
 \dist (P,W) & = \|\vec{y} - \proj_{W} \vec{y}\| = \sqrt{\frac{16}{9} + \frac{256}{25} + \frac{289}{9} + \frac{1156}{225}} = \sqrt{\frac{ 16\cdot 25 + 256\cdot 9 + 289 \cdot 25 + 1156}{225}} \\
            & = \frac{ \sqrt{11085} }{15} \simeq 7,02.
 \end{split}
-\]
+\end{equation}
 \end{example}
 
 
@@ -417,7 +417,7 @@ Vamos começar com um exemplo.
 
 \begin{example}
 Consideramos os vetores
-\[
+\begin{equation}
 \vec{v}_1 =
 \begin{bmatrix}
 1 \\ 0 \\ 1
@@ -430,18 +430,18 @@ Consideramos os vetores
 \begin{bmatrix}
 0 \\ 1 \\ 1
 \end{bmatrix}.
-\] O espaço gerado por $\{\vec{v}_1, \vec{v}_2, \vec{v}_3 \}$ é todo o espaço $\bR^3$, já que temos três vetores  linearmente independentes em um espaço de dimensão três.
+\end{equation} O espaço gerado por $\{\vec{v}_1, \vec{v}_2, \vec{v}_3 \}$ é todo o espaço $\bR^3$, já que temos três vetores  linearmente independentes em um espaço de dimensão três.
 
 O processo consiste em fixar qualquer um dos vetores como o primeiro dos vetores do conjunto que virá a ser ortogonal. Por exemplo, fixamos
-\[
+\begin{equation}
 \vec{u}_1 = \vec{v}_1 =
 \begin{bmatrix}
 1 \\ 0 \\ 1
 \end{bmatrix}.
-\] Em seguida, já vimos que, ao fazer a projeção de $\vec{v}_2$ sobre $\vec{v}_1$, o vetor
-\[
+\end{equation} Em seguida, já vimos que, ao fazer a projeção de $\vec{v}_2$ sobre $\vec{v}_1$, o vetor
+\begin{equation}
 \vec{v}_2 - \proj_{\vec{v}_1} \vec{v}_2
-\] é ortogonal a $\vec{v}_1$, como ilustra a figura.
+\end{equation} é ortogonal a $\vec{v}_1$, como ilustra a figura.
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-gram1.png}
@@ -449,7 +449,7 @@ O processo consiste em fixar qualquer um dos vetores como o primeiro dos vetores
 \end{figure}
 
 \noindent Assim sendo, definimos o segundo vetor do nosso conjunto que será ortogonal como o vetor
-\[
+\begin{equation}
 \vec{u}_2 = \vec{v}_2 - \proj_{\vec{u}_1} \vec{v}_2 = \vec{v}_2 - \frac{\vec{v}_2 \cdot \vec{u}_1}{\vec{u}_1 \cdot \vec{u}_1} \, \vec{u}_1 =
 \begin{bmatrix}
 1 \\ 1 \\ 0
@@ -464,18 +464,18 @@ O processo consiste em fixar qualquer um dos vetores como o primeiro dos vetores
 \begin{bmatrix}
 1 \\ 2 \\ -1
 \end{bmatrix}.
-\] Temos que $\vec{u}_1$ e $\vec{u}_2$ são ortogonais e que estão no mesmo plano, de modo que também temos
-\[
+\end{equation} Temos que $\vec{u}_1$ e $\vec{u}_2$ são ortogonais e que estão no mesmo plano, de modo que também temos
+\begin{equation}
 \Span \{ \vec{u}_1, \vec{u}_2 \} = \Span \{ \vec{v}_1, \vec{v}_2 \}.
-\] Vamos escrever momentariamente $W = \Span \{ \vec{u}_1, \vec{u}_2 \}$.
+\end{equation} Vamos escrever momentariamente $W = \Span \{ \vec{u}_1, \vec{u}_2 \}$.
 
 No próximo passo do processo, o terceiro vetor pode ser obtido como
-\[
+\begin{equation}
 \vec{u}_3 = \vec{v}_3 - \proj_{W} \vec{v}_3,
-\] pois, desta forma, $\vec{u}_3$ é ortogonal a todos os vetores de $W$; em particular, é ortogonal a ambos $\vec{u}_1$ e $\vec{u}_2$. Além disso, como $\vec{u}_1$ e $\vec{u}_2$ já são vetores ortogonais, podemos calcular a projeção sobre $W$ como de costume:
-\[
+\end{equation} pois, desta forma, $\vec{u}_3$ é ortogonal a todos os vetores de $W$; em particular, é ortogonal a ambos $\vec{u}_1$ e $\vec{u}_2$. Além disso, como $\vec{u}_1$ e $\vec{u}_2$ já são vetores ortogonais, podemos calcular a projeção sobre $W$ como de costume:
+\begin{equation}
 \vec{u}_3 = \vec{v}_3 - \proj_{W} \vec{v}_3 = \vec{v}_3 - \frac{\vec{v}_3 \cdot \vec{u}_1}{\vec{u}_1 \cdot \vec{u}_1} \, \vec{u}_1 - \frac{\vec{v}_3 \cdot \vec{u}_2}{\vec{u}_2 \cdot \vec{u}_2} \, \vec{u}_2.
-\]
+\end{equation}
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=0.6\linewidth]{\dir/Semana12/semana12-gram2.png}
@@ -483,7 +483,7 @@ No próximo passo do processo, o terceiro vetor pode ser obtido como
 \end{figure}
 
 \noindent Calculando, temos (observe como dois fatores $1/2$ cancelam no último termo)
-\[
+\begin{equation}
 \vec{u}_3 =
 \begin{bmatrix}
 0 \\ 1 \\ 1
@@ -509,8 +509,8 @@ No próximo passo do processo, o terceiro vetor pode ser obtido como
 \begin{bmatrix}
 -1 \\ 1 \\ 1
 \end{bmatrix}
-\] Concluimos assim que o conjunto
-\[
+\end{equation} Concluimos assim que o conjunto
+\begin{equation}
 \{ \vec{u}_1, \vec{u}_2, \vec{u}_3 \} = \left\{
 \begin{bmatrix}
 1 \\ 0 \\ 1
@@ -521,10 +521,10 @@ No próximo passo do processo, o terceiro vetor pode ser obtido como
 \begin{bmatrix}
 -2/3 \\ 2/3 \\ 2/3
 \end{bmatrix}  \right\}
-\] é ortogonal e gera o mesmo espaço que $\{ \vec{v}_1, \vec{v}_2, \vec{v}_3 \}$.
+\end{equation} é ortogonal e gera o mesmo espaço que $\{ \vec{v}_1, \vec{v}_2, \vec{v}_3 \}$.
 
 Na realidade, se tivéssemos considerado múltiplos dos vetores acima, não perderíamos a propriedade de ortogonalidade, e temos
-\[
+\begin{equation}
 \Span \{ \vec{u}_1, \vec{u}_2, \vec{u}_3 \} =
 \Span \left\{
 \begin{bmatrix}
@@ -537,10 +537,10 @@ Na realidade, se tivéssemos considerado múltiplos dos vetores acima, não perd
 -1 \\ 1 \\ 1
 \end{bmatrix}
 \right\}.
-\] ``Colocar em evidência'' os fatores comuns desta forma e ``desconsiderá-los'' pode facilitar as contas em alguns casos.
+\end{equation} ``Colocar em evidência'' os fatores comuns desta forma e ``desconsiderá-los'' pode facilitar as contas em alguns casos.
 
 Observamos também que, fazendo a normalização dos vetores, podemos obter uma base ortonormal:
-\[
+\begin{equation}
 \left\{
   \begin{array}{ll}
    \|\vec{u}\| = \sqrt{1 + 0 + 1} = \sqrt{2} \\
@@ -548,8 +548,8 @@ Observamos também que, fazendo a normalização dos vetores, podemos obter uma 
    \|\vec{w}\| = \sqrt{1 + 1 + 1} = \sqrt{3} \\
   \end{array}
 \right.
-\] e assim,
-\[
+\end{equation} e assim,
+\begin{equation}
 \frac{\vec{u}_1}{\|\vec{u}_1\|} = \frac{1}{\sqrt{3}}
 \begin{bmatrix}
 1 \\ 0 \\ 1
@@ -571,65 +571,65 @@ Observamos também que, fazendo a normalização dos vetores, podemos obter uma 
 \begin{bmatrix}
 -1/\sqrt{3} \\ 1/\sqrt{3} \\ 1/\sqrt{3}
 \end{bmatrix}
-\] forma um conjunto ortonormal que gera o mesmo espaço vetorial que $\{ \vec{v}_1, \vec{v}_2, \vec{v}_3 \}. \ \lhd$
+\end{equation} forma um conjunto ortonormal que gera o mesmo espaço vetorial que $\{ \vec{v}_1, \vec{v}_2, \vec{v}_3 \}. \ \lhd$
 \end{example}
 
 
 
 Em seguida, mostramos como funciona o processo de maneira geral (um bom entendimento do exemplo acima deve deixar claro o porquê deste processo funcionar): sejam $k$ vetores linearmente independentes $\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_k$ pertencentes ao espaço $n$-dimensional $\bR^n$. Vamos denotar
-\[
+\begin{equation}
 W = \Span \{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_k\}
-\] e construir uma base ortogonal (e em seguida ortonormal) para $W$. Começamos com
-\[
+\end{equation} e construir uma base ortogonal (e em seguida ortonormal) para $W$. Começamos com
+\begin{equation}
 \boxed{\vec{u}_1 = \vec{v}_1}
-\] e definimos
-\[
+\end{equation} e definimos
+\begin{equation}
 \boxed{\vec{u}_2 = \vec{v}_2 - \proj_{\vec{u}_1} \vec{v}_2 = \vec{v}_2 - \frac{\vec{v}_2 \cdot \vec{u}_1}{\vec{u}_1 \cdot \vec{u}_1} \, \vec{u}_1.}
-\] Temos que $\vec{u}_1$ e $\vec{u}_2$ são ortogonais e que estão no mesmo plano, de modo que também temos
-\[
+\end{equation} Temos que $\vec{u}_1$ e $\vec{u}_2$ são ortogonais e que estão no mesmo plano, de modo que também temos
+\begin{equation}
 \Span \{ \vec{u}_1, \vec{u}_2 \} = \Span \{ \vec{v}_1, \vec{v}_2 \} = W_2 \ \leftrightsquigarrow \text{ notação.}
-\] Em seguida, definimos
-\[
+\end{equation} Em seguida, definimos
+\begin{equation}
 \boxed{\vec{u}_3 = \vec{v}_3 - \proj_{W_2} \vec{v}_3 = \vec{v}_3 - \frac{\vec{v}_3 \cdot \vec{u}_1}{\vec{u}_1 \cdot \vec{u}_1} \, \vec{u}_1 - \frac{\vec{v}_3 \cdot \vec{u}_2}{\vec{u}_2 \cdot \vec{u}_2} \, \vec{u}_2.}
-\] Temos que $\vec{u}_1, \vec{u}_2, \vec{u}_3$ ortogonais e
-\[
+\end{equation} Temos que $\vec{u}_1, \vec{u}_2, \vec{u}_3$ ortogonais e
+\begin{equation}
 \Span \{ \vec{u}_1, \vec{u}_2, \vec{u}_3 \} = \Span \{ \vec{v}_1, \vec{v}_2, \vec{v}_3 \} = W_3 \ \leftrightsquigarrow \text{ notação.}
-\] Em seguida
-\[
+\end{equation} Em seguida
+\begin{equation}
 \boxed{\vec{u}_4 = \vec{v}_4 - \proj_{W_3} \vec{v}_4 = \vec{v}_4 - \frac{\vec{v}_4 \cdot \vec{u}_1}{\vec{u}_1 \cdot \vec{u}_1} \, \vec{u}_1 - \frac{\vec{v}_4 \cdot \vec{u}_2}{\vec{u}_2 \cdot \vec{u}_2} \, \vec{u}_2 - \frac{\vec{v}_4 \cdot \vec{u}_3}{\vec{u}_3 \cdot \vec{u}_3} \, \vec{u}_3.}
-\] Temos que $\vec{u}_1, \vec{u}_2, \vec{u}_3, \vec{u}_4$ ortogonais e
-\[
+\end{equation} Temos que $\vec{u}_1, \vec{u}_2, \vec{u}_3, \vec{u}_4$ ortogonais e
+\begin{equation}
 \Span \{ \vec{u}_1, \vec{u}_2, \vec{u}_3, \vec{u}_4 \} = \Span \{ \vec{v}_1, \vec{v}_2, \vec{v}_3, \vec{u}_4 \} = W_4 \ \leftrightsquigarrow \text{ notação.}
-\] E assim seguimos fazendo as contas até chegar ao último vetor: sendo
-\[
+\end{equation} E assim seguimos fazendo as contas até chegar ao último vetor: sendo
+\begin{equation}
 \Span \{ \vec{u}_1, \vec{u}_2, \cdots, \vec{u}_{k-1} \} = \Span \{ \vec{v}_1, \vec{v}_2, \cdots, \vec{v}_{k-1} \} = W_{k-1} \ \leftrightsquigarrow \text{ notação,}
-\] escrevemos
-\[
+\end{equation} escrevemos
+\begin{equation}
 \boxed{\vec{u}_k = \vec{v}_k - \proj_{W_{k-1}} \vec{v}_k = \vec{v}_k - \frac{\vec{v}_k \cdot \vec{u}_1}{\vec{u}_1 \cdot \vec{u}_1} \, \vec{u}_1 - \frac{\vec{v}_k \cdot \vec{u}_2}{\vec{u}_2 \cdot \vec{u}_2} \, \vec{u}_2 - \cdots - \frac{\vec{v}_k \cdot \vec{u}_{k-1}}{\vec{u}_{k-1} \cdot \vec{u}_{k-1}} \, \vec{u}_{k-1}.}
-\] Temos que $\{\vec{u}_1, \vec{u}_2, \dots, \vec{u}_k\}$ é um conjunto ortogonal e
-\[
+\end{equation} Temos que $\{\vec{u}_1, \vec{u}_2, \dots, \vec{u}_k\}$ é um conjunto ortogonal e
+\begin{equation}
 \Span \{ \vec{u}_1, \vec{u}_2, \dots, \vec{u}_k \} = \Span \{ \vec{v}_1, \vec{v}_2, \dots, \vec{u}_k \} = W \ \leftrightsquigarrow \text{ que é o espaço inicial, }
-\] como queríamos.
+\end{equation} como queríamos.
 
 Este é a parte mais ``pesada'' do método. Por exemplo, se agora quiséssemos uma base ortonormal para $W$, basta considerar o conjunto
-\[
+\begin{equation}
 \left\{ \frac{\vec{u}_1}{\|\vec{u}_1\|}, \frac{\vec{u}_2}{\|\vec{u}_2\|}, \dots, \frac{\vec{u}_k}{\|\vec{u}_k\|} \right\},
-\] que continua sendo ortogonal, mas agora formado por vetores unitários.
+\end{equation} que continua sendo ortogonal, mas agora formado por vetores unitários.
 
 
 
 
 \begin{example}[Retirado de Wikipedia.org]
 Vamos obter uma base ortonormal para o espaço coluna $\Col A$ da matriz
-\[
+\begin{equation}
 A =
 \begin{bmatrix}
 12 & -51 & 4 \\
 6 & 167 & -68 \\
 -4 & 24 & -41
 \end{bmatrix}.
-\] Lembrando que $\Col A$ é o espaço gerado pelas colunas de $A$, vamos aplicar o processo de Gram--Schmidt para os vetores
-\[
+\end{equation} Lembrando que $\Col A$ é o espaço gerado pelas colunas de $A$, vamos aplicar o processo de Gram--Schmidt para os vetores
+\begin{equation}
 \vec{v}_1 =
 \begin{bmatrix}
 12 \\
@@ -647,8 +647,8 @@ A =
  -68 \\
  -41
 \end{bmatrix}.
-\] O Processo começa como:
-\[
+\end{equation} O Processo começa como:
+\begin{equation}
 \begin{split}
 \vec{u}_1 & = \vec{v}_1 =
 \begin{bmatrix}
@@ -683,8 +683,8 @@ A =
  30
 \end{bmatrix}
 \end{split}
-\] Em seguida (conferir estas contas com o auxílio de uma calculadora)
-\[
+\end{equation} Em seguida (conferir estas contas com o auxílio de uma calculadora)
+\begin{equation}
 \begin{split}
 \vec{u}_3 & = \vec{v}_3 - \frac{\vec{v}_3 \cdot \vec{u}_1}{\vec{u}_1 \cdot \vec{u}_1} \, \vec{u}_1 - \frac{\vec{v}_3 \cdot \vec{u}_2}{\vec{u}_2 \cdot \vec{u}_2} \, \vec{u}_2 = \begin{bmatrix}
   4 \\
@@ -721,11 +721,11 @@ A =
  -33
 \end{bmatrix}.
 \end{split}
-\] Para obter uma base ortonormal para o espaço coluna, vamos ainda considerar
-\[
+\end{equation} Para obter uma base ortonormal para o espaço coluna, vamos ainda considerar
+\begin{equation}
 \frac{\vec{u}_1}{\|\vec{u}_1\|}, \frac{\vec{u}_2}{\|\vec{u}_2\|}, \frac{\vec{u}_3}{\|\vec{u}_3\|}.
-\] Calculamos
-\[
+\end{equation} Calculamos
+\begin{equation}
 \left\{
   \begin{array}{ll}
    \|\vec{u}_1\| = \sqrt{196} = 14 \\
@@ -733,8 +733,8 @@ A =
    \|\vec{u}_3\| = \frac{\sqrt{30625}}{5} = 35
   \end{array}
 \right.
-\] Portanto, uma base ortonormal para $\Col A$ é
-\[
+\end{equation} Portanto, uma base ortonormal para $\Col A$ é
+\begin{equation}
 \vec{n}_1 = \frac{\vec{u}_1}{\|\vec{u}_1\|} =
 \begin{bmatrix}
  6/7  \\
@@ -753,14 +753,14 @@ A =
  6/175  \\
  -33/35
 \end{bmatrix}. \lhd
-\]
+\end{equation}
 \end{example}
 
 
 \section{Fatoração QR e matrizes ortogonais}
 
 
-O método de Gram-Schmidt nos permite fatorar uma matriz $A$ cujas colunas são LI em um produto \[A=QR,\] onde Q é uma matriz cujas colunas formam um conjunto ortonormal e $R$ é uma matriz triangular superior. Tal fatoração é muito importante do ponto de vista computacional, como veremos em breve, quando usarmos a fatoração QR como uma alternativa  para resolução de sistemas lineareas por mínimos quadrados. Também é a base de um eficiente método numérico para encontrar autovalores de uma matriz quadrada.
+O método de Gram-Schmidt nos permite fatorar uma matriz $A$ cujas colunas são LI em um produto \begin{equation}A=QR,\end{equation} onde Q é uma matriz cujas colunas formam um conjunto ortonormal e $R$ é uma matriz triangular superior. Tal fatoração é muito importante do ponto de vista computacional, como veremos em breve, quando usarmos a fatoração QR como uma alternativa  para resolução de sistemas lineareas por mínimos quadrados. Também é a base de um eficiente método numérico para encontrar autovalores de uma matriz quadrada.
 
 Matrizes cujas colunas formam um conjunto ortonormal são muito úteis e por isso recebem um nome especial:são chamadas de matrizes ortogonais. Aqui cabe uma observação relevante: este é um exemplo de uma situação onde a terminologia clássica está longe de ser satisfatória: matrizes  cujas colunas formam um conjunto {\it ortonormal} são chamadas de matrizes {\it ortogonais}.   
 
@@ -773,56 +773,56 @@ o processo de Gram-Schmidt começa com a construção de uma base ortogonal form
 $\vec{u}_1$, $\vec{u}_2$, e $\vec{u}_3$,
 para o espaço-coluna da matriz $A$. Para isso, definimos
 
-$$
+\begin{equation}
 \begin{cases}
 \vec{u}_1 = \vec{v}_1 \\ 
 \vec{u}_2 = \vec{v}_2 - \proj_{\vec{u}_1} \vec{v}_2 \\
 \vec{u}_3 = \vec{v}_3 - \proj_{\vec{u}_1,\vec{u}_2} \vec{v}_3
 \end{cases}
-$$
+\end{equation}
 Portanto existem coeficientes $b_1$, $c_1$ e $c_2$ tais que 
-$$
+\begin{equation}
 \begin{cases}
 \vec{u}_1 = \vec{v}_1 \\ 
 \vec{u}_2 = \vec{v}_2 - b_1 \vec{u}_1 \\
 \vec{u}_3 = \vec{v}_3 - c_1 \vec{u}_1 - c_2 \vec{u}_2
 \end{cases}
-$$
+\end{equation}
 
 Em um segundo momento, cada um dos três vetores $\vec{u}_1$, $\vec{u}_2$, e $\vec{u}_3$ é normalizado, ou seja, dividimos cada um deles pelo seu comprimento. Assim, $\vec{u}_1$, $\vec{u}_2$, e $\vec{u}_3$ formam uma base ortonormal para o espaço coluna de $A$, e  existem coeficientes $\alpha_1$, $\beta_1$, $\beta_2$, $\gamma_1$, $\gamma_2$ e $\gamma_3$ tais que 
-$$
+\begin{equation}
 \begin{cases}
 \vec{u}_1 = \alpha_1\vec{v}_1 \\ 
 \vec{u}_2 = \beta_2 \vec{v}_2 - \beta_1 \vec{u}_1 \\
 \vec{u}_3 = \gamma_3 \vec{v}_3 - \gamma_1 \vec{u}_1 - \gamma_2 \vec{u}_2
 \end{cases}
-$$
+\end{equation}
 Se colocarmos as colunas da matriz $A$ em função dos vetores da base ortonormal que acaba de ser obtida, temos 
-$$
+\begin{equation}
 \begin{cases}
 \vec{v}_1 = \alpha_1^{-1}\vec{u}_1 \\ 
 \vec{v}_2 = \beta_2^{-1} \vec{u}_2 + \beta_2^{-1}\beta_1 \vec{u}_1 \\
 \vec{v}_3 = \gamma_3^{-1} \vec{u}_3 + \gamma_3^{-1}\gamma_1 \vec{u}_1 + \gamma_3^{-1}\gamma_2 \vec{u}_2
 \end{cases}
-$$
+\end{equation}
 ou trocando a ordem das parcelas no lado direito,
-$$
+\begin{equation}
 \begin{cases}
 \vec{v}_1 = \alpha_1^{-1}\vec{u}_1 \\ 
 \vec{v}_2 =  \beta_2^{-1}\beta_1 \vec{u}_1 + \beta_2^{-1} \vec{u}_2 \\
 \vec{v}_3 =   \gamma_3^{-1}\gamma_1 \vec{u}_1 + \gamma_3^{-1}\gamma_2 \vec{u}_2 + \gamma_3^{-1} \vec{u}_3
 \end{cases}
-$$
-Assim, ao definirmos a matriz $Q=[\vec{u}_1 \vec{u}_2  \vec{u}_3] $, obtemos $$A=QR$$
+\end{equation}
+Assim, ao definirmos a matriz $Q=[\vec{u}_1 \vec{u}_2  \vec{u}_3] $, obtemos \begin{equation}A=QR\end{equation}
 onde 
-\[
+\begin{equation}
 R =
 \begin{bmatrix}
 \alpha_1^{-1}  & \beta_2^{-1}\beta_1  & \gamma_3^{-1}\gamma_1 \\
 0 & \beta_2^{-1} & \gamma_3^{-1}\gamma_2 \\
 0 & 0 & \gamma_3^{-1}
 \end{bmatrix}
-\]
+\end{equation}
 visto que cada coluna do produto $QR$, é definido como a combinação linear das colunas da matriz $Q$ com pesos dados pela respectiva coluna da matriz $R$.
 
 Note ainda que $R$ é invertível, visto que sua diagonal principal contém apenas termos não-nulos.
@@ -848,7 +848,7 @@ uma matriz ortogonal é sempre invertível e sua inversa é dada pela sua transp
 
 A prova deste teorema é simples:
  
-\[
+\begin{equation}
 Q^T Q =
 \begin{bmatrix}
  \text{--- }\  \vec{u}_1 \, \text{ ---} \\
@@ -870,11 +870,11 @@ Q^T Q =
 0 & 1 & 0 \\
 0 & 0 & 1
 \end{bmatrix} = I.
-\]
+\end{equation}
 
 Assim, se $A=QR$, basta multiplicar ambos os lados desta equação por $Q^T$ pela esquerda para obtermos:
 
-$$Q^T A = Q^T Q R  \Longrightarrow R= Q^T A.$$
+\begin{equation}Q^T A = Q^T Q R  \Longrightarrow R= Q^T A.\end{equation}
 
 
 
@@ -887,28 +887,28 @@ $$Q^T A = Q^T Q R  \Longrightarrow R= Q^T A.$$
 
 No último exemplo da seção anterior, obtemos através do método de Gram-Schmidt uma base ortonormal para $\Col A$
 onde 
-\[
+\begin{equation}
 A =
 \begin{bmatrix}
 12 & -51 & 4 \\
 6 & 167 & -68 \\
 -4 & 24 & -41
 \end{bmatrix}.
-\]
+\end{equation}
 Vamos definir a matriz $Q$ como a matriz formada pelos vetores desta base ortonormal:
-\[
+\begin{equation}
 Q =
 \begin{bmatrix}
 6/7 & -69/175 & -58/175 \\
 3/7 & 158/175 & 6/175   \\
 -2/7& 6/35   &-33/35
 \end{bmatrix}
-\] 
+\end{equation} 
 
 %tem, portanto, suas colunas ortonormais. 
 %É possível verificar que ao fazermos $Q^T A$ obtemos uma matriz triangular $R$. Podemos escrever
 Vimos que $R=Q^T A$ e portanto
-\[
+\begin{equation}
 R = Q^T A =
 \begin{bmatrix}
 6/7 & 3/7 & -2/7 \\
@@ -925,9 +925,9 @@ R = Q^T A =
 0&175&-70\\
 0&0&35
 \end{bmatrix} .
-\] 
+\end{equation} 
 Finalmente podemos escrever
-\[
+\begin{equation}
 A =
 \begin{bmatrix}
 12 & -51 & 4 \\
@@ -944,19 +944,19 @@ A =
 0&175&-70\\
 0&0&35
 \end{bmatrix} = QR. \ \lhd
-\]
+\end{equation}
 
 
 \section{Matrizes Ortogonais preservam comprimento e ângulo}
 
 Vamos aproveitar para falar um pouco mais sobre matrizes ortogonais. Um bom exemplo de matriz ortogonal $2\times 2$ é dada pela matriz de rotação, ou seja, pela matriz
 
-\[
+\begin{equation}
 Q =
 \begin{bmatrix}
 \cos (\theta) & -\sin (\theta) \\
 \sin (\theta) & \cos (\theta) 
-\end{bmatrix} ,\]
+\end{bmatrix} ,\end{equation}
 onde $0 \leq \theta \leq 2 \pi$.
 Podemos ver que esta matriz define uma transformação linear no plano que rotaciona vetores em um ângulo $\theta$ no sentido anti-horário.
 Assim, tal transformação preserva comprimento e ângulo entre vetores.
@@ -973,20 +973,20 @@ Estas propriedades não são particulares da matriz de rotação: todas as matri
 
 A prova do primeiro item é consequência direta da linearidade do produto interno e da hipótese das colunas formarem uma base ortonormal: se $\vec{v} = (\alpha_1,..., \alpha_n)$ e $\vec{w} = (\beta_1, ..., \beta_n)$,  então
 
-$$Q\vec{v} \cdot Q\vec{w} = \left( \sum_{i=1}^n \alpha_i \vec{u}_i \right) \cdot \left(   \sum_{j=1}^n \beta_j \vec{u}_j \right) =  \sum_{i=1}^n \sum_{j=1}^n \alpha_i \beta_j \;\vec{u}_i \cdot \vec{u}_j$$ 
+\begin{equation}Q\vec{v} \cdot Q\vec{w} = \left( \sum_{i=1}^n \alpha_i \vec{u}_i \right) \cdot \left(   \sum_{j=1}^n \beta_j \vec{u}_j \right) =  \sum_{i=1}^n \sum_{j=1}^n \alpha_i \beta_j \;\vec{u}_i \cdot \vec{u}_j\end{equation} 
 devido a linearidade do produto interno (ou seja a propriedade distributiva aplicada tanto na primeira quanto na segunda componente do produto interno). Agora, lembrando que $\vec{u}_i \cdot \vec{u}_j=0$ se $i \neq j$, a ultima expressão iguala-se a 
-$$ \sum_{i=1}^n \alpha_i \beta_i \; \vec{u}_i \cdot \vec{u}_i.$$
+\begin{equation} \sum_{i=1}^n \alpha_i \beta_i \; \vec{u}_i \cdot \vec{u}_i.\end{equation}
 Finalmente, lembrando que cada coluna $\vec{u}_i$ de $Q$ tem comprimento unitário, concluimos que
-$$Q\vec{v} \cdot Q\vec{w} = \sum_{i=1}^n \alpha_i \beta_i = \vec{v} \cdot \vec{w}.$$
+\begin{equation}Q\vec{v} \cdot Q\vec{w} = \sum_{i=1}^n \alpha_i \beta_i = \vec{v} \cdot \vec{w}.\end{equation}
  
  
  Os próximos dois itens seguem diretamente do primeiro item, visto que 
-$$\| Q \vec{v} \| = \sqrt{Q\vec{v} \cdot Q\vec{v}} = \sqrt{\vec{v} \cdot \vec{v}} =  \| \vec{v} \| $$ 
+\begin{equation}\| Q \vec{v} \| = \sqrt{Q\vec{v} \cdot Q\vec{v}} = \sqrt{\vec{v} \cdot \vec{v}} =  \| \vec{v} \| \end{equation} 
 e 
 o ângulo entre $Qv$ e $Qw$ é definido como 
-$$
+\begin{equation}
 \arccos\left(\frac{Qv \cdot Qw	}{\|Qv\| \|Qw\|} \right)
-=\arccos\left(\frac{v \cdot w	}{\|v\| \|w\|} \right),$$ 
+=\arccos\left(\frac{v \cdot w	}{\|v\| \|w\|} \right),\end{equation} 
 que por definição é o ângulo  entre $v$ e $w$. 
 Assim finalizamos a prova do teorema. 
  
@@ -995,12 +995,12 @@ Assim finalizamos a prova do teorema.
  
  Um outro exemplo de matriz ortogonal é dado pelas matrizes de reflexão. Um caso particular é dado pela reflexão em torno do eixo horizontal: 
  
- \[
+ \begin{equation}
  Q =
  \begin{bmatrix}
  1 & 0 \\
  0 & -1
- \end{bmatrix} .\]
+ \end{bmatrix} .\end{equation}
 
 
 \end{document} 
