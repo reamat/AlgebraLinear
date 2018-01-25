@@ -629,11 +629,16 @@ T(\vec{x}) = \vec{b}
 A\vec{x} = \vec{b}.
 \end{equation} Recaimos novamente em um sistema linear!
 
-No caso particular em que $\vec{b} = \vec{0}$, o sistema homogêneo $A\vec{x} = \vec{0}$ sempre possui a solução trivial $\vec{x} = \vec{0}$. Neste caso, para que a transformação linear seja injetora devemos verificar que esta é a única solução de $A\vec{x} = \vec{0}$. Na verdade, é possível verificar que:
-\begin{equation}
-\boxed{\text{$T$ é injetora se, e somente se, $A\vec{x} = \vec{0}$ possui apenas a solução trivial.}}
-\end{equation} Em particular, este caso somente é possível se $n \le m$ (reler observações que seguem o Exemplo 3).
+No caso particular em que $\vec{b} = \vec{0}$, o sistema homogêneo $A\vec{x} = \vec{0}$ sempre possui a solução trivial $\vec{x} = \vec{0}$. Neste caso, para que a transformação linear seja injetora devemos verificar que esta é a única solução de $A\vec{x} = \vec{0}$. Na verdade, é possível verificar o seguinte.
 
+% \begin{equation}
+% \boxed{\text{$T$ é injetora se, e somente se, $A\vec{x} = \vec{0}$ possui apenas a solução trivial.}}
+% \end{equation} Em particular, este caso somente é possível se $n \le m$ (reler observações que seguem o Exemplo 3).
+
+
+\begin{claim}
+  $T$ é injetora se, e somente se, $A\vec{x} = \vec{0}$ possui apenas a solução trivial.\footnote{Em particular, este caso somente é possível se $n \le m$ (reler observações que seguem o Exemplo 3)}
+\end{claim}
 \begin{proof}[Justificativa da afirmação]
 Vamos provar matematicamente que, se soubermos que $A\vec{x} = \vec{0}$ possui apenas a solução trivial, então vale que $A\vec{x} = \vec{b}$ possui no máximo uma solução, para qualquer escolha de vetor $\vec{b}$. Isto, por sua vez, implica que $T$ é injetora. Caso não existam soluções ou caso exista apenas uma, nada há para provar. Suponhamos que então que existem infinitas soluções (esta seria a única outra possibilidade). Em particular, existiriam duas distintas:
 \begin{equation}
@@ -641,11 +646,17 @@ Vamos provar matematicamente que, se soubermos que $A\vec{x} = \vec{0}$ possui a
 \end{equation} Por linearidade, temos então que $A (\vec{x}_1 - \vec{x}_2) = \vec{b} - \vec{b} = \vec{0}$. No entanto, nossa hipótese garante que somente existe a solução trivial para a equação $A\vec{x} = \vec{0}$, de modo que deveríamos ter $\vec{x}_1 = \vec{x}_2$. Em outras palavras, se $A\vec{x} = \vec{0}$ possuir apenas a solução trivial, então não existe mais do que uma solução para $A\vec{x} = \vec{b}$. Portanto, $T$ é injetora.
 \end{proof}
 
-Notem que a afirmação acima é também equivalente a
-\begin{equation}
-\boxed{\text{$T$ é injetora se, e somente se, as colunas de $A$ são linearmente independentes.}}
-\end{equation} Vamos deixar exemplos de injetividade para a subseção seguinte (ver Exemplos \ref{exp:injsob1} e \ref{exp:injsob2}).
+Notem que a afirmação acima é também equivalente a seguinte afirmação.
 
+% \begin{equation}
+% \boxed{\text{$T$ é injetora se, e somente se, as colunas de $A$ são linearmente independentes.}}
+% \end{equation} 
+
+\begin{claim}
+  $T$ é injetora se, e somente se, as colunas de $A$ são linearmente independentes.
+\end{claim}
+
+Vamos deixar exemplos de injetividade para a subseção seguinte (ver Exemplos \ref{exp:injsob1} e \ref{exp:injsob2}).
 
 \subsection{Transformações lineares sobrejetoras}
 
