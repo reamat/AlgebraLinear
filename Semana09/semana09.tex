@@ -18,13 +18,13 @@
 O determinante é um número que está associado com uma matriz quadrada.\footnote{Como afirma ???, surgiu primeiro para sistemas lineares (e não matrizes).} Para os nossos propósitos neste curso, o determinante é principalmente utilizado para decidir se uma matriz é invertível. No entanto, o determinante tem outras interpretações. Veremos brevemente como é utilizá-lo no cálculo de volumes de paralelepípedos. Além disso, aparece em aplicações variadas, como a fórmula de mudança de variáveis em integrais múltiplas.
 
 Vejamos inicialmente o caso $2 \times 2$. Consideramos a matriz
-\[
+\begin{equation}
 A = \begin{bmatrix}
 a & b \\
 c & d
 \end{bmatrix}.
-\] No caso em que ambas as entradas $a$ e $c$ são nulas, sabemos de antemão que $A$ não pode ser uma matriz invertível, pois neste caso sua primeira coluna não possui posição de pivô. Suponhamos que $a \neq 0$ (caso contrário, poderíamos fazer uma troca de linhas). Por eliminação Gaussiana, chegamos a
-\[
+\end{equation} No caso em que ambas as entradas $a$ e $c$ são nulas, sabemos de antemão que $A$ não pode ser uma matriz invertível, pois neste caso sua primeira coluna não possui posição de pivô. Suponhamos que $a \neq 0$ (caso contrário, poderíamos fazer uma troca de linhas). Por eliminação Gaussiana, chegamos a
+\begin{equation}
 \begin{bmatrix}
 a & b \\
 c & d
@@ -37,11 +37,11 @@ a & b \\
 a & b \\
 0 & \frac{ad - bc}{a}
 \end{bmatrix}.
-\] Assim, $A$ é invertível (ou, equivalentemente, as colunas de $A$ são linearmente independentes) se, e somente se, o valor numérico $ad - bc$ é diferente de $0$. Esta é a nossa definição de \textbf{determinante} para uma matriz $A$ de ordem $2 \times 2$:
-\[
+\end{equation} Assim, $A$ é invertível (ou, equivalentemente, as colunas de $A$ são linearmente independentes) se, e somente se, o valor numérico $ad - bc$ é diferente de $0$. Esta é a nossa definição de \textbf{determinante} para uma matriz $A$ de ordem $2 \times 2$:
+\begin{equation}
 \det A \ \stackrel{\text{def}}{=} \ ad - bc.
-\] Outras notações bastante utilizadas de determinante são
-\[
+\end{equation} Outras notações bastante utilizadas de determinante são
+\begin{equation}
 \det \begin{bmatrix}
 a & b \\
 c & d
@@ -50,7 +50,7 @@ c & d
 a & b \\
 c & d
 \end{matrix} \right|.
-\] Cuidado para não confundir! Com estas notações, $\begin{bmatrix}
+\end{equation} Cuidado para não confundir! Com estas notações, $\begin{bmatrix}
 a & b \\
 c & d
 \end{bmatrix}$ representa uma matriz enquanto que $\left| \begin{matrix}
@@ -59,9 +59,9 @@ c & d
 \end{matrix} \right|$ representa um número, o determinante de $A$. 
 
 A nossa discussão acima de imediato implica a seguinte propriedade:
-\[
+\begin{equation}
 \boxed{A \text{ é invertível } \iff \det A \neq 0.}
-\]
+\end{equation}
 
 \begin{example}
 A matriz $A = \begin{bmatrix}
@@ -77,15 +77,15 @@ Por outro lado, $A = \begin{bmatrix}
 
 
 Agora, vamos fazer as contas também no caso $3 \times 3$. Considere a matriz
-\[
+\begin{equation}
 A = 
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
 a_{31} & a_{32} & a_{33} \\
 \end{bmatrix}.
-\] Suponhamos que $a_{11} \neq 0$. Por escalonamento:
-\[
+\end{equation} Suponhamos que $a_{11} \neq 0$. Por escalonamento:
+\begin{equation}
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
@@ -96,8 +96,8 @@ a_{11} & a_{12} & a_{13} \\ && \\
 0 & \frac{a_{11} a_{22} - a_{21} a_{12}}{a_{11}} & \frac{a_{11} a_{23} - a_{21} a_{13}}{a_{11}} \\ && \\ 
 0 & \frac{a_{11} a_{32} - a_{31} a_{12}}{a_{11}} & \frac{a_{11} a_{33} - a_{31} a_{13}}{a_{11}} \\
 \end{bmatrix}.
-\] Podemos ainda simplificar os denominadores
-\[
+\end{equation} Podemos ainda simplificar os denominadores
+\begin{equation}
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
@@ -112,7 +112,7 @@ a_{11} & a_{12} & a_{13} \\
 0 & A_{33} & A_{32} \\ 
 0 & A_{23} & A_{22} \\
 \end{bmatrix}.
-\] Em breve (esperamos que) ficará clara a escolha da notação acima. O passo seguinte no escalonamento será, supondo que $A_{33} \neq 0$, eliminar o elemento $A_{23}$ que está na posição $32$. Temos assim
+\end{equation} Em breve (esperamos que) ficará clara a escolha da notação acima. O passo seguinte no escalonamento será, supondo que $A_{33} \neq 0$, eliminar o elemento $A_{23}$ que está na posição $32$. Temos assim
 \begin{equation}\label{notaminors}
 A = 
 \begin{bmatrix}
@@ -132,24 +132,24 @@ a_{11} & a_{12} & a_{13} \\
 \end{bmatrix}.
 \end{equation} 
 Nosso raciocínio é que nossa matriz $A$ é uma matriz invertível se esta última coluna possuir uma posição de pivô, isto é, se $A_{22} A_{33} - A_{32} A_{23} \neq 0$. Este último pode ser escrito mais explicitamente como
-\begin{equation*}
+\begin{equation}
   \begin{split}
     A_{22} A_{33} - A_{32} A_{23} & = (a_{11} a_{22} - a_{21} a_{12}) (a_{11} a_{33} - a_{31} a_{13}) - (a_{11} a_{32} - a_{31} a_{12}) (a_{11} a_{23} - a_{21} a_{13}) \\
     & =  a_{11}^2 a_{22} a_{33} - a_{11} a_{22} a_{31} a_{13} - a_{21} a_{12} a_{11} a_{33} + \cancel{a_{21} a_{12} a_{31} a_{13}} + \\
     & \quad  - a_{11}^2 a_{32} a_{23} + a_{11} a_{32} a_{21} a_{13} + a_{31} a_{12} a_{11} a_{23} - \cancel{a_{31} a_{12} a_{21} a_{13}} \\
     & = a_{11} \big( a_{11} a_{22} a_{33} - a_{22} a_{31} a_{13} - a_{21} a_{12} a_{33} - a_{11} a_{32} a_{23} + a_{32} a_{21} a_{13} + a_{31} a_{12} a_{23} \big)
   \end{split}
-\end{equation*}
+\end{equation}
 Destas considerações, segue que $A$ é invertível sempre que
-\[
+\begin{equation}
 a_{11} a_{22} a_{33} - a_{22} a_{31} a_{13} - a_{21} a_{12} a_{33} - a_{11} a_{32} a_{23} + a_{32} a_{21} a_{13} + a_{31} a_{12} a_{23} \neq 0.
-\] Definimos o \textbf{determinante} de uma matriz $A$ de ordem $3 \times 3$ por (note que apenas mudamos a ordem dos termos):
-\[
+\end{equation} Definimos o \textbf{determinante} de uma matriz $A$ de ordem $3 \times 3$ por (note que apenas mudamos a ordem dos termos):
+\begin{equation}
 \det A \stackrel{\text{def}}{=} a_{11} a_{22} a_{33} - a_{11} a_{32} a_{23} - a_{12} a_{21} a_{33} + a_{12} a_{31} a_{23} + a_{13} a_{21} a_{32} - a_{13} a_{31} a_{22}.
-\] Existe uma forma de memorização deste determinante que usualmente é ensinado no ensino médio. No entanto, vamos utilizar um outro método que poderá ser aplicado para matrizes de qualquer ordem!
+\end{equation} Existe uma forma de memorização deste determinante que usualmente é ensinado no ensino médio. No entanto, vamos utilizar um outro método que poderá ser aplicado para matrizes de qualquer ordem!
 
 Observamos que a expressão acima está cheia de simetrias, por exemplo, cada um dos elementos da matriz $A$ aparece exatamente duas vezes. Além disso, aparece uma vez com sinal positivo e outra com sinal negativo. Podemos escrever:
-\begin{equation*}
+\begin{equation}
 \begin{split}
 \det A & = a_{11} \big( a_{22} a_{33} - a_{32} a_{23} \big) - a_{12} \big( a_{21} a_{33} + a_{31} a_{23} \big) + a_{13} \big( a_{21} a_{32} - a_{31} a_{22}\big). \\
        & = a_{11} \cdot \det \begin{bmatrix}
@@ -163,9 +163,9 @@ Observamos que a expressão acima está cheia de simetrias, por exemplo, cada um
        a_{31} & a_{32} \\
        \end{bmatrix}
 \end{split}
-\end{equation*}
+\end{equation}
 Esta última fórmula (que é apenas uma outra forma de escrever a nossa definição de determinante de uma matriz de ordem $3 \times 3$), apesar de aparentemente complicada, nos permite entender como que os coeficientes de uma matriz aparecem na definição de $\det A$. Vamos escrever novamente:
-\[
+\begin{equation}
 \det \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
@@ -180,11 +180,11 @@ a_{31}  & a_{33} \\
 a_{21} & a_{22} \\
 a_{31} & a_{32} \\
 \end{bmatrix}.
-\] Podemos pensar como segue:
+\end{equation} Podemos pensar como segue:
 \begin{itemize}
 \item Nós vamos percorrer a primeira linha da esquerda para a direita, alternando o sinal e multiplicando por determinantes menores.
 \item O primeiro elemento é o elemento da primeira linha é $a_{11}$. \textit{Não alteramos} o sinal e multiplicamos por um \textbf{determinante menor}, obtido ao desconsiderar a primeira linha e a primeira coluna (ou, em outras palavras, a linha e a coluna do elemento $a_{11}$):
-\[
+\begin{equation}
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
@@ -199,9 +199,9 @@ a_{31} & a_{32} & a_{33} \\
 a_{22}  & a_{23} \\
 a_{32}  & a_{33} \\
 \end{bmatrix}.
-\] Denotamos por $A_{11}$ a matriz obtida ao remover a linha e a coluna no elemento $a_{11}$.
+\end{equation} Denotamos por $A_{11}$ a matriz obtida ao remover a linha e a coluna no elemento $a_{11}$.
 \item Em seguida, vamos para o segundo elemento da primeira linha, que é $a_{12}$. \textit{Alteramos} o sinal e multiplicamos pelo determinante menor da matriz $A_{12}$, obtida de $A$ ao eliminar a linha e a coluna de $a_{12}$:
-\[
+\begin{equation}
 \begin{bmatrix}
 \square & \square & \square \\
 a_{21}  & \square & a_{23} \\
@@ -211,9 +211,9 @@ a_{31}  & \square & a_{33} \\
 a_{21}  & a_{23} \\
 a_{31}  & a_{33} \\
 \end{bmatrix}.
-\]
+\end{equation}
 \item Finalmente consideramos $a_{31}$. \textit{Não alteramos} o sinal e multiplicamos pelo determinante menor da matriz $A_{13}$, obtida de $A$ ao eliminar a linha e a coluna de $a_{13}$:
-\[
+\begin{equation}
 \begin{bmatrix}
 \square & \square & \square \\
 a_{21}  & a_{22}  & \square \\
@@ -223,7 +223,7 @@ a_{31}  & a_{32}  & \square \\
 a_{21}  & a_{22} \\
 a_{31}  & a_{32} \\
 \end{bmatrix}.
-\] 
+\end{equation} 
 \item Podemos então escrever
 \begin{equation}\label{detminor}
 \boxed{\det A = a_{11} \det A_{11} - a_{12} \det A_{12} +  a_{13} \det A_{13}.}
@@ -233,14 +233,14 @@ a_{31}  & a_{32} \\
 
 \begin{example}
 Calcular o determinante de
-\[
+\begin{equation}
 A = \begin{bmatrix}
 2 & 4 & 3  \\
 1 & 2 & -1 \\
 0 & 2 & 1
 \end{bmatrix}.
-\] A notação de ``barrinhas'' para o determinante é particularmente adequada para escrever o determinante como aparece na fórmula \eqref{detminor}, pois assim podemos ir mentalmente desconsiderando (ou tapando com um lápis) as linhas e colunas que não devemos escrever (indentifique que tudo o que fizemos foi escrever a fórmula \eqref{detminor}):
-\[
+\end{equation} A notação de ``barrinhas'' para o determinante é particularmente adequada para escrever o determinante como aparece na fórmula \eqref{detminor}, pois assim podemos ir mentalmente desconsiderando (ou tapando com um lápis) as linhas e colunas que não devemos escrever (indentifique que tudo o que fizemos foi escrever a fórmula \eqref{detminor}):
+\begin{equation}
 \det A = \left| \begin{matrix}
 2 & 4 & 3  \\
 1 & 2 & -1 \\
@@ -255,8 +255,8 @@ A = \begin{bmatrix}
 1 & 2  \\
 0 & 2 
 \end{matrix} \right|.
-\] Agora, já sabemos como calcular determinantes de matrizes $2 \times 2$, que é o que nos resta fazer:
-\begin{equation*}
+\end{equation} Agora, já sabemos como calcular determinantes de matrizes $2 \times 2$, que é o que nos resta fazer:
+\begin{equation}
 \begin{split}
 \left| \begin{matrix}
 2 & 4 & 3  \\
@@ -265,19 +265,19 @@ A = \begin{bmatrix}
 \end{matrix} \right| & = 2 \big( 2\cdot 1 - 2 \cdot (-1)  \big) - 4 \big( 1 \cdot 1 - 0 \cdot (-1) \big) + 3 \big( 1 \cdot 2 - 0 \cdot 2 \big) \\
                      & = 2 \cdot 4 - 4 \cdot 1 + 3 \cdot 2 = 10. \ \lhd
 \end{split}
-\end{equation*}
+\end{equation}
 \end{example}
 
 
 \begin{example}
 	Calcular o determinante de
-	\[
+	\begin{equation}
 	B = \begin{bmatrix}
 	1 & -3 & -4  \\
 	1 & 0 & -1 \\
 	0 & 2 & 1
 	\end{bmatrix}.
-	\] A notação de ``barrinhas'' para o determinante é particularmente adequada para escrever o determinante como aparece na fórmula \eqref{detminor}, pois assim podemos ir mentalmente desconsiderando (ou tapando com um lápis) as linhas e colunas que não devemos escrever (indentifique que tudo o que fizemos foi escrever a fórmula \eqref{detminor}):
+	\end{equation} A notação de ``barrinhas'' para o determinante é particularmente adequada para escrever o determinante como aparece na fórmula \eqref{detminor}, pois assim podemos ir mentalmente desconsiderando (ou tapando com um lápis) as linhas e colunas que não devemos escrever (indentifique que tudo o que fizemos foi escrever a fórmula \eqref{detminor}):
         \begin{equation}
 	\begin{split}
 	\det B = \left| \begin{matrix}
@@ -303,26 +303,26 @@ A = \begin{bmatrix}
 Como já mencionamos, na fórmula para o determinante de uma matriz $A$, cada um dos elementos de $A$ aparece exatamente duas vezes. Isto significa que poderíamos ter rearranjado os termos da matriz não a partir da primeira linha, mas a partir de \textit{qualquer linha ou qualquer coluna}. Mas devemos ter cuidado para que os sinais sejam levados em consideração de forma coerente.
 
 Dada uma matriz quadrada $A$ de ordem $n \times n$, obtemos uma \textbf{matriz menor} $A_{ij}$ ao remover a linha $i$ e coluna $j$. Agora é possível entender a notação escolhida no inicio deste capítulo, na fórmula \eqref{notaminors}. Definimos o \textbf{cofator} $(i,j)$ de $A$ por
-\[
+\begin{equation}
 C_{ij} \stackrel{\text{def}}{=} (-1)^{i + j} \det A_{ij}.
-\] Este sinal $\pm 1$ na definição do cofator é o que faz com que o sinal seja levado em consideração corretamente.
+\end{equation} Este sinal $\pm 1$ na definição do cofator é o que faz com que o sinal seja levado em consideração corretamente.
 
 \begin{theorem}
 Podemos calcular o determinante de $A$ a partir de qualquer linha ou de qualquer coluna. Mais precisamente:
 \begin{itemize}
 \item Se consideramos a linha $i$, então
-\[
+\begin{equation}
 \det A = a_{i1} C_{i1} + a_{i2} C_{i2} + a_{i3} C_{i3}.
-\]
+\end{equation}
 \item Se consideramos a coluna $j$, então
-\[
+\begin{equation}
 \det A = a_{1j} C_{1j} + a_{2j} C_{2j} + a_{3j} C_{3j}.
-\]
+\end{equation}
 \end{itemize}
 \end{theorem}
 
 É prático de calcular o determinante pensando como vínhamos fazendo antes, alternando os sinais. Isto é possível de fazer utilizando qualquer linha ou qualquer coluna. Basta descobrirmos com qual sinal devemos começar. Construimos uma ``matriz'' com os sinais que cada posição da matriz nos dá. Vamos colocar o sinal de $(-1)^{i+j}$ na posição $ij$ da matriz:
-\[
+\begin{equation}
 \begin{bmatrix}
 (-1)^{1+1} & (-1)^{1+2} & (-1)^{1+3}\\
 (-1)^{2+1} & (-1)^{2+2} & (-1)^{2+3}\\
@@ -333,20 +333,20 @@ Podemos calcular o determinante de $A$ a partir de qualquer linha ou de qualquer
 - & + & -  \\
 + & - & +  
 \end{bmatrix}.
-\] Claro que poderíamos fazer esta matriz de sinais para matrizes de qualquer ordem.
+\end{equation} Claro que poderíamos fazer esta matriz de sinais para matrizes de qualquer ordem.
 
 
 \begin{example}
 Vamos calcular de várias maneiras o determinante da matriz
-\[
+\begin{equation}
 A = 
 \begin{bmatrix}
 -1 & 1 & 4 \\
  3 & 0 & -1 \\
  1 & 0 & 3 \\
 \end{bmatrix}.
-\] Pela nossa definição
-\[
+\end{equation} Pela nossa definição
+\begin{equation}
 \left| 
 \begin{matrix}
 -1 & 1 & 4 \\
@@ -371,8 +371,8 @@ A =
 1 & 0  \\
 \end{matrix}
 \right| = (-1)\cdot 0 - 1 (9 + 1) + 4 \cdot 0 = -10.
-\] Uma boa escolha seria uma linha ou coluna que tenha o maior número de zeros! Pois assim, economizamos tanto nos cálculos quanto na escrita. Por exemplo, escolhemos a segunda coluna. Para saber o sinal adequado, podemos proceder da seguinte maneira: começando na posição $11$ com o sinal ``$+$'', vamos alternando o sinal até completar a segunda coluna:
-\[
+\end{equation} Uma boa escolha seria uma linha ou coluna que tenha o maior número de zeros! Pois assim, economizamos tanto nos cálculos quanto na escrita. Por exemplo, escolhemos a segunda coluna. Para saber o sinal adequado, podemos proceder da seguinte maneira: começando na posição $11$ com o sinal ``$+$'', vamos alternando o sinal até completar a segunda coluna:
+\begin{equation}
 \begin{bmatrix}
 + & \,\,  & \,\,  \\
   &  &   \\
@@ -396,8 +396,8 @@ A =
 \begin{bmatrix}
 - \\ + \\ -
 \end{bmatrix}.
-\] Assim, podemos calcular
-\[
+\end{equation} Assim, podemos calcular
+\begin{equation}
 \left| 
 \begin{matrix}
 -1 & 1 & 4 \\
@@ -411,10 +411,10 @@ A =
 1  & 3 \\
 \end{matrix}
 \right| + 0 - 0 = -1 (9 + 1) = -10.
-\] Observe que nem escrevemos as determinantes menores que estão multiplicados por zero. De fato, nem precisaríamos ter escrito os zeros, apenas o fizemos para exemplificar os sinais alternando de forma correta.
+\end{equation} Observe que nem escrevemos as determinantes menores que estão multiplicados por zero. De fato, nem precisaríamos ter escrito os zeros, apenas o fizemos para exemplificar os sinais alternando de forma correta.
 
 A segunda coluna, neste caso, era a melhor escolha para o cálculo do determinante, pois apenas um elemento é não nulo. De qualquer maneira, para praticar, vamos calcular ainda mais uma vez $\det A$, agora utilizando a terceira linha. Sinais que aparecem na frente dos coeficientes, de acordo com a terceira linha:
-\[
+\begin{equation}
 \begin{bmatrix}
 + & \,\, & \,\, \\
 - & \,\, & \,\, \\
@@ -423,8 +423,8 @@ A segunda coluna, neste caso, era a melhor escolha para o cálculo do determinan
 \begin{bmatrix}
 + & - & + 
 \end{bmatrix}.
-\] Logo,
-\[
+\end{equation} Logo,
+\begin{equation}
 \left| 
 \begin{matrix}
 -1 & 1 & 4 \\
@@ -444,7 +444,7 @@ A segunda coluna, neste caso, era a melhor escolha para o cálculo do determinan
 3 & 0  \\
 \end{matrix}
 \right| = 1 \cdot (-1) + 3 \cdot (-3) = -10.
-\] Como exercício, calcule o determinante utilizando outras linhas ou colunas$. \ \lhd$
+\end{equation} Como exercício, calcule o determinante utilizando outras linhas ou colunas$. \ \lhd$
 \end{example}
 
 
@@ -454,9 +454,9 @@ Seja $A$ uma matriz quadrada, de ordem $n \times n$. O \textbf{determinante} de 
 \begin{equation}\label{defdet}
 \boxed{\det A = a_{11} \det A_{11} - a_{12} \det A_{12} +  a_{13} \det A_{13} - a_{14} \det A_{14} + \cdots + (-1)^{1+n}  a_{1n} \det A_{1n}.}
 \end{equation} ou, na notação dos cofatores:
-\[
+\begin{equation}
 \boxed{\det A = a_{11} C_{11} + a_{12} C_{12} + a_{13} C_{13} + a_{14} C_{14} + \cdots + a_{1n} C_{1n}.}
-\] Nossa definição é de fato recorrente, pois para calcular $\det A$, de acordo com a definição, nós precisaremos calcular vários determinantes de ordem $n-1$. Estes por sua vez, consistem de vários determinante de ordem $n-2$, e assim por diante. Isto implica, em particular, que o cálculo de determinantes é, em geral, uma tarefa bastante trabalhosa.
+\end{equation} Nossa definição é de fato recorrente, pois para calcular $\det A$, de acordo com a definição, nós precisaremos calcular vários determinantes de ordem $n-1$. Estes por sua vez, consistem de vários determinante de ordem $n-2$, e assim por diante. Isto implica, em particular, que o cálculo de determinantes é, em geral, uma tarefa bastante trabalhosa.
 
 Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde que com os sinais corretos:
 
@@ -465,19 +465,19 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
 	Podemos calcular o determinante de $A$ a partir de qualquer linha ou de qualquer coluna. Mais precisamente:
 	\begin{itemize}
 		\item Se consideramos a linha $i$, então
-		\[
+		\begin{equation}
 		\det A = a_{i1} C_{i1} + a_{i2} C_{i2} + a_{i3} C_{i3} + \cdots + a_{in} C_{in}.
-		\]
+		\end{equation}
 		\item Se consideramos a coluna $j$, então
-		\[
+		\begin{equation}
 		\det A = a_{1j} C_{1j} + a_{2j} C_{2j} + a_{3j} C_{3j} + \cdots + a_{nj} C_{nj}.
-		\]
+		\end{equation}
 	\end{itemize}
 \end{theorem}
 
 \begin{example}\label{exp:det1}
 	Calcular o determinante da matriz de ordem $4 \times 4$:
-	\[
+	\begin{equation}
 	A = 
 	\begin{bmatrix}
     -2 & 3 & 0  & 4 \\
@@ -485,8 +485,8 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
     3  & 2 & 1  & 1 \\
     -2 & 2 & 0  & 1
 	\end{bmatrix}.
-	\] Na tentativa de evitar muitas contas, vamos escolher para começar, uma linha ou coluna que possua o menor número de zeros possível. Neste caso, poderia ser a segunda linha ou a terceira coluna. Vamos escolher a segunda linha (calcule, como exercício, o determinante utilizando a terceira coluna). Os sinais são:
-	\[
+	\end{equation} Na tentativa de evitar muitas contas, vamos escolher para começar, uma linha ou coluna que possua o menor número de zeros possível. Neste caso, poderia ser a segunda linha ou a terceira coluna. Vamos escolher a segunda linha (calcule, como exercício, o determinante utilizando a terceira coluna). Os sinais são:
+	\begin{equation}
 	\begin{bmatrix}
 	+ &  &  &  \\
 	- &  + & - & + \\
@@ -496,8 +496,8 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
 	\begin{bmatrix}
 	- & + & - & + 
 	\end{bmatrix}.
-	\] Logo,
-	\[
+	\end{equation} Logo,
+	\begin{equation}
 	\left| \begin{matrix}
 	-2 & 3 & 0  & 4 \\
 	1  & 0 & -1 & 0 \\
@@ -514,7 +514,7 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
 	3  & 2 &  1 \\
 	-2 & 2 &  1
 	\end{matrix}\right| + 0.
-	\] Perceba que os dois zeros evitaram que calculássemos dois determinantes de ordem 3. Em seguida, calculamos cada um dos determinantes de ordem 3 (no primeiro deles, escolhemos a segunda coluna, por possuir dois zeros; no segundo, qualquer escolha seria parecida, já que a matriz não tem entradas nulas -- escolhemos a terceira coluna):
+	\end{equation} Perceba que os dois zeros evitaram que calculássemos dois determinantes de ordem 3. Em seguida, calculamos cada um dos determinantes de ordem 3 (no primeiro deles, escolhemos a segunda coluna, por possuir dois zeros; no segundo, qualquer escolha seria parecida, já que a matriz não tem entradas nulas -- escolhemos a terceira coluna):
         \begin{equation}
 	\begin{split}
     \left| \begin{matrix}
@@ -556,7 +556,7 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
 
 \begin{example}\label{exp:det2}
 Calcular o determinante da matriz de ordem $5 \times 5$:
-\[
+\begin{equation}
 A = 
 \begin{bmatrix}
 2 & 0 & 0 & 8 & 0 \\
@@ -565,10 +565,10 @@ A =
 0 & 7 & 5 & 4 & 0 \\
 2 & 3 & 1 & 1 & 1 \\
 \end{bmatrix}.
-\] Começamos pela última coluna, pois esta possui apenas uma entrada não nula. Assim, nosso determinante já é reduzido a calcular apenas um determinante de ordem $4 \times 4$ (em contraste com calcular cinco determinantes $4\times 4$).
+\end{equation} Começamos pela última coluna, pois esta possui apenas uma entrada não nula. Assim, nosso determinante já é reduzido a calcular apenas um determinante de ordem $4 \times 4$ (em contraste com calcular cinco determinantes $4\times 4$).
 
 Análise dos sinais da quinta coluna:
-\[
+\begin{equation}
 \begin{bmatrix}
 + & - & + & - & + \\
  &&&& - \\
@@ -579,8 +579,8 @@ Análise dos sinais da quinta coluna:
 \begin{bmatrix}
 + \\ - \\ + \\ - \\ +
 \end{bmatrix}.
-\] Assim:
-\[
+\end{equation} Assim:
+\begin{equation}
 \left| 
 \begin{matrix}
 2 & 0 & 0 & 8 & 0 \\
@@ -606,8 +606,8 @@ Análise dos sinais da quinta coluna:
 0 & 7 & 5 & 4  \\
 \end{matrix}
 \right|.
-\] Em seguida, escolhemos (por exemplo) a primeira linha da nova matriz $4 \times 4$:
-\[
+\end{equation} Em seguida, escolhemos (por exemplo) a primeira linha da nova matriz $4 \times 4$:
+\begin{equation}
 \det A = \left| 
 \begin{matrix}
 2 & 0 & 0 & 8  \\
@@ -629,7 +629,7 @@ Análise dos sinais da quinta coluna:
 0 & 7 & 5   \\
 \end{matrix}
 \right|.
-\] Finalmente, temos dois determinantes de matrizes de ordem $3 \times 3$ para calcular:
+\end{equation} Finalmente, temos dois determinantes de matrizes de ordem $3 \times 3$ para calcular:
 
 \begin{equation}
 \begin{split}
@@ -667,7 +667,7 @@ Nesta seção, vamos apontar as principais propriedades do determinante. A prova
 Valem as seguintes propriedades:
 \begin{enumerate}[$(i)$]
 \item O determinante depende linearmente de cada uma das linhas, isto é, se fizermos uma combinação linear de uma linha apenas, poderíamos ter feito uma cobinação linear dos determinantes:
-\[
+\begin{equation}
 \det \begin{bmatrix}
 a_{11} & \cdots & a_{1n} \\
 \vdots &  & \vdots \\
@@ -689,7 +689,7 @@ b_{i1} & \cdots & b_{in} \\
 \vdots &  & \vdots \\
 a_{n1} & \cdots & a_{nn}
 \end{bmatrix}.
-\]
+\end{equation}
 
 \item Se uma linha de $A$ for composta só por zeros, então $\det A = 0$.
 
@@ -713,11 +713,11 @@ Várias destas propriedades já devem ser familiares para os leitores deste livr
 \begin{itemize}
 \item Caso seja necessário uma troca de linhas para que a posição de pivô fique com um elemento não nulo, somos permitidos de fazer a troca, \textit{desde que alterando o sinal do determinante}, como nos diz a propriedade $(iv)$ acima;
 \item De acordo com a propriedade $(v)$, eliminar os elementos abaixo da posição de pivô não altera o determinante. \textbf{Um cuidado}: multiplicar linhas por escalares altera o determinante! Desta maneira, esta operação elementar significa estritamente fazer uma operação do tipo
-\[
+\begin{equation}
 k \ell_i + \ell_j \text{ em } \ell_j.
-\] Observe que ``adicionamos um múltiplo da linha $i$ na linha $j$''. Atentem para o fato de que não pode haver coeficiente diferente de $1$ em $\ell_j$.
+\end{equation} Observe que ``adicionamos um múltiplo da linha $i$ na linha $j$''. Atentem para o fato de que não pode haver coeficiente diferente de $1$ em $\ell_j$.
 \item Caso queiramos, para simplificar as contas, multiplicar ou dividir uma linha por um fator qualquer, podemos fazer uma aplicação cuidadosa da linearidade enunciada na propriedade $(i)$ acima. Considerando $\beta = 0$, esta propriedade se transforma em ``colocar um fator $\alpha$ de uma linha em evidência'':
-\[
+\begin{equation}
 \left| \begin{matrix}
 a_{11} & \cdots & a_{1n} \\
 \vdots &  & \vdots \\
@@ -732,12 +732,12 @@ a_{i1} & \cdots & a_{in} \\
 \vdots &  & \vdots \\
 a_{n1} & \cdots & a_{nn}
 \end{matrix}\right| .
-\]
+\end{equation}
 \end{itemize}
 
 \begin{example}
 Vamos calcular o determinante da matriz $A$ do Exemplo \ref{exp:det1} utilizando as propriedades acima (em particular o escalonamento). Este método é particularmente útil quando as matrizes não possuem muitas entradas nulas. Já que a segunda linha possui um ``1'' na primeira entrada, vamos fazer uma troca de linhas para facilitar as contas (cuidado com o sinal!). Em seguida, eliminamos os elementos da primeira coluna.
-\[
+\begin{equation}
 \left| \begin{matrix}
 -2 & 3 & 0  & 4 \\
 1  & 0 & -1 & 0 \\
@@ -766,8 +766,8 @@ Vamos calcular o determinante da matriz $A$ do Exemplo \ref{exp:det1} utilizando
 0  & 0 & -2/3 & -5/3
 \end{matrix}
 \right|.
-\] As divisões nos denominadores nos atrapalham um pouco na hora de fazer a conta. Podemos retirá-los dali, desde que cuidadosamente (o mesmo para o sinal de ``$-1$''), colocando-os em evidência (note que devemos fazê-lo para cada linha!):
-\[
+\end{equation} As divisões nos denominadores nos atrapalham um pouco na hora de fazer a conta. Podemos retirá-los dali, desde que cuidadosamente (o mesmo para o sinal de ``$-1$''), colocando-os em evidência (note que devemos fazê-lo para cada linha!):
+\begin{equation}
 \left| \begin{matrix}
 -2 & 3 & 0  & 4 \\
 1  & 0 & -1 & 0 \\
@@ -789,8 +789,8 @@ Vamos calcular o determinante da matriz $A$ do Exemplo \ref{exp:det1} utilizando
 0  & 0 & 2    & 5
 \end{matrix}
 \right|
-\] Finalmente, podemos fazer uma troca de linhas e eliminar o elemento ``16'':
-\[
+\end{equation} Finalmente, podemos fazer uma troca de linhas e eliminar o elemento ``16'':
+\begin{equation}
 \left| \begin{matrix}
 -2 & 3 & 0  & 4 \\
 1  & 0 & -1 & 0 \\
@@ -805,12 +805,12 @@ Vamos calcular o determinante da matriz $A$ do Exemplo \ref{exp:det1} utilizando
 0  & 0 & 0    & -45 \\
 \end{matrix}
 \right| = -\frac{1}{9} \cdot 1 \cdot 3 \cdot 2 \cdot (-45) = 30. \ \lhd
-\]
+\end{equation}
 \end{example}
 
 \begin{remark}
 No exemplo anterior, vimos como calcular o determinante utilizando escalonamento de maneira ``straightforward''. Como pode-se perceber, o método não parece muito melhor do que calcular o determinante utilizando expansão por cofatores. Vamos ver que, de fato, o melhor é \textit{misturar} o método de cofatores com as propriedades acima! Vamos novamente calcular
-\[
+\begin{equation}
 \left| \begin{matrix}
 -2 & 3 & 0  & 4 \\
 1  & 0 & -1 & 0 \\
@@ -818,8 +818,8 @@ No exemplo anterior, vimos como calcular o determinante utilizando escalonamento
 -2 & 2 & 0  & 1
 \end{matrix}
 \right|.
-\] Observe que a terceira coluna tem duas entradas nulas. Podemos ainda utilizar uma operação elementar para eliminar uma das entradas: por exemplo, substituir $\ell_3 + \ell_2$ em $\ell_2$. Assim:
-\[
+\end{equation} Observe que a terceira coluna tem duas entradas nulas. Podemos ainda utilizar uma operação elementar para eliminar uma das entradas: por exemplo, substituir $\ell_3 + \ell_2$ em $\ell_2$. Assim:
+\begin{equation}
 \left| \begin{matrix}
 -2 & 3 & 0  & 4 \\
 1  & 0 & -1 & 0 \\
@@ -841,8 +841,8 @@ No exemplo anterior, vimos como calcular o determinante utilizando escalonamento
   &   & - & 
 \end{bmatrix}
 \right) 
-\] Note que a terceira coluna agora ficou com apenas uma entrada não nula; logo, utilizando a terceira coluna para o cálculo de $\det A$ (como na seção anterior), obtemos
-\[
+\end{equation} Note que a terceira coluna agora ficou com apenas uma entrada não nula; logo, utilizando a terceira coluna para o cálculo de $\det A$ (como na seção anterior), obtemos
+\begin{equation}
 \left| \begin{matrix}
 -2 & 3 & 0  & 4 \\
 1  & 0 & -1 & 0 \\
@@ -856,8 +856,8 @@ No exemplo anterior, vimos como calcular o determinante utilizando escalonamento
 -2 & 2 & 1
 \end{matrix}
 \right|
-\] Podemos também utilizar a propriedade $(ix)$ do teorema para colocar em evidência um ``$-2$'' da primeira coluna e, em seguida, continuar com o cálculo:
-\[
+\end{equation} Podemos também utilizar a propriedade $(ix)$ do teorema para colocar em evidência um ``$-2$'' da primeira coluna e, em seguida, continuar com o cálculo:
+\begin{equation}
 \left| \begin{matrix}
 -2 & 3 & 0  & 4 \\
 1  & 0 & -1 & 0 \\
@@ -883,12 +883,12 @@ No exemplo anterior, vimos como calcular o determinante utilizando escalonamento
 0 & 0 & -15 \\
 \end{matrix}
 \right| = -2 \cdot(-15) = 30.\ \lhd
-\]
+\end{equation}
 \end{remark}
 
 \begin{example}
 Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}, utilizando as propriedades desta seção. Vamos fazer as contas de forma um pouco mais rápidas. Tente acompanhar o que está sendo feito de um passo para outro! Iniciamos aproveitando o fato de a última coluna ter muitos zeros.
-\[
+\begin{equation}
 \left| 
 \begin{matrix}
 2 & 0 & 0 & 8 & 0 \\
@@ -921,8 +921,8 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 3 & 8 & 6   \\
 \end{matrix}
 \right|.
-\] Em seguida, eliminamos o $2$ e o $3$ da primeira coluna sem trocar linhas de lugar (quanto mais trocarmos linhas, mais riscos corremos de errar o sinal):
-\[
+\end{equation} Em seguida, eliminamos o $2$ e o $3$ da primeira coluna sem trocar linhas de lugar (quanto mais trocarmos linhas, mais riscos corremos de errar o sinal):
+\begin{equation}
 \left| 
 \begin{matrix}
 2 & 0 & 0 & 8 & 0 \\
@@ -939,7 +939,7 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 0 & 29 & -9   \\
 \end{matrix}
 \right| 4 \cdot 0 = 0.
-\] Nota: antes de eliminarmos o $3$, já reparamos que o determinante vai ser nulo, graças à propriedade $(ii). \ \lhd$
+\end{equation} Nota: antes de eliminarmos o $3$, já reparamos que o determinante vai ser nulo, graças à propriedade $(ii). \ \lhd$
 \end{example}
 
 \subsection{Demonstração das propriedades do Teorema \ref*{thm:prop-det}}
@@ -949,18 +949,18 @@ Em construção.
 \section{Uma aplicação em cálculo de várias variáveis}
 
 Como já é conhecido de primeiros cursos de cálculo\footnote{Esta seção é opcional e necessita de conhecimentos básicos de Cálculo.}, é possível fazer mudanças de coordenadas em integrais unidimensionais (também conhecido como integrar por substituição): para $I \subseteq \bR$ um intervalo e $\phi : [a,b] \to I$ é diferenciável com derivada contínua e $f: I \to \bR$ é uma função contínua, então
-\[
+\begin{equation}
 \int_{\phi (a)}^{\phi (b)} f(x) \, \dd x = \int_{a}^{b} f \big(\phi (t)\big) \phi'(t) \, \dd t.
-\] Intuitivemente, pensamos na substituição $x = \phi (t) \implies \dd x = \phi' (t)\dd t$.
+\end{equation} Intuitivemente, pensamos na substituição $x = \phi (t) \implies \dd x = \phi' (t)\dd t$.
 
 Um tópico que nem sempre é abordado em cursos de Cálculo em várias variáveis é a fórmula de mudança de variáveis para integrais múltiplas, onde o determinante aparece de forma fundamental.
 
 \begin{theorem}
 Seja $U \subset \bR^2$ um conjunto aberto e $\phi: U \to \bR^n$ uma função vetorial cujas componentes são todas diferenciáveis e com derivadas parciais contínuas. Então, para qualquer $f: U \to \bR$ contínua, vale a fórmula de mudança de variáveis:
-\[
+\begin{equation}
 \iiint_{\phi (U)}  f(\vec{v}) \, \dd \vec{v} =  \iiint _{U} f\big(\varphi \big(\vec{u}\big)\big) J\varphi \big(\vec{u}\big) \, \dd\vec{u},
-\] onde $J\varphi (\vec{u})$ é o \textbf{Jacobiano}: valor absoluto do determinante da matriz formada com as derivadas parciais de $\phi = (\phi_1, \phi_2, \dots, \phi_n)$:
-\[
+\end{equation} onde $J\varphi (\vec{u})$ é o \textbf{Jacobiano}: valor absoluto do determinante da matriz formada com as derivadas parciais de $\phi = (\phi_1, \phi_2, \dots, \phi_n)$:
+\begin{equation}
 J\varphi \big(\vec{u}\big) = \left|
 \det \left( \frac{\partial \phi_i}{\partial x_j} \right) 
 \right| = \left|
@@ -974,23 +974,23 @@ J\varphi \big(\vec{u}\big) = \left|
 \frac{\partial \phi_n}{\partial x_1} & \frac{\partial \phi_n}{\partial x_2} & \cdots & \frac{\partial \phi_n}{\partial x_n} \\
 \end{bmatrix}
 \right| 
-\]
+\end{equation}
 \end{theorem}
 
 
 \subsection{Coordenadas polares}
 
 Para uma região $R$ do plano $\bR^2$, vamos verificar como fazer para escrever uma integral dupla em coordenadas polares. Sabemos que
-\[
+\begin{equation}
 \iint_R f \, \dd A = \iint_R f(x,y) \, \dd x \dd y.
-\] A função $\phi$ que muda de coordenadas polares para Cartesianas pode ser escrita como
-\[
+\end{equation} A função $\phi$ que muda de coordenadas polares para Cartesianas pode ser escrita como
+\begin{equation}
 \phi (r, \theta) = (r\cos \theta, r \sen \theta), \text{ onde } r> 0 \text{ e } \theta \in (0,2\pi).
-\] Isto é, as componentes são
-\[
+\end{equation} Isto é, as componentes são
+\begin{equation}
 x = \phi_1 (r, \theta) = r\cos \theta, \quad y = \phi_2 (r, \theta) = r \sen \theta.
-\] Assim, a matriz das derivadas parciais é
-\[
+\end{equation} Assim, a matriz das derivadas parciais é
+\begin{equation}
 \begin{bmatrix}
 \frac{\partial \phi_1}{\partial r} & \frac{\partial \phi_1}{\partial \theta} \\
 & \\
@@ -1001,27 +1001,27 @@ x = \phi_1 (r, \theta) = r\cos \theta, \quad y = \phi_2 (r, \theta) = r \sen \th
 \sen \theta & r \cos \theta \\
 \end{bmatrix}
  \text{ cujo Jacobiano é } \ J\phi = r \cos^2 \theta + r \sen^2 \theta = r. 
-\] Portanto, a fórmula de mudança de variáveis implica que, em coordenadas polares:
-\[
+\end{equation} Portanto, a fórmula de mudança de variáveis implica que, em coordenadas polares:
+\begin{equation}
 \iint_R f \, \dd A = \iint_R f(x,y) \, \dd x \dd y = \iint_{\phi^{-1}(R)} f(r\cos \theta, r\sen \theta) \, r \, \dd r \dd \theta.
-\]
+\end{equation}
 
 
 \subsection{Coordenadas esféricas}
 
 Para uma região $R$ do espaço $\bR^3$, vamos verificar como fazer para escrever uma integral tripla em coordenadas esféricas. O raciocínio segue as mesmas linhas da subseção anterior para coordenadas polares. Sabemos que
-\[
+\begin{equation}
 \iiint_R f \, \dd A = \iiint_R f(x,y, z) \, \dd x \dd y  \dd z.
-\] A função $\phi$ que muda de coordenadas esféricas para Cartesianas pode ser escrita como
-\[
+\end{equation} A função $\phi$ que muda de coordenadas esféricas para Cartesianas pode ser escrita como
+\begin{equation}
 \phi (\rho, \theta, \phi) = (\rho \sen \phi \cos \theta, \rho \sen \phi \sen \theta, \rho \cos \phi), \text{ onde } \rho> 0, \theta \in (0,2\pi) \text{ e } \phi \in (0, \pi).
-\] Isto é, as componentes são
-\[
+\end{equation} Isto é, as componentes são
+\begin{equation}
 x = \phi_1 (\rho, \theta, \phi) = \rho \sen \phi \cos \theta, \quad 
 y = \phi_2 (\rho, \theta, \phi) = \rho \sen \phi \sen \theta \quad \text{e} \quad 
 z = \phi_3 (\rho, \theta, \phi) = \rho \cos \phi.
-\] Assim, a matriz das derivadas parciais é
-\[
+\end{equation} Assim, a matriz das derivadas parciais é
+\begin{equation}
 \begin{bmatrix}
 \frac{\partial \phi_1}{\partial \rho} & \frac{\partial \phi_1}{\partial \theta} & \frac{\partial \phi_1}{\partial \phi}  \\
 & & \\
@@ -1034,7 +1034,7 @@ z = \phi_3 (\rho, \theta, \phi) = \rho \cos \phi.
 \sen \phi \sen \theta &  \rho \sen \phi \cos \theta   & \rho \cos \phi \sen \theta  \\
 \cos \phi         &            0                  &    -\rho \sen \phi  \\
 \end{bmatrix}.
-\] cujo Jacobiano é (usando, por exemplo a segunda coluna para expandir em cofatores)
+\end{equation} cujo Jacobiano é (usando, por exemplo a segunda coluna para expandir em cofatores)
 
 \begin{equation}
 \begin{split}
@@ -1057,9 +1057,9 @@ J\phi & = \left| \rho \sen \phi \sen \theta
 \end{split}
 \end{equation}
 Na última igualdade, utilizamos que $\phi \in (0,\pi)$ implica $\sen \phi > 0$, de modo que o valor absoluto está considerado corretamente. Portanto, a fórmula de mudança de variáveis implica que, em coordenadas polares:
-\[
+\begin{equation}
 \iiint_R f \, \dd A = \iint_R f(x,y, z) \, \dd x \dd y \dd z = \iiint_{\phi^{-1}(R)} f(\rho \sen \phi \cos \theta, \rho \sen \phi \sen \theta, \rho \cos \phi) \, \rho^2 \sen \phi \, \dd \rho \dd \theta \dd \phi,
-\] como é de costume em cursos de cálculo.
+\end{equation} como é de costume em cursos de cálculo.
 
 
 

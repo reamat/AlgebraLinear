@@ -19,9 +19,9 @@
 Sistemas lineares aparecem como modelos matemáticos de vários fenômenos e em várias situações. Acontece que alguns sistemas simplesmente não possuem soluções e ficamos sem saber como proceder. O \textbf{método dos mínimos quadrados} é uma técnica que nos permite, de forma aproximada, retirar alguma informação desses sistemas impossíveis. A terminologia se deve ao fato de que, como veremos, este método minimiza a soma dos quadrados dos erros obtidos na aproximação.
 
 Como sabemos, resolver o sistema linear
-\[
+\begin{equation}
 A \vec{x} = \vec{b}
-\] consiste em encontrar um vetor $\vec{x}$ que satisfaça a esta equação. Na terminologia que construimos ao longo do curso, é equivalente dizer que $\vec{b}$ pertence ao espaço coluna da matriz $A$, isto é, $\vec{b} \in \Col A$. Desta forma, não é possível resolver o sistema quando $\vec{b} \not\in \Col A$. Representamos esta situação na figura abaixo.
+\end{equation} consiste em encontrar um vetor $\vec{x}$ que satisfaça a esta equação. Na terminologia que construimos ao longo do curso, é equivalente dizer que $\vec{b}$ pertence ao espaço coluna da matriz $A$, isto é, $\vec{b} \in \Col A$. Desta forma, não é possível resolver o sistema quando $\vec{b} \not\in \Col A$. Representamos esta situação na figura abaixo.
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[width=0.8\linewidth]{\dir/Semana13/semana13-proj-col}
@@ -29,13 +29,13 @@ A \vec{x} = \vec{b}
 \end{figure}
 
 O método dos mínimos quadrados consiste em olhar para o vetor $\vec{p} = \proj_{\Col A} \vec{b}$ e resolver o sistema linear associado
-\[
+\begin{equation}
 A \vec{x} = \vec{p}.
-\] Esta solução de $A \vec{x} = \vec{p}$ é chamada de \textbf{solução de mínimos quadrados}. A ideia é (ver figura) considerar o vetor pertencente a $\Col A$ que é o ``mais próximo'' possível de $\vec{b}$ e cujo sistema linear associado possua solução. Neste contexto, estamos pensando em mais próximo no sentido 
-\[
+\end{equation} Esta solução de $A \vec{x} = \vec{p}$ é chamada de \textbf{solução de mínimos quadrados}. A ideia é (ver figura) considerar o vetor pertencente a $\Col A$ que é o ``mais próximo'' possível de $\vec{b}$ e cujo sistema linear associado possua solução. Neste contexto, estamos pensando em mais próximo no sentido 
+\begin{equation}
 \| \vec{b} - \proj_{\Col A} \vec{b} \| \le \| \vec{b} - \vec{c} \|, \text{ para qualquer } \vec{c}\, \in \Col A,
-\] isto é, no sentido de ser a projeção a melhor aproximação de $\vec{b}$ no espaço coluna de $A$. Escrevendo os vetores em coordenadas:
-\[
+\end{equation} isto é, no sentido de ser a projeção a melhor aproximação de $\vec{b}$ no espaço coluna de $A$. Escrevendo os vetores em coordenadas:
+\begin{equation}
 \vec{b} =
 \begin{bmatrix}
   b_1 \\ b_2 \\ \vdots \\ b_n
@@ -44,15 +44,15 @@ A \vec{x} = \vec{p}.
 \begin{bmatrix}
   p_1 \\ p_2 \\ \vdots \\ p_n
 \end{bmatrix},
-\] podemos definir o valor
-\[
+\end{equation} podemos definir o valor
+\begin{equation}
 \| \vec{b} - \proj_{\Col A} \vec{b} \| = \sqrt{\sum_{i=1}^n (b_i - p_i)^2}
-\] como o \textbf{erro da aproximação} ou \textbf{erro  quadrático}. Logo, como anunciado, a soma dos quadrados dos erros obtidos cada componente é o mínimo possível.
+\end{equation} como o \textbf{erro da aproximação} ou \textbf{erro  quadrático}. Logo, como anunciado, a soma dos quadrados dos erros obtidos cada componente é o mínimo possível.
 
 
 \begin{example}\label{exp:minquad1}
   Considere o sistema linear
-  \[
+  \begin{equation}
   \left\{
     \begin{array}{ll}
       x_1 + x_2 - 2x_3 = 3 \\
@@ -70,15 +70,15 @@ A \vec{x} = \vec{p}.
   \begin{bmatrix}
     3 \\ 2 \\ 0 \\ 0
   \end{bmatrix} = \vec{b}.
-  \] Este sistema é claramente impossível, pois a primeira equação é inconsistente com a última. De forma mais automática, um passo no escalonamento da matriz aumentada associada revelaria a mesma conclusão:
-  \[
+  \end{equation} Este sistema é claramente impossível, pois a primeira equação é inconsistente com a última. De forma mais automática, um passo no escalonamento da matriz aumentada associada revelaria a mesma conclusão:
+  \begin{equation}
   [\, A \ | \ \vec{b} \, ] = \begin{bmatrix}
     1 & 1 & -2 & 3 \\ 1 & 0 & -2 & 2 \\ 0 & 1 & 2 & 0 \\ -1 & -1 & 2 & 0
   \end{bmatrix}   \sim
   \begin{bmatrix}
     1 & 1 & -2 & 3 \\ 1 & 0 & -2 & 2 \\ 0 & 1 & 2 & 0 \\ 0 & 0 & 0 & 3
   \end{bmatrix} .
-  \] Vamos tentar encontrar, conforme descrito acima, uma solução de mínimos quadrados. Passos a serem realizados:
+  \end{equation} Vamos tentar encontrar, conforme descrito acima, uma solução de mínimos quadrados. Passos a serem realizados:
   \begin{itemize}
   \item Para calcular a projeção de $\vec{b}$ sobre $\Col A$, precisamos, em primeiro lugar, obter uma base ortogonal do espaço $\Col A$; isto pode ser feito pelo processo de Gram--Schmidt;
   \item Calcular a projeção $\vec{p} = \proj_{\Col A} \vec{b}$;
@@ -93,7 +93,7 @@ Suponhamos que:
 \item $\vec{b} \in \bR^m$ e
 \item o sistema $A \vec{x} = \vec{b}$ não possui solução.
 \end{itemize} A solução de mínimos quadrados é a solução de $A \vec{x} = \vec{p}$, onde $\vec{p} = \proj_{\Col A} \vec{b}$. Observamos, por outro lado, que, sendo $\vec{p}\,$ a projeção sobre o espaço coluna de $A$, o vetor $\vec{b} - \vec{p}\,$ deve ser ortogonal a todos os elementos de $\Col A$. Em particular, se escrevermos $A$ em termos de suas colunas
-\[
+\begin{equation}
 A =
 \begin{bmatrix}
   | & | &   & | \\
@@ -106,11 +106,11 @@ A =
     \ & \vdots     &  \ \\
     \ \text{---} & \vec{a}_n  & \text{---}\ 
   \end{bmatrix}\right)
-\] devemos ter
-\[
+\end{equation} devemos ter
+\begin{equation}
 \vec{a}_j \cdot \big(\vec{b} - \vec{p}\big) = 0, \text{ para todo } j  \ \  \iff \ \
 A^T (\vec{b} - \vec{p}) = \vec{0} \ \ \iff \ \ A^T \vec{b} = A^T \vec{p} = A^T A\vec{x}.
-\] Esta última linha é válida porque o produto escalar $\vec{a}_j \cdot \big(\vec{b} - \vec{p}\big)$ é justamente a entrada $j$ do vetor obtido ao multiplicar $A^T(\vec{b} - \vec{p})$. Além disso, $A \vec{x} = \vec{p}.$
+\end{equation} Esta última linha é válida porque o produto escalar $\vec{a}_j \cdot \big(\vec{b} - \vec{p}\big)$ é justamente a entrada $j$ do vetor obtido ao multiplicar $A^T(\vec{b} - \vec{p})$. Além disso, $A \vec{x} = \vec{p}.$
 
 Concluimos, desta forma, que, se $\vec{x}$ é uma solução de mínimos quadrados, ou seja, se $A \vec{x} = \vec{p}$, então necessariamente
 \begin{equation}\label{minquad}
@@ -125,7 +125,7 @@ Tudo isto implica que podemos utilizar a equação \eqref{minquad} para encontra
 
 \begin{example}[De volta ao Exemplo \ref{exp:minquad1}]\label{exp:minquad2}
   Calculamos
-  \[
+  \begin{equation}
   A^T A =
   \begin{bmatrix}
     1 & 1 & 0 & -1 \\ 1 & 0 & 1 & -1 \\ -2 & -2 & 2 & 2
@@ -136,8 +136,8 @@ Tudo isto implica que podemos utilizar a equação \eqref{minquad} para encontra
   \begin{bmatrix}
     3 & 2 & -6 \\ 2 & 3 & -2 \\ -6 & -2 & 16
   \end{bmatrix}
-  \] e
-  \[
+  \end{equation} e
+  \begin{equation}
   A^T \vec{b} =
   \begin{bmatrix}
     1 & 1 & 0 & -1 \\ 1 & 0 & 1 & -1 \\ -2 & -2 & 2 & 2
@@ -148,8 +148,8 @@ Tudo isto implica que podemos utilizar a equação \eqref{minquad} para encontra
   \begin{bmatrix}
     5 \\ 3 \\ -10
   \end{bmatrix}
-  \] Para resolvermos o sistema $A^TA\vec{x} = A^T\vec{b}$, vamos escalonar a matriz aumentada associada:
-  \[
+  \end{equation} Para resolvermos o sistema $A^TA\vec{x} = A^T\vec{b}$, vamos escalonar a matriz aumentada associada:
+  \begin{equation}
   \begin{bmatrix}
     3 & 2 & -6 & 5 \\
     2 & 3 & -2 & 3 \\
@@ -165,8 +165,8 @@ Tudo isto implica que podemos utilizar a equação \eqref{minquad} para encontra
     0 & 5 &  6 & -1 \\
     0 & 0 &  4 & 1
   \end{bmatrix}
-  \] Logo,
-  \[
+  \end{equation} Logo,
+  \begin{equation}
   \left\{
     \begin{array}{ll}
       3 x_1 + 2 x_2 - 6 x_3 = 5 \\
@@ -174,18 +174,18 @@ Tudo isto implica que podemos utilizar a equação \eqref{minquad} para encontra
       4x_3 = 1
     \end{array}
   \right..
-  \] Assim,
-  \[
+  \end{equation} Assim,
+  \begin{equation}
   x_3 = \frac{1}{4} \implies 5x_2 + 6 \cdot \frac{1}{4} = -1 \implies x_2 = -\frac{1}{2} \implies 3 x_1 - 1 - \frac{3}{2}  = 5 \implies x_1 = \frac{3}{2}.
-  \] Portanto, uma solução de mínimos quadrados é
-  \[
+  \end{equation} Portanto, uma solução de mínimos quadrados é
+  \begin{equation}
   \begin{bmatrix}
     x_1 \\ x_2 \\ x_3
   \end{bmatrix} =
   \begin{bmatrix}
     3/2 \\ -1/2 \\ 1/4
   \end{bmatrix}.
-  \] Observe como isto é muito menos trabalhoso do que o método que havíamos esquematizado no Exemplo \ref{exp:minquad1}$. \ \lhd$
+  \end{equation} Observe como isto é muito menos trabalhoso do que o método que havíamos esquematizado no Exemplo \ref{exp:minquad1}$. \ \lhd$
 \end{example}
 
 \begin{exercise}
@@ -197,15 +197,15 @@ Tudo isto implica que podemos utilizar a equação \eqref{minquad} para encontra
 \end{remark}
 
 Nossa aproximação linear foi encontrada de modo a minimizar o erro quadrático. Para encontrar o erro, deveríamos calcular
-\[
+\begin{equation}
 \| \vec{b} - \proj_{\vec{\Col A}} \vec{b} \|.
-\] No entanto, note que não precisamos calcular a projeção. Observando que a solução de mínimos quadrados satisfaz $A \vec{x} = \proj_{\vec{\Col A}} \vec{b}$, podemos calcular o erro por
-\[
+\end{equation} No entanto, note que não precisamos calcular a projeção. Observando que a solução de mínimos quadrados satisfaz $A \vec{x} = \proj_{\vec{\Col A}} \vec{b}$, podemos calcular o erro por
+\begin{equation}
 \text{erro } = \| \vec{b} - A \vec{x} \|,
-\] onde $\vec{x}$ é a solução de mínimos quadrados.
+\end{equation} onde $\vec{x}$ é a solução de mínimos quadrados.
 
 No Exemplo \ref{exp:minquad2} acima, podemos calcular o erro desta forma. De fato,
-\[
+\begin{equation}
 A \vec{x} = 
 \begin{bmatrix}
   1 & 1 & -2 \\ 
@@ -223,10 +223,10 @@ A \vec{x} =
 \begin{bmatrix}
   5/2 \\ 1 \\ 0 \\ 1/2
 \end{bmatrix}
-\]
-\[
+\end{equation}
+\begin{equation}
 \implies \text{erro } = \| \vec{b} - A \vec{x} \| = \sqrt{\frac{25}{4} + 1 + \frac{1}{4}} = \frac{\sqrt{30}}{2} \simeq 2,74.
-\]
+\end{equation}
 
 
 % \newpage
@@ -236,9 +236,9 @@ A \vec{x} =
 \section{Regressão Linear Simples}
 
 Vamos apresentar uma aplicação de algumas das técnicas do método de mínimos quadrados à Estatística ou Econometria. Uma \textbf{regressão linear simples} é uma equação, tipicamente da forma
-\[
+\begin{equation}
 y = a + b x,
-\] para estimar os valores $(x,y)$ apenas conhecendo alguns valores específicos $(x_1, y_1), (x_2, y_2), \dots,$ $(x_k, y_k)$. A ideia é tentar capturar como que mudanças na variável independente $x$ afetam a variável dependente $y$ (neste caso, supondo que esta dependência é linear).
+\end{equation} para estimar os valores $(x,y)$ apenas conhecendo alguns valores específicos $(x_1, y_1), (x_2, y_2), \dots,$ $(x_k, y_k)$. A ideia é tentar capturar como que mudanças na variável independente $x$ afetam a variável dependente $y$ (neste caso, supondo que esta dependência é linear).
 
 \begin{example}\footnote{Exemplo adaptado de \url{https://onlinecourses.science.psu.edu/stat501/node/257}}\label{exp:idade}
 Com o intuito de analisar se é razoável supor que há um relação linear entre a idade de um motorista e quão longe ele consegue ver, uma empresa (Last Resource, Inc., Bellefonte, PA) coletou dados de 30 motoristas. Para simplificar as nossas contas, vamos listar abaixo \textit{apenas alguns} destes dados.
@@ -255,10 +255,10 @@ Com o intuito de analisar se é razoável supor que há um relação linear entr
       \hline
   \end{tabular}
 \end{center} Podemos pensar em $y$ como a distância e em $x$ como a idade. Gostaríamos de achar uma relação linear da forma
-\[
+\begin{equation}
   y = a + b x.
-\] Desta forma, os dados obtidos implicam que  
-\[
+\end{equation} Desta forma, os dados obtidos implicam que  
+\begin{equation}
 \left\{
     \begin{array}{ll}
       b + 20 a = 590 \\
@@ -281,10 +281,10 @@ Com o intuito de analisar se é razoável supor que há um relação linear entr
   \begin{bmatrix}
     590 \\ 410 \\ 460 \\ 380 \\ 350
   \end{bmatrix}
-  \] Ora, dificilmente um sistema linear com duas incógnitas e cinco equações terá solução (só terá solução se todos os pontos do conjunto de dados estiverem perfeitamente alinhados em uma reta!). Consequentemente, vamos procurar por uma solução de mínimos quadrados. Isto é \textbf{regressão linear simpes}.
+  \end{equation} Ora, dificilmente um sistema linear com duas incógnitas e cinco equações terá solução (só terá solução se todos os pontos do conjunto de dados estiverem perfeitamente alinhados em uma reta!). Consequentemente, vamos procurar por uma solução de mínimos quadrados. Isto é \textbf{regressão linear simpes}.
 
   Denotando
-  \[
+  \begin{equation}
   A =
   \begin{bmatrix}
     1 & 20 \\
@@ -297,8 +297,8 @@ Com o intuito de analisar se é razoável supor que há um relação linear entr
   \begin{bmatrix}
     590 \\ 410 \\ 460 \\ 380 \\ 350
   \end{bmatrix}
-  \] precisamos calcular
-  \[
+  \end{equation} precisamos calcular
+  \begin{equation}
   A^T A =
   \begin{bmatrix}
     1 & 1 & 1 & 1 & 1 \\
@@ -315,8 +315,8 @@ Com o intuito de analisar se é razoável supor que há um relação linear entr
     5    & 208 \\
     208  & 9832  \\
   \end{bmatrix}
-  \] e
-  \[
+  \end{equation} e
+  \begin{equation}
   A^T \vec{b} =
   \begin{bmatrix}
     1 & 1 & 1 & 1 & 1 \\
@@ -328,8 +328,8 @@ Com o intuito de analisar se é razoável supor que há um relação linear entr
   \begin{bmatrix}
     2190 \\ 85500
   \end{bmatrix}.
-  \] Em seguida, a matriz associada aumentada pode ser reduzida por escalonamento:
-  \[
+  \end{equation} Em seguida, a matriz associada aumentada pode ser reduzida por escalonamento:
+  \begin{equation}
   [\, A^TA \ | \ \vec{b} \, ] =
   \begin{bmatrix}
     5    & 208 & 2190 \\
@@ -345,13 +345,13 @@ Com o intuito de analisar se é razoável supor que há um relação linear entr
       b \simeq -4.75
     \end{array}
   \right..
-  \] Os números são feios, mas as contas feitas foram as que sempre fizemos ao escalonar uma matriz até sua forma escalonada reduzida.
+  \end{equation} Os números são feios, mas as contas feitas foram as que sempre fizemos ao escalonar uma matriz até sua forma escalonada reduzida.
 
   A conclusão é que a reta de mínimos quadrados que melhor aproxima os nossos dados é a reta
-  \[
+  \begin{equation}
   y = a + b x = 635.7 - 4.75 x.
-  \] O erro de mínimos quadrados nesta aproximação (ou norma do resíduo) pode ser calculado como
-  \[
+  \end{equation} O erro de mínimos quadrados nesta aproximação (ou norma do resíduo) pode ser calculado como
+  \begin{equation}
   A \vec{x} = \begin{bmatrix}
     1 & 20 \\
     1 & 32 \\
@@ -370,7 +370,7 @@ Com o intuito de analisar se é razoável supor que há um relação linear entr
     868.45 \\
     949.2 \\
   \end{bmatrix} \simeq \proj_{\Col A} \vec{b} \implies \text{ erro } = \| \vec{b} - A\vec{x} \| \simeq 947.3
-  \]
+  \end{equation}
   \begin{figure}[h!]
     \begin{center}
       \includegraphics[width=1\linewidth]{\dir/Semana13/semana13-idade}
@@ -382,10 +382,10 @@ Com o intuito de analisar se é razoável supor que há um relação linear entr
 
 
 De uma maneira geral, para encontrar uma \textbf{reta de melhor ajuste} a uma quantidade de pontos (dados coletados de algum problema)
-\[
+\begin{equation}
 (x_1, y_1), \ (x_2, y_2), \ \dots, (x_k, y_k),
-\] devemos procurar pela solução $(a,b)$ de mínimos quadrados do sistema linear
-\[
+\end{equation} devemos procurar pela solução $(a,b)$ de mínimos quadrados do sistema linear
+\begin{equation}
 \left\{
   \begin{array}{rl}
     a + b x_1 &\!\!\!\!\!= y_1  \\
@@ -406,14 +406,14 @@ De uma maneira geral, para encontrar uma \textbf{reta de melhor ajuste} a uma qu
 \begin{bmatrix}
   y_1 \\ y_2 \\ \vdots \\ y_k
 \end{bmatrix}.
-\] Vejamos um outro exemplo:
+\end{equation} Vejamos um outro exemplo:
 
 \begin{example}
   Encontrar a reta que melhor se ajusta aos pontos do plano
-  \[
+  \begin{equation}
   (1,2), \ \ (2,3), \ \ (2,4), \ \ (3,2), \ \ (4,3), \ \ (4,4), \ \ (5,3), \ \ (5,5), \ \ (6,4).
-  \] Como vimos acima, podemos considerar
-  \[
+  \end{equation} Como vimos acima, podemos considerar
+  \begin{equation}
   A =
   \begin{bmatrix}
     1 & 1 \\
@@ -430,8 +430,8 @@ De uma maneira geral, para encontrar uma \textbf{reta de melhor ajuste} a uma qu
   \begin{bmatrix}
     2\\3\\4\\2\\3\\4\\3\\5\\4
   \end{bmatrix}
-  \] Assim,
-  \[
+  \end{equation} Assim,
+  \begin{equation}
   A^T A =
   \begin{bmatrix}
     9  & 32  \\
@@ -441,10 +441,10 @@ De uma maneira geral, para encontrar uma \textbf{reta de melhor ajuste} a uma qu
   \begin{bmatrix}
     30\\114
   \end{bmatrix}.
-  \] A solução de mínimos quadrados, que é a solução de $A^T A \vec{x} = A^T\vec{b}$, é dada por
-  \[
+  \end{equation} A solução de mínimos quadrados, que é a solução de $A^T A \vec{x} = A^T\vec{b}$, é dada por
+  \begin{equation}
   b = 54/25 = 2.16, \\ a = 33/100 = 0.33.
-  \] A reta procurada é portanto $y = 0.33 x + 2.16$.
+  \end{equation} A reta procurada é portanto $y = 0.33 x + 2.16$.
   \begin{figure}[h!]
     \begin{center}
       \includegraphics[width=0.5\linewidth]{\dir/Semana13/semana13-reta}
@@ -457,13 +457,13 @@ De uma maneira geral, para encontrar uma \textbf{reta de melhor ajuste} a uma qu
 
 
 Podemos também procurar (em contraste com a subseção anterior) por funções não lineares que se ajustem a um conjunto de pontos. Por exemplo, dado um certo conjunto de pontos
-\[
+\begin{equation}
 (x_1, y_1), \ (x_2, y_2), \ \dots, (x_k, y_k),
-\] vamos procurar por uma parábola
-\[
+\end{equation} vamos procurar por uma parábola
+\begin{equation}
 y = a + bx + cx^2
-\] que melhor se ajuste a este conjunto de pontos, no sentido de que a soma dos quadrados dos erros seja a menor possível. Isto corrensponde a procurar pela solução $(a,b, c)$ de mínimos quadrados do seguinte sistema linear
-\[
+\end{equation} que melhor se ajuste a este conjunto de pontos, no sentido de que a soma dos quadrados dos erros seja a menor possível. Isto corrensponde a procurar pela solução $(a,b, c)$ de mínimos quadrados do seguinte sistema linear
+\begin{equation}
 \left\{
   \begin{array}{rl}
     a + b x_1 + c x_1^2 &\!\!\!\!\!= y_1  \\
@@ -484,14 +484,14 @@ y = a + bx + cx^2
 \begin{bmatrix}
   y_1 \\ y_2 \\ \vdots \\ y_k
 \end{bmatrix}.
-\] Vejamos como ficaria a parábola que se ajusta aos dados do Exemplo \ref{exp:idade}:
+\end{equation} Vejamos como ficaria a parábola que se ajusta aos dados do Exemplo \ref{exp:idade}:
 
 \begin{example}
   Nossos pontos no Exemplo \ref{exp:idade} são
-  \[
+  \begin{equation}
   (20, 590), \ (32, 410), \ (41, 460), \ (49, 380), \ (66, 350).
-  \] Para encontrar a parábola de melhor ajuste como acima, devemos procurar pela solução de mínimos quadrados do sistema
-  \[
+  \end{equation} Para encontrar a parábola de melhor ajuste como acima, devemos procurar pela solução de mínimos quadrados do sistema
+  \begin{equation}
   \begin{bmatrix}
     1 & 20 & 400 \\
     1 & 32 & 1024 \\
@@ -505,8 +505,8 @@ y = a + bx + cx^2
   \begin{bmatrix}
     590 \\ 410 \\ 460 \\ 380 \\ 350
   \end{bmatrix} \ \leftrightsquigarrow \ A \vec{x} = \vec{b}.
-  \] Calculamos (com o auxílio de uma calculadora)
-  \[
+  \end{equation} Calculamos (com o auxílio de uma calculadora)
+  \begin{equation}
   A^T A =
   \begin{bmatrix}
     1 & 1 & 1 & 1 & 1 \\
@@ -525,8 +525,8 @@ y = a + bx + cx^2
     208 & 9862 & 514834 \\
     9862 & 514834 & 28773874 \\
   \end{bmatrix},
-  \]
-  \[
+  \end{equation}
+  \begin{equation}
   A^T A =
   \begin{bmatrix}
     1 & 1 & 1 & 1 & 1 \\
@@ -539,8 +539,8 @@ y = a + bx + cx^2
   \begin{bmatrix}
     2190 \\ 85500 \\ 3866080
   \end{bmatrix}
-  \] e resolvemos (escalonando, por exemplo, com o auxílio de um computador)
-  \[
+  \end{equation} e resolvemos (escalonando, por exemplo, com o auxílio de um computador)
+  \begin{equation}
   \begin{bmatrix}
     5 & 208 & 9862 & 2190 \\
     208 & 9862 & 514834 & 85500 \\
@@ -551,9 +551,9 @@ y = a + bx + cx^2
     0 & 1 & 0 & -1505841055/105110139 \\
     0 & 0 & 1 & 11779375/105110139 \\
   \end{bmatrix}.
-  \] 
+  \end{equation} 
   Logo, aproximando estas frações, obtemos
-  \[
+  \begin{equation}
   \left\{
     \begin{array}{ll}
       a \simeq 812.934 \\
@@ -561,16 +561,16 @@ y = a + bx + cx^2
       c \simeq  0.112 \\
     \end{array}
   \right.
-  \] 
+  \end{equation} 
   \begin{figure}[h!]
   	\begin{center}
   		\includegraphics[width=1\linewidth]{\dir/Semana13/semana13-idade-parabola}
   	\end{center}
   \end{figure}
   e a parábola desejada é, aproximadamente
-  \[
+  \begin{equation}
   y = 812.934 - 14.326 x + 0.112 x^2.
-  \]
+  \end{equation}
   
 
   \noindent Observamos que, apesar de o erro quadrático ser provavelmente menor neste exemplo, esta parábola se torna crescente a partir de um certo momento, fazendo com que o modelo não seja tão razoável para idades maiores. Por exemplo, é pouco provável que (na média), pessoas com 95 anos vejam a uma distância maior do que pessoas de 65 anos, como sugere a parábola acima.
@@ -583,13 +583,13 @@ y = a + bx + cx^2
 Uma \textbf{regressão linear múltipla} é o problema análogo à regressão linear simples no caso em que a variável dependente pode depender de mais fatores independentes. Tipicamente, queremos encontrar uma equação afim que melhor se ajusta a alguns dados conhecidos.
 
 No caso especial em que $y$ depende de apenas outros dois fatores, escreveremos
-\[
+\begin{equation}
 z = a + b x + c y,
-\] que, geometricamente, representa um plano no espaço tridimensional $\bR^3$. Seja agora uma conjunto de dados:
-\[
+\end{equation} que, geometricamente, representa um plano no espaço tridimensional $\bR^3$. Seja agora uma conjunto de dados:
+\begin{equation}
 (x_1, y_1, z_1), \ (x_1, y_1, z_1), \dots, (x_k, y_k, z_k).
-\] Queremos encontrar coeficientes $(a,b,c)$ que satisfaçam:
-\[
+\end{equation} Queremos encontrar coeficientes $(a,b,c)$ que satisfaçam:
+\begin{equation}
 \left\{
   \begin{array}{c}
     a + b x_1 + c y_1 = z_1 \\
@@ -610,7 +610,7 @@ z = a + b x + c y,
 \begin{bmatrix}
   z_1 \\ z_2 \\ \vdots \\ z_k
 \end{bmatrix}.
-\] Quanto maior o número de dados, mais provável de o sistema ser impossível (podemos fazer a analogia geométrica de que por três pontos não colineares no espaço passa um único plano; se aumentarmos o número de pontos, mais difícil que haja um plano contendo todos eles). Por isto, procuramos por uma solução de mínimos quadrados.
+\end{equation} Quanto maior o número de dados, mais provável de o sistema ser impossível (podemos fazer a analogia geométrica de que por três pontos não colineares no espaço passa um único plano; se aumentarmos o número de pontos, mais difícil que haja um plano contendo todos eles). Por isto, procuramos por uma solução de mínimos quadrados.
 
 
 
@@ -630,7 +630,7 @@ z = a + b x + c y,
       \hline
     \end{tabular}
   \end{center} Queremos encontrar uma solução de mínimos quadrados para o sistema linear
-  \[
+  \begin{equation}
   \begin{bmatrix}
     1 & 155 & 165 \\
     1 & 155 & 160 \\
@@ -650,8 +650,8 @@ z = a + b x + c y,
     173  \\
     183  \\
   \end{bmatrix} \ \leftrightsquigarrow \ A \vec{x} = \vec{b}.
-  \] Calculamos
-  \[
+  \end{equation} Calculamos
+  \begin{equation}
   A^TA =
   \begin{bmatrix}
     1 & 1 & 1 & 1 & 1 & 1 \\
@@ -671,8 +671,8 @@ z = a + b x + c y,
     976 & 158968 & 170553 \\
     1047 & 170553 & 183221 \\
   \end{bmatrix}
-  \] e
-  \[
+  \end{equation} e
+  \begin{equation}
   A^T \vec{b} =
   \begin{bmatrix}
     1 & 1 & 1 & 1 & 1 & 1 \\
@@ -692,8 +692,8 @@ z = a + b x + c y,
     163689  \\
     175803 \\
   \end{bmatrix}.
-  \] Por escalonamento,
-  \[
+  \end{equation} Por escalonamento,
+  \begin{equation}
   \begin{bmatrix}
     6    & 976    & 1047   & 1005     \\
     976  & 158968 & 170553 & 163689   \\
@@ -711,10 +711,10 @@ z = a + b x + c y,
       c \simeq  0.783  \\
     \end{array}
   \right.
-  \] A equação de melhor ajuste procurada é, portanto, aproximadamente,
-  \[
+  \end{equation} A equação de melhor ajuste procurada é, portanto, aproximadamente,
+  \begin{equation}
   z \simeq 14.781 + 0.099 x + 0.783 y.
-  \] Tente calcular sua altura $z$ a partir da altura de sua mãe $x$ e de seu pai $y$. O teste deve funcionar melhor para mulheres! Além disso, a aproximação linear deve ser melhor utilizando mais dados nos cálculos.
+  \end{equation} Tente calcular sua altura $z$ a partir da altura de sua mãe $x$ e de seu pai $y$. O teste deve funcionar melhor para mulheres! Além disso, a aproximação linear deve ser melhor utilizando mais dados nos cálculos.
   \begin{figure}[h!]
     \begin{center}
       \includegraphics[width=1\linewidth]{\dir/Semana13/semana13-alturas}
@@ -731,23 +731,23 @@ Os exemplos que virão a seguir nos mostram situações em que há uma grande va
 
 Para isso, a fatoração QR oferece uma solução alternativa em mínimos quadrados para um sistema linear $A\vec{x}= \vec{b}$:
 se $A=QR$, então 
-\[
+\begin{equation}
 A^T=R^T Q^T
 \ \ \mbox{ que implica em } \ \
 A^T A= R^T Q^T Q R= R^T R,
-\]
+\end{equation}
 onde usamos o fato de que $Q^{-1}=Q^T$.
 Assim as equações normais $A^T A \vec{x} = A^T \vec{b}$ se reduzem a 
-$$ R^T R \vec{x} = R^T Q^T \vec{b}.$$
+\begin{equation} R^T R \vec{x} = R^T Q^T \vec{b}.\end{equation}
 Ainda, como $R$ é invertível podemos eliminar (cancelar) $R^T$ na equação acima, %ficando com a seguinte expressão para a solução em mínimos quadrados
 obtendo o seguinte:
 \begin{theorem}
 	Se $A=QR$ com $Q$ ortogonal e $R$ triangular superior invertível, então 
 	a solução em mínimos quadrados do sistema $A\vec{x}= \vec{b}$ é única e dada pela solução do sistema
-	$$  R \vec{x} =  Q^T \vec{b}.$$
+	\begin{equation}  R \vec{x} =  Q^T \vec{b}.\end{equation}
 \end{theorem}
 
-Note que o fato de $R$ ser triangular superior torna a resolução do sistema acima pouco custosa do ponto de vista computacional. Alternativamente, temos uma expressão explícita para solução em mínimos quadrados: $$   \vec{x} = R^{-1} Q^T \vec{b}.$$
+Note que o fato de $R$ ser triangular superior torna a resolução do sistema acima pouco custosa do ponto de vista computacional. Alternativamente, temos uma expressão explícita para solução em mínimos quadrados: \begin{equation}   \vec{x} = R^{-1} Q^T \vec{b}.\end{equation}
 
 É importante notar que existem algoritmos para fatoração QR que são \textit{numéricamente estáveis}, ou seja pouco suscetiveis a erros de aproximação ou arredondamento. Tais algorimos são diferentes do processo de Gram Schmidt usual.
 

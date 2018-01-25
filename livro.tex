@@ -47,6 +47,7 @@
 
 \usepackage{amsthm}    %%Enhanced version of \newtheorem command for defining theorem-like environments
 
+
 \usepackage{amssymb}   %%Provides an extended symbol collection (includes amsfonts). For example, \barwedge, \boxdot, \boxminus, %%\boxplus, \boxtimes, \Cap, \Cup (and many more), the arrow \leadsto, and some other symbols such as \Box and \Diamond.
 
 \usepackage{latexsym}  %%makes few additional characters available: \Box \Join \Box \Diamond \leadsto \sqsubset \sqsupset \lhd \unlhd %%\rhd \unrhd
@@ -83,14 +84,14 @@
 
 
 %font
+\ifispdf
 \usepackage{tgbonum}
-
+\fi
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%Theorem styles, numbering%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 \theoremstyle{plain}
 \newtheorem{theorem}{Teorema}              %%section, chapter, etc
@@ -110,7 +111,6 @@
 \newtheorem{example}[theorem]{Exemplo}
 \newtheorem{definition}[theorem]{Definição}
 \newtheorem{exercise}{Exercício}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%New Commands%%%%%%%%%%%%%%%%%
@@ -260,6 +260,22 @@
 \end{center}
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HTML 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifishtml
+\renewenvironment{proof}
+{{\bfseries\upshape Demonstração.}}
+{
+  \begin{flushright}
+    $\blacksquare$
+  \end{flushright}
+}
+\fi
+
+\usepackage{minitoc}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

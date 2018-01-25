@@ -19,9 +19,9 @@
 Associados com uma transformação linear $T$ estão os seus autovetores, que, como veremos, são direções especiais para esta transformação $T$. Por esta razão, são também conhecidos como vetores próprios ou vetores característicos de $T$. Aparecem em muitas aplicações, pois nos ajudam a entender mais profundamente a transformação linear $T$.
 
 Dada uma matriz \textit{quadrada} $A$ de ordem $n \times n$, com entradas reais, nós dizemos que um número $\lambda \in \bR$ é um \textbf{autovalor} de $A$ quando existe um vetor \textit{não nulo} $\vec{v}$ tal que
-\[
+\begin{equation}
 A \vec{v} = \lambda \vec{v}.
-\] Neste caso, $\vec{v}$ é dito um \textbf{autovetor} de $A$ associado a $\lambda$.
+\end{equation} Neste caso, $\vec{v}$ é dito um \textbf{autovetor} de $A$ associado a $\lambda$.
 
 Geometricamente, $\vec{v}$ é um vetor que não muda de direção quando aplicamos a matriz $A$. No entanto, quando permitimos que $\lambda$ seja um número complexo, esta interpretação geométrica é perdida.
 
@@ -31,29 +31,29 @@ Geometricamente, $\vec{v}$ é um vetor que não muda de direção quando aplicam
 
 \begin{example}
 	Considere a matriz
-	\[
+	\begin{equation}
 	A={\begin{bmatrix}2&0&0\\0&3&4\\0&4&9\end{bmatrix}}.
-	\] Temos que $\lambda_1 = 2$ é um autovalor desta matriz, porque o vetor
-	\[
+	\end{equation} Temos que $\lambda_1 = 2$ é um autovalor desta matriz, porque o vetor
+	\begin{equation}
 	\vec{v}_1 =
 	{\begin{bmatrix}1\\0\\0\end{bmatrix}} \quad \text{ satisfaz } \quad {\begin{bmatrix}2&0&0\\0&3&4\\0&4&9\end{bmatrix}} {\begin{bmatrix}1\\0\\0\end{bmatrix}} = 2 \cdot {\begin{bmatrix}1\\0\\0\end{bmatrix}}.
-	\] Assim, podemos dizer que $\vec{v}_1$ é um autovetor de $A$ associado ao autovalor $2$. Colocando de outra maneira, podemos dizer também que
-	\[
+	\end{equation} Assim, podemos dizer que $\vec{v}_1$ é um autovetor de $A$ associado ao autovalor $2$. Colocando de outra maneira, podemos dizer também que
+	\begin{equation}
 	\vec{v}_2 =
 	{\begin{bmatrix}0\\1\\2\end{bmatrix}} \quad \text{ é um autovetor de $A$, pois } \quad {\begin{bmatrix}2&0&0\\0&3&4\\0&4&9\end{bmatrix}} {\begin{bmatrix}0\\1\\2\end{bmatrix}} = {\begin{bmatrix}0\\11\\22\end{bmatrix}} = 11 \cdot {\begin{bmatrix}0\\1\\2\end{bmatrix}}.
-	\] Neste caso, concluimos também que $11$ é um autovalor de $A. \ \lhd$
+	\end{equation} Neste caso, concluimos também que $11$ é um autovalor de $A. \ \lhd$
 \end{example}
 
 Observamos que, se $\vec{v}$ for um autovetor de uma matriz $A$ associado a um autovalor $\lambda$, então qualquer múltiplo escalar $\alpha \vec{v}$ também é um autovetor de $A$ associado a $\lambda$:
-\[
+\begin{equation}
 A (\alpha \vec{v}) = \alpha A \vec{v} = \alpha \lambda \vec{v} = \lambda (\alpha \vec{v}).
-\] Da mesma maneira, se dois vetores $\vec{v}$ e $\vec{w}$ forem autovetores associados a um mesmo autovalor $\lambda$, então a soma $\vec{v} + \vec{w}$ também é um autovetor associado a $\lambda$:
-\[
+\end{equation} Da mesma maneira, se dois vetores $\vec{v}$ e $\vec{w}$ forem autovetores associados a um mesmo autovalor $\lambda$, então a soma $\vec{v} + \vec{w}$ também é um autovetor associado a $\lambda$:
+\begin{equation}
 A (\vec{v} + \vec{w}) = A \vec{v} + A \vec{w} =  \lambda \vec{v} + \lambda \vec{w} = \lambda (\vec{v} + \vec{v}).
-\] Logo, concluimos que o conjunto de todos os autovetores associados a um autovalor $\lambda$, união com o vetor nulo, forma um subespaço vetorial de $\bR^n$, denominado \textbf{autoespaço} associado ao autovalor $\lambda$:
-\[
+\end{equation} Logo, concluimos que o conjunto de todos os autovetores associados a um autovalor $\lambda$, união com o vetor nulo, forma um subespaço vetorial de $\bR^n$, denominado \textbf{autoespaço} associado ao autovalor $\lambda$:
+\begin{equation}
 \text{autoespaço associado a } \lambda = \big\{ \vec{v} \in \bR^n \, | \, \vec{v} \text{ é autovetor associado a } \lambda \big\} \cup \{\, \vec{0}\, \}.
-\]
+\end{equation}
 
 Vamos analisar uma forma de encontrar os autovalores de uma matriz $A$ de forma sistemática. Temos as seguintes equivalências:
 \begin{align*}
@@ -65,14 +65,14 @@ Vamos analisar uma forma de encontrar os autovalores de uma matriz $A$ de forma 
 \iff & \det (A - \lambda I) = 0.
 \end{align*}
 Esta última equação pode ser utilizada para encontrar os autovalores: são as raízes do \textbf{polinômio característico}
-\[
+\begin{equation}
 p(\lambda) = \det (A - \lambda I).
-\] A equação $\det (A - \lambda I) = 0$ é também chamada de \textbf{equação característica}. Observe, pelas propriedades dos determinantes, que $p$ é de fato um polinômio e tem grau $n$, que é igual a ordem da matriz $A$. É assim consequência do Teorema Fundamental da Álgebra que existem no máximo $n$ autovalores reais (já que um polinômio de grau $n\ge 1$ possui exatamente $n$ raízes complexas).
+\end{equation} A equação $\det (A - \lambda I) = 0$ é também chamada de \textbf{equação característica}. Observe, pelas propriedades dos determinantes, que $p$ é de fato um polinômio e tem grau $n$, que é igual a ordem da matriz $A$. É assim consequência do Teorema Fundamental da Álgebra que existem no máximo $n$ autovalores reais (já que um polinômio de grau $n\ge 1$ possui exatamente $n$ raízes complexas).
 
 
 \begin{example}\label{2x2}
 	Vamos encontrar os autovalores de
-	\[
+	\begin{equation}
 	A =
 	\left[
 	\begin{array}{cc}
@@ -80,24 +80,24 @@ p(\lambda) = \det (A - \lambda I).
 	1 & 2 \\
 	\end{array}
 	\right].
-	\] Precisamos calcular
-	\[
+	\end{equation} Precisamos calcular
+	\begin{equation}
 	\det\left[
 	\begin{array}{cc}
 	4-\lambda & 3 \\
 	1 & 2-\lambda \\
 	\end{array}
 	\right] = (4-\lambda)(2-\lambda) - 3 \cdot 1 = \lambda^2 -6\lambda + 5,
-	\] que tem raízes
-	\[
+	\end{equation} que tem raízes
+	\begin{equation}
 	\lambda = \frac{6 \pm \sqrt{36 - 20}}{2} = 3 \pm 2.
-	\] Portanto, $A$ tem dois autovalores reais: $\lambda_1 = 1$ e $\lambda_2 = 5$.
+	\end{equation} Portanto, $A$ tem dois autovalores reais: $\lambda_1 = 1$ e $\lambda_2 = 5$.
 \end{example}
 
 
 \begin{example}\label{3x3}
 	Encontrar os autovalores de
-	\[
+	\begin{equation}
 	A =
 	\left[
 	\begin{array}{ccc}
@@ -106,7 +106,7 @@ p(\lambda) = \det (A - \lambda I).
 	-4 & -4 & -11 \\
 	\end{array}
 	\right].
-	\] Precisamos calcular
+	\end{equation} Precisamos calcular
         \begin{align*}
 	p(\lambda) = \det (A-\lambda I) & = \det
 	\left[
@@ -141,21 +141,21 @@ p(\lambda) = \det (A - \lambda I).
 	& = -\lambda^3 - 5 \lambda^2 - 3 \lambda + 9.
           \end{align*}
           As possíveis raízes racionais desse polinômio só podem ser os divisores do termo independente acima: $\pm 1, \pm 3, \pm9$. Verificamos que $1$ é raiz. Logo, dividindo $p(\lambda)$ por $\lambda - 1$:
-	\[
+	\begin{equation}
 	-\lambda^3 - 5 \lambda^2 - 3 \lambda + 9 = -(\lambda - 1)(\lambda^2 + 6\lambda + 9) = -(\lambda - 1)(\lambda + 3)^2.
-	\] Portanto, os autovalores de $A$ são $\lambda_1 = 1$ e $\lambda_2 = 3$. Observamos que $3$ é uma raiz de multiplicidade $2$ do polinômio característico. $\, \lhd$
+	\end{equation} Portanto, os autovalores de $A$ são $\lambda_1 = 1$ e $\lambda_2 = 3$. Observamos que $3$ é uma raiz de multiplicidade $2$ do polinômio característico. $\, \lhd$
 \end{example}
 
 Um grande problema é que, em geral, encontrar raízes de polinômios é difícil. De fato, mesmo quando o grau do polinômio é baixo, encontrar raízes de polinômios pode ser bastante complicado. Já há muito tempo é conhecido\footnote{Este resultado é uma consequência da famosa \href{https://pt.wikipedia.org/wiki/Teoria_de_Galois}{Teoria de Galois}.} que polinômios de grau $5$ ou mais podem não possuir fórmulas para cálculo de raízes a partir de radicais.
 
 Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovetores é um cálculo direto: basta resolver o sistema linear homogêneo
-\[
+\begin{equation}
 \big( A - \lambda I \big) \vec{v} = \vec{0}.
-\] Isto é o mesmo que dizer que o autoespaço associado a $\lambda$ é o espaço nulo $\Nul (A - \lambda I)$. Vejamos como encontrar os autoespaços das matrizes dos exemplos anteriores.
+\end{equation} Isto é o mesmo que dizer que o autoespaço associado a $\lambda$ é o espaço nulo $\Nul (A - \lambda I)$. Vejamos como encontrar os autoespaços das matrizes dos exemplos anteriores.
 
 \begin{example}[de volta ao Exemplo \ref{2x2}]
 	Para encontrar os autovetores de
-	\[
+	\begin{equation}
 	A =
 	\left[
 	\begin{array}{cc}
@@ -163,8 +163,8 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 	1 & 2 \\
 	\end{array}
 	\right]
-	\] associados com o autovalor $\lambda_1 = 1$, vamos resolver o sistema homogêneo:
-	\[
+	\end{equation} associados com o autovalor $\lambda_1 = 1$, vamos resolver o sistema homogêneo:
+	\begin{equation}
 	\left[
 	\begin{array}{cc}
 	4-\lambda & 3 \\
@@ -197,8 +197,8 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 	0 \\
 	\end{array}
 	\right].
-	\] Já que o sistema é homogêneo, não é necessário escrever a última coluna de zeros na matriz aumentada associada (no entanto, é necessário lembrar que há uma coluna de zeros). Por escalonamento
-	\[
+	\end{equation} Já que o sistema é homogêneo, não é necessário escrever a última coluna de zeros na matriz aumentada associada (no entanto, é necessário lembrar que há uma coluna de zeros). Por escalonamento
+	\begin{equation}
 	\left[
 	\begin{array}{cc}
 	3 & 3 \\
@@ -217,8 +217,8 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 	\hbox{1 variável livre.}
 	\end{array}
 	\right.
-	\] Em forma vetorial paramétrica:
-	\[
+	\end{equation} Em forma vetorial paramétrica:
+	\begin{equation}
 	\left[
 	\begin{array}{c}
 	v_1 \\
@@ -242,10 +242,10 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 	1 \\
 	\end{array}
 	\right] \right\}.
-	\]
+	\end{equation}
 	
 	Para encontrar os autovetores associados a $\lambda_2 = 5$, resolvemos
-	\[
+	\begin{equation}
 	\left[
 	\begin{array}{cc}
 	4-\lambda & 3 \\
@@ -270,8 +270,8 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 	\hbox{1 variável livre.}
 	\end{array}
 	\right.
-	\] Em forma vetorial paramétrica:
-	\[
+	\end{equation} Em forma vetorial paramétrica:
+	\begin{equation}
 	\left[
 	\begin{array}{c}
 	v_1 \\
@@ -295,12 +295,12 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 	1 \\
 	\end{array}
 	\right] \right\}.
-	\]
+	\end{equation}
 \end{example}
 
 \begin{example}[de volta ao Exemplo \ref{3x3}]
 	Vamos encontrar os autovetores de
-	\[
+	\begin{equation}
 	A =
 	\left[
 	\begin{array}{ccc}
@@ -309,11 +309,11 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 	-4 & -4 & -11 \\
 	\end{array}
 	\right].
-	\]
+	\end{equation}
 	
 	\begin{itemize}
 		\item associados com o autovalor $\lambda_1 = 1$, vamos resolver o sistema homogêneo:
-		\[
+		\begin{equation}
 		\left[
 		\begin{array}{ccc}
 		5-\lambda_1 & 8 & 16 \\
@@ -333,8 +333,8 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 		0 \\
 		\end{array}
 		\right].
-		\] Por escalonamento,
-		\[
+		\end{equation} Por escalonamento,
+		\begin{equation}
 		\left[
 		\begin{array}{ccc}
 		4 &  8 & 16 \\
@@ -367,8 +367,8 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 		v_3  \hbox{ livre}
 		\end{array}
 		\right.
-		\] Em forma paramétrica, os autovetores são
-		\[
+		\end{equation} Em forma paramétrica, os autovetores são
+		\begin{equation}
 		\left[
 		\begin{array}{ccc}
 		v_1 \\
@@ -396,9 +396,9 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 		1 \\
 		\end{array}
 		\right] \right\}.
-		\]
+		\end{equation}
 		\item associados com o autovalor $\lambda_2 = -3$, vamos resolver o sistema homogêneo:
-		\[
+		\begin{equation}
 		\left[
 		\begin{array}{ccc}
 		5-\lambda_2 & 8 & 16 \\
@@ -418,8 +418,8 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 		0 \\
 		\end{array}
 		\right].
-		\] Por escalonamento,
-		\[
+		\end{equation} Por escalonamento,
+		\begin{equation}
 		\left[
 		\begin{array}{ccc}
 		8 &  8 & 16 \\
@@ -439,8 +439,8 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 		\hbox{2 variáveis livres}
 		\end{array}
 		\right.
-		\] Em forma paramétrica, os autovetores são
-		\[
+		\end{equation} Em forma paramétrica, os autovetores são
+		\begin{equation}
 		\left[
 		\begin{array}{ccc}
 		v_1 \\
@@ -481,16 +481,16 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 		1 \\
 		\end{array}
 		\right] \right\}. \lhd
-		\]
+		\end{equation}
 	\end{itemize}
 \end{example}
 
 Observamos que, nos exemplos anteriores, a dimensão do autoespaço associado ficou igual à multiplicidade do autovalor. \textbf{Isto nem sempre é verdade}. Como exercício, verifique que a dimensão do autoespaço associado ao autovalor $\lambda = 1$ da matriz
-\[
+\begin{equation}
 \begin{bmatrix}
 1 & 1 \\ 0 & 1
 \end{bmatrix}
-\] é igual a $1$, embora a multiplicidade do autovalor seja $2$.
+\end{equation} é igual a $1$, embora a multiplicidade do autovalor seja $2$.
 
 De forma geral, chamamos a multiplicidade do autovalor de \textbf{multiplicidade algébrica}, enquanto que a dimensão do autoespaço associado é chamada de \textbf{multiplicidade geométrica}.
 
@@ -498,7 +498,7 @@ De forma geral, chamamos a multiplicidade do autovalor de \textbf{multiplicidade
 \section{Diagonalização}
 
 Matrizes diagonais são matrizes da forma
-\[
+\begin{equation}
 \begin{bmatrix}
 \lambda_1 & 0 & 0 & \cdots & 0 \\
 0 & \lambda_2 & 0 & \cdots & 0 \\
@@ -506,10 +506,10 @@ Matrizes diagonais são matrizes da forma
 \vdots & \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & 0 & \cdots & \lambda_n \\
 \end{bmatrix}.
-\] Já que são triangulares, seus autovalores são os elementos da diagonal principal. Observamos também que os autovetores associados são os elementos da base canônica de $\bR^n$.
+\end{equation} Já que são triangulares, seus autovalores são os elementos da diagonal principal. Observamos também que os autovetores associados são os elementos da base canônica de $\bR^n$.
 
 Na realidade, o fato de se conseguir formar uma base com autovetores de uma matriz está intimamente relacionado com se obter uma matriz diagonal semelhante a $A$. De fato, vamos justificar que, sempre que for possível formar uma base do espaço $\bR^n$ apenas com autovetores de uma matriz quadrada $A$, então é possível fazer uma mudança de base de modo que a obter uma matriz diagonal, com os autovalores na diagonal principal. Este procedimento é chamado de \textbf{diagonalização} da matriz $A$, por motivos óbvios. O método, que é surpreendentemente simples (mas, na prática, trabalhoso), consiste em montar uma matriz $P$ com os autovetores de $A$ e efetuar multiplicações de matrizes:
-\[
+\begin{equation}
 P = \begin{bmatrix}
 | & | &  & | \\
 \vec{v}_1 & \vec{v}_2 & \cdots & \vec{v}_n \\
@@ -520,13 +520,13 @@ P = \begin{bmatrix}
 \vdots & \vdots & \ddots & \vdots \\
 0 & 0 & \cdots & \lambda_n \\
 \end{bmatrix}.
-\]
+\end{equation}
 
 \begin{proof}[Justificativa do método de diagonalização]
 Vamos verificar que $P^{-1} A P = D$ mostrando que as colunas da matriz $P^{-1} A P$ são iguais as colunas de $D$. Pela forma que construimos a matriz $P$, sabemos que a primeira coluna de $P$ é $\vec{v}_1$: 
-\[
+\begin{equation}
 P \vec{e}_1 = \vec{v}_1 \qquad \qquad \text{ou, ainda, } \qquad  \vec{e}_1 = P^{-1} \vec{v}_1.
-\] Assim, já que $A \vec{v}_1 = \lambda_1 \vec{v}_1$, temos
+\end{equation} Assim, já que $A \vec{v}_1 = \lambda_1 \vec{v}_1$, temos
 \begin{equation}
 \begin{split}
 \text{primeira coluna de } P^{-1} A P  & = P^{-1} A P \vec{e}_1 \\
@@ -542,7 +542,7 @@ Este mesmo raciocício, repetido $n$ vezes, para cada uma das colunas, prova que
 
 \begin{example}[de volta ao Exemplo \ref{3x3}]\label{exp:3x3denovo}
 	Vimos que, para a matriz
-	\[
+	\begin{equation}
 	A =
 	\left[
 	\begin{array}{ccc}
@@ -551,8 +551,8 @@ Este mesmo raciocício, repetido $n$ vezes, para cada uma das colunas, prova que
 	-4 & -4 & -11 \\
 	\end{array}
 	\right],
-	\] temos autovalores $\lambda_1 = 1$ e $\lambda_2 = -3$ e autoespaços associados:
-	\[
+	\end{equation} temos autovalores $\lambda_1 = 1$ e $\lambda_2 = -3$ e autoespaços associados:
+	\begin{equation}
 	\Nul (A - I) = \Span \left\{ \left[
 	\begin{array}{c}
 	-2 \\
@@ -572,19 +572,19 @@ Este mesmo raciocício, repetido $n$ vezes, para cada uma das colunas, prova que
 	1 \\
 	\end{array}
 	\right] \right\}.
-	\] Montamos a matriz
-	\[
+	\end{equation} Montamos a matriz
+	\begin{equation}
 	P =
 	\begin{bmatrix}
 	-2&-1&-2 \\ -1&1&0 \\ 1&0&1
 	\end{bmatrix}
-	\] Por escalonamento, podemos calcular a matriz inversa
-	\[
+	\end{equation} Por escalonamento, podemos calcular a matriz inversa
+	\begin{equation}
 	P^{-1} =
 	\begin{bmatrix}
 	-1&-1&-2 \\ -1&0&-2 \\ 1&1&3
 	\end{bmatrix}
-	\] e temos
+	\end{equation} e temos
           \begin{align*}
 	P^{-1} A P & =
 	\begin{bmatrix}
@@ -619,11 +619,11 @@ Embora o método de diagonalização seja bastante transparente, pois basta segu
 \end{itemize}
 
 Nem todas as matrizes são diagonalizáveis, como acima. Já vimos que isto é possível quando uma base de autovetores existe. No exemplo
-\[
+\begin{equation}
 A = \begin{bmatrix}
 2&1 \\ 0&2
 \end{bmatrix}
-\] não há dois autovetores linearmente independentes e, portanto, não é possível diagonalizar a matriz $A$.
+\end{equation} não há dois autovetores linearmente independentes e, portanto, não é possível diagonalizar a matriz $A$.
 
 
 \vspace{0.3cm}
@@ -632,25 +632,25 @@ Em geral, valem as seguintes propriedades: seja $A$ uma matriz de orden $n \time
 \begin{itemize}
 	\item Se $A$ possui $n$ autovalores reais distintos, então $A$ possui uma base de autovetores e é diagonalizável, pois possui um autovetor associado a cada um dos seus autovalores distintos.
 	\item No caso de $A$ possuir autovalores reais com multiplicidade maior do que $1$, $A$ apenas será diagonalizável se cada autovalor de multiplicidade $k$ tiver $k$ autovetores linearmente independentes. Em outras palavras, só será possível formar uma base de autovetores de $A$ quando 
-	\[
+	\begin{equation}
 	\Dim \Nul (A - \lambda I) = \text{ multiplicidade do autovalor } \lambda.
-	\] Na notação introduzida não seção anterior, isto é o mesmo que dizer que, se $A$ for diagonalizável, então as multiplicidades algébrica e geométrica são iguais.
+	\end{equation} Na notação introduzida não seção anterior, isto é o mesmo que dizer que, se $A$ for diagonalizável, então as multiplicidades algébrica e geométrica são iguais.
 	\item Caso $\dim \Nul (A - \lambda I)$ seja menor do que a multiplicidade do autovalor $\lambda$ ou $A$ possua autovalores complexos, então $A$ não é diagonalizável.
 \end{itemize}
 
 
 \begin{example}
 	A matriz
-	\[
+	\begin{equation}
 	A = \begin{bmatrix}
 	2&1 \\ -1&2
 	\end{bmatrix}
-	\] tem polinômio característico 
-	\[
+	\end{equation} tem polinômio característico 
+	\begin{equation}
 	p(\lambda) = \det \begin{bmatrix}
 	2-\lambda&1 \\ -1&2-\lambda
 	\end{bmatrix} = (2-\lambda)^2 +1 = \lambda^2 -4\lambda +5
-	\] cujas raízes são $\lambda_1 = \frac{4 + 3i}{2}$ e $\lambda_2 = \frac{4 - 3i}{2}$. Logo, $A$ não é diagonalizável.
+	\end{equation} cujas raízes são $\lambda_1 = \frac{4 + 3i}{2}$ e $\lambda_2 = \frac{4 - 3i}{2}$. Logo, $A$ não é diagonalizável.
 \end{example}
 
 

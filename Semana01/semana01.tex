@@ -38,22 +38,22 @@ Considere o sistema linear que consiste de duas equações e duas variáveis
 \vspace{0.2cm}
 
 \noindent\textit{Solução 1.} Ao multiplicar toda a primeira equação por $-2$, não alteramos a solução do sistema, pois, caso quiséssemos voltar ao sistema original, bastaria dividir a primeira equação do sistema abaixo por $-2$. Ficamos assim com o sistema
-\begin{equation*}
+\begin{equation}
   \left\{
     \begin{array}{rcl}
       -2x-6y&=&-2 \\
       2x-y&=&-2
     \end{array}
   \right..
-\end{equation*} Em seguida, somamos as duas equações e mantemos uma delas.
-\begin{equation*}
+\end{equation} Em seguida, somamos as duas equações e mantemos uma delas.
+\begin{equation}
   \left\{
     \begin{array}{rcl}
       -2x-6y&=& -2 \\
       -7y & =& -4
     \end{array}
   \right..
-\end{equation*} Este sistema também tem as mesmas soluções do anterior, pois podemos a qualquer hora retornar ao sistema original fazendo $($linha 2$)-($linha 1$)$.
+\end{equation} Este sistema também tem as mesmas soluções do anterior, pois podemos a qualquer hora retornar ao sistema original fazendo $($linha 2$)-($linha 1$)$.
 
 Em verdade, manter a equação da primeira linha multiplicada por $-2$ não ajuda em nada na resolução do sistema e voltaremos à equação original. Além disso, na linha dois já podemos isolar a variável $y$ e descobrir o seu valor. Ficamos então com o sistema:
 \begin{equation}\label{exp1-2}
@@ -66,17 +66,17 @@ Em verdade, manter a equação da primeira linha multiplicada por $-2$ não ajud
 \end{equation}
 
 Observamos, finalmente, que a solução do último sistema (que é a mesma do sistema original) já está muito fácil de ser obtida. Sabemos o valor de $y$ pela segunda equação e, para descobrir o valor de $x$, basta usar a primeira equação:
-\[
+\begin{equation}
 y = \frac{4}{7} \implies x + 3\cdot \frac{4}{7} = 1 \implies x = 1 - \frac{12}{7} = - \frac{5}{7}.
-\] Podemos escrever a solução do sistema como
-\begin{equation*}
+\end{equation} Podemos escrever a solução do sistema como
+\begin{equation}
   \left\{
     \begin{array}{rcl}
       x&=&-5/7 \\
       y&=& \ \ 4/7
     \end{array}
   \right. \lhd
-\end{equation*}
+\end{equation}
 \end{example}
 
 O símbolo $\lhd$ acima nas nossas notas indica o fim de uma solução, exemplo ou observação.
@@ -109,7 +109,7 @@ Operações nas linhas de um sistema que não alteram o conjunto de soluções s
 \vspace{0.2cm}
 
 Um artifício que torna todo o processo mais ``automático'' é o de formar uma tabela de números com os coeficientes do sistema:
-\begin{equation*}
+\begin{equation}
   \left\{
     \begin{array}{rcl}
       x+3y&=&1 \\
@@ -121,8 +121,8 @@ Um artifício que torna todo o processo mais ``automático'' é o de formar uma 
                                2 & -1 & -2 \\
                              \end{array}
                            \right].
-\end{equation*} A tabela de números da direita é conhecida como a \textbf{matriz aumentada associada ao sistema linear}. Vamos nos referir às linhas da matriz associada como $\ell_1$ e $\ell_2$. Deste modo, ``adicionar um múltiplo da linha 1 na linha dois'' corresponde a fazer:
-\[
+\end{equation} A tabela de números da direita é conhecida como a \textbf{matriz aumentada associada ao sistema linear}. Vamos nos referir às linhas da matriz associada como $\ell_1$ e $\ell_2$. Deste modo, ``adicionar um múltiplo da linha 1 na linha dois'' corresponde a fazer:
+\begin{equation}
 \left[
                              \begin{array}{cc|c}
                                1 & 3 & 1 \\
@@ -135,16 +135,16 @@ Um artifício que torna todo o processo mais ``automático'' é o de formar uma 
                                0 & -7 & -4 \\
                              \end{array}
                            \right].
-\] Para este tipo de operação, olhamos para as colunas da matriz associada, fizemos mentalmente (ou em uma folha de rascunho) os cálculos envolvidos e preenchemos os valores na respectiva linha da nova matriz que está à direita:
-\[
+\end{equation} Para este tipo de operação, olhamos para as colunas da matriz associada, fizemos mentalmente (ou em uma folha de rascunho) os cálculos envolvidos e preenchemos os valores na respectiva linha da nova matriz que está à direita:
+\begin{equation}
 (-2)\cdot 1 + 2 = 0, \qquad (-2)\cdot 3 + (-1) = -7, \qquad (-2) \cdot 1 + (-2) = -4.
-\]
+\end{equation}
 
 
 
 \begin{example}\label{exemplo3por3}
 Consideramos agora um sistema com três equações e três variáveis;
-\[
+\begin{equation}
 \left\{
   \begin{array}{ll}
     x + 2y + z = 12 \\
@@ -152,8 +152,8 @@ Consideramos agora um sistema com três equações e três variáveis;
     2x - y + 3z = 10
   \end{array}
 \right. .
-\] Vamos diretamente escrever a matriz aumentada associada ao sistema, que é a matriz com os coeficientes da variável $x$ na primeira coluna, os coeficientes da variável $y$ na segunda coluna, os coeficientes de $z$ na terceira coluna e os coeficientes independentes na última coluna:
-\[
+\end{equation} Vamos diretamente escrever a matriz aumentada associada ao sistema, que é a matriz com os coeficientes da variável $x$ na primeira coluna, os coeficientes da variável $y$ na segunda coluna, os coeficientes de $z$ na terceira coluna e os coeficientes independentes na última coluna:
+\begin{equation}
 \left[
   \begin{array}{ccc|c}
     1 &  2 & 1 & 12 \\
@@ -161,8 +161,8 @@ Consideramos agora um sistema com três equações e três variáveis;
     2 & -1 & 3 & 10 \\
   \end{array}
 \right].
-\] Em seguida, utilizamos operações elementares nas linhas como no exemplo anterior. Ao substituir $-\ell_1 + \ell_2$ em $\ell_2$, obtemos
-\[
+\end{equation} Em seguida, utilizamos operações elementares nas linhas como no exemplo anterior. Ao substituir $-\ell_1 + \ell_2$ em $\ell_2$, obtemos
+\begin{equation}
 \left[
   \begin{array}{ccc|c}
     1 &  2 & 1 & 12 \\
@@ -170,8 +170,8 @@ Consideramos agora um sistema com três equações e três variáveis;
     2 & -1 & 3 & 10 \\
   \end{array}
 \right].
-\] Ou seja, eliminamos o valor $1$ da primeira posição da segunda linha (em outras palavras, eliminamos a variável $x$ da segunda equação). Prosseguindo com a eliminação dos valores abaixo da diagonal principal da matriz, obtemos:
-\[
+\end{equation} Ou seja, eliminamos o valor $1$ da primeira posição da segunda linha (em outras palavras, eliminamos a variável $x$ da segunda equação). Prosseguindo com a eliminação dos valores abaixo da diagonal principal da matriz, obtemos:
+\begin{equation}
 \left[
   \begin{array}{ccc|c}
     1 &  2 & 1 & 12 \\
@@ -195,8 +195,8 @@ Consideramos agora um sistema com três equações e três variáveis;
     0 &  0 & -3 & -3 \\
   \end{array}
 \right].
-\] Voltando à notação original do sistema, obtemos
-\[
+\end{equation} Voltando à notação original do sistema, obtemos
+\begin{equation}
 \left\{
   \begin{array}{llll}
     x &+ 2y &+ z &= 12 \\
@@ -204,15 +204,15 @@ Consideramos agora um sistema com três equações e três variáveis;
       &    &- 3z& = -3
   \end{array}
 \right.
-\] Por causa do seu formato, este sistema é dito estar em \textbf{forma triangular} ou ainda que o sistema é \textbf{triangular}.
+\end{equation} Por causa do seu formato, este sistema é dito estar em \textbf{forma triangular} ou ainda que o sistema é \textbf{triangular}.
 
 Como já tínhamos percebido no nosso primeiro exemplo, sistemas triangulares são fáceis de resolver. Pela última equação concluimos que $z=1$. Subsituindo este valor na segunda equação, obtemos
-\[
+\begin{equation}
 - 5y + 4 = -11 \implies y = 3.
-\] Finalmente, substituindo estes dois valores na primeira equação, obtemos
-\[
+\end{equation} Finalmente, substituindo estes dois valores na primeira equação, obtemos
+\begin{equation}
 x + 2\cdot 3 + 1 = 12 \implies x=5.
-\] Portanto, a solução para o sistema é $(x,y,z) = (5,3,1). \lhd$
+\end{equation} Portanto, a solução para o sistema é $(x,y,z) = (5,3,1). \lhd$
 \end{example}
 
 
@@ -242,7 +242,7 @@ Por exemplo,
 \end{equation} é uma matriz em forma escalonada. Notamos que os coeficientes $a_1, a_2, a_3, a_4, a_5$ e $a_6$ podem ser quaisquer números sem alterar o fato de a matriz estar em forma escalonada.
 
 Outros exemplos, retirados livro do David C. Lay:
-\[
+\begin{equation}
 \left[
 \begin{array}{cccc}
 \blacksquare & a_0 & a_1 & a_2 \\
@@ -260,7 +260,7 @@ Outros exemplos, retirados livro do David C. Lay:
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \blacksquare & a_{24}
 \end{array}
 \right].
-\] Quando uma matriz está em forma escalonada, as posições marcadas com $\blacksquare$ são chamadas de \textbf{posições de pivô}. Observe que, caso a matriz não esteja em forma escalonada, o elemento líder de uma linha pode não estar na posição de pivô. Dizemos também que uma coluna é uma \textbf{coluna pivô} quando a coluna possui uma posição de pivô. Por exemplo, na primeira matriz acima, as duas primeiras colunas são colunas pivô enquanto a terceira e a quarta não são.
+\end{equation} Quando uma matriz está em forma escalonada, as posições marcadas com $\blacksquare$ são chamadas de \textbf{posições de pivô}. Observe que, caso a matriz não esteja em forma escalonada, o elemento líder de uma linha pode não estar na posição de pivô. Dizemos também que uma coluna é uma \textbf{coluna pivô} quando a coluna possui uma posição de pivô. Por exemplo, na primeira matriz acima, as duas primeiras colunas são colunas pivô enquanto a terceira e a quarta não são.
 
 \vspace{0.2cm}
 
@@ -269,7 +269,7 @@ Uma matriz estará em \textbf{forma escalonada reduzida} quando:
   \item Está na forma escalonada;
   \item Todos os elementos líder são iguais a 1 e são os únicos elementos não nulos das suas colunas.
 \end{enumerate} Por exemplo,
-\[
+\begin{equation}
 \left[
 \begin{array}{ccccc}
    1 & 0 & b_{1} & 0 & b_{2}\\
@@ -277,10 +277,10 @@ Uma matriz estará em \textbf{forma escalonada reduzida} quando:
    0 & 0 & 0 & 1 & b_{4}
 \end{array}
 \right]
-\] é uma forma escalonada reduzida da matriz da fórmula \eqref{escalonada1} acima.
+\end{equation} é uma forma escalonada reduzida da matriz da fórmula \eqref{escalonada1} acima.
 
 Quanto aos outros exemplos, temos
-\[
+\begin{equation}
 \left[
 \begin{array}{cccc}
 1 & 0 & b_1 & b_2 \\
@@ -298,11 +298,11 @@ Quanto aos outros exemplos, temos
 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & b_{24}
 \end{array}
 \right].
-\]
+\end{equation}
 
 \begin{remark}
 A forma escalonada reduzida ainda não apareceu na seção anterior quando estávamos resolvendo sistemas, mas notamos que poderia ter sido utilizada para automatizar ainda mais o processo de resolução do sistema. Vamos retomar o Exemplo \ref{exemplo3por3}. Fazendo mais algumas operações elementares, é possível transformar a matriz aumentada do sistema em uma matriz em forma escalonada reduzida:
-\[
+\begin{equation}
 \left[
   \begin{array}{ccc|c}
     1 &  2 &  1 &  12 \\
@@ -318,8 +318,8 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
     0 &  0 &  1   &  1 \\
   \end{array}
 \right]
-\]
-\[
+\end{equation}
+\begin{equation}
 \xrightarrow{\frac{4}{5}\ell_3 + \ell_2 \text{ em } \ell_2} \quad
 \left[
   \begin{array}{ccc|c}
@@ -344,8 +344,8 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
     0 &  0 &  1   &  1
   \end{array}
 \right].
-\] A última matriz acima está em forma escalonada reduzida e está associada ao sistema
-\[
+\end{equation} A última matriz acima está em forma escalonada reduzida e está associada ao sistema
+\begin{equation}
 \left\{
   \begin{array}{llll}
     x &   &   & = 5 \\
@@ -353,7 +353,7 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
       &   & z & = 1
   \end{array}
 \right.
-\] que, na verdade, já é a solução explícita do sistema original$.\lhd$
+\end{equation} que, na verdade, já é a solução explícita do sistema original$.\lhd$
 \end{remark}
 
 \section{Algoritmo de escalonamento}
@@ -370,7 +370,7 @@ Sistematicamente, encontramos a forma escalonada de uma matriz aplicando os segu
 
 \begin{example}\label{escalonada2}
 Considere a matriz
-\[
+\begin{equation}
 \left[
 \begin{array}{rrrrrr}
    0&0&0&0&0&0 \\
@@ -380,9 +380,9 @@ Considere a matriz
    0&0&-2&1&2&-3
 \end{array}
 \right].
-\]
+\end{equation}
 \textit{Passo 1.} A primeira coluna pivô é a terceira. Escolhemos um elemento não nulo da terceira coluna para ocupar a posição de pivô. Por exemplo, a segunda linha. Trocando a primeira e a segunda linhas de lugar (esta é uma operação elementar), obtemos:
-\[
+\begin{equation}
 \left[
 \begin{array}{rrrrrr}
    0&0&2&1&-1&8\\
@@ -392,9 +392,9 @@ Considere a matriz
    0&0&-2&1&2&-3
 \end{array}
 \right].
-\]
+\end{equation}
 \textit{Passo 2.} Eliminar os elementos abaixo do 2 que está na posição de pivô da terceira coluna:
-\[
+\begin{equation}
 \left[
 \begin{array}{rrrrrr}
    0&0&2&1&-1&8\\
@@ -414,8 +414,8 @@ Considere a matriz
    0&0&-2&1&2&-3
 \end{array}
 \right]
-\]
-\[
+\end{equation}
+\begin{equation}
 \xrightarrow{-3\ell_1 + \ell_4 \text{ em } \ell_4} \quad
 \left[
 \begin{array}{cccccc}
@@ -436,10 +436,10 @@ Considere a matriz
    0&0&0&2&1&5
 \end{array}
 \right].
-\]
+\end{equation}
 
 \textit{Passo 3.} A partir de agora, vamos essencialmente repetir o processo já realizado até agora. Notamos que a próxima coluna que contém elementos não nulos (sem olhar para a primeira linha!) é a quarta coluna. Portanto, esta é uma coluna pivô e vamos posicionar um elemento não nulo na segunda linha. Por exemplo, podemos trocar a segunda e a terceira linhas.
-\[
+\begin{equation}
 \left[
 \begin{array}{cccccc}
    0&0&2&1&-1&8\\
@@ -449,8 +449,8 @@ Considere a matriz
    0&0&0&2&1&5
 \end{array}
 \right].
-\] Antes de prosseguir, podemos ainda simplificar alguns cálculos multiplicando linhas por escalares (fazer isso é realizar um operação elementar!):
-\[
+\end{equation} Antes de prosseguir, podemos ainda simplificar alguns cálculos multiplicando linhas por escalares (fazer isso é realizar um operação elementar!):
+\begin{equation}
 \left[
 \begin{array}{cccccc}
    0&0&2&1&-1&8\\
@@ -470,9 +470,9 @@ Considere a matriz
    0&0&0&2&1&5
 \end{array}
 \right]
-\]
+\end{equation}
 \textit{Passo 4.} Prosseguimos como no Passo 2 para eliminar todos os elementos que estão abaixo da posição de pivô da quarta coluna:
-\[
+\begin{equation}
 \left[
 \begin{array}{cccccc}
    0&0&2&1&-1&8\\
@@ -492,8 +492,8 @@ Considere a matriz
    0&0&0&2&1&5
 \end{array}
 \right]
-\]
-\[
+\end{equation}
+\begin{equation}
 \xrightarrow{- 2\ell_2 + \ell_5 \text{ em } \ell_5} \quad
 \left[
 \begin{array}{cccccc}
@@ -504,9 +504,9 @@ Considere a matriz
    0&0&0&0&-1&1
 \end{array}
 \right]
-\]
+\end{equation}
 \textit{Passo 5.} Finalmente, identificamos a coluna 5 como coluna pivô e obtemos uma matriz em forma escalonada ao deixar um elemento não nulo na posição de pivô:
-\[
+\begin{equation}
 \left[
 \begin{array}{cccccc}
    0&0&2&1&-1&8\\
@@ -516,7 +516,7 @@ Considere a matriz
    0&0&0&0&0&0
 \end{array}
 \right]. \lhd
-\]
+\end{equation}
 \end{example}
 
 Agora, para obter a forma escalonada reduzida \emph{a partir da forma escalonada}, primeiramente aplicamos os passos acima para obter uma matriz em forma escalonada. Em seguida, aplicamos outros passos iterativos:
@@ -530,7 +530,7 @@ Observamos que poderíamos ter primeiro realizado o Passo 2 e depois o Passo 1 s
 
 \begin{example}
     Voltamos ao Exemplo \ref{escalonada2}. Identificando novamente as posições de pivô:
-\[
+\begin{equation}
 \left[
 \begin{array}{cccccc}
    0&0&\mathbf{2}&1&-1&8\\
@@ -540,8 +540,8 @@ Observamos que poderíamos ter primeiro realizado o Passo 2 e depois o Passo 1 s
    0&0&0&0&0&0
 \end{array}
 \right].
-\] O mais da direita é o $-1$ da quinta coluna. Eliminando os termos não nulos acima, obtemos:
-\[
+\end{equation} O mais da direita é o $-1$ da quinta coluna. Eliminando os termos não nulos acima, obtemos:
+\begin{equation}
 \left[
 \begin{array}{cccccc}
    0&0&2&1&-1&8\\
@@ -571,8 +571,8 @@ Observamos que poderíamos ter primeiro realizado o Passo 2 e depois o Passo 1 s
    0&0&0&0&0&0
 \end{array}
 \right].
-\] A próxima posição de pivô mais à direita é o 1 na linha 2, coluna 4. Eliminando o termo não nulo acima, obtemos:
-\[
+\end{equation} A próxima posição de pivô mais à direita é o 1 na linha 2, coluna 4. Eliminando o termo não nulo acima, obtemos:
+\begin{equation}
 \xrightarrow{-\ell_2 + \ell_1 \text{ em } \ell_1} \quad
 \left[
 \begin{array}{cccccc}
@@ -583,8 +583,8 @@ Observamos que poderíamos ter primeiro realizado o Passo 2 e depois o Passo 1 s
    0&0&0&0&0&0
 \end{array}
 \right].
-\] Finalmente, dividimos a primeira linha por $2$ e a terceira linha por $-1$ para chegar na forma escalonada reduzida da matriz inicial:
-\[
+\end{equation} Finalmente, dividimos a primeira linha por $2$ e a terceira linha por $-1$ para chegar na forma escalonada reduzida da matriz inicial:
+\begin{equation}
 \left[
 \begin{array}{cccccc}
    0&0&1&0&0&2\\
@@ -594,7 +594,7 @@ Observamos que poderíamos ter primeiro realizado o Passo 2 e depois o Passo 1 s
    0&0&0&0&0&0
 \end{array}
 \right].
-\]
+\end{equation}
 \end{example}
 
 
@@ -604,7 +604,7 @@ Observamos que poderíamos ter primeiro realizado o Passo 2 e depois o Passo 1 s
 \subsection{Sistemas que possuem apenas uma solução}
 
 Os sistemas que vimos até agora possuiam apenas uma solução. Esta propriedade, como veremos, nem sempre é válida. No entanto, é fácil de identificar quando um sistema possui solução única analisando a forma escalonada da matriz associada: \textbf{quando todas as colunas referentes às variáveis da equação possuirem posição de pivô}. Por exemplo,
-\[
+\begin{equation}
 \left[
  \begin{array}{cc|c}
   1 & 3 & 1 \\
@@ -626,8 +626,8 @@ Os sistemas que vimos até agora possuiam apenas uma solução. Esta propriedade
     0 &  0 &  0 & 1 & 1
   \end{array}
 \right].
-\] De fato, todas as matrizes com esta propriedade tem em sua forma escalonada reduzida a matriz identidade do lado esquerdo da barra que separa as variáveis e os valores do lado direito da igualdade do sistema:
-\[
+\end{equation} De fato, todas as matrizes com esta propriedade tem em sua forma escalonada reduzida a matriz identidade do lado esquerdo da barra que separa as variáveis e os valores do lado direito da igualdade do sistema:
+\begin{equation}
 \left[
  \begin{array}{cc|c}
   1 & 0 & -5/7 \\
@@ -649,7 +649,7 @@ Os sistemas que vimos até agora possuiam apenas uma solução. Esta propriedade
     0 &  0 &  0 & 1 & 1
   \end{array}
 \right].
-\] Escrevendo o sistema associado as estas últimas matrizes, é fácil de ver que a solução será única.
+\end{equation} Escrevendo o sistema associado as estas últimas matrizes, é fácil de ver que a solução será única.
 
 
 \subsection{Sistemas impossíveis ou inconsistentes}
@@ -663,16 +663,16 @@ Nem todo sistema linear possui solução. Um exemplo simples deste fato é
   \end{array}
 \right. .
 \end{equation} É claro que $x+y$ não pode ser ao mesmo tempo igual a 1 e igual a 2; portanto, o sistema não possui solução. O fato de o sistema não possuir solução -- ser \textbf{inconsistente} -- nem sempre é tão fácil de ser identificado apenas olhando para o sistema. Mas esta propriedade salta aos olhos quando analisamos a forma escalonada da matriz associada ao sistema. De fato, na matriz escalonada de um sistema inconsistente aparece uma linha da forma
-\[
+\begin{equation}
 \left[
 \begin{array}{ccccc|c}
    0&0&0&0&0&a
 \end{array}
 \right],
-\] com uma constante $a \neq 0$. Esta linha representa no sistema uma equação do tipo $0 = a \neq 0$, que é impossível de ser satisfeita.
+\end{equation} com uma constante $a \neq 0$. Esta linha representa no sistema uma equação do tipo $0 = a \neq 0$, que é impossível de ser satisfeita.
 
 No sistema da fórmula \eqref{sistemaimpossivel} acima, temos a matriz aumentada
-\[
+\begin{equation}
 \left[
 \begin{array}{cc|c}
    1 & 1 & 1 \\
@@ -686,15 +686,15 @@ No sistema da fórmula \eqref{sistemaimpossivel} acima, temos a matriz aumentada
    0 & 0 & 1 \\
 \end{array}
 \right].
-\] Logo, nosso sistema é equivalente ao sistema impossível
-\[
+\end{equation} Logo, nosso sistema é equivalente ao sistema impossível
+\begin{equation}
 \left\{
   \begin{array}{rl}
     x+y &= 1\\
      0  &= 1
   \end{array}
 \right. .
-\]
+\end{equation}
 
 
 \subsection{Sistemas com mais de uma solução}
@@ -703,7 +703,7 @@ Com exceção da subseção anterior, todos os sistemas que resolvemos anteriorm
 
 \begin{example}
 Resolver
-\[
+\begin{equation}
 \left\{
   \begin{array}{rrrrrrl}
      & 3 x_2 & -6x_3 & + 6x_4 & + 4x_5 &=& -5\\
@@ -711,8 +711,8 @@ Resolver
     3x_1 & -9x_2 & +12x_3 & -9x_4 & +6x_5 &=& 15
   \end{array}
 \right. .
-\] A matriz aumentada associada a este sistema é
-\[
+\end{equation} A matriz aumentada associada a este sistema é
+\begin{equation}
 \left[
   \begin{array}{ccccc|c}
     0 &  3 & -6 &  6 & 4 & -5 \\
@@ -720,8 +720,8 @@ Resolver
     3 & -9 & 12 & -9 & 6 & 15
   \end{array}
 \right] .
-\] Transformando esta matriz em sua forma escalonada reduzida (faça todos os cálculos!), obtemos
-\[
+\end{equation} Transformando esta matriz em sua forma escalonada reduzida (faça todos os cálculos!), obtemos
+\begin{equation}
 \left[
   \begin{array}{ccccc|c}
     1 & 0 & -2 & 3 & 0 & -24 \\
@@ -729,8 +729,8 @@ Resolver
     0 & 0 &  0 & 0 & 1 &   4
   \end{array}
 \right],
-\] que é equivalente ao sistema linear
-\[
+\end{equation} que é equivalente ao sistema linear
+\begin{equation}
 \left\{
   \begin{array}{rcl}
       x_1 - 2 x_3 + 3 x_4 &=& -24\\
@@ -738,10 +738,10 @@ Resolver
       x_5 &=& 4
   \end{array}
 \right.
-\] Neste sistema $x_5$ possui um valor fixo igual a 4, mas as outras variáveis tem dois graus de liberdade. De fato, atribuindo valores quaisquer para $x_3$ e $x_4$, obtemos os valores de $x_1$ e $x_2$ pelas duas primeiras equações acima e temos uma solução do sistema. Diferentes escolhas dos parâmetros $x_3$ e $x_4$ geram soluções diferentes.
+\end{equation} Neste sistema $x_5$ possui um valor fixo igual a 4, mas as outras variáveis tem dois graus de liberdade. De fato, atribuindo valores quaisquer para $x_3$ e $x_4$, obtemos os valores de $x_1$ e $x_2$ pelas duas primeiras equações acima e temos uma solução do sistema. Diferentes escolhas dos parâmetros $x_3$ e $x_4$ geram soluções diferentes.
 
 Uma forma sistemática de analisar a situação é a seguinte: As variáveis correspondentes a colunas que possuem posição de pivô são chamadas de \textbf{variáveis dependentes} e as demais são chamadas de \textbf{variáveis livres}. Assim, podemos escrever
-\[
+\begin{equation}
 \left\{
   \begin{array}{l}
        x_1  = 2 x_3 - 3 x_4 -24 \\
@@ -750,7 +750,7 @@ Uma forma sistemática de analisar a situação é a seguinte: As variáveis cor
        x_5  = 4
   \end{array}
 \right.
-\] e o sistema possui infinitas soluções.$\lhd$
+\end{equation} e o sistema possui infinitas soluções.$\lhd$
 \end{example}
 
 
@@ -759,7 +759,7 @@ Uma forma sistemática de analisar a situação é a seguinte: As variáveis cor
 Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \textit{inevitavelmente} que uma das seguintes situações é válida:
 \begin{itemize}
   \item Todas as colunas referentes às variáveis do sistema possuem posição de pivô, \emph{e.g},
-\[
+\begin{equation}
 \left[
   \begin{array}{ccc|c}
     1 &  3 & -6 &  6  \\
@@ -767,11 +767,11 @@ Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \text
     0 & 0 & 12 & -9
   \end{array}
 \right].
-\] Neste caso, vimos que o sistema possui \textbf{apenas uma solução}. Nota que \textit{esta possibilidade apenas é possível se tivermos um sistema com o número de equações igual ao número de variáveis}.
+\end{equation} Neste caso, vimos que o sistema possui \textbf{apenas uma solução}. Nota que \textit{esta possibilidade apenas é possível se tivermos um sistema com o número de equações igual ao número de variáveis}.
   \item Caso a coluna referentes à alguma variável do sistema não possua posição de pivô, teremos duas possibilidades
 \begin{enumerate}[$(i)$]
   \item Alguma coluna não é coluna pivô mas não existem linhas inconsistentes, \emph{e.g},
-\[
+\begin{equation}
 \left[
   \begin{array}{ccccc|c}
     1 & 3  & 2  & -6 & 2  &  6  \\
@@ -779,10 +779,10 @@ Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \text
     0 & 0  &  0 & 12 &  1 & -9
   \end{array}
 \right].
-\] Neste caso, as variáveis referentes a colunas que não são pivô (na matriz acima, colunas 3 e 5) podem ser consideradas variáveis livres e o sistema \textbf{possui infinitas soluções}.
+\end{equation} Neste caso, as variáveis referentes a colunas que não são pivô (na matriz acima, colunas 3 e 5) podem ser consideradas variáveis livres e o sistema \textbf{possui infinitas soluções}.
 
   \item Alguma coluna não é coluna pivô mas existem linhas que são inconsistentes, \emph{e.g},
-\[
+\begin{equation}
 \left[
   \begin{array}{ccccc|c}
     1 & 3  & 2  & -6 & 2  &  6  \\
@@ -790,7 +790,7 @@ Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \text
     0 & 0  &  0 & 0 &  0 & -9
   \end{array}
 \right].
-\] Neste caso, \textbf{não existem soluções} para o sistema, pois uma das equações é impossível de ser satisfeita.
+\end{equation} Neste caso, \textbf{não existem soluções} para o sistema, pois uma das equações é impossível de ser satisfeita.
 \end{enumerate}
 \end{itemize}
 
