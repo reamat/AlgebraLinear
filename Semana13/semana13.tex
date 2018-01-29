@@ -109,7 +109,7 @@
 % \newcommand{\bT}{\mathbb{T}}
 % \newcommand{\bZ}{\mathbb{Z}}
 
-% \newcommand{\cB}{\mathcal{B}}
+% \newcommand{\mathcal{B}}{\mathcal{B}}
 % \newcommand{\cE}{\mathcal{E}}
 % \newcommand{\cF}{\mathcal{F}}
 % \newcommand{\cH}{\mathcal{H}}
@@ -204,32 +204,32 @@ Sistemas lineares aparecem como modelos matemáticos de vários fenômenos e em 
 Como sabemos, resolver o sistema linear
 \begin{equation}
 A \vec{x} = \vec{b}
-\end{equation} consiste em encontrar um vetor $\vec{x}$ que satisfaça a esta equação. Na terminologia que construimos ao longo do curso, isto significa que $\vec{b}$ pertence ao espaço coluna da matriz $A$, isto é, $\vec{b} \in \Col A$. Desta forma, não é possível resolver o sistema quando $\vec{b} \not\in \Col A$. 
+\end{equation} consiste em encontrar um vetor $\vec{x}$ que satisfaça a esta equação. Na terminologia que construimos ao longo do curso, isto significa que $\vec{b}$ pertence ao espaço coluna da matriz $A$, isto é, $\vec{b} \in \operatorname{Col} A$. Desta forma, não é possível resolver o sistema quando $\vec{b} \not\in \operatorname{Col} A$. 
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[width=0.6\linewidth]{\dir/Semana13/semana13-proj-col.png}
   \end{center}
 \end{figure}
 
-O Método dos Mínimos Quadrados consiste em olhar para o vetor $\vec{p} = \proj_{\Col A} \vec{b}$ e resolver o sistema linear associado
+O Método dos Mínimos Quadrados consiste em olhar para o vetor $\vec{p} = \proj_{\operatorname{Col} A} \vec{b}$ e resolver o sistema linear associado
 \begin{equation}
 A \vec{x} = \vec{p}.
-\end{equation} Esta solução de $A \vec{x} = \vec{p}$ é chamada de \textbf{solução de mínimos quadrados}. A ideia é (ver figura) considerar o vetor em $\Col A$ que é ``mais próximo'' de $\vec{b}$ e cujo sistema linear associado possua solução. Neste contexto, estamos pensando em mais próximo no sentido que
+\end{equation} Esta solução de $A \vec{x} = \vec{p}$ é chamada de \textbf{solução de mínimos quadrados}. A ideia é (ver figura) considerar o vetor em $\operatorname{Col} A$ que é ``mais próximo'' de $\vec{b}$ e cujo sistema linear associado possua solução. Neste contexto, estamos pensando em mais próximo no sentido que
 \begin{equation}
-\| \vec{b} - \proj_{\Col A} \vec{b} \| \le \| \vec{b} - \vec{c} \|, \text{ para qualquer } \vec{c}\, \in \Col A,
+\| \vec{b} - \proj_{\operatorname{Col} A} \vec{b} \| \le \| \vec{b} - \vec{c} \|, \text{ para qualquer } \vec{c}\, \in \operatorname{Col} A,
 \end{equation} isto é, no sentido de ser a projeção a melhor aproximação de $\vec{b}$ no espaço coluna de $A$. Escrevendo os vetores em coordenadas:
 \begin{equation}
 \vec{b} =
 \begin{bmatrix}
   b_1 \\ b_2 \\ \vdots \\ b_n
 \end{bmatrix} \ \text{e} \
-\proj_{\Col A} \vec{b} =
+\proj_{\operatorname{Col} A} \vec{b} =
 \begin{bmatrix}
   p_1 \\ p_2 \\ \vdots \\ p_n
 \end{bmatrix},
 \end{equation} temos que o valor
 \begin{equation}
-\| \vec{b} - \proj_{\Col A} \vec{b} \| = \sum_{i=1}^n (b_i - p_i)^2
+\| \vec{b} - \proj_{\operatorname{Col} A} \vec{b} \| = \sum_{i=1}^n (b_i - p_i)^2
 \end{equation} é chamado de \textbf{erro da aproximação}. Logo, como anunciado, a soma dos quadrados dos erros obtidos cada componente é o mínimo possível.
 
 
@@ -263,8 +263,8 @@ A \vec{x} = \vec{p}.
   \end{bmatrix} .
   \end{equation} Vamos tentar encontrar, conforme descrito acima, uma solução de mínimos quadrados. Passos a serem realizados:
   \begin{itemize}
-  \item Para calcular a projeção de $\vec{b}$ sobre $\Col A$, precisamos, em primeiro lugar, obter uma base ortogonal do espaço $\Col A$; isto pode ser feito pelo Processo de Gram--Schmidt;
-  \item Calcular a projeção $\vec{p} = \proj_{\Col A} \vec{b}$;
+  \item Para calcular a projeção de $\vec{b}$ sobre $\operatorname{Col} A$, precisamos, em primeiro lugar, obter uma base ortogonal do espaço $\operatorname{Col} A$; isto pode ser feito pelo Processo de Gram--Schmidt;
+  \item Calcular a projeção $\vec{p} = \proj_{\operatorname{Col} A} \vec{b}$;
   \item Resolver o sistema linear $A \vec{x} = \vec{p}$.
   \end{itemize} Embora seja possível realizar estes três passos, temos de convir que seria muito trabalhoso. Por isto, vamos analisar um pouco mais da teoria para encontrar um método mais eficaz$. \ \lhd$
 \end{example}
@@ -272,10 +272,10 @@ A \vec{x} = \vec{p}.
 Suponhamos que:
 \begin{itemize}
 \item $A$ é uma matriz $m \times n$,
-\item $\vec{x} \in \bR^n$,
-\item $\vec{b} \in \bR^m$ e
+\item $\vec{x} \in \mathbb{R}^n$,
+\item $\vec{b} \in \mathbb{R}^m$ e
 \item o sistema $A \vec{x} = \vec{b}$ não possui solução.
-\end{itemize} A solução de mínimos quadrados é a solução de $A \vec{x} = \vec{p}$, onde $\vec{p} = \proj_{\Col A} \vec{b}$. Observamos, por outro lado, que, sendo $\vec{p}\,$ a projeção sobre o espaço coluna de $A$, o vetor $\vec{b} - \vec{p}\,$ deve ser ortogonal a todos os elementos de $\Col A$. Em particular, se escrevermos $A$ em termos de suas colunas
+\end{itemize} A solução de mínimos quadrados é a solução de $A \vec{x} = \vec{p}$, onde $\vec{p} = \proj_{\operatorname{Col} A} \vec{b}$. Observamos, por outro lado, que, sendo $\vec{p}\,$ a projeção sobre o espaço coluna de $A$, o vetor $\vec{b} - \vec{p}\,$ deve ser ortogonal a todos os elementos de $\operatorname{Col} A$. Em particular, se escrevermos $A$ em termos de suas colunas
 \begin{equation}
 A =
 \begin{bmatrix}
@@ -376,13 +376,13 @@ Tudo isto implica que podemos utilizar a equação \eqref{minquad} para encontra
 \end{exercise}
 
 \begin{remark}
-  Caso a matriz $A$ já seja uma matriz ortogonal, podemos calcular projeções diretamente, pois uma base ortogonal para $\Col A$ já esté disponível desde o começo. Neste caso, ambos os métodos exigiriam um trabalho parecido.
+  Caso a matriz $A$ já seja uma matriz ortogonal, podemos calcular projeções diretamente, pois uma base ortogonal para $\operatorname{Col} A$ já esté disponível desde o começo. Neste caso, ambos os métodos exigiriam um trabalho parecido.
 \end{remark}
 
 Nossa aproximação linear foi encontrada de modo a minimizar o erro quadrático. Para encontrar o erro, deveríamos calcular
 \begin{equation}
-\| \vec{b} - \proj_{\vec{\Col A}} \vec{b} \|.
-\end{equation} No entanto, resolvemos de outra maneira e não calculamos a projeção. Observando que a solução de mínimos quadrados satisfaz $A \vec{x} = \proj_{\vec{\Col A}} \vec{b}$, podemos calcular o erro por
+\| \vec{b} - \proj_{\vec{\operatorname{Col} A}} \vec{b} \|.
+\end{equation} No entanto, resolvemos de outra maneira e não calculamos a projeção. Observando que a solução de mínimos quadrados satisfaz $A \vec{x} = \proj_{\vec{\operatorname{Col} A}} \vec{b}$, podemos calcular o erro por
 \begin{equation}
 \text{erro } = \| \vec{b} - A \vec{x} \|,
 \end{equation} onde $\vec{x}$ é a solução de mínimos quadrados.
@@ -583,7 +583,7 @@ y = a + b x,
     830.45 \\
     868.45 \\
     949.2 \\
-  \end{bmatrix} \simeq \proj_{\Col A} \vec{b} \implies \text{ erro } = \| \vec{b} - A\vec{x} \| \simeq 947.3
+  \end{bmatrix} \simeq \proj_{\operatorname{Col} A} \vec{b} \implies \text{ erro } = \| \vec{b} - A\vec{x} \| \simeq 947.3
   \end{equation} Na figura abaixo, mostramos um esboço da reta que melhor aproxima os dados deste exemplo$. \ \lhd$
   \begin{figure}[h!]
     \begin{center}
@@ -795,7 +795,7 @@ Uma \textbf{regressão linear múltipla} é o problema análogo à regressão li
 No caso especial em que $y$ depende de apenas outros dois fatores, escreveremos
 \begin{equation}
 z = a + b x + c y,
-\end{equation} que, geometricamente, representa um plano no espaço tridimensional $\bR^3$. Seja agora uma conjunto de dados:
+\end{equation} que, geometricamente, representa um plano no espaço tridimensional $\mathbb{R}^3$. Seja agora uma conjunto de dados:
 \begin{equation}
 (x_1, y_1, z_1), \ (x_1, y_1, z_1), \dots, (x_k, y_k, z_k).
 \end{equation} Queremos encontrar coeficientes $(a,b,c)$ que satisfaçam:

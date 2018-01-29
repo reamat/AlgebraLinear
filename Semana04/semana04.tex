@@ -74,7 +74,7 @@ enquanto
 
 \section{Produto de matrizes}
 
-É no produto de matrizes que aparece uma operação diferente do que estamos acostumados. Já vimos como a multiplicação de uma matriz de ordem $m\times n$ por um vetor de $\bR^n$ (ou matriz de ordem $n\times 1$) aparece naturalmente quando resolvemos uma sistema linear:
+É no produto de matrizes que aparece uma operação diferente do que estamos acostumados. Já vimos como a multiplicação de uma matriz de ordem $m\times n$ por um vetor de $\mathbb{R}^n$ (ou matriz de ordem $n\times 1$) aparece naturalmente quando resolvemos uma sistema linear:
 \begin{equation}
 A \vec{x} = \left[
 \begin{array}{cccc}
@@ -100,7 +100,7 @@ a_{21} x_{1} + a_{22} x_{2} + \cdots  a_{2n} x_{n} \\
 a_{m1} x_{1} + a_{m2} x_{2} + \cdots  a_{mn} x_{n} \\
 \end{array}
 \right].
-\end{equation} O resultado é um vetor  de $\bR^m$ (ou matriz de ordem $m\times 1$). Observamos que necessariamente o número de colunas da matriz $A$ deve ser igual ao número de linhas do vetor $\vec{x}$, para que seja possível realizar o produto como indicado.
+\end{equation} O resultado é um vetor  de $\mathbb{R}^m$ (ou matriz de ordem $m\times 1$). Observamos que necessariamente o número de colunas da matriz $A$ deve ser igual ao número de linhas do vetor $\vec{x}$, para que seja possível realizar o produto como indicado.
 
 Vamos generalizar este procedimento para definir o produto entre duas matrizes de qualquer ordem. Por exemplo, se $A$ é como acima e $B$ é uma matriz $B$ de ordem $n \times 2$, o que vamos fazer é pensar nas colunas de $B$ como dois vetores $\vec{b}_1$ e $\vec{b}_2$ e realizar os produtos como já estamos acostumados. O resultado será uma matriz cujas colunas são $A \vec{b}_1$ e $A \vec{b}_2$:
 \begin{equation}
@@ -153,7 +153,7 @@ A\vec{b}_{1} & A\vec{b}_{2} & \cdots & A\vec{b}_{p} \\
 | & |  &   & | \\
 \end{array}
 \right].
-\end{equation} Acima, $\vec{b}_{1}, \vec{b}_{2}, \dots, \vec{b}_{p} \in \bR^n$ são as colunas da matriz $B$. Conclua que $A\vec{b}_{1}, A\vec{b}_{2}, \dots, A\vec{b}_{p} \in \bR^m$ e que $AB$ é uma matriz de ordem $m \times p$.
+\end{equation} Acima, $\vec{b}_{1}, \vec{b}_{2}, \dots, \vec{b}_{p} \in \mathbb{R}^n$ são as colunas da matriz $B$. Conclua que $A\vec{b}_{1}, A\vec{b}_{2}, \dots, A\vec{b}_{p} \in \mathbb{R}^m$ e que $AB$ é uma matriz de ordem $m \times p$.
 
 \subsection{Exemplos}
 
@@ -394,7 +394,7 @@ I_3 =
 
 Existindo a matriz identidade, outra pergunta natural é se existe um inverso multiplicativo. Para números reais, qualquer número não nulo possui:
 \begin{equation}
-x \in \bR, x \neq 0 \implies x^{-1} = \frac{1}{x} \ \text{é um inverso multiplicativo,}
+x \in \mathbb{R}, x \neq 0 \implies x^{-1} = \frac{1}{x} \ \text{é um inverso multiplicativo,}
 \end{equation} isto é, satisfaz $x\cdot x^{-1} = 1$.
 
 Vamos procurar por \textbf{matrizes inversas}: dada uma matriz $A$, queremos encontrar uma matriz $A^{-1}$ de modo que
@@ -847,7 +847,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 Sistemas lineares de ordem $n \times n$
 \begin{equation}
 A \vec{x} = \vec{b},
-\end{equation} cuja matriz associada $A$ é invertível, são sistemas que possuem exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$ (ver Subseção \ref{sec:inversa}).
+\end{equation} cuja matriz associada $A$ é invertível, são sistemas que possuem exatamente uma solução, para qualquer vetor $\vec{b} \in \mathbb{R}^n$ (ver Subseção \ref{sec:inversa}).
 
 A existência da matriz inversa $A^{-1}$ permite-nos multiplicar ambos os lados do sistema por $A^{-1}$ para obter $\vec{x} = A^{-1} \cdot A = A^{-1} \vec{b}.$ Logo,
 \begin{equation}
@@ -922,12 +922,12 @@ Vamos, nesta subseção, verificar (provar de forma rigorosa) que
 % \boxed{
 % 	\begin{split}
 % 	&\text{A matriz $A$ é invertível se, e somente se, o sistema linear $A \vec{x} = \vec{b}$ possui}  \\
-% 	&\text{exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$.}
+% 	&\text{exatamente uma solução, para qualquer vetor $\vec{b} \in \mathbb{R}^n$.}
 % 	\end{split}
 % }
 % \end{equation}
 \begin{center}
-  ``a matriz $A$ é invertível se, e somente se, o sistema linear $A \vec{x} = \vec{b}$ possui exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$.''
+  ``a matriz $A$ é invertível se, e somente se, o sistema linear $A \vec{x} = \vec{b}$ possui exatamente uma solução, para qualquer vetor $\vec{b} \in \mathbb{R}^n$.''
 \end{center}
 
 \noindent $(\!\implies\!\!)$ Se $A$ é invertível, então conseguimos resolver todos os sistemas
@@ -955,7 +955,7 @@ A  \vec{x} & = b_1 A\vec{x}_1 + b_2 A\vec{x}_2 + \cdots + b_n A\vec{x}_n, \\
 & = \vec{b}.
 \end{align*}
 
-\noindent $(\!\Longleftarrow)$ Reciprocamente, suponhamos que o sistema possua exatamente uma solução, para qualquer vetor $\vec{b} \in \bR^n$. Em particular, podemos resolver os sitemas
+\noindent $(\!\Longleftarrow)$ Reciprocamente, suponhamos que o sistema possua exatamente uma solução, para qualquer vetor $\vec{b} \in \mathbb{R}^n$. Em particular, podemos resolver os sitemas
 \begin{equation}
 A \vec{x}_1 = \vec{e}_1, \quad A \vec{x}_2 = \vec{e}_2, \cdots, A \vec{x}_n = \vec{e}_n
 \end{equation} e escrever a matriz inversa de acordo com o nosso algoritmo:

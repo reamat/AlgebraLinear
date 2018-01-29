@@ -17,7 +17,7 @@
 No último capítulo, estudamos projeções ortogonais e vimos que a projeção ortogonal de $\vec{y}$ na direção de um vetor $\vec{w}$ pode ser calculada por
 \begin{equation}
 \proj_{\vec{w}} \vec{y} = \frac{\vec{y} \cdot \vec{w}}{\vec{w} \cdot \vec{w}} \ \vec{w}
-\end{equation} Gostaríamos de endereçar agora a seguinte questão: como obter a projeção de um vetor $\vec{y} \in \bR^3$ sobre um plano $W$?
+\end{equation} Gostaríamos de endereçar agora a seguinte questão: como obter a projeção de um vetor $\vec{y} \in \mathbb{R}^3$ sobre um plano $W$?
 
 \begin{figure}[h!]
 \begin{center}
@@ -85,9 +85,9 @@ Vamos calcular a projeção do vetor
 \end{example}
 
 
-Desenvolvemos acima o conceito de projeção ortogonal sobre um subespaço do espaço $\bR^3$ de dimensão três apenas pela conveniência da visualização geométrica. Na verdade, o conceito pode ser definido em qualquer dimensão.
+Desenvolvemos acima o conceito de projeção ortogonal sobre um subespaço do espaço $\mathbb{R}^3$ de dimensão três apenas pela conveniência da visualização geométrica. Na verdade, o conceito pode ser definido em qualquer dimensão.
 
-Seja $W \subset \bR^n$ um subespaço vetorial de dimensão $k$ e $\{\vec{w}_1, \vec{w}_2, \dots, \vec{w}_k \}$ uma base ortogonal de $W$. Dado um vetor $\vec{y} \in \bR^n$ qualquer, definimos a \textbf{projeção ortogonal de $\vec{y}$ sobre $W$} como
+Seja $W \subset \mathbb{R}^n$ um subespaço vetorial de dimensão $k$ e $\{\vec{w}_1, \vec{w}_2, \dots, \vec{w}_k \}$ uma base ortogonal de $W$. Dado um vetor $\vec{y} \in \mathbb{R}^n$ qualquer, definimos a \textbf{projeção ortogonal de $\vec{y}$ sobre $W$} como
 \begin{equation}
 \proj_W \vec{y}  = \frac{\vec{y} \cdot \vec{w}_1}{\vec{w}_1 \cdot \vec{w}_1} \ \vec{w}_1 + \frac{\vec{y} \cdot \vec{w}_2}{\vec{w}_2 \cdot \vec{w}_2} \ \vec{w}_2 + \cdots + \frac{\vec{y} \cdot \vec{w}_k}{\vec{w}_k \cdot \vec{w}_k} \ \vec{w}_k
 \end{equation} Pode-se verificar, como no Exercício \ref{exercise:proj} acima, que
@@ -154,9 +154,9 @@ A projeção ortogonal pode ser utilizada para calcular distâncias entre o pont
 \begin{bmatrix}
 x_1 \\ x_2 \\ \vdots \\ x_n
 \end{bmatrix}
-\end{equation} cujas componentes são as coordenadas de $P$. Como vimos na seção anterior, o vetor $\vec{y} - \proj_{W} \vec{y}$ é ortogonal ao subespaço $W$. Sendo a distância de $P$ até $W$ denotada por $\dist (P,W)$ e definida como a menor distância entre $P$ e elementos de $W$, temos que
+\end{equation} cujas componentes são as coordenadas de $P$. Como vimos na seção anterior, o vetor $\vec{y} - \proj_{W} \vec{y}$ é ortogonal ao subespaço $W$. Sendo a distância de $P$ até $W$ denotada por $\operatorname{dist} (P,W)$ e definida como a menor distância entre $P$ e elementos de $W$, temos que
 \begin{equation}
-\dist (P,W) = \|\vec{y} - \proj_{W} \vec{y}\|.
+\operatorname{dist} (P,W) = \|\vec{y} - \proj_{W} \vec{y}\|.
 \end{equation}
 
 
@@ -174,7 +174,7 @@ Dado qualquer outro vetor $\vec{w} \in W$, o Teorema de Pitágoras implica que (
 
 
 \begin{example}
-Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{u}, \vec{v}\}$ (contido em $\bR^5$) gerado pelos vetores (que são ortogonais!)
+Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{u}, \vec{v}\}$ (contido em $\mathbb{R}^5$) gerado pelos vetores (que são ortogonais!)
 \begin{equation}
 \vec{u} =
 \begin{bmatrix}
@@ -215,7 +215,7 @@ Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{
   \end{align*}
   Desta forma, a distância de $P$ a $W$ é
   \begin{align*}
-\dist (P,W) & = \|\vec{y} - \proj_{W} \vec{y}\| = \sqrt{\frac{961}{2025} + \frac{256}{25} + \frac{38809}{2025} + \frac{3721}{2025}} = \sqrt{\frac{ 45795 }{2025}} \\
+\operatorname{dist} (P,W) & = \|\vec{y} - \proj_{W} \vec{y}\| = \sqrt{\frac{961}{2025} + \frac{256}{25} + \frac{38809}{2025} + \frac{3721}{2025}} = \sqrt{\frac{ 45795 }{2025}} \\
            & = \frac{ \sqrt{45795} }{45} \simeq 4,75. \ \lhd
   \end{align*}
 \end{example}
@@ -244,7 +244,7 @@ Consideramos os vetores
 \begin{bmatrix}
 0 \\ 1 \\ 1
 \end{bmatrix}.
-\end{equation} O espaço gerado por $\{\vec{v}_1, \vec{v}_2, \vec{v}_3 \}$ é todo o espaço $\bR^3$, já que temos três vetores  linearmente independentes em um espaço de dimensão três.
+\end{equation} O espaço gerado por $\{\vec{v}_1, \vec{v}_2, \vec{v}_3 \}$ é todo o espaço $\mathbb{R}^3$, já que temos três vetores  linearmente independentes em um espaço de dimensão três.
 
 O processo consiste em fixar qualquer um dos vetores como o primeiro dos vetores do conjunto que virá a ser ortogonal. Por exemplo, fixamos
 \begin{equation}
@@ -390,7 +390,7 @@ Observamos também que, fazendo a normalização dos vetores, podemos obter uma 
 
 
 
-Em seguida, mostramos como funciona o processo de maneira geral (um bom entendimento do exemplo acima deve deixar claro o porquê deste processo funcionar): sejam $k$ vetores linearmente independentes $\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_k$ pertencentes ao espaço $n$-dimensional $\bR^n$. Vamos denotar
+Em seguida, mostramos como funciona o processo de maneira geral (um bom entendimento do exemplo acima deve deixar claro o porquê deste processo funcionar): sejam $k$ vetores linearmente independentes $\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_k$ pertencentes ao espaço $n$-dimensional $\mathbb{R}^n$. Vamos denotar
 \begin{equation}
 W = \Span \{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_k\}
 \end{equation} e construir uma base ortogonal (e em seguida ortonormal) para $W$. Começamos com
@@ -435,7 +435,7 @@ Esta parte (obter o conjunto ortogonal) é a mais ``pesada'' do método. Por exe
 
 
 \begin{example}\footnote{A matriz $A$ deste exemplo foi retirada de Wikipedia.org \href{https://en.wikipedia.org/w/index.php?title=QR_decomposition&oldid=810854220}{neste} link permanente, em 21 de Novembro de 2017.}
-Vamos obter uma base ortonormal para o espaço coluna $\Col A$ da matriz
+Vamos obter uma base ortonormal para o espaço coluna $\operatorname{Col} A$ da matriz
 \begin{equation}
 A =
 \begin{bmatrix}
@@ -443,7 +443,7 @@ A =
 6 & 167 & -68 \\
 -4 & 24 & -41
 \end{bmatrix}.
-\end{equation} Lembrando que $\Col A$ é o espaço gerado pelas colunas de $A$ (e observando que, neste caso, $\dim \Col A = 3$), vamos aplicar o processo de Gram--Schmidt para os vetores
+\end{equation} Lembrando que $\operatorname{Col} A$ é o espaço gerado pelas colunas de $A$ (e observando que, neste caso, $\dim \operatorname{Col} A = 3$), vamos aplicar o processo de Gram--Schmidt para os vetores
 \begin{equation}
 \vec{v}_1 =
 \begin{bmatrix}
@@ -546,7 +546,7 @@ A =
    \|\vec{u}_3\| = \frac{\sqrt{30625}}{5} = 35
   \end{array}
 \right.
-\end{equation} Portanto, uma base ortonormal para $\Col A$ é
+\end{equation} Portanto, uma base ortonormal para $\operatorname{Col} A$ é
 \begin{equation}
 \vec{n}_1 = \frac{\vec{u}_1}{\|\vec{u}_1\|} =
 \begin{bmatrix}
@@ -595,7 +595,7 @@ para o espaço-coluna da matriz $A$. Para isso, definimos
 \vec{u}_3 = \vec{v}_3 - \proj_{\Span\{\vec{u}_1,\vec{u}_2\}} \vec{v}_3
 \end{cases}
 \end{equation}
-Desta forma, existem coeficientes $b_1$, $c_1$ e $c_2 \in \bR$ tais que
+Desta forma, existem coeficientes $b_1$, $c_1$ e $c_2 \in \mathbb{R}$ tais que
 \begin{equation}
 \begin{cases}
 \vec{u}_1 = \vec{v}_1 \\ 
@@ -604,7 +604,7 @@ Desta forma, existem coeficientes $b_1$, $c_1$ e $c_2 \in \bR$ tais que
 \end{cases}.
 \end{equation} Estes coeficientes são justamente aqueles que aparecem nas fórmulas \eqref{eqn:Gram-Schmidt-1} e \eqref{eqn:Gram-Schmidt-2}. Apenas denotamos desta forma para não poluir as equações e facilitar o entendimento.
 
-Em um segundo momento, cada um dos três vetores $\vec{u}_1$, $\vec{u}_2$, e $\vec{u}_3$ pode ser normalizado, ou seja, podemos dividir cada um deles pelo seu comprimento para obter uma base ortonormal. Assim, $\vec{u}_1$, $\vec{u}_2$, e $\vec{u}_3$ formam uma base ortonormal para o espaço coluna de $A$, e existem coeficientes $\alpha_1$, $\beta_1$, $\beta_2$, $\gamma_1$, $\gamma_2$ e $\gamma_3 \in \bR$ tais que\footnote{Para simplificar a notação, continuamos escrevendo $\vec{u}_i$ quando, na realidade, deveríamos escrever $\vec{u}_i/\|\vec{u}_i\|$. Observe também que cada um dos coeficientes é obtido simplesmente pela normalização dos vetores. Mais explicitamente, temos
+Em um segundo momento, cada um dos três vetores $\vec{u}_1$, $\vec{u}_2$, e $\vec{u}_3$ pode ser normalizado, ou seja, podemos dividir cada um deles pelo seu comprimento para obter uma base ortonormal. Assim, $\vec{u}_1$, $\vec{u}_2$, e $\vec{u}_3$ formam uma base ortonormal para o espaço coluna de $A$, e existem coeficientes $\alpha_1$, $\beta_1$, $\beta_2$, $\gamma_1$, $\gamma_2$ e $\gamma_3 \in \mathbb{R}$ tais que\footnote{Para simplificar a notação, continuamos escrevendo $\vec{u}_i$ quando, na realidade, deveríamos escrever $\vec{u}_i/\|\vec{u}_i\|$. Observe também que cada um dos coeficientes é obtido simplesmente pela normalização dos vetores. Mais explicitamente, temos
 \begin{equation}
 \alpha_1 = \frac{1}{\|\vec{u}_1\|}, \quad \beta_2 = \frac{1}{\|\vec{u}_2\|}, \quad \beta_1 = \frac{b_1}{\|\vec{u}_2\|}, \quad \gamma_3 = \frac{1}{\|\vec{u}_3\|}, \quad \gamma_1 = \frac{c_1}{\|\vec{u}_3\|} \quad \text{e} \quad \gamma_2 = \frac{c_2}{\|\vec{u}_3\|}.
 \end{equation}}
@@ -721,7 +721,7 @@ Assim, se $A=QR$, basta multiplicar ambos os lados desta equação por $Q^T$ pel
 
 
 
-No último exemplo da seção anterior, obtemos através do método de Gram-Schmidt uma base ortonormal para $\Col A$
+No último exemplo da seção anterior, obtemos através do método de Gram-Schmidt uma base ortonormal para $\operatorname{Col} A$
 onde 
 \begin{equation}
 A =

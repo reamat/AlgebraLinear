@@ -62,7 +62,7 @@ Um dos resultados mais importantes de Álgebra Linear é o Teorema Espectral, qu
 		\item todos os autovalores de $A$ são reais;
 		\item autovetores associados a autovalores distintos são ortogonais.
 		\item a dimensão do autoespaço associado a um autovalor é igual à multiplicidade deste autovalor como raiz do polinômio característico;
-		\item existe uma base ortonormal de $\bR^n$ formada por autovetores de $A$;
+		\item existe uma base ortonormal de $\mathbb{R}^n$ formada por autovetores de $A$;
 		\item $A$ é diagonalizável por uma matriz de mudança de coordenadas ortonormal $P$: a matriz $P$ cujas colunas são os autovetores (ortonormais) de $A$ é tal que 
 		\begin{equation}
 		P^{T} A P = P^{-1} A P = D.
@@ -139,9 +139,9 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	-1
 	\end{bmatrix}
 	\right\rbrace.
-	\end{equation} Observe que são de fato reais os autovalores e que os autovetores associados são ortogonais (faça a conta!). Se quisermos uma base ortonormal para $\bR^2$ formada por autovetores, normalizamos os que já obtivemos:
+	\end{equation} Observe que são de fato reais os autovalores e que os autovetores associados são ortogonais (faça a conta!). Se quisermos uma base ortonormal para $\mathbb{R}^2$ formada por autovetores, normalizamos os que já obtivemos:
 	\begin{equation}
-	\bR^2 = \Span \left\lbrace 
+	\mathbb{R}^2 = \Span \left\lbrace 
 	\begin{bmatrix}
 	1/\sqrt{2} \\
 	1/\sqrt{2}
@@ -282,7 +282,7 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 		\begin{bmatrix}
 		0 \\ 2 \\ 1
 		\end{bmatrix}.
-		\end{equation} Já era de se esperar que encontraríamos duas variáveis livres, porque sabemos (item $(iii)$ do Teorema Espectral) que deve ser dois a dimensão do autoespaço associado com um autovalor de multiplicidade dois.\footnote{Enfatizamos que isto não é verdade para qualquer matriz, apenas para as simétricas!} Concluimos que uma base para o autoespaço $\Nul (A - 7I)$ é
+		\end{equation} Já era de se esperar que encontraríamos duas variáveis livres, porque sabemos (item $(iii)$ do Teorema Espectral) que deve ser dois a dimensão do autoespaço associado com um autovalor de multiplicidade dois.\footnote{Enfatizamos que isto não é verdade para qualquer matriz, apenas para as simétricas!} Concluimos que uma base para o autoespaço $\operatorname{Nul} (A - 7I)$ é
 		\begin{equation}
 		\left\lbrace
 		\vec{v}_2 = \begin{bmatrix}
@@ -331,7 +331,7 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	4 \\ 2 \\ 5
 	\end{bmatrix}
 	\right\rbrace.
-	\end{equation} é uma base ortogonal de $\bR^3$ formada por autovalores da matriz $A$. Para obter uma base ortonormal, basta normalizar cada um dos vetores da base:
+	\end{equation} é uma base ortogonal de $\mathbb{R}^3$ formada por autovalores da matriz $A$. Para obter uma base ortonormal, basta normalizar cada um dos vetores da base:
 	\begin{equation}
 	\left\lbrace
 	\begin{bmatrix}
@@ -378,47 +378,47 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 \end{example}
 
 
-Enfatizamos ainda mais uma vez a aplicação do Teorema Espectral: ele afirma que, no caso de uma matriz simétrica $A$, o procedimento que aplicamos nos exemplos acima sempre vai funcionar! Teremos todos os autovalores reais. Sendo um autovalor $\lambda$ de multiplicidade $m$, seremos capazes de encontrar $m$ autovetores linearmente independentes, que geram o autoespaço $\Nul (A - \lambda I)$. Estes podem ser ortonormalizados pelo processo de Gram-Schmidt. Além disso, associados a autovalores distintos, temos autovetores ortogonais, de modo que seremos capazes de obter uma base ortonormal de autovetores de $A$.
+Enfatizamos ainda mais uma vez a aplicação do Teorema Espectral: ele afirma que, no caso de uma matriz simétrica $A$, o procedimento que aplicamos nos exemplos acima sempre vai funcionar! Teremos todos os autovalores reais. Sendo um autovalor $\lambda$ de multiplicidade $m$, seremos capazes de encontrar $m$ autovetores linearmente independentes, que geram o autoespaço $\operatorname{Nul} (A - \lambda I)$. Estes podem ser ortonormalizados pelo processo de Gram-Schmidt. Além disso, associados a autovalores distintos, temos autovetores ortogonais, de modo que seremos capazes de obter uma base ortonormal de autovetores de $A$.
 
 
 \subsection{Formas quadráticas}
 
 
-Nesta seção, apresentamos uma aplicação matemática de matrizes simétricas. Uma \textbf{forma quadrática} em $\bR^n$ é uma função polinomial em que todos os termos são de grau 2.
+Nesta seção, apresentamos uma aplicação matemática de matrizes simétricas. Uma \textbf{forma quadrática} em $\mathbb{R}^n$ é uma função polinomial em que todos os termos são de grau 2.
 
 \begin{example}\label{exemplo1}
-	A função $Q : \bR^2 \to \bR$, definida por 
+	A função $Q : \mathbb{R}^2 \to \mathbb{R}$, definida por 
 	\begin{equation}
 	Q(x_1, x_2) = 3 x_1^2 + x_1x_2
-	\end{equation} é uma forma quadrática em $\bR^2$, já que cada um dos termos tem grau 2.
+	\end{equation} é uma forma quadrática em $\mathbb{R}^2$, já que cada um dos termos tem grau 2.
 	
-	Mais geralmente, qualquer forma quadrática em $\bR^2$ pode ser escrita como
+	Mais geralmente, qualquer forma quadrática em $\mathbb{R}^2$ pode ser escrita como
 	\begin{equation}
 	Q(x_1, x_2) = a x_1^2 + 2 b x_1x_2 + cx_2^2,
-	\end{equation} onde $a,b,c \in \bR$, já que os três termos acima são todos os possíveis monômios de grau dois em duas variáveis $x_1$ e $x_2$. O coeficiente $2$ que aparece no segundo termo é motivado pela fórmula mais geral (\ref{geral}) abaixo (observe que cada termo $x_i x_j$ aparece duas vezes na soma).
+	\end{equation} onde $a,b,c \in \mathbb{R}$, já que os três termos acima são todos os possíveis monômios de grau dois em duas variáveis $x_1$ e $x_2$. O coeficiente $2$ que aparece no segundo termo é motivado pela fórmula mais geral (\ref{geral}) abaixo (observe que cada termo $x_i x_j$ aparece duas vezes na soma).
 \end{example}
 
 
 
 
 \begin{example}\label{exemplo2}
-	A função $Q : \bR^3 \to \bR$, definida por 
+	A função $Q : \mathbb{R}^3 \to \mathbb{R}$, definida por 
 	\begin{equation}
 	Q(x_1, x_2, x_3) = x_2^2 - x_3^2 + 3 x_1 x_2 - 8 x_1 x_3
-	\end{equation} é uma forma quadrática em $\bR^3$. Qualquer forma quadrática em $\bR^3$ pode ser escrita como
+	\end{equation} é uma forma quadrática em $\mathbb{R}^3$. Qualquer forma quadrática em $\mathbb{R}^3$ pode ser escrita como
 	\begin{equation}
 	Q(x_1, x_2) = a x_1^2 + b x_2^2 + cx_3^2 + 2 dx_1x_2 +2  ex_1x_3 +2  fx_2x_3,
-	\end{equation} onde $a,b,c, d, e, f \in \bR$.
+	\end{equation} onde $a,b,c, d, e, f \in \mathbb{R}$.
 \end{example}
 
 
-De forma geral, uma forma quadrática $Q :\bR^n \to \bR$ pode ser escrita como
+De forma geral, uma forma quadrática $Q :\mathbb{R}^n \to \mathbb{R}$ pode ser escrita como
 \begin{equation}\label{geral}
 Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij} x_i x_j,
 \end{equation} onde cada um dos coeficientes $a_{ij}$ são números reais. Podemos também supor que a matriz $A = (a_{ij})$ é simétrica.\footnote{Caso  $Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} \sum_{j=1}^{n} b_{ij} x_i x_j$ com uma matriz $B = (b_{ij})$  não  simétrica, podemos escrever $Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} b_{ii} x_i^2 + \sum_{i < j} (b_{ij} + b_{ji}) x_i x_j$. Definindo $a_{ij} = \frac{b_{ij} + b_{ji}}{2}$ temos também $Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} a_{ii} x_i^2 + 2 \sum_{i < j} a_{ij} x_i x_j$. Esta forma é mais semelhante com as dos exemplos acima. Note como aparece o coeficiente 2 nos termos com $i \neq j$. Finalmente, observamos que $A = (a_{ij})$ é uma matriz simétrica e que $\sum_{i=1}^{n} \sum_{j=1}^{n} b_{ij} x_i x_j = \sum_{i=1}^{n} a_{ii} x_i^2 + 2 \sum_{i < j} a_{ij} x_i x_j = \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij} x_i x_j.$}
 
 
-Notamos o seguinte: se $A$ é uma matriz de ordem $m \times n$ e $\vec{x} \in \bR^n$ é um vetor com $n$ componentes, então o vetor $A \vec{x}$, que é o produto de $A$ por $\vec{x}$, tem na sua $i$-ésima componente o produto escalar entre a linha $i$ de $A$ e o vetor $\vec{x}$:
+Notamos o seguinte: se $A$ é uma matriz de ordem $m \times n$ e $\vec{x} \in \mathbb{R}^n$ é um vetor com $n$ componentes, então o vetor $A \vec{x}$, que é o produto de $A$ por $\vec{x}$, tem na sua $i$-ésima componente o produto escalar entre a linha $i$ de $A$ e o vetor $\vec{x}$:
 \begin{equation}
 \left( A \vec{x} \right)_i = \text{componente $i$ de } A \vec{x} = \sum_{j=1}^{n} a_{ij} x_j.
 \end{equation} Dessa forma, temos
@@ -427,7 +427,7 @@ Q(x_1, x_2, \dots, x_n) = \sum_{i=1}^{n} \sum_{j=1}^{n} a_{ij} x_i x_j = \sum_{i
 \end{equation} E aí está a relação entre as formas quadráticas e matrizes simétricas. Acabamos de verificar que:
 \begin{equation}
 \boxed{\begin{array}{c}
-	\text{Qualquer forma quadrática em $\bR^n$ pode ser escrita na forma} \\
+	\text{Qualquer forma quadrática em $\mathbb{R}^n$ pode ser escrita na forma} \\
 	Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x}, \\
 	\text{onde $A$ é uma matriz simétrica de ordem $n\times n$.}
 	\end{array}}
@@ -440,7 +440,7 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 
 
 \begin{example}
-	Voltamos a analisar os Exemplos \ref{exemplo1} e \ref{exemplo2} acima. Uma forma quadrática em $\bR^2$ pode ser escrita na forma
+	Voltamos a analisar os Exemplos \ref{exemplo1} e \ref{exemplo2} acima. Uma forma quadrática em $\mathbb{R}^2$ pode ser escrita na forma
 	\begin{equation}
 	Q(x_1, x_2) = a x_1^2 + 2 b x_1x_2 + cx_2^2 = 
 	\begin{bmatrix}
@@ -513,10 +513,10 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 
 \subsection{Diagonalização de formas quadráticas}
 
-Embora não tenhamos dito explicitamente, estávamos trabalhando na base canônica de $\bR^n$. Da forma usual, é possível fazer mudança de coordenadas. Do ponto de vista da matriz $A$, que é simétrica e portanto diagonalizável, a base (ortonormal) de autovetores associados é a mais natural de todas. Suponhamos que 
+Embora não tenhamos dito explicitamente, estávamos trabalhando na base canônica de $\mathbb{R}^n$. Da forma usual, é possível fazer mudança de coordenadas. Do ponto de vista da matriz $A$, que é simétrica e portanto diagonalizável, a base (ortonormal) de autovetores associados é a mais natural de todas. Suponhamos que 
 \begin{equation}
 Q(\vec{x}) = \vec{x}^T A \vec{x}
-\end{equation} e que $\cB = \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_n\}$ é base ortonormal de $\bR^n$ formada por autovetores de $A$. Desta forma,
+\end{equation} e que $\mathcal{B} = \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_n\}$ é base ortonormal de $\mathbb{R}^n$ formada por autovetores de $A$. Desta forma,
 \begin{equation}
 P = 
 \begin{bmatrix}
@@ -524,7 +524,7 @@ P =
 \vec{v}_1 & \vec{v}_2 & \cdots & \vec{v}_n \\
 | & | &   & |  \\
 \end{bmatrix} \ \text{satisfaz} \ P^{-1}AP = D,
-\end{equation} onde $D$ é a matriz diagonal, com os respectivos autovalores na diagonal principal. Além disso, $P$ é ortogonal: $P^T = P^{-1}$. O vetor $\vec{x}$ pode ser representado na base $\cB$ por:
+\end{equation} onde $D$ é a matriz diagonal, com os respectivos autovalores na diagonal principal. Além disso, $P$ é ortogonal: $P^T = P^{-1}$. O vetor $\vec{x}$ pode ser representado na base $\mathcal{B}$ por:
 \begin{equation}
 \vec{x} = y_1 \vec{v}_1 + y_2 \vec{v}_2 + \cdots + y_n \vec{v}_n = P\vec{y}, \quad \text{onde denotamos} \quad \vec{y} = 
 \begin{bmatrix}
@@ -532,14 +532,14 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 \end{bmatrix} = 
 \begin{bmatrix}
 \vec{x}
-\end{bmatrix}_{\cB}.
-\end{equation} Agora, vamos escrever a forma quadrática na base $\cB$, isto é, em termos do vetor $\vec{y}$ (lembre que $\vec{x} = P \vec{y} \implies \vec{x}^T = \vec{y}^T P^T$):
+\end{bmatrix}_{\mathcal{B}}.
+\end{equation} Agora, vamos escrever a forma quadrática na base $\mathcal{B}$, isto é, em termos do vetor $\vec{y}$ (lembre que $\vec{x} = P \vec{y} \implies \vec{x}^T = \vec{y}^T P^T$):
 \begin{equation}
 \vec{x}^T A \vec{x} = (\vec{y}^T P^T) A (P \vec{y}) = \vec{y}^T (P^T A P) \vec{y} = \vec{y}^T D \vec{y}.
-\end{equation} Isto significa que, ao mudar da base canônica (componentes $x_i$) para a base $\cB$ (componentes $y_i$), temos
+\end{equation} Isto significa que, ao mudar da base canônica (componentes $x_i$) para a base $\mathcal{B}$ (componentes $y_i$), temos
 \begin{equation}
 \sum_{i,j=1}^{n} a_{ij} x_i x_j = \vec{x}^T A \vec{x} = \vec{y}^T D \vec{y} = \sum_{i=1}^{n} \lambda_i y_i^2,
-\end{equation} onde os números $\lambda_i \in \bR$ são os autovalores da matriz $A$ (são reais porque a matriz é simétrica). Em outras palavras, a base (ortonormal) de autovetores de $A$ deixou transformou a nossa forma quadrática original em uma que não possui mais termos mistos, muito mais simples de trabalhar.
+\end{equation} onde os números $\lambda_i \in \mathbb{R}$ são os autovalores da matriz $A$ (são reais porque a matriz é simétrica). Em outras palavras, a base (ortonormal) de autovetores de $A$ deixou transformou a nossa forma quadrática original em uma que não possui mais termos mistos, muito mais simples de trabalhar.
 
 
 \begin{example}
@@ -618,7 +618,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 
 \subsection{Aplicação à classificação de cônicas}
 
-Nesta subseção, nos restringimos a formas quadráticas em $\bR^2$. Uma \textbf{curva de nível} de uma forma quadrática, também conhecida como uma \textbf{cônica}, é um conjunto definido implicitamente pela equação
+Nesta subseção, nos restringimos a formas quadráticas em $\mathbb{R}^2$. Uma \textbf{curva de nível} de uma forma quadrática, também conhecida como uma \textbf{cônica}, é um conjunto definido implicitamente pela equação
 \begin{equation}
 Q(x_1, x_2) = k \quad \leftrightsquigarrow \quad ax_1^2 + bx_1x_2 + cx_2^2 = k,
 \end{equation} onde $k$ é uma constante. Em outras palavras, uma curva de nível é o conjunto de todos os pontos $(x_1, x_2)$ que satisfazem $Q(x_1, x_2) = k$.
@@ -695,7 +695,7 @@ Já conhecemos alguns exemplos:
 	\begin{bmatrix}
 	16 & 0 \\ 0 & 26
 	\end{bmatrix}
-	\end{equation} Assim, na base de $\bR^2$ determinada por $\{\vec{v}_1, \vec{v}_2\}$, podemos escrever a equação da equação cônica como
+	\end{equation} Assim, na base de $\mathbb{R}^2$ determinada por $\{\vec{v}_1, \vec{v}_2\}$, podemos escrever a equação da equação cônica como
 	\begin{equation}
 	\vec{x}^T A \vec{x} = \vec{y}^T D \vec{y} \implies 
 	\begin{bmatrix}
@@ -727,7 +727,7 @@ Q(\vec{x}) = \vec{x}^T A \vec{x}
 \end{equation} sujeitos à restrição 
 \begin{equation}
 x_1^2 + x_2^2 + \cdots + x_n^2 = 1,
-\end{equation} que caracteriza os pontos $(x_1, x_2, \dots, x_n) \in \bR^n$ que tem comprimento unitário, isto é, a esfera de raio 1 e centro na origem em $\bR^n$. Em outras palavras, nosso problema de otimização restrito consiste em achar, na esfera unitária, os vetores em que a forma quadrática $Q$ assume seu maior valor e seu menor valor.
+\end{equation} que caracteriza os pontos $(x_1, x_2, \dots, x_n) \in \mathbb{R}^n$ que tem comprimento unitário, isto é, a esfera de raio 1 e centro na origem em $\mathbb{R}^n$. Em outras palavras, nosso problema de otimização restrito consiste em achar, na esfera unitária, os vetores em que a forma quadrática $Q$ assume seu maior valor e seu menor valor.
 
 Mais resumidamente, queremos:
 \begin{equation}
@@ -758,7 +758,7 @@ P^{-1} A P = D =
 \end{equation} Mas a forma quadrática $\vec{y}^T D \vec{y}$ é mais fácil de maximizar: sendo $\lambda_n$ a maior das entradas da diagonal principal de $D$, temos (já que cada $\lambda_j \le \lambda_n$ e $\|\vec{y}\| = 1$)
 \begin{equation}
 \vec{y}^T D \vec{y} = \lambda_1 y_1^2 + \lambda_2 y_2^2 + \cdots + \lambda_n y_n^2 \le  \lambda_n (y_1^2 +y_2^2 + \cdots + y_n^2) = \lambda_n.
-\end{equation} Logo, $\lambda_n$ é uma cota superior para $\vec{y}^T D \vec{y}$. Além disso, já que $D$ é uma matriz diagonal, esta cota superior é atingida pelo vetor $\vec{y} = \vec{e}_n$, o último vetor da base canônica de $\bR^n$. Traduzindo estas informações para a variável $\vec{x}$, temos que $\lambda_n$ é o valor máximo de $\vec{x}^T A \vec{x}$ (pois é igual a $\vec{y}^T D \vec{y}$) na esfera unitária. Além disso, este valor máximo é atingido quando $\vec{x} = P \vec{e}_n = \vec{v}_n$, um autovetor unitário associado com o maior autovalor $\lambda_n$.
+\end{equation} Logo, $\lambda_n$ é uma cota superior para $\vec{y}^T D \vec{y}$. Além disso, já que $D$ é uma matriz diagonal, esta cota superior é atingida pelo vetor $\vec{y} = \vec{e}_n$, o último vetor da base canônica de $\mathbb{R}^n$. Traduzindo estas informações para a variável $\vec{x}$, temos que $\lambda_n$ é o valor máximo de $\vec{x}^T A \vec{x}$ (pois é igual a $\vec{y}^T D \vec{y}$) na esfera unitária. Além disso, este valor máximo é atingido quando $\vec{x} = P \vec{e}_n = \vec{v}_n$, um autovetor unitário associado com o maior autovalor $\lambda_n$.
 
 \begin{exercise}
 	Fazer toda a análise acima para o problema de minimização. \textit{Dica}: olhar para o menor autovalor.
@@ -876,17 +876,17 @@ Nesta seção vamos utilizar a notação $\langle \vec{u}, \vec{v} \rangle$ para
 \begin{remark}\label{sse}
 	Uma matriz quadrada $A$, não necessariamente simétrica, cujos coeficientes são reais, satisfaz
 	\begin{equation}
-	\langle A \vec{x}, \vec{y} \rangle = \langle\vec{x}, A^T \vec{y}\rangle, \quad \text{ para todos } \vec{x}, \vec{y} \in \bR^n.
+	\langle A \vec{x}, \vec{y} \rangle = \langle\vec{x}, A^T \vec{y}\rangle, \quad \text{ para todos } \vec{x}, \vec{y} \in \mathbb{R}^n.
 	\end{equation} Isto se pode verificar ao analisar os coeficientes de $A \vec{x}$ e de $A^T \vec{y}$. Assim, uma matriz $A$ de ordem $n \times n$ é \textbf{simétrica} se, e somente se, satisfaz
 	\begin{equation}
-	\langle A \vec{x}, \vec{y} \rangle = \langle\vec{x}, A \vec{y}\rangle, \quad \text{ para todos } \vec{x}, \vec{y} \in \bR^n.
+	\langle A \vec{x}, \vec{y} \rangle = \langle\vec{x}, A \vec{y}\rangle, \quad \text{ para todos } \vec{x}, \vec{y} \in \mathbb{R}^n.
 	\end{equation}
 	Outras formas de escrever esta mesma coisa (concorda?) são
 	\begin{equation}
-	A \vec{x} \cdot \vec{y} = \vec{x} \cdot A \vec{y}, \quad \text{ para todos } \vec{x}, \vec{y} \in \bR^n
+	A \vec{x} \cdot \vec{y} = \vec{x} \cdot A \vec{y}, \quad \text{ para todos } \vec{x}, \vec{y} \in \mathbb{R}^n
 	\end{equation} e 
 	\begin{equation}
-	\vec{y}^T A \vec{x} = \vec{x}^T A \vec{y}, \quad \text{ para todos } \vec{x}, \vec{y} \in \bR^n.
+	\vec{y}^T A \vec{x} = \vec{x}^T A \vec{y}, \quad \text{ para todos } \vec{x}, \vec{y} \in \mathbb{R}^n.
 	\end{equation}
 \end{remark}
 
@@ -933,10 +933,10 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na 
 \end{proposition}
 
 \begin{proof}
-	Suponhamos que $\lambda_1$ é um autovalor de $A$ de multiplicidade $k$. Seja $\vec{v}_1$ um autovetor unitário associado. Podemos encontrar uma base ortonormal de $\bR^n$ da qual $\vec{v}_1$ faz parte, isto é, podemos encontrar vetores unitários $\vec{y}_j$ de modo que
+	Suponhamos que $\lambda_1$ é um autovalor de $A$ de multiplicidade $k$. Seja $\vec{v}_1$ um autovetor unitário associado. Podemos encontrar uma base ortonormal de $\mathbb{R}^n$ da qual $\vec{v}_1$ faz parte, isto é, podemos encontrar vetores unitários $\vec{y}_j$ de modo que
 	\begin{equation}
 	\{ \vec{v}_1, \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}
-	\end{equation} é uma base ortonormal de $\bR^n$.
+	\end{equation} é uma base ortonormal de $\mathbb{R}^n$.
 	
 	Considere a matriz $Q$ cujas colunas são os elementos desta base:
 	\begin{equation}
@@ -1002,25 +1002,25 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na 
 	\det \left( A - \lambda I \right) = \det \left( Q^{-1} (A - \lambda I) Q \right) =	\det \left( \hat{A} - \lambda I \right) = (\lambda_1 - \lambda) \cdot \det (B - \lambda I),
 	\end{equation} onde $B$ é a matriz de ordem $(n-1)\times (n-1)$ dada por $(b_{ij})$. Além disso, se a multiplicidade de $\lambda_1$ como autovalor de $A$ for maior do que $1$, devemos ter, pela igualdade acima, que $\lambda_1$ também é um autovalor de $B$. Desta forma, $\hat{A}$ possui um autovetor unitário $\vec{v}_2$ associado com $\lambda_1$ que está contido em $\Span \{ \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}$ e, portanto, é distinto e linearmente independente a $\vec{v}_1$. O processo de Gram-Schmidt permite obter $\{\vec{v}_1, \vec{v}_2\}$ ortonormais.
 	
-	A partir daí, repetimos o processo completando o conjunto $\{\vec{v}_1, \vec{v}_2\}$ a uma base ortonormal $\{ \vec{v}_1, \vec{v}_2, \vec{y}_3, \dots, \vec{y}_n \}$ de $\bR^n$. Daí vamos obter um terceiro autovetor ortogonal aos anteriores e unitário. Procedemos desta meneira até encontrar $k$ autovetores ortogonais e unitários associados ao autovalor $\lambda_1$. Assim, o autoespaço $\Nul (A - \lambda_1 I)$ tem dimensão $k$, que é igual à multiplicidade do autovalor $\lambda_1$.
+	A partir daí, repetimos o processo completando o conjunto $\{\vec{v}_1, \vec{v}_2\}$ a uma base ortonormal $\{ \vec{v}_1, \vec{v}_2, \vec{y}_3, \dots, \vec{y}_n \}$ de $\mathbb{R}^n$. Daí vamos obter um terceiro autovetor ortogonal aos anteriores e unitário. Procedemos desta meneira até encontrar $k$ autovetores ortogonais e unitários associados ao autovalor $\lambda_1$. Assim, o autoespaço $\operatorname{Nul} (A - \lambda_1 I)$ tem dimensão $k$, que é igual à multiplicidade do autovalor $\lambda_1$.
 \end{proof}
 
 \subsection{Prova do Teorema Espectral}
 
 O Teorema Fundamental da Álgebra afirma que todo polinômio não constante de grau $n$ possui exatamente $n$ raízes complexas. Sendo assim, qualquer matriz $A$ de ordem $n\times n$ possui $n$ autovalores complexos. No entanto, sendo $A$ uma matriz simétrica, a Proposição \ref{reais} garante que todas estes $n$ autovalores são todos reais. Vamos denotar por
 \begin{equation}
-\lambda_1, \lambda_2, \dots, \lambda_k \in \bR
+\lambda_1, \lambda_2, \dots, \lambda_k \in \mathbb{R}
 \end{equation} os autovalores distintos de $A$ e por $m_1, m_2, \dots, m_k$ suas respectivas multiplicidades. Temos, em particular, que $m_1 + m_2 + \cdots + m_k = n$.
 
 Pela Proposição \ref{dimens}, a dimensão do autoespaço associado a $\lambda_1$ é $m_1$. Podemos encontrar (da maneira usual, por escalonamento) uma base de autovetores
 \begin{equation}
-\Nul (A - \lambda_1 I) = \Span \{ \vec{u}_1, \vec{u}_2, \dots, \vec{u}_{m_1} \}.
-\end{equation} Estes autovetores, possivelmente não são ortogonais, mas, aplicando o Processo de Gram-Schmidt, podemo obter uma base ortonormal de $\Nul (A - \lambda_1 I)$:
+\operatorname{Nul} (A - \lambda_1 I) = \Span \{ \vec{u}_1, \vec{u}_2, \dots, \vec{u}_{m_1} \}.
+\end{equation} Estes autovetores, possivelmente não são ortogonais, mas, aplicando o Processo de Gram-Schmidt, podemo obter uma base ortonormal de $\operatorname{Nul} (A - \lambda_1 I)$:
 \begin{equation}
-\Nul (A - \lambda_1 I) = \Span \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_{m_1} \}.
-\end{equation} Fazendo este mesmo procedimento para cada um dos autovalores, obtemos $n$ autovetores, que, consequentemente, formam uma base para $\bR^n$. Logo, $A$ é diagonalizável.
+\operatorname{Nul} (A - \lambda_1 I) = \Span \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_{m_1} \}.
+\end{equation} Fazendo este mesmo procedimento para cada um dos autovalores, obtemos $n$ autovetores, que, consequentemente, formam uma base para $\mathbb{R}^n$. Logo, $A$ é diagonalizável.
 
-Além disso, a Proposição \ref{ortog} garante que todo autovetor de um autoespaço é ortogonal a todo autovetor de outro autoespaço (associado a um autovalor diferente). Temos então $k$ autoespaços, cujas bases são ortonormais e elementos da base de um autoespaço são ortogonais aos elementos das outras bases. Segue daí que a união das bases dos autoespaços, como consideramos, é uma base \textit{ortonormal} para $\bR^n$.
+Além disso, a Proposição \ref{ortog} garante que todo autovetor de um autoespaço é ortogonal a todo autovetor de outro autoespaço (associado a um autovalor diferente). Temos então $k$ autoespaços, cujas bases são ortonormais e elementos da base de um autoespaço são ortogonais aos elementos das outras bases. Segue daí que a união das bases dos autoespaços, como consideramos, é uma base \textit{ortonormal} para $\mathbb{R}^n$.
 
 Explicitamente, a matriz
 \begin{equation}

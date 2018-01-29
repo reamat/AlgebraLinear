@@ -16,7 +16,7 @@
 
 \section{Dependência e independência linear}
 
-Nós vimos, por definição, que um vetor $\vec{v} \in \bR^m$ é combinação linear dos $k$ vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ quando conseguirmos encontrar números reais $x_1, x_2, \dots, x_k$ tais que
+Nós vimos, por definição, que um vetor $\vec{v} \in \mathbb{R}^m$ é combinação linear dos $k$ vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \mathbb{R}^m$ quando conseguirmos encontrar números reais $x_1, x_2, \dots, x_k$ tais que
 \begin{equation}
 x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{v}.
 \end{equation} Vimos também que para decidir se um vetor é combinação linear de outros, devemos verificar se existem estes números reais $x_1, x_2, \dots, x_k$. Em coordenadas, isto é equivalente a resolver o sistema linear:
@@ -49,13 +49,13 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{v}.
 \right].
 \end{equation}
 
-Agora, dizemos que os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ são \textbf{linearmente independentes (LI)} se nenhum dos vetores puder ser escrito combinação linear dos demais. Uma forma de escrever isto matematicamente é a seguinte:
+Agora, dizemos que os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \mathbb{R}^m$ são \textbf{linearmente independentes (LI)} se nenhum dos vetores puder ser escrito combinação linear dos demais. Uma forma de escrever isto matematicamente é a seguinte:
 \begin{equation}
 \boxed{\text{Se } x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{0}, \text{ então } x_1 = x_2 = \cdots = x_k = 0.}
 \end{equation} De fato, imaginem que pelo menos um dos coeficientes acima fosse diferente de zero, digamos $x_2 \neq 0$. Daí podemos dividir por $x_2$ e conseguiríamos escrever o vetor $\vec{v}_2$ como combinação linear dos demais:
 \begin{equation}
 \vec{v}_2 = - \frac{x_1}{x_2} \, \vec{v}_1 - \frac{x_3}{x_2} \, \vec{v}_3 - \cdots - \frac{x_k}{x_2} \, \vec{v}_k.
-\end{equation} Se os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m$ não forem linearmente independentes, então nós dizemos que eles são \textbf{linearmente dependentes (LD)}.
+\end{equation} Se os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \mathbb{R}^m$ não forem linearmente independentes, então nós dizemos que eles são \textbf{linearmente dependentes (LD)}.
 
 \begin{example}\label{exp:1}
 Vamos verificar se os vetores
@@ -240,8 +240,8 @@ Resolver a equação vetorial equivale a resolver o sistema linear
 
 O argumento que utilizamos no Exemplo \ref{exp:2} acima é geral e se aplica em várias situações. Temos
 \begin{equation}
-\boxed{\text{Se $k>m$, então os vetores } \vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \bR^m \text{ são necessariamente LD.}}
-\end{equation} Desta forma, não existem quatro vetores LI em $\bR^3$. Não conseguiríamos encontrar sete vetores LI em $\bR^5$ e assim por diante.
+\boxed{\text{Se $k>m$, então os vetores } \vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \mathbb{R}^m \text{ são necessariamente LD.}}
+\end{equation} Desta forma, não existem quatro vetores LI em $\mathbb{R}^3$. Não conseguiríamos encontrar sete vetores LI em $\mathbb{R}^5$ e assim por diante.
 
 
 Façamos agora algumas observações gerais sobre independência linear:
@@ -299,7 +299,7 @@ A = \left[
    -2&1&2&-3
 \end{array}
 \right].
-\end{equation} Como as colunas de $A$ são quatro vetores de $\bR^4$, pode ser que sejam LI (caso tivesse uma coluna a mais, saberíamos automaticamente serem LD). Aplicando o algoritmo de escalonamento, sabemos que
+\end{equation} Como as colunas de $A$ são quatro vetores de $\mathbb{R}^4$, pode ser que sejam LI (caso tivesse uma coluna a mais, saberíamos automaticamente serem LD). Aplicando o algoritmo de escalonamento, sabemos que
 \begin{equation}
 A \sim \left[
 \begin{array}{cccc}
@@ -332,13 +332,13 @@ Uma \textbf{transformação linear} é um tipo especial de função que associa 
 T: \{ \text{vetores} \} \to \{ \text{vetores} \}
 \end{equation} e com a propriedade adicional:
 \begin{equation}
-T\big( a \vec{u} + b \vec{v} \big) = aT(\vec{u}) + bT(\vec{v}), \quad \text{para todos } a, b \in \bR \quad \text{e todos } \vec{u}, \vec{v}.
+T\big( a \vec{u} + b \vec{v} \big) = aT(\vec{u}) + bT(\vec{v}), \quad \text{para todos } a, b \in \mathbb{R} \quad \text{e todos } \vec{u}, \vec{v}.
 \end{equation}
 Em geral, pensamos em uma transformação linear como ``transformando um vetor em outro'' de forma linear, isto é, satisfazendo a propriedade acima.
 
 
 \begin{example}
-A aplicação $T: \bR^3 \to \bR^3$ dada por $T(\vec{u}) = 3\vec{u}$ é a transformação linear que transforma um vetor de $\bR^3$ no vetor que tem o triplo do comprimento. Utilizamos a própria fórmula da transformada para verificar que a tranformação $T$ é de fato linear:
+A aplicação $T: \mathbb{R}^3 \to \mathbb{R}^3$ dada por $T(\vec{u}) = 3\vec{u}$ é a transformação linear que transforma um vetor de $\mathbb{R}^3$ no vetor que tem o triplo do comprimento. Utilizamos a própria fórmula da transformada para verificar que a tranformação $T$ é de fato linear:
 \begin{equation}
 T\big( a \vec{u} + b \vec{v} \big) = 3 ( a \vec{u} + b \vec{v} ) = a \cdot 3 \vec{u} + b \cdot 3 \vec{v} = aT(\vec{u}) + bT(\vec{v}). \lhd
 \end{equation}
@@ -352,7 +352,7 @@ Também é linear a transformação que faz uma rotação de um ângulo $\pi / 2
 
 
 \begin{example}\label{exp:7}
-Consideramos a transformação $T: \bR^2 \to \bR^3$, que transforma vetores de $\bR^2$ em vetores de $\bR^3$, dada pela fórmula
+Consideramos a transformação $T: \mathbb{R}^2 \to \mathbb{R}^3$, que transforma vetores de $\mathbb{R}^2$ em vetores de $\mathbb{R}^3$, dada pela fórmula
 \begin{equation}
 T(x_1, x_2) = (x_1 - 3 x_2, 3x_1 + 5x_2, -x_1 + x_2).
 \end{equation} Nota que, excepcionalmente, estamos representando os vetores como linhas. É comum quando tratamos de transformações lineares. Esta fórmula nos diz, por exemplo, que os vetores
@@ -418,7 +418,7 @@ T\big(\vec{v}\big) =
 Voltemos à transformação linear
 \begin{equation}
 T(x_1, x_2) = (x_1 - 3 x_2, 3x_1 + 5x_2, -x_1 + x_2)
-\end{equation} do Exemplo \ref{exp:7}. Lembramos que um vetor qualquer de $\bR^2$ pode ser escrito como combinação linear dos vetores
+\end{equation} do Exemplo \ref{exp:7}. Lembramos que um vetor qualquer de $\mathbb{R}^2$ pode ser escrito como combinação linear dos vetores
 \begin{equation}
 \vec{e}_1 =
 \left[
@@ -506,13 +506,13 @@ x_1 \left[
     x_2 \\
   \end{array}
 \right].
-\end{equation} Desta forma, associamos uma matriz de ordem $3 \times 2$ à transformação linear $T: \bR^2 \to \bR^3$.
+\end{equation} Desta forma, associamos uma matriz de ordem $3 \times 2$ à transformação linear $T: \mathbb{R}^2 \to \mathbb{R}^3$.
 
-O procedimento que aplicamos acima não é particular do exemplo que analisamos, de modo que é sempre possível associar a uma transformação linear $T: \bR^n \to \bR^m$ uma matriz $A$ de ordem $m\times n$, chamada \textbf{matriz canônica associada à transformação linear} $T$ ou apenas \textbf{matriz associada} a $T$, cujas colunas são os vetores $T(\vec{e}_1), T(\vec{e}_2), T(\vec{e}_3), \dots, T(\vec{e}_n) \in \bR^m$ (e portanto $n$ colunas com $m$ componentes cada).
+O procedimento que aplicamos acima não é particular do exemplo que analisamos, de modo que é sempre possível associar a uma transformação linear $T: \mathbb{R}^n \to \mathbb{R}^m$ uma matriz $A$ de ordem $m\times n$, chamada \textbf{matriz canônica associada à transformação linear} $T$ ou apenas \textbf{matriz associada} a $T$, cujas colunas são os vetores $T(\vec{e}_1), T(\vec{e}_2), T(\vec{e}_3), \dots, T(\vec{e}_n) \in \mathbb{R}^m$ (e portanto $n$ colunas com $m$ componentes cada).
 
 
 \begin{example}
-A transformação linear $T: \bR^3 \to \bR^3$, $T(\vec{u}) = 5 \vec{u}$, satisfaz
+A transformação linear $T: \mathbb{R}^3 \to \mathbb{R}^3$, $T(\vec{u}) = 5 \vec{u}$, satisfaz
 \begin{equation}
 T(\vec{e}_1) =
 \left[
@@ -559,7 +559,7 @@ T(\vec{x}) = \left[
 
 
 \begin{example}\label{exp:rotacao}
-O método acima pode também ser aplicado para conseguirmos uma fórmula para transformações lineares como as do Exemplo \ref{exp:4}. Vamos considerar a aplicação $T: \bR^2 \to \bR^2$ definida por
+O método acima pode também ser aplicado para conseguirmos uma fórmula para transformações lineares como as do Exemplo \ref{exp:4}. Vamos considerar a aplicação $T: \mathbb{R}^2 \to \mathbb{R}^2$ definida por
 \begin{equation}
 T(\vec{x}) = \text{rotação no sentido anti-horário de $\vec{x}$ por um ângulo } \theta \in (0, 2\pi).
 \end{equation} A matriz da transformação linear tem por colunas a imagem por $T$ dos vetores $\vec{e}_1$ e $\vec{e}_2$. Observamos que (ver figura)
@@ -621,7 +621,7 @@ Estas definições são usuais para funções quaisquer. A partir de agora, vamo
 
 \subsection{Transformações lineares injetoras}
 
-A transformação linear $T: \bR^n \to \bR^m$ é injetora quando, para $\vec{b} \in \bR^m$, a equação
+A transformação linear $T: \mathbb{R}^n \to \mathbb{R}^m$ é injetora quando, para $\vec{b} \in \mathbb{R}^m$, a equação
 \begin{equation}
 T(\vec{x}) = \vec{b}
 \end{equation} possuir uma única solução ou nenhuma (no máximo uma -- comparar com a definição acima). Como vimos, existe uma matriz $A$ de ordem $m\times n$ associada à transformação linear $T$, de modo que temos que analisar as soluções de
@@ -660,18 +660,18 @@ Vamos deixar exemplos de injetividade para a subseção seguinte (ver Exemplos \
 
 \subsection{Transformações lineares sobrejetoras}
 
-A transformação linear $T: \bR^n \to \bR^m$ é sobrejetora quando, para todo $\vec{b} \in \bR^n$, a equação
+A transformação linear $T: \mathbb{R}^n \to \mathbb{R}^m$ é sobrejetora quando, para todo $\vec{b} \in \mathbb{R}^n$, a equação
 \begin{equation}
 T(\vec{x}) = \vec{b}
-\end{equation} possui alguma solução (comparar com a definição no início desta seção). Seja $A$ a matriz de ordem $m\times n$ associada a $T$. Assim, para verificar que $T$ é sobrejetora, devemos verificar que, para qualquer $\vec{b} \in \bR^m$, o sistema linear
+\end{equation} possui alguma solução (comparar com a definição no início desta seção). Seja $A$ a matriz de ordem $m\times n$ associada a $T$. Assim, para verificar que $T$ é sobrejetora, devemos verificar que, para qualquer $\vec{b} \in \mathbb{R}^m$, o sistema linear
 \begin{equation}
 A\vec{x} = \vec{b}
 \end{equation} possui ao menos uma solução (uma ou infinitas). Isto é equivalente a:
 
 
 \begin{equation}
-\boxed{\text{$T$ é sobrejetora se, e somente se, as colunas de $A$ geram todo o espaço $\bR^m$.}}
-\end{equation} Em particular, este caso somente é possível se $n \ge m$ (veremos mais adiante no curso -- a imagem da transformação $T: \bR^n \to \bR^m$ será de dimensão no máximo igual a $n$).
+\boxed{\text{$T$ é sobrejetora se, e somente se, as colunas de $A$ geram todo o espaço $\mathbb{R}^m$.}}
+\end{equation} Em particular, este caso somente é possível se $n \ge m$ (veremos mais adiante no curso -- a imagem da transformação $T: \mathbb{R}^n \to \mathbb{R}^m$ será de dimensão no máximo igual a $n$).
 
 
 \begin{example}\label{exp:injsob1}
@@ -684,7 +684,7 @@ A = \left[
     0  & 0 & 0 & 3 \\
   \end{array}
 \right].
-\end{equation} Como são quatro colunas de $\bR^3$, vemos que as colunas são LD e, portanto, $T$ não é injetora.
+\end{equation} Como são quatro colunas de $\mathbb{R}^3$, vemos que as colunas são LD e, portanto, $T$ não é injetora.
 
 Por outro lado, a matriz já está em forma escalonada. Vamos analisar se o sistema
 \begin{equation}
@@ -696,7 +696,7 @@ A \vec{x} = \vec{b} \iff
     0  & 0 & 0 & 3& b_3\\
   \end{array}
 \right]
-\end{equation} possui solução para todo $\vec{b} \in \bR^3$. De fato, o sistema possui solução (já que nenhuma linha da sua forma escalonada é inconsistente). Em verdade, o sistema possui uma variável livre. Logo, $T$ é sobrejetora.
+\end{equation} possui solução para todo $\vec{b} \in \mathbb{R}^3$. De fato, o sistema possui solução (já que nenhuma linha da sua forma escalonada é inconsistente). Em verdade, o sistema possui uma variável livre. Logo, $T$ é sobrejetora.
 \end{example}
 
 
@@ -712,12 +712,12 @@ A = \left[
 \right].
 \end{equation} Como são somente duas colunas, é fácil ver que uma não é múltipla da outra: por causa das primeiras componentes, podemos pensar que a primeira coluna é três vezes a primeira, mas verificando a segunda linha já não dá certo $3\cdot 7 \neq 5$. Logo, as colunas são LI e a transformação $T$ é injetora.
 
-Por outro lado,  as colunas de $A$ geram um espaço de dimensão no máximo 2; logo, não geram $\bR^3$. Portanto, $T$ não é sobrejetora.
+Por outro lado,  as colunas de $A$ geram um espaço de dimensão no máximo 2; logo, não geram $\mathbb{R}^3$. Portanto, $T$ não é sobrejetora.
 \end{example}
 
 
 \subsection{Transformações lineares invertíveis}
 
-Pelas observações das últimas subseções, só é possível da transformação linear $T: \bR^n \to \bR^m$ ser invertível quando $m=n$, pois $T$ deverá ser ao mesmo tempo injetora e sobrejetora. Veremos na semana seguinte um método para calcular a transformação inversa $T^{-1}$, que será também uma transformação linear.
+Pelas observações das últimas subseções, só é possível da transformação linear $T: \mathbb{R}^n \to \mathbb{R}^m$ ser invertível quando $m=n$, pois $T$ deverá ser ao mesmo tempo injetora e sobrejetora. Veremos na semana seguinte um método para calcular a transformação inversa $T^{-1}$, que será também uma transformação linear.
 
 \end{document} 

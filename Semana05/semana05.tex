@@ -130,7 +130,7 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	\end{array}
 	\right],
 	\end{equation} que são as colunas da matriz $A$. Logo, resolver o sistema linear é equivalente a perguntar se $\vec{b}$ está no espaço gerado por $\vec{v}_1, \vec{v}_2$ e $\vec{v}_3$, isto é, se $\vec{b} \in \Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$.
-	\item \textbf{Transformações lineares}: Decidir se $\vec{b}$ pertence à imagem da transformação linear $T: \bR^3 \to \bR^3$, definida por:
+	\item \textbf{Transformações lineares}: Decidir se $\vec{b}$ pertence à imagem da transformação linear $T: \mathbb{R}^3 \to \mathbb{R}^3$, definida por:
 	\begin{equation}
 	T(x_1, x_2, x_3) = (7x_1 - 3x_2, 3x_1 - x_2 + x_3, x_2 + 2x_3).
 	\end{equation} Apesar de esta ser apenas uma outra maneira de escrever a forma matricial, ela tem uma interpretação diferente, já que traz a linguagem de teoria de funções para o contexto de Álgebra Linear. De fato, vemos que a matriz canônica associada a $T$ é $A$, de modo que
@@ -201,14 +201,14 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 		\item Todas as colunas da matriz $A$ possuem posição de pivô e portanto a forma escalonada reduzida da matriz $A$ será a matriz identidade $I_3$. Em particular, seria possível obter a matriz inversa a $A$, desde que começássemos escalonando a matriz $[A \ |  I_3 ]$.
 	\end{itemize} Agora, vejamos como poderíamos reescrever estas conclusões utilizando os conceitos estudados nas semanas anteriores:
 	\begin{itemize}
-		\item Para todo $\vec{b} \in \bR^3$, o sistema $A \vec{x} = \vec{b}$ possui exatamente uma solução;
-		\item Todo vetor $\vec{b} \in \bR^3$ pode ser escrito como combinação linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
-		\item Todo vetor $\vec{b} \in \bR^3$ pertence a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$, espaço gerado pelas colunas de $A$;
-		\item $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\} = \bR^3$;
+		\item Para todo $\vec{b} \in \mathbb{R}^3$, o sistema $A \vec{x} = \vec{b}$ possui exatamente uma solução;
+		\item Todo vetor $\vec{b} \in \mathbb{R}^3$ pode ser escrito como combinação linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
+		\item Todo vetor $\vec{b} \in \mathbb{R}^3$ pertence a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$, espaço gerado pelas colunas de $A$;
+		\item $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\} = \mathbb{R}^3$;
 		\item $A$ é equivalente por linhas à matriz identidade $I_3$;
 		\item $A$ é invertível;
-		\item A imagem da transformação linear $T(\vec{x}) = A \vec{x}$ é todo o espaço $\bR^3$, isto é, $T$ é sobrejetora;
-		\item A equação $T(\vec{x}) = \vec{b}$ possui no máximo uma solução para cada $\vec{b} \in \bR^3$ (de fato, possui exatamente uma!), de modo que $T$ é injetora;
+		\item A imagem da transformação linear $T(\vec{x}) = A \vec{x}$ é todo o espaço $\mathbb{R}^3$, isto é, $T$ é sobrejetora;
+		\item A equação $T(\vec{x}) = \vec{b}$ possui no máximo uma solução para cada $\vec{b} \in \mathbb{R}^3$ (de fato, possui exatamente uma!), de modo que $T$ é injetora;
 		\item $T$ é invertível, já que é ao mesmo tempo injetora e sobrejetora.
 	\end{itemize} Todas estas conclusões vieram de alguns passos que levaram a matriz $A$ à sua forma escalonada. Como veremos adiante, ainda mais coisas poderiam ser ditas! $\ \lhd$
 \end{example}
@@ -274,13 +274,13 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 		\item A forma escalonada reduzida de $A$ não é a identidade, isto é, $A$ não é equivalente por linhas a $I_3$. Em particular, $A$ não é invertível.
 	\end{itemize} Vamos reescrever estas conclusões como no exemplo anterior:
 	\begin{itemize}
-		\item Existe $\vec{b}_1 \in \bR^3$ tal que o sistema $A \vec{x} = \vec{b}_1$ possui infinitas soluções e existe $\vec{b}_2 \in \bR^3$ tal que o sistema $A \vec{x} = \vec{b}_2$ possui infinitas soluções;
-		\item Nem todo vetor $\vec{b} \in \bR^3$ pode ser escrito como combinação linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
-		\item Existe $\vec{b} \in \bR^3$ não pertencente a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$;
-		\item $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\} \neq \bR^3$;
+		\item Existe $\vec{b}_1 \in \mathbb{R}^3$ tal que o sistema $A \vec{x} = \vec{b}_1$ possui infinitas soluções e existe $\vec{b}_2 \in \mathbb{R}^3$ tal que o sistema $A \vec{x} = \vec{b}_2$ possui infinitas soluções;
+		\item Nem todo vetor $\vec{b} \in \mathbb{R}^3$ pode ser escrito como combinação linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
+		\item Existe $\vec{b} \in \mathbb{R}^3$ não pertencente a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$;
+		\item $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\} \neq \mathbb{R}^3$;
 		\item $A$ não é equivalente por linhas à matriz identidade $I_3$;
 		\item $A$ não é invertível;
-		\item A imagem da transformação linear $T(\vec{x}) = A \vec{x}$ não é todo o espaço $\bR^3$, isto é, $T$ não é sobrejetora;
+		\item A imagem da transformação linear $T(\vec{x}) = A \vec{x}$ não é todo o espaço $\mathbb{R}^3$, isto é, $T$ não é sobrejetora;
 		\item A equação $T(\vec{x}) = \vec{b}$ pode possuir mais de uma solução, de modo que $T$ não é injetora;
 		\item $T$ não é invertível, já que não é injetora e nem sobrejetora.  $\ \lhd$
 	\end{itemize}
@@ -301,12 +301,12 @@ A discussão feita na seção anterior é válida para matrizes quadradas de for
 		\item Existe uma matriz $C$ tal que $CA = I_n$;
 		\item $A$ é equivalente por linhas à matriz identidade $I_n$;
 		\item $A$ tem $n$ posições de pivô;
-		\item Para todo $\vec{b} \in \bR^3$, o sistema $A \vec{x} = \vec{b}$ possui exatamente uma solução;
+		\item Para todo $\vec{b} \in \mathbb{R}^3$, o sistema $A \vec{x} = \vec{b}$ possui exatamente uma solução;
 		\item O sistema $A \vec{x} = \vec{0}$ possui somente a solução trivial;
 		\item As colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$ são linearmente independentes;
-		\item Todo vetor $\vec{b} \in \bR^3$ pode ser escrito como combinação linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
-		\item Todo vetor $\vec{b} \in \bR^3$ pertence a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$, espaço gerado pelas colunas de $A$;
-		\item As colunas de $A$ geram $\bR^n$: $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\} = \bR^3$;
+		\item Todo vetor $\vec{b} \in \mathbb{R}^3$ pode ser escrito como combinação linear das colunas $\vec{v}_1, \vec{v}_2, \vec{v}_3$ de $A$;
+		\item Todo vetor $\vec{b} \in \mathbb{R}^3$ pertence a $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$, espaço gerado pelas colunas de $A$;
+		\item As colunas de $A$ geram $\mathbb{R}^n$: $\Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\} = \mathbb{R}^3$;
 		\item $T(\vec{x}) = A \vec{x}$ é sobrejetora;
 		\item $T(\vec{x}) = A \vec{x}$ é injetora;
 		\item $T(\vec{x}) = A \vec{x}$ é invertível,
@@ -326,9 +326,9 @@ O teorema é utilizado na prática da mesma maneira que fizemos na seção anter
 \section{Espaços vetoriais}
 
 
-Um espaço vetorial (sobre o conjunto $\bR$ de escalares) é um conjunto $V$ equipado com as operações de soma de vetores e de multiplicação por escalar e que satisfazem as propriedades usuais dos espaços $\bR^n$. A ideia é que vários conjuntos mais abstratos possuem a estrutura parecida com a dos espaços $\bR^n$ e esta abordagem permite que façamos uma análise sistemática de todos estes casos.
+Um espaço vetorial (sobre o conjunto $\mathbb{R}$ de escalares) é um conjunto $V$ equipado com as operações de soma de vetores e de multiplicação por escalar e que satisfazem as propriedades usuais dos espaços $\mathbb{R}^n$. A ideia é que vários conjuntos mais abstratos possuem a estrutura parecida com a dos espaços $\mathbb{R}^n$ e esta abordagem permite que façamos uma análise sistemática de todos estes casos.
 
-De forma mais precisa, um \textbf{espaço vetorial sobre $\bR$} é um conjunto $V$, cujos elementos são chamados vetores, equipado com duas operações:
+De forma mais precisa, um \textbf{espaço vetorial sobre $\mathbb{R}$} é um conjunto $V$, cujos elementos são chamados vetores, equipado com duas operações:
 \begin{itemize}
 	\item Soma entre vetores, que satisfaz
 	\begin{enumerate}
@@ -339,15 +339,15 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\bR$} é um conjunto $
 	\end{enumerate}
 	\item Multiplicação de vetor por escalar, que satisfaz
 	\begin{enumerate}
-		\item[5.] Associatividade da multiplicação por escalar: $a\cdot (b\cdot v)=(a\cdot b)\cdot v$, para quaisquer $a,b \in \bR$ e qualquer $v \in V$;
+		\item[5.] Associatividade da multiplicação por escalar: $a\cdot (b\cdot v)=(a\cdot b)\cdot v$, para quaisquer $a,b \in \mathbb{R}$ e qualquer $v \in V$;
 		\item[6.] Vale que $1 \cdot v = v$, ou seja, a unidade dos números reais não altera os vetores de $V$;
-		\item[7.] Distributiva de um escalar em relação à soma de vetores: $a \cdot (u+v) = a\cdot v+a\cdot u$, para qualquer $a \in \bR$ e quaisquer $u,v \in V$;
-		\item[8.] Distributiva da soma de escalares em relação a um vetor: $(a+b) \cdot v = a \cdot v+b \cdot v$, para quaisquer $a,b \in \bR$ e qualquer $v \in V$.
+		\item[7.] Distributiva de um escalar em relação à soma de vetores: $a \cdot (u+v) = a\cdot v+a\cdot u$, para qualquer $a \in \mathbb{R}$ e quaisquer $u,v \in V$;
+		\item[8.] Distributiva da soma de escalares em relação a um vetor: $(a+b) \cdot v = a \cdot v+b \cdot v$, para quaisquer $a,b \in \mathbb{R}$ e qualquer $v \in V$.
 	\end{enumerate}
 \end{itemize}
 
 \begin{example}
-	Naturalmente, $\bR$, $\bR^2$, $\bR^3$, ..., $\bR^n$ são espaços vetoriais sobre $\bR$, já que as propriedades acima foram todas inspiradas nas propriedades válidas para vetores de $\bR^n$.
+	Naturalmente, $\mathbb{R}$, $\mathbb{R}^2$, $\mathbb{R}^3$, ..., $\mathbb{R}^n$ são espaços vetoriais sobre $\mathbb{R}$, já que as propriedades acima foram todas inspiradas nas propriedades válidas para vetores de $\mathbb{R}^n$.
 \end{example}
 
 
@@ -397,17 +397,17 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\bR$} é um conjunto $
 
 
 \begin{example}\label{funcoes}
-  O conjunto de todas as funções de um intervalo $I$ em $\bR$
+  O conjunto de todas as funções de um intervalo $I$ em $\mathbb{R}$
   \begin{equation}
-    \mathcal{F} (I;\bR) = \left\{ f: I \to \bR \text{funções} \right\}.  
+    \mathcal{F} (I;\mathbb{R}) = \left\{ f: I \to \mathbb{R} \text{funções} \right\}.  
   \end{equation}
-  forma um espaço vetorial sobre $\bR$, com as operações:
+  forma um espaço vetorial sobre $\mathbb{R}$, com as operações:
   \begin{itemize}
-  \item Dadas duas funções $f$ e $g$, a função $f+g : I \to \bR$ é definida por
+  \item Dadas duas funções $f$ e $g$, a função $f+g : I \to \mathbb{R}$ é definida por
     \begin{equation}
     \big( f+g \big) (x) = f(x) + g(x).
     \end{equation}
-  \item Dada uma função $f$ e um número real $k$, a função $k \cdot f : I \to \bR$ é definida por
+  \item Dada uma função $f$ e um número real $k$, a função $k \cdot f : I \to \mathbb{R}$ é definida por
     \begin{equation}
     \big( k \cdot f \big) (x) = k \cdot f(x).
     \end{equation}
@@ -431,29 +431,29 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 	Um subconjunto $H \subseteq V$ é subespaço de $V$ se, e somente se, as duas propriedades abaixo são verificadas:
 	\begin{itemize}
 		\item $0 \in H$;
-		\item $a\cdot u + b \cdot v \in V$ para quaisquer $a, b \in \bR$ e quaisquer $u,v \in V$.
+		\item $a\cdot u + b \cdot v \in V$ para quaisquer $a, b \in \mathbb{R}$ e quaisquer $u,v \in V$.
 	\end{itemize}
 \end{theorem}
 
 
 \begin{example}\label{reta}
-	A reta $H_1 = \{y = 2x\}$ em $\bR^2$ é um subespaço de $\bR^2$. Temos que
+	A reta $H_1 = \{y = 2x\}$ em $\mathbb{R}^2$ é um subespaço de $\mathbb{R}^2$. Temos que
 	\begin{itemize}
 		\item $\vec{0} = (0,0)$ pertence a reta, pois satisfaz a equação da reta: $0 = 2\cdot 0$;
 		\item se $(x_1, y_1)$ e $(x_2, y_2)$ pertencem à reta, vamos verificar que $(ax_1 + b x_2, ay_1 + b y_2)$ também pertence:
 		\begin{equation}
 		ay_1 + b y_2 = a \cdot (2x_1) + b\cdot (2x_2) = 2 (ax_1 + b x_2).
-		\end{equation} Portanto, $H$ é um subespaço de $\bR^2$.
+		\end{equation} Portanto, $H$ é um subespaço de $\mathbb{R}^2$.
 	\end{itemize}
 \end{example}
 
 \begin{example}
-	A reta $H_2 = \{y = 2x + 3\}$ \underline{não} é um subespaço de $\bR^2$. De fato, $\vec{0} = (0,0)$ não pertence a reta. De um modo geral, as retas que passam pela origem são subespaços e as retas que não passam pela origem não são.
+	A reta $H_2 = \{y = 2x + 3\}$ \underline{não} é um subespaço de $\mathbb{R}^2$. De fato, $\vec{0} = (0,0)$ não pertence a reta. De um modo geral, as retas que passam pela origem são subespaços e as retas que não passam pela origem não são.
 \end{example}
 
 
 \begin{example}
-	Mais geralmente, para $\vec{u}, \vec{v} \in \bR^n$, o espaço gerado $\Span \{\vec{u}, \vec{v}\}$ é um subespaço de $\bR^n$. Caso os vetores sejam LI, este espaço pode ser pensado como o plano que contém os vetores $\vec{u}, \vec{v}$ dentro de $\bR^n$ (por quê?).
+	Mais geralmente, para $\vec{u}, \vec{v} \in \mathbb{R}^n$, o espaço gerado $\Span \{\vec{u}, \vec{v}\}$ é um subespaço de $\mathbb{R}^n$. Caso os vetores sejam LI, este espaço pode ser pensado como o plano que contém os vetores $\vec{u}, \vec{v}$ dentro de $\mathbb{R}^n$ (por quê?).
 	
 	Poderíamos argumentar que a reta do Exemplo \ref{reta} é um subespaço, pois todos os pontos da reta satisfazem:
 	\begin{equation}
@@ -485,7 +485,7 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 
 
 \begin{example}
-	Um plano que passa pela origem $2x - y + 3z = 0$ é um subespaço de $\bR^3$, pois podemos escrever pontos do plano como
+	Um plano que passa pela origem $2x - y + 3z = 0$ é um subespaço de $\mathbb{R}^3$, pois podemos escrever pontos do plano como
 	\begin{equation}
 	\left[
 	\begin{array}{c}
@@ -539,7 +539,7 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 
 
 \begin{example}
-	O conjunto $\cP (\bR)$ das funções polinomiais com coeficientes reais é um subespaço do espaço das funções contínuas do Exemplo \ref{funcoes}. De fato, o polinômio nulo está neste espaço. Além disso, dados dois polinômios
+	O conjunto $\mathcal{P} (\mathbb{R})$ das funções polinomiais com coeficientes reais é um subespaço do espaço das funções contínuas do Exemplo \ref{funcoes}. De fato, o polinômio nulo está neste espaço. Além disso, dados dois polinômios
 	\begin{equation}
 	p(x) = a_n x^n + \cdots a_2 x^2 + a_1 x + a_0 \quad \text{e} \quad q(x) = b_m x^m + \cdots b_2 x^2 + b_1 x + b_0,
 	\end{equation} sabemos que $a \cdot p + b \cdot q$ vai ser um polinômio cujo grau é no máximo o maior dos valores $m$ ou $n$.
@@ -549,12 +549,12 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 \begin{exercise}
 	Considere o conjunto
 	\begin{equation}
-	\cP_3 (\bR) = \{ p(x) = a_3 x^3 + \cdots a_2 x^2 + a_1 x + a_0 \text{ tais que } a_0, a_1, a_2, a_3 \in \bR \}
+	\mathcal{P}_3 (\mathbb{R}) = \{ p(x) = a_3 x^3 + \cdots a_2 x^2 + a_1 x + a_0 \text{ tais que } a_0, a_1, a_2, a_3 \in \mathbb{R} \}
 	\end{equation} o conjunto de todos os polinômios de grau 3. Mostre que:
 	\begin{enumerate}
-		\item $\cP_3 (\bR)$ é um subespaço de $\cP (\bR)$;
-		\item $\cP_3 (\bR)$ é um subespaço de $\cF (I;\bR)$.
-	\end{enumerate} É possível generalizar estas conclusões para o conjunto $\cP_n (\bR)$ dos polinômios de grau $n$?
+		\item $\mathcal{P}_3 (\mathbb{R})$ é um subespaço de $\mathcal{P} (\mathbb{R})$;
+		\item $\mathcal{P}_3 (\mathbb{R})$ é um subespaço de $\mathcal{F} (I;\mathbb{R})$.
+	\end{enumerate} É possível generalizar estas conclusões para o conjunto $\mathcal{P}_n (\mathbb{R})$ dos polinômios de grau $n$?
 \end{exercise}
 
 
@@ -562,11 +562,11 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 
 O \textbf{espaço nulo} de uma matriz $A$ de ordem $m \times n$ é o conjunto definido por
 \begin{equation}
-\Nul A = \big\{ \vec{x} \in \bR^n \, | \, A\vec{x} = \vec{0}  \big\}.
-\end{equation} Para verificar que $\Nul A$ é um subespaço de $\bR^n$, consideramos $\vec{u}, \vec{v} \in \Nul A$ e $a,b \in \bR$. Queremos ver que $a\vec{u} + b\vec{v}$ também pertence a $\Nul A$: Pela linearidade do produto de matrizes, temos
+\operatorname{Nul} A = \big\{ \vec{x} \in \mathbb{R}^n \, | \, A\vec{x} = \vec{0}  \big\}.
+\end{equation} Para verificar que $\operatorname{Nul} A$ é um subespaço de $\mathbb{R}^n$, consideramos $\vec{u}, \vec{v} \in \operatorname{Nul} A$ e $a,b \in \mathbb{R}$. Queremos ver que $a\vec{u} + b\vec{v}$ também pertence a $\operatorname{Nul} A$: Pela linearidade do produto de matrizes, temos
 \begin{equation}
 A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + b \cdot \vec{0} = \vec{0}.
-\end{equation} Portanto, como também $\vec{0} \in \Nul A$, concluimos que $\Nul A$ é subespaço de $\bR^n$.
+\end{equation} Portanto, como também $\vec{0} \in \operatorname{Nul} A$, concluimos que $\operatorname{Nul} A$ é subespaço de $\mathbb{R}^n$.
 
 \begin{example}[Retirado do David C. Lay]
 	Encontrar um conjunto gerador para o espaço nulo da matriz
@@ -626,7 +626,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	x_2, x_4, x_5 \hbox{ livres.}
 	\end{array}
 	\right.
-	\end{equation} Assim, podemos escrever qualquer vetor de $\Nul A$ como
+	\end{equation} Assim, podemos escrever qualquer vetor de $\operatorname{Nul} A$ como
 	\begin{equation}
 	\left[
 	\begin{array}{c}
@@ -675,7 +675,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	\right].
 	\end{equation} Isto significa que 
 	\begin{equation}
-	\Nul A = 
+	\operatorname{Nul} A = 
 	\Span \left\{
 	\left[
 	\begin{array}{c}
@@ -710,7 +710,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 Uma das importâncias teóricas do espaço nulo é
 
 \begin{proposition}
-	Seja $A$ uma matriz $m\times n$. Então a aplicação linear $\vec{x} \mapsto A \vec{x}$ é injetora se, e somente se, $\Nul A = \{ 0 \}.$
+	Seja $A$ uma matriz $m\times n$. Então a aplicação linear $\vec{x} \mapsto A \vec{x}$ é injetora se, e somente se, $\operatorname{Nul} A = \{ 0 \}.$
 \end{proposition}
 
 Em outras palavras, caso o sistema linear homogêneo $A \vec{x} = \vec{0}$ possua somente a solução trivial, podemos inferir que $A \vec{x} = \vec{b}$ possui no máximo uma solução, para qualquer $\vec{b}$!
@@ -728,11 +728,11 @@ A =
 | & | &        & | \\
 \end{array}
 \right] \rightsquigarrow
-\Col A = \Span \{ \vec{a}_1, \vec{a}_2, \dots, \vec{a}_n\}.
+\operatorname{Col} A = \Span \{ \vec{a}_1, \vec{a}_2, \dots, \vec{a}_n\}.
 \end{equation}
 
 \begin{exercise}
-	Verificar que $\Col A$ é um subespaço de $\bR^n$.
+	Verificar que $\operatorname{Col} A$ é um subespaço de $\mathbb{R}^n$.
 \end{exercise}
 
 Lembrando ainda que
@@ -740,13 +740,13 @@ Lembrando ainda que
 x_1 \vec{a}_1 + x_2 \vec{a}_2 + \cdots + x_n \vec{a}_n = \vec{b} \iff A \vec{x} = \vec{b},
 \end{equation} podemos reescrever a definição como 
 \begin{equation}
-\Col A = \{ \vec{b} \in \bR^m \ | \ \text{existe } \vec{x} \text{ tal que } \vec{b} = A \vec{x} \}.
+\operatorname{Col} A = \{ \vec{b} \in \mathbb{R}^m \ | \ \text{existe } \vec{x} \text{ tal que } \vec{b} = A \vec{x} \}.
 \end{equation} O espaço coluna trata portanto de vetores na imagem da aplicação linear. Temos:
 
 \begin{proposition}
-	Seja $A$ uma matriz $m\times n$. Então a aplicação linear $\vec{x} \mapsto A \vec{x}$ é sobrejetora se, e somente se, $\Col A = \bR^m.$
+	Seja $A$ uma matriz $m\times n$. Então a aplicação linear $\vec{x} \mapsto A \vec{x}$ é sobrejetora se, e somente se, $\operatorname{Col} A = \mathbb{R}^m.$
 \end{proposition}
 
-A definição do espaço coluna já deixa claro um conjunto gerador (as colunas de $A$!). Não precisamos fazer cálculos como fizemos para encontrar geradores para $\Nul A$.
+A definição do espaço coluna já deixa claro um conjunto gerador (as colunas de $A$!). Não precisamos fazer cálculos como fizemos para encontrar geradores para $\operatorname{Nul} A$.
 
 \end{document} 
