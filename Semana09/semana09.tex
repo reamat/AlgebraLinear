@@ -948,17 +948,17 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 
 \section{Uma aplicação em cálculo de várias variáveis}
 
-Como já é conhecido de primeiros cursos de cálculo\footnote{Esta seção é opcional e necessita de conhecimentos básicos de Cálculo.}, é possível fazer mudanças de coordenadas em integrais unidimensionais (também conhecido como integrar por substituição): para $I \subseteq \bR$ um intervalo e $\phi : [a,b] \to I$ é diferenciável com derivada contínua e $f: I \to \bR$ é uma função contínua, então
+Como já é conhecido de primeiros cursos de cálculo\footnote{Esta seção é opcional e necessita de conhecimentos básicos de Cálculo.}, é possível fazer mudanças de coordenadas em integrais unidimensionais (também conhecido como integrar por substituição): para $I \subseteq \mathbb{R}$ um intervalo e $\phi : [a,b] \to I$ é diferenciável com derivada contínua e $f: I \to \mathbb{R}$ é uma função contínua, então
 \begin{equation}
-\int_{\phi (a)}^{\phi (b)} f(x) \, \dd x = \int_{a}^{b} f \big(\phi (t)\big) \phi'(t) \, \dd t.
-\end{equation} Intuitivemente, pensamos na substituição $x = \phi (t) \implies \dd x = \phi' (t)\dd t$.
+\int_{\phi (a)}^{\phi (b)} f(x) \, \, \mathrm{d} x = \int_{a}^{b} f \big(\phi (t)\big) \phi'(t) \, \, \mathrm{d} t.
+\end{equation} Intuitivemente, pensamos na substituição $x = \phi (t) \implies \, \mathrm{d} x = \phi' (t)\, \mathrm{d} t$.
 
 Um tópico que nem sempre é abordado em cursos de Cálculo em várias variáveis é a fórmula de mudança de variáveis para integrais múltiplas, onde o determinante aparece de forma fundamental.
 
 \begin{theorem}
-Seja $U \subset \bR^2$ um conjunto aberto e $\phi: U \to \bR^n$ uma função vetorial cujas componentes são todas diferenciáveis e com derivadas parciais contínuas. Então, para qualquer $f: U \to \bR$ contínua, vale a fórmula de mudança de variáveis:
+Seja $U \subset \mathbb{R}^2$ um conjunto aberto e $\phi: U \to \mathbb{R}^n$ uma função vetorial cujas componentes são todas diferenciáveis e com derivadas parciais contínuas. Então, para qualquer $f: U \to \mathbb{R}$ contínua, vale a fórmula de mudança de variáveis:
 \begin{equation}
-\iiint_{\phi (U)}  f(\vec{v}) \, \dd \vec{v} =  \iiint _{U} f\big(\varphi \big(\vec{u}\big)\big) J\varphi \big(\vec{u}\big) \, \dd\vec{u},
+\iiint_{\phi (U)}  f(\vec{v}) \, \, \mathrm{d} \vec{v} =  \iiint _{U} f\big(\varphi \big(\vec{u}\big)\big) J\varphi \big(\vec{u}\big) \, \, \mathrm{d}\vec{u},
 \end{equation} onde $J\varphi (\vec{u})$ é o \textbf{Jacobiano}: valor absoluto do determinante da matriz formada com as derivadas parciais de $\phi = (\phi_1, \phi_2, \dots, \phi_n)$:
 \begin{equation}
 J\varphi \big(\vec{u}\big) = \left|
@@ -980,9 +980,9 @@ J\varphi \big(\vec{u}\big) = \left|
 
 \subsection{Coordenadas polares}
 
-Para uma região $R$ do plano $\bR^2$, vamos verificar como fazer para escrever uma integral dupla em coordenadas polares. Sabemos que
+Para uma região $R$ do plano $\mathbb{R}^2$, vamos verificar como fazer para escrever uma integral dupla em coordenadas polares. Sabemos que
 \begin{equation}
-\iint_R f \, \dd A = \iint_R f(x,y) \, \dd x \dd y.
+\iint_R f \, \, \mathrm{d} A = \iint_R f(x,y) \, \, \mathrm{d} x \, \mathrm{d} y.
 \end{equation} A função $\phi$ que muda de coordenadas polares para Cartesianas pode ser escrita como
 \begin{equation}
 \phi (r, \theta) = (r\cos \theta, r \sen \theta), \text{ onde } r> 0 \text{ e } \theta \in (0,2\pi).
@@ -1003,15 +1003,15 @@ x = \phi_1 (r, \theta) = r\cos \theta, \quad y = \phi_2 (r, \theta) = r \sen \th
  \text{ cujo Jacobiano é } \ J\phi = r \cos^2 \theta + r \sen^2 \theta = r. 
 \end{equation} Portanto, a fórmula de mudança de variáveis implica que, em coordenadas polares:
 \begin{equation}
-\iint_R f \, \dd A = \iint_R f(x,y) \, \dd x \dd y = \iint_{\phi^{-1}(R)} f(r\cos \theta, r\sen \theta) \, r \, \dd r \dd \theta.
+\iint_R f \, \, \mathrm{d} A = \iint_R f(x,y) \, \, \mathrm{d} x \, \mathrm{d} y = \iint_{\phi^{-1}(R)} f(r\cos \theta, r\sen \theta) \, r \, \, \mathrm{d} r \, \mathrm{d} \theta.
 \end{equation}
 
 
 \subsection{Coordenadas esféricas}
 
-Para uma região $R$ do espaço $\bR^3$, vamos verificar como fazer para escrever uma integral tripla em coordenadas esféricas. O raciocínio segue as mesmas linhas da subseção anterior para coordenadas polares. Sabemos que
+Para uma região $R$ do espaço $\mathbb{R}^3$, vamos verificar como fazer para escrever uma integral tripla em coordenadas esféricas. O raciocínio segue as mesmas linhas da subseção anterior para coordenadas polares. Sabemos que
 \begin{equation}
-\iiint_R f \, \dd A = \iiint_R f(x,y, z) \, \dd x \dd y  \dd z.
+\iiint_R f \, \, \mathrm{d} A = \iiint_R f(x,y, z) \, \, \mathrm{d} x \, \mathrm{d} y  \, \mathrm{d} z.
 \end{equation} A função $\phi$ que muda de coordenadas esféricas para Cartesianas pode ser escrita como
 \begin{equation}
 \phi (\rho, \theta, \phi) = (\rho \sen \phi \cos \theta, \rho \sen \phi \sen \theta, \rho \cos \phi), \text{ onde } \rho> 0, \theta \in (0,2\pi) \text{ e } \phi \in (0, \pi).
@@ -1058,7 +1058,7 @@ J\phi & = \left| \rho \sen \phi \sen \theta
 \end{equation}
 Na última igualdade, utilizamos que $\phi \in (0,\pi)$ implica $\sen \phi > 0$, de modo que o valor absoluto está considerado corretamente. Portanto, a fórmula de mudança de variáveis implica que, em coordenadas polares:
 \begin{equation}
-\iiint_R f \, \dd A = \iint_R f(x,y, z) \, \dd x \dd y \dd z = \iiint_{\phi^{-1}(R)} f(\rho \sen \phi \cos \theta, \rho \sen \phi \sen \theta, \rho \cos \phi) \, \rho^2 \sen \phi \, \dd \rho \dd \theta \dd \phi,
+\iiint_R f \, \, \mathrm{d} A = \iint_R f(x,y, z) \, \, \mathrm{d} x \, \mathrm{d} y \, \mathrm{d} z = \iiint_{\phi^{-1}(R)} f(\rho \sen \phi \cos \theta, \rho \sen \phi \sen \theta, \rho \cos \phi) \, \rho^2 \sen \phi \, \, \mathrm{d} \rho \, \mathrm{d} \theta \, \mathrm{d} \phi,
 \end{equation} como é de costume em cursos de cálculo.
 
 

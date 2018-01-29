@@ -17,14 +17,14 @@
 
 \section{Espaços vetoriais}
 
-Nós vimos que um espaço vetorial (sobre o conjunto $\bR$ de escalares) é um conjunto $V$ equipado com as operações de soma de vetores e de multiplicação por escalar e que satisfazem as propriedades usuais dos espaços $\bR^n$.
+Nós vimos que um espaço vetorial (sobre o conjunto $\mathbb{R}$ de escalares) é um conjunto $V$ equipado com as operações de soma de vetores e de multiplicação por escalar e que satisfazem as propriedades usuais dos espaços $\mathbb{R}^n$.
 
 
 
 \section{Bases de espaços vetoriais}
 
 
-Uma \textbf{base} para um espaço vetorial $V$ é um conjunto $\cB$ que:
+Uma \textbf{base} para um espaço vetorial $V$ é um conjunto $\mathcal{B}$ que:
 \begin{enumerate}[(a)]
 	\item gera $V$ e;
 	\item é linearmente independente.
@@ -32,7 +32,7 @@ Uma \textbf{base} para um espaço vetorial $V$ é um conjunto $\cB$ que:
 
 
 \begin{example}
-	$\bR^n$ é um espaço vetorial sobre $\bR$. Vimos anteriormente que os vetores
+	$\mathbb{R}^n$ é um espaço vetorial sobre $\mathbb{R}$. Vimos anteriormente que os vetores
 	\begin{equation}
 	\vec{e}_1 =
 	\left[
@@ -59,7 +59,7 @@ Uma \textbf{base} para um espaço vetorial $V$ é um conjunto $\cB$ que:
 	1
 	\end{array}
 	\right]
-	\end{equation} formam um conjunto linearmente independente. E também é verdade que eles geram $\bR^n$, pois qualquer vetor pode ser escrito como combinação linear deles:
+	\end{equation} formam um conjunto linearmente independente. E também é verdade que eles geram $\mathbb{R}^n$, pois qualquer vetor pode ser escrito como combinação linear deles:
 	\begin{equation}
 	\vec{v} =
 	\left[
@@ -94,21 +94,21 @@ Uma \textbf{base} para um espaço vetorial $V$ é um conjunto $\cB$ que:
 	1
 	\end{array}
 	\right] = x_1 \vec{e}_1 + x_2 \vec{e}_2 + \cdots + x_n \vec{e}_n.
-	\end{equation} Portanto, o conjunto de $n$ elementos $\{\vec{e}_1, \vec{e}_2, \dots, \vec{e}_n\}$ é uma base de $\bR^n$.
+	\end{equation} Portanto, o conjunto de $n$ elementos $\{\vec{e}_1, \vec{e}_2, \dots, \vec{e}_n\}$ é uma base de $\mathbb{R}^n$.
 \end{example}
 
 
 
-Várias propriedades interessantes aparecem naturalmente como consequência da definição de base. Suponhamos que um conjunto $\cB = \{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_d\} \subset V$ seja uma base de um espaço vetorial $V$. Já que $\Span \cB = V$, qualquer elemento de $V$ pode ser representado como
+Várias propriedades interessantes aparecem naturalmente como consequência da definição de base. Suponhamos que um conjunto $\mathcal{B} = \{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_d\} \subset V$ seja uma base de um espaço vetorial $V$. Já que $\Span \mathcal{B} = V$, qualquer elemento de $V$ pode ser representado como
 \begin{equation}
 \vec{v} = x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_d \vec{v}_d.
-\end{equation} Além disso, o fato de ser $\cB$ um conjunto linearmente independente nos diz que esta forma de representar o vetor $\vec{v}$ é única! De fato, vamos verificar que qualquer representação é, na realidade, a mesma representação que tínhamos acima: se tivermos
+\end{equation} Além disso, o fato de ser $\mathcal{B}$ um conjunto linearmente independente nos diz que esta forma de representar o vetor $\vec{v}$ é única! De fato, vamos verificar que qualquer representação é, na realidade, a mesma representação que tínhamos acima: se tivermos
 \begin{equation}
 \vec{v} = k_1 \vec{v}_1 + k_2 \vec{v}_2 + \cdots + k_d \vec{v}_d,
 \end{equation} deveremos também ter
 \begin{equation}
 (x_1-k_1) \vec{v}_1 + (x_2-k_2) \vec{v}_2 + \cdots + (x_d-k_d) \vec{v}_d = \vec{v} - \vec{v} = \vec{0}.
-\end{equation} Sendo a base $\cB$ formada por vetores LI, concluimos que os coeficientes da combinação linear acima devem ser nulos, isto é, $x_1=k_1, x_2=k_2,\dots,x_d=k_d$. Portanto,
+\end{equation} Sendo a base $\mathcal{B}$ formada por vetores LI, concluimos que os coeficientes da combinação linear acima devem ser nulos, isto é, $x_1=k_1, x_2=k_2,\dots,x_d=k_d$. Portanto,
 \begin{equation} 
 \boxed{
 	\begin{array}{c}
@@ -124,7 +124,7 @@ Uma segunda propriedade fundamental é a seguinte:
 \end{equation}
 
 
-\begin{proof}[Justificativa] Sejam duas bases $\cB_1 = \{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_d\} \subset V$ e $\cB_2 = \{\vec{w}_1, \vec{w}_2, \dots, \vec{w}_k\} \subset V$ do mesmo espaço vetorial $V$. Nós podemos escrever os elementos da base $\cB_1$ como combinações lineares dos elementos da base $\cB_2$:
+\begin{proof}[Justificativa] Sejam duas bases $\mathcal{B}_1 = \{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_d\} \subset V$ e $\mathcal{B}_2 = \{\vec{w}_1, \vec{w}_2, \dots, \vec{w}_k\} \subset V$ do mesmo espaço vetorial $V$. Nós podemos escrever os elementos da base $\mathcal{B}_1$ como combinações lineares dos elementos da base $\mathcal{B}_2$:
 	\begin{equation}
 	\left\{
 	\begin{array}{rcl}
@@ -137,7 +137,7 @@ Uma segunda propriedade fundamental é a seguinte:
 	\end{equation} O problema é que, se tivéssemos quantidades diferentes de vetores nas bases, digamos $k<d$, então a equação 
 	\begin{equation}\label{1111}
 	b_1 \vec{v}_1 + b_2 \vec{v}_2 + \cdots + b_d \vec{v}_d = \vec{0}
-	\end{equation} possuiria soluções não triviais, contradizendo o fato de ser $\cB_1$ um conjunto linearmente independente. De fato, utilizando que $\cB_1$ é linearmente independente, encontrar $b_1, b_2, \dots, b_k$ na equação \eqref{1111} fica equivalente a resolver
+	\end{equation} possuiria soluções não triviais, contradizendo o fato de ser $\mathcal{B}_1$ um conjunto linearmente independente. De fato, utilizando que $\mathcal{B}_1$ é linearmente independente, encontrar $b_1, b_2, \dots, b_k$ na equação \eqref{1111} fica equivalente a resolver
 	\begin{equation}
 	\left[
 	\begin{array}{cccc}
@@ -171,7 +171,7 @@ Uma segunda propriedade fundamental é a seguinte:
 
 O número de elementos de uma base do espaço vetorial $V$ é chamado de \textbf{dimensão} de $V$. Graças à propriedade acima, tanto faz a base que considerarmos, pois todas tem o mesmo número de elementos. A dimensão de $V$, pelo que vimos até agora, indica o número de parâmetros necessários para representar qualquer vetor de $V$.
 
-Quando um vetor $\vec{v}$ é escrito em termos dos elementos de uma base $\cB = \{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_d\}$, é comum utilizarmos a notação
+Quando um vetor $\vec{v}$ é escrito em termos dos elementos de uma base $\mathcal{B} = \{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_d\}$, é comum utilizarmos a notação
 \begin{equation}
 \vec{v} = x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots  + x_d \vec{v}_d =
 \left[
@@ -182,7 +182,7 @@ x_2 \\
 x_{d-1} \\
 x_d \\
 \end{array}
-\right]_{\cB} \text{ ou ainda } \big[ \vec{v} \big]_{\cB} =
+\right]_{\mathcal{B}} \text{ ou ainda } \big[ \vec{v} \big]_{\mathcal{B}} =
 \left[
 \begin{array}{c}
 x_1 \\
@@ -197,20 +197,20 @@ x_d \\
 \begin{example}
 	O conjunto
 	\begin{equation}
-	\cP_3 (\bR) = \big\{ p(x) = a_3 x^3 + a_2 x^2 + a_1 x + a_0 \text{ tais que } a_0, a_1, a_2, a_3 \in \bR \big\}
+	\mathcal{P}_3 (\mathbb{R}) = \big\{ p(x) = a_3 x^3 + a_2 x^2 + a_1 x + a_0 \text{ tais que } a_0, a_1, a_2, a_3 \in \mathbb{R} \big\}
 	\end{equation} de todos os polinômios de grau 3 é um espaço vetorial. Uma base para este espaço pode ser encontrada ``de olho'': é fácil ver que o conjunto de polinômios
 	\begin{equation}
 	\big\{ x^3, x^2, x, 1 \big\}
-	\end{equation} gera o espaço $\cP_3 (\bR)$. Para ver que são LI, precisamos verificar que se tivermos
+	\end{equation} gera o espaço $\mathcal{P}_3 (\mathbb{R})$. Para ver que são LI, precisamos verificar que se tivermos
 	\begin{equation}
-	a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0, \quad \text{para todo } x \in \bR,
+	a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0, \quad \text{para todo } x \in \mathbb{R},
 	\end{equation} então todos os coeficientes devem ser nulos. Isto segue do Teorema Fundamental da Álgebra\footnote{Mais geralmente, o Teorema Fundamental da Álgebra afirma que todo polinômio não nulo de grau $n$ possui exatamente $n$ raízes complexas; logo, no máximo $n$ raízes reais.}, que diz que todo polinômio não nulo de grau $3$ possui exatamente $3$ raízes complexas; logo, no máximo $3$ raízes reais. Portanto, já que no nosso caso, todos os valores de $x$ reais são raízes, nosso polinômio deve ser o constante igual a zero, de modo que todos os coeficientes são zero.
 	
-	Concluimos desta maneira que $\cB = \big\{ x^3, x^2, x, 1 \big\}$ é uma base de $\cP_3 (\bR)$, que consequentemente tem dimensão $4.$
+	Concluimos desta maneira que $\mathcal{B} = \big\{ x^3, x^2, x, 1 \big\}$ é uma base de $\mathcal{P}_3 (\mathbb{R})$, que consequentemente tem dimensão $4.$
 	
-	Desta maneira, qualquer elemento de $\cP_3 (\bR)$ pode ser representado por $4$ parâmetros. Por exemplo,
+	Desta maneira, qualquer elemento de $\mathcal{P}_3 (\mathbb{R})$ pode ser representado por $4$ parâmetros. Por exemplo,
 	\begin{equation}
-	p(x) = x^3 - 2 x^2 + 3 \ \rightsquigarrow \ [p(x)]_\cB = \left[
+	p(x) = x^3 - 2 x^2 + 3 \ \rightsquigarrow \ [p(x)]_\mathcal{B} = \left[
 	\begin{array}{c}
 	1 \\
 	-2 \\
@@ -220,7 +220,7 @@ x_d \\
 	\right],
 	\end{equation}
 	\begin{equation}
-	q(x) = 2 x^3 + x^2 + x -1 \ \rightsquigarrow \ [q(x)]_\cB = \left[
+	q(x) = 2 x^3 + x^2 + x -1 \ \rightsquigarrow \ [q(x)]_\mathcal{B} = \left[
 	\begin{array}{c}
 	2 \\
 	1 \\
@@ -228,7 +228,7 @@ x_d \\
 	-1 \\
 	\end{array}
 	\right].
-	\end{equation} Nota que a ordem que escrevemos os elementos de uma base altera as representações $[p]_\cB$ e $[q]_\cB$.
+	\end{equation} Nota que a ordem que escrevemos os elementos de uma base altera as representações $[p]_\mathcal{B}$ e $[q]_\mathcal{B}$.
 \end{example}
 
 
@@ -241,7 +241,7 @@ x_d \\
 	y''(t) - y'(x) -2 y(x) = 0,
 	\end{equation} podemos concluir que todas as soluções desta EDO podem ser escritas como combinação linear destas duas:
 	\begin{equation}
-	y(x) \text{ é solução de \eqref{eqn:edo} } \iff y(x) = C_1 e^{2x} + C_2 e^{-x}, \ \text{ para algumas constantes } C_1, C_2 \in \bR.
+	y(x) \text{ é solução de \eqref{eqn:edo} } \iff y(x) = C_1 e^{2x} + C_2 e^{-x}, \ \text{ para algumas constantes } C_1, C_2 \in \mathbb{R}.
 	\end{equation}
 \end{example}
 
@@ -250,7 +250,7 @@ x_d \\
 
 Vimos que o espaço nulo (núcleo) de uma matriz $A$ de ordem $m \times n$ é o conjunto definido por
 \begin{equation}
-\Nul A = \big\{ \vec{x} \in \bR^n \, | \, A\vec{x} = \vec{0}  \big\}.
+\operatorname{Nul} A = \big\{ \vec{x} \in \mathbb{R}^n \, | \, A\vec{x} = \vec{0}  \big\}.
 \end{equation} Nas notas da semana passada, vimos também o seguinte exemplo:
 
 \begin{example}
@@ -317,7 +317,7 @@ Vimos que o espaço nulo (núcleo) de uma matriz $A$ de ordem $m \times n$ é o 
 	1 \\
 	\end{array}
 	\right]
-	\end{equation} de modo que $\operatorname{dim} \Nul A = 2$ e uma base é
+	\end{equation} de modo que $\operatorname{dim} \operatorname{Nul} A = 2$ e uma base é
 	\begin{equation}
 	\left\{
 	\left[
@@ -339,15 +339,15 @@ Vimos que o espaço nulo (núcleo) de uma matriz $A$ de ordem $m \times n$ é o 
 	\end{array}
 	\right]
 	\right\}.
-	\end{equation} Já que estes vetores são LI, temos uma base para $\Nul A. \ \lhd$
+	\end{equation} Já que estes vetores são LI, temos uma base para $\operatorname{Nul} A. \ \lhd$
 \end{example}
 
-É sempre possível obter uma base para $\Nul A$ desta forma. Enfatizamos esta propriedade abaixo:
+É sempre possível obter uma base para $\operatorname{Nul} A$ desta forma. Enfatizamos esta propriedade abaixo:
 
 \begin{equation}
 \boxed{
 \begin{array}{c}
-\text{Uma base para $\Nul A$ pode ser encontrada por escalonamento ao resolver o sistema} \\
+\text{Uma base para $\operatorname{Nul} A$ pode ser encontrada por escalonamento ao resolver o sistema} \\
 \text{homogêneo associado à matriz $A$. Além disso, a dimensão do espaço nulo é igual ao} \\
 \text{número de variáveis livres do sistema.}
 \end{array}
@@ -366,14 +366,14 @@ A =
 | & | &        & | \\
 \end{array}
 \right] \rightsquigarrow
-\Col A = \Span \{ \vec{a}_1, \vec{a}_2, \dots, \vec{a}_n\}.
-\end{equation} Desta forma, a definição de $\Col A$ já deixa claro um conjunto gerador: as colunas de $A$! Para determinar uma base, nós devemos ``excluir'' as colunas que podem ser geradas pelas demais, de modo a obter um conjunto linearmente independente.
+\operatorname{Col} A = \Span \{ \vec{a}_1, \vec{a}_2, \dots, \vec{a}_n\}.
+\end{equation} Desta forma, a definição de $\operatorname{Col} A$ já deixa claro um conjunto gerador: as colunas de $A$! Para determinar uma base, nós devemos ``excluir'' as colunas que podem ser geradas pelas demais, de modo a obter um conjunto linearmente independente.
 \begin{equation}
 \boxed{
 	\begin{array}{c}
-	\text{Uma base para $\Col A$ é formada pelas colunas pivô da matriz $A$. Para descobrir} \\
+	\text{Uma base para $\operatorname{Col} A$ é formada pelas colunas pivô da matriz $A$. Para descobrir} \\
 	\text{quais são as colunas pivô, procedemos por escalonamento. As \textit{colunas da matriz} } \\
-	\text{\textit{original} formam uma base de $\Col A$. A dimensão do espaço coluna é } \\
+	\text{\textit{original} formam uma base de $\operatorname{Col} A$. A dimensão do espaço coluna é } \\
 	\text{igual ao número de colunas pivô da matriz.}
 	\end{array}
 }
@@ -400,7 +400,7 @@ A =
 	0  & 0  & 1  & 1/5 & 8/15 \\
 	\end{array}
 	\right],
-	\end{equation} de modo que todas as colunas pivô são as três primeiras. Porntanto, uma base de $\Col A$ é
+	\end{equation} de modo que todas as colunas pivô são as três primeiras. Porntanto, uma base de $\operatorname{Col} A$ é
 	\begin{equation}
 	\left\{
 	\left[
@@ -441,30 +441,30 @@ A =
 
 Nas seções anteriores, vimos que
 \begin{equation}
-\operatorname{dim} \Col A  = \operatorname{dim} \text{ da imagem de } A  = \text{ número de colunas pivô e }
+\operatorname{dim} \operatorname{Col} A  = \operatorname{dim} \text{ da imagem de } A  = \text{ número de colunas pivô e }
 \end{equation}
 \begin{equation}
-\operatorname{dim} \Nul A = \text{ número de variáveis livres do sistema homogêneo associado}.
+\operatorname{dim} \operatorname{Nul} A = \text{ número de variáveis livres do sistema homogêneo associado}.
 \end{equation} Ora, mas ou uma coluna é pivô ou sua variável associada pode ser considerada uma variável livre, de modo que temos o
 
 \begin{theorem}[Teorema do núcleo e da imagem]
 	Para qualquer matriz $A$ de ordem $m\times n$, temos
 	\begin{equation}
-	\boxed{\operatorname{dim} \Col A + \operatorname{dim} \Nul A = n = \text{ número de colunas de } A.}
+	\boxed{\operatorname{dim} \operatorname{Col} A + \operatorname{dim} \operatorname{Nul} A = n = \text{ número de colunas de } A.}
 	\end{equation}
 \end{theorem}
 
 \begin{remark}
 	A dimensão do espaço coluna de $A$ ou, o que é a mesma coisa, dimensão da imagem da transformação linear $\vec{x} \mapsto A\vec{x}$, é também conhecida na literatura como o \textbf{posto de} $A$. Assim, o Teorema do núcleo e da imagem pode ser reenunciado como: Se $A$ é uma matriz $m\times n$, então
 	\begin{equation}
-	\operatorname{posto} A + \operatorname{dim} \Nul A = n.
+	\operatorname{posto} A + \operatorname{dim} \operatorname{Nul} A = n.
 	\end{equation}
 \end{remark}
 
 \begin{remark}
 	O teorema afirma que há uma relação entre as dimensões dos espaços coluna e nulo. No entanto, não esqueça que estes são subespaços de universos diferentes! Temos 
 	\begin{equation}
-	\Nul A \subseteq \bR^n \text{ enquanto que } \Col A \subseteq \bR^m.
+	\operatorname{Nul} A \subseteq \mathbb{R}^n \text{ enquanto que } \operatorname{Col} A \subseteq \mathbb{R}^m.
 	\end{equation}
 \end{remark}
 
@@ -473,10 +473,10 @@ Apesar da conclusão do teorema parecer simples, é muito útil na análise de s
 \begin{example}
 	Todo sistema linear de ordem $5 \times 9$ deve possuir um espaço nulo de dimensão $4$ ou mais. De fato, como a matriz associada tem apenas cinco linhas, pode ter no máximo $5$ posições de pivô, de modo que
 	\begin{equation}
-	\operatorname{dim} \Col A \le 5.
+	\operatorname{dim} \operatorname{Col} A \le 5.
 	\end{equation} Portanto
 	\begin{equation}
-	\operatorname{dim} \Nul A = 9 - \operatorname{dim} \Col A \ge 9 - 5 = 4.
+	\operatorname{dim} \operatorname{Nul} A = 9 - \operatorname{dim} \operatorname{Col} A \ge 9 - 5 = 4.
 	\end{equation} Desta forma, se resolvermos um sistema homogêneo desta ordem e encontrarmos um conjunto solução de dimensão 3, certamente  há algum um erro nas contas!
 \end{example}
 
@@ -496,9 +496,9 @@ Apesar da conclusão do teorema parecer simples, é muito útil na análise de s
 
 \section{Matriz de mudança de coordenadas}
 
-Se conhecemos as coordenadas do vetor $\vec{x}$ em uma base $\cB = \big\{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_n \big\}$:
+Se conhecemos as coordenadas do vetor $\vec{x}$ em uma base $\mathcal{B} = \big\{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_n \big\}$:
 \begin{equation}
-\big[ \vec{x} \big]_{\cB} =
+\big[ \vec{x} \big]_{\mathcal{B}} =
 \left[
 \begin{array}{c}
 b_1 \\
@@ -506,7 +506,7 @@ b_2 \\
 \vdots \\
 b_n \\
 \end{array}
-\right]_{\cB} = b_1 \vec{v}_1 + b_2 \vec{v}_2 + \cdots + b_n \vec{v}_n,
+\right]_{\mathcal{B}} = b_1 \vec{v}_1 + b_2 \vec{v}_2 + \cdots + b_n \vec{v}_n,
 \end{equation} podemos obter as coordenadas usuais (na base canônica) de $\vec{x}$ de forma sistemática. Em outras palavras, queremos encontrar $x_1, x_2, \dots, x_n$ tais que 
 \begin{equation}
 \vec{x} = \left[
@@ -549,20 +549,20 @@ x_2 &=& v_{21} b_{1} + v_{22} b_{2} + \cdots + v_{2n} b_{n} \\
 &\vdots& \\
 x_n &=& v_{n1} b_{1} + v_{n2} b_{2} + \cdots + v_{nn} b_{n} \\
 \end{array}
-\right. \quad \text{i.e} \quad \vec{x} = A [\vec{x}]_{\cB}.
+\right. \quad \text{i.e} \quad \vec{x} = A [\vec{x}]_{\mathcal{B}}.
 \end{equation}
 
-A matriz $A$ construida como acima é chamada de \textbf{matriz de mudança de coordenadas} da base $\cB$ para a base usual (canônica) $\{ \vec{e}_1, \vec{e}_2, \dots, \vec{e}_n\}$.
+A matriz $A$ construida como acima é chamada de \textbf{matriz de mudança de coordenadas} da base $\mathcal{B}$ para a base usual (canônica) $\{ \vec{e}_1, \vec{e}_2, \dots, \vec{e}_n\}$.
 
-A matriz de mudança de coordenadas da base canônica para a base $\cB$ pode ser obtida a partir da inversa de $A$:
+A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ pode ser obtida a partir da inversa de $A$:
 \begin{equation}
-[\vec{x}]_{\cB} = A^{-1} \cdot \vec{x}.
+[\vec{x}]_{\mathcal{B}} = A^{-1} \cdot \vec{x}.
 \end{equation} (Notamos que a matriz $A$ é necessariamente invertível, já que suas colunas são elementos de uma base; em particular, são linearmente independentes).
 
 \begin{example}
-	Consideramos a seguinte base para $\bR^2$:
+	Consideramos a seguinte base para $\mathbb{R}^2$:
 	\begin{equation}
-	\cB = \left\{ 
+	\mathcal{B} = \left\{ 
 	\left[
 	\begin{array}{c}
 	1 \\
@@ -576,23 +576,23 @@ A matriz de mudança de coordenadas da base canônica para a base $\cB$ pode ser
 	\end{array}
 	\right]
 	\right\}.
-	\end{equation} Este conjunto é de fato uma base, pois são linearmente independentes e são dois (que é a dimensão de $\bR^2$). Sabendo que as coordenadas de $\vec{u}$ e $\vec{v}$ nesta base $\cB$ são
+	\end{equation} Este conjunto é de fato uma base, pois são linearmente independentes e são dois (que é a dimensão de $\mathbb{R}^2$). Sabendo que as coordenadas de $\vec{u}$ e $\vec{v}$ nesta base $\mathcal{B}$ são
 	\begin{equation}
-	[u]_{\cB} = 
+	[u]_{\mathcal{B}} = 
 	\left[
 	\begin{array}{c}
 	1 \\
 	1 \\
 	\end{array}
-	\right]_{\cB} \quad \text{e} \quad 
-	[v]_{\cB} =
+	\right]_{\mathcal{B}} \quad \text{e} \quad 
+	[v]_{\mathcal{B}} =
 	\left[
 	\begin{array}{c}
 	3 \\
 	-1 \\
 	\end{array}
-	\right]_{\cB},
-	\end{equation} encontrar as componentes de $\vec{u}$ e $\vec{v}$ na base canônica $\{ \vec{e}_1, \vec{e}_2\}$ de $\bR^2$.
+	\right]_{\mathcal{B}},
+	\end{equation} encontrar as componentes de $\vec{u}$ e $\vec{v}$ na base canônica $\{ \vec{e}_1, \vec{e}_2\}$ de $\mathbb{R}^2$.
 	
 	Pelo que analisamos acima, a matriz de mudança de coordenadas que procuramos é a matriz
 	\begin{equation}
@@ -615,7 +615,7 @@ A matriz de mudança de coordenadas da base canônica para a base $\cB$ pode ser
 	1 \\
 	1 \\
 	\end{array}
-	\right]_{\cB} = 
+	\right]_{\mathcal{B}} = 
 	\left[
 	\begin{array}{c}
 	0 \\
@@ -632,7 +632,7 @@ A matriz de mudança de coordenadas da base canônica para a base $\cB$ pode ser
 	3 \\
 	-1 \\
 	\end{array}
-	\right]_{\cB} =
+	\right]_{\mathcal{B}} =
 	\left[
 	\begin{array}{c}
 	4 \\
@@ -644,14 +644,14 @@ A matriz de mudança de coordenadas da base canônica para a base $\cB$ pode ser
 
 
 \begin{remark}
-	A matriz de mudança de coordenadas é uma forma de trocar de uma base para outra de forma sistemática. Com o intuito de tornar mais intuitiva a construção, vamos repetir a argumentação que fizemos no início desta seção para o caso $2\times 2$. Na base $\cB$ do exemplo anterior, a representação
+	A matriz de mudança de coordenadas é uma forma de trocar de uma base para outra de forma sistemática. Com o intuito de tornar mais intuitiva a construção, vamos repetir a argumentação que fizemos no início desta seção para o caso $2\times 2$. Na base $\mathcal{B}$ do exemplo anterior, a representação
 	\begin{equation}
 	\left[
 	\begin{array}{c}
 	b_1 \\
 	b_2 \\
 	\end{array}
-	\right]_{\cB} \text{ significa que } \vec{v} = b_1 \cdot \left[
+	\right]_{\mathcal{B}} \text{ significa que } \vec{v} = b_1 \cdot \left[
 	\begin{array}{c}
 	1 \\
 	1 \\
@@ -663,7 +663,7 @@ A matriz de mudança de coordenadas da base canônica para a base $\cB$ pode ser
 	1 \\
 	\end{array}
 	\right].
-	\end{equation} Os vetores da base $\cB$ são representados na base canônica por
+	\end{equation} Os vetores da base $\mathcal{B}$ são representados na base canônica por
 	\begin{equation}
 	\left[
 	\begin{array}{c}

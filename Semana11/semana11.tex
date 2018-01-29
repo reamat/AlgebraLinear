@@ -14,12 +14,12 @@
 \chapter{Semana 11}
 
 
-Nesta semana, nós começamos uma abordagem um pouco mais geométrica de espaços vetoriais: ângulo entre vetores, comprimento de vetores, ortogonalidade. Estes conceitos já são de nossa familiaridade da geometria euclideana (em $\bR^2$ e $\bR^3$). No entanto, é também nosso objetivo estender estes conceitos para dimensões maiores do que $3$.
+Nesta semana, nós começamos uma abordagem um pouco mais geométrica de espaços vetoriais: ângulo entre vetores, comprimento de vetores, ortogonalidade. Estes conceitos já são de nossa familiaridade da geometria euclideana (em $\mathbb{R}^2$ e $\mathbb{R}^3$). No entanto, é também nosso objetivo estender estes conceitos para dimensões maiores do que $3$.
 
 
 \section{Comprimento, ângulos e o produto escalar}
 
-Se, na base canônica (isto é, no sistema de coordenadas usual) do espaço $\bR^3$, representamos um vetor por
+Se, na base canônica (isto é, no sistema de coordenadas usual) do espaço $\mathbb{R}^3$, representamos um vetor por
 \begin{equation}
 \vec{v} =
 \begin{bmatrix}
@@ -45,7 +45,7 @@ v_1 \\ v_2 \\ \vdots \\ v_n
 \end{equation}
 
 
-O \textbf{produto escalar} ou \textbf{produto interno} entre dois vetores $\vec{v}$ e $\vec{w}$ é um número (também dito escalar) associado com estes dois vetores. Em coordenadas, se $\vec{v} = (v_1, v_2, v_3)$ e $\vec{w} = (w_1, w_2, w_3)$ são vetores do espaço tridimensional $\bR^3$, temos
+O \textbf{produto escalar} ou \textbf{produto interno} entre dois vetores $\vec{v}$ e $\vec{w}$ é um número (também dito escalar) associado com estes dois vetores. Em coordenadas, se $\vec{v} = (v_1, v_2, v_3)$ e $\vec{w} = (w_1, w_2, w_3)$ são vetores do espaço tridimensional $\mathbb{R}^3$, temos
 \begin{equation}
 \vec{v} \cdot \vec{w} = v_1 w_1 + v_2 w_2 + v_3 w_3.
 \end{equation} Vejamos que realmente o produto escalar tem a ver com o ângulo entre dois vetores. Isto é uma consequência da Lei dos Cossenos, que nos diz que
@@ -72,16 +72,16 @@ x_1 \\ x_2 \\ \vdots \\ x_n
 \begin{bmatrix}
 y_1 \\ y_2 \\ \vdots \\ y_n
 \end{bmatrix}
-\end{equation} vetores de $\bR^n$ representados na base canônica, e definimos o \textbf{produto escalar} ou \textbf{produto interno} entre $\vec{x}$ e $\vec{y}$:
+\end{equation} vetores de $\mathbb{R}^n$ representados na base canônica, e definimos o \textbf{produto escalar} ou \textbf{produto interno} entre $\vec{x}$ e $\vec{y}$:
 \begin{equation}
 \vec{x} \cdot \vec{y} = x_1 y_1 + x_2 y_2 + \cdots + x_n y_n.
 \end{equation} O ângulo entre $\vec{x}$ e $\vec{y}$, para $n$ qualquer, pode então ser \textit{definido} pela equação
 \begin{equation}
 \cos \theta = \frac{\vec{x} \cdot \vec{y}}{\|\vec{x}\| \|\vec{y}\|}.
-\end{equation} Embora abstratos, estes conceitos são bem fundamentados geometricamente. Dois vetores (linearmente independentes) de um espaço vetorial $n$-dimensional geram um subespaço vetorial de dimensão $2$. Este pode, por sua vez, pode ser pensado como um plano que passa pela origem de $\bR^n$. Assim, podemos imaginar o ângulo entre estes vetores naturalmente.
+\end{equation} Embora abstratos, estes conceitos são bem fundamentados geometricamente. Dois vetores (linearmente independentes) de um espaço vetorial $n$-dimensional geram um subespaço vetorial de dimensão $2$. Este pode, por sua vez, pode ser pensado como um plano que passa pela origem de $\mathbb{R}^n$. Assim, podemos imaginar o ângulo entre estes vetores naturalmente.
 
 \begin{proposition}[Principais propriedades do produto escalar]
-	Para $\vec{x}, \vec{y}, \vec{z} \in \bR^n$ e $c \in \bR$ um escalar, temos as seguintes propriedades
+	Para $\vec{x}, \vec{y}, \vec{z} \in \mathbb{R}^n$ e $c \in \mathbb{R}$ um escalar, temos as seguintes propriedades
 	\begin{enumerate}
 		\item  $\vec{x} \cdot \vec{y} = \vec{y} \cdot \vec{x}$
 		\item  $(\vec{x} + \vec{y}) \cdot \vec{z} = \vec{x} \cdot \vec{z} + \vec{y} \cdot \vec{z}$
@@ -95,7 +95,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 Estas propriedades são todas de fácil verificação (e são deixadas para o leitor verificar, como exercício).
 
 \begin{example}
-	Considere os vetores de $\bR^5$ escritos na base canônica:
+	Considere os vetores de $\mathbb{R}^5$ escritos na base canônica:
 	\begin{equation}
 	\vec{x} =
 	\begin{bmatrix}
@@ -178,7 +178,7 @@ Se, além de o conjunto ser ortogonal, todos os seus elementos serem unitários 
 
 
 \begin{example}
-	A base canônica do espaço $\bR^n$:
+	A base canônica do espaço $\mathbb{R}^n$:
 	\begin{equation}
 	\vec{e}_1 =
 	\begin{bmatrix}
@@ -269,7 +269,7 @@ O conjunto
 \vec{u}_2 \cdot \vec{u}_3 = 4 - 2 - 2 = 0. 
 \end{split} 
 \end{equation}
-Logo, pelo teorema acima, o conjunto $\{\vec{u}_1, \vec{u}_2,\vec{u}_3\}$ é linearmente independente. Neste exemplo, são todos elementos de $\bR^3$; portanto, formam uma base para $\bR^3$ que é também ortogonal (voltaremos a falar sobre bases ortogonais em breve)$. \ \lhd$
+Logo, pelo teorema acima, o conjunto $\{\vec{u}_1, \vec{u}_2,\vec{u}_3\}$ é linearmente independente. Neste exemplo, são todos elementos de $\mathbb{R}^3$; portanto, formam uma base para $\mathbb{R}^3$ que é também ortogonal (voltaremos a falar sobre bases ortogonais em breve)$. \ \lhd$
 \end{example}
 
 Uma das aplicações mais importantes do produto escalar reside no fato de nós conseguirmos fazer projeções ortogonais em direções fixadas. Por exemplo, suponhamos que em um sistema físico, um vetor $\vec{v}$ representa a força aplicada em um ponto, como na figura abaixo.
@@ -292,7 +292,7 @@ k = \|\vec{v}\| \cos \theta = \|\vec{u}\| \|\vec{v}\| \cos \theta = \vec{u} \cdo
 \end{equation}
 
 \begin{example}\label{canon}
-	Considere vetores no espaço de quatro dimensões $\bR^4$. Vamos determinar a projeção do vetor $\vec{v} =
+	Considere vetores no espaço de quatro dimensões $\mathbb{R}^4$. Vamos determinar a projeção do vetor $\vec{v} =
 	\begin{bmatrix}
 	1 \\ -1 \\ 3 \\ 4
 	\end{bmatrix}$ na direção da reta que tem a mesma direção do vetor $\vec{u} =
@@ -311,7 +311,7 @@ k = \|\vec{v}\| \cos \theta = \|\vec{u}\| \|\vec{v}\| \cos \theta = \vec{u} \cdo
 	\begin{bmatrix}
 	1/4 \\ 1/4 \\ 1/4 \\ -1/4
 	\end{bmatrix}.
-	\end{equation} A projeção de $\vec{v}$ sobre o vetor $\vec{e}_3$ da base canônica de $\bR^4$ é (observe que $\|\vec{e}_3\| = 1$)
+	\end{equation} A projeção de $\vec{v}$ sobre o vetor $\vec{e}_3$ da base canônica de $\mathbb{R}^4$ é (observe que $\|\vec{e}_3\| = 1$)
 	\begin{equation}
 	\proj_{\vec{e}_3} \vec{v} = (\vec{e}_3 \cdot \vec{v}) \, \vec{e}_3 = (0 + 0 + 3 + 0)
 	\begin{bmatrix}
@@ -373,7 +373,7 @@ As projeções ortogonais também podem ser utilizadas para o cálculo de distâ
 Vimos que uma das importâncias do produto escalar é estender o conceito de ortogonalidade para espaços vetoriais mais gerais. A ortogonalidade traz consigo a noção de projeção ortogonal. Agora vamos ver algumas vantagens em se considerar bases de espaços vetoriais que são também conjuntos ortogonais; estas são conhecidas como \textbf{bases ortogonais}.
 
 \begin{example}\label{ortonormal}
-	A base canônica de $\bR^n$ forma um conjunto ortogonal e é, portanto, uma base ortogonal. Assim como no Exemplo \ref{canon}, é possível representar qualquer vetor $\vec{v}$ como
+	A base canônica de $\mathbb{R}^n$ forma um conjunto ortogonal e é, portanto, uma base ortogonal. Assim como no Exemplo \ref{canon}, é possível representar qualquer vetor $\vec{v}$ como
 	\begin{equation}
 	\vec{v} = \big( \vec{v} \cdot \vec{e}_1 \big) \vec{e}_1 + \big( \vec{v} \cdot \vec{e}_2 \big) \vec{e}_2  + \cdots  + \big( \vec{v} \cdot \vec{e}_n \big) \vec{e}_n.
 	\end{equation}
@@ -382,7 +382,7 @@ Vimos que uma das importâncias do produto escalar é estender o conceito de ort
 Vejamos que esta propriedade da base canônica é, na realidade, uma propriedade de todas as bases ortogonais:
 
 \begin{theorem}\label{thm:base-ortogonal}
-	Seja $\cB = \{ \vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ uma base ortogonal de $\bR^n$. Então qualquer vetor $\vec{v} \in \bR^n$ pode ser representado como
+	Seja $\mathcal{B} = \{ \vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ uma base ortogonal de $\mathbb{R}^n$. Então qualquer vetor $\vec{v} \in \mathbb{R}^n$ pode ser representado como
 	\begin{equation}
 	\vec{v} = \frac{\vec{v} \cdot \vec{v}_1}{\vec{v}_1 \cdot \vec{v}_1} \, \vec{v}_1 + \frac{\vec{v} \cdot \vec{v}_2}{\vec{v}_2 \cdot \vec{v}_2} \, \vec{v}_2  + \cdots  + \frac{\vec{v} \cdot \vec{v}_n}{\vec{v}_n \cdot \vec{v}_n} \, \vec{v}_n.
 	\end{equation} Podemos escrever, de outra maneira, que
@@ -394,13 +394,13 @@ Vejamos que esta propriedade da base canônica é, na realidade, uma propriedade
 Este resultado mostra que bases ortogonais são especiais e boas de trabalhar. Lembra que anteriormente, para encontrar os coeficientes de um vetor em uma base, tínhamos que encontrar $c_1, c_2, \cdots, c_n$ resolvendo o sistema linear cuja forma vetorial é
 \begin{equation}
 c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n = \vec{v}.
-\end{equation} O teorema acima afirma, em outras palavras, quando a base é ortogonal, os coeficientes do vetor $\vec{v}$ na base $\cB$ são os números
+\end{equation} O teorema acima afirma, em outras palavras, quando a base é ortogonal, os coeficientes do vetor $\vec{v}$ na base $\mathcal{B}$ são os números
 \begin{equation}
 c_j = \frac{\vec{v} \cdot \vec{v}_j}{\vec{v}_j \cdot \vec{v}_j}.
 \end{equation}
 
 \begin{proof}[Justificativa do Teorema \ref{thm:base-ortogonal}]
-	Se a representação do vetor $\vec{v}$ na base $\cB$ for
+	Se a representação do vetor $\vec{v}$ na base $\mathcal{B}$ for
 	\begin{equation}
 	\vec{v} = c_1 \vec{v}_1 + c_2 \vec{v}_2 + \cdots + c_n \vec{v}_n,
 	\end{equation} então, fazendo o produto escalar desta expressão com $\vec{v}_j$ e utilizando as propriedades de ortogonalidade, concluimos que
@@ -423,12 +423,12 @@ c_j = \frac{\vec{v} \cdot \vec{v}_j}{\vec{v}_j \cdot \vec{v}_j}.
 	\begin{bmatrix}
 	-1 \\ 2
 	\end{bmatrix}
-	\end{equation} formam uma base ortogonal para $\bR^2$.
+	\end{equation} formam uma base ortogonal para $\mathbb{R}^2$.
 	
-	Em primeiro lugar, formam uma base, pois são vetores linearmente independentes e são dois (que é a dimensão de $\bR^2$). Agora, calculamos
+	Em primeiro lugar, formam uma base, pois são vetores linearmente independentes e são dois (que é a dimensão de $\mathbb{R}^2$). Agora, calculamos
 	\begin{equation}
 	\vec{u} \cdot \vec{v} = 4\cdot (-1) + 2\cdot 2 = 0.
-	\end{equation} Segue que $\vec{u}$ e $\vec{v}$ são também ortogonais e, logo, formam uma base ortogonal de $\bR^2$.
+	\end{equation} Segue que $\vec{u}$ e $\vec{v}$ são também ortogonais e, logo, formam uma base ortogonal de $\mathbb{R}^2$.
 	
 	Para escrever um vetor $\vec{x} =
 	\begin{bmatrix}
@@ -446,7 +446,7 @@ Observe no exemplo acima que é muito mais fácil obter as componentes por ortog
 Note que a base canônica, como no Exemplo \ref{ortonormal}, tem a propriedade adicional que $\|\vec{e}_j\| = 1$ para todo índice $j$. Isto fez com que a representação de vetores do Teorema \ref{thm:base-ortogonal} assumisse um formato ainda mais simples. Estas bases ortogonais que tem por elementos vetores unitários são conhecidas como \textbf{bases ortonormais}. Mais explicitamente, uma base ortonormal é uma base $\{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ de um espaço vetorial que adicionalmente satisfaz
 \begin{equation}
 \vec{v}_i \cdot \vec{v}_j = 0 \text{ para } i \neq j \text{ e também } \|\vec{v}_j\| = 1 \text{ para todo } j \ \ \big( \iff \vec{v}_j \cdot \vec{v}_j = 1 \big)
-\end{equation} Uma consequência imediata é que, sendo $\{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ uma base ortonormal de $\bR^n$, podemos escrever
+\end{equation} Uma consequência imediata é que, sendo $\{\vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ uma base ortonormal de $\mathbb{R}^n$, podemos escrever
 \begin{equation}
 \vec{v} = \big( \vec{v} \cdot \vec{v}_1 \big) \vec{v}_1 + \big( \vec{v} \cdot \vec{v}_2 \big) \vec{v}_2  + \cdots + \big( \vec{v} \cdot \vec{v}_n \big) \vec{v}_n.
 \end{equation}
@@ -466,7 +466,7 @@ Note que a base canônica, como no Exemplo \ref{ortonormal}, tem a propriedade a
 	\begin{bmatrix}
 	0 \\ \sqrt{2}/2 \\ - \sqrt{2}/2
 	\end{bmatrix}
-	\end{equation} formam uma base ortonormal de $\bR^3$: verifique! Qualquer vetor $\vec{x} \in \bR^3$ pode ser escrito como 
+	\end{equation} formam uma base ortonormal de $\mathbb{R}^3$: verifique! Qualquer vetor $\vec{x} \in \mathbb{R}^3$ pode ser escrito como 
 	\begin{equation}
 	\vec{x} = \big( \vec{x} \cdot \vec{u} \big) \vec{u} + \big( \vec{x} \cdot \vec{v} \big) \vec{v} + \big( \vec{x} \cdot \vec{w} \big) \vec{w}
 	\end{equation} Por exemplo,
@@ -503,7 +503,7 @@ Observamos finalmente que bases ortogonais podem ser facilmente transformadas em
 	\begin{bmatrix}
 	1 \\ -2 \\ 1
 	\end{bmatrix}
-	\end{equation} formam uma base ortogonal de $\bR^3$. Normalizando cada um dos vetores, podemos obter uma base ortonormal de $\bR^3$:
+	\end{equation} formam uma base ortogonal de $\mathbb{R}^3$. Normalizando cada um dos vetores, podemos obter uma base ortonormal de $\mathbb{R}^3$:
 	\begin{equation}
 	\left\{
 	\begin{array}{ll}
@@ -535,7 +535,7 @@ Observamos finalmente que bases ortogonais podem ser facilmente transformadas em
 	\begin{bmatrix}
 	1/\sqrt{6} \\ -2/\sqrt{6} \\ 1/\sqrt{6}
 	\end{bmatrix}
-	\end{equation} formam um base ortonormal de $\bR^3. \ \lhd$
+	\end{equation} formam um base ortonormal de $\mathbb{R}^3. \ \lhd$
 \end{example}
 
 
