@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 
@@ -310,4 +311,336 @@
 
 \backmatter
 
+=======
+%Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% ATENÇÃO: NÃO EDITE ESTE ARQUIVO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[a4paper]{book}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%Definições para compilação%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newif\ifispdf        % O layout será pdf?
+\newif\ifishtml       % O layout será html?
+
+\def\tfn{config.knd}   % Arquivo que guarda as definições do tipo de saída
+\def \tdata{}          % Definições do tipo de saída: book, slide ou html.
+
+\openin1=\tfn\relax    % Leitura das definições de saída
+\read1 to \tdata
+\closein1
+
+\tdata                 % Definições de saída
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%Para escrever português%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[portuguese]{babel}   %%Portuguese-specific commands
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%Pacotes básicos para MathEnvir%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}%%AMS primary package (includes amstext, amsopn, amsbsy), provides various features for displayed equations and %%other mathematical constructs.
+
+%%%%OPTIONS FOR THE AMSMATH PACKAGE
+\usepackage{amscd}     %%Provides a CD environment for simple commutative diagrams (no support for diagonal arrows).
+\usepackage{amsxtra}   %%Provides certain odds and ends such as \fracwithdelims and \accentedsymbol, for compatibility with documents %%created using version 1.1.
+
+\usepackage{amsthm}    %%Enhanced version of \newtheorem command for defining theorem-like environments
+
+
+\usepackage{amssymb}   %%Provides an extended symbol collection (includes amsfonts). For example, \barwedge, \boxdot, \boxminus, %%\boxplus, \boxtimes, \Cap, \Cup (and many more), the arrow \leadsto, and some other symbols such as \Box and \Diamond.
+
+\usepackage{latexsym}  %%makes few additional characters available: \Box \Join \Box \Diamond \leadsto \sqsubset \sqsupset \lhd \unlhd %%\rhd \unrhd
+
+\usepackage[makeroom]{cancel}   % Cancelar termos em equações
+
+\usepackage{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%Color, graphicx, margin (geometry)%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\ifispdf
+\usepackage[dvips]{graphicx}
+\fi
+\ifishtml
+\usepackage[dvips]{graphicx}
+\fi
+
+%\usepackage{color}            %%Textcolor, color definitions, etc
+
+%\definecolor{light-blue}{rgb}{0.8,0.85,1}     %%Numbers between 0 and 1
+%\definecolor{mygrey}{gray}{0.75}              %%Numbers between 0 and 1
+
+\usepackage{verbatim}         %%Adds text from other files, comment environment
+
+\usepackage{xpatch}           %%Bold theorem titles
+\makeatletter
+   \xpatchcmd{\@thm}{\fontseries\mddefault\upshape}{}{}{} %same font as thm-header
+\makeatother
+
+\usepackage[margin=1in]{geometry}  %%Margins  %%Possible to use \newgeometry to modify small parts mid-document
+
+
+%font
+\ifispdf
+\usepackage{tgbonum}
+\fi
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%Theorem styles, numbering%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}              %%section, chapter, etc
+\newtheorem{proposition}[theorem]{Proposição}      %%everything below obeys theorem because: [theorem]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{corollary}[theorem]{Corolário}
+\newtheorem{maintheorem}{Teorema}                   %%number doesn't obey order
+\renewcommand{\themaintheorem}{\Alph{maintheorem}}
+\newtheorem{maincorollary}{Corolário}
+\newtheorem{conjecture}{Conjectura}
+\newtheorem*{claim}{Afirmação}
+
+\newtheorem*{teoespectral}{Teorema Espectral}     %%Sem numeração e com o nome desejado
+
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Observação}
+\newtheorem{example}[theorem]{Exemplo}
+\newtheorem{definition}[theorem]{Definição}
+\newtheorem{exercise}{Exercício}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%New Commands%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newcommand{\mb}[1]{\mathbb{#1}}
+%\newcommand{\bC}{\mathbb{C}}
+%\newcommand{\bE}{\mathbb{E}}
+%\newcommand{\bK}{\mathbb{K}}
+%\newcommand{\bN}{\mathbb{N}}
+%\newcommand{\bP}{\mathbb{P}}
+%\newcommand{\bQ}{\mathbb{Q}}
+%\newcommand{\bR}{\mathbb{R}}
+%\newcommand{\bS}{\mathbb{S}}
+%\newcommand{\bT}{\mathbb{T}}
+%\newcommand{\bZ}{\mathbb{Z}}
+
+% \newcommand{\mathcal{B}}{\mathcal{B}}
+% \newcommand{\cE}{\mathcal{E}}
+% \newcommand{\cF}{\mathcal{F}}
+% \newcommand{\cH}{\mathcal{H}}
+% \newcommand{\cL}{\mathcal{L}}
+% \newcommand{\cM}{\mathcal{M}}
+% \newcommand{\cO}{\mathcal{O}}
+% \newcommand{\cP}{\mathcal{P}}
+% \newcommand{\cQ}{\mathcal{Q}}
+% \newcommand{\cR}{\mathcal{R}}
+% \newcommand{\cS}{\mathcal{S}}
+
+% \newcommand{\al} {\alpha}       \newcommand{\Al}{\Alpha}
+% \newcommand{\be} {\beta}        \newcommand{\Be}{\Beta}
+% \newcommand{\ga} {\gamma}       \newcommand{\Ga}{\Gamma}
+% \newcommand{\de} {\delta}       \newcommand{\De}{\Delta}
+% \newcommand{\ep} {\epsilon}
+% \newcommand{\eps}{\varepsilon}
+% \newcommand{\ze} {\zeta}
+% \newcommand{\vte}{\vartheta}
+% \newcommand{\iot}{\iota}
+% \newcommand{\ka} {\kappa}
+% \newcommand{\la} {\lambda}      \newcommand{\La}{\Lambda}
+% \newcommand{\vpi}{\varpi}
+% %\newcommand{\ro} {\rho}
+% \newcommand{\vro}{\varrho}
+% \newcommand{\si} {\sigma}       \newcommand{\Si}{\Sigma}
+% \newcommand{\vsi}{\varsigma}
+% \newcommand{\ups}{\upsilon}     \newcommand{\Up}{\Upsilon}
+% \newcommand{\vphi}{\varphi}
+% \newcommand{\om} {\omega}       \newcommand{\Om}{\Omega}
+
+% \newcommand{\ang}{\operatorname{angle}}
+% \newcommand{\closu}{\operatorname{clos}}
+% \newcommand{\Col}{\operatorname{Col}}
+% \newcommand{\const}{\operatorname{const}}
+% \newcommand{\curl}{\operatorname{curl}}
+% \newcommand{\dd}{\, \mathrm{d}}
+% \newcommand{\diam}{\operatorname{diam}}
+% \newcommand{\Dim}{\operatorname{dim}}
+% \newcommand{\Div}{\operatorname{div}}
+% \newcommand{\dist}{\operatorname{dist}}
+% \newcommand{\grad}{\operatorname{grad}}
+% \newcommand{\fr}{\partial}
+% \newcommand{\graph}{\operatorname{graph}}
+% \newcommand{\id}{\operatorname{Id}}
+% \newcommand{\inter}{\operatorname{int}}
+% \newcommand{\Leb}{\operatorname{Leb}}
+% \newcommand{\length}{\operatorname{length}}
+% \newcommand{\Lip}{\operatorname{Lip}}
+% \newcommand{\Nul}{\operatorname{Nul}}
+% \newcommand{\proj}{\operatorname{proj}}
+% \newcommand{\res}{\operatornamewithlimits{Res}}
+% \newcommand{\rot}{\operatorname{rot}}
+% \newcommand{\var}{\operatornamewithlimits{{var}}}
+
+\newcommand{\proj}{\operatorname{proj}}
+\newcommand{\sen}{\operatorname{sen}}
+\newcommand{\senh}{\operatorname{senh}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\supp}{\operatorname{supp}}
+
+\everymath{\displaystyle}
+
+%ligações
+\usepackage[pdfborder={0 0 0 [0 0]},colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue]{hyperref}
+
+
+%define a marcação dos capítulos
+\addto\captionsportuguese{\renewcommand{\chaptername}{}}
+%\addto\captionsportuguese{\renewcommand{\chaptermark}{}}
+
+%%%% no blank pages between chapters %%%%
+\let\cleardoublepage\clearpage
+
+
+%pacote de modulação
+\usepackage{subfiles}
+
+%cabeçalho e rodapé
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyhead[L]{Álgebra Linear - Um Livro Colaborativo}
+\fancyhead[R]{\thepage}
+\fancyfoot[C]{\tiny{Licença CC-BY-SA-3.0. Contato: \url{livroscolaborativos@gmail.com}}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   CONVITES À EDIÇÃO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\emconstrucao}{
+  \begin{tabular}{|c|}\hline
+    Em construção ... Gostaria de participar na escrita deste livro? Veja como em:\\
+    \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
+  \end{tabular}
+}
+
+\newcommand{\construirSec}{
+\begin{center}
+  Esta seção (ou subseção) está sugerida. Participe da sua escrita. Veja como em:\\
+  \url{https://www.ufrgs.br/reamat/participe.html}  
+\end{center}
+}
+
+\newcommand{\construirExeresol}{
+  \begin{center}
+    \begin{tabular}{|c|}\hline
+      Esta seção carece de exercícios resolvidos. Participe da sua escrita.\\
+      Veja como em:\\
+      \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
+    \end{tabular}
+  \end{center}
+}
+
+\newcommand{\construirExer}{
+  \begin{center}
+    \begin{tabular}{|c|}\hline
+      Esta seção carece de exercícios. Participe da sua escrita.\\
+      Veja como em:\\
+      \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
+    \end{tabular}
+  \end{center}
+}
+
+\newcommand{\construirResp}{
+\begin{center}
+  Este exercício está sem resposta sugerida. Proponha uma resposta. Veja como em:\\
+  \url{https://www.ufrgs.br/reamat/participe.html}  
+\end{center}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HTML 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifishtml
+\renewenvironment{proof}
+{{\bfseries\upshape Demonstração.}}
+{
+  \begin{flushright}
+    $\blacksquare$
+  \end{flushright}
+}
+\fi
+
+\usepackage{minitoc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%diretório de origem
+\newcommand{\dir}{.} 
+
+\frontmatter
+
+\title{Álgebra Linear\\\small{Um Livro Colaborativo}}
+\author{}
+\date{\today}
+
+\ifispdf
+\addcontentsline{toc}{chapter}{Capa}
+\fi
+
+\maketitle
+
+\include{organizadores}
+\include{colaboradores}
+\include{licenca}
+\include{nota_organizadores}
+\include{prefacio}
+
+\ifispdf
+\tableofcontents
+\addcontentsline{toc}{chapter}{Sumário}
+\fi
+
+\mainmatter
+
+%Inclui os capítulos
+\subfile{Semana01/semana01.tex}
+\subfile{Semana02/semana02.tex}
+\subfile{Semana03/semana03.tex}
+\subfile{Semana04/semana04.tex}
+\subfile{Semana05/semana05.tex}
+\subfile{Semana06-07/semana06-07.tex}
+
+\subfile{Semana09/semana09.tex}
+\subfile{Semana10/semana10.tex}
+\subfile{Semana11/semana11.tex}
+\subfile{Semana12/semana12-fatQR.tex}
+\subfile{Semana13/semana13-LLScomQR.tex}
+\subfile{Semana14-15/semana14-15.tex}
+
+\backmatter
+
+>>>>>>> 5edaf56301b741a287f51829dd7dc48a322ecb58
 \end{document}
