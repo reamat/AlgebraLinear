@@ -30,10 +30,10 @@ Considere o sistema linear que consiste de duas equações e duas variáveis
   \left\{
     \begin{array}{rcl}
       x+3y&=&1 \\
-      2x-y&=&-2
+      2x-y&=&-2.
     \end{array}
-  \right..
-\end{equation} Nosso objetivo é descobrir o valor (ou todos os valores) das variáveis $x$ e $y$ que satisfazem a ambas equações.
+  \right.
+  \end{equation} Nosso objetivo é descobrir o valor (ou todos os valores) das variáveis $x$ e $y$ que satisfazem a ambas equações.
 
 \vspace{0.2cm}
 
@@ -42,17 +42,17 @@ Considere o sistema linear que consiste de duas equações e duas variáveis
   \left\{
     \begin{array}{rcl}
       -2x-6y&=&-2 \\
-      2x-y&=&-2
+      2x-y&=&-2.
     \end{array}
-  \right..
+  \right.
 \end{equation} Em seguida, somamos as duas equações e mantemos uma delas.
 \begin{equation}
   \left\{
     \begin{array}{rcl}
       -2x-6y&=& -2 \\
-      -7y & =& -4
+      -7y & =& -4.
     \end{array}
-  \right..
+  \right.
 \end{equation} Este sistema também tem as mesmas soluções do anterior, pois podemos a qualquer hora retornar ao sistema original fazendo $($linha 2$)-($linha 1$)$.
 
 Em verdade, manter a equação da primeira linha multiplicada por $-2$ não ajuda em nada na resolução do sistema e voltaremos à equação original. Além disso, na linha dois já podemos isolar a variável $y$ e descobrir o seu valor. Ficamos então com o sistema:
@@ -60,9 +60,9 @@ Em verdade, manter a equação da primeira linha multiplicada por $-2$ não ajud
   \left\{
     \begin{array}{rcl}
       x+3y&=& 1 \\
-      -7y & =& -4
+      -7y & =& -4.
     \end{array}
-  \right..
+  \right.
 \end{equation}
 
 Observamos, finalmente, que a solução do último sistema (que é a mesma do sistema original) já está muito fácil de ser obtida. Sabemos o valor de $y$ pela segunda equação e, para descobrir o valor de $x$, basta usar a primeira equação:
@@ -118,9 +118,9 @@ Um artifício que torna todo o processo mais ``automático'' é o de formar uma 
   \right. \qquad \rightsquigarrow \qquad  \left[
                              \begin{array}{cc|c}
                                1 & 3 & 1 \\
-                               2 & -1 & -2 \\
+                               2 & -1 & -2.
                              \end{array}
-                           \right].
+                           \right]
 \end{equation} A tabela de números da direita é conhecida como a \textbf{matriz aumentada associada ao sistema linear}. Vamos nos referir às linhas da matriz associada como $\ell_1$ e $\ell_2$. Deste modo, ``adicionar um múltiplo da linha 1 na linha dois'' corresponde a fazer:
 \begin{equation}
 \left[
@@ -132,9 +132,9 @@ Um artifício que torna todo o processo mais ``automático'' é o de formar uma 
 \left[
                              \begin{array}{cc|c}
                                1 & 3 & 1 \\
-                               0 & -7 & -4 \\
+                               0 & -7 & -4.
                              \end{array}
-                           \right].
+                           \right]
 \end{equation} Para este tipo de operação, olhamos para as colunas da matriz associada, fizemos mentalmente (ou em uma folha de rascunho) os cálculos envolvidos e preenchemos os valores na respectiva linha da nova matriz que está à direita:
 \begin{equation}
 (-2)\cdot 1 + 2 = 0, \qquad (-2)\cdot 3 + (-1) = -7, \qquad (-2) \cdot 1 + (-2) = -4.
@@ -149,34 +149,34 @@ Consideramos agora um sistema com três equações e três variáveis;
   \begin{array}{ll}
     x + 2y + z = 12 \\
     x -3y + 5z = 1 \\
-    2x - y + 3z = 10
+    2x - y + 3z = 10.
   \end{array}
-\right. .
+\right. 
 \end{equation} Vamos diretamente escrever a matriz aumentada associada ao sistema, que é a matriz com os coeficientes da variável $x$ na primeira coluna, os coeficientes da variável $y$ na segunda coluna, os coeficientes de $z$ na terceira coluna e os coeficientes independentes na última coluna:
 \begin{equation}
 \left[
   \begin{array}{ccc|c}
     1 &  2 & 1 & 12 \\
     1 & -3 & 5 & 1 \\
-    2 & -1 & 3 & 10 \\
+    2 & -1 & 3 & 10.
   \end{array}
-\right].
+\right]
 \end{equation} Em seguida, utilizamos operações elementares nas linhas como no exemplo anterior. Ao substituir $-\ell_1 + \ell_2$ em $\ell_2$, obtemos
 \begin{equation}
 \left[
   \begin{array}{ccc|c}
     1 &  2 & 1 & 12 \\
     0 & -5 & 4 & -11 \\
-    2 & -1 & 3 & 10 \\
+    2 & -1 & 3 & 10 .
   \end{array}
-\right].
+\right]
 \end{equation} Ou seja, eliminamos o valor $1$ da primeira posição da segunda linha (em outras palavras, eliminamos a variável $x$ da segunda equação). Prosseguindo com a eliminação dos valores abaixo da diagonal principal da matriz, obtemos:
 \begin{equation}
 \left[
   \begin{array}{ccc|c}
     1 &  2 & 1 & 12 \\
     0 & -5 & 4 & -11 \\
-    2 & -1 & 3 & 10 \\
+    2 & -1 & 3 & 10 
   \end{array}
 \right]
 \quad \xrightarrow{-2\ell_1 + \ell_3 \text{ em } \ell_3} \quad
@@ -184,7 +184,7 @@ Consideramos agora um sistema com três equações e três variáveis;
   \begin{array}{ccc|c}
     1 &  2 & 1 &  12 \\
     0 & -5 & 4 & -11 \\
-    0 & -5 & 1 & -14 \\
+    0 & -5 & 1 & -14 
   \end{array}
 \right]
 \quad \xrightarrow{-\ell_2 + \ell_3 \text{ em } \ell_3} \quad
@@ -192,9 +192,9 @@ Consideramos agora um sistema com três equações e três variáveis;
   \begin{array}{ccc|c}
     1 &  2 &  1 &  12 \\
     0 & -5 &  4 & -11 \\
-    0 &  0 & -3 & -3 \\
+    0 &  0 & -3 & -3. 
   \end{array}
-\right].
+\right]
 \end{equation} Voltando à notação original do sistema, obtemos
 \begin{equation}
 \left\{
@@ -256,18 +256,18 @@ Outros exemplos, retirados livro do David C. Lay:
 \blacksquare & a_0 & a_1 & a_2 \\
 0 & \blacksquare & a_3 & a_4 \\
 0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0
+0 & 0 & 0 & 0,
 \end{array}
-\right], \quad
+\right] \quad
 \left[
 \begin{array}{cccccccccc}
 0 & \blacksquare & a_1 & a_2 & a_3 & a_4 & a_5 & a_6 & a_7 & a_8\\
 0 & 0 & 0 & \blacksquare & a_9 & a_{10} & a_{11} & a_{12} & a_{13} & a_{14}\\
 0 & 0 & 0 & 0 & \blacksquare & a_{15} & a_{16} & a_{17} & a_{18} & a_{19}\\
 0 & 0 & 0 & 0 & 0 & \blacksquare & a_{20} & a_{21} & a_{22} & a_{23} \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \blacksquare & a_{24}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \blacksquare & a_{24}.
 \end{array}
-\right].
+\right]
 \end{equation} Quando uma matriz está em forma escalonada, as posições marcadas com $\blacksquare$ são chamadas de \textbf{posições de pivô}. Observe que, caso a matriz não esteja em forma escalonada, o elemento líder de uma linha pode não estar na posição de pivô. Dizemos também que uma coluna é uma \textbf{coluna pivô} quando a coluna possui uma posição de pivô. Por exemplo, na primeira matriz acima, as duas primeiras colunas são colunas pivô enquanto a terceira e a quarta não são.
 
 \vspace{0.2cm}
@@ -303,9 +303,9 @@ Quanto aos outros exemplos, temos
 0 & 0 & 0 & 1 & 0 &0 & b_{11} & b_{12} & 0 & b_{14} \\
 0 & 0 & 0 & 0 & 1 & 0 & b_{16} & b_{17} & 0 & b_{19} \\
 0 & 0 & 0 & 0 & 0 & 1 & b_{20} & b_{21} & 0 & b_{23} \\
-0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & b_{24}
+0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 1 & b_{24}.
 \end{array}
-\right].
+\right]
 \end{equation}
 
 \begin{remark}
@@ -315,7 +315,7 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
   \begin{array}{ccc|c}
     1 &  2 &  1 &  12 \\
     0 & -5 &  4 & -11 \\
-    0 &  0 & -3 & -3 \\
+    0 &  0 & -3 & -3
   \end{array}
 \right]
 \quad \xrightarrow{\ell_2 \div (-5)  \text{ e } \ell_3\div (-3)} \quad
@@ -323,7 +323,7 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
   \begin{array}{ccc|c}
     1 &  2 &  1   &  12 \\
     0 & 1  & -4/5 & 11/5 \\
-    0 &  0 &  1   &  1 \\
+    0 &  0 &  1   &  1
   \end{array}
 \right]
 \end{equation}
@@ -333,7 +333,7 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
   \begin{array}{ccc|c}
     1 &  2 &  1   &  12 \\
     0 & 1  &  0   &  3 \\
-    0 &  0 &  1   &  1 \\
+    0 &  0 &  1   &  1
   \end{array}
 \right]
 \xrightarrow{-\ell_3 + \ell_1 \text{ em } \ell_1} \quad
@@ -341,7 +341,7 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
   \begin{array}{ccc|c}
     1 &  2 &  0   &  11 \\
     0 &  1 &  0   &  3 \\
-    0 &  0 &  1   &  1 \\
+    0 &  0 &  1   &  1
   \end{array}
 \right]
 \xrightarrow{-2\ell_2 + \ell_1 \text{ em } \ell_1} \quad
@@ -789,9 +789,9 @@ Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \text
   \begin{array}{ccc|c}
     1 &  3 & -6 &  6  \\
     0 & -8 & 11 & \pi  \\
-    0 & 0 & 12 & -9
+    0 & 0 & 12 & -9.
   \end{array}
-\right].
+\right]
 \end{equation} Neste caso, vimos que o sistema possui \textbf{apenas uma solução}. Nota que \textit{esta possibilidade apenas é possível se tivermos um sistema com o número de equações igual ao número de variáveis}.
   \item Caso a coluna referentes à alguma variável do sistema não possua posição de pivô, teremos duas possibilidades
 \begin{enumerate}[$(i)$]
@@ -801,9 +801,9 @@ Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \text
   \begin{array}{ccccc|c}
     1 & 3  & 2  & -6 & 2  &  6  \\
     0 & -8 & 4 & 11  & -1  & -3  \\
-    0 & 0  &  0 & 12 &  1 & -9
+    0 & 0  &  0 & 12 &  1 & -9.
   \end{array}
-\right].
+\right]
 \end{equation} Neste caso, as variáveis referentes a colunas que não são pivô (na matriz acima, colunas 3 e 5) podem ser consideradas variáveis livres e o sistema \textbf{possui infinitas soluções}.
 
   \item Alguma coluna não é coluna pivô mas existem linhas que são inconsistentes, \emph{e.g},
@@ -812,9 +812,9 @@ Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \text
   \begin{array}{ccccc|c}
     1 & 3  & 2  & -6 & 2  &  6  \\
     0 & -8 & 4 & 11  & -1  & 1  \\
-    0 & 0  &  0 & 0 &  0 & -9
+    0 & 0  &  0 & 0 &  0 & -9.
   \end{array}
-\right].
+\right]
 \end{equation} Neste caso, \textbf{não existem soluções} para o sistema, pois uma das equações é impossível de ser satisfeita.
 \end{enumerate}
 \end{itemize}
