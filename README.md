@@ -32,7 +32,7 @@ Iremos cuidar para analisar seu aviso o mais prontamente possível e removeremos
 
 ## Sobre o código fonte
 
-O código fonte está escrito em [Latex](https://latex-project.org/) e as referências bibliográficas em [BibTex](http://www.bibtex.org/), testado em computador Linux com o pacote [TexLive](http://www.tug.org/texlive/). O texto está em formatação **utf-8**.
+O código fonte está escrito em [Latex](https://latex-project.org/) e as referências bibliográficas em [BibTex](http://www.bibtex.org/), testado em computador Linux com o pacote [TexLive](https://www.tug.org/texlive/). O texto está em formatação **utf-8**.
 
 ## Compilando
 
