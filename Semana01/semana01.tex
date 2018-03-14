@@ -118,7 +118,7 @@ Um artifício que torna todo o processo mais ``automático'' é o de formar uma 
   \right. \qquad \rightsquigarrow \qquad  \left[
                              \begin{array}{cc|c}
                                1 & 3 & 1 \\
-                               2 & -1 & -2 \\
+                               2 & -1 & -2 
                              \end{array}
                            \right].
 \end{equation} A tabela de números da direita é conhecida como a \textbf{matriz aumentada associada ao sistema linear}. Vamos nos referir às linhas da matriz associada como $\ell_1$ e $\ell_2$. Deste modo, ``adicionar um múltiplo da linha 1 na linha dois'' corresponde a fazer:
@@ -126,13 +126,13 @@ Um artifício que torna todo o processo mais ``automático'' é o de formar uma 
 \left[
                              \begin{array}{cc|c}
                                1 & 3 & 1 \\
-                               2 & -1 & -2 \\
+                               2 & -1 & -2
                              \end{array}
                            \right] \quad \xrightarrow{-2\ell_1 + \ell_2 \text{ em } \ell_2} \quad
 \left[
                              \begin{array}{cc|c}
                                1 & 3 & 1 \\
-                               0 & -7 & -4 \\
+                               0 & -7 & -4 
                              \end{array}
                            \right].
 \end{equation} Para este tipo de operação, olhamos para as colunas da matriz associada, fizemos mentalmente (ou em uma folha de rascunho) os cálculos envolvidos e preenchemos os valores na respectiva linha da nova matriz que está à direita:
@@ -158,7 +158,7 @@ Consideramos agora um sistema com três equações e três variáveis;
   \begin{array}{ccc|c}
     1 &  2 & 1 & 12 \\
     1 & -3 & 5 & 1 \\
-    2 & -1 & 3 & 10 \\
+    2 & -1 & 3 & 10 
   \end{array}
 \right].
 \end{equation} Em seguida, utilizamos operações elementares nas linhas como no exemplo anterior. Ao substituir $-\ell_1 + \ell_2$ em $\ell_2$, obtemos
@@ -167,7 +167,7 @@ Consideramos agora um sistema com três equações e três variáveis;
   \begin{array}{ccc|c}
     1 &  2 & 1 & 12 \\
     0 & -5 & 4 & -11 \\
-    2 & -1 & 3 & 10 \\
+    2 & -1 & 3 & 10 
   \end{array}
 \right].
 \end{equation} Ou seja, eliminamos o valor $1$ da primeira posição da segunda linha (em outras palavras, eliminamos a variável $x$ da segunda equação). Prosseguindo com a eliminação dos valores abaixo da diagonal principal da matriz, obtemos:
@@ -176,7 +176,7 @@ Consideramos agora um sistema com três equações e três variáveis;
   \begin{array}{ccc|c}
     1 &  2 & 1 & 12 \\
     0 & -5 & 4 & -11 \\
-    2 & -1 & 3 & 10 \\
+    2 & -1 & 3 & 10 
   \end{array}
 \right]
 \quad \xrightarrow{-2\ell_1 + \ell_3 \text{ em } \ell_3} \quad
@@ -184,7 +184,7 @@ Consideramos agora um sistema com três equações e três variáveis;
   \begin{array}{ccc|c}
     1 &  2 & 1 &  12 \\
     0 & -5 & 4 & -11 \\
-    0 & -5 & 1 & -14 \\
+    0 & -5 & 1 & -14 
   \end{array}
 \right]
 \quad \xrightarrow{-\ell_2 + \ell_3 \text{ em } \ell_3} \quad
@@ -192,7 +192,7 @@ Consideramos agora um sistema com três equações e três variáveis;
   \begin{array}{ccc|c}
     1 &  2 &  1 &  12 \\
     0 & -5 &  4 & -11 \\
-    0 &  0 & -3 & -3 \\
+    0 &  0 & -3 & -3 
   \end{array}
 \right].
 \end{equation} Voltando à notação original do sistema, obtemos
@@ -315,7 +315,7 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
   \begin{array}{ccc|c}
     1 &  2 &  1 &  12 \\
     0 & -5 &  4 & -11 \\
-    0 &  0 & -3 & -3 \\
+    0 &  0 & -3 & -3
   \end{array}
 \right]
 \quad \xrightarrow{\ell_2 \div (-5)  \text{ e } \ell_3\div (-3)} \quad
@@ -323,7 +323,7 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
   \begin{array}{ccc|c}
     1 &  2 &  1   &  12 \\
     0 & 1  & -4/5 & 11/5 \\
-    0 &  0 &  1   &  1 \\
+    0 &  0 &  1   &  1 
   \end{array}
 \right]
 \end{equation}
@@ -333,7 +333,7 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
   \begin{array}{ccc|c}
     1 &  2 &  1   &  12 \\
     0 & 1  &  0   &  3 \\
-    0 &  0 &  1   &  1 \\
+    0 &  0 &  1   &  1 
   \end{array}
 \right]
 \xrightarrow{-\ell_3 + \ell_1 \text{ em } \ell_1} \quad
@@ -341,7 +341,7 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
   \begin{array}{ccc|c}
     1 &  2 &  0   &  11 \\
     0 &  1 &  0   &  3 \\
-    0 &  0 &  1   &  1 \\
+    0 &  0 &  1   &  1
   \end{array}
 \right]
 \xrightarrow{-2\ell_2 + \ell_1 \text{ em } \ell_1} \quad
