@@ -1,4 +1,4 @@
-%Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite http://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+%Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 \documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
@@ -14,7 +14,120 @@
 \chapter{Semana 10}
 
 
+\section{Cadeias de Markov como introdução a autovalores e autovetores}
+
+Suponha que em um determindo país existam dois sistemas operacionais para telefones celulares, os sistemas A e B.
+
+Os habitantes deste país são livres para usar qualquer um dos sistemas, podendo trocar a qualquer momento.
+
+Suponha que uma pessoa que usa o sistema A no dia de hoje tem uma chance de  20\% de estar usando  o sistema B daqui a um ano, enquanto uma pessoa que usa o sistema B no dia de hoje migra para o sistema A com chance de 30\% após este mesmo período de 1 ano.
+
+Para simplificar a análise, vamos supor que as probabilidades de troca introduzidas acima, ou  {\it probabilidades de transição}, mantenham-se fixas ao longo dos anos.
+Este tipo de modelo é chamado de uma {\it Cadeia de Markov}.
+
+Se no dia de hoje temos 40\% da população usando o sistema A e 60\% usando o sistema B, algumas perguntas podem ser feitas:
+
+\medskip
+
+
+(a) qual a fração da população usando o sistema A e qual a fração usando o sistema B daqui a um ano? (Ou em outras palavras, qual a distribuição da população daqui a 1 ano) ?
+
+(b) podemos calcular a distribuição da população daqui a 20 anos? Como fazer isso de maneira prática?
+
+(c) existe uma distribuição de equilíbrio, que permaneça invariante a longo do tempo?
+
+\medskip
+Qual a ligação disto com matrizes ou álgebra linear?
+Para responder a primeira questão, seja
+\medskip
+
+$p_A(0)=0.4$ a fração da população em A no dia de hoje
+
+e
+
+$p_B(0)=0.6$ a fração da população em B neste mesmo dia de hoje.
+
+Se chamarmos $p_A(1)$ e $p_B(1)$ a distribuição de população daqui a um ano, teremos
+
+\begin{equation}\label{cmark-1}
+\begin{cases}
+p_A(1)=p_A(0) \cdot 0,8 + p_B(0) \cdot 0,3 \\
+p_B(1)=p_A(0) \cdot 0,2 + p_B(0) \cdot 0,7
+\end{cases}
+\end{equation}
+ou de forma  matricial,
+
+$$\left[ \begin{array}{c} p_A(1)
+\\ p_B(1)
+\end{array} \right]  =
+\left[ \begin{array}{cc} 0,8 & 0,3
+\\ 0,2 & 0,7
+\end{array} \right]
+\left[ \begin{array}{c} p_A(0)
+\\ p_B(0)
+\end{array} \right]  $$
+onde a matriz $A=\left[ \begin{array}{cc} 0,8 & 0,3
+\\ 0,2 & 0,7
+\end{array} \right]$
+é chamada matriz de transição da Cadeia de Markov acima.
+
+Assim, \eqref{cmark-1} pode ser escrito como
+$$ \vec p_1 = A \vec p_0.$$
+
+Fazendo as contas com $p_A(0)=0,4$ e $p_B(0)=0,6$, temos $p_A(1)=0,5$ e $p_B(1)=0,5$.
+
+\medskip
+
+Para responder a pergunta (b), note que se chamarmos $\vec{p_n}$ a distribuição de população no tempo $n$ (ou seja daqui a n anos), vale seguinte formula
+
+\begin{equation}\label{cmark-2}
+\vec p_{n+1} = A \vec p_n
+\end{equation}
+
+Por exemplo $ \vec p_2 = A \vec p_1= A (A \vec p_0)= A^2 \vec p_0.$, onde $A^2$ é a matriz $A$ elevada ao quadrado.
+No nosso caso $p_A(2)=0,55$ e $p_B(2)=0,45$.
+
+Seguindo, nosso modelo nos permite deduzir que
+
+$$ \vec p_{n+1} = A^n \vec p_0$$
+onde $A^n$ significa a n-ésima potência da matriz $A$.
+
+Neste momento surge uma quarta pergunta:
+
+\medskip
+
+(d) como calcular de maneira {\it prática} uma potência de uma matriz?
+
+\medskip
+
+Se soubermos responder a pergunta (d) acima, a pergunta (b) será facilmente respondida.
+
+\medskip
+
+Finalmente analisando (c), notamos que uma distribuição em equilíbrio $\vec{p}_E$, que permanece constante ao longo do tempo, é tal que se coincidir com a  distribuição inicial $\vec p_0$, deve também coincidir com $\vec p_1$, de maneira que
+
+$$ \vec{p}_E =  \vec p_1 = A \vec p_0 = A \vec{p}_E.$$
+Ou seja, $p_E$ é um vetor invariante para a multiplicação pela matriz $A$: satisfaz a equação
+
+$$ A \vec{p}_E =   \vec{p}_E.$$
+
+%É de se esperar (e de fato pode-se )
+
+Pode-se ainda notar que $$\lim\limits_{n\to \infty}\vec{p}_n = \vec p_E,$$ o que nos leva novamente a equação $ A \vec{p}_E = \vec{p}_E$: basta para isso tomar o limite em ambos os lados na equação \eqref{cmark-2}.
+
+Um vetor não nulo $\vec v$ que satisfaz $A \vec v = \vec v$ é um primeiro exemplo daquilo que em breve chamaremos de {\it autovetor } para a matriz $A$. A noção de autovetores é um pouco mais geral e abrange também o caso $A \vec v = \lambda \vec v$, onde $\lambda$ é chamado de {\it autovalor } associado ao autovetor $\vec v$.
+
+Estudaremos em detalhes autovetores e autovalores a partir de agora. Veremos, entre outras coisas, que ao conhecermos os autovetores e autovalores de uma matriz $A$
+%(além de conhecermos distribuições de equilíbrio para cadeias de Markov)
+poderemos, em muitos casos, escrever a matriz $A$ na forma
+$$A = P D P^{-1},$$
+no que é chamada uma {\it diagonalização} de $A$, onde $D$ é uma matriz diagonal, ou seja que tem todas as entradas fora da diagonal principal nulas. Desta maneira poderemos calcular potências de $A$ através da expressão
+$$A^n = P D^n P^{-1},$$
+algo que é muito útil do ponto vista computacional, visto que o cálculo de potências de matrizes diagonais é muito simples. Isto nos dá uma resposta à pergunta (d) acima.
+
+
 \section{Autovalores, autovetores e autoespaços associados}
+
 
 Associados com uma transformação linear $T$ estão os seus autovetores, que, como veremos, são direções especiais para esta transformação $T$. Por esta razão, são também conhecidos como vetores próprios ou vetores característicos de $T$. Aparecem em muitas aplicações, pois nos ajudam a entender mais profundamente a transformação linear $T$.
 
@@ -243,7 +356,7 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 	\end{array}
 	\right] \right\}.
 	\end{equation}
-	
+
 	Para encontrar os autovetores associados a $\lambda_2 = 5$, resolvemos
 	\begin{equation}
 	\left[
@@ -310,7 +423,7 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 	\end{array}
 	\right].
 	\end{equation}
-	
+
 	\begin{itemize}
 		\item associados com o autovalor $\lambda_1 = 1$, vamos resolver o sistema homogêneo:
 		\begin{equation}
@@ -530,7 +643,7 @@ P = \begin{bmatrix}
 \end{equation}
 
 \begin{proof}[Justificativa do método de diagonalização]
-Vamos verificar que $P^{-1} A P = D$ mostrando que as colunas da matriz $P^{-1} A P$ são iguais as colunas de $D$. Pela forma que construimos a matriz $P$, sabemos que a primeira coluna de $P$ é $\vec{v}_1$: 
+Vamos verificar que $P^{-1} A P = D$ mostrando que as colunas da matriz $P^{-1} A P$ são iguais às colunas de $D$. Pela forma que construimos a matriz $P$, sabemos que a primeira coluna de $P$ é $\vec{v}_1$:
 \begin{equation}
 P \vec{e}_1 = \vec{v}_1 \qquad \qquad \text{ou, ainda, } \qquad  \vec{e}_1 = P^{-1} \vec{v}_1.
 \end{equation} Assim, já que $A \vec{v}_1 = \lambda_1 \vec{v}_1$, temos
@@ -638,7 +751,7 @@ A = \begin{bmatrix}
 Em geral, valem as seguintes propriedades: seja $A$ uma matriz de orden $n \times n$. Então:
 \begin{itemize}
 	\item Se $A$ possui $n$ autovalores reais distintos, então $A$ possui uma base de autovetores e é diagonalizável, pois possui um autovetor associado a cada um dos seus autovalores distintos.
-	\item No caso de $A$ possuir autovalores reais com multiplicidade maior do que $1$, $A$ apenas será diagonalizável se cada autovalor de multiplicidade $k$ tiver $k$ autovetores linearmente independentes. Em outras palavras, só será possível formar uma base de autovetores de $A$ quando 
+	\item No caso de $A$ possuir autovalores reais com multiplicidade maior do que $1$, $A$ apenas será diagonalizável se cada autovalor de multiplicidade $k$ tiver $k$ autovetores linearmente independentes. Em outras palavras, só será possível formar uma base de autovetores de $A$ quando
 	\begin{equation}
 	\operatorname{dim} \operatorname{Nul} (A - \lambda I) = \text{ multiplicidade do autovalor } \lambda.
 	\end{equation} Na notação introduzida não seção anterior, isto é o mesmo que dizer que, se $A$ for diagonalizável, então as multiplicidades algébrica e geométrica são iguais.
@@ -652,7 +765,7 @@ Em geral, valem as seguintes propriedades: seja $A$ uma matriz de orden $n \time
 	A = \begin{bmatrix}
 	2&1 \\ -1&2
 	\end{bmatrix}
-	\end{equation} tem polinômio característico 
+	\end{equation} tem polinômio característico
 	\begin{equation}
 	p(\lambda) = \det \begin{bmatrix}
 	2-\lambda&1 \\ -1&2-\lambda
@@ -672,4 +785,4 @@ Em geral, valem as seguintes propriedades: seja $A$ uma matriz de orden $n \time
 
 \construirExer
 
-\end{document} 
+\end{document}
