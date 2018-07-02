@@ -392,6 +392,146 @@ a_{m1}&a_{m2}&\cdots &a_{mn}
 
 \construirExeresol
 
+\begin{exeresol}
+Dado os vetores abaixo, resolva $4\vec{u}$, $10\vec{v}$ e $3\vec{u} + 2\vec{v}$.
+\begin{equation}
+ \vec{u} =
+\left[
+  \begin{array}{c}
+    3 \\
+    2 \\
+    2
+  \end{array}
+\right] \quad e \quad 
+ \vec{v} =
+\left[
+  \begin{array}{c}
+    -2 \\
+    4 \\
+    9
+  \end{array}
+\right]
+\end{equation}
+\end{exeresol}
+
+\begin{resol}
+Utilizando a definição de multiplicação de escalar em vetores obtemos para $4\vec{u}$:
+\begin{equation}
+ 4\vec{u} =
+4\left[
+  \begin{array}{c}
+    3 \\
+    2 \\
+    2
+  \end{array}
+\right] =
+  \left[
+  \begin{array}{c}
+    12 \\
+    8 \\
+    8
+  \end{array}
+\right]
+\end{equation}
+e para $10\vec{v}$:
+\begin{equation}
+ 10\vec{v} =
+10\left[
+  \begin{array}{c}
+    -2 \\
+    4 \\
+    9
+  \end{array}
+\right] =
+  \left[
+  \begin{array}{c}
+    -20 \\
+    40 \\
+    90
+  \end{array}
+\right].
+\end{equation}
+Por fim, para resolver $3\vec{u} + 2\vec{v}$ primeiro temos que multiplicar os escalares pelos vetores $\vec{u}$ e $\vec{v}$ separadamente e, por último, somamos o resultado de cada um. Fazendo direto, temos o seguinte:
+\begin{equation}
+ 3\vec{u} + 2\vec{v} = 
+3\left[
+  \begin{array}{c}
+    3 \\
+    2 \\
+    2
+  \end{array}
+\right] +
+2\left[
+  \begin{array}{c}
+    -2 \\
+    4 \\
+    9
+  \end{array}
+\right] = 
+\left[
+  \begin{array}{c}
+    9 \\
+    6 \\
+    6
+  \end{array}
+\right] +
+  \left[
+  \begin{array}{c}
+    -4 \\
+    8 \\
+    18
+  \end{array}
+\right] = 
+\left[
+  \begin{array}{c}
+    5 \\
+    14 \\
+    24
+  \end{array}
+\right]. 
+\end{equation}
+\end{resol}
+
+\begin{exeresol}
+Escreva o sistema de equações abaixo na sua forma matricial.
+\begin{equation}
+ \left\{
+  \begin{array}{ll}
+    2x_1 - 4x_2 + 6x_3 = 10 \\
+    -3x_1 + x_2 - x_3 = 12 \\
+    2x_1 - 3x_2 + 8x_3 = 5
+  \end{array}
+\end{equation}
+\end{exeresol}
+\begin{resol}
+Para colocar um sistema de equações na sua forma matricial, temos que representá-lo como um produto de uma matriz onde se encontram os coeficientes das variáveis e um vetor contendo as variáveis. Temos, assim:
+\begin{equation}
+ \left[
+  \begin{array}{ccc}
+    2 & -4 & 6  \\
+    -3 & 1 & -1  \\
+    2 & -3 & 8
+  \end{array}
+\right]
+\left[
+  \begin{array}{c}
+   x_1 \\
+   x_2 \\
+   x_3 
+  \end{array}
+  \right] = 
+\left[
+  \begin{array}{c}
+   10 \\
+   12 \\
+   5
+  \end{array}
+\right]
+\end{equation}
+Também podemos dizer que $A$ é a matriz dos coeficientes das variáveis, $\vec{x}$ o vetor das variáveis e $\vec{b}$ o vetor contendo os resultados de cada equação do sistema.
+\end{resol}
+
+
 \subsection*{Exercícios}
 
 \construirExer
