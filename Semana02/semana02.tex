@@ -762,6 +762,244 @@ O \textbf{espaço gerado} por todas as combinações lineares dos vetores $\vec{
 
 \construirExeresol
 
+\begin{exeresol}
+Escreva o vetor $\vec{v}$ como uma combinação linear dos vetores $\vec{e_1}$, $\vec{e_2}$, e $\vec{e_3}$.
+\begin{equation}
+ \vec{v} = 
+\left[
+  \begin{array}{c}
+  1 \\
+  -2 \\
+  3
+ \end{array}
+\right] \quad , \quad
+ \vec{e_1} = 
+  \left[
+  \begin{array}{c}
+  1 \\
+  1 \\
+  1
+ \end{array}
+\right] \quad , \quad
+ \vec{e_2} = 
+  \left[
+  \begin{array}{c}
+  1 \\
+  2 \\
+  4
+ \end{array}
+\right] \quad , \quad
+ \vec{e_3} = 
+  \left[
+  \begin{array}{c}
+  2 \\
+  -1 \\
+  3
+ \end{array}
+\right]
+\end{equation}
+\end{exeresol}
+\begin{resol}
+Podemos representar o vetor $\vec{v}$ como uma combinação linear dos outros vetores da seguinte maneira:
+\begin{equation}
+ \vec{v} = c_1\vec{e_1} + c_2\vec{e_2} + c_3\vec{e_3} 
+\end{equation}
+Assim, temos:
+\begin{equation}
+\vec{v} = 
+\left[
+  \begin{array}{c}
+  1 \\
+  -2 \\
+  3
+ \end{array}
+\right] =
+c_1\left[
+ \begin{array}{c}
+  1 \\
+  1 \\
+  1
+ \end{array}
+\right] +
+c_2\left[
+ \begin{array}{c}
+  1 \\
+  2 \\
+  4
+ \end{array}
+\right] +
+c_3\left[
+  \begin{array}{c}
+  2 \\
+  -1 \\
+  3
+ \end{array}
+\right]
+\end{equation}
+Usando as propriedades anteriormente estudadas, obtemos:
+\begin{equation}
+ \left[
+  \begin{array}{c}
+  1 \\
+  -2 \\
+  3
+ \end{array}
+\right] =
+\left[
+ \begin{array}{c}
+  c_1 \\
+  c_1 \\
+  c_1
+ \end{array}
+\right] +
+\left[
+ \begin{array}{c}
+  c_2 \\
+  2c_2 \\
+  4c_2
+ \end{array}
+\right] +
+\left[
+  \begin{array}{c}
+  2c_3 \\
+  -c_3 \\
+  3c_3
+ \end{array}
+\right] = 
+\left[
+  \begin{array}{c}
+   c_1 + c_2 + 2c_3 \\
+   c_1 + 2c_2 - c_3 \\
+   c_1 + 4c_2 + 3c_3
+  \end{array}
+\right]
+\end{equation}
+Observamos com esse último resultado que temos um sistema de equações lineares:
+\begin{equation}
+\left[
+  \begin{array}{c}
+   c_1 + c_2 + 2c_3 \\
+   c_1 + 2c_2 - c_3 \\
+   c_1 + 4c_2 + 3c_3
+  \end{array}
+\right] =
+\left[
+  \begin{array}{c}
+   1 \\
+   -2 \\
+   3
+  \end{array}
+\right]
+\end{equation}
+Usando o método já estudado para resolver sistemas lineares, achamos os valores para $c_1$, $c_2$ e $c_3$. Verifique que $c_1 = -\frac{3}{2}$, $c_2 = \frac{3}{10}$ e $c_3 = \frac{11}{10}$. Esses valores são os coeficientes que fazem com que o vetor $\vec{v}$ possa ser escrito como uma combinação linear dos demais vetores. Assim, obtemos como  resposta:
+\begin{equation}
+ \vec{v} = -\frac{3}{2}\vec{e_1} + \frac{3}{10}\vec{e_2} + \frac{11}{10}\vec{e_3} \lhd
+\end{equation}
+\end{resol}
+
+\begin{exeresol}
+ Para qual valor de $k$ o vetor $\vec{v}$ é uma combinação linear dos vetores $\vec{e_1}$ e $\vec{e_2}$ ?
+\begin{equation}
+  \vec{v} = 
+\left[
+  \begin{array}{c}
+  1 \\
+  -2 \\
+  k
+ \end{array}
+\right] \quad , \quad
+ \vec{e_1} = 
+  \left[
+  \begin{array}{c}
+  3 \\
+  0 \\
+  -2
+ \end{array}
+\right] \quad , \quad
+ \vec{e_2} = 
+  \left[
+  \begin{array}{c}
+  3 \\
+  -2 \\
+  5
+ \end{array}
+\right]
+\end{equation}
+\end{exeresol}
+\begin{resol}
+ Escrevemos o vetor $\vec{v}$ como uma combinação linear dos outros vetores da seguinte maneira:
+\begin{equation}
+\vec{v} = c_1\vec{e_1} + c_2\vec{e_2}
+\end{equation}
+Obtemos então:
+\begin{equation}
+\left[
+  \begin{array}{c}
+  1 \\
+  -2 \\
+  k
+ \end{array}
+\right] =
+c_1\left[
+  \begin{array}{c}
+  3 \\
+  0 \\
+  -2
+ \end{array}
+\right] +
+c_2\left[
+  \begin{array}{c}
+  3 \\
+  -2 \\
+  5
+ \end{array}
+\right] =
+\left[
+  \begin{array}{c}
+  3c_1 \\
+  0c_1 \\
+  -2c_1
+ \end{array}
+\right] +
+\left[
+  \begin{array}{c}
+  3c_2 \\
+  -2c_2 \\
+  5c_2
+ \end{array}
+\right] = 
+\left[
+\begin{array}{c}
+ 3c_1 + 2c_2 \\
+ -2c_2 \\
+ -2c_1+5c_2
+\end{array}
+\right]
+\end{equation}
+Assim, temos:
+\begin{equation}
+\left[
+\begin{array}{c}
+ 3c_1 + 2c_2 \\
+ -2c_2 \\
+ -2c_1+5c_2
+\end{array}
+\right] = 
+\left[
+ \begin{array}{c}
+  1 \\
+  -2 \\
+  k
+ \end{array}
+\right]
+\end{equation}
+Novamente, temos um sistema de equações lineares para resolver. Verifique que $c_1 = -\frac{1}{3}$ e $c_2 = 1$. Por fim, pela equação envolvendo $k$:
+\begin{equation}
+ k = -2c_1+5c_2 = \frac{2}{3} + 5 = \frac{17}{3}
+\end{equation}
+Ou seja, o valor de $k$ que faz com que $\vec{v}$ possa ser representado como uma combinação linear de $\vec{e_1}$ e $\vec{e_2}$ é $k = \frac{17}{3}$. 
+\end{resol}
+
 \subsection*{Exercícios}
 
 \construirExer
