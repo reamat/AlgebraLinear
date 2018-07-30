@@ -1,6 +1,6 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
+%\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
 %define o diretório principal
 \providecommand{\dir}{..}
@@ -9,7 +9,7 @@
 %%%%%%%%%%%%INICIO DO DOCUMENTO%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+%\begin{document}
 
 \chapter{Semana 9}
 
@@ -63,7 +63,7 @@ A nossa discussão acima de imediato implica a seguinte propriedade:
 \boxed{A \text{ é invertível } \iff \det A \neq 0.}
 \end{equation}
 
-\begin{example}
+\begin{ex}
 A matriz $A = \begin{bmatrix}
 1 & 2 \\
 3 & -1
@@ -73,7 +73,7 @@ Por outro lado, $A = \begin{bmatrix}
 1 & 2 \\
 3 & 6
 \end{bmatrix}$ não é invertível, já que $\det A = 1 \cdot 6 - 3 \cdot 2 = 0. \ \lhd$
-\end{example}
+\end{ex}
 
 
 Agora, vamos fazer as contas também no caso $3 \times 3$. Considere a matriz
@@ -231,7 +231,7 @@ a_{31}  & a_{32} \\
 \end{itemize}
 
 
-\begin{example}
+\begin{ex}
 Calcular o determinante de
 \begin{equation}
 A = \begin{bmatrix}
@@ -266,10 +266,10 @@ A = \begin{bmatrix}
                      & = 2 \cdot 4 - 4 \cdot 1 + 3 \cdot 2 = 10. \ \lhd
 \end{split}
 \end{equation}
-\end{example}
+\end{ex}
 
 
-\begin{example}
+\begin{ex}
 	Calcular o determinante de
 	\begin{equation}
 	B = \begin{bmatrix}
@@ -297,7 +297,7 @@ A = \begin{bmatrix}
 	\end{split}
       \end{equation}
  Analise com atenção como os sinais alternam, independentemente dos sinais dos coeficientes da matriz!$ \ \lhd$
-\end{example}
+\end{ex}
 
 
 Como já mencionamos, na fórmula para o determinante de uma matriz $A$, cada um dos elementos de $A$ aparece exatamente duas vezes. Isto significa que poderíamos ter rearranjado os termos da matriz não a partir da primeira linha, mas a partir de \textit{qualquer linha ou qualquer coluna}. Mas devemos ter cuidado para que os sinais sejam levados em consideração de forma coerente.
@@ -307,7 +307,7 @@ Dada uma matriz quadrada $A$ de ordem $n \times n$, obtemos uma \textbf{matriz m
 C_{ij} \stackrel{\text{def}}{=} (-1)^{i + j} \det A_{ij}.
 \end{equation} Este sinal $\pm 1$ na definição do cofator é o que faz com que o sinal seja levado em consideração corretamente.
 
-\begin{theorem}
+\begin{teo}
 Podemos calcular o determinante de $A$ a partir de qualquer linha ou de qualquer coluna. Mais precisamente:
 \begin{itemize}
 \item Se consideramos a linha $i$, então
@@ -319,7 +319,7 @@ Podemos calcular o determinante de $A$ a partir de qualquer linha ou de qualquer
 \det A = a_{1j} C_{1j} + a_{2j} C_{2j} + a_{3j} C_{3j}.
 \end{equation}
 \end{itemize}
-\end{theorem}
+\end{teo}
 
 É prático de calcular o determinante pensando como vínhamos fazendo antes, alternando os sinais. Isto é possível de fazer utilizando qualquer linha ou qualquer coluna. Basta descobrirmos com qual sinal devemos começar. Construimos uma ``matriz'' com os sinais que cada posição da matriz nos dá. Vamos colocar o sinal de $(-1)^{i+j}$ na posição $ij$ da matriz:
 \begin{equation}
@@ -336,7 +336,7 @@ Podemos calcular o determinante de $A$ a partir de qualquer linha ou de qualquer
 \end{equation} Claro que poderíamos fazer esta matriz de sinais para matrizes de qualquer ordem.
 
 
-\begin{example}
+\begin{ex}
 Vamos calcular de várias maneiras o determinante da matriz
 \begin{equation}
 A = 
@@ -445,7 +445,7 @@ A segunda coluna, neste caso, era a melhor escolha para o cálculo do determinan
 \end{matrix}
 \right| = 1 \cdot (-1) + 3 \cdot (-3) = -10.
 \end{equation} Como exercício, calcule o determinante utilizando outras linhas ou colunas$. \ \lhd$
-\end{example}
+\end{ex}
 
 \subsection*{Exercícios resolvidos}
 
@@ -469,7 +469,7 @@ Seja $A$ uma matriz quadrada, de ordem $n \times n$. O \textbf{determinante} de 
 Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde que com os sinais corretos:
 
 
-\begin{theorem}
+\begin{teo}
 	Podemos calcular o determinante de $A$ a partir de qualquer linha ou de qualquer coluna. Mais precisamente:
 	\begin{itemize}
 		\item Se consideramos a linha $i$, então
@@ -481,9 +481,9 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
 		\det A = a_{1j} C_{1j} + a_{2j} C_{2j} + a_{3j} C_{3j} + \cdots + a_{nj} C_{nj}.
 		\end{equation}
 	\end{itemize}
-\end{theorem}
+\end{teo}
 
-\begin{example}\label{exp:det1}
+\begin{ex}\label{exp:det1}
 	Calcular o determinante da matriz de ordem $4 \times 4$:
 	\begin{equation}
 	A = 
@@ -560,9 +560,9 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
          & = (-1) \cdot (-5) + \Big( 4 \cdot 10 - 1 \cdot 2 + 1 \cdot (-13)\Big) = 30. \ \lhd
 	\end{split}
       \end{equation}
-\end{example}
+\end{ex}
 
-\begin{example}\label{exp:det2}
+\begin{ex}\label{exp:det2}
 Calcular o determinante da matriz de ordem $5 \times 5$:
 \begin{equation}
 A = 
@@ -663,7 +663,7 @@ Análise dos sinais da quinta coluna:
      & = 8 \cdot (-2) - 8 (-2 + - 3 \cdot 0) = -16 + 16 = 0. \lhd
 \end{split}
 \end{equation}
-\end{example}
+\end{ex}
 
 Estes exemplos já devem deixar claro que o cálculo de determinantes é demasiado trabalhoso, exceto em alguns casos que a matriz tem muitas entradas nulas. Veremos nas próximas seções algumas propriedades e aplicações.
 
@@ -679,7 +679,7 @@ Estes exemplos já devem deixar claro que o cálculo de determinantes é demasia
 
 Nesta seção, vamos apontar as principais propriedades do determinante. A prova rigorosa destas propriedades será adiada para o apêndice desta seção.
 
-\begin{theorem}\label{thm:prop-det}
+\begin{teo}\label{thm:prop-det}
 Valem as seguintes propriedades:
 \begin{enumerate}[$(i)$]
 \item O determinante depende linearmente de cada uma das linhas, isto é, se fizermos uma combinação linear de uma linha apenas, poderíamos ter feito uma cobinação linear dos determinantes:
@@ -723,7 +723,7 @@ a_{n1} & \cdots & a_{nn}
 
 \item Todos os itens acima que envolvem operações com linhas poderiam ser enunciados com ``colunas'' no lugar de ``linhas''.
 \end{enumerate}
-\end{theorem}
+\end{teo}
 
 Várias destas propriedades já devem ser familiares para os leitores deste livro, com a possível exceção do comportamento do determinante com as operações elementares de escalonamento. E estas vão ser muito úteis no cálculo do determinante. Vamos enfatizar estas propriedades abaixo. O método para calcular o determinante por escalonamento, segue o seguinte raciocínio:
 \begin{itemize}
@@ -751,7 +751,7 @@ a_{n1} & \cdots & a_{nn}
 \end{equation}
 \end{itemize}
 
-\begin{example}
+\begin{ex}
 Vamos calcular o determinante da matriz $A$ do Exemplo \ref{exp:det1} utilizando as propriedades acima (em particular o escalonamento). Este método é particularmente útil quando as matrizes não possuem muitas entradas nulas. Já que a segunda linha possui um ``1'' na primeira entrada, vamos fazer uma troca de linhas para facilitar as contas (cuidado com o sinal!). Em seguida, eliminamos os elementos da primeira coluna.
 \begin{equation}
 \left| \begin{matrix}
@@ -822,9 +822,9 @@ Vamos calcular o determinante da matriz $A$ do Exemplo \ref{exp:det1} utilizando
 \end{matrix}
 \right| = -\frac{1}{9} \cdot 1 \cdot 3 \cdot 2 \cdot (-45) = 30. \ \lhd
 \end{equation}
-\end{example}
+\end{ex}
 
-\begin{remark}
+\begin{obs}
 No exemplo anterior, vimos como calcular o determinante utilizando escalonamento de maneira ``straightforward''. Como pode-se perceber, o método não parece muito melhor do que calcular o determinante utilizando expansão por cofatores. Vamos ver que, de fato, o melhor é \textit{misturar} o método de cofatores com as propriedades acima! Vamos novamente calcular
 \begin{equation}
 \left| \begin{matrix}
@@ -900,9 +900,9 @@ No exemplo anterior, vimos como calcular o determinante utilizando escalonamento
 \end{matrix}
 \right| = -2 \cdot(-15) = 30.\ \lhd
 \end{equation}
-\end{remark}
+\end{obs}
 
-\begin{example}
+\begin{ex}
 Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}, utilizando as propriedades desta seção. Vamos fazer as contas de forma um pouco mais rápidas. Tente acompanhar o que está sendo feito de um passo para outro! Iniciamos aproveitando o fato de a última coluna ter muitos zeros.
 \begin{equation}
 \left| 
@@ -956,7 +956,7 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 \end{matrix}
 \right| 4 \cdot 0 = 0.
 \end{equation} Nota: antes de eliminarmos o $3$, já reparamos que o determinante vai ser nulo, graças à propriedade $(ii). \ \lhd$
-\end{example}
+\end{ex}
 
 \subsection{Demonstração das propriedades do Teorema \ref*{thm:prop-det}}
 
@@ -980,7 +980,7 @@ Como já é conhecido de primeiros cursos de cálculo\footnote{Esta seção é o
 
 Um tópico que nem sempre é abordado em cursos de Cálculo em várias variáveis é a fórmula de mudança de variáveis para integrais múltiplas, onde o determinante aparece de forma fundamental.
 
-\begin{theorem}
+\begin{teo}
 Seja $U \subset \mathbb{R}^2$ um conjunto aberto e $\phi: U \to \mathbb{R}^n$ uma função vetorial cujas componentes são todas diferenciáveis e com derivadas parciais contínuas. Então, para qualquer $f: U \to \mathbb{R}$ contínua, vale a fórmula de mudança de variáveis:
 \begin{equation}
 \iiint_{\phi (U)}  f(\vec{v}) \, \, \mathrm{d} \vec{v} =  \iiint _{U} f\big(\varphi \big(\vec{u}\big)\big) J\varphi \big(\vec{u}\big) \, \, \mathrm{d}\vec{u},
@@ -1000,7 +1000,7 @@ J\varphi \big(\vec{u}\big) = \left|
 \end{bmatrix}
 \right| 
 \end{equation}
-\end{theorem}
+\end{teo}
 
 
 \subsection{Coordenadas polares}
@@ -1099,4 +1099,4 @@ Na última igualdade, utilizamos que $\phi \in (0,\pi)$ implica $\sen \phi > 0$,
 
 \construirExer
 
-\end{document} 
+%\end{document} 

@@ -1,6 +1,6 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles} %%DM%%Escolher document class and options article, etc
+%\documentclass[../livro.tex]{subfiles} %%DM%%Escolher document class and options article, etc
 
 %define o diretório principal
 \providecommand{\dir}{..}
@@ -9,7 +9,7 @@
 %%%%%%%%%%%%INICIO DO DOCUMENTO%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+%\begin{document}
 
 %\maketitle
 %\tableofcontents
@@ -24,7 +24,7 @@
 
 Começamos nosso estudo diretamente com um exemplo:
 
-\begin{example}
+\begin{ex}
 Considere o sistema linear que consiste de duas equações e duas variáveis
 \begin{equation}\label{exp1}
   \left\{
@@ -77,19 +77,19 @@ y = \frac{4}{7} \implies x + 3\cdot \frac{4}{7} = 1 \implies x = 1 - \frac{12}{7
     \end{array}
   \right. \lhd
 \end{equation}
-\end{example}
+\end{ex}
 
 O símbolo $\lhd$ acima nas nossas notas indica o fim de uma solução, exemplo ou observação.
 
 Em seguida, fazemos algumas observações.
 
-\begin{remark}
+\begin{obs}
 O sistema linear como o acima possui duas equações e duas variáveis e por isto é conhecido como um sistema linear $2\times 2$ (lê-se dois por dois). Mais geralmente, um sistema linear com $m$ equações e $n$ variáveis é conhecido como um sistema linear $m \times n$ (lê-se $m$ por $n$).
-\end{remark}
+\end{obs}
 
-\begin{remark}
+\begin{obs}
 Sistemas $2\times 2$ são dos mais simples de resolver e por isso o método acima pode parecer desnecessariamente complicado. Mas, como veremos, este método pode ser aplicado para qualquer sistema. Logo, é essencial que se entenda completamente todos os seus passos para um bom acompanhamento do que está por vir.
-\end{remark}
+\end{obs}
 
 Vamos analisar a solução apresentada acima mais de perto. Para chegar do sistema linear em \eqref{exp1} para o sistema em \eqref{exp1-2}, fizemos uma sequência de operações que:
 \begin{itemize}
@@ -142,7 +142,7 @@ Um artifício que torna todo o processo mais ``automático'' é o de formar uma 
 
 
 
-\begin{example}\label{exemplo3por3}
+\begin{ex}\label{exemplo3por3}
 Consideramos agora um sistema com três equações e três variáveis;
 \begin{equation}
 \left\{
@@ -213,7 +213,7 @@ Como já tínhamos percebido no nosso primeiro exemplo, sistemas triangulares s�
 \begin{equation}
 x + 2\cdot 3 + 1 = 12 \implies x=5.
 \end{equation} Portanto, a solução para o sistema é $(x,y,z) = (5,3,1). \lhd$
-\end{example}
+\end{ex}
 
 
 Esta técnica de resolver sistemas lineares é importante por ser aplicável a sistemas de qualquer ordem e é conhecida como \textbf{escalonamento} ou \textbf{eliminação Gaussiana}.
@@ -356,7 +356,7 @@ Quanto aos outros exemplos, temos
 \right]
 \end{equation}
 
-\begin{remark}
+\begin{obs}
 A forma escalonada reduzida ainda não apareceu na seção anterior quando estávamos resolvendo sistemas, mas notamos que poderia ter sido utilizada para automatizar ainda mais o processo de resolução do sistema. Vamos retomar o Exemplo \ref{exemplo3por3}. Fazendo mais algumas operações elementares, é possível transformar a matriz aumentada do sistema em uma matriz em forma escalonada reduzida:
 \begin{equation}
 \left[
@@ -410,7 +410,7 @@ A forma escalonada reduzida ainda não apareceu na seção anterior quando está
   \end{array}
 \right.
 \end{equation} que, na verdade, já é a solução explícita do sistema original$.\lhd$
-\end{remark}
+\end{obs}
 
 \subsection*{Exercícios resolvidos}
 
@@ -433,7 +433,7 @@ Sistematicamente, encontramos a forma escalonada de uma matriz aplicando os segu
   \item A partir de operações elementares, eliminar todos elementos que estão abaixo do elemento na posição de pivô que obtivemos no Passo 5 e ssim por diante.
 \end{enumerate} Essencialmente, são apenas dois passos que se repetem até que se esgotem as colunas que possuem posição de pivô. Vejamos um exemplo.
 
-\begin{example}\label{escalonada2}
+\begin{ex}\label{escalonada2}
 Considere a matriz
 \begin{equation}
 \left[
@@ -582,7 +582,7 @@ Considere a matriz
 \end{array}
 \right]. \lhd
 \end{equation}
-\end{example}
+\end{ex}
 
 Agora, para obter a forma escalonada reduzida \emph{a partir da forma escalonada}, primeiramente aplicamos os passos acima para obter uma matriz em forma escalonada. Em seguida, aplicamos outros passos iterativos:
 \begin{enumerate}
@@ -593,7 +593,7 @@ Agora, para obter a forma escalonada reduzida \emph{a partir da forma escalonada
 
 Observamos que poderíamos ter primeiro realizado o Passo 2 e depois o Passo 1 se julgássemos que seria mais simples para efetuar os cálculos.
 
-\begin{example}
+\begin{ex}
     Voltamos ao Exemplo \ref{escalonada2}. Identificando novamente as posições de pivô:
 \begin{equation}
 \left[
@@ -660,7 +660,7 @@ Observamos que poderíamos ter primeiro realizado o Passo 2 e depois o Passo 1 s
 \end{array}
 \right].
 \end{equation}
-\end{example}
+\end{ex}
 
 \subsection*{Exercícios resolvidos}
 
@@ -774,7 +774,7 @@ No sistema da fórmula \eqref{sistemaimpossivel} acima, temos a matriz aumentada
 
 Com exceção da subseção anterior, todos os sistemas que resolvemos anteriormente possuiam apenas uma solução. Vejamos um exemplo onde este não é o caso.
 
-\begin{example}
+\begin{ex}
 Resolver
 \begin{equation}
 \left\{
@@ -824,7 +824,7 @@ Uma forma sistemática de analisar a situação é a seguinte: As variáveis cor
   \end{array}
 \right.
 \end{equation} e o sistema possui infinitas soluções.$\lhd$
-\end{example}
+\end{ex}
 
 
 \subsection{Conclusões}
@@ -993,4 +993,4 @@ Isso significa que para qualquer valor de $k$, exceto o $-6$, o sistema tem solu
 \construirExer
 
 
-\end{document} 
+%\end{document} 

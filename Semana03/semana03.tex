@@ -1,6 +1,6 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles} 
+%\documentclass[../livro.tex]{subfiles} 
 
 
 %define o diretório principal
@@ -10,7 +10,7 @@
 %%%%%%%%%%%%INICIO DO DOCUMENTO%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+%\begin{document}
 
 \chapter{Semana 3}
 
@@ -57,7 +57,7 @@ Agora, dizemos que os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \math
 \vec{v}_2 = - \frac{x_1}{x_2} \, \vec{v}_1 - \frac{x_3}{x_2} \, \vec{v}_3 - \cdots - \frac{x_k}{x_2} \, \vec{v}_k.
 \end{equation} Se os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \mathbb{R}^m$ não forem linearmente independentes, então nós dizemos que eles são \textbf{linearmente dependentes (LD)}.
 
-\begin{example}\label{exp:1}
+\begin{ex}\label{exp:1}
 Vamos verificar se os vetores
 \begin{equation}
 \left[
@@ -139,9 +139,9 @@ Resolver a equação vetorial equivale a resolver o sistema linear
   \end{array}
 \right]
 \end{equation} É fácil de ver que a única solução deste sistema é a trivial e, portanto, os vetores são LI. Se este sistema não fosse fácil de resolver, deveríamos começar a resolvê-lo por escalonamento, como de costume. $\ \lhd$
-\end{example}
+\end{ex}
 
-\begin{example}\label{exp:2}
+\begin{ex}\label{exp:2}
 Analisamos agora os vetores
 \begin{equation}
 \left[
@@ -236,7 +236,7 @@ Resolver a equação vetorial equivale a resolver o sistema linear
   \end{array}
 \right].
 \end{equation} Em um sistema com mais variáveis do que equações, podemos não ter soluções (no caso de alguma linha inconsistente) ou podemos ter infinitas soluções (no caso de haver variáveis livres). Não é possível ter unicidade. Como já sabemos que em um sistema homogêneo, sempre temos pelo menos a solução trivial $x_1 = 0$, $x_2=0$, $x_3=0$ e $x_4 = 0$, podemos concluir que existem infinitas soluções. Logo, o conjunto de vetores é LD.
-\end{example}
+\end{ex}
 
 O argumento que utilizamos no Exemplo \ref{exp:2} acima é geral e se aplica em várias situações. Temos
 \begin{equation}
@@ -267,7 +267,7 @@ Na última semana (capítulo anterior), vimos que resolver o sistema linear $A \
 A \vec{x} = \vec{0},
 \end{equation} onde a matriz $A$ é formada com os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ como colunas.
 
-\begin{example}
+\begin{ex}
 Naturalmente, podemos traduzir os exemplos da seção anterior desta forma. Ou seja no Exemplo \ref{exp:1}, temos que a matriz
 \begin{equation}
 A = \left[
@@ -287,7 +287,7 @@ B = \left[
   \end{array}
 \right]
 \end{equation} do Exemplo \ref{exp:2} são linearmente dependentes (LD). $\ \lhd$
-\end{example}
+\end{ex}
 
 Podemos pensar ainda de outra forma. Considere uma matriz $A$ de ordem $m\times n.$ Para decidir se as colunas de $A$ são LI, devemos procurar por soluções não triviais do sistema linear cuja matriz associada é $A$. Ao resolver um \textbf{sistema homogêneo} por escalonamento, sabemos que
 \begin{itemize}
@@ -296,7 +296,7 @@ Podemos pensar ainda de outra forma. Considere uma matriz $A$ de ordem $m\times 
   \item No caso de alguma coluna não possuir posição de pivô, o sistema homogêneo possui pelo menos uma variável livre; logo, as colunas de $A$ são LD.
 \end{itemize}
 
-\begin{example}
+\begin{ex}
 Decidir se as colunas de $A$ são LI:
 \begin{equation}
 A = \left[
@@ -328,7 +328,7 @@ A \sim \left[
 \end{array}
 \right],
 \end{equation} possui uma variável livre (e portanto outras soluções que não a trivial). $\ \lhd$
-\end{example}
+\end{ex}
 
 \subsection*{Exercícios resolvidos}
 
@@ -352,21 +352,21 @@ T\big( a \vec{u} + b \vec{v} \big) = aT(\vec{u}) + bT(\vec{v}), \quad \text{para
 Em geral, pensamos em uma transformação linear como ``transformando um vetor em outro'' de forma linear, isto é, satisfazendo a propriedade acima.
 
 
-\begin{example}
+\begin{ex}
 A aplicação $T: \mathbb{R}^3 \to \mathbb{R}^3$ dada por $T(\vec{u}) = 3\vec{u}$ é a transformação linear que transforma um vetor de $\mathbb{R}^3$ no vetor que tem o triplo do comprimento. Utilizamos a própria fórmula da transformada para verificar que a tranformação $T$ é de fato linear:
 \begin{equation}
 T\big( a \vec{u} + b \vec{v} \big) = 3 ( a \vec{u} + b \vec{v} ) = a \cdot 3 \vec{u} + b \cdot 3 \vec{v} = aT(\vec{u}) + bT(\vec{v}). \lhd
 \end{equation}
-\end{example}
+\end{ex}
 
 
-\begin{example}\label{exp:4}
+\begin{ex}\label{exp:4}
 Também é linear a transformação que faz uma rotação de um ângulo $\pi / 2$. Tente se convencer geometricamente que esta transformação é uma transformação linear. Voltaremos a este exmeplo com mais detalhes na seção seguinte$. \ \lhd$
-\end{example}
+\end{ex}
 
 
 
-\begin{example}\label{exp:7}
+\begin{ex}\label{exp:7}
 Consideramos a transformação $T: \mathbb{R}^2 \to \mathbb{R}^3$, que transforma vetores de $\mathbb{R}^2$ em vetores de $\mathbb{R}^3$, dada pela fórmula
 \begin{equation}
 T(x_1, x_2) = (x_1 - 3 x_2, 3x_1 + 5x_2, -x_1 + x_2).
@@ -419,7 +419,7 @@ T\big(\vec{v}\big) =
   \end{array}
 \right].\lhd
 \end{equation}
-\end{example}
+\end{ex}
 
 
 
@@ -533,7 +533,7 @@ x_1 \left[
 O procedimento que aplicamos acima não é particular do exemplo que analisamos, de modo que é sempre possível associar a uma transformação linear $T: \mathbb{R}^n \to \mathbb{R}^m$ uma matriz $A$ de ordem $m\times n$, chamada \textbf{matriz canônica associada à transformação linear} $T$ ou apenas \textbf{matriz associada} a $T$, cujas colunas são os vetores $T(\vec{e}_1), T(\vec{e}_2), T(\vec{e}_3), \dots, T(\vec{e}_n) \in \mathbb{R}^m$ (e portanto $n$ colunas com $m$ componentes cada).
 
 
-\begin{example}
+\begin{ex}
 A transformação linear $T: \mathbb{R}^3 \to \mathbb{R}^3$, $T(\vec{u}) = 5 \vec{u}$, satisfaz
 \begin{equation}
 T(\vec{e}_1) =
@@ -577,17 +577,17 @@ T(\vec{x}) = \left[
   \end{array}
 \right]. \lhd
 \end{equation}
-\end{example}
+\end{ex}
 
 
-\begin{example}\label{exp:rotacao}
+\begin{ex}\label{exp:rotacao}
 O método acima pode também ser aplicado para conseguirmos uma fórmula para transformações lineares como as do Exemplo \ref{exp:4}. Vamos considerar a aplicação $T: \mathbb{R}^2 \to \mathbb{R}^2$ definida por
 \begin{equation}
 T(\vec{x}) = \text{rotação no sentido anti-horário de $\vec{x}$ por um ângulo } \theta \in (0, 2\pi).
 \end{equation} A matriz da transformação linear tem por colunas a imagem por $T$ dos vetores $\vec{e}_1$ e $\vec{e}_2$. Observamos que (ver figura)
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.8\linewidth]{\dir/Semana03/semana03-rot}
+\includegraphics[width=0.8\linewidth]{Semana03/semana03-rot}
 \end{center}
 \end{figure}
 \begin{equation}
@@ -619,7 +619,7 @@ T(\vec{x}) = \left[
   \end{array}
 \right].
 \end{equation}
-\end{example}
+\end{ex}
 
 \subsection*{Exercícios resolvidos}
 
@@ -665,9 +665,9 @@ No caso particular em que $\vec{b} = \vec{0}$, o sistema homogêneo $A\vec{x} = 
 % \end{equation} Em particular, este caso somente é possível se $n \le m$ (reler observações que seguem o Exemplo 3).
 
 
-\begin{claim}
+\begin{prop}
   $T$ é injetora se, e somente se, $A\vec{x} = \vec{0}$ possui apenas a solução trivial.\footnote{Em particular, este caso somente é possível se $n \le m$ (reler observações que seguem o Exemplo 3)}
-\end{claim}
+\end{prop}
 \begin{proof}[Justificativa da afirmação]
 Vamos provar matematicamente que, se soubermos que $A\vec{x} = \vec{0}$ possui apenas a solução trivial, então vale que $A\vec{x} = \vec{b}$ possui no máximo uma solução, para qualquer escolha de vetor $\vec{b}$. Isto, por sua vez, implica que $T$ é injetora. Caso não existam soluções ou caso exista apenas uma, nada há para provar. Suponhamos que então que existem infinitas soluções (esta seria a única outra possibilidade). Em particular, existiriam duas distintas:
 \begin{equation}
@@ -681,9 +681,9 @@ Notem que a afirmação acima é também equivalente a seguinte afirmação.
 % \boxed{\text{$T$ é injetora se, e somente se, as colunas de $A$ são linearmente independentes.}}
 % \end{equation} 
 
-\begin{claim}
+\begin{prop}
   $T$ é injetora se, e somente se, as colunas de $A$ são linearmente independentes.
-\end{claim}
+\end{prop}
 
 Vamos deixar exemplos de injetividade para a subseção seguinte (ver Exemplos \ref{exp:injsob1} e \ref{exp:injsob2}).
 
@@ -703,7 +703,7 @@ A\vec{x} = \vec{b}
 \end{equation} Em particular, este caso somente é possível se $n \ge m$ (veremos mais adiante no curso -- a imagem da transformação $T: \mathbb{R}^n \to \mathbb{R}^m$ será de dimensão no máximo igual a $n$).
 
 
-\begin{example}\label{exp:injsob1}
+\begin{ex}\label{exp:injsob1}
 Considere a transformação linear $T$ cuja matriz associada é
 \begin{equation}
 A = \left[
@@ -726,10 +726,10 @@ A \vec{x} = \vec{b} \iff
   \end{array}
 \right]
 \end{equation} possui solução para todo $\vec{b} \in \mathbb{R}^3$. De fato, o sistema possui solução (já que nenhuma linha da sua forma escalonada é inconsistente). Em verdade, o sistema possui uma variável livre. Logo, $T$ é sobrejetora.
-\end{example}
+\end{ex}
 
 
-\begin{example}\label{exp:injsob2}
+\begin{ex}\label{exp:injsob2}
 Considere a transformação linear $T$ cuja matriz associada é
 \begin{equation}
 A = \left[
@@ -742,7 +742,7 @@ A = \left[
 \end{equation} Como são somente duas colunas, é fácil ver que uma não é múltipla da outra: por causa das primeiras componentes, podemos pensar que a primeira coluna é três vezes a primeira, mas verificando a segunda linha já não dá certo $3\cdot 7 \neq 5$. Logo, as colunas são LI e a transformação $T$ é injetora.
 
 Por outro lado,  as colunas de $A$ geram um espaço de dimensão no máximo 2; logo, não geram $\mathbb{R}^3$. Portanto, $T$ não é sobrejetora.
-\end{example}
+\end{ex}
 
 
 \subsection{Transformações lineares invertíveis}
@@ -761,4 +761,4 @@ Pelas observações das últimas subseções, só é possível da transformaçã
 
 \construirExer
 
-\end{document} 
+%\end{document} 

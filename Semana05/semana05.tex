@@ -1,15 +1,15 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
+%\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
 %define o diretório principal
-\providecommand{\dir}{..}
+%\providecommand{\dir}{..}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%INICIO DO DOCUMENTO%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+%\begin{document}
 
 \chapter{Semana 5}
 
@@ -149,7 +149,7 @@ Vamos analisar dois sistemas lineares, com todas as ferramentas que estudamos at
 
 Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{quadrada}, já que estamos estudando matrizes invertíveis, que devem ser quadradas. De qualquer maneira, alguns raciocínios podem ser adaptados para quaisquer sistemas (quais?).
 
-\begin{example}
+\begin{ex}
 	Seja o sistema linear dado acima, cuja matriz aumentada associada é
 	\begin{equation}
 	\left[
@@ -211,11 +211,11 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 		\item A equação $T(\vec{x}) = \vec{b}$ possui no máximo uma solução para cada $\vec{b} \in \mathbb{R}^3$ (de fato, possui exatamente uma!), de modo que $T$ é injetora;
 		\item $T$ é invertível, já que é ao mesmo tempo injetora e sobrejetora.
 	\end{itemize} Todas estas conclusões vieram de alguns passos que levaram a matriz $A$ à sua forma escalonada. Como veremos adiante, ainda mais coisas poderiam ser ditas! $\ \lhd$
-\end{example}
+\end{ex}
 
 
 
-\begin{example}
+\begin{ex}
 	Analisamos agora o sistema linear cuja matriz aumentada assciada é
 	\begin{equation}
 	\left[
@@ -284,7 +284,7 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 		\item A equação $T(\vec{x}) = \vec{b}$ pode possuir mais de uma solução, de modo que $T$ não é injetora;
 		\item $T$ não é invertível, já que não é injetora e nem sobrejetora.  $\ \lhd$
 	\end{itemize}
-\end{example}
+\end{ex}
 
 
 \subsection{Caracterizações de matrizes invertíveis}
@@ -293,7 +293,7 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 A discussão feita na seção anterior é válida para matrizes quadradas de forma geral e vamos enunciar isto em um grande Teorema. A prova deste resultado abaixo segue as mesmas ideias dos exemplos da seção anterior. Não faremos a prova, mas é importante que o leitor esteja familiarizado com estas ideias.
 
 
-\begin{theorem}
+\begin{teo}
 	Seja $A$ uma matriz quadrada de ordem $n\times n$. As afirmações abaixo são equivalentes (ou todas falsas ou todas verdadeiras):
 	\begin{enumerate}
 		\item $A$ é invertível;
@@ -312,11 +312,11 @@ A discussão feita na seção anterior é válida para matrizes quadradas de for
 		\item $T(\vec{x}) = A \vec{x}$ é invertível,
 		\item $A^T$ é invertível.
 	\end{enumerate}
-\end{theorem}
+\end{teo}
 
-\begin{exercise}
+\begin{exer}
 	Justificar, baseando-se nos exemplos da seção anterior, o porquê das afirmações acima serem equivalentes.
-\end{exercise}
+\end{exer}
 
 O teorema é utilizado na prática da mesma maneira que fizemos na seção anterior.
 
@@ -353,12 +353,12 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\mathbb{R}$} é um con
 	\end{enumerate}
 \end{itemize}
 
-\begin{example}
+\begin{ex}
 	Naturalmente, $\mathbb{R}$, $\mathbb{R}^2$, $\mathbb{R}^3$, ..., $\mathbb{R}^n$ são espaços vetoriais sobre $\mathbb{R}$, já que as propriedades acima foram todas inspiradas nas propriedades válidas para vetores de $\mathbb{R}^n$.
-\end{example}
+\end{ex}
 
 
-\begin{example}
+\begin{ex}
 	O conjunto $M_{m\times n}$ de todas as matrizes de ordem $m\times n$ é um espaço vetorial, com as operações naturais que já utilizamos anteriormente: Se
 	\begin{equation}
 	A =
@@ -400,10 +400,10 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\mathbb{R}$} é um con
 	\end{array}
 	\right].
 	\end{equation} É imediato verificar que valem todas as 8 propriedades acima (faça!).
-\end{example}
+\end{ex}
 
 
-\begin{example}\label{funcoes}
+\begin{ex}\label{funcoes}
   O conjunto de todas as funções de um intervalo $I$ em $\mathbb{R}$
   \begin{equation}
     \mathcal{F} (I;\mathbb{R}) = \left\{ f: I \to \mathbb{R} \text{funções} \right\}.  
@@ -419,12 +419,12 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\mathbb{R}$} é um con
     \big( k \cdot f \big) (x) = k \cdot f(x).
     \end{equation}
   \end{itemize}
-\end{example}
+\end{ex}
 
 
-\begin{exercise}
+\begin{exer}
 	Justifique que o espaço gerado por dois elementos $\Span \{ \vec{u}, \vec{v} \}$ é um espaço vetorial.
-\end{exercise}
+\end{exer}
 
 
 \subsection{Subespaços vetoriais}
@@ -433,17 +433,17 @@ Consideramos $V$ um espaço vetorial e $H\subseteq V$ um subconjunto. Nós dizem
 
 Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não precisamos verificar todas as oito propriedades da definição de espaço vetorial. Temos o seguinte:
 
-%\begin{theorem}[Critério para subespaços]
-\begin{theorem}
+%\begin{teo}[Critério para subespaços]
+\begin{teo}
 	Um subconjunto $H \subseteq V$ é subespaço de $V$ se, e somente se, as duas propriedades abaixo são verificadas:
 	\begin{itemize}
 		\item $0 \in H$;
 		\item $a\cdot u + b \cdot v \in V$ para quaisquer $a, b \in \mathbb{R}$ e quaisquer $u,v \in V$.
 	\end{itemize}
-\end{theorem}
+\end{teo}
 
 
-\begin{example}\label{reta}
+\begin{ex}\label{reta}
 	A reta $H_1 = \{y = 2x\}$ em $\mathbb{R}^2$ é um subespaço de $\mathbb{R}^2$. Temos que
 	\begin{itemize}
 		\item $\vec{0} = (0,0)$ pertence a reta, pois satisfaz a equação da reta: $0 = 2\cdot 0$;
@@ -452,14 +452,14 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 		ay_1 + b y_2 = a \cdot (2x_1) + b\cdot (2x_2) = 2 (ax_1 + b x_2).
 		\end{equation} Portanto, $H$ é um subespaço de $\mathbb{R}^2$.
 	\end{itemize}
-\end{example}
+\end{ex}
 
-\begin{example}
+\begin{ex}
 	A reta $H_2 = \{y = 2x + 3\}$ \underline{não} é um subespaço de $\mathbb{R}^2$. De fato, $\vec{0} = (0,0)$ não pertence a reta. De um modo geral, as retas que passam pela origem são subespaços e as retas que não passam pela origem não são.
-\end{example}
+\end{ex}
 
 
-\begin{example}
+\begin{ex}
 	Mais geralmente, para $\vec{u}, \vec{v} \in \mathbb{R}^n$, o espaço gerado $\Span \{\vec{u}, \vec{v}\}$ é um subespaço de $\mathbb{R}^n$. Caso os vetores sejam LI, este espaço pode ser pensado como o plano que contém os vetores $\vec{u}, \vec{v}$ dentro de $\mathbb{R}^n$ (por quê?).
 	
 	Poderíamos argumentar que a reta do Exemplo \ref{reta} é um subespaço, pois todos os pontos da reta satisfazem:
@@ -488,10 +488,10 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 	2 \\
 	\end{array}
 	\right] \right\}$.
-\end{example}
+\end{ex}
 
 
-\begin{example}
+\begin{ex}
 	Um plano que passa pela origem $2x - y + 3z = 0$ é um subespaço de $\mathbb{R}^3$, pois podemos escrever pontos do plano como
 	\begin{equation}
 	\left[
@@ -541,19 +541,19 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 	\right]
 	\right\}
 	\end{equation} Por outro lado, um plano que não passa pela origem, eg, $2x - y + 3z = 1$, não pode ser um subespaço, pois $\vec{0} \not\in H$.
-\end{example}
+\end{ex}
 
 
 
-\begin{example}
+\begin{ex}
 	O conjunto $\mathcal{P} (\mathbb{R})$ das funções polinomiais com coeficientes reais é um subespaço do espaço das funções contínuas do Exemplo \ref{funcoes}. De fato, o polinômio nulo está neste espaço. Além disso, dados dois polinômios
 	\begin{equation}
 	p(x) = a_n x^n + \cdots a_2 x^2 + a_1 x + a_0 \quad \text{e} \quad q(x) = b_m x^m + \cdots b_2 x^2 + b_1 x + b_0,
 	\end{equation} sabemos que $a \cdot p + b \cdot q$ vai ser um polinômio cujo grau é no máximo o maior dos valores $m$ ou $n$.
-\end{example}
+\end{ex}
 
 
-\begin{exercise}
+\begin{exer}
 	Considere o conjunto
 	\begin{equation}
 	\mathcal{P}_3 (\mathbb{R}) = \{ p(x) = a_3 x^3 + \cdots a_2 x^2 + a_1 x + a_0 \text{ tais que } a_0, a_1, a_2, a_3 \in \mathbb{R} \}
@@ -562,7 +562,7 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 		\item $\mathcal{P}_3 (\mathbb{R})$ é um subespaço de $\mathcal{P} (\mathbb{R})$;
 		\item $\mathcal{P}_3 (\mathbb{R})$ é um subespaço de $\mathcal{F} (I;\mathbb{R})$.
 	\end{enumerate} É possível generalizar estas conclusões para o conjunto $\mathcal{P}_n (\mathbb{R})$ dos polinômios de grau $n$?
-\end{exercise}
+\end{exer}
 
 
 \subsection{Espaço nulo}
@@ -575,7 +575,7 @@ O \textbf{espaço nulo} de uma matriz $A$ de ordem $m \times n$ é o conjunto de
 A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + b \cdot \vec{0} = \vec{0}.
 \end{equation} Portanto, como também $\vec{0} \in \operatorname{Nul} A$, concluimos que $\operatorname{Nul} A$ é subespaço de $\mathbb{R}^n$.
 
-\begin{example}[Retirado do David C. Lay]
+\begin{ex}[Retirado do David C. Lay]
 	Encontrar um conjunto gerador para o espaço nulo da matriz
 	\begin{equation}
 	\left[
@@ -712,13 +712,13 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	\end{array}
 	\right]\right\}. \ \lhd
 	\end{equation} 
-\end{example}
+\end{ex}
 
 Uma das importâncias teóricas do espaço nulo é
 
-\begin{proposition}
+\begin{prop}
 	Seja $A$ uma matriz $m\times n$. Então a aplicação linear $\vec{x} \mapsto A \vec{x}$ é injetora se, e somente se, $\operatorname{Nul} A = \{ 0 \}.$
-\end{proposition}
+\end{prop}
 
 Em outras palavras, caso o sistema linear homogêneo $A \vec{x} = \vec{0}$ possua somente a solução trivial, podemos inferir que $A \vec{x} = \vec{b}$ possui no máximo uma solução, para qualquer $\vec{b}$!
 
@@ -738,9 +738,9 @@ A =
 \operatorname{Col} A = \Span \{ \vec{a}_1, \vec{a}_2, \dots, \vec{a}_n\}.
 \end{equation}
 
-\begin{exercise}
+\begin{exer}
 	Verificar que $\operatorname{Col} A$ é um subespaço de $\mathbb{R}^n$.
-\end{exercise}
+\end{exer}
 
 Lembrando ainda que
 \begin{equation}
@@ -750,9 +750,9 @@ x_1 \vec{a}_1 + x_2 \vec{a}_2 + \cdots + x_n \vec{a}_n = \vec{b} \iff A \vec{x} 
 \operatorname{Col} A = \{ \vec{b} \in \mathbb{R}^m \ | \ \text{existe } \vec{x} \text{ tal que } \vec{b} = A \vec{x} \}.
 \end{equation} O espaço coluna trata portanto de vetores na imagem da aplicação linear. Temos:
 
-\begin{proposition}
+\begin{prop}
 	Seja $A$ uma matriz $m\times n$. Então a aplicação linear $\vec{x} \mapsto A \vec{x}$ é sobrejetora se, e somente se, $\operatorname{Col} A = \mathbb{R}^m.$
-\end{proposition}
+\end{prop}
 
 A definição do espaço coluna já deixa claro um conjunto gerador (as colunas de $A$!). Não precisamos fazer cálculos como fizemos para encontrar geradores para $\operatorname{Nul} A$.
 
@@ -768,4 +768,4 @@ A definição do espaço coluna já deixa claro um conjunto gerador (as colunas 
 
 \construirExer
 
-\end{document} 
+%\end{document} 

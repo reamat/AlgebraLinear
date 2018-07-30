@@ -1,6 +1,6 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
+%\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
 %define o diretório principal
 \providecommand{\dir}{..}
@@ -9,7 +9,7 @@
 %%%%%%%%%%%%INICIO DO DOCUMENTO%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+%\begin{document}
 
 \chapter{Semana 4}
 
@@ -168,7 +168,7 @@ A\vec{b}_{1} & A\vec{b}_{2} & \cdots & A\vec{b}_{p} \\
 Vamos mostrar algumas contas que exemplificam tanto o procedimento quanto algumas das propriedades essenciais do produto de matrizes.
 
 
-\begin{example} Vamos calcular um produto de matrizes utilizando o procedimento explicado na subseção anterior:
+\begin{ex} Vamos calcular um produto de matrizes utilizando o procedimento explicado na subseção anterior:
 	\begin{equation}
 	\left[
 	\begin{array}{cccc}
@@ -203,12 +203,12 @@ Vamos mostrar algumas contas que exemplificam tanto o procedimento quanto alguma
 	(AB)_{24} & = & 11\cdot 9& + & 11\cdot 11     & + & (-2)\cdot (-6) & + & 0\cdot 0    & = & 232. \\
 	\end{array}
 	\end{equation} Observamos, a partir deste exemplo, que \textbf{o produto de matrizes não é comutativo}. De fato, as matrizes $AB$ e $BA$ sequer tem a mesma ordem. Além disto, pode ser que seja possível calcular $AB$, mas não $BA$. Pense, por exemplo, em uma matriz $A$ de ordem $3 \times 2$ e em outra matriz $B$ de ordem $2 \times 5$.
-\end{example}
+\end{ex}
 
 
 
 
-\begin{example}
+\begin{ex}
 	Uma propriedade de \textbf{matrizes quadradas}, isto é, matrizes cujo número de linhas e de colunas é igual, é que o produto delas fornece uma terceira matriz com a mesma ordem:
 	\begin{equation}
 	[\cdots]_{n \times \cancel{n}} \, [\cdots]_{\cancel{n} \times n} = [\cdots]_{n \times n}.
@@ -253,7 +253,7 @@ Vamos mostrar algumas contas que exemplificam tanto o procedimento quanto alguma
 	\end{array}
 	\right]. \ \lhd
 	\end{equation}
-\end{example}
+\end{ex}
 
 
 
@@ -310,9 +310,9 @@ a_{m1} & a_{m2} & \cdots & a_{mn} & b_{n} & c_{n}\\
 \right]
 \end{equation} A análise das soluções é feita da mesma forma que aprendemos nas notas da primeira semana. Observem que esta é uma forma de economizar as contas e não precisar escalonar duas vezes a matriz $A$ associada!
 
-\begin{exercise}
+\begin{exer}
 	Escrever dois sistemas lineares que possuem a mesma matriz associada. Resolver usando a matriz aumentada generalizada acima.
-\end{exercise}
+\end{exer}
 
 Evidentemente, este método funcionaria para resolver ao mesmo tempo 3 ou 4 ou 20 sistemas lineares ao mesmo tempo, desde que a matriz associada seja a mesma em todos eles.
 
@@ -330,7 +330,7 @@ Evidentemente, este método funcionaria para resolver ao mesmo tempo 3 ou 4 ou 2
 
 A \textbf{matriz transposta} de uma matriz $A$, de ordem $m\times n$, é a matriz $A^T$ que tem por colunas as linhas de $A$. Consequentemente, $A^T$ é uma matriz de ordem $n \times m$.
 
-\begin{example}
+\begin{ex}
 	As transpostas das matrizes
 	\begin{equation}
 	A = \left[
@@ -375,7 +375,7 @@ A \textbf{matriz transposta} de uma matriz $A$, de ordem $m\times n$, é a matri
 	\end{array}
 	\right]. \ \lhd
 	\end{equation}
-\end{example}
+\end{ex}
 
 
 Valem as seguintes propriedades:
@@ -385,9 +385,9 @@ Valem as seguintes propriedades:
 	\item Produto: $(AB)^T = B^T A^T$
 \end{itemize}
 
-\begin{exercise}
+\begin{exer}
 	Verifique que estas propriedades são válidas em alguns exemplos (escolha algumas matrizes para fazer as contas).
-\end{exercise}
+\end{exer}
 
 
 \subsection*{Exercícios resolvidos}
@@ -567,7 +567,7 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 \end{equation}
 
 
-\begin{remark}
+\begin{obs}
 	Veremos na seção seguinte que o processo que utilizamos para inverter a matriz $A$ funciona para matrizes de qualquer ordem, mas é trabalhoso. No caso de uma matriz $2\times 2$, talvez seja interessante memorizar a fórmula, já que não é tão complicada. Podemos pensar da seguinte maneira:
 	\begin{itemize}
 		\item Calculamos $\det A$. Se for diferente de zero, existe a inversa. Nós partimos de $A$ e dividimos pelo determinante.
@@ -575,9 +575,9 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 		\item Finalmente, trocamos o sinal dos elementos da outra diagonal.
 	\end{itemize}
 	\textbf{Atenção!} Este método apenas funciona para matrizes quadradas de ordem $2\times 2$!
-\end{remark}
+\end{obs}
 
-\begin{example}\label{exp:2x2}
+\begin{ex}\label{exp:2x2}
 	Sejam as matrizes
 	\begin{equation}
 	A = \left[
@@ -643,7 +643,7 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 	\begin{equation}
 	\det C = (-1) \cdot 2 - 2 \cdot (-1) = 0
 	\end{equation} e portanto $C$ não é invertível (isto é, não existe a matriz inversa $C^{-1}$)$. \ \lhd$
-\end{example}
+\end{ex}
 
 
 
@@ -709,14 +709,14 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 \big[ \, I \ | \ A^{-1} \ \big].
 \end{equation}
 
-\begin{remark}
+\begin{obs}
 	Para que seja possível encontrar as soluções, como indicado acima, a forma escalonada da matriz $A$ deve possuir $n$ posições de pivô (caso contrário, algum dos sistemas acima seria impossível), de modo que todas as colunas de $A$ são colunas pivô.
 	
 	Se $A$ possuir alguma coluna sem posição de pivô, podemos parar imediatamente o algoritmo, pois isto significa que a matriz não é invertível.
-\end{remark}
+\end{obs}
 
 
-\begin{example}
+\begin{ex}
 	Vamos decidir se a matriz abaixo é invertível e, em caso afirmativo, determinar a inversa:
 	\begin{equation}
 	A =
@@ -819,11 +819,11 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	\end{array}
 	\right],
 	\end{equation} pois já está claro que todas as colunas possuem posição de pivô. $\ \lhd$
-\end{example}
+\end{ex}
 
 
 
-\begin{example}
+\begin{ex}
 	Vamos decidir se a matriz abaixo é invertível e, em caso afirmativo, determinar a inversa:
 	\begin{equation}
 	A =
@@ -860,7 +860,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	\end{array}
 	\right].
 	\end{equation} Portanto, a terceira coluna não possui posição de pivô e a matriz $A$ não possui inversa.
-\end{example}
+\end{ex}
 
 
 \subsection{Aplicação na resolução de sistemas lineares}
@@ -877,7 +877,7 @@ A existência da matriz inversa $A^{-1}$ permite-nos multiplicar ambos os lados 
 \end{equation}
 
 
-\begin{example}
+\begin{ex}
 	Resolver o sistema
 	\begin{equation}
 	A = \left[
@@ -927,7 +927,7 @@ A existência da matriz inversa $A^{-1}$ permite-nos multiplicar ambos os lados 
 	\end{array}
 	\right]. \ \lhd
 	\end{equation}
-\end{example}
+\end{ex}
 
 
 Embora nossa solução do sistema possa parecer ``elegante'' ao utilizar a matriz inversa, este método é muito ineficiente. Na verdade, escalonar a matriz aumentada associada ao sistema exige um custo computacional muito menor do que calcular a inversa da matriz e, portanto, em geral se usa o escalonamento.
@@ -1000,4 +1000,4 @@ A^{-1} =
 
 \section{Exercícios finais}
 
-\end{document} 
+%\end{document} 

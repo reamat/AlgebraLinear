@@ -70,23 +70,23 @@
 
 
 % \theoremstyle{plain}
-% \newtheorem{theorem}{Teorema}              %%section, chapter, etc
-% \newtheorem{proposition}[theorem]{Proposição}      %%everything below obeys theorem because: [theorem]
+% \newtheorem{teo}{Teorema}              %%section, chapter, etc
+% \newtheorem{prop}[theorem]{Proposição}      %%everything below obeys theorem because: [theorem]
 % \newtheorem{lemma}[theorem]{Lema}
 % \newtheorem{corollary}[theorem]{Corolário}
 % \newtheorem{maintheorem}{Teorema}                   %%number doesn't obey order
 % \renewcommand{\themaintheorem}{\Alph{maintheorem}}
 % \newtheorem{maincorollary}{Corolário}
 % \newtheorem{conjecture}{Conjectura}
-% \newtheorem*{claim}{Afirmação}
+% \newtheorem*{prop}{Afirmação}
 
 % \newtheorem*{desloct}{Segundo Teorema de Deslocamento -- Deslocamento em $t$}     %%Sem numeração e com o nome desejado
 
 % \theoremstyle{definition}
-% \newtheorem{remark}[theorem]{Observação}
-% \newtheorem{example}[theorem]{Exemplo}
+% \newtheorem{obs}[theorem]{Observação}
+% \newtheorem{ex}[theorem]{Exemplo}
 % \newtheorem{definition}[theorem]{Definição}
-% \newtheorem{exercise}{Exercício}
+% \newtheorem{exer}{Exercício}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -223,14 +223,14 @@ A \textbf{projeção ortogonal sobre o subespaço $W$}, denotada por $\proj_W \v
 \vec{w} = \frac{\vec{w} \cdot \vec{w}_1}{\vec{w}_1 \cdot \vec{w}_1} \ \vec{w}_1 + \frac{\vec{w} \cdot \vec{w}_2}{\vec{w}_2 \cdot \vec{w}_2} \ \vec{w}_2.
 \end{equation}
 
-\begin{exercise}
+\begin{exer}
 Utilize as propriedades do produto escalar e a ortogonalidade da base $\{\vec{w}_1, \vec{w}_2\}$ para verificar que
 \begin{equation}
 \vec{w} \cdot  \big( \vec{y} - \proj_W \vec{y} \big) = 0.
 \end{equation}
-\end{exercise}
+\end{exer}
 
-\begin{example}
+\begin{ex}
 Vamos calcular a projeção do vetor
 \begin{equation}
 \vec{y} =
@@ -264,7 +264,7 @@ Vamos calcular a projeção do vetor
 \end{bmatrix}.
 \end{split}
 \end{equation}
-\end{example}
+\end{ex}
 
 
 Desenvolvemos acima o conceito de projeção ortogonal sobre um subespaço do espaço $\mathbb{R}^3$ de dimensão três apenas pela conveniência da visualização geométrica. Na verdade, o conceito pode ser definido em qualquer dimensão.
@@ -278,7 +278,7 @@ Seja $W \subset \mathbb{R}^n$ um subespaço vetorial de dimensão $k$ e $\{\vec{
 \end{equation} isto é, a projeção $\proj_W \vec{y}$ pertence a $W$ e $\vec{y} - \proj_W \vec{y}$ é ortogonal a todo elemento de $W$, assim como nossa intuição esperaria.
 
 
-\begin{example}
+\begin{ex}
 Calcular a projeção do vetor
 \begin{equation}
 \vec{y} =
@@ -316,7 +316,7 @@ Calcular a projeção do vetor
 \end{bmatrix}.
 \end{split}
 \end{equation}Confira estas contas com uma calculadora (os coeficientes dos vetores nem sempre são bonitinhos!)
-\end{example}
+\end{ex}
 
 
 \subsection*{Exercícios resolvidos}
@@ -363,7 +363,7 @@ Dado qualquer outro vetor $\vec{w} \in W$, o Teorema de Pitágoras implica que (
 \end{proof}
 
 
-\begin{example}
+\begin{ex}
 Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{u}, \vec{v}\}$ (contido em $\mathbb{R}^5$) gerado pelos vetores
 \begin{equation}
 \vec{u} =
@@ -411,7 +411,7 @@ Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{
            & = \frac{ \sqrt{11085} }{15} \simeq 7,02.
 \end{split}
 \end{equation}
-\end{example}
+\end{ex}
 
 
 \subsection*{Exercícios resolvidos}
@@ -429,7 +429,7 @@ O \textbf{Processo de Gram--Schmidt} é um algoritmo para obter uma base ortogon
 
 Vamos começar com um exemplo.
 
-\begin{example}
+\begin{ex}
 Consideramos os vetores
 \begin{equation}
 \vec{v}_1 =
@@ -586,7 +586,7 @@ Observamos também que, fazendo a normalização dos vetores, podemos obter uma 
 -1/\sqrt{3} \\ 1/\sqrt{3} \\ 1/\sqrt{3}
 \end{bmatrix}
 \end{equation} forma um conjunto ortonormal que gera o mesmo espaço vetorial que $\{ \vec{v}_1, \vec{v}_2, \vec{v}_3 \}. \ \lhd$
-\end{example}
+\end{ex}
 
 
 
@@ -633,7 +633,7 @@ Este é a parte mais ``pesada'' do método. Por exemplo, se agora quiséssemos u
 
 
 
-\begin{example}[Retirado de Wikipedia.org]
+\begin{ex}[Retirado de Wikipedia.org]
 Vamos obter uma base ortonormal para o espaço coluna $\operatorname{Col} A$ da matriz
 \begin{equation}
 A =
@@ -768,7 +768,7 @@ A =
  -33/35
 \end{bmatrix}. \lhd
 \end{equation}
-\end{example}
+\end{ex}
 
 \subsection*{Exercícios resolvidos}
 
@@ -851,10 +851,10 @@ Note ainda que $R$ é invertível, visto que sua diagonal principal contém apen
 A construção acima é facilmente generalizada para matrizes quaisquer e nos permite enunciar o seguinte fato
 (lembre que uma matriz ortogonal é uma matriz cujas colunas formam um conjunto ortonormal):
 
-\begin{theorem}
+\begin{teo}
 Qualquer matriz $A$ cujas colunas são linearmente independentes pode ser fatorada na forma $A=QR$, onde $Q$ é uma matriz ortogonal 
 e $R$ é uma matriz triangular superior invertível. Ainda, o espaço coluna das matrizes $A$ e $Q$ é o mesmo, ou seja, as colunas de $Q$ formam uma base ortonormal para o subespaço gerado pelas colunas de $A$.
-\end{theorem} 
+\end{teo} 
 
 Note que a fatoração QR está para o processo de Gram-Schmidt assim como a fatoração LU está para o método de  linha-redução a forma escada!  %\footnote{Preciso escrever sobre a fatoração LU. Acho que seria interessante também mostrar que matrizes ortogonais preservam comprimento e ângulo.}
 
@@ -862,9 +862,9 @@ Bem, vimos que a matriz $Q$ tem como colunas a base ortonormal gerada pelo proce
 
 Usando o seguinte fato surpreendente: 
 
-\begin{theorem}
+\begin{teo}
 uma matriz ortogonal é sempre invertível e sua inversa é dada pela sua transposta, ou seja $Q^{-1}= Q^T$.
-\end{theorem}
+\end{teo}
 
 
 A prova deste teorema é simples:
@@ -990,14 +990,14 @@ Podemos ver que esta matriz define uma transformação linear no plano que rotac
 Assim, tal transformação preserva comprimento e ângulo entre vetores.
 Estas propriedades não são particulares da matriz de rotação: todas as matrizes ortogonais se comportam da mesma forma. O teorema a seguir traz estas informações e mais algumas.
 
-\begin{theorem}
+\begin{teo}
 	Seja $Q=[\vec{u}_1,...,\vec{u}_n]$ uma matriz ortogonal $n \times n$. Então, para quaisquer vetores $\vec{v}$ e $\vec{w}$ em $\mathbb{R}^n$ temos
 	\begin{enumerate}
 		\item[i.] $Q\vec{v} \cdot Q\vec{w} = \vec{v} \cdot  \vec{w}$
 		\item[ii.]  $\| Q\vec{v} \| = \| \vec{v} \|$
 		\item[iii.]  o ângulo entre $Q\vec{v}$ e $Q\vec{w}$ é igual ao  ângulo entre $\vec{v}$ e $\vec{w}$
 		\end{enumerate}
-\end{theorem}
+\end{teo}
 
 A prova do primeiro item é consequência direta da linearidade do produto interno e da hipótese das colunas formarem uma base ortonormal: se $\vec{v} = (\alpha_1,..., \alpha_n)$ e $\vec{w} = (\beta_1, ..., \beta_n)$,  então
 
@@ -1032,13 +1032,13 @@ Assim finalizamos a prova do teorema.
 
 Finalizamos esta seção enunciando um teorema cujo primeiro item já foi provado e cujo segundo item é consequencia direta do primeiro e do fato de que $\det(AB)=\det(A) \det (B)$:  PS NAO VALE A PENA PRECISA DE ALGO MAIS...
 
-\begin{theorem}
+\begin{teo}
 	Seja $Q=[\vec{u}_1,...,\vec{u}_n]$ uma matriz ortogonal. Temos
 	\begin{enumerate}
 		\item[i.] $Q^{-1}=Q^T$
 		\item[ii.] $\det(Q)=1$ ou $\det(Q)=-1$.
 	\end{enumerate}
-\end{theorem}
+\end{teo}
 
 \subsection*{Exercícios resolvidos}
 

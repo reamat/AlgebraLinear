@@ -8,36 +8,68 @@
 #
 ########################################
 
-pdf: livro.tex
-	cp config-pdf.knd config.knd
-	pdflatex livro
-	pdflatex livro	
-	pdflatex livro
+########################################
+# FORMATO LIVRO PDF
+########################################
 
-dvi: livro.tex
-	cp config-pdf.knd config.knd
-	latex livro
-	latex livro	
-	latex livro
+pdf: main.tex
+	cp config-book.knd config.knd
+	pdflatex main
+	bibtex main
+	makeindex main
+	pdflatex main
+	pdflatex main
 
-html: livro.html
 
-livro.html: livro.tex
-	rm -f html/*
+########################################
+# FORMATO LIVRO DVI
+########################################
+
+dvi: main.tex
+	cp config-book.knd config.knd
+	latex main
+	bibtex main
+	makeindex main
+	latex main
+	latex main
+	cp config-book.knd config.knd
+
+
+########################################
+# FORMATO HTML
+########################################
+
+html: main.html
+
+main.html: main.tex
 	cp config-html.knd config.knd
-	mkdir -p html
-	latex livro
-	latex livro
-	latex livro
-	htlatex livro "myconfig,3,notoc*" " -cunihtf" "-d./html/"
-	cp config-pdf.knd config.knd
+	mkdir -p ./html
+	rm -f ./html/*
+	latex main
+	bibtex main
+	latex main
+	latex main
+	htlatex main.tex "myconfig.cfg,3,notoc*" " -cunihtf" "-d./html/"
+	cp config-book.knd config.knd
+
+########################################
+# TODOS AS VERSÕES EM FORMATO PDF
+########################################
+
+all: main.tex
+	make clean
+	make pdf
+	make clean
+	make dvi
+	make clean
+	make html
+
 
 .PHONY: clean
 
 clean:
-	rm -f *.aux *.log *.out *.toc *.bbl \
-	*.idx *.ilg *.ind *.blg *.backup \
-	*.4tc *.lg *.tmp *.xref *.png *.html \
-	*.4ct *.css *.idv *.maf *.mtc *.mtc0 \
-	*.xml
-
+	rm -f *.aux */*.aux *.log *.out *.toc *.bbl */*.bbl \
+	      *.idx *.ilg *.ind *.blg *.backup \
+	      *.4tc *.lg *.tmp *.xref *.png *.html \
+	      *.4ct *.css *.idv *.maf *.mtc *.mtc0 \
+	      *.xml
