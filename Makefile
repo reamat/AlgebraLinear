@@ -12,26 +12,26 @@
 # FORMATO LIVRO PDF
 ########################################
 
-pdf: main.tex
+pdf: livro.tex
 	cp config-book.knd config.knd
-	pdflatex main
-	bibtex main
-	makeindex main
-	pdflatex main
-	pdflatex main
+	pdflatex livro
+	bibtex livro
+	makeindex livro
+	pdflatex livro
+	pdflatex livro
 
 
 ########################################
 # FORMATO LIVRO DVI
 ########################################
 
-dvi: main.tex
+dvi: livro.tex
 	cp config-book.knd config.knd
-	latex main
-	bibtex main
-	makeindex main
-	latex main
-	latex main
+	latex livro
+	bibtex livro
+	makeindex livro
+	latex livro
+	latex livro
 	cp config-book.knd config.knd
 
 
@@ -39,24 +39,24 @@ dvi: main.tex
 # FORMATO HTML
 ########################################
 
-html: main.html
+html: livro.html
 
-main.html: main.tex
+livro.html: livro.tex
 	cp config-html.knd config.knd
 	mkdir -p ./html
 	rm -f ./html/*
-	latex main
-	bibtex main
-	latex main
-	latex main
-	htlatex main.tex "myconfig.cfg,3,notoc*" " -cunihtf" "-d./html/"
+	latex livro
+	bibtex livro
+	latex livro
+	latex livro
+	htlatex livro.tex "myconfig.cfg,3,notoc*" " -cunihtf" "-d./html/"
 	cp config-book.knd config.knd
 
 ########################################
 # TODOS AS VERSÕES EM FORMATO PDF
 ########################################
 
-all: main.tex
+all: livro.tex
 	make clean
 	make pdf
 	make clean
