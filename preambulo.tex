@@ -1,0 +1,214 @@
+%Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ATENÇÃO
+%
+% POR SEGURANÇA, NÃO EDITE ESTE ARQUIVO.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Predefinicoes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newif\ifisbook         % O layout será book?
+\newif\ifishtml        % O layout será html?
+
+\def\tfn{config.knd}     % Arquivo que guarda as definições do tipo de saída
+\def \tdata{}          % Definições do tipo de saída: book, slide ou html.
+
+\openin1=\tfn\relax    % Leitura das definições de saída
+\read1 to \tdata
+\closein1
+
+\tdata                 % Definições de saída
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   Opcões de Linguagem
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%\usepackage{xunicode} é o pacote necessário para a codificação UTF-8 no XeTeX
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RE]{Cálculo Numérico}
+\fancyhead[LO]{\rightmark}
+\fancyhead[LE,RO]{\thepage}
+
+%license footnote
+\cfoot{\tiny{Licença \href{https://creativecommons.org/licenses/by-sa/3.0/}{CC-BY-SA-3.0}. Contato: \url{reamat@ufrgs.br}}}
+
+%%%% no blank pages between chapters %%%%
+\let\cleardoublepage\clearpage
+
+%%%% independent chapters %%%%
+\usepackage{subfiles}
+
+%%%% ams-latex %%%%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+
+%%%% graphics %%%%
+\usepackage{graphics}
+\usepackage{graphicx}
+%\usepackage{caption}
+
+%%%% links %%%%
+\usepackage[pdfborder={0 0 0 [0 0]},colorlinks=true,linkcolor=blue,citecolor=blue,filecolor=blue,urlcolor=blue]{hyperref}
+
+%%%% copy and paste from PDF (correctly) %%%%
+\usepackage{upquote}
+\usepackage{lmodern}
+
+%%%% code insert (verbatim) %%%%
+\usepackage{verbatim}
+\usepackage{listings}
+
+%%%% indent first line %%%%
+\usepackage{indentfirst}
+
+%%%% comma as a decimal separator %%%%
+\usepackage{icomma}
+
+%%%% citation %%%%
+\usepackage{cite}
+
+%%%% lists %%%%
+\usepackage{enumerate}
+
+%%%% index %%%%
+\usepackage{makeidx}
+
+
+%%%% miscellaneous %%%%
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage[normalem]{ulem}
+\renewcommand{\arraystretch}{1.5} %space between rows in tables
+\usepackage{array,booktabs}
+\usepackage{xcolor}
+\usepackage{tikz}
+
+\usepackage[makeroom]{cancel}   % Cancelar termos em equações
+  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MACROS E NOVOS COMANDOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=1pt] (char) {#1};}}
+\newcommand{\RED}[1]{{\color{red}{#1}}}
+\newcommand{\BLU}[1]{{\color{blue}{#1}}}
+\newcommand{\GRE}[1]{{\color{darkgreen}{#1}}}
+\newcommand{\matdd}[4]{\begin{bmatrix} #1&#2\\#3&#4 \end{bmatrix}}
+\newcommand{\matddd}[9]{\begin{bmatrix} #1&#2&#3 \\ #4&#5&#6 \\ #7&#8&#9 \end{bmatrix}}
+\newcommand{\vetdd}[2]{\begin{bmatrix} #1 \\#2 \end{bmatrix}}
+\newcommand{\vetddd}[3]{\begin{bmatrix} #1 \\ #2\\ #3 \end{bmatrix}}
+\newcommand{\field}[1]{\mathbb{#1}}
+%emphasis \emph
+\DeclareTextFontCommand{\emph}{\bfseries}
+\newcommand{\sen}{\operatorname{sen}\,}
+\newcommand{\senh}{\operatorname{senh}\,}
+\renewcommand{\sin}{\operatorname{sen}\,}
+\renewcommand{\sinh}{\operatorname{senh}\,}
+\newcommand{\tg}{\operatorname{tg}\,}
+\newcommand{\p}{\partial}
+\newcommand{\Dom}{\operatorname{Dom}\,}
+\newcommand{\diag}{\operatorname{diag}\,}
+
+
+\newcommand{\proj}{\operatorname{proj}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\spec}{\operatorname{spec}}
+\newcommand{\supp}{\operatorname{supp}}
+
+
+%E = 10^
+\def\E#1{\mathrm{E}\!#1\!}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AVISOS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\foraDoEstilo}{
+  \begin{tabular}{|c|}\hline
+    Esta parte do material não está de acordo com o estilo do livro. Ajude-nos a corrigir, veja como em:\\
+    \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
+  \end{tabular}
+}
+
+\newcommand{\emconstrucao}{
+  \begin{tabular}{|c|}\hline
+    Em construção ... Gostaria de participar na escrita deste livro? Veja como em:\\
+    \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
+  \end{tabular}
+}
+
+\newcommand{\construirSec}{
+\begin{center}
+  Esta seção (ou subseção) está sugerida. Participe da sua escrita. Veja como em:\\
+  \url{https://www.ufrgs.br/reamat/participe.html}  
+\end{center}
+}
+
+\newcommand{\construirExeresol}{
+  \begin{center}
+    \begin{tabular}{|c|}\hline
+      Esta seção carece de exercícios resolvidos. Participe da sua escrita.\\
+      Veja como em:\\
+      \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
+    \end{tabular}
+  \end{center}
+}
+
+\newcommand{\construirResol}{
+\begin{center}
+  Este exercício está sem resolução. Ajude-nos a construir-lá, veja como em:\\
+  \url{https://www.ufrgs.br/reamat/participe.html}  
+\end{center}
+}
+
+
+\newcommand{\construirExer}{
+  \begin{center}
+    \begin{tabular}{|c|}\hline
+      Esta seção carece de exercícios. Participe da sua escrita.\\
+      Veja como em:\\
+      \url{https://www.ufrgs.br/reamat/participe.html}\\\hline
+    \end{tabular}
+  \end{center}
+}
+
+\newcommand{\construirResp}{
+\begin{center}
+  Este exercício está sem resposta sugerida. Proponha uma resposta. Veja como em:\\
+  \url{https://www.ufrgs.br/reamat/participe.html}  
+\end{center}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% + INTRUCOES PARA O FORMATO LIVRO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifisbook
+\input preambulo_book.tex
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% + INTRUCOES PARA O FORMATO HTML
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\ifishtml
+\input preambulo_html.tex
+\fi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

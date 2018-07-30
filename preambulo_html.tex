@@ -1,0 +1,67 @@
+%Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ATENÇÃO
+%
+% POR SEGURANÇA, NÃO EDITE ESTE ARQUIVO.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ambientes 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \theoremstyle{plain}          %   bold title, italic body
+  \newtheorem{teo}{Teorema}[section]
+  \newtheorem{lem}{Lema}[section]
+  \newtheorem{prop}{Proposição}[section]
+  \newtheorem{corol}{Corolário}[section]
+  \newtheorem{defn}{Definição}[section]
+  \theoremstyle{remark}           % italic title, romman body
+  \theoremstyle{definition}       % italic title, romman body
+  \newtheorem{obs}{Observação}[section]
+  \newtheorem{ex}{Exemplo}[section]
+
+%\renewcommand\qedsymbol{$\blacksquare$}
+\renewenvironment{proof}
+{{\bfseries\upshape Demonstração.}}
+{
+  \begin{flushright}
+    $\blacksquare$
+  \end{flushright}
+}
+
+\newenvironment{sol}
+{{\bfseries Solução.}}
+{
+  \begin{flushright}
+    $\Diamond$
+  \end{flushright}
+}
+
+\newtheorem{exer}{E}[section]
+\newenvironment{resp}
+{{\bfseries Resposta.}}
+{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Exercícios Resolvidos
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{exeresol}{ER}[section]
+\newenvironment{resol}
+{{\bfseries Solução.}}
+{
+  \begin{flushright}
+    $\Diamond$
+  \end{flushright}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DESCONTINUADO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newtheorem{Exercise}{E}[section]
+\newenvironment{Answer}{{\bfseries \tiny Resposta.}}{}
+
+\usepackage{minitoc}
