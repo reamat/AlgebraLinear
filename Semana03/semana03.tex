@@ -342,7 +342,7 @@ Escalonando-a, obtemos a matriz:
 \right]
 \end{equation}
 Através dela, podemos observar que $x_1$ e $x_2$ são variáveis dependentes, enquanto que $x_3$ é variável livre. Ou seja, a equação
-inicial possui infinitas soluções além da solução trivial. Portanto, obtemos que os vetores $v_1$, $v_2$ e $v_3$ são linearmente dependentes.
+inicial possui infinitas soluções além da solução trivial. Portanto, obtemos que os vetores $v_1$, $v_2$ e $v_3$ são linearmente dependentes. $\lhd$
 \end{resol}
 \subsection*{Exercícios}
 
@@ -422,6 +422,61 @@ A \sim \left[
 \subsection*{Exercícios resolvidos}
 
 \construirExeresol
+
+\begin{exeresol}
+Determine para que valores de $a$ temos $\vec{v_1}$, $\vec{v_2}$ e $\vec{v_3}$ sendo vetores linearmente dependentes.
+\begin{equation}
+\vec{v_1} = 
+\left[
+\begin{array}{c}
+	3 \\
+	9 \\
+	-6
+\end{array}
+\right],
+\vec{v_2} = 
+\left[
+\begin{array}{c}
+	4 \\
+	12 \\
+	-8
+\end{array}
+\right],
+\vec{v_3} = 
+\left[
+\begin{array}{c}
+	1 \\
+	3 \\
+	2a
+\end{array}
+\right]
+\end{equation}
+\end{exeresol}
+\begin{resol}
+Para que os vetores sejam linearmente dependentes precisamos que a equação abaixo possua uma solução que não seja a solução trivial.
+\begin{equation}
+	x_1\vec{v_1} + x_2\vec{v_2} + x_3\vec{v_3} = \vec{0}
+\end{equation}
+Sabemos que resolver essa equação é equivalente a resolver um sistema de equações ou simplesmente usar o algoritmo do escalonamento para a matriz $A$ associada:
+\begin{equation}
+A = \left[
+  \begin{array}{cccc}
+    3 & 4 & 1 & 0 \\
+    9 & 12 & 3 & 0  \\
+    -6 & -8 & 2a & 0  
+  \end{array}
+\right]
+\end{equation}
+O resultado da aplicação do algoritmo resulta em:
+\begin{equation}
+A \sim \left[
+	\begin{array}{cccc}
+	3 & 4 & 1 & 0 \\
+	0 & 0 & 6 & 0 \\
+	0 & 0 & 0 & 0
+\end{equation}
+Assim, podemos observar que temos uma variável livre e que $a$ não restringe isso. Portanto, podemos dizer que para qualquer valor de $a$ os vetores $\vec{v_1}$, $\vec{v_2}$ e $\vec{v_3}$ são linearmente dependentes. $\lhd$
+\end{resol}
 
 \subsection*{Exercícios}
 
