@@ -60,7 +60,7 @@ O código LaTeX pode ser compilado em outros sistemas operacionais.
 
 Em primeiro lugar, deve-se editar o arquivo de configuração `config.knd`. Este arquivo contém instruções TeX para controlar o formato do livro. Por exemplo, para setar o formato do livro em PDF, garanta que este arquivo contenha o seguinte texto:
 
-    \ispdftrue \ishtmlfalse
+    \isbooktrue \ishtmlfalse
 
 Por fim, o livro pode ser compilado com a seguinte sequência de comandos:
 
