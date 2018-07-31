@@ -1,6 +1,6 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
+%\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
 %define o diretório principal
 \providecommand{\dir}{..}
@@ -9,7 +9,7 @@
 %%%%%%%%%%%%INICIO DO DOCUMENTO%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+%\begin{document}
 
 \chapter{Semana 10}
 
@@ -72,7 +72,7 @@ onde a matriz $A=\left[ \begin{array}{cc} 0,8 & 0,3
 é chamada matriz de transição da Cadeia de Markov acima.
 
 Assim, \eqref{cmark-1} pode ser escrito como
-$$ \vec p_1 = A \vec p_0.$$
+\begin{equation} \vec p_1 = A \vec p_0.\end{equation}
 
 Fazendo as contas com $p_A(0)=0,4$ e $p_B(0)=0,6$, temos $p_A(1)=0,5$ e $p_B(1)=0,5$.
 
@@ -89,7 +89,7 @@ No nosso caso $p_A(2)=0,55$ e $p_B(2)=0,45$.
 
 Seguindo, nosso modelo nos permite deduzir que
 
-$$ \vec p_{n+1} = A^n \vec p_0$$
+\begin{equation} \vec p_{n+1} = A^n \vec p_0\end{equation}
 onde $A^n$ significa a n-ésima potência da matriz $A$.
 
 Neste momento surge uma quarta pergunta:
@@ -106,23 +106,23 @@ Se soubermos responder a pergunta (d) acima, a pergunta (b) será facilmente res
 
 Finalmente analisando (c), notamos que uma distribuição em equilíbrio $\vec{p}_E$, que permanece constante ao longo do tempo, é tal que se coincidir com a  distribuição inicial $\vec p_0$, deve também coincidir com $\vec p_1$, de maneira que
 
-$$ \vec{p}_E =  \vec p_1 = A \vec p_0 = A \vec{p}_E.$$
+\begin{equation} \vec{p}_E =  \vec p_1 = A \vec p_0 = A \vec{p}_E.\end{equation}
 Ou seja, $p_E$ é um vetor invariante para a multiplicação pela matriz $A$: satisfaz a equação
 
-$$ A \vec{p}_E =   \vec{p}_E.$$
+\begin{equation} A \vec{p}_E =   \vec{p}_E.\end{equation}
 
 %É de se esperar (e de fato pode-se )
 
-Pode-se ainda notar que $$\lim\limits_{n\to \infty}\vec{p}_n = \vec p_E,$$ o que nos leva novamente a equação $ A \vec{p}_E = \vec{p}_E$: basta para isso tomar o limite em ambos os lados na equação \eqref{cmark-2}.
+Pode-se ainda notar que \begin{equation}\lim\limits_{n\to \infty}\vec{p}_n = \vec p_E,\end{equation} o que nos leva novamente a equação $ A \vec{p}_E = \vec{p}_E$: basta para isso tomar o limite em ambos os lados na equação \eqref{cmark-2}.
 
 Um vetor não nulo $\vec v$ que satisfaz $A \vec v = \vec v$ é um primeiro exemplo daquilo que em breve chamaremos de {\it autovetor } para a matriz $A$. A noção de autovetores é um pouco mais geral e abrange também o caso $A \vec v = \lambda \vec v$, onde $\lambda$ é chamado de {\it autovalor } associado ao autovetor $\vec v$.
 
 Estudaremos em detalhes autovetores e autovalores a partir de agora. Veremos, entre outras coisas, que ao conhecermos os autovetores e autovalores de uma matriz $A$
 %(além de conhecermos distribuições de equilíbrio para cadeias de Markov)
 poderemos, em muitos casos, escrever a matriz $A$ na forma
-$$A = P D P^{-1},$$
+\begin{equation}A = P D P^{-1},\end{equation}
 no que é chamada uma {\it diagonalização} de $A$, onde $D$ é uma matriz diagonal, ou seja que tem todas as entradas fora da diagonal principal nulas. Desta maneira poderemos calcular potências de $A$ através da expressão
-$$A^n = P D^n P^{-1},$$
+\begin{equation}A^n = P D^n P^{-1},\end{equation}
 algo que é muito útil do ponto vista computacional, visto que o cálculo de potências de matrizes diagonais é muito simples. Isto nos dá uma resposta à pergunta (d) acima.
 
 
@@ -138,11 +138,11 @@ A \vec{v} = \lambda \vec{v}.
 
 Geometricamente, $\vec{v}$ é um vetor que não muda de direção quando aplicamos a matriz $A$. No entanto, quando permitimos que $\lambda$ seja um número complexo, esta interpretação geométrica é perdida.
 
-		\includegraphics[width=1 \linewidth]{\dir/Semana10/semana10-eigen}
+		\includegraphics[width=1 \linewidth]{Semana10/semana10-eigen}
 
 \noindent Ver também animação em \href{https://en.wikipedia.org/wiki/Eigenvalues_and_eigenvectors#Matrix_examples}{wikipedia.org}
 
-\begin{example}
+\begin{ex}
 	Considere a matriz
 	\begin{equation}
 	A={\begin{bmatrix}2&0&0\\0&3&4\\0&4&9\end{bmatrix}}.
@@ -155,7 +155,7 @@ Geometricamente, $\vec{v}$ é um vetor que não muda de direção quando aplicam
 	\vec{v}_2 =
 	{\begin{bmatrix}0\\1\\2\end{bmatrix}} \quad \text{ é um autovetor de $A$, pois } \quad {\begin{bmatrix}2&0&0\\0&3&4\\0&4&9\end{bmatrix}} {\begin{bmatrix}0\\1\\2\end{bmatrix}} = {\begin{bmatrix}0\\11\\22\end{bmatrix}} = 11 \cdot {\begin{bmatrix}0\\1\\2\end{bmatrix}}.
 	\end{equation} Neste caso, concluimos também que $11$ é um autovalor de $A. \ \lhd$
-\end{example}
+\end{ex}
 
 Observamos que, se $\vec{v}$ for um autovetor de uma matriz $A$ associado a um autovalor $\lambda$, então qualquer múltiplo escalar $\alpha \vec{v}$ também é um autovetor de $A$ associado a $\lambda$:
 \begin{equation}
@@ -183,7 +183,7 @@ p(\lambda) = \det (A - \lambda I).
 \end{equation} A equação $\det (A - \lambda I) = 0$ é também chamada de \textbf{equação característica}. Observe, pelas propriedades dos determinantes, que $p$ é de fato um polinômio e tem grau $n$, que é igual a ordem da matriz $A$. É assim consequência do Teorema Fundamental da Álgebra que existem no máximo $n$ autovalores reais (já que um polinômio de grau $n\ge 1$ possui exatamente $n$ raízes complexas).
 
 
-\begin{example}\label{2x2}
+\begin{ex}\label{2x2}
 	Vamos encontrar os autovalores de
 	\begin{equation}
 	A =
@@ -205,10 +205,10 @@ p(\lambda) = \det (A - \lambda I).
 	\begin{equation}
 	\lambda = \frac{6 \pm \sqrt{36 - 20}}{2} = 3 \pm 2.
 	\end{equation} Portanto, $A$ tem dois autovalores reais: $\lambda_1 = 1$ e $\lambda_2 = 5$.
-\end{example}
+\end{ex}
 
 
-\begin{example}\label{3x3}
+\begin{ex}\label{3x3}
 	Encontrar os autovalores de
 	\begin{equation}
 	A =
@@ -257,7 +257,7 @@ p(\lambda) = \det (A - \lambda I).
 	\begin{equation}
 	-\lambda^3 - 5 \lambda^2 - 3 \lambda + 9 = -(\lambda - 1)(\lambda^2 + 6\lambda + 9) = -(\lambda - 1)(\lambda + 3)^2.
 	\end{equation} Portanto, os autovalores de $A$ são $\lambda_1 = 1$ e $\lambda_2 = 3$. Observamos que $3$ é uma raiz de multiplicidade $2$ do polinômio característico. $\, \lhd$
-\end{example}
+\end{ex}
 
 Um grande problema é que, em geral, encontrar raízes de polinômios é difícil. De fato, mesmo quando o grau do polinômio é baixo, encontrar raízes de polinômios pode ser bastante complicado. Já há muito tempo é conhecido\footnote{Este resultado é uma consequência da famosa \href{https://pt.wikipedia.org/wiki/Teoria_de_Galois}{Teoria de Galois}.} que polinômios de grau $5$ ou mais podem não possuir fórmulas para cálculo de raízes a partir de radicais.
 
@@ -266,7 +266,7 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 \big( A - \lambda I \big) \vec{v} = \vec{0}.
 \end{equation} Isto é o mesmo que dizer que o autoespaço associado a $\lambda$ é o espaço nulo $\operatorname{Nul} (A - \lambda I)$. Vejamos como encontrar os autoespaços das matrizes dos exemplos anteriores.
 
-\begin{example}[de volta ao Exemplo \ref{2x2}]
+\begin{ex}[de volta ao Exemplo \ref{2x2}]
 	Para encontrar os autovetores de
 	\begin{equation}
 	A =
@@ -409,9 +409,9 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 	\end{array}
 	\right] \right\}.
 	\end{equation}
-\end{example}
+\end{ex}
 
-\begin{example}[de volta ao Exemplo \ref{3x3}]
+\begin{ex}[de volta ao Exemplo \ref{3x3}]
 	Vamos encontrar os autovetores de
 	\begin{equation}
 	A =
@@ -596,7 +596,7 @@ Por outro lado, uma vez que os autovalores são conhecidos, encontrar os autovet
 		\right] \right\}. \lhd
 		\end{equation}
 	\end{itemize}
-\end{example}
+\end{ex}
 
 Observamos que, nos exemplos anteriores, a dimensão do autoespaço associado ficou igual à multiplicidade do autovalor. \textbf{Isto nem sempre é verdade}. Como exercício, verifique que a dimensão do autoespaço associado ao autovalor $\lambda = 1$ da matriz
 \begin{equation}
@@ -660,7 +660,7 @@ P \vec{e}_1 = \vec{v}_1 \qquad \qquad \text{ou, ainda, } \qquad  \vec{e}_1 = P^{
 Este mesmo raciocício, repetido $n$ vezes, para cada uma das colunas, prova que todas as colunas são iguais; portanto, $P^{-1} A P = D$.
 \end{proof}
 
-\begin{example}[de volta ao Exemplo \ref{3x3}]\label{exp:3x3denovo}
+\begin{ex}[de volta ao Exemplo \ref{3x3}]\label{exp:3x3denovo}
 	Vimos que, para a matriz
 	\begin{equation}
 	A =
@@ -727,7 +727,7 @@ Este mesmo raciocício, repetido $n$ vezes, para cada uma das colunas, prova que
 	1&0&0 \\ 0&-3&0 \\ 0&0&-3
 	\end{bmatrix}. \ \lhd
           \end{align*}
-\end{example}
+\end{ex}
 
 Embora o método de diagonalização seja bastante transparente, pois basta seguir uma sequência de passos, ele é muito trabalhoso! Não devemos nos iludir com a aparente simplicidade das contas no Exemplo \ref{exp:3x3denovo}, pois as contas já haviam sido feitas anteriormente (além de que ``escondemos'' o cálculo da inversa $P^{-1}$). Na totalidade, os passos envolvem:
 \begin{itemize}
@@ -759,7 +759,7 @@ Em geral, valem as seguintes propriedades: seja $A$ uma matriz de orden $n \time
 \end{itemize}
 
 
-\begin{example}
+\begin{ex}
 	A matriz
 	\begin{equation}
 	A = \begin{bmatrix}
@@ -771,7 +771,7 @@ Em geral, valem as seguintes propriedades: seja $A$ uma matriz de orden $n \time
 	2-\lambda&1 \\ -1&2-\lambda
 	\end{bmatrix} = (2-\lambda)^2 +1 = \lambda^2 -4\lambda +5
 	\end{equation} cujas raízes são $\lambda_1 = \frac{4 + 3i}{2}$ e $\lambda_2 = \frac{4 - 3i}{2}$. Logo, $A$ não é diagonalizável.
-\end{example}
+\end{ex}
 
 \subsection*{Exercícios resolvidos}
 
@@ -785,4 +785,4 @@ Em geral, valem as seguintes propriedades: seja $A$ uma matriz de orden $n \time
 
 \construirExer
 
-\end{document}
+%\end{document}

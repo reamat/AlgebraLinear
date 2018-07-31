@@ -1,6 +1,6 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
+%\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
 \providecommand{\dir}{..}
 
@@ -8,7 +8,7 @@
 %%%%%%%%%%%%INICIO DO DOCUMENTO%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+%\begin{document}
 	
 	\chapter{Semana 12}
 
@@ -21,7 +21,7 @@ No último capítulo, estudamos projeções ortogonais e vimos que a projeção 
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.9\linewidth]{\dir/Semana12/semana12-proj}
+\includegraphics[width=0.9\linewidth]{Semana12/semana12-proj}
 \end{center}
 \end{figure}
 \noindent Vamos trabalhar geometricamente: suponhamos que o plano
@@ -40,14 +40,14 @@ A \textbf{projeção ortogonal sobre o subespaço $W$}, denotada por $\proj_W \v
 \vec{w} = \frac{\vec{w} \cdot \vec{w}_1}{\vec{w}_1 \cdot \vec{w}_1} \ \vec{w}_1 + \frac{\vec{w} \cdot \vec{w}_2}{\vec{w}_2 \cdot \vec{w}_2} \ \vec{w}_2.
 \end{equation}
 
-\begin{exercise}\label{exercise:proj}
+\begin{exer}\label{exercise:proj}
 Utilize as propriedades do produto escalar e a ortogonalidade da base $\{\vec{w}_1, \vec{w}_2\}$ para verificar que
 \begin{equation}
 \vec{w} \cdot  \big( \vec{y} - \proj_W \vec{y} \big) = 0.
 \end{equation}
-\end{exercise}
+\end{exer}
 
-\begin{example}
+\begin{ex}
 Vamos calcular a projeção do vetor
 \begin{equation}
 \vec{y} =
@@ -82,7 +82,7 @@ Vamos calcular a projeção do vetor
  24/115 \\ 30/23 \\ 73/115
 \end{bmatrix}. \ \lhd
   \end{align*}
-\end{example}
+\end{ex}
 
 
 Desenvolvemos acima o conceito de projeção ortogonal sobre um subespaço do espaço $\mathbb{R}^3$ de dimensão três apenas pela conveniência da visualização geométrica. Na verdade, o conceito pode ser definido em qualquer dimensão.
@@ -96,7 +96,7 @@ Seja $W \subset \mathbb{R}^n$ um subespaço vetorial de dimensão $k$ e $\{\vec{
 \end{equation} isto é, a projeção $\proj_W \vec{y}$ pertence a $W$ e $\vec{y} - \proj_W \vec{y}$ é ortogonal a todo elemento de $W$, assim como nossa intuição esperaria.
 
 
-\begin{example}
+\begin{ex}
 Calcular a projeção do vetor
 \begin{equation}
 \vec{y} =
@@ -133,7 +133,7 @@ Calcular a projeção do vetor
 \end{bmatrix}.
   \end{align*}
 Confira estas contas com uma calculadora (os coeficientes dos vetores nem sempre são bonitinhos!)
-\end{example}
+\end{ex}
 
 
 
@@ -144,7 +144,7 @@ A projeção ortogonal pode ser utilizada para calcular distâncias entre o pont
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=1\linewidth]{\dir/Semana12/semana12-dist}
+\includegraphics[width=1\linewidth]{Semana12/semana12-dist}
 \end{center}
 \end{figure}
 
@@ -167,13 +167,13 @@ Dado qualquer outro vetor $\vec{w} \in W$, o Teorema de Pitágoras implica que (
 \end{equation} Em outras palavras, $\|\vec{y} - \proj_{W} \vec{y}\|$ é de fato a menor distância entre $P$ e elementos de $W$.
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=1\linewidth]{\dir/Semana12/semana12-dist-justif}
+\includegraphics[width=1\linewidth]{Semana12/semana12-dist-justif}
 \end{center}
 \end{figure}
 \end{proof}
 
 
-\begin{example}
+\begin{ex}
 Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{u}, \vec{v}\}$ (contido em $\mathbb{R}^5$) gerado pelos vetores (que são ortogonais!)
 \begin{equation}
 \vec{u} =
@@ -218,7 +218,7 @@ Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{
 \operatorname{dist} (P,W) & = \|\vec{y} - \proj_{W} \vec{y}\| = \sqrt{\frac{961}{2025} + \frac{256}{25} + \frac{38809}{2025} + \frac{3721}{2025}} = \sqrt{\frac{ 45795 }{2025}} \\
            & = \frac{ \sqrt{45795} }{45} \simeq 4,75. \ \lhd
   \end{align*}
-\end{example}
+\end{ex}
 
 
 
@@ -229,7 +229,7 @@ O \textbf{Processo de Gram--Schmidt} é um algoritmo para obter uma base ortogon
 
 Vamos começar com um exemplo.
 
-\begin{example}
+\begin{ex}
 Consideramos os vetores
 \begin{equation}
 \vec{v}_1 =
@@ -258,7 +258,7 @@ O processo consiste em fixar qualquer um dos vetores como o primeiro dos vetores
 \end{equation} é ortogonal a $\vec{v}_1$, como ilustra a figura.
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.7\linewidth]{\dir/Semana12/semana12-gram1}
+\includegraphics[width=0.7\linewidth]{Semana12/semana12-gram1}
 \end{center}
 \end{figure}
 
@@ -292,7 +292,7 @@ No próximo passo do processo, o terceiro vetor pode ser obtido como
 \end{equation}
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.9\linewidth]{\dir/Semana12/semana12-gram2}
+\includegraphics[width=0.9\linewidth]{Semana12/semana12-gram2}
 \end{center}
 \end{figure}
 
@@ -386,7 +386,7 @@ Observamos também que, fazendo a normalização dos vetores, podemos obter uma 
 -1/\sqrt{3} \\ 1/\sqrt{3} \\ 1/\sqrt{3}
 \end{bmatrix}
 \end{equation} forma um conjunto ortonormal que gera o mesmo espaço vetorial que $\{ \vec{v}_1, \vec{v}_2, \vec{v}_3 \}. \ \lhd$
-\end{example}
+\end{ex}
 
 
 
@@ -434,7 +434,7 @@ Esta parte (obter o conjunto ortogonal) é a mais ``pesada'' do método. Por exe
 
 
 
-\begin{example}\footnote{A matriz $A$ deste exemplo foi retirada de Wikipedia.org \href{https://en.wikipedia.org/w/index.php?title=QR_decomposition&oldid=810854220}{neste} link permanente, em 21 de Novembro de 2017.}
+\begin{ex}\footnote{A matriz $A$ deste exemplo foi retirada de Wikipedia.org \href{https://en.wikipedia.org/w/index.php?title=QR_decomposition&oldid=810854220}{neste} link permanente, em 21 de Novembro de 2017.}
 Vamos obter uma base ortonormal para o espaço coluna $\operatorname{Col} A$ da matriz
 \begin{equation}
 A =
@@ -567,7 +567,7 @@ A =
  -33/35
 \end{bmatrix}. \lhd
 \end{equation}
-\end{example}
+\end{ex}
 
 
 \section{Fatoração QR e matrizes ortogonais}
@@ -665,10 +665,10 @@ Note também que $R$ é invertível, já que sua diagonal principal contém apen
 A construção acima é facilmente generalizada para matrizes quaisquer e nos permite enunciar o seguinte fato
 (lembre que uma matriz ortogonal é uma matriz cujas colunas formam um conjunto ortonormal):
 
-\begin{theorem}
+\begin{teo}
 Qualquer matriz $A$ cujas colunas são linearmente independentes pode ser fatorada na forma $A=QR$, onde $Q$ é uma matriz ortogonal 
 e $R$ é uma matriz triangular superior invertível. Ainda, o espaço coluna das matrizes $A$ e $Q$ é o mesmo, ou seja, as colunas de $Q$ formam uma base ortonormal para o subespaço gerado pelas colunas de $A$.
-\end{theorem} 
+\end{teo} 
 
 Note que a fatoração QR está para o processo de Gram-Schmidt assim como a fatoração LU está para o método de  eliminação gaussiana à forma escada  %\footnote{Preciso escrever sobre a fatoração LU. Acho que seria interessante também mostrar que matrizes ortogonais preservam comprimento e ângulo.}
 
@@ -676,9 +676,9 @@ Bem, vimos que a matriz $Q$ tem como colunas a base ortonormal gerada pelo proce
 
 Usando o seguinte fato surpreendente: 
 
-\begin{theorem}
+\begin{teo}
 Uma matriz ortogonal é sempre invertível e sua inversa é dada pela sua transposta, ou seja $Q^{-1}= Q^T$.
-\end{theorem}
+\end{teo}
 
 \begin{proof}
 A prova deste teorema é uma simples verificação:
@@ -797,7 +797,7 @@ Podemos ver que esta matriz define uma transformação linear no plano que rotac
 Assim, tal transformação preserva comprimento e ângulo entre vetores.
 Estas propriedades não são particulares da matriz de rotação: todas as matrizes ortogonais se comportam da mesma forma. O teorema a seguir traz estas informações e mais algumas.
 
-\begin{theorem}
+\begin{teo}
 	Seja $Q= \begin{bmatrix}
 	\vec{u}_1 & \vec{u}_2 & \cdots & \vec{u}_n
 	\end{bmatrix}$ uma matriz ortogonal de ordem $n \times n$. Então, para quaisquer vetores $\vec{v}$ e $\vec{w}$ em $\mathbb{R}^n$ temos
@@ -806,7 +806,7 @@ Estas propriedades não são particulares da matriz de rotação: todas as matri
 		\item  $\| Q\vec{v} \| = \| \vec{v} \|$
 		\item  o ângulo entre $Q\vec{v}$ e $Q\vec{w}$ é igual ao  ângulo entre $\vec{v}$ e $\vec{w}$
 		\end{enumerate}
-\end{theorem}
+\end{teo}
 
 \begin{proof}
 A prova do primeiro item é consequência direta da linearidade do produto interno e da hipótese das colunas formarem uma base ortonormal: se, na base canônica, temos $\vec{v} = (\alpha_1,..., \alpha_n)$ e $\vec{w} = (\beta_1, ..., \beta_n)$, então
@@ -840,15 +840,15 @@ Outros exemplos de matrizes ortogonais são obtidos por matrizes de reflexão. U
  0 & -1
  \end{bmatrix}.\end{equation}
  
- \begin{exercise}
+ \begin{exer}
 Como é a matriz de ordem $2 \times 2$ que representa uma reflexão com respeito ao eixo vertical?
- \end{exercise}
+ \end{exer}
 
- \begin{exercise}
+ \begin{exer}
 Encontrar uma matriz de ordem $2 \times 2$ que representa uma reflexão com respeito à reta que passa pela origem de equação $ax + b y = 0$.
-\end{exercise}
+\end{exer}
 
-\end{document} 
+%\end{document} 
 
 
 

@@ -1,6 +1,6 @@
 % Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
+%\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
 \providecommand{\dir}{..}
 
@@ -8,9 +8,9 @@
 %%%%%%%%%%%%INICIO DO DOCUMENTO%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+%\begin{document}
 	
-\chapter{Semana 13}
+%\chapter{Semana 13}
 
 
 
@@ -24,7 +24,7 @@ A \vec{x} = \vec{b}
 \end{equation} consiste em encontrar um vetor $\vec{x}$ que satisfaça a esta equação. Na terminologia que construimos ao longo do curso, é equivalente dizer que $\vec{b}$ pertence ao espaço coluna da matriz $A$, isto é, $\vec{b} \in \operatorname{Col} A$. Desta forma, não é possível resolver o sistema quando $\vec{b} \not\in \operatorname{Col} A$. Representamos esta situação na figura abaixo.
 \begin{figure}[h!]
   \begin{center}
-    \includegraphics[width=0.8\linewidth]{\dir/Semana13/semana13-proj-col}
+    \includegraphics[width=0.8\linewidth]{Semana13/semana13-proj-col}
   \end{center}
 \end{figure}
 
@@ -50,7 +50,7 @@ A \vec{x} = \vec{p}.
 \end{equation} como o \textbf{erro da aproximação} ou \textbf{erro  quadrático}. Logo, como anunciado, a soma dos quadrados dos erros obtidos cada componente é o mínimo possível.
 
 
-\begin{example}\label{exp:minquad1}
+\begin{ex}\label{exp:minquad1}
   Considere o sistema linear
   \begin{equation}
   \left\{
@@ -84,7 +84,7 @@ A \vec{x} = \vec{p}.
   \item Calcular a projeção $\vec{p} = \proj_{\operatorname{Col} A} \vec{b}$;
   \item Resolver o sistema linear $A \vec{x} = \vec{p}$.
   \end{itemize} Embora seja possível realizar estes três passos, temos de convir que seria muito trabalhoso. Por isto, vamos analisar um pouco mais da teoria para encontrar um método mais eficaz$. \ \lhd$
-\end{example}
+\end{ex}
 
 Suponhamos que:
 \begin{itemize}
@@ -117,13 +117,13 @@ Concluimos, desta forma, que, se $\vec{x}$ é uma solução de mínimos quadrado
   \boxed{A^T A\vec{x} = A^T \vec{b}.}
 \end{equation}
 
-\begin{exercise}[Teórico]
+ \begin{exer}%[Teórico]
   Justifique que o conjunto de soluções do sistema \eqref{minquad} coincide com o conjunto das soluções de mínimos quadrados do sistema $A \vec{x} = \vec{b}$.
-\end{exercise}
+\end{exer}
 
 Tudo isto implica que podemos utilizar a equação \eqref{minquad} para encontrar as soluções de mínimos quadrados de $A \vec{x} = \vec{b}$. 
 
-\begin{example}[De volta ao Exemplo \ref{exp:minquad1}]\label{exp:minquad2}
+\begin{ex}[De volta ao Exemplo \ref{exp:minquad1}]\label{exp:minquad2}
   Calculamos
   \begin{equation}
   A^T A =
@@ -186,15 +186,15 @@ Tudo isto implica que podemos utilizar a equação \eqref{minquad} para encontra
     3/2 \\ -1/2 \\ 1/4
   \end{bmatrix}.
   \end{equation} Observe como isto é muito menos trabalhoso do que o método que havíamos esquematizado no Exemplo \ref{exp:minquad1}$. \ \lhd$
-\end{example}
+\end{ex}
 
-\begin{exercise}
+\begin{exer}
   Colocar em prática o método discutido no Exemplo \ref{exp:minquad1} e comparar o resultado com o que obtivemos no Exemplo \ref{exp:minquad2}.
-\end{exercise}
+\end{exer}
 
-\begin{remark}
+\begin{obs}
   Caso a matriz $A$ já seja uma matriz ortogonal, podemos calcular projeções diretamente, pois uma base ortogonal para $\operatorname{Col} A$ já esté disponível desde o começo. Neste caso, ambos os métodos exigiriam um trabalho parecido.
-\end{remark}
+\end{obs}
 
 Nossa aproximação linear foi encontrada de modo a minimizar o erro quadrático. Para encontrar o erro, deveríamos calcular
 \begin{equation}
@@ -240,7 +240,7 @@ Vamos apresentar uma aplicação de algumas das técnicas do método de mínimos
 y = a + b x,
 \end{equation} para estimar os valores $(x,y)$ apenas conhecendo alguns valores específicos $(x_1, y_1), (x_2, y_2), \dots,$ $(x_k, y_k)$. A ideia é tentar capturar como que mudanças na variável independente $x$ afetam a variável dependente $y$ (neste caso, supondo que esta dependência é linear).
 
-\begin{example}\footnote{Exemplo adaptado de \url{https://onlinecourses.science.psu.edu/stat501/node/257}}\label{exp:idade}
+\begin{ex}\footnote{Exemplo adaptado de \url{https://onlinecourses.science.psu.edu/stat501/node/257}}\label{exp:idade}
 Com o intuito de analisar se é razoável supor que há um relação linear entre a idade de um motorista e quão longe ele consegue ver, uma empresa (Last Resource, Inc., Bellefonte, PA) coletou dados de 30 motoristas. Para simplificar as nossas contas, vamos listar abaixo \textit{apenas alguns} destes dados.
 \begin{center}
  \begin{tabular}{|c|c|}
@@ -373,11 +373,11 @@ Com o intuito de analisar se é razoável supor que há um relação linear entr
   \end{equation}
   \begin{figure}[h!]
     \begin{center}
-      \includegraphics[width=1\linewidth]{\dir/Semana13/semana13-idade}
+      \includegraphics[width=1\linewidth]{Semana13/semana13-idade}
     \end{center}
   \end{figure}
  Na figura, mostramos um esboço da reta que melhor aproxima os dados deste exemplo$. \ \lhd$
-\end{example}
+\end{ex}
 
 
 
@@ -408,7 +408,7 @@ De uma maneira geral, para encontrar uma \textbf{reta de melhor ajuste} a uma qu
 \end{bmatrix}.
 \end{equation} Vejamos um outro exemplo:
 
-\begin{example}
+\begin{ex}
   Encontrar a reta que melhor se ajusta aos pontos do plano
   \begin{equation}
   (1,2), \ \ (2,3), \ \ (2,4), \ \ (3,2), \ \ (4,3), \ \ (4,4), \ \ (5,3), \ \ (5,5), \ \ (6,4).
@@ -447,10 +447,10 @@ De uma maneira geral, para encontrar uma \textbf{reta de melhor ajuste} a uma qu
   \end{equation} A reta procurada é portanto $y = 0.33 x + 2.16$.
   \begin{figure}[h!]
     \begin{center}
-      \includegraphics[width=0.5\linewidth]{\dir/Semana13/semana13-reta}
+      \includegraphics[width=0.5\linewidth]{Semana13/semana13-reta}
     \end{center}
   \end{figure}
-\end{example}
+\end{ex}
 
 
 \section{Regressão não linear}
@@ -486,7 +486,7 @@ y = a + bx + cx^2
 \end{bmatrix}.
 \end{equation} Vejamos como ficaria a parábola que se ajusta aos dados do Exemplo \ref{exp:idade}:
 
-\begin{example}
+\begin{ex}
   Nossos pontos no Exemplo \ref{exp:idade} são
   \begin{equation}
   (20, 590), \ (32, 410), \ (41, 460), \ (49, 380), \ (66, 350).
@@ -564,7 +564,7 @@ y = a + bx + cx^2
   \end{equation} 
   \begin{figure}[h!]
   	\begin{center}
-  		\includegraphics[width=1\linewidth]{\dir/Semana13/semana13-idade-parabola}
+  		\includegraphics[width=1\linewidth]{Semana13/semana13-idade-parabola}
   	\end{center}
   \end{figure}
   e a parábola desejada é, aproximadamente
@@ -574,7 +574,7 @@ y = a + bx + cx^2
   
 
   \noindent Observamos que, apesar de o erro quadrático ser provavelmente menor neste exemplo, esta parábola se torna crescente a partir de um certo momento, fazendo com que o modelo não seja tão razoável para idades maiores. Por exemplo, é pouco provável que (na média), pessoas com 95 anos vejam a uma distância maior do que pessoas de 65 anos, como sugere a parábola acima.
-\end{example}
+\end{ex}
 
 
 
@@ -614,7 +614,7 @@ z = a + b x + c y,
 
 
 
-\begin{example}
+\begin{ex}
   Uma pesquisa com $214$ mulheres em uma universidade americana\footnote{Referência: \verb"\url{https://onlinecourses.science.psu.edu/stat501/node/292}"} coletou informações sobre a altura das participantes, assim como a altura de seus pais. Abaixo, listamos \textit{apenas alguns destes dados}, para que nossas contas não fiquem tão extensas. Fizemos também uma mudança de unidades nas alturas (de polegadas) para centímetros,
   \begin{center}
     \begin{tabular}{|c|c|c|}
@@ -717,10 +717,10 @@ z = a + b x + c y,
   \end{equation} Tente calcular sua altura $z$ a partir da altura de sua mãe $x$ e de seu pai $y$. O teste deve funcionar melhor para mulheres! Além disso, a aproximação linear deve ser melhor utilizando mais dados nos cálculos.
   \begin{figure}[h!]
     \begin{center}
-      \includegraphics[width=1\linewidth]{\dir/Semana13/semana13-alturas}
+      \includegraphics[width=1\linewidth]{Semana13/semana13-alturas}
     \end{center}
   \end{figure}
-\end{example}
+\end{ex}
 
 \section{Fatoração QR e Mínimos Quadrados}
 
@@ -741,11 +741,11 @@ Assim as equações normais $A^T A \vec{x} = A^T \vec{b}$ se reduzem a
 \begin{equation} R^T R \vec{x} = R^T Q^T \vec{b}.\end{equation}
 Ainda, como $R$ é invertível podemos eliminar (cancelar) $R^T$ na equação acima, %ficando com a seguinte expressão para a solução em mínimos quadrados
 obtendo o seguinte:
-\begin{theorem}
+\begin{teo}
 	Se $A=QR$ com $Q$ ortogonal e $R$ triangular superior invertível, então 
 	a solução em mínimos quadrados do sistema $A\vec{x}= \vec{b}$ é única e dada pela solução do sistema
 	\begin{equation}  R \vec{x} =  Q^T \vec{b}.\end{equation}
-\end{theorem}
+\end{teo}
 
 Note que o fato de $R$ ser triangular superior torna a resolução do sistema acima pouco custosa do ponto de vista computacional. Alternativamente, temos uma expressão explícita para solução em mínimos quadrados: \begin{equation}   \vec{x} = R^{-1} Q^T \vec{b}.\end{equation}
 
@@ -755,4 +755,4 @@ Note que o fato de $R$ ser triangular superior torna a resolução do sistema ac
 
 
 
-\end{document} 
+%\end{document} 

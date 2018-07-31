@@ -1,6 +1,6 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
+%\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
 %define o diretório principal
 \providecommand{\dir}{..}
@@ -9,7 +9,7 @@
 %%%%%%%%%%%%INICIO DO DOCUMENTO%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+%\begin{document}
 
 \chapter{Semanas 6 e 7}
 
@@ -31,7 +31,7 @@ Uma \textbf{base} para um espaço vetorial $V$ é um conjunto $\mathcal{B}$ que:
 \end{enumerate}
 
 
-\begin{example}
+\begin{ex}
 	$\mathbb{R}^n$ é um espaço vetorial sobre $\mathbb{R}$. Vimos anteriormente que os vetores
 	\begin{equation}
 	\vec{e}_1 =
@@ -95,7 +95,7 @@ Uma \textbf{base} para um espaço vetorial $V$ é um conjunto $\mathcal{B}$ que:
 	\end{array}
 	\right] = x_1 \vec{e}_1 + x_2 \vec{e}_2 + \cdots + x_n \vec{e}_n.
 	\end{equation} Portanto, o conjunto de $n$ elementos $\{\vec{e}_1, \vec{e}_2, \dots, \vec{e}_n\}$ é uma base de $\mathbb{R}^n$.
-\end{example}
+\end{ex}
 
 
 
@@ -194,7 +194,7 @@ x_d \\
 \right].
 \end{equation}
 
-\begin{example}
+\begin{ex}
 	O conjunto
 	\begin{equation}
 	\mathcal{P}_3 (\mathbb{R}) = \big\{ p(x) = a_3 x^3 + a_2 x^2 + a_1 x + a_0 \text{ tais que } a_0, a_1, a_2, a_3 \in \mathbb{R} \big\}
@@ -229,10 +229,10 @@ x_d \\
 	\end{array}
 	\right].
 	\end{equation} Nota que a ordem que escrevemos os elementos de uma base altera as representações $[p]_{\mathcal{B}}$ e $[q]_{\mathcal{B}}$.
-\end{example}
+\end{ex}
 
 
-\begin{example}
+\begin{ex}
 	Em um curso de equações diferenciais, se aprende que o conjunto de todas as soluções de uma equação linear de segunda ordem da forma
 	\begin{equation}
 	y''(t) + f(x) y'(x) + g(x) y(x) = 0
@@ -243,7 +243,7 @@ x_d \\
 	\begin{equation}
 	y(x) \text{ é solução de \eqref{eqn:edo} } \iff y(x) = C_1 e^{2x} + C_2 e^{-x}, \ \text{ para algumas constantes } C_1, C_2 \in \mathbb{R}.
 	\end{equation}
-\end{example}
+\end{ex}
 
 
 \subsection{Espaço nulo}
@@ -253,7 +253,7 @@ Vimos que o espaço nulo (núcleo) de uma matriz $A$ de ordem $m \times n$ é o 
 \operatorname{Nul} A = \big\{ \vec{x} \in \mathbb{R}^n \, | \, A\vec{x} = \vec{0}  \big\}.
 \end{equation} Nas notas da semana passada, vimos também o seguinte exemplo:
 
-\begin{example}
+\begin{ex}
 	Encontrar uma base para o espaço nulo da matriz
 	\begin{equation}
 	A = \left[
@@ -340,7 +340,7 @@ Vimos que o espaço nulo (núcleo) de uma matriz $A$ de ordem $m \times n$ é o 
 	\right]
 	\right\}.
 	\end{equation} Já que estes vetores são LI, temos uma base para $\operatorname{Nul} A. \ \lhd$
-\end{example}
+\end{ex}
 
 É sempre possível obter uma base para $\operatorname{Nul} A$ desta forma. Enfatizamos esta propriedade abaixo:
 
@@ -380,7 +380,7 @@ A =
 \end{equation}
 
 
-\begin{example}
+\begin{ex}
 	Encontrar uma base para o espaço coluna da matriz
 	\begin{equation}
 	A = \left[
@@ -426,7 +426,7 @@ A =
 	\right]
 	\right\}.
 	\end{equation}
-\end{example}
+\end{ex}
 
 
 
@@ -454,30 +454,30 @@ Nas seções anteriores, vimos que
 \operatorname{dim} \operatorname{Nul} A = \text{ número de variáveis livres do sistema homogêneo associado}.
 \end{equation} Ora, mas ou uma coluna é pivô ou sua variável associada pode ser considerada uma variável livre, de modo que temos o
 
-\begin{theorem}[Teorema do núcleo e da imagem]
+\begin{teo}[Teorema do núcleo e da imagem]
 	Para qualquer matriz $A$ de ordem $m\times n$, temos
 	\begin{equation}
 	\boxed{\operatorname{dim} \operatorname{Col} A + \operatorname{dim} \operatorname{Nul} A = n = \text{ número de colunas de } A.}
 	\end{equation}
-\end{theorem}
+\end{teo}
 
-\begin{remark}
+\begin{obs}
 	A dimensão do espaço coluna de $A$ ou, o que é a mesma coisa, dimensão da imagem da transformação linear $\vec{x} \mapsto A\vec{x}$, é também conhecida na literatura como o \textbf{posto de} $A$. Assim, o Teorema do núcleo e da imagem pode ser reenunciado como: Se $A$ é uma matriz $m\times n$, então
 	\begin{equation}
 	\operatorname{posto} A + \operatorname{dim} \operatorname{Nul} A = n.
 	\end{equation}
-\end{remark}
+\end{obs}
 
-\begin{remark}
+\begin{obs}
 	O teorema afirma que há uma relação entre as dimensões dos espaços coluna e nulo. No entanto, não esqueça que estes são subespaços de universos diferentes! Temos 
 	\begin{equation}
 	\operatorname{Nul} A \subseteq \mathbb{R}^n \text{ enquanto que } \operatorname{Col} A \subseteq \mathbb{R}^m.
 	\end{equation}
-\end{remark}
+\end{obs}
 
 Apesar da conclusão do teorema parecer simples, é muito útil na análise de sistemas lineares.
 
-\begin{example}
+\begin{ex}
 	Todo sistema linear de ordem $5 \times 9$ deve possuir um espaço nulo de dimensão $4$ ou mais. De fato, como a matriz associada tem apenas cinco linhas, pode ter no máximo $5$ posições de pivô, de modo que
 	\begin{equation}
 	\operatorname{dim} \operatorname{Col} A \le 5.
@@ -485,7 +485,7 @@ Apesar da conclusão do teorema parecer simples, é muito útil na análise de s
 	\begin{equation}
 	\operatorname{dim} \operatorname{Nul} A = 9 - \operatorname{dim} \operatorname{Col} A \ge 9 - 5 = 4.
 	\end{equation} Desta forma, se resolvermos um sistema homogêneo desta ordem e encontrarmos um conjunto solução de dimensão 3, certamente  há algum um erro nas contas!
-\end{example}
+\end{ex}
 
 
 
@@ -573,7 +573,7 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 [\vec{x}]_{\mathcal{B}} = A^{-1} \cdot \vec{x}.
 \end{equation} (Notamos que a matriz $A$ é necessariamente invertível, já que suas colunas são elementos de uma base; em particular, são linearmente independentes).
 
-\begin{example}
+\begin{ex}
 	Consideramos a seguinte base para $\mathbb{R}^2$:
 	\begin{equation}
 	\mathcal{B} = \left\{ 
@@ -654,10 +654,10 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 	\end{array}
 	\right].
 	\end{equation}
-\end{example}
+\end{ex}
 
 
-\begin{remark}
+\begin{obs}
 	A matriz de mudança de coordenadas é uma forma de trocar de uma base para outra de forma sistemática. Com o intuito de tornar mais intuitiva a construção, vamos repetir a argumentação que fizemos no início desta seção para o caso $2\times 2$. Na base $\mathcal{B}$ do exemplo anterior, a representação
 	\begin{equation}
 	\left[
@@ -747,7 +747,7 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 	\end{array}
 	\right].
 	\end{equation}
-\end{remark}
+\end{obs}
 
 \subsection*{Exercícios resolvidos}
 
@@ -761,4 +761,4 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 
 \construirExer
 
-\end{document} 
+%\end{document} 

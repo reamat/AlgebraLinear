@@ -1,6 +1,6 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
+%\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
 %define o diretório principal
 \providecommand{\dir}{..}
@@ -9,7 +9,7 @@
 %%%%%%%%%%%%INICIO DO DOCUMENTO%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+%\begin{document}
 
 \chapter{Semana 2}
 
@@ -24,7 +24,7 @@ Um \textbf{vetor} no espaço tridimensional é um objeto com magnitude, direçã
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.3\linewidth]{\dir/Semana02/semana02-vetor}
+\includegraphics[width=0.3\linewidth]{Semana02/semana02-vetor}
 \end{center}
 \end{figure}
 
@@ -72,7 +72,7 @@ Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referê
 
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.2\linewidth]{\dir/Semana02/semana02-coord}
+\includegraphics[width=0.2\linewidth]{Semana02/semana02-coord}
 \end{center}
 \end{figure}
 
@@ -120,7 +120,7 @@ O conjunto de todos os vetores com três componentes como acima é chamado de $\
 \end{equation} Geometricamente, isto pode ser interpretado como segue:
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.3\linewidth]{\dir/Semana02/semana02-soma}
+\includegraphics[width=0.3\linewidth]{Semana02/semana02-soma}
 \end{center}
 \end{figure}
 
@@ -137,7 +137,7 @@ k \vec{v} :=
 \end{equation} Geometricamente,
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.3\linewidth]{\dir/Semana02/semana02-escalar}
+\includegraphics[width=0.3\linewidth]{Semana02/semana02-escalar}
 \end{center}
 \end{figure}
 
@@ -277,7 +277,7 @@ Na linguagem da seção anterior, nós dizemos que dois vetores são iguais quan
 
 
 
-\begin{example}\label{example1}
+\begin{ex}\label{example1}
 O sistema, que já apareceu nas notas da semana anterior
 \begin{equation}
 \left\{
@@ -319,7 +319,7 @@ A = \left[
   \begin{array}{ccc}
     1 &  2 & 1  \\
     1 & -3 & 5  \\
-    2 & -1 & 3  \\
+    2 & -1 & 3  
   \end{array}
 \right], \quad
 \vec{x} = \left[
@@ -337,7 +337,7 @@ A = \left[
   \end{array}
 \right].
 \end{equation} Chegamos a esta conclusão colocando os coeficientes da primeira variável $x_1$ na primeira coluna, os coeficientes da segunda variável $x_2$ na segunda coluna e os coeficientes da terceira variável $x_3$ na terceira coluna$. \ \lhd$
-\end{example}
+\end{ex}
 
 
 Mais geralmente, uma matriz do tipo $m\times n$ (leia-se ``$m$ por $n$'') é uma matriz com $m$ linhas e $n$ colunas:
@@ -356,7 +356,7 @@ a_{m1}&a_{m2}&\cdots &a_{mn}
   a_{11}&a_{12}&\cdots &a_{1n}\\
   a_{21}&a_{22}&\cdots &a_{2n}\\
   \vdots &\vdots &\ddots &\vdots \\
-  a_{m1}&a_{m2}&\cdots &a_{mn} \\
+  a_{m1}&a_{m2}&\cdots &a_{mn}
 \end{array}
 \right]
 \left[
@@ -382,7 +382,7 @@ a_{m1}&a_{m2}&\cdots &a_{mn}
   a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n =  b_1 \\
   a_{21} x_1 + a_{22} x_2 + \cdots + a_{2n} x_n =  b_2 \\
     \vdots \\
-  a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n =  b_m \\
+  a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n =  b_m 
 \end{array}
 \right.
 \end{equation}
@@ -500,7 +500,7 @@ Escreva o sistema de equações abaixo na sua forma matricial.
     2x_1 - 4x_2 + 6x_3 = 10 \\
     -3x_1 + x_2 - x_3 = 12 \\
     2x_1 - 3x_2 + 8x_3 = 5
-  \end{array}
+  \end{array}\right.
 \end{equation}
 \end{exeresol}
 \begin{resol}
@@ -545,7 +545,7 @@ Uma \textbf{combinação linear} dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{
 \end{equation} onde $x_1, x_2, \dots, x_k$ são números reais. Em outras palavras, uma combinação linear é uma soma de múltiplos dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$.
 
 
-\begin{example}
+\begin{ex}
 Para os vetores
 \begin{equation}
 \vec{v}_1 = \left[
@@ -613,15 +613,15 @@ Para os vetores
 Vamos ilustrar este fato na figura abaixo.
 \begin{figure}[h!]
 \begin{center}
-\includegraphics[width=0.4\linewidth]{\dir/Semana02/semana02-comblinear1}
-\includegraphics[width=0.4\linewidth]{\dir/Semana02/semana02-comblinear3}
+\includegraphics[width=0.4\linewidth]{Semana02/semana02-comblinear1}
+\includegraphics[width=0.4\linewidth]{Semana02/semana02-comblinear3}
 \end{center}
 \end{figure}
 Por exemplo, para representar o vetor $\vec{v}$ como combinação linear de $\vec{v}_1$ e $\vec{v}_2$, podemos traçar retas paralelas aos vetores, passando pela origem e pela extremidade do vetor $\vec{v}$, como na figura da direita. Assim, pela interpretação geométrica da soma de vetores (ver início deste capítulo), sabemos que $\vec{v}$ é a soma dos vetores em azul. Mas estes, por construção, são colineares aos vetores iniciais e logo múltiplos destes. Concluimos que
 \begin{equation}
 \vec{v} = \alpha \vec{v}_1 + \beta \vec{v}_2,
 \end{equation} isto é, $\vec{v}$ é uma combinação linear de $\vec{v}_1$ e $\vec{v}_2$. $\ \lhd$
-\end{example}
+\end{ex}
 
 
 
@@ -1030,7 +1030,7 @@ ou ainda
 Desta forma, tudo o que já vimos sobre existência de soluções para sistemas lineares pode ser ``traduzido'' para o contexto de combinações lineares e espaços gerados (faça as traduções!).
 
 
-\begin{example}
+\begin{ex}
 Considere o sistema linear do Exemplo \ref{example1}:
 \begin{equation}
 \left\{
@@ -1112,7 +1112,7 @@ x_1
 Esta maneira de representar o sistema é favorável para descrições geométricas, pois já vimos como interpretar geometricamente combinações lineares de vetores. Também será interessante futuramente no curso quando a imagem de transformações lineares.
 \end{enumerate}  O entendimento dessas interpretações diferentes facilita (e muito!) o entendimento de vários conceitos que veremos mais adiante no nosso curso de Álgebra Linear.
 % É importante que saibamos passar de uma representação para outra sem dificuldades.
-\end{example}
+\end{ex}
 
 \subsection*{Exercícios resolvidos}
 
@@ -1126,4 +1126,4 @@ Esta maneira de representar o sistema é favorável para descrições geométric
 
 \construirExer
 
-\end{document} 
+%\end{document} 

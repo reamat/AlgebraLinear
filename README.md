@@ -42,11 +42,11 @@ O código LaTeX está testado em computador [Linux](https://pt.wikipedia.org/wik
 
     $ make
 
-Isto gera o livro em formato PDF (main.pdf). Alguma vezes a compilação pode gerar erros devido a incompatibilidade com antigos arquivos temporários. Para limpar os arquivos temporários gerados durante a compilação, digite:
+Isto gera o livro em formato PDF (livro.pdf). Alguma vezes a compilação pode gerar erros devido a incompatibilidade com antigos arquivos temporários. Para limpar os arquivos temporários gerados durante a compilação, digite:
 
     $ make clean
 
-Alternativamente, o livro pode ser compilado com os comandos usuais `latex main`, `bibtex main`, `pdflatex main`, `makeindex main`. Lembrando que `main.tex` é o arquivo LaTeX principal.
+Alternativamente, o livro pode ser compilado com os comandos usuais `latex livro`, `bibtex livro`, `pdflatex livro`, `makeindex livro`. Lembrando que `livro.tex` é o arquivo LaTeX principal.
 
 #### Formato HTML
 
@@ -64,6 +64,6 @@ Em primeiro lugar, deve-se editar o arquivo de configuração `config.knd`. Este
 
 Por fim, o livro pode ser compilado com a seguinte sequência de comandos:
 
-    pdflatex main
-    pdflatex main
-    pdflatex main
+    pdflatex livro
+    pdflatex livro
+    pdflatex livro

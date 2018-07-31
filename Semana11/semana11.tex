@@ -1,6 +1,6 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
+%\documentclass[../livro.tex]{subfiles}  %%DM%%Escolher document class and options article, etc
 
 %define o diretório principal
 \providecommand{\dir}{..}
@@ -9,7 +9,7 @@
 %%%%%%%%%%%%INICIO DO DOCUMENTO%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{document}
+%\begin{document}
 
 \chapter{Semana 11}
 
@@ -32,7 +32,7 @@ v_1 \\ v_2 \\ v_3
 
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.3\linewidth]{\dir/Semana11/semana11-coord}
+		\includegraphics[width=0.3\linewidth]{Semana11/semana11-coord}
 	\end{center}
 \end{figure}
 
@@ -54,7 +54,7 @@ O \textbf{produto escalar} ou \textbf{produto interno} entre dois vetores $\vec{
 \end{equation} onde $\theta$ é o ângulo entre $\vec{v}$ e $\vec{w}$. 
 
 	\begin{center}
-		\includegraphics[width=0.7\linewidth]{\dir/Semana11/semana11-cossenos}
+		\includegraphics[width=0.7\linewidth]{Semana11/semana11-cossenos}
 	\end{center}
 
 \noindent Escrevendo estes comprimentos em termos das coordenadas e fazendo os cancelamentos necessários, chegamos na seguinte identidade:
@@ -80,7 +80,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 \cos \theta = \frac{\vec{x} \cdot \vec{y}}{\|\vec{x}\| \|\vec{y}\|}.
 \end{equation} Embora abstratos, estes conceitos são bem fundamentados geometricamente. Dois vetores (linearmente independentes) de um espaço vetorial $n$-dimensional geram um subespaço vetorial de dimensão $2$. Este pode, por sua vez, pode ser pensado como um plano que passa pela origem de $\mathbb{R}^n$. Assim, podemos imaginar o ângulo entre estes vetores naturalmente.
 
-\begin{proposition}[Principais propriedades do produto escalar]
+\begin{prop}[Principais propriedades do produto escalar]
 	Para $\vec{x}, \vec{y}, \vec{z} \in \mathbb{R}^n$ e $c \in \mathbb{R}$ um escalar, temos as seguintes propriedades
 	\begin{enumerate}
 		\item  $\vec{x} \cdot \vec{y} = \vec{y} \cdot \vec{x}$
@@ -90,11 +90,11 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 		\item  $\|\vec{x}\| = \sqrt{\vec{x} \cdot \vec{x}}$;
 		\item  $\| c \vec{x} \| =  |c| \| \vec{x} \|$.
 	\end{enumerate}
-\end{proposition}
+\end{prop}
 
 Estas propriedades são todas de fácil verificação (e são deixadas para o leitor verificar, como exercício).
 
-\begin{example}
+\begin{ex}
 	Considere os vetores de $\mathbb{R}^5$ escritos na base canônica:
 	\begin{equation}
 	\vec{x} =
@@ -114,9 +114,9 @@ Estas propriedades são todas de fácil verificação (e são deixadas para o le
 	\begin{equation}
 	\cos \theta = \frac{\vec{x} \cdot \vec{y}}{\|\vec{x}\| \|\vec{y}\|} = \frac{-31}{\sqrt{15} \, \sqrt{148}} \simeq -0,65794 \implies  \theta \simeq 2,28887634 \textrm{ radianos} \simeq 131,12^{\text{o}}. \ \lhd
 	\end{equation}
-\end{example}
+\end{ex}
 
-\begin{example}
+\begin{ex}
 	Considere um vetor tridimensional
 	\begin{equation}
 	\vec{u} =
@@ -133,7 +133,7 @@ Estas propriedades são todas de fácil verificação (e são deixadas para o le
 	2/\sqrt{14} \\ 3/\sqrt{14} \\ -1/\sqrt{14}
 	\end{bmatrix}
 	\end{equation} é o vetor procurado. Este processo de obter um vetor unitário na mesma direção de um vetor previamente fixado é chamado de \textbf{normalização}. Observe que existem apenas dois vetores unitários na mesma direção de $\vec{u}$, a saber, $\vec{v}$ e $- \vec{v}. \ \lhd$
-\end{example}
+\end{ex}
 
 \subsection*{Exercícios resolvidos}
 
@@ -162,7 +162,7 @@ Se, além de o conjunto ser ortogonal, todos os seus elementos serem unitários 
 	0, \text{ se } i \neq j
 	\end{array} \right. . \end{equation} Em notação matricial, $I_k = (\delta_{ij})$ é a matriz identidade. Nesta notação, podemos dizer, mais sucintamente, que um conjunto $\{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k\}$ é ortonormal se $\vec{v}_i \cdot \vec{v}_j = \delta_{ij}$ para quaisquer $i,j = 1, 2, 3, \dots, k$.}
 
-\begin{example}
+\begin{ex}
 	Os vetores
 	\begin{equation}
 	\vec{x} = \begin{bmatrix}
@@ -180,11 +180,11 @@ Se, além de o conjunto ser ortogonal, todos os seus elementos serem unitários 
 	2 \\ 1
 	\end{bmatrix}
 	\end{equation} não são ortogonais, já que $\vec{w} \cdot \vec{z} = 1\cdot 2 + 2 \cdot 1 = 4$. Nestes casos, podemos dizer que o conjunto $\{\vec{x}, \vec{y}\}$ é um conjunto ortogonal enquanto $\{\vec{w}, \vec{z}\}$ não é.
-\end{example}
+\end{ex}
 
 
 
-\begin{example}
+\begin{ex}
 	A base canônica do espaço $\mathbb{R}^n$:
 	\begin{equation}
 	\vec{e}_1 =
@@ -210,16 +210,16 @@ Se, além de o conjunto ser ortogonal, todos os seus elementos serem unitários 
 	\begin{equation}
 	\| \vec{e}_i\|  = \sqrt{0^2 + 0^2 + \cdots + 1^2 + \cdots + 0^2 + 0^2} = 1. \ \lhd
 	\end{equation}
-\end{example}
+\end{ex}
 
 Uma primeira propriedade de ortogonalidade é uma versão para espaços vetoriais quaisquer do Teorema de Pitágoras, que aparece naturamente ao considerarmos vetores ortogonais.
 
-\begin{theorem}[Teorema de Pitágoras]
+\begin{teo}[Teorema de Pitágoras]
 	Se dois vetores $\vec{x}$ e $\vec{y}$ são ortogonais, então
 	\begin{equation}
 	\|\vec{x} + \vec{y}\|^2 = \|\vec{x}\|^2 + \|\vec{y}\|^2.
 	\end{equation}
-\end{theorem}
+\end{teo}
 
 \begin{proof}
 	Esperamos que esta demonstração auxilie no compreendimento analítico e geométrico dos conceitos que introduzimos até agora. O vetor $\vec{x} + \vec{y} \,$ pode ser considerado a hipotenusa do triângulo retângulo de catetos $\vec{x}$ e $\vec{y}$ (fazer uma figura!).
@@ -236,9 +236,9 @@ Uma primeira propriedade de ortogonalidade é uma versão para espaços vetoriai
 
 Notamos que, de acordo com a nossa definição, o vetor nulo é ortogonal a qualquer outro. Vejamos, no entanto, que vetores não nulos satisfazem propriedades adicionais.
 
-\begin{theorem}
+\begin{teo}
 	Todo conjunto ortogonal $\{\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k\}$ formado por vetores \textit{não nulos} é um conjunto linearmente independente (LI).
-\end{theorem}
+\end{teo}
 
 \begin{proof}
 	Considerando uma combinação linear
@@ -253,7 +253,7 @@ Notamos que, de acordo com a nossa definição, o vetor nulo é ortogonal a qual
 	\end{equation} Isto é a definição de um conjunto ser LI: qualquer combinação linear que resulte no vetor nulo deve ter todos os coeficientes nulos.
 \end{proof}
 
-\begin{example}
+\begin{ex}
 O conjunto 
 \begin{equation}
 \left\lbrace 
@@ -277,12 +277,12 @@ O conjunto
 \end{split} 
 \end{equation}
 Logo, pelo teorema acima, o conjunto $\{\vec{u}_1, \vec{u}_2,\vec{u}_3\}$ é linearmente independente. Neste exemplo, são todos elementos de $\mathbb{R}^3$; portanto, formam uma base para $\mathbb{R}^3$ que é também ortogonal (voltaremos a falar sobre bases ortogonais em breve)$. \ \lhd$
-\end{example}
+\end{ex}
 
 Uma das aplicações mais importantes do produto escalar reside no fato de nós conseguirmos fazer projeções ortogonais em direções fixadas. Por exemplo, suponhamos que em um sistema físico, um vetor $\vec{v}$ representa a força aplicada em um ponto, como na figura abaixo.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=1\linewidth]{\dir/Semana11/semana11-proj}
+		\includegraphics[width=1\linewidth]{Semana11/semana11-proj}
 	\end{center}
 \end{figure} Gostaríamos de encontrar a componente do vetor na direção da reta tracejada. Para isto, podemos considerar um vetor \textit{unitário} $\vec{u}$ sobre a reta. Assim, a componente de $\vec{v}$ na direção de $\vec{u}$ é igual a $k \vec{u}$, onde $k$ tem a ver com o cosseno do ângulo entre os vetores:
 \begin{equation}
@@ -298,7 +298,7 @@ k = \|\vec{v}\| \cos \theta = \|\vec{u}\| \|\vec{v}\| \cos \theta = \vec{u} \cdo
 \boxed{\proj_{\vec{u}} \vec{v} = \bigg( \frac{\vec{u}}{\|\vec{u}\|} \cdot \vec{v} \bigg) \, \frac{\vec{u}}{\|\vec{u}\|} = \frac{\vec{u} \cdot \vec{v}}{\|\vec{u}\|^2} \, \vec{u} = \frac{\vec{u} \cdot \vec{v}}{\vec{u} \cdot \vec{u}} \, \vec{u}.}
 \end{equation}
 
-\begin{example}\label{canon}
+\begin{ex}\label{canon}
 	Considere vetores no espaço de quatro dimensões $\mathbb{R}^4$. Vamos determinar a projeção do vetor $\vec{v} =
 	\begin{bmatrix}
 	1 \\ -1 \\ 3 \\ 4
@@ -330,18 +330,18 @@ k = \|\vec{v}\| \cos \theta = \|\vec{u}\| \|\vec{v}\| \cos \theta = \vec{u} \cdo
 	\begin{equation}
 	\vec{v} = \big( \vec{v} \cdot \vec{e}_1 \big) \vec{e}_1 + \big( \vec{v} \cdot \vec{e}_2 \big) \vec{e}_2  + \big( \vec{v} \cdot \vec{e}_3 \big) \vec{e}_3  + \big( \vec{v} \cdot \vec{e}_4 \big) \vec{e}_4.
 	\end{equation} Este tipo de represetação será explorado com mais detalhes na próxima seção$. \ \lhd$
-\end{example}
+\end{ex}
 
 As projeções ortogonais também podem ser utilizadas para o cálculo de distâncias de ponto à retas que passam pela origem: Pela interpretação geométrica da subtração de vetores, obtemos um vetor perpendicular à reta com a direção de $\vec{u}$ e que termina onde termina o vetor $\vec{v}$ (ver figura).
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=1\linewidth]{\dir/Semana11/semana11-dist}
+		\includegraphics[width=1\linewidth]{Semana11/semana11-dist}
 	\end{center}
 \end{figure}
 
 \noindent Desta maneira, o comprimento deste vetor, a saber $\|\vec{u} - \proj_{\vec{u}} \vec{v}\|$, é a distância procurada.\footnote{Lembre: a distância de um ponto a uma reta é a menor distância entre este ponto e os pontos da reta; por esta razão que procuramos um vetor perpendicular à reta.}
 
-\begin{example}
+\begin{ex}
 	Calcular a distância do ponto $P = (0,2,3)$ e a reta que passa pela origem e tem a direção do vetor $\vec{u} =
 	\begin{bmatrix}
 	1 \\ 2 \\1
@@ -367,11 +367,11 @@ As projeções ortogonais também podem ser utilizadas para o cálculo de distâ
 	\begin{equation}
 	d = \|\vec{u} - \proj_{\vec{u}} \vec{v}\| = \frac{\sqrt{49 + 1 + 121}}{6} = \frac{\sqrt{171}}{6} \simeq 2,18.
 	\end{equation}
-\end{example}
+\end{ex}
 
-\begin{exercise}
+\begin{exer}
 	Como poderíamos fazer se a reta não passasse pela origem? O mesmo raciocínio funciona?
-\end{exercise}
+\end{exer}
 
 \subsection*{Exercícios resolvidos}
 
@@ -386,16 +386,16 @@ As projeções ortogonais também podem ser utilizadas para o cálculo de distâ
 
 Vimos que uma das importâncias do produto escalar é estender o conceito de ortogonalidade para espaços vetoriais mais gerais. A ortogonalidade traz consigo a noção de projeção ortogonal. Agora vamos ver algumas vantagens em se considerar bases de espaços vetoriais que são também conjuntos ortogonais; estas são conhecidas como \textbf{bases ortogonais}.
 
-\begin{example}\label{ortonormal}
+\begin{ex}\label{ortonormal}
 	A base canônica de $\mathbb{R}^n$ forma um conjunto ortogonal e é, portanto, uma base ortogonal. Assim como no Exemplo \ref{canon}, é possível representar qualquer vetor $\vec{v}$ como
 	\begin{equation}
 	\vec{v} = \big( \vec{v} \cdot \vec{e}_1 \big) \vec{e}_1 + \big( \vec{v} \cdot \vec{e}_2 \big) \vec{e}_2  + \cdots  + \big( \vec{v} \cdot \vec{e}_n \big) \vec{e}_n.
 	\end{equation}
-\end{example}
+\end{ex}
 
 Vejamos que esta propriedade da base canônica é, na realidade, uma propriedade de todas as bases ortogonais:
 
-\begin{theorem}\label{thm:base-ortogonal}
+\begin{teo}\label{thm:base-ortogonal}
 	Seja $\mathcal{B} = \{ \vec{v}_1, \vec{v}_2, \cdots, \vec{v}_n\}$ uma base ortogonal de $\mathbb{R}^n$. Então qualquer vetor $\vec{v} \in \mathbb{R}^n$ pode ser representado como
 	\begin{equation}
 	\vec{v} = \frac{\vec{v} \cdot \vec{v}_1}{\vec{v}_1 \cdot \vec{v}_1} \, \vec{v}_1 + \frac{\vec{v} \cdot \vec{v}_2}{\vec{v}_2 \cdot \vec{v}_2} \, \vec{v}_2  + \cdots  + \frac{\vec{v} \cdot \vec{v}_n}{\vec{v}_n \cdot \vec{v}_n} \, \vec{v}_n.
@@ -403,7 +403,7 @@ Vejamos que esta propriedade da base canônica é, na realidade, uma propriedade
 	\begin{equation}
 	\vec{v} = \proj_{\vec{v}_1} \vec{v} +  \proj_{\vec{v}_2} \vec{v}  + \cdots  + \proj_{\vec{v}_n} \vec{v}.
 	\end{equation}
-\end{theorem}
+\end{teo}
 
 Este resultado mostra que bases ortogonais são especiais e boas de trabalhar. Lembra que anteriormente, para encontrar os coeficientes de um vetor em uma base, tínhamos que encontrar $c_1, c_2, \cdots, c_n$ resolvendo o sistema linear cuja forma vetorial é
 \begin{equation}
@@ -426,7 +426,7 @@ c_j = \frac{\vec{v} \cdot \vec{v}_j}{\vec{v}_j \cdot \vec{v}_j}.
 	\end{equation}
 \end{proof}
 
-\begin{example}
+\begin{ex}
 	Vamos justificar que os vetores
 	\begin{equation}
 	\vec{u} =
@@ -451,7 +451,7 @@ c_j = \frac{\vec{v} \cdot \vec{v}_j}{\vec{v}_j \cdot \vec{v}_j}.
 	\begin{equation}
 	\vec{x} = \frac{\vec{x} \cdot \vec{u}}{\vec{u} \cdot \vec{u}} \, \vec{u} + \frac{\vec{x} \cdot \vec{v}}{\vec{v} \cdot \vec{v}} \, \vec{v} = \frac{-6}{20} \, \vec{u} + \frac{-16}{5} \, \vec{v} = -0.3 \, \vec{u} -3.2 \, \vec{v}. \ \lhd
 	\end{equation}
-\end{example}
+\end{ex}
 
 
 Observe no exemplo acima que é muito mais fácil obter as componentes por ortogonalidade do que resolver sistemas lineares. Isto mesmo em dimensão baixa! Imagine se fosse um sistema $5\times 5$ ou ainda maior.
@@ -465,7 +465,7 @@ Note que a base canônica, como no Exemplo \ref{ortonormal}, tem a propriedade a
 \vec{v} = \big( \vec{v} \cdot \vec{v}_1 \big) \vec{v}_1 + \big( \vec{v} \cdot \vec{v}_2 \big) \vec{v}_2  + \cdots + \big( \vec{v} \cdot \vec{v}_n \big) \vec{v}_n.
 \end{equation}
 
-\begin{example}
+\begin{ex}
 	Os vetores
 	\begin{equation}
 	\vec{u} =
@@ -496,13 +496,13 @@ Note que a base canônica, como no Exemplo \ref{ortonormal}, tem a propriedade a
 	0 \\ \sqrt{2}/2 \\ - \sqrt{2}/2
 	\end{bmatrix}.
 	\end{equation}
-\end{example}
+\end{ex}
 
 
 Observamos finalmente que bases ortogonais podem ser facilmente transformadas em bases ortonormais pelo processo de normalização.
 
 
-\begin{example}
+\begin{ex}
 	Os vetores 
 	\begin{equation}
 	\vec{u} =
@@ -550,7 +550,7 @@ Observamos finalmente que bases ortogonais podem ser facilmente transformadas em
 	1/\sqrt{6} \\ -2/\sqrt{6} \\ 1/\sqrt{6}
 	\end{bmatrix}
 	\end{equation} formam um base ortonormal de $\mathbb{R}^3. \ \lhd$
-\end{example}
+\end{ex}
 
 \subsection*{Exercícios resolvidos}
 
@@ -564,4 +564,4 @@ Observamos finalmente que bases ortogonais podem ser facilmente transformadas em
 
 \construirExer
 
-\end{document} 
+%\end{document} 

@@ -1,10 +1,10 @@
 % Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-\documentclass[../livro.tex]{subfiles}
+%\documentclass[../livro.tex]{subfiles}
 
 \providecommand{\dir}{..}  %define o diretório principal
 
-\begin{document}
+%\begin{document}
 
 \chapter{Semanas 14 e 15}
 
@@ -20,7 +20,7 @@ Formas equivalentes de dizer que $A$ é simétrica incluem:
 	\item as linhas de $A$ são iguais às colunas de $A^T$.
 \end{enumerate}
 
-\begin{example}
+\begin{ex}
 	As matrizes
 	\begin{equation}
 	\begin{bmatrix}
@@ -52,7 +52,7 @@ Formas equivalentes de dizer que $A$ é simétrica incluem:
 	0 &  4 &  1
 	\end{bmatrix} \textsc{x}
 	\end{equation} não são. Deve-se tomar o cuidado de verificar a simetria \textit{com relação à diagonal principal}. Qualquer outro tipo de simetria não deve interferir na nossa análise$. \ \lhd$
-\end{example}
+\end{ex}
 
 Um dos resultados mais importantes de Álgebra Linear é o Teorema Espectral, que diz que toda matriz simétrica é diagonalizável por uma base de autovetores que é ortonormal. De forma mais precisa:
 
@@ -72,7 +72,7 @@ Um dos resultados mais importantes de Álgebra Linear é o Teorema Espectral, qu
 
 Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de mais nada, faremos alguns exemplos e aplicações que justificam a importância do Teorema Espectral. No entanto, é fortemente aconselhado que o leitor acompanhe os elementos da demonstração, para efetivamente entender as propriedades essenciais das matrizes simétricas.
 
-\begin{example}
+\begin{ex}
 	Considere
 	\begin{equation}
 	A = \begin{bmatrix}
@@ -176,10 +176,10 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	0  & 6
 	\end{bmatrix}.
 	\end{equation} A matriz $P$ que montamos acima é uma matriz ortogonal (de modo que $P^{-1} = P^T$), pois sabemos que autovetores associados com autovalores distintos são ortogonais e fizemos a normalização dos autovetores (lembra que uma matriz ortogonal deve ter colunas ortonormais)$. \ \lhd$
-\end{example}
+\end{ex}
 
 
-\begin{example}
+\begin{ex}
 	Vamos aplicar o procedimento de diagonalização para encontrar uma base ortonormal de autovetores de uma matriz de ordem $3 \times 3$. Considere a matriz simétrica
 	\begin{equation}
 	A = 
@@ -375,7 +375,7 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	0 & 0 & 7 \\
 	\end{bmatrix}. \ \lhd
 	\end{equation}
-\end{example}
+\end{ex}
 
 
 Enfatizamos ainda mais uma vez a aplicação do Teorema Espectral: ele afirma que, no caso de uma matriz simétrica $A$, o procedimento que aplicamos nos exemplos acima sempre vai funcionar! Teremos todos os autovalores reais. Sendo um autovalor $\lambda$ de multiplicidade $m$, seremos capazes de encontrar $m$ autovetores linearmente independentes, que geram o autoespaço $\operatorname{Nul} (A - \lambda I)$. Estes podem ser ortonormalizados pelo processo de Gram-Schmidt. Além disso, associados a autovalores distintos, temos autovetores ortogonais, de modo que seremos capazes de obter uma base ortonormal de autovetores de $A$.
@@ -386,7 +386,7 @@ Enfatizamos ainda mais uma vez a aplicação do Teorema Espectral: ele afirma qu
 
 Nesta seção, apresentamos uma aplicação matemática de matrizes simétricas. Uma \textbf{forma quadrática} em $\mathbb{R}^n$ é uma função polinomial em que todos os termos são de grau 2.
 
-\begin{example}\label{exemplo1}
+\begin{ex}\label{exemplo1}
 	A função $Q : \mathbb{R}^2 \to \mathbb{R}$, definida por 
 	\begin{equation}
 	Q(x_1, x_2) = 3 x_1^2 + x_1x_2
@@ -396,12 +396,12 @@ Nesta seção, apresentamos uma aplicação matemática de matrizes simétricas.
 	\begin{equation}
 	Q(x_1, x_2) = a x_1^2 + 2 b x_1x_2 + cx_2^2,
 	\end{equation} onde $a,b,c \in \mathbb{R}$, já que os três termos acima são todos os possíveis monômios de grau dois em duas variáveis $x_1$ e $x_2$. O coeficiente $2$ que aparece no segundo termo é motivado pela fórmula mais geral (\ref{geral}) abaixo (observe que cada termo $x_i x_j$ aparece duas vezes na soma).
-\end{example}
+\end{ex}
 
 
 
 
-\begin{example}\label{exemplo2}
+\begin{ex}\label{exemplo2}
 	A função $Q : \mathbb{R}^3 \to \mathbb{R}$, definida por 
 	\begin{equation}
 	Q(x_1, x_2, x_3) = x_2^2 - x_3^2 + 3 x_1 x_2 - 8 x_1 x_3
@@ -409,7 +409,7 @@ Nesta seção, apresentamos uma aplicação matemática de matrizes simétricas.
 	\begin{equation}
 	Q(x_1, x_2) = a x_1^2 + b x_2^2 + cx_3^2 + 2 dx_1x_2 +2  ex_1x_3 +2  fx_2x_3,
 	\end{equation} onde $a,b,c, d, e, f \in \mathbb{R}$.
-\end{example}
+\end{ex}
 
 
 De forma geral, uma forma quadrática $Q :\mathbb{R}^n \to \mathbb{R}$ pode ser escrita como
@@ -439,7 +439,7 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 \end{equation}
 
 
-\begin{example}
+\begin{ex}
 	Voltamos a analisar os Exemplos \ref{exemplo1} e \ref{exemplo2} acima. Uma forma quadrática em $\mathbb{R}^2$ pode ser escrita na forma
 	\begin{equation}
 	Q(x_1, x_2) = a x_1^2 + 2 b x_1x_2 + cx_2^2 = 
@@ -507,7 +507,7 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 		\item o coeficiente do termo misto $x_1 x_3$ aparece (dividido por $2$) nas posições $a_{13}$ e $a_{31}$ de $A$;
 		\item o coeficiente do termo misto $x_2 x_3$ aparece (dividido por $2$) nas posições $a_{23}$ e $a_{32}$ de $A$.
 	\end{itemize} Faça as contas para verificar a igualdade acima!$ \ \lhd$
-\end{example}
+\end{ex}
 
 
 
@@ -542,7 +542,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 \end{equation} onde os números $\lambda_i \in \mathbb{R}$ são os autovalores da matriz $A$ (são reais porque a matriz é simétrica). Em outras palavras, a base (ortonormal) de autovetores de $A$ deixou transformou a nossa forma quadrática original em uma que não possui mais termos mistos, muito mais simples de trabalhar.
 
 
-\begin{example}
+\begin{ex}
 	Considere a forma quadrática
 	\begin{equation}
 	Q(x_1, x_2) = 6x_1^2 - 2 x_1x_2 + 4 x_2^2 \quad \leftrightsquigarrow \quad Q(\vec{x}) = \vec{x}^T A \vec{x}, \quad \text{onde} \quad
@@ -612,7 +612,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 	\begin{equation}
 	Q(x_1, x_2) = Q (\vec{x}) = Q (P\vec{y}) = \vec{x}^T A \vec{x} = \vec{y}^T A \vec{y} =  2 y_1^2 + 7 y_2^2. \ \lhd
 	\end{equation}
-\end{example}
+\end{ex}
 
 
 
@@ -638,7 +638,7 @@ Já conhecemos alguns exemplos:
 \noindent Vamos ver como que a diagonalização de formas simétricas se aplica para conseguirmos identificar cônicas de formas quadráticas que possuem termos mistos.
 
 
-\begin{example}
+\begin{ex}
 	Vamos identificar a cônica cuja equação é
 	\begin{equation}
 	31 x_1^2 - 10\sqrt{3} x_1x_2 + 21 x_2^2 = 144.
@@ -716,7 +716,7 @@ Já conhecemos alguns exemplos:
 	\end{center}
 	
 	\noindent Observamos que quando a coordenada $y_1 = 0$ devemos ter que $y_2^2 = 2^2$, de modo que deve ser $\vec{x} = y_1 \vec{v}_1 + y_2 \vec{v}_2 = \pm 2 \vec{v}_2$, como na figura. Este é o análogo da análise que normalmente fazemos, só que agora na base ortonormal $\{\vec{v}_1, \vec{v}_2\}$
-\end{example}
+\end{ex}
 
 \subsection*{Exercícios resolvidos}
 
@@ -767,12 +767,12 @@ P^{-1} A P = D =
 \vec{y}^T D \vec{y} = \lambda_1 y_1^2 + \lambda_2 y_2^2 + \cdots + \lambda_n y_n^2 \le  \lambda_n (y_1^2 +y_2^2 + \cdots + y_n^2) = \lambda_n.
 \end{equation} Logo, $\lambda_n$ é uma cota superior para $\vec{y}^T D \vec{y}$. Além disso, já que $D$ é uma matriz diagonal, esta cota superior é atingida pelo vetor $\vec{y} = \vec{e}_n$, o último vetor da base canônica de $\mathbb{R}^n$. Traduzindo estas informações para a variável $\vec{x}$, temos que $\lambda_n$ é o valor máximo de $\vec{x}^T A \vec{x}$ (pois é igual a $\vec{y}^T D \vec{y}$) na esfera unitária. Além disso, este valor máximo é atingido quando $\vec{x} = P \vec{e}_n = \vec{v}_n$, um autovetor unitário associado com o maior autovalor $\lambda_n$.
 
-\begin{exercise}
+\begin{exer}
 	Fazer toda a análise acima para o problema de minimização. \textit{Dica}: olhar para o menor autovalor.
-\end{exercise}
+\end{exer}
 
 
-\begin{example}\label{otimiz}
+\begin{ex}\label{otimiz}
 	Vamos maximizar a forma quadrática 
 	\begin{equation}
 	Q(x_1, x_2, x_3) = 7 x_1^2 + x_2^2 + 7x_3^2 - 8 x_1x_2 - 4x_1x_3 - 8 x_2x_3,
@@ -835,10 +835,10 @@ P^{-1} A P = D =
 	\begin{equation}
 	Q \left(\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) = \frac{7}{2} + 0 + \frac{7}{2} - 0 + \frac{4}{2} - 0 = 9. \ \lhd
 	\end{equation}
-\end{example}
+\end{ex}
 
 
-\begin{remark}[Opcional]
+\begin{obs}[Opcional]
 	Em cursos de cálculo com várias variáveis, estudamos multiplicadores de Lagrange, uma ferramenta para estudar problemas de otimização com restrição. De uma maneira geral, queremos
 	\begin{equation}
 	\text{minimizar } f(x_1, x_2, \cdots, x_n) \text{ com a restrição } g(x_1, x_2, \cdots, x_n) = 0.
@@ -872,7 +872,7 @@ P^{-1} A P = D =
 	x_1 \\ x_2 \\ x_3
 	\end{bmatrix}.
 	\end{equation} Chegamos, por outro caminho, à mesma conclusão: $\lambda$ deve ser um autovalor e $\vec{x}$ um autovetor (unitário, já que $g(x_1,x_2,x_3) = 0$) associado$. \ \lhd$
-\end{remark}
+\end{obs}
 
 \subsection*{Exercícios resolvidos}
 
@@ -887,7 +887,7 @@ P^{-1} A P = D =
 Nesta seção vamos utilizar a notação $\langle \vec{u}, \vec{v} \rangle$ para o produto escalar, ao invés de $\vec{u} \cdot \vec{v}$, para enfatizar qual é o vetor $\vec{u}$ e qual é o vetor $\vec{v}$ (em especial quando um deles está sendo multiplicado por uma matriz).
 
 %Vejamos mais uma maneira equivalente de se dizer que uma matriz é simétrica.
-\begin{remark}\label{sse}
+\begin{obs}\label{sse}
 	Uma matriz quadrada $A$, não necessariamente simétrica, cujos coeficientes são reais, satisfaz
 	\begin{equation}
 	\langle A \vec{x}, \vec{y} \rangle = \langle\vec{x}, A^T \vec{y}\rangle, \quad \text{ para todos } \vec{x}, \vec{y} \in \mathbb{R}^n.
@@ -902,17 +902,17 @@ Nesta seção vamos utilizar a notação $\langle \vec{u}, \vec{v} \rangle$ para
 	\begin{equation}
 	\vec{y}^T A \vec{x} = \vec{x}^T A \vec{y}, \quad \text{ para todos } \vec{x}, \vec{y} \in \mathbb{R}^n.
 	\end{equation}
-\end{remark}
+\end{obs}
 
-\begin{remark}
+\begin{obs}
 	A observação anterior nos permite estender a definição de matriz simétrica para transformações lineares, pois é independente do sistema de coordenadas utilizado (depende apenas de uma escolha de produto interno/escalar). 
-\end{remark}
+\end{obs}
 
 A equivalência que foi apresentada na Observação \ref{sse} é muito útil na análise de matrizes simétricas. Vamos ver como se aplica diversas vezes na demonstração do Teorema Espectral que será dividida em três proposições preliminares. Cada uma delas apresenta, em ordem, o procedimento usual que viemos utilizando para diagonalizar matrizes: análise dos autovalores, construção dos autoespaços e verificação de que é possível formar uma base de autovetores. Neste caso de uma matriz simétrica, veremos que, além de tudo, é possível encontrar uma base ortonormal de autovetores.
 
-\begin{proposition}\label{reais}
+\begin{prop}\label{reais}
 	Os autovalores de uma matriz simétrica $A$, de entradas reais, são números reais.
-\end{proposition}
+\end{prop}
 
 \begin{proof}
 	Seja $\lambda$ uma raiz do polinômio característico de $A$, que pode ser um número real ou um número complexo. Podemos encontrar um vetor $\vec{v}$, de entradas possivelmente complexas, tal que $A\vec{v} = \lambda \vec{v}$. A menos de um passo de normalização, podemos pensar que $\|\vec{v}\| = 1$. Vamos verificar que de fato $\lambda$ é um número real. Para isto, vamos mostrar que $\lambda$ é igual ao seu conjugado, $\lambda = \bar{\lambda}$, de forma que a parte imaginária de $\lambda$ deve ser igual a zero. Sendo $A$ simétrica, temos que
@@ -930,9 +930,9 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na 
 	\end{equation}
 \end{proof}
 
-\begin{proposition}\label{ortog}
+\begin{prop}\label{ortog}
 	Se $A$ é uma matriz simétrica, então autovetores associados a autovalores distintos são ortogonais.
-\end{proposition}
+\end{prop}
 
 \begin{proof}
 	Sejam $\lambda_1$ e  $\lambda_2$ autovalores distintos de $A$ e $\vec{v}_1, \vec{v}_2$ respectivos autovetores. Então (observe que é necessário que $A$ seja simétrica na segunda e na última igualdade!)
@@ -942,9 +942,9 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na 
 \end{proof}
 
 
-\begin{proposition}\label{dimens}
+\begin{prop}\label{dimens}
 	Seja $A$ uma matriz simétrica. Então, a dimensão do autoespaço associado a um autovalor é igual à multiplicidade deste autovalor.
-\end{proposition}
+\end{prop}
 
 \begin{proof}
 	Suponhamos que $\lambda_1$ é um autovalor de $A$ de multiplicidade $k$. Seja $\vec{v}_1$ um autovetor unitário associado. Podemos encontrar uma base ortonormal de $\mathbb{R}^n$ da qual $\vec{v}_1$ faz parte, isto é, podemos encontrar vetores unitários $\vec{y}_j$ de modo que
@@ -1068,4 +1068,4 @@ P^{-1} A P = D =
 
 \construirExer
 
-\end{document} 
+%\end{document} 
