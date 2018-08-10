@@ -22,7 +22,209 @@
 
 \section{Sistemas Lineares}
 
-Começamos nosso estudo diretamente com um exemplo:
+{\bf Definições Básicas}
+
+\bigskip
+
+\begin{defn} Uma equação é dita {\bf linear } se for do tipo 
+\[ 
+a_1 x_1 + a_2 x_2 + \hdots + a_n x_n = b 
+\]
+onde $a_1, a_2 , \hdots, \ a_n$ são constantes chamadas coeficientes, $b$ é uma constante chamada termo independente e $x_1, x_2 , \hdots \ x_n$ são as variáveis ou incógnitas. Aqui $n$ é o  número de variáveis e pode ser qualquer número natural.
+\end{defn}
+
+\bigskip
+
+\begin{ex}
+A equação abaixo 
+\[ 
+3 x_1 + 5 x_2 - x_3 = 7
+\] é uma equação linear nas variáveis $x_1, x_2$ e $x_3$ com coeficientes 3,5, e -1 e termo independente 7.
+\end{ex}
+
+
+\begin{ex}
+A equação abaixo também é linear 
+\[
+2x+3y-5z+2w=11
+\]
+com coeficientes 2,3,-5,2, termo independente 11 e variáveis x, y, z e w.
+\end{ex}
+
+\begin{ex}
+A seguir temos um exemplo diferente, 
+\[
+5x+3z+14=y+3x-11
+\] que é uma equação linear mas não está escrita na forma usual. Note que ela pode ser reescrita como
+\[
+2x-y+3z=25.
+\]
+e dessa maneira vemos que ela tem coeficientes 2,-1, e 3,  termo independente 25 e envolve as variáveis x, y, z.
+\end{ex}
+
+\begin{ex} As equações abaixo {\bf não} são lineares
+
+\[x+3y-z^2=5\]
+\[xy = 1\]
+\[sen(x)=\frac{1}{3} \]
+\[(1.02)^x=2\]
+\end{ex}
+
+\begin{defn} Um sistema de equações lineares (ou sistema linear - SL) é uma coleção finita de equações lineares envolvendo um certo conjunto finito de  variáveis. 
+\end{defn}
+
+\begin{ex}
+
+
+\begin{equation*}
+\left\{
+\begin{array}{ccccccc}
+2x&+&3y&-&z&=&7 \\
+x&+&8y& & &=&0 
+\end{array}
+\right. 
+\end{equation*}
+é um exemplo de SL de ordem $2 \times 3$, ou seja tem 2 equações e 3 variáveis. Note que a variável z tem coeficiente zero na segunda equação.
+\end{ex}
+
+
+\begin{ex}
+
+\begin{equation*}
+\left\{
+\begin{array}{ccccccccc}
+x&+&2y&-&3z& & &=&22 \\
+x& &  &+&z & & &=&17 \\
+&-&y & &  &+&2w&=&6 \\
+\end{array}
+\right. 
+\end{equation*}
+é um exemplo de SL de ordem $3 \times 4$, ou seja três equações nas variáveis x, y, z, w. 
+\end{ex}
+
+
+\begin{ex}
+Aqui vale também a observação de que um SL pode aparecer de forma "desorganizada", ou seja, a ordem em que as variáveis aparecem nas equações pode ser diferente de uma equação para outra e as variáveis podem aparecer mais de uma vez. O termo independente também pode aparecer do lado esquerdo da igualdade, ou estar parte a esquerda e parte a direita.
+
+\begin{equation*}
+\left\{
+\begin{array}{ccc}
+2z-3x+1 & = &y \\
+x+4z+3& = & 3x+2z+2y-7
+\end{array}
+\right. 
+\end{equation*}
+\end{ex}
+
+
+
+\begin{ex}
+Veremos que para resolvermos um sistema linear será fundamental reescrevê-lo na forma usual, como abaixo
+
+\begin{equation*}
+\left\{
+\begin{array}{ccc}
+-3x-y+2z & = & -1 \\
+-2x-2y-2z & = & -10
+\end{array}
+\right. 
+\end{equation*}
+ou ainda na forma
+\begin{equation*}
+\left\{
+\begin{array}{ccc}
+3x+y-2z & = & 1 \\
+x+y-z & = & 5
+\end{array}
+\right. 
+\end{equation*}
+\end{ex}
+
+Note que se qualquer equação do sistema for não-linear, então o sistema não pode ser considerado um SL. 
+Neste texto iremos analisar técnicas de resolução de sistemas lineares apenas. Sistemas não-lineares tem tratamento matemático muito mais difícil e fogem do escopo deste texto
+
+
+\bigskip
+
+\begin{defn}  Uma solução de um SL a variáveis $x_1, x_2 , \hdots \ x_n$
+é uma %lista  de valores numéricos que fazem com que todas as equações do SL sejam verificadas quando as variáeis s
+atribuição de valores 
+às variáveis que verificam (ou satisfazem) todas as equações do SL.
+\end{defn}
+
+\begin{ex}
+
+\begin{equation*}
+\left\{
+\begin{array}{ccccc}
+x&+&y&=&5 \\
+3x&-&y&=&-1 
+\end{array}
+\right. 
+\end{equation*}
+tem $x=1$ e $y=4$ como solução. 
+
+\end{ex}
+
+\bigskip
+
+\begin{defn}  O conjunto solução de um SL (ou a solução de um SL) é o conjunto formado por todas as soluções individuais (no sentido da definição anterior) deste SL.
+\end{defn}
+
+\begin{ex} Vamos estudar sistemas lineares $2 \times 2$ fazendo uso de uma interessante interpretação geométrica
+
+O conjunto solução de um sistema linear 
+\begin{equation*}
+\left\{
+\begin{array}{ccccc}
+a_1 x&+&b_1 y&=&c_1 \\
+a_2 x&+&b_2 y&=&c_2 \\
+\end{array}
+\right. 
+\end{equation*}
+é dado, geometricamente, pela intersecção das retas representativas das duas equações acima.
+
+Assim sendo temos três possibilidades
+
+{\bf Sistemas Lineares compatíveis e Determinados}, aqueles que apresentam uma única solução: no caso $2 \times 2$ ocorre quando as duas retas tem inclinações distintas, não sendo portanto paralelas, e interseccionando-se em um único ponto. Por exemplo
+\begin{equation*}
+\left\{
+\begin{array}{ccccc}
+x&+& y&=&1 \\
+2 x&+& y&=&8 \\
+\end{array}
+\right. 
+\end{equation*}
+
+{\bf Sistemas Lineares compatíveis e Indeterminados}, aqueles que apresentam infinitas soluções: no caso $2 \times 2$ ocorre quando as duas retas são idênticas, e a intersecção de ambas é a própria reta.
+Por exemplo
+\begin{equation*}
+\left\{
+\begin{array}{ccccc}
+2 x&+& y&=&1 \\
+4 x&+& 2 y&=& 2 \\
+\end{array}
+\right. 
+\end{equation*}
+
+{\bf Sistemas incompatíveis}, aqueles que não tem solução: no caso $2 \times 2$ ocorre quando as duas retas são paralelas, mas distintas, e a intersecção entre elas é o conjunto vazio.
+Por exemplo
+\begin{equation*}
+\left\{
+\begin{array}{ccccc}
+x&+& y&=&1 \\
+x&+& y&=&3 \\
+\end{array}
+\right. 
+\end{equation*}
+
+Os sistemas incompatíveis também são chamados de sistemas impossíveis.
+
+\end{ex}
+
+Seguimos nosso estudo diretamente com um exemplo:
+
+
 
 \begin{ex}
 Considere o sistema linear que consiste de duas equações e duas variáveis
