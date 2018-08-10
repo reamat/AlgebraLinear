@@ -57,25 +57,24 @@ A seguir temos um exemplo diferente,
 5x+3z+14=y+3x-11
 \] que é uma equação linear mas não está escrita na forma usual. Note que ela pode ser reescrita como
 \[
-2x-y+3z=25.
+2x-y+3z=25
 \]
 e dessa maneira vemos que ela tem coeficientes 2,-1, e 3,  termo independente 25 e envolve as variáveis x, y, z.
 \end{ex}
 
-\begin{ex} As equações abaixo {\bf não} são lineares
+\begin{ex} As equações abaixo {\bf não} são lineares:
 
-\[x+3y-z^2=5\]
-\[xy = 1\]
-\[sen(x)=\frac{1}{3} \]
-\[(1.02)^x=2\]
+\[x+3y-z^2=5,\]
+\[xy = 1,\]
+\[sen(x)=\frac{1}{3}, \]
+\[(1.02)^x=2.\]
 \end{ex}
 
 \begin{defn} Um sistema de equações lineares (ou sistema linear - SL) é uma coleção finita de equações lineares envolvendo um certo conjunto finito de  variáveis. 
 \end{defn}
 
 \begin{ex}
-
-
+O sistema linear
 \begin{equation*}
 \left\{
 \begin{array}{ccccccc}
@@ -89,7 +88,7 @@ x&+&8y& & &=&0
 
 
 \begin{ex}
-
+O sistema linear
 \begin{equation*}
 \left\{
 \begin{array}{ccccccccc}
@@ -105,27 +104,24 @@ x& &  &+&z & & &=&17 \\
 
 \begin{ex}
 Aqui vale também a observação de que um SL pode aparecer de forma "desorganizada", ou seja, a ordem em que as variáveis aparecem nas equações pode ser diferente de uma equação para outra e as variáveis podem aparecer mais de uma vez. O termo independente também pode aparecer do lado esquerdo da igualdade, ou estar parte a esquerda e parte a direita.
+Por exemplo, 
 
 \begin{equation*}
 \left\{
 \begin{array}{ccc}
 2z-3x+1 & = &y \\
-x+4z+3& = & 3x+2z+2y-7
+x+4z+3& = & 3x+2z+2y-7.
 \end{array}
 \right. 
 \end{equation*}
-\end{ex}
 
-
-
-\begin{ex}
-Veremos que para resolvermos um sistema linear será fundamental reescrevê-lo na forma usual, como abaixo
+Veremos que para resolvermos um sistema linear será fundamental reescrevê-lo na forma usual. O sistema dado acima poderia ser reescrito como:
 
 \begin{equation*}
 \left\{
 \begin{array}{ccc}
 -3x-y+2z & = & -1 \\
--2x-2y-2z & = & -10
+-2x-2y-2z & = & -10,
 \end{array}
 \right. 
 \end{equation*}
@@ -134,7 +130,7 @@ ou ainda na forma
 \left\{
 \begin{array}{ccc}
 3x+y-2z & = & 1 \\
-x+y-z & = & 5
+x+y-z & = & 5.
 \end{array}
 \right. 
 \end{equation*}
@@ -146,14 +142,14 @@ Neste texto iremos analisar técnicas de resolução de sistemas lineares apenas
 
 \bigskip
 
-\begin{defn}  Uma solução de um SL a variáveis $x_1, x_2 , \hdots \ x_n$
+\begin{defn}  Uma solução de um sistema linear nas variáveis $x_1, x_2 , \hdots \ x_n$
 é uma %lista  de valores numéricos que fazem com que todas as equações do SL sejam verificadas quando as variáeis s
 atribuição de valores 
-às variáveis que verificam (ou satisfazem) todas as equações do SL.
+às variáveis que verificam (ou satisfazem) todas as equações do sistema.
 \end{defn}
 
 \begin{ex}
-
+O sistema linear
 \begin{equation*}
 \left\{
 \begin{array}{ccccc}
@@ -171,8 +167,7 @@ tem $x=1$ e $y=4$ como solução.
 \begin{defn}  O conjunto solução de um SL (ou a solução de um SL) é o conjunto formado por todas as soluções individuais (no sentido da definição anterior) deste SL.
 \end{defn}
 
-\begin{ex} Vamos estudar sistemas lineares $2 \times 2$ fazendo uso de uma interessante interpretação geométrica
-
+\begin{ex} Vamos estudar sistemas lineares $2 \times 2$ fazendo uso de uma interessante interpretação geométrica.
 O conjunto solução de um sistema linear 
 \begin{equation*}
 \left\{
@@ -184,14 +179,14 @@ a_2 x&+&b_2 y&=&c_2 \\
 \end{equation*}
 é dado, geometricamente, pela intersecção das retas representativas das duas equações acima.
 
-Assim sendo temos três possibilidades
+Assim sendo, temos três possibilidades
 
 {\bf Sistemas Lineares compatíveis e Determinados}, aqueles que apresentam uma única solução: no caso $2 \times 2$ ocorre quando as duas retas tem inclinações distintas, não sendo portanto paralelas, e interseccionando-se em um único ponto. Por exemplo
 \begin{equation*}
 \left\{
 \begin{array}{ccccc}
 x&+& y&=&1 \\
-2 x&+& y&=&8 \\
+2 x&+& y&=&8. \\
 \end{array}
 \right. 
 \end{equation*}
@@ -202,7 +197,7 @@ Por exemplo
 \left\{
 \begin{array}{ccccc}
 2 x&+& y&=&1 \\
-4 x&+& 2 y&=& 2 \\
+4 x&+& 2 y&=& 2. \\
 \end{array}
 \right. 
 \end{equation*}
@@ -213,7 +208,7 @@ Por exemplo
 \left\{
 \begin{array}{ccccc}
 x&+& y&=&1 \\
-x&+& y&=&3 \\
+x&+& y&=&3. \\
 \end{array}
 \right. 
 \end{equation*}
@@ -222,8 +217,8 @@ Os sistemas incompatíveis também são chamados de sistemas impossíveis.
 
 \end{ex}
 
-Seguimos nosso estudo diretamente com um exemplo:
-
+Feita esta introdução aos  sistemas lineares, surge a pergunta natural: como obter a solução de tais sistemas?
+Começamos com um exemplo:
 
 
 \begin{ex}
@@ -235,7 +230,7 @@ Considere o sistema linear que consiste de duas equações e duas variáveis
       2x-y&=&-2.
     \end{array}
   \right.
-  \end{equation} Nosso objetivo é descobrir o valor (ou todos os valores) das variáveis $x$ e $y$ que satisfazem a ambas equações.
+  \end{equation} %Nosso objetivo é descobrir o valor (ou todos os valores) das variáveis $x$ e $y$ que satisfazem a ambas equações.
 
 \vspace{0.2cm}
 
@@ -293,9 +288,9 @@ O sistema linear como o acima possui duas equações e duas variáveis e por ist
 Sistemas $2\times 2$ são dos mais simples de resolver e por isso o método acima pode parecer desnecessariamente complicado. Mas, como veremos, este método pode ser aplicado para qualquer sistema. Logo, é essencial que se entenda completamente todos os seus passos para um bom acompanhamento do que está por vir.
 \end{obs}
 
-Vamos analisar a solução apresentada acima mais de perto. Para chegar do sistema linear em \eqref{exp1} para o sistema em \eqref{exp1-2}, fizemos uma sequência de operações que:
+Vamos analisar a solução apresentada acima mais de perto. Para irmos do sistema linear em \eqref{exp1} para o sistema em \eqref{exp1-2}, fizemos uma sequência de operações que:
 \begin{itemize}
-  \item \emph{não alteram a solução do sistema linear original e que;}
+  \item \emph{não alteram a solução do sistema linear original ;}
   \item resumidamente, podem ser descritas como \emph{adicionar um múltiplo da linha um na linha dois.}
 \end{itemize} Que a solução permanece a mesma pode ser justificado tal qual está na ``Solução 1'' acima.
 
@@ -303,9 +298,10 @@ Vamos analisar a solução apresentada acima mais de perto. Para chegar do siste
 
 Operações nas linhas de um sistema que não alteram o conjunto de soluções são chamadas de \textbf{operações elementares}. São as seguintes:
 \begin{enumerate}
-  \item Multiplicar uma linha por uma constante;
+  \item Multiplicar uma linha por uma constante não nula;
   \item Trocar duas linhas de lugar;
-  \item Somar um múltiplo de uma linha a outra linha.
+  \item Substituir uma linha por esta mesma linha somada com um múltiplo de outra linha.
+  %Somar um múltiplo de uma linha a outra linha.
 \end{enumerate}
 
 \vspace{0.2cm}
