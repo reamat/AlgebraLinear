@@ -20,13 +20,48 @@ Existem maneiras diferentes de representar e de interpretar elementos de Álgebr
 
 \section{Vetores}
 
-Um \textbf{vetor} no espaço tridimensional é um objeto com magnitude, direção e sentido bem definidos. Assim sendo, ao representar um vetor como na figura abaixo, não importa onde está o seu ponto inicial. Todas as setas representam o mesmo vetor.
+De um ponto de vista intuitivo, um \textbf{vetor} no espaço tridimensional é um objeto com magnitude, direção e sentido bem definidos. Assim sendo, ao representar um vetor como na figura abaixo, não importa onde está o seu ponto inicial. Todas as setas representam o mesmo vetor.
+
 
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[width=0.3\linewidth]{Semana02/semana02-vetor}
-\end{center}
+	\begin{center}
+		\includegraphics[width=0.3\linewidth]{Semana02/semana02-vetor}
+	\end{center}
 \end{figure}
+
+Mais precisamente, % pode-se dizer que um \textbf{vetor} no espaço tridimensional 
+vamos dizer que segmentos de reta orientados  são equivalentes se tem mesmo comprimento, direção e sentido. Um vetor é a {\it classe de equivalência} de todos os segmentos de reta com mesmo comprimento, direção e sentido, ou seja, de maneira simplificada, o conjunto de todos os vetores com estas mesmas três características.
+%Não vamos falar aqui em relações de equivalência
+
+Do ponto de vista algébrico, um vetor é um elemento de um {\it espaço vetorial}. Esta definição por enquanto não faz sentido visto que somente iremos definir espaços vetoriais no futuro, mas podemos nos contentar com uma definição simplificada neste momento: do ponto de vista algébrico um vetor no espaço tridimensional pode ser pensado como um trio ordenado de números reais. A noção de base de um espaço vetorial, a ser introduzida no futuro, juntamente com a noção de coordenadas de um espaço vetorial, dará um significado preciso a esta ultima afirmação. Aqui podemos considerar a {\it base canônica} 
+
+\begin{equation}
+\vec{e_1} =
+\left[
+\begin{array}{c}
+1 \\
+0 \\
+0
+\end{array}
+\right], \quad
+\vec{e_2} =
+\left[
+\begin{array}{c}
+0 \\
+1 \\
+0
+\end{array}
+\right] \quad  \text{e} \quad
+\vec{e_3} =
+\left[
+\begin{array}{c}
+0 \\
+0 \\
+1
+\end{array}
+\right].
+\end{equation} 
+
 
 Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referência, podemos introduzir coordenadas:
 \begin{equation}
@@ -38,34 +73,9 @@ Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referê
     v_3
   \end{array}
 \right]
-= v_1 \vec{e_1} + v_2 \vec{e_2} + v_3 \vec{e_3},
-\end{equation} onde
-\begin{equation}
-\vec{e_1} =
-\left[
-  \begin{array}{c}
-    1 \\
-    0 \\
-    0
-  \end{array}
-\right], \quad
-\vec{e_2} =
-\left[
-  \begin{array}{c}
-    0 \\
-    1 \\
-    0
-  \end{array}
-\right] \quad  \text{e} \quad
-\vec{e_3} =
-\left[
-  \begin{array}{c}
-    0 \\
-    0 \\
-    1
-  \end{array}
-\right].
+= v_1 \vec{e_1} + v_2 \vec{e_2} + v_3 \vec{e_3}.
 \end{equation} 
+
 
 
 \noindent Intuitivamente, podemos pensar que o sistema de coordenadas Cartesiano fixa a origem como sendo o ponto inicial do vetor e o ponto $(v_1, v_2, v_3)$ do espaço tridimensional como o ponto final. 
@@ -134,7 +144,10 @@ k \vec{v} :=
     k v_3
   \end{array}
 \right].
-\end{equation} Geometricamente,
+\end{equation} 
+
+
+Geometricamente, temos a seguinte situação
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=0.3\linewidth]{Semana02/semana02-escalar}
@@ -456,7 +469,7 @@ O \textbf{espaço gerado} por todas as combinações lineares dos vetores $\vec{
 
 
 
-\section{Multiplicação de matriz por vetor e representação matricial para sistemas Lineares} 
+\section{Multiplicação de matriz por vetor e representação matricial para sistemas lineares} 
 
 Se $A$ é uma matriz com $m$ linhas e $n$ colunas, e $\vec{v}$ é um vetor do $\mathbb{R}^n$, então definimos o {\bf produto da matriz $A$ pelo vetor $\vec{v}$ } como o vetor de $\mathbb{R}^m$ resultante da combinação linear das colunas de $A$ com coeficientes dados pelas entradas do vetor $\vec{v}$.
 
