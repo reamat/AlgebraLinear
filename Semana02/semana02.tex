@@ -20,13 +20,48 @@ Existem maneiras diferentes de representar e de interpretar elementos de Álgebr
 
 \section{Vetores}
 
-Um \textbf{vetor} no espaço tridimensional é um objeto com magnitude, direção e sentido bem definidos. Assim sendo, ao representar um vetor como na figura abaixo, não importa onde está o seu ponto inicial. Todas as setas representam o mesmo vetor.
+De um ponto de vista intuitivo, um \textbf{vetor} no espaço tridimensional é um objeto com magnitude, direção e sentido bem definidos. Assim sendo, ao representar um vetor como na figura abaixo, não importa onde está o seu ponto inicial. Todas as setas representam o mesmo vetor.
+
 
 \begin{figure}[h!]
-\begin{center}
-\includegraphics[width=0.3\linewidth]{Semana02/semana02-vetor}
-\end{center}
+	\begin{center}
+		\includegraphics[width=0.3\linewidth]{Semana02/semana02-vetor}
+	\end{center}
 \end{figure}
+
+Mais precisamente, % pode-se dizer que um \textbf{vetor} no espaço tridimensional 
+vamos dizer que segmentos de reta orientados  são equivalentes se tem mesmo comprimento, direção e sentido. Um vetor é a {\it classe de equivalência} de todos os segmentos de reta com mesmo comprimento, direção e sentido, ou seja, de maneira simplificada, o conjunto de todos os vetores com estas mesmas três características.
+%Não vamos falar aqui em relações de equivalência
+
+Do ponto de vista algébrico, um vetor é um elemento de um {\it espaço vetorial}. Esta definição por enquanto não faz sentido visto que somente iremos definir espaços vetoriais no futuro, mas podemos nos contentar com uma definição simplificada neste momento: do ponto de vista algébrico um vetor no espaço tridimensional pode ser pensado como um trio ordenado de números reais. A noção de base de um espaço vetorial, a ser introduzida no futuro, juntamente com a noção de coordenadas de um espaço vetorial, dará um significado preciso a esta ultima afirmação. Aqui podemos considerar a {\it base canônica} 
+
+\begin{equation}
+\vec{e_1} =
+\left[
+\begin{array}{c}
+1 \\
+0 \\
+0
+\end{array}
+\right], \quad
+\vec{e_2} =
+\left[
+\begin{array}{c}
+0 \\
+1 \\
+0
+\end{array}
+\right] \quad  \text{e} \quad
+\vec{e_3} =
+\left[
+\begin{array}{c}
+0 \\
+0 \\
+1
+\end{array}
+\right].
+\end{equation} 
+
 
 Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referência, podemos introduzir coordenadas:
 \begin{equation}
@@ -38,34 +73,9 @@ Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referê
     v_3
   \end{array}
 \right]
-= v_1 \vec{e_1} + v_2 \vec{e_2} + v_3 \vec{e_3},
-\end{equation} onde
-\begin{equation}
-\vec{e_1} =
-\left[
-  \begin{array}{c}
-    1 \\
-    0 \\
-    0
-  \end{array}
-\right], \quad
-\vec{e_2} =
-\left[
-  \begin{array}{c}
-    0 \\
-    1 \\
-    0
-  \end{array}
-\right] \quad  \text{e} \quad
-\vec{e_3} =
-\left[
-  \begin{array}{c}
-    0 \\
-    0 \\
-    1
-  \end{array}
-\right].
+= v_1 \vec{e_1} + v_2 \vec{e_2} + v_3 \vec{e_3}.
 \end{equation} 
+
 
 
 \noindent Intuitivamente, podemos pensar que o sistema de coordenadas Cartesiano fixa a origem como sendo o ponto inicial do vetor e o ponto $(v_1, v_2, v_3)$ do espaço tridimensional como o ponto final. 
@@ -134,7 +144,10 @@ k \vec{v} :=
     k v_3
   \end{array}
 \right].
-\end{equation} Geometricamente,
+\end{equation} 
+
+
+Geometricamente, temos a seguinte situação
 \begin{figure}[h!]
 \begin{center}
 \includegraphics[width=0.3\linewidth]{Semana02/semana02-escalar}
@@ -228,7 +241,281 @@ k \vec{v} :=
 
 
 
-\subsection{Representação matricial para sistemas Lineares}
+
+
+
+
+
+\section{Combinações lineares de vetores}
+
+Uma \textbf{combinação linear} dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ é um vetor da forma:
+\begin{equation}
+\vec{v} = x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \sum_{i=1}^k x_i \vec{v}_i,
+\end{equation} onde $x_1, x_2, \dots, x_k$ são números reais (chamados coeficientes da combinação linear). Em outras palavras, uma combinação linear é uma soma de múltiplos dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$.
+
+
+\begin{ex}
+	Para os vetores
+	\begin{equation}
+	\vec{v}_1 = \left[
+	\begin{array}{c}
+	1 \\
+	-1
+	\end{array}
+	\right] \quad \text{e} \quad
+	\vec{v}_2 = \left[
+	\begin{array}{c}
+	1 \\
+	3
+	\end{array}
+	\right],
+	\end{equation} algumas combinações lineares são:
+	\begin{itemize}
+		\item $\vec{v}_1 + \vec{v}_2 =
+		\left[
+		\begin{array}{c}
+		1 \\
+		-1
+		\end{array}
+		\right] +
+		\left[
+		\begin{array}{c}
+		1 \\
+		3
+		\end{array}
+		\right] =
+		\left[
+		\begin{array}{c}
+		2 \\
+		2
+		\end{array}
+		\right];$
+		\item $ 4 \vec{v}_1 = 4 \vec{v}_1 + 0 \vec{v}_2 =
+		4 \left[
+		\begin{array}{c}
+		1 \\
+		-1
+		\end{array}
+		\right] =
+		\left[
+		\begin{array}{c}
+		4 \\
+		-4
+		\end{array}
+		\right];$
+		\item $ \vec{v}_2 = 0\vec{v}_1 + 1\vec{v}_2 =
+		\left[
+		\begin{array}{c}
+		1 \\
+		3
+		\end{array}
+		\right];$
+		\item $0\vec{v}_1 + 0 \vec{v}_2 =
+		\left[
+		\begin{array}{c}
+		0 \\
+		0
+		\end{array}
+		\right] = \vec{0}.$
+	\end{itemize} \textbf{Geometricamente}, qualquer vetor do plano pode ser representado como combinação linear de vetores que não são colineares.
+	
+	Vamos ilustrar este fato na figura abaixo.
+	\begin{figure}[h!]
+		\begin{center}
+			\includegraphics[width=0.4\linewidth]{Semana02/semana02-comblinear1}
+			\includegraphics[width=0.4\linewidth]{Semana02/semana02-comblinear3}
+		\end{center}
+	\end{figure}
+	Por exemplo, para representar o vetor $\vec{v}$ como combinação linear de $\vec{v}_1$ e $\vec{v}_2$, podemos traçar retas paralelas aos vetores, passando pela origem e pela extremidade do vetor $\vec{v}$, como na figura da direita. Assim, pela interpretação geométrica da soma de vetores (ver início deste capítulo), sabemos que $\vec{v}$ é a soma dos vetores em azul. Mas estes, por construção, são colineares aos vetores iniciais e logo múltiplos destes. Concluimos que
+	\begin{equation}
+	\vec{v} = \alpha \vec{v}_1 + \beta \vec{v}_2,
+	\end{equation} isto é, $\vec{v}$ é uma combinação linear de $\vec{v}_1$ e $\vec{v}_2$. $\ \lhd$
+\end{ex}
+
+
+
+De forma mais geral, nós dizemos que um vetor $\vec{v} \in \mathbb{R}^m$ é combinação linear dos $k$ vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \mathbb{R}^m$ quando conseguirmos encontrar coeficientes $x_1, x_2, \dots, x_k$ tais que
+\begin{equation}
+x_1 \vec{v}_1 + x_2 \vec{v}_2 + \dots + x_k \vec{v}_k = \vec{v}.
+\end{equation} Nós vamos nos referir a este tipo de equação por \textbf{equação vetorial}. Para decidir se um vetor é combinação linear de outros, devemos decidir se existem estes números reais $x_1, x_2, \dots, x_k$. Escrevendo em coordenadas:
+\begin{equation}
+\vec{v}_1 =
+\left[
+\begin{array}{c}
+v_{11} \\
+v_{21} \\
+v_{31} \\
+\vdots \\
+v_{m1}
+\end{array}
+\right], \
+\vec{v}_2 =
+\left[
+\begin{array}{c}
+v_{12} \\
+v_{22} \\
+v_{32} \\
+\vdots \\
+v_{m2}
+\end{array}
+\right], \
+\vec{v}_3 =
+\left[
+\begin{array}{c}
+v_{13} \\
+v_{23} \\
+v_{33} \\
+\vdots \\
+v_{m3}
+\end{array}
+\right], \ \cdots, \
+\vec{v}_k =
+\left[
+\begin{array}{c}
+v_{1k} \\
+v_{2k} \\
+v_{3k} \\
+\vdots \\
+v_{mk}
+\end{array}
+\right], \
+\vec{v} =
+\left[
+\begin{array}{c}
+b_{1} \\
+b_{2} \\
+b_{3} \\
+\vdots \\
+b_{m}
+\end{array}
+\right],
+\end{equation} vemos que encontrar os coeficientes da combinação linear, caso estes existam, equivale a resolver a equação vetorial
+\begin{equation}
+x_1 \left[
+\begin{array}{c}
+v_{11} \\
+v_{21} \\
+v_{31} \\
+\vdots \\
+v_{m1}
+\end{array}
+\right] + x_2
+\left[
+\begin{array}{c}
+v_{12} \\
+v_{22} \\
+v_{32} \\
+\vdots \\
+v_{m2}
+\end{array}
+\right] + x_3
+\left[
+\begin{array}{c}
+v_{13} \\
+v_{23} \\
+v_{33} \\
+\vdots \\
+v_{m3}
+\end{array}
+\right] + \cdots + x_k
+\left[
+\begin{array}{c}
+v_{1k} \\
+v_{2k} \\
+v_{3k} \\
+\vdots \\
+v_{mk}
+\end{array}
+\right] =
+\left[
+\begin{array}{c}
+b_{1} \\
+b_{2} \\
+b_{3} \\
+\vdots \\
+b_{m}
+\end{array}
+\right],
+\end{equation} que, por sua vez, é equivalente a
+\begin{equation}
+\left[
+\begin{array}{c}
+v_{11} x_1 + v_{12} x_2 + v_{13} x_3 + \cdots + v_{1k} x_k  \\
+v_{21} x_1 + v_{22} x_2 + v_{23} x_3 + \cdots + v_{2k} x_k  \\
+v_{31} x_1 + v_{32} x_2 + v_{33} x_3 + \cdots + v_{3k} x_k  \\
+\vdots  \\
+v_{m1} x_1 + v_{m2} x_2 + v_{m3} x_3 + \cdots + v_{mk} x_k
+\end{array}
+\right] =
+\left[
+\begin{array}{c}
+b_{1} \\
+b_{2} \\
+b_{3} \\
+\vdots \\
+b_{m}
+\end{array}
+\right].
+\end{equation} Mas isto é resolver um sistema linear! Portanto este conceito (aparentemente) novo está intimamente relacionado com tudo o que já tínhamos visto antes.
+
+
+O \textbf{espaço gerado} por todas as combinações lineares dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ é denotado por $\Span \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_k \}$.
+
+\begin{itemize}
+	\item Vimos que o conjunto gerado pelos dois vetores do exemplo anterior é o plano inteiro, isto é, $\Span \{ \vec{v}_1, \vec{v}_2 \} = \mathbb{R}^2$.
+	\item Nota que o vetor nulo sempre pertence ao espaço gerado, assim como todos os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$.
+	\item O conjunto gerado por apenas um vetor não nulo representa uma reta.
+\end{itemize}
+
+
+
+\section{Multiplicação de matriz por vetor e representação matricial para sistemas lineares} 
+
+Se $A$ é uma matriz com $m$ linhas e $n$ colunas, e $\vec{v}$ é um vetor do $\mathbb{R}^n$, então definimos o {\bf produto da matriz $A$ pelo vetor $\vec{v}$ } como o vetor de $\mathbb{R}^m$ resultante da combinação linear das colunas de $A$ com coeficientes dados pelas entradas do vetor $\vec{v}$.
+
+\begin{ex}
+	\begin{equation}
+	\left[
+	\begin{array}{ccc}
+	2 &  1 & 3  \\
+	4 & -3 & 5  
+	\end{array}
+	\right]
+	\left[
+	\begin{array}{c}
+	2   \\
+	3  \\
+	5
+	\end{array}
+	\right] = 2
+	\left[
+	\begin{array}{c}
+    2   \\
+	4  
+	\end{array}
+	\right]
+	+3 \left[
+	\begin{array}{c}
+	1   \\
+	-3  
+	\end{array}
+	\right]+
+	5
+	\left[
+	\begin{array}{c}
+	3   \\
+	5 	
+	\end{array}
+	\right]=
+	\left[
+	\begin{array}{c}
+	22   \\
+	24  
+	\end{array}
+	\right].
+	\end{equation}
+\end{ex}
+
 
 Na linguagem da seção anterior, nós dizemos que dois vetores são iguais quando todas as suas componentes são iguais. Desta forma, podemos interpretar as equações de um sistema linear
 \begin{equation}
@@ -252,7 +539,7 @@ Na linguagem da seção anterior, nós dizemos que dois vetores são iguais quan
       2
     \end{array}
   \right].
-\end{equation} Além disso, é desta forma que surge naturalmente o \textbf{produto de uma matriz por um vetor}:
+\end{equation} Além disso, é desta forma que surge naturalmente o produto de uma matriz por um vetor:
 \begin{equation}
   \left[
     \begin{array}{cc}
@@ -390,7 +677,11 @@ a_{m1}&a_{m2}&\cdots &a_{mn}
 
 \subsection*{Exercícios resolvidos}
 
-\construirExeresol
+
+
+	\construirExeresol
+
+
 
 \begin{exeresol}
 Dado os vetores abaixo, resolva $4\vec{u}$, $10\vec{v}$ e $3\vec{u} + 2\vec{v}$.
@@ -532,235 +823,16 @@ Também podemos dizer que $A$ é a matriz dos coeficientes das variáveis, $\vec
 \end{resol}
 
 
-\subsection*{Exercícios}
-
-\construirExer
-
-
-\section{Combinações lineares de vetores}
-
-Uma \textbf{combinação linear} dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ é um vetor da forma:
-\begin{equation}
-\vec{v} = x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \sum_{i=1}^k x_i \vec{v}_i,
-\end{equation} onde $x_1, x_2, \dots, x_k$ são números reais. Em outras palavras, uma combinação linear é uma soma de múltiplos dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$.
-
-
-\begin{ex}
-Para os vetores
-\begin{equation}
-\vec{v}_1 = \left[
-  \begin{array}{c}
-    1 \\
-    -1
-  \end{array}
-\right] \quad \text{e} \quad
-\vec{v}_2 = \left[
-  \begin{array}{c}
-    1 \\
-    3
-  \end{array}
-\right],
-\end{equation} algumas combinações lineares são:
-\begin{itemize}
-  \item $\vec{v}_1 + \vec{v}_2 =
-  \left[
-  \begin{array}{c}
-    1 \\
-    -1
-  \end{array}
-\right] +
-\left[
-  \begin{array}{c}
-    1 \\
-    3
-  \end{array}
-\right] =
-\left[
-  \begin{array}{c}
-    2 \\
-    2
-  \end{array}
-\right];$
-  \item $ 4 \vec{v}_1 = 4 \vec{v}_1 + 0 \vec{v}_2 =
-  4 \left[
-  \begin{array}{c}
-    1 \\
-    -1
-  \end{array}
-\right] =
-\left[
-  \begin{array}{c}
-    4 \\
-    -4
-  \end{array}
-\right];$
-  \item $ \vec{v}_2 = 0\vec{v}_1 + 1\vec{v}_2 =
-   \left[
-  \begin{array}{c}
-    1 \\
-    3
-  \end{array}
-\right];$
-  \item $0\vec{v}_1 + 0 \vec{v}_2 =
-  \left[
-  \begin{array}{c}
-    0 \\
-    0
-  \end{array}
-\right] = \vec{0}.$
-\end{itemize} \textbf{Geometricamente}, qualquer vetor do plano pode ser representado como combinação linear de vetores que não são colineares.
-
-Vamos ilustrar este fato na figura abaixo.
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=0.4\linewidth]{Semana02/semana02-comblinear1}
-\includegraphics[width=0.4\linewidth]{Semana02/semana02-comblinear3}
-\end{center}
-\end{figure}
-Por exemplo, para representar o vetor $\vec{v}$ como combinação linear de $\vec{v}_1$ e $\vec{v}_2$, podemos traçar retas paralelas aos vetores, passando pela origem e pela extremidade do vetor $\vec{v}$, como na figura da direita. Assim, pela interpretação geométrica da soma de vetores (ver início deste capítulo), sabemos que $\vec{v}$ é a soma dos vetores em azul. Mas estes, por construção, são colineares aos vetores iniciais e logo múltiplos destes. Concluimos que
-\begin{equation}
-\vec{v} = \alpha \vec{v}_1 + \beta \vec{v}_2,
-\end{equation} isto é, $\vec{v}$ é uma combinação linear de $\vec{v}_1$ e $\vec{v}_2$. $\ \lhd$
-\end{ex}
 
 
 
-De forma mais geral, nós dizemos que um vetor $\vec{v} \in \mathbb{R}^m$ é combinação linear dos $k$ vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \mathbb{R}^m$ quando conseguirmos encontrar números reais $x_1, x_2, \dots, x_k$ tais que
-\begin{equation}
-x_1 \vec{v}_1 + x_2 \vec{v}_2 + \dots + x_k \vec{v}_k = \vec{v}.
-\end{equation} Nós vamos nos referir a este tipo de equação por \textbf{equação vetorial}. Para decidir se um vetor é combinação linear de outros, devemos decidir se existem estes números reais $x_1, x_2, \dots, x_k$. Escrevendo em coordenadas:
-\begin{equation}
-\vec{v}_1 =
-\left[
-  \begin{array}{c}
-    v_{11} \\
-    v_{21} \\
-    v_{31} \\
-    \vdots \\
-    v_{m1}
-  \end{array}
-\right], \
-\vec{v}_2 =
-\left[
-  \begin{array}{c}
-    v_{12} \\
-    v_{22} \\
-    v_{32} \\
-    \vdots \\
-    v_{m2}
-  \end{array}
-\right], \
-\vec{v}_3 =
-\left[
-  \begin{array}{c}
-    v_{13} \\
-    v_{23} \\
-    v_{33} \\
-    \vdots \\
-    v_{m3}
-  \end{array}
-\right], \ \cdots, \
-\vec{v}_k =
-\left[
-  \begin{array}{c}
-    v_{1k} \\
-    v_{2k} \\
-    v_{3k} \\
-    \vdots \\
-    v_{mk}
-  \end{array}
-\right], \
-\vec{v} =
-\left[
-  \begin{array}{c}
-    b_{1} \\
-    b_{2} \\
-    b_{3} \\
-    \vdots \\
-    b_{m}
-  \end{array}
-\right],
-\end{equation} vemos que encontrar os coeficientes da combinação linear, caso estes existam, equivale a resolver a equação vetorial
-\begin{equation}
-x_1 \left[
-  \begin{array}{c}
-    v_{11} \\
-    v_{21} \\
-    v_{31} \\
-    \vdots \\
-    v_{m1}
-  \end{array}
-\right] + x_2
-\left[
-  \begin{array}{c}
-    v_{12} \\
-    v_{22} \\
-    v_{32} \\
-    \vdots \\
-    v_{m2}
-  \end{array}
-\right] + x_3
-\left[
-  \begin{array}{c}
-    v_{13} \\
-    v_{23} \\
-    v_{33} \\
-    \vdots \\
-    v_{m3}
-  \end{array}
-\right] + \cdots + x_k
-\left[
-  \begin{array}{c}
-    v_{1k} \\
-    v_{2k} \\
-    v_{3k} \\
-    \vdots \\
-    v_{mk}
-  \end{array}
-\right] =
-\left[
-  \begin{array}{c}
-    b_{1} \\
-    b_{2} \\
-    b_{3} \\
-    \vdots \\
-    b_{m}
-  \end{array}
-\right],
-\end{equation} que, por sua vez, é equivalente a
-\begin{equation}
-\left[
-  \begin{array}{c}
-   v_{11} x_1 + v_{12} x_2 + v_{13} x_3 + \cdots + v_{1k} x_k  \\
-   v_{21} x_1 + v_{22} x_2 + v_{23} x_3 + \cdots + v_{2k} x_k  \\
-   v_{31} x_1 + v_{32} x_2 + v_{33} x_3 + \cdots + v_{3k} x_k  \\
-   \vdots  \\
-   v_{m1} x_1 + v_{m2} x_2 + v_{m3} x_3 + \cdots + v_{mk} x_k
-  \end{array}
-\right] =
-\left[
-  \begin{array}{c}
-    b_{1} \\
-    b_{2} \\
-    b_{3} \\
-    \vdots \\
-    b_{m}
-  \end{array}
-\right].
-\end{equation} Mas isto é resolver um sistema linear! Portanto este conceito (aparentemente) novo está intimamente relacionado com tudo o que já tínhamos visto antes.
 
 
-O \textbf{espaço gerado} por todas as combinações lineares dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$ é denotado por $\Span \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_k \}$.
 
-\begin{itemize}
-\item Vimos que o conjunto gerado pelos dois vetores do exemplo anterior é o plano inteiro, isto é, $\Span \{ \vec{v}_1, \vec{v}_2 \} = \mathbb{R}^2$.
-\item Nota que o vetor nulo sempre pertence ao espaço gerado, assim como todos os vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k$.
-\item O conjunto gerado por apenas um vetor não nulo representa uma reta.
-\end{itemize}
 
-\subsection*{Exercícios resolvidos}
 
-\construirExeresol
+
+
 
 \begin{exeresol}
 Escreva o vetor $\vec{v}$ como uma combinação linear dos vetores $\vec{e_1}$, $\vec{e_2}$, e $\vec{e_3}$.
@@ -1000,9 +1072,13 @@ Novamente, temos um sistema de equações lineares para resolver. Verifique que 
 Ou seja, o valor de $k$ que faz com que $\vec{v}$ possa ser representado como uma combinação linear de $\vec{e_1}$ e $\vec{e_2}$ é $k = \frac{17}{3}$. 
 \end{resol}
 
+
+
 \subsection*{Exercícios}
 
 \construirExer
+
+
 
 
 \section{Sistemas lineares e combinações lineares das colunas}
