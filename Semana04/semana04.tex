@@ -20,21 +20,21 @@ A operação de soma de matrizes e de multiplicação por escalar são definidas
 \begin{array}{cccc}
 1 & -1 & \pi & 0 \\
 11 & 11 & -2 & 0 \\
-9 & 0 & 4 & 4 \\
+9 & 0 & 4 & 4 
 \end{array}
 \right] +
 \left[
 \begin{array}{cccc}
 1 & 4 & 1 & 9 \\
 -5 & 10 & 2 & 11 \\
--3 & 8 & 0 & -6 \\
+-3 & 8 & 0 & -6 
 \end{array}
 \right] & =
 \left[
 \begin{array}{cccc}
 1+1 & -1 +4 & \pi + 1 & 0+ 9 \\
 11-5 & 11+10 & -2+2 & 0+11 \\
-9-3 & 0+8 & 4+0 & 4-6 \\
+9-3 & 0+8 & 4+0 & 4-6 
 \end{array}
 \right] \\
 & =
@@ -42,7 +42,7 @@ A operação de soma de matrizes e de multiplicação por escalar são definidas
 \begin{array}{cccc}
 2 & 3 & \pi + 1 & 9 \\
 6 & 21 & 0 & 11 \\
-6 & 8 & 4 & -2 \\
+6 & 8 & 4 & -2 
 \end{array}
 \right]
 \end{align*}
@@ -52,21 +52,21 @@ enquanto
 \begin{array}{cccc}
 1 & 4 & 1 & 9 \\
 -5 & 10 & 2 & 11 \\
--3 & 8 & 0 & -6 \\
+-3 & 8 & 0 & -6 
 \end{array}
 \right] =
 \left[
 \begin{array}{cccc}
 5\cdot 1 & 5\cdot 4 & 5\cdot 1 & 5\cdot 9 \\
 5\cdot (-5) & 5\cdot 10 & 5\cdot 2 & 5\cdot 11 \\
-5\cdot (-3) & 5\cdot 8 & 5\cdot 0 & 5\cdot (-6) \\
+5\cdot (-3) & 5\cdot 8 & 5\cdot 0 & 5\cdot (-6) 
 \end{array}
 \right] =
 \left[
 \begin{array}{cccc}
 5 & 20 & 5 & 45 \\
 -25 & 50 & 10 & 55 \\
--15 & 40 & 0 & -30 \\
+-15 & 40 & 0 & -30
 \end{array}
 \right].
 \end{equation}
@@ -89,7 +89,7 @@ A \vec{x} = \left[
 a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &        & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn} \\
+a_{m1} & a_{m2} & \cdots & a_{mn} 
 \end{array}
 \right]
 \left[
@@ -97,7 +97,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} \\
 x_{1} \\
 x_{2} \\
 \vdots \\
-x_{n} \\
+x_{n} 
 \end{array}
 \right] =
 \left[
@@ -105,7 +105,7 @@ x_{n} \\
 a_{11} x_{1} + a_{12} x_{2} + \cdots  a_{1n} x_{n} \\
 a_{21} x_{1} + a_{22} x_{2} + \cdots  a_{2n} x_{n} \\
 \vdots \\
-a_{m1} x_{1} + a_{m2} x_{2} + \cdots  a_{mn} x_{n} \\
+a_{m1} x_{1} + a_{m2} x_{2} + \cdots  a_{mn} x_{n} 
 \end{array}
 \right].
 \end{equation} O resultado é um vetor  de $\mathbb{R}^m$ (ou matriz de ordem $m\times 1$). Observamos que necessariamente o número de colunas da matriz $A$ deve ser igual ao número de linhas do vetor $\vec{x}$, para que seja possível realizar o produto como indicado.
@@ -116,19 +116,19 @@ Vamos generalizar este procedimento para definir o produto entre duas matrizes d
 a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &        & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn} \\
+a_{m1} & a_{m2} & \cdots & a_{mn} 
 \end{bmatrix}
 \begin{bmatrix} 
 x_{1} & y_1 \\
 x_{2} & y_2 \\
 \vdots & \vdots \\
-x_{n} & y_n \\
+x_{n} & y_n 
 \end{bmatrix} =
 \begin{bmatrix}
 a_{11} x_{1} + a_{12} x_{2} + \cdots + a_{1n} x_{n} & a_{11} y_{1} + a_{12} y_{2} + \cdots + a_{1n} y_{n}\\
 a_{21} x_{1} + a_{22} x_{2} + \cdots + a_{2n} x_{n} & a_{21} y_{1} + a_{22} y_{2} + \cdots + a_{2n} y_{n}\\
 \vdots & \vdots \\
-a_{m1} x_{1} + a_{m2} x_{2} + \cdots + a_{mn} x_{n} & a_{m1} y_{1} + a_{m2} y_{2} + \cdots + a_{mn} y_{n}\\
+a_{m1} x_{1} + a_{m2} x_{2} + \cdots + a_{mn} x_{n} & a_{m1} y_{1} + a_{m2} y_{2} + \cdots + a_{mn} y_{n}
 \end{bmatrix}.
 \end{equation} O resultado é portanto uma matriz de ordem $m\times 2$.
 
@@ -144,21 +144,21 @@ A B =
 a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &        & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn} \\
+a_{m1} & a_{m2} & \cdots & a_{mn} 
 \end{array}
 \right]
 \left[
 \begin{array}{cccc}
 | & |  &   & | \\
 \vec{b}_{1} & \vec{b}_{2} & \cdots & \vec{b}_{p} \\
-| & |  &   & | \\
+| & |  &   & | 
 \end{array}
 \right] =
 \left[
 \begin{array}{cccc}
 | & |  &   & | \\
 A\vec{b}_{1} & A\vec{b}_{2} & \cdots & A\vec{b}_{p} \\
-| & |  &   & | \\
+| & |  &   & | 
 \end{array}
 \right].
 \end{equation} Acima, $\vec{b}_{1}, \vec{b}_{2}, \dots, \vec{b}_{p} \in \mathbb{R}^n$ são as colunas da matriz $B$. Conclua que $A\vec{b}_{1}, A\vec{b}_{2}, \dots, A\vec{b}_{p} \in \mathbb{R}^m$ e que $AB$ é uma matriz de ordem $m \times p$.
@@ -173,7 +173,7 @@ Vamos mostrar algumas contas que exemplificam tanto o procedimento quanto alguma
 	\left[
 	\begin{array}{cccc}
 	1 & -1 & \pi & 0 \\
-	11 & 11 & -2 & 0 \\
+	11 & 11 & -2 & 0 
 	\end{array}
 	\right] \cdot
 	\left[
@@ -181,13 +181,13 @@ Vamos mostrar algumas contas que exemplificam tanto o procedimento quanto alguma
 	1 & 4 & 1 & 9 \\
 	-5 & 10 & 2 & 11 \\
 	-3 & 8 & 0 & -6 \\
-	0 & 2 & -2 & 0 \\
+	0 & 2 & -2 & 0 
 	\end{array}
 	\right]  =
 	\left[
 	\begin{array}{cccc}
 	6-3\pi   & -6 + 8\pi &   -1   &  -2 - 6 \pi  \\
-	50      &  138      &  33    &  232         \\
+	50      &  138      &  33    &  232         
 	\end{array}
 	\right].
 	\end{equation} O elemento $(AB)_{ij}$ da linha $i$ e coluna $j$ da matriz $AB$, pode ser obtido ao ``multiplicar''\footnote{O leitor já familiarizado com geometria analítica pode identificar o elemento $ij$ da matriz resultante como o produto escalar entre a linha $i$ de $A$ e a coluna $j$ de $B$.} a linha $i$ de $A$ pela coluna $j$ de B:
@@ -217,19 +217,19 @@ Vamos mostrar algumas contas que exemplificam tanto o procedimento quanto alguma
 	\left[
 	\begin{array}{cc}
 	1 & -1  \\
-	0 &  1  \\
+	0 &  1  
 	\end{array}
 	\right]
 	\left[
 	\begin{array}{cc}
 	1 & -1  \\
-	1 &  2  \\
+	1 &  2  
 	\end{array}
 	\right] =
 	\left[
 	\begin{array}{cc}
 	0 & -3  \\
-	1 &  2  \\
+	1 &  2  
 	\end{array}
 	\right]
 	\end{equation} enquanto
@@ -237,19 +237,19 @@ Vamos mostrar algumas contas que exemplificam tanto o procedimento quanto alguma
 	\left[
 	\begin{array}{cc}
 	1 & -1  \\
-	1 &  2  \\
+	1 &  2  
 	\end{array}
 	\right]
 	\left[
 	\begin{array}{cc}
 	1 & -1  \\
-	0 &  1  \\
+	0 &  1  
 	\end{array}
 	\right] =
 	\left[
 	\begin{array}{cc}
 	1 & 0  \\
-	1 & -1  \\
+	1 & -1  
 	\end{array}
 	\right]. \ \lhd
 	\end{equation}
@@ -268,7 +268,7 @@ Nós podemos pensar em
 a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &        & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn} \\
+a_{m1} & a_{m2} & \cdots & a_{mn} 
 \end{array}
 \right]
 \left[
@@ -276,7 +276,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} \\
 x_{1} & y_1 \\
 x_{2} & y_2 \\
 \vdots & \vdots \\
-x_{n} & y_n \\
+x_{n} & y_n 
 \end{array}
 \right] =
 \left[
@@ -284,7 +284,7 @@ x_{n} & y_n \\
 b_1 & c_1 \\
 b_2 & c_2 \\
 \vdots & \vdots \\
-b_{n} & c_{n}\\
+b_{n} & c_{n}
 \end{array}
 \right]
 \end{equation} como a forma matricial de escrever dois sistemas lineares que possuem a mesma matriz associada:
@@ -305,7 +305,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} \\
 a_{11} & a_{12} & \cdots & a_{1n} & b_1 & c_1 \\
 a_{21} & a_{22} & \cdots & a_{2n} & b_2 & c_2\\
 \vdots & \vdots &        & \vdots  & \vdots & \vdots \\
-a_{m1} & a_{m2} & \cdots & a_{mn} & b_{n} & c_{n}\\
+a_{m1} & a_{m2} & \cdots & a_{mn} & b_{n} & c_{n}
 \end{array}
 \right]
 \end{equation} A análise das soluções é feita da mesma forma que aprendemos nas notas da primeira semana. Observem que esta é uma forma de economizar as contas e não precisar escalonar duas vezes a matriz $A$ associada!
@@ -337,33 +337,33 @@ A \textbf{matriz transposta} de uma matriz $A$, de ordem $m\times n$, é a matri
 	\begin{array}{c}
 	-1  \\
 	10  \\
-	-9  \\
+	-9  
 	\end{array}
 	\right], \quad
 	B = \left[
 	\begin{array}{cc}
 	1 & -1  \\
-	2 & 11 \\
+	2 & 11 
 	\end{array}
 	\right], \quad
 	C = \left[
 	\begin{array}{cccc}
 	1  & -1 & \pi & 0 \\
 	11 & 11 & -2  & 0 \\
-	9  & 4  & 4   & 4 \\
+	9  & 4  & 4   & 4 
 	\end{array}
 	\right]
 	\end{equation} são, respectivamente, as matrizes
 	\begin{equation}
 	A^T = \left[
 	\begin{array}{ccc}
-	-1 & 10 & 9  \\
+	-1 & 10 & 9  
 	\end{array}
 	\right], \quad
 	B^T = \left[
 	\begin{array}{cc}
 	1  & 2  \\
-	-1 & 11 \\
+	-1 & 11 
 	\end{array}
 	\right], \quad
 	C^T = \left[
@@ -371,7 +371,7 @@ A \textbf{matriz transposta} de uma matriz $A$, de ordem $m\times n$, é a matri
 	1   & 11 & 9 \\
 	-1  & 11 & 4 \\
 	\pi & -2 & 4 \\
-	0  & 0  & 4 \\
+	0  & 0  & 4 
 	\end{array}
 	\right]. \ \lhd
 	\end{equation}
@@ -409,7 +409,7 @@ I_3 =
 \begin{array}{ccc}
 1 & 0 & 0 \\
 0 & 1 & 0 \\
-0 & 0 & 1 \\
+0 & 0 & 1 
 \end{array}
 \right].
 \end{equation} Esta matriz satisfaz $A I_n = A$ para qualquer matriz $A$ de ordem $m \times n$. Da mesma forma, temos $I_n B = B$ para qualquer matriz $B$ de ordem $n \times m$ (observe atentamente os índices!). O nome identidade vem desta propriedade, que é parecida com a propriedade da unidade nos números reais: $1\cdot x = x = x\cdot 1$.
@@ -431,7 +431,7 @@ Vamos procurar pela inversa de
 A = \left[
 \begin{array}{cc}
 a & b  \\
-c & d \\
+c & d 
 \end{array}
 \right].
 \end{equation} Escrevemos
@@ -439,7 +439,7 @@ c & d \\
 A^{-1} = \left[
 \begin{array}{cc}
 x_1 & y_1  \\
-x_2 & y_2 \\
+x_2 & y_2 
 \end{array}
 \right]
 \end{equation} e queremos descobrir os valores $x_1, x_2, y_1, y_2$ que satisfazem
@@ -447,19 +447,19 @@ x_2 & y_2 \\
 \left[
 \begin{array}{cc}
 a & b  \\
-c & d \\
+c & d 
 \end{array}
 \right]
 \left[
 \begin{array}{cc}
 x_1 & y_1  \\
-x_2 & y_2 \\
+x_2 & y_2 
 \end{array}
 \right] =
 \left[
 \begin{array}{cc}
 1 & 0 \\
-0 & 1 \\
+0 & 1 
 \end{array}
 \right]
 \end{equation} Pela interpretação que demos anteriormente ao produto de matrizes, encontrar
@@ -467,13 +467,13 @@ x_2 & y_2 \\
 \vec{x} = \left[
 \begin{array}{c}
 x_1   \\
-x_2  \\
+x_2  
 \end{array}
 \right] \quad \text{e} \quad
 \vec{y} = \left[
 \begin{array}{c}
 y_1  \\
-y_2 \\
+y_2 
 \end{array}
 \right]
 \end{equation} é equivalente a resolver ao mesmo tempo os dois sistemas
@@ -482,14 +482,14 @@ A \vec{x} =
 \left[
 \begin{array}{c}
 1  \\
-0 \\
+0 
 \end{array}
 \right] = \vec{e}_1 \quad \text{e} \quad
 A \vec{y} =
 \left[
 \begin{array}{c}
 0  \\
-1 \\
+1 
 \end{array}
 \right] = \vec{e}_2.
 \end{equation} A ideia é então resolver por escalonamento os sistemas cuja matriz aumentada associada é:
@@ -497,7 +497,7 @@ A \vec{y} =
 \left[
 \begin{array}{cc|cc}
 a & b & 1 & 0 \\
-c & d & 0 & 1 \\
+c & d & 0 & 1 
 \end{array}
 \right].
 \end{equation} Tem-se
@@ -505,19 +505,19 @@ c & d & 0 & 1 \\
 \left[
 \begin{array}{cc|cc}
 a & b & 1 & 0 \\
-c & d & 0 & 1 \\
+c & d & 0 & 1 
 \end{array}
 \right] \xrightarrow{c\cdot \ell_1 \text{ e } a\cdot \ell_2}
 \left[
 \begin{array}{cc|cc}
 ac & bc & c & 0 \\
-ac & ad & 0 & a \\
+ac & ad & 0 & a 
 \end{array}
 \right] \xrightarrow{-\ell_1 + \ell_2 \text{ em } \ell_2}
 \left[
 \begin{array}{cc|cc}
 ac & bc      & c  & 0 \\
-0 & ad - bc & -c & a \\
+0 & ad - bc & -c & a 
 \end{array}
 \right]
 \end{equation}
@@ -526,13 +526,13 @@ ac & bc      & c  & 0 \\
 \left[
 \begin{array}{cc|cc}
 ac & bc      & c  & 0 \\
-0 & 1 & \frac{-c}{ad - bc} & \frac{a}{ad - bc} \\
+0 & 1 & \frac{-c}{ad - bc} & \frac{a}{ad - bc} 
 \end{array}
 \right]  \xrightarrow{-bc\ell_2 + \ell_1 \text{ em } \ell_1}
 \left[
 \begin{array}{cc|cc}
 ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
-0 & 1 & \frac{-c}{ad - bc}  & \frac{a}{ad - bc} \\
+0 & 1 & \frac{-c}{ad - bc}  & \frac{a}{ad - bc} 
 \end{array}
 \right]
 \end{equation}
@@ -541,7 +541,7 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 \left[
 \begin{array}{cc|cc}
 1 & 0 & \frac{ d}{ad - bc}  & \frac{-b}{ad - bc} \\
-0 & 1 & \frac{-c}{ad - bc}  & \frac{ a}{ad - bc} \\
+0 & 1 & \frac{-c}{ad - bc}  & \frac{ a}{ad - bc} 
 \end{array}
 \right].
 \end{equation} Daí concluimos (depois colocar em evidência o fator $ad - bc$ que está dividindo) que:
@@ -549,13 +549,13 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 \boxed{A^{-1} = \frac{1}{ad - bc} \left[
 	\begin{array}{cc}
 	d  & -b  \\
-	-c & a \\
+	-c & a 
 	\end{array}
 	\right] =
 	\frac{1}{\det A} \left[
 	\begin{array}{cc}
 	d  & -b  \\
-	-c & a \\
+	-c & a 
 	\end{array}
 	\right].}
 \end{equation} Nesta última expressão, definimos o \textbf{determinante} de uma matriz de ordem $2\times 2$:
@@ -583,19 +583,19 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 	A = \left[
 	\begin{array}{cc}
 	1 & 1  \\
-	-1 & 3 \\
+	-1 & 3 
 	\end{array}
 	\right], \quad
 	B = \left[
 	\begin{array}{cc}
 	1 & 0  \\
-	1 & 1 \\
+	1 & 1 
 	\end{array}
 	\right], \quad
 	C = \left[
 	\begin{array}{cc}
 	-1 & -1  \\
-	2 & 2 \\
+	2 & 2 
 	\end{array}
 	\right].
 	\end{equation} Calculamos
@@ -608,13 +608,13 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 	\left[
 	\begin{array}{cc}
 	3 & -1  \\
-	1 & 1 \\
+	1 & 1 
 	\end{array}
 	\right] =
 	\left[
 	\begin{array}{cc}
 	3/4 & -1/4  \\
-	1/4 & 1/4 \\
+	1/4 & 1/4 
 	\end{array}
 	\right].
 	\end{equation}(trocamos de lugar os elementos da diagonal principal e de sinal os elementos da outra diagonal).
@@ -628,13 +628,13 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 	\left[
 	\begin{array}{cc}
 	1 & -1  \\
-	1 & 1 \\
+	1 & 1 
 	\end{array}
 	\right] =
 	\left[
 	\begin{array}{cc}
 	3/4 & -1/4  \\
-	1/4 & 1/4 \\
+	1/4 & 1/4 
 	\end{array}
 	\right].
 	\end{equation}(trocamos de lugar os elementos da diagonal principal -- neste caso eram iguais -- e de sinal dos elementos da outra diagonal).
@@ -658,7 +658,7 @@ A =
 a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &        & \vdots \\
-a_{n1} & a_{n2} & \cdots & a_{nn} \\
+a_{n1} & a_{n2} & \cdots & a_{nn} 
 \end{array}
 \right].
 \end{equation} Para obter a matriz inversa, devemos ter:
@@ -668,7 +668,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn} \\
 a_{11} & a_{12} & \cdots & a_{1n} \\
 a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &        & \vdots \\
-a_{n1} & a_{n2} & \cdots & a_{nn} \\
+a_{n1} & a_{n2} & \cdots & a_{nn} 
 \end{array}
 \right]
 \left[
@@ -676,7 +676,7 @@ a_{n1} & a_{n2} & \cdots & a_{nn} \\
 x_{11} & x_{12} & \cdots & x_{1n} \\
 x_{21} & x_{22} & \cdots & x_{2n} \\
 \vdots & \vdots &        & \vdots \\
-x_{n1} & x_{n2} & \cdots & x_{nn} \\
+x_{n1} & x_{n2} & \cdots & x_{nn} 
 \end{array}
 \right]
 =
@@ -685,7 +685,7 @@ x_{n1} & x_{n2} & \cdots & x_{nn} \\
 1   &    0   & \cdots &    0   \\
 0   &    1   & \cdots &    0   \\
 \vdots & \vdots &        & \vdots \\
-0   &    0   & \cdots &    1   \\
+0   &    0   & \cdots &    1   
 \end{array}
 \right].
 \end{equation} Da mesma forma que na seção anterior, isto é equivalente a resolver simultaneamente os sistemas:
@@ -698,7 +698,7 @@ A \vec{x}_1 = \vec{e}_1, \quad A \vec{x}_2 = \vec{e}_2, \dots, A \vec{x}_n = \ve
 a_{11} & a_{12} & \cdots & a_{1n} &   1   &    0   & \cdots &    0 \\
 a_{21} & a_{22} & \cdots & a_{2n} &   0   &    1   & \cdots &    0\\
 \vdots & \vdots &        & \vdots &   \vdots & \vdots &        & \vdots  \\
-a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
+a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1
 \end{array}
 \right]
 \end{equation} ou, de forma mais sucinta,
@@ -725,7 +725,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	2 & 1 & 1 & 0 \\
 	4 & 3 & 3 & 1 \\
 	8 & 7 & 9 & 5 \\
-	6 & 7 & 9 & 8 \\
+	6 & 7 & 9 & 8 
 	\end{array}
 	\right].
 	\end{equation} De acordo com o algoritmo, devemos escalonar
@@ -735,7 +735,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	2 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
 	4 & 3 & 3 & 1 & 0 & 1 & 0 & 0 \\
 	8 & 7 & 9 & 5 & 0 & 0 & 1 & 0 \\
-	6 & 7 & 9 & 8 & 0 & 0 & 0 & 1 \\
+	6 & 7 & 9 & 8 & 0 & 0 & 0 & 1 
 	\end{array}
 	\right].
 	\end{equation} Caso a matriz seja invertível, conseguiremos deixar a matriz identidade do lado esquerdo desta matriz aumentada. Começamos eliminando os termos da primeira coluna (abaixo do $2$ que está na posição de pivô):
@@ -745,7 +745,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	2 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
 	0 & 1 & 1 & 1 & -2 & 1 & 0 & 0 \\
 	0 & 3 & 5 & 5 & -4 & 0 & 1 & 0 \\
-	0 & 4 & 6 & 8 & -3 & 0 & 0 & 1 \\
+	0 & 4 & 6 & 8 & -3 & 0 & 0 & 1 
 	\end{array}
 	\right] \xrightarrow{\text{segunda coluna}}
 	\left[
@@ -753,7 +753,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	2 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
 	0 & 1 & 1 & 1 & -2 & 1 & 0 & 0 \\
 	0 & 0 & 2 & 2 & 2 & -3 & 1 & 0 \\
-	0 & 0 & 2 & 4 & 5 & -4 & 0 & 1 \\
+	0 & 0 & 2 & 4 & 5 & -4 & 0 & 1 
 	\end{array}
 	\right]
 	\end{equation}
@@ -764,7 +764,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	2 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
 	0 & 1 & 1 & 1 & -2 & 1 & 0 & 0 \\
 	0 & 0 & 2 & 2 & 2 & -3 & 1 & 0 \\
-	0 & 0 & 0 & 2 & 3 & -1 & -1 & 1 \\
+	0 & 0 & 0 & 2 & 3 & -1 & -1 & 1 
 	\end{array}
 	\right]
 	\xrightarrow{\text{reduzida -- }4^a}
@@ -773,7 +773,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	2 & 1 & 1 & 0 & 1 & 0 & 0 & 0 \\
 	0 & 1 & 1 & 0 & -7/2 & 3/2 & 1/2 & -1/2 \\
 	0 & 0 & 1 & 0 & -1/2 & -1 & 1 & -1/2 \\
-	0 & 0 & 0 & 2 & 3 & -1 & -1 & 1 \\
+	0 & 0 & 0 & 2 & 3 & -1 & -1 & 1 
 	\end{array}
 	\right]
 	\end{equation}
@@ -784,7 +784,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	2 & 1 & 0 & 0 & 3/2 & 1 & -1 & 1/2 \\
 	0 & 1 & 0 & 0 & -3 & 5/2 & -1/2 & 0 \\
 	0 & 0 & 1 & 0 & -1/2 & -1 & 1 & -1/2 \\
-	0 & 0 & 0 & 1 & 3/2 & -1/2 & -1/2 & 1/2 \\
+	0 & 0 & 0 & 1 & 3/2 & -1/2 & -1/2 & 1/2 
 	\end{array}
 	\right]\to
 	\left[
@@ -792,7 +792,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	1 & 0 & 0 & 0 & 9/4 & -3/4 & -1/4 & 1/4 \\
 	0 & 1 & 0 & 0 & -3 & 5/2 & -1/2 & 0 \\
 	0 & 0 & 1 & 0 & -1/2 & -1 & 1 & -1/2 \\
-	0 & 0 & 0 & 1 & 3/2 & -1/2 & -1/2 & 1/2 \\
+	0 & 0 & 0 & 1 & 3/2 & -1/2 & -1/2 & 1/2 
 	\end{array}
 	\right].
 	\end{equation} Concluimos que
@@ -803,7 +803,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	9/4 & -3/4 & -1/4 & 1/4 \\
 	-3 & 5/2 & -1/2 & 0 \\
 	-1/2 & -1 & 1 & -1/2 \\
-	3/2 & -1/2 & -1/2 & 1/2 \\
+	3/2 & -1/2 & -1/2 & 1/2 
 	\end{array}
 	\right].
 	\end{equation} Verifique como exercício que esta matriz é de fato a matriz inversa de $A$, isto é, calcule o produto $A \cdot A^{-1}$ e verifique que resulta em $I_4$. 
@@ -815,7 +815,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	2 & 1 & 1 & 0 \\
 	0 & 1 & 1 & 1 \\
 	0 & 0 & 2 & 2 \\
-	0 & 0 & 0 & 2 \\
+	0 & 0 & 0 & 2 
 	\end{array}
 	\right],
 	\end{equation} pois já está claro que todas as colunas possuem posição de pivô. $\ \lhd$
@@ -831,7 +831,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	\begin{array}{cccc}
 	1 & 1 & 1  \\
 	1 & 3 & -3  \\
-	-3 & -9 & 9  \\
+	-3 & -9 & 9  
 	\end{array}
 	\right].
 	\end{equation} De acordo com o algoritmo, devemos escalonar
@@ -840,7 +840,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	\begin{array}{ccc|ccc}
 	1 & 1 & 1 & 1 & 0 & 0  \\
 	1 & 3 & -3 & 0 & 1 & 0  \\
-	-3 & -9 & 9  & 0 & 0 & 1 \\
+	-3 & -9 & 9  & 0 & 0 & 1 
 	\end{array}
 	\right].
 	\end{equation} Temos
@@ -849,14 +849,14 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	\begin{array}{ccc|ccc}
 	1 & 1 & 1 & 1 & 0 & 0  \\
 	0 & 2 & -4 & -1 & 1 & 0  \\
-	0 & -6 & 12  & 3 & 0 & 1 \\
+	0 & -6 & 12  & 3 & 0 & 1 
 	\end{array}
 	\right] \to
 	\left[
 	\begin{array}{ccc|ccc}
 	1 & 1 & 1 & 1 & 0 & 0  \\
 	0 & 2 & -4 & -1 & 1 & 0  \\
-	0 & 0 & 0  & 0 & 3 & 1 \\
+	0 & 0 & 0  & 0 & 3 & 1 
 	\end{array}
 	\right].
 	\end{equation} Portanto, a terceira coluna não possui posição de pivô e a matriz $A$ não possui inversa.
@@ -883,18 +883,18 @@ A existência da matriz inversa $A^{-1}$ permite-nos multiplicar ambos os lados 
 	A = \left[
 	\begin{array}{cc}
 	1 & 1  \\
-	-1 & 3 \\
+	-1 & 3 
 	\end{array}
 	\right] \left[
 	\begin{array}{c}
 	x_1  \\
-	x_2 \\
+	x_2 
 	\end{array}
 	\right] =
 	\left[
 	\begin{array}{c}
 	1  \\
-	2 \\
+	2 
 	\end{array}
 	\right].
 	\end{equation} Já calculamos a matriz inversa no Exemplo \ref{exp:2x2}:
@@ -903,7 +903,7 @@ A existência da matriz inversa $A^{-1}$ permite-nos multiplicar ambos os lados 
 	\left[
 	\begin{array}{cc}
 	3/4 & -1/4  \\
-	1/4 & 1/4 \\
+	1/4 & 1/4 
 	\end{array}
 	\right].
 	\end{equation} Segue que a solução é
@@ -912,18 +912,18 @@ A existência da matriz inversa $A^{-1}$ permite-nos multiplicar ambos os lados 
 	\left[
 	\begin{array}{cc}
 	3/4 & -1/4  \\
-	1/4 & 1/4 \\
+	1/4 & 1/4 
 	\end{array}
 	\right]\left[
 	\begin{array}{c}
 	1  \\
-	2 \\
+	2 
 	\end{array}
 	\right] =
 	\left[
 	\begin{array}{c}
 	1/4 \\
-	3/4 \\
+	3/4 
 	\end{array}
 	\right]. \ \lhd
 	\end{equation}
@@ -963,7 +963,7 @@ A \vec{x}_1 = \vec{e}_1, \quad A \vec{x}_2 = \vec{e}_2, \cdots, A \vec{x}_n = \v
 b_1 \\
 b_2 \\
 \vdots \\
-b_n \\
+b_n 
 \end{array}
 \right] = 
 b_1 \vec{e}_1 + b_2 \vec{e}_2 + \cdots + b_n \vec{e}_n,
