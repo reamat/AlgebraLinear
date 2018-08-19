@@ -109,7 +109,7 @@ Várias propriedades interessantes aparecem naturalmente como consequência da d
 \begin{equation}
 (x_1-k_1) \vec{v}_1 + (x_2-k_2) \vec{v}_2 + \cdots + (x_d-k_d) \vec{v}_d = \vec{v} - \vec{v} = \vec{0}.
 \end{equation} Sendo a base $\mathcal{B}$ formada por vetores LI, concluimos que os coeficientes da combinação linear acima devem ser nulos, isto é, $x_1=k_1, x_2=k_2,\dots,x_d=k_d$. Portanto,
-\begin{equation} 
+\begin{equation}
 \boxed{
 	\begin{array}{c}
 \text{Todo vetor pode ser representado de maneira única como combinação linear} \\ \text{dos elementos de uma base.}
@@ -117,7 +117,7 @@ Várias propriedades interessantes aparecem naturalmente como consequência da d
 }
 \end{equation}
 Uma segunda propriedade fundamental é a seguinte:
-\begin{equation} 
+\begin{equation}
 \boxed{
 	\text{Toda base de um espaço vetorial fixado possui o mesmo número de elementos.}
 }
@@ -129,12 +129,12 @@ Uma segunda propriedade fundamental é a seguinte:
 	\left\{
 	\begin{array}{rcl}
 	\vec{v}_1 &=& a_{11} \vec{w}_1 + a_{21} \vec{w}_2 + \cdots + a_{k1} \vec{w}_k \\
-	\vec{v}_2 &=& a_{12} \vec{w}_1 + a_{22} \vec{w}_2 + \cdots + a_{k2} \vec{w}_k \\ 
+	\vec{v}_2 &=& a_{12} \vec{w}_1 + a_{22} \vec{w}_2 + \cdots + a_{k2} \vec{w}_k \\
 	&     \vdots& \\
 	\vec{v}_d &=& a_{1d} \vec{w}_1 + a_{2d} \vec{w}_2 + \cdots + a_{kd} \vec{w}_k \\
 	\end{array}
 	\right.
-	\end{equation} O problema é que, se tivéssemos quantidades diferentes de vetores nas bases, digamos $k<d$, então a equação 
+	\end{equation} O problema é que, se tivéssemos quantidades diferentes de vetores nas bases, digamos $k<d$, então a equação
 	\begin{equation}\label{1111}
 	b_1 \vec{v}_1 + b_2 \vec{v}_2 + \cdots + b_d \vec{v}_d = \vec{0}
 	\end{equation} possuiria soluções não triviais, contradizendo o fato de ser $\mathcal{B}_1$ um conjunto linearmente independente. De fato, utilizando que $\mathcal{B}_1$ é linearmente independente, encontrar $b_1, b_2, \dots, b_k$ na equação \eqref{1111} fica equivalente a resolver
@@ -146,7 +146,7 @@ Uma segunda propriedade fundamental é a seguinte:
 	\vdots & \vdots &        & \vdots \\
 	a_{k1} & a_{k2} & \cdots & a_{kd} \\
 	\end{array}
-	\right] 
+	\right]
 	\left[
 	\begin{array}{c}
 	b_1 \\
@@ -154,7 +154,7 @@ Uma segunda propriedade fundamental é a seguinte:
 	\vdots  \\
 	b_d \\
 	\end{array}
-	\right] = 
+	\right] =
 	\left[
 	\begin{array}{c}
 	0 \\
@@ -164,7 +164,7 @@ Uma segunda propriedade fundamental é a seguinte:
 	\end{array}
 	\right],
 	\end{equation} que possui soluções não triviais quando $k<d$.
-	
+
 	Argumentando de forma parecida, concluimos também que não podemos ter $d<k$. Portanto, $d=k$.
 \end{proof}
 
@@ -205,9 +205,9 @@ x_d \\
 	\begin{equation}
 	a_3 x^3 + a_2 x^2 + a_1 x + a_0 = 0, \quad \text{para todo } x \in \mathbb{R},
 	\end{equation} então todos os coeficientes devem ser nulos. Isto segue do Teorema Fundamental da Álgebra\footnote{Mais geralmente, o Teorema Fundamental da Álgebra afirma que todo polinômio não nulo de grau $n$ possui exatamente $n$ raízes complexas; logo, no máximo $n$ raízes reais.}, que diz que todo polinômio não nulo de grau $3$ possui exatamente $3$ raízes complexas; logo, no máximo $3$ raízes reais. Portanto, já que no nosso caso, todos os valores de $x$ reais são raízes, nosso polinômio deve ser o constante igual a zero, de modo que todos os coeficientes são zero.
-	
+
 	Concluimos desta maneira que $\mathcal{B} = \big\{ x^3, x^2, x, 1 \big\}$ é uma base de $\mathcal{P}_3 (\mathbb{R})$, que consequentemente tem dimensão $4.$
-	
+
 	Desta maneira, qualquer elemento de $\mathcal{P}_3 (\mathbb{R})$ pode ser representado por $4$ parâmetros. Por exemplo,
 	\begin{equation}
 	p(x) = x^3 - 2 x^2 + 3 \ \rightsquigarrow \ [p(x)]_{\mathcal{B}} = \left[
@@ -278,7 +278,7 @@ Vimos que o espaço nulo (núcleo) de uma matriz $A$ de ordem $m \times n$ é o 
 	0  & 1  & 0  & 2/5 & 26/15  \\
 	0  & 0  & 1  & 1/5 & 8/15 \\
 	\end{array}
-	\right] \sim 
+	\right] \sim
 	\left\{
 	\begin{array}{ll}
 	x_1 = - \frac{2}{5} x_4 - \frac{2}{5} x_5  \\
@@ -298,7 +298,7 @@ Vimos que o espaço nulo (núcleo) de uma matriz $A$ de ordem $m \times n$ é o 
 	x_4 \\
 	x_5 \\
 	\end{array}
-	\right] = 
+	\right] =
 	x_4 \left[
 	\begin{array}{c}
 	-2/5 \\
@@ -307,7 +307,7 @@ Vimos que o espaço nulo (núcleo) de uma matriz $A$ de ordem $m \times n$ é o 
 	1 \\
 	0 \\
 	\end{array}
-	\right] + x_5 
+	\right] + x_5
 	\left[
 	\begin{array}{c}
 	-2/5 \\
@@ -469,7 +469,7 @@ Nas seções anteriores, vimos que
 \end{obs}
 
 \begin{obs}
-	O teorema afirma que há uma relação entre as dimensões dos espaços coluna e nulo. No entanto, não esqueça que estes são subespaços de universos diferentes! Temos 
+	O teorema afirma que há uma relação entre as dimensões dos espaços coluna e nulo. No entanto, não esqueça que estes são subespaços de universos diferentes! Temos
 	\begin{equation}
 	\operatorname{Nul} A \subseteq \mathbb{R}^n \text{ enquanto que } \operatorname{Col} A \subseteq \mathbb{R}^m.
 	\end{equation}
@@ -521,7 +521,7 @@ b_2 \\
 b_n \\
 \end{array}
 \right]_{\mathcal{B}} = b_1 \vec{v}_1 + b_2 \vec{v}_2 + \cdots + b_n \vec{v}_n,
-\end{equation} podemos obter as coordenadas usuais (na base canônica) de $\vec{x}$ de forma sistemática. Em outras palavras, queremos encontrar $x_1, x_2, \dots, x_n$ tais que 
+\end{equation} podemos obter as coordenadas usuais (na base canônica) de $\vec{x}$ de forma sistemática. Em outras palavras, queremos encontrar $x_1, x_2, \dots, x_n$ tais que
 \begin{equation}
 \vec{x} = \left[
 \begin{array}{c}
@@ -540,7 +540,7 @@ A =
 \vec{v}_{1} & \vec{v}_{2} & \cdots & \vec{v}_{n} \\
 | & | &  & | \\
 \end{array}
-\right] = 
+\right] =
 \left[
 \begin{array}{cccc}
 v_{11} & v_{12} & \cdots & v_{1n} \\
@@ -549,7 +549,7 @@ v_{21} & v_{22} & \cdots & v_{2n} \\
 v_{n1} & v_{n2} & \cdots & v_{nn} \\
 \end{array}
 \right].
-\end{equation} Funciona porque 
+\end{equation} Funciona porque
 \begin{align*}
 b_1 \vec{v}_1 + b_2 \vec{v}_2 + \cdots + b_n \vec{v}_n & = \sum_{j=1}^{n} b_j \vec{v}_j = \sum_{j=1}^{n} b_j \sum_{i=1}^{n} v_{ij} \vec{e}_i  = \sum_{i=1}^{n} \bigg(\sum_{j=1}^{n} b_j v_{ij}\bigg) \vec{e}_i \\
 & = \bigg(\sum_{j=1}^{n} b_j v_{1j}\bigg) \vec{e}_1 + \bigg(\sum_{j=1}^{n} b_j v_{2j}\bigg) \vec{e}_2 + \cdots + \bigg(\sum_{j=1}^{n} b_j v_{nj}\bigg) \vec{e}_n.
@@ -566,7 +566,7 @@ x_n &=& v_{n1} b_{1} + v_{n2} b_{2} + \cdots + v_{nn} b_{n} \\
 \right. \quad \text{i.e} \quad \vec{x} = A [\vec{x}]_{\mathcal{B}}.
 \end{equation}
 
-A matriz $A$ construida como acima é chamada de \textbf{matriz de mudança de coordenadas} da base $\mathcal{B}$ para a base usual (canônica) $\{ \vec{e}_1, \vec{e}_2, \dots, \vec{e}_n\}$.
+A matriz $A$ construída como acima é chamada de \textbf{matriz de mudança de coordenadas} da base $\mathcal{B}$ para a base usual (canônica) $\{ \vec{e}_1, \vec{e}_2, \dots, \vec{e}_n\}$.
 
 A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ pode ser obtida a partir da inversa de $A$:
 \begin{equation}
@@ -576,7 +576,7 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 \begin{ex}
 	Consideramos a seguinte base para $\mathbb{R}^2$:
 	\begin{equation}
-	\mathcal{B} = \left\{ 
+	\mathcal{B} = \left\{
 	\left[
 	\begin{array}{c}
 	1 \\
@@ -592,13 +592,13 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 	\right\}.
 	\end{equation} Este conjunto é de fato uma base, pois são linearmente independentes e são dois (que é a dimensão de $\mathbb{R}^2$). Sabendo que as coordenadas de $\vec{u}$ e $\vec{v}$ nesta base $\mathcal{B}$ são
 	\begin{equation}
-	[u]_{\mathcal{B}} = 
+	[u]_{\mathcal{B}} =
 	\left[
 	\begin{array}{c}
 	1 \\
 	1 \\
 	\end{array}
-	\right]_{\mathcal{B}} \quad \text{e} \quad 
+	\right]_{\mathcal{B}} \quad \text{e} \quad
 	[v]_{\mathcal{B}} =
 	\left[
 	\begin{array}{c}
@@ -607,10 +607,10 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 	\end{array}
 	\right]_{\mathcal{B}},
 	\end{equation} encontrar as componentes de $\vec{u}$ e $\vec{v}$ na base canônica $\{ \vec{e}_1, \vec{e}_2\}$ de $\mathbb{R}^2$.
-	
+
 	Pelo que analisamos acima, a matriz de mudança de coordenadas que procuramos é a matriz
 	\begin{equation}
-	A = 
+	A =
 	\left[
 	\begin{array}{cc}
 	1 & -1 \\
@@ -629,13 +629,13 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 	1 \\
 	1 \\
 	\end{array}
-	\right]_{\mathcal{B}} = 
+	\right]_{\mathcal{B}} =
 	\left[
 	\begin{array}{c}
 	0 \\
 	2 \\
 	\end{array}
-	\right] \text{ e } \vec{v} = 
+	\right] \text{ e } \vec{v} =
 	\left[
 	\begin{array}{cc}
 	1 & -1 \\
@@ -670,7 +670,7 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 	1 \\
 	1 \\
 	\end{array}
-	\right] + b_2 \cdot 
+	\right] + b_2 \cdot
 	\left[
 	\begin{array}{c}
 	-1 \\
@@ -684,19 +684,19 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 	1 \\
 	1 \\
 	\end{array}
-	\right] = 
+	\right] =
 	\left[
 	\begin{array}{c}
 	1 \\
 	0 \\
 	\end{array}
-	\right] + 
+	\right] +
 	\left[
 	\begin{array}{c}
 	0 \\
 	1 \\
 	\end{array}
-	\right] = \vec{e}_1 + \vec{e}_2 \quad \text{e} \quad 
+	\right] = \vec{e}_1 + \vec{e}_2 \quad \text{e} \quad
 	\left[
 	\begin{array}{c}
 	-1 \\
@@ -733,7 +733,7 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 	x_1 \\
 	x_2 \\
 	\end{array}
-	\right] = 
+	\right] =
 	\left[
 	\begin{array}{cc}
 	1 & -1 \\
@@ -761,4 +761,4 @@ A matriz de mudança de coordenadas da base canônica para a base $\mathcal{B}$ 
 
 \construirExer
 
-%\end{document} 
+%\end{document}

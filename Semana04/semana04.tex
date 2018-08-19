@@ -118,7 +118,7 @@ a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots &        & \vdots \\
 a_{m1} & a_{m2} & \cdots & a_{mn} \\
 \end{bmatrix}
-\begin{bmatrix} 
+\begin{bmatrix}
 x_{1} & y_1 \\
 x_{2} & y_2 \\
 \vdots & \vdots \\
@@ -618,7 +618,7 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 	\end{array}
 	\right].
 	\end{equation}(trocamos de lugar os elementos da diagonal principal e de sinal os elementos da outra diagonal).
-	
+
 	Façamos o mesmo para a matriz $B$:
 	\begin{equation}
 	\det B = 1\cdot 1 - 1 \cdot 0 = 1 \neq 0.
@@ -638,7 +638,7 @@ ac & 0 & \frac{acd}{ad - bc} & \frac{-abc}{ad - bc} \\
 	\end{array}
 	\right].
 	\end{equation}(trocamos de lugar os elementos da diagonal principal -- neste caso eram iguais -- e de sinal dos elementos da outra diagonal).
-	
+
 	Já para a matriz $C$, temos
 	\begin{equation}
 	\det C = (-1) \cdot 2 - 2 \cdot (-1) = 0
@@ -711,7 +711,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 
 \begin{obs}
 	Para que seja possível encontrar as soluções, como indicado acima, a forma escalonada da matriz $A$ deve possuir $n$ posições de pivô (caso contrário, algum dos sistemas acima seria impossível), de modo que todas as colunas de $A$ são colunas pivô.
-	
+
 	Se $A$ possuir alguma coluna sem posição de pivô, podemos parar imediatamente o algoritmo, pois isto significa que a matriz não é invertível.
 \end{obs}
 
@@ -806,8 +806,8 @@ a_{m1} & a_{m2} & \cdots & a_{mn} &   0   &    0   & \cdots &    1\\
 	3/2 & -1/2 & -1/2 & 1/2 \\
 	\end{array}
 	\right].
-	\end{equation} Verifique como exercício que esta matriz é de fato a matriz inversa de $A$, isto é, calcule o produto $A \cdot A^{-1}$ e verifique que resulta em $I_4$. 
-	
+	\end{equation} Verifique como exercício que esta matriz é de fato a matriz inversa de $A$, isto é, calcule o produto $A \cdot A^{-1}$ e verifique que resulta em $I_4$.
+
 	Notamos que, caso nosso único interesse fosse decidir se $A$ é invertível, sem necessariamente calcular sua inversa, poderíamos ter feito o escalonamento de $A$ (nem precisa ser da matriz aumentada $\big[ \, I \ | \ A^{-1} \ \big]$) e parado o processo quando chegamos em
 	\begin{equation}
 	A \sim \left[
@@ -957,7 +957,7 @@ Vamos, nesta subseção, verificar (provar de forma rigorosa) que
 A \vec{x}_1 = \vec{e}_1, \quad A \vec{x}_2 = \vec{e}_2, \cdots, A \vec{x}_n = \vec{e}_n
 \end{equation} concomitantemente. De fato, qualquer vetor $\vec{b}$ pode ser escrito como
 \begin{equation}
-\vec{b} =  
+\vec{b} =
 \left[
 \begin{array}{c}
 b_1 \\
@@ -965,7 +965,7 @@ b_2 \\
 \vdots \\
 b_n \\
 \end{array}
-\right] = 
+\right] =
 b_1 \vec{e}_1 + b_2 \vec{e}_2 + \cdots + b_n \vec{e}_n,
 \end{equation} e daí verificamos que se pode construir uma solução $\vec{x}$ pela fórmula
 \begin{equation}
@@ -982,7 +982,7 @@ A  \vec{x} & = b_1 A\vec{x}_1 + b_2 A\vec{x}_2 + \cdots + b_n A\vec{x}_n, \\
 A \vec{x}_1 = \vec{e}_1, \quad A \vec{x}_2 = \vec{e}_2, \cdots, A \vec{x}_n = \vec{e}_n
 \end{equation} e escrever a matriz inversa de acordo com o nosso algoritmo:
 \begin{equation}
-A^{-1} = 
+A^{-1} =
 \begin{bmatrix}
 \ |  &  |  &   & | \ \\
 \ \vec{x}_1  &  \vec{x}_2 & \cdots & \vec{x}_n \ \\
@@ -1000,4 +1000,4 @@ A^{-1} =
 
 \section{Exercícios finais}
 
-%\end{document} 
+%\end{document}

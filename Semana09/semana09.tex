@@ -32,7 +32,7 @@ c & d
 \begin{bmatrix}
 a & b \\
 0 & - \frac{bc}{a} + d
-\end{bmatrix} = 
+\end{bmatrix} =
 \begin{bmatrix}
 a & b \\
 0 & \frac{ad - bc}{a}
@@ -56,7 +56,7 @@ c & d
 \end{bmatrix}$ representa uma matriz enquanto que $\left| \begin{matrix}
 a & b \\
 c & d
-\end{matrix} \right|$ representa um número, o determinante de $A$. 
+\end{matrix} \right|$ representa um número, o determinante de $A$.
 
 A nossa discussão acima de imediato implica a seguinte propriedade:
 \begin{equation}
@@ -78,7 +78,7 @@ Por outro lado, $A = \begin{bmatrix}
 
 Agora, vamos fazer as contas também no caso $3 \times 3$. Considere a matriz
 \begin{equation}
-A = 
+A =
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
@@ -92,8 +92,8 @@ a_{21} & a_{22} & a_{23} \\
 a_{31} & a_{32} & a_{33} \\
 \end{bmatrix} \xrightarrow[- \frac{a_{31}}{a_{11}} \ell_1 + \ell_3 \text{ em } \ell_3]{- \frac{a_{21}}{a_{11}} \ell_1 + \ell_2 \text{ em } \ell_2}
 \begin{bmatrix}
-a_{11} & a_{12} & a_{13} \\ && \\ 
-0 & \frac{a_{11} a_{22} - a_{21} a_{12}}{a_{11}} & \frac{a_{11} a_{23} - a_{21} a_{13}}{a_{11}} \\ && \\ 
+a_{11} & a_{12} & a_{13} \\ && \\
+0 & \frac{a_{11} a_{22} - a_{21} a_{12}}{a_{11}} & \frac{a_{11} a_{23} - a_{21} a_{13}}{a_{11}} \\ && \\
 0 & \frac{a_{11} a_{32} - a_{31} a_{12}}{a_{11}} & \frac{a_{11} a_{33} - a_{31} a_{13}}{a_{11}} \\
 \end{bmatrix}.
 \end{equation} Podemos ainda simplificar os denominadores
@@ -109,28 +109,28 @@ a_{11} & a_{12} & a_{13} \\
 0 & a_{11} a_{32} - a_{31} a_{12} & a_{11} a_{33} - a_{31} a_{13} \\
 \end{bmatrix} \ \ \stackrel{\text{notação}}{===} \ \  \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
-0 & A_{33} & A_{32} \\ 
+0 & A_{33} & A_{32} \\
 0 & A_{23} & A_{22} \\
 \end{bmatrix}.
 \end{equation} Em breve (esperamos que) ficará clara a escolha da notação acima. O passo seguinte no escalonamento será, supondo que $A_{33} \neq 0$, eliminar o elemento $A_{23}$ que está na posição $32$. Temos assim
 \begin{equation}\label{notaminors}
-A = 
+A =
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
 a_{31} & a_{32} & a_{33} \\
-\end{bmatrix} \sim 
+\end{bmatrix} \sim
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
-0 & A_{33} & A_{32} \\ 
+0 & A_{33} & A_{32} \\
 0 & A_{23} & A_{22} \\
 \end{bmatrix} \sim
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
-0 & A_{33} & A_{32} \\ 
+0 & A_{33} & A_{32} \\
 0 & 0 & A_{22} A_{33} - A_{32} A_{23} \\
 \end{bmatrix}.
-\end{equation} 
+\end{equation}
 Nosso raciocínio é que nossa matriz $A$ é uma matriz invertível se esta última coluna possuir uma posição de pivô, isto é, se $A_{22} A_{33} - A_{32} A_{23} \neq 0$. Este último pode ser escrito mais explicitamente como
 \begin{equation}
   \begin{split}
@@ -189,12 +189,12 @@ a_{31} & a_{32} \\
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
 a_{31} & a_{32} & a_{33} \\
-\end{bmatrix} \quad \rightsquigarrow \quad 
+\end{bmatrix} \quad \rightsquigarrow \quad
 \begin{bmatrix}
 \square & \square & \square \\
 \square & a_{22}  & a_{23} \\
 \square & a_{32}  & a_{33} \\
-\end{bmatrix} \quad \rightsquigarrow \quad A_{11} \stackrel{\text{def}}{=} 
+\end{bmatrix} \quad \rightsquigarrow \quad A_{11} \stackrel{\text{def}}{=}
 \begin{bmatrix}
 a_{22}  & a_{23} \\
 a_{32}  & a_{33} \\
@@ -206,7 +206,7 @@ a_{32}  & a_{33} \\
 \square & \square & \square \\
 a_{21}  & \square & a_{23} \\
 a_{31}  & \square & a_{33} \\
-\end{bmatrix} \quad \rightsquigarrow \quad A_{12} \stackrel{\text{def}}{=} 
+\end{bmatrix} \quad \rightsquigarrow \quad A_{12} \stackrel{\text{def}}{=}
 \begin{bmatrix}
 a_{21}  & a_{23} \\
 a_{31}  & a_{33} \\
@@ -218,12 +218,12 @@ a_{31}  & a_{33} \\
 \square & \square & \square \\
 a_{21}  & a_{22}  & \square \\
 a_{31}  & a_{32}  & \square \\
-\end{bmatrix} \quad \rightsquigarrow \quad A_{13} \stackrel{\text{def}}{=} 
+\end{bmatrix} \quad \rightsquigarrow \quad A_{13} \stackrel{\text{def}}{=}
 \begin{bmatrix}
 a_{21}  & a_{22} \\
 a_{31}  & a_{32} \\
 \end{bmatrix}.
-\end{equation} 
+\end{equation}
 \item Podemos então escrever
 \begin{equation}\label{detminor}
 \boxed{\det A = a_{11} \det A_{11} - a_{12} \det A_{12} +  a_{13} \det A_{13}.}
@@ -253,7 +253,7 @@ A = \begin{bmatrix}
 0 &  1
 \end{matrix} \right| + 3 \cdot \left| \begin{matrix}
 1 & 2  \\
-0 & 2 
+0 & 2
 \end{matrix} \right|.
 \end{equation} Agora, já sabemos como calcular determinantes de matrizes $2 \times 2$, que é o que nos resta fazer:
 \begin{equation}
@@ -292,7 +292,7 @@ A = \begin{bmatrix}
 	0 &  1
 	\end{matrix} \right| + (-4) \cdot \left| \begin{matrix}
 	1 & 0  \\
-	0 & 2 
+	0 & 2
 	\end{matrix} \right| \\ & = 2 + 3 \cdot 1  -4 \cdot 2 = -3.
 	\end{split}
       \end{equation}
@@ -302,7 +302,7 @@ A = \begin{bmatrix}
 
 Como já mencionamos, na fórmula para o determinante de uma matriz $A$, cada um dos elementos de $A$ aparece exatamente duas vezes. Isto significa que poderíamos ter rearranjado os termos da matriz não a partir da primeira linha, mas a partir de \textit{qualquer linha ou qualquer coluna}. Mas devemos ter cuidado para que os sinais sejam levados em consideração de forma coerente.
 
-Dada uma matriz quadrada $A$ de ordem $n \times n$, obtemos uma \textbf{matriz menor} $A_{ij}$ ao remover a linha $i$ e coluna $j$. Agora é possível entender a notação escolhida no inicio deste capítulo, na fórmula \eqref{notaminors}. Definimos o \textbf{cofator} $(i,j)$ de $A$ por
+Dada uma matriz quadrada $A$ de ordem $n \times n$, obtemos uma \textbf{matriz menor} $A_{ij}$ ao remover a linha $i$ e coluna $j$. Agora é possível entender a notação escolhida no início deste capítulo, na fórmula \eqref{notaminors}. Definimos o \textbf{cofator} $(i,j)$ de $A$ por
 \begin{equation}
 C_{ij} \stackrel{\text{def}}{=} (-1)^{i + j} \det A_{ij}.
 \end{equation} Este sinal $\pm 1$ na definição do cofator é o que faz com que o sinal seja levado em consideração corretamente.
@@ -331,7 +331,7 @@ Podemos calcular o determinante de $A$ a partir de qualquer linha ou de qualquer
 \begin{bmatrix}
 + & - & +  \\
 - & + & -  \\
-+ & - & +  
++ & - & +
 \end{bmatrix}.
 \end{equation} Claro que poderíamos fazer esta matriz de sinais para matrizes de qualquer ordem.
 
@@ -339,7 +339,7 @@ Podemos calcular o determinante de $A$ a partir de qualquer linha ou de qualquer
 \begin{ex}
 Vamos calcular de várias maneiras o determinante da matriz
 \begin{equation}
-A = 
+A =
 \begin{bmatrix}
 -1 & 1 & 4 \\
  3 & 0 & -1 \\
@@ -347,25 +347,25 @@ A =
 \end{bmatrix}.
 \end{equation} Pela nossa definição
 \begin{equation}
-\left| 
+\left|
 \begin{matrix}
 -1 & 1 & 4 \\
 3 & 0 & -1 \\
 1 & 0 & 3 \\
 \end{matrix}
 \right| =
--1 \left| 
+-1 \left|
 \begin{matrix}
  0 & -1 \\
  0 & 3 \\
 \end{matrix}
-\right| - 1 \left| 
+\right| - 1 \left|
 \begin{matrix}
 3  & -1 \\
 1  & 3 \\
 \end{matrix}
-\right| + 4 
-\left| 
+\right| + 4
+\left|
 \begin{matrix}
 3 & 0  \\
 1 & 0  \\
@@ -376,36 +376,36 @@ A =
 \begin{bmatrix}
 + & \,\,  & \,\,  \\
   &  &   \\
-  &  &   
-\end{bmatrix} \rightsquigarrow 
+  &  &
+\end{bmatrix} \rightsquigarrow
 \begin{bmatrix}
 + & - & \,\,  \\
 \,\,& \,\, & \,\,  \\
-\,\,& \,\, &  \,\, 
-\end{bmatrix}\rightsquigarrow 
+\,\,& \,\, &  \,\,
+\end{bmatrix}\rightsquigarrow
 \begin{bmatrix}
 + & - & \,\,  \\
 & + & \,\,  \\
-\,\,& \,\, &  \,\, 
-\end{bmatrix} \rightsquigarrow 
+\,\,& \,\, &  \,\,
+\end{bmatrix} \rightsquigarrow
 \begin{bmatrix}
 + & - &  \,\, \\
 \,\,& + &  \,\, \\
-\,\,& - &  \,\, 
+\,\,& - &  \,\,
 \end{bmatrix}\rightsquigarrow \text{ sinais segunda coluna são }
 \begin{bmatrix}
 - \\ + \\ -
 \end{bmatrix}.
 \end{equation} Assim, podemos calcular
 \begin{equation}
-\left| 
+\left|
 \begin{matrix}
 -1 & 1 & 4 \\
 3 & 0 & -1 \\
 1 & 0 & 3 \\
 \end{matrix}
-\right| = -1 \cdot 
-\left| 
+\right| = -1 \cdot
+\left|
 \begin{matrix}
 3  & -1 \\
 1  & 3 \\
@@ -421,24 +421,24 @@ A segunda coluna, neste caso, era a melhor escolha para o cálculo do determinan
 + &  -   &   +
 \end{bmatrix}\rightsquigarrow \text{ sinais terceira linha são }
 \begin{bmatrix}
-+ & - & + 
++ & - & +
 \end{bmatrix}.
 \end{equation} Logo,
 \begin{equation}
-\left| 
+\left|
 \begin{matrix}
 -1 & 1 & 4 \\
 3 & 0 & -1 \\
 1 & 0 & 3 \\
 \end{matrix}
-\right| = 1 \cdot 
-\left| 
+\right| = 1 \cdot
+\left|
 \begin{matrix}
  1 & 4 \\
  0 & -1 \\
 \end{matrix}
 \right| - 0 + 3 \cdot
-\left| 
+\left|
 \begin{matrix}
 -1 & 1 \\
 3 & 0  \\
@@ -486,7 +486,7 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
 \begin{ex}\label{exp:det1}
 	Calcular o determinante da matriz de ordem $4 \times 4$:
 	\begin{equation}
-	A = 
+	A =
 	\begin{bmatrix}
     -2 & 3 & 0  & 4 \\
     1  & 0 & -1 & 0 \\
@@ -502,7 +502,7 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
 	 &     &   & \\
 	\end{bmatrix}\rightsquigarrow \text{ sinais segunda linha são }
 	\begin{bmatrix}
-	- & + & - & + 
+	- & + & - & +
 	\end{bmatrix}.
 	\end{equation} Logo,
 	\begin{equation}
@@ -535,7 +535,7 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
     3 & 0  & 4 \\
     2 & 1  & 1 \\
     2 & 0  & 1
-    \end{matrix}\right| + 
+    \end{matrix}\right| +
     \left| \begin{matrix}
     -2 & 3 &  4 \\
     3  & 2 &  1 \\
@@ -544,18 +544,18 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
         &  = - 1 \cdot \left| \begin{matrix}
         3   & 4 \\
         2   & 1
-        \end{matrix}\right| + \left( 4 \cdot 
+        \end{matrix}\right| + \left( 4 \cdot
         \left| \begin{matrix}
         3  & 2  \\
-        -2 & 2 
+        -2 & 2
         \end{matrix}\right| - 1 \cdot
         \left| \begin{matrix}
         -2 & 3  \\
-        -2 & 2 
+        -2 & 2
         \end{matrix}\right| + 1 \cdot
         \left| \begin{matrix}
         -2 & 3  \\
-        3  & 2 
+        3  & 2
         \end{matrix}\right| \right) \\
          & = (-1) \cdot (-5) + \Big( 4 \cdot 10 - 1 \cdot 2 + 1 \cdot (-13)\Big) = 30. \ \lhd
 	\end{split}
@@ -565,7 +565,7 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
 \begin{ex}\label{exp:det2}
 Calcular o determinante da matriz de ordem $5 \times 5$:
 \begin{equation}
-A = 
+A =
 \begin{bmatrix}
 2 & 0 & 0 & 8 & 0 \\
 1 & -7 & -5 & 0 & 0 \\
@@ -589,7 +589,7 @@ Análise dos sinais da quinta coluna:
 \end{bmatrix}.
 \end{equation} Assim:
 \begin{equation}
-\left| 
+\left|
 \begin{matrix}
 2 & 0 & 0 & 8 & 0 \\
 1 & -7 & -5 & 0 & 0 \\
@@ -597,16 +597,16 @@ Análise dos sinais da quinta coluna:
 0 & 7 & 5 & 4 & 0 \\
 2 & 3 & 1 & 1 & 1 \\
 \end{matrix}
-\right| = 0 - 0 + 0 - 0 + 1\cdot 
-\left| 
+\right| = 0 - 0 + 0 - 0 + 1\cdot
+\left|
 \begin{matrix}
 2 & 0 & 0 & 8  \\
 1 & -7 & -5 & 0  \\
 3 & 8 & 6 & 0  \\
 0 & 7 & 5 & 4  \\
 \end{matrix}
-\right| = 
-\left| 
+\right| =
+\left|
 \begin{matrix}
 2 & 0 & 0 & 8  \\
 1 & -7 & -5 & 0  \\
@@ -616,21 +616,21 @@ Análise dos sinais da quinta coluna:
 \right|.
 \end{equation} Em seguida, escolhemos (por exemplo) a primeira linha da nova matriz $4 \times 4$:
 \begin{equation}
-\det A = \left| 
+\det A = \left|
 \begin{matrix}
 2 & 0 & 0 & 8  \\
 1 & -7 & -5 & 0  \\
 3 & 8 & 6 & 0  \\
 0 & 7 & 5 & 4  \\
 \end{matrix}
-\right| = 2 \cdot\left| 
+\right| = 2 \cdot\left|
 \begin{matrix}
  -7 & -5 & 0  \\
  8 & 6 & 0  \\
  7 & 5 & 4  \\
 \end{matrix}
-\right| - 8 \cdot 
-\left| 
+\right| - 8 \cdot
+\left|
 \begin{matrix}
 1 & -7 & -5   \\
 3 & 8 & 6   \\
@@ -641,19 +641,19 @@ Análise dos sinais da quinta coluna:
 
 \begin{equation}
 \begin{split}
-\det A & = 2 \cdot 4 \cdot 
-\left| 
+\det A & = 2 \cdot 4 \cdot
+\left|
 \begin{matrix}
 -7 & -5 \\
 8 & 6   \\
 \end{matrix}
-\right|  - 8 \left(  \left| 
+\right|  - 8 \left(  \left|
 \begin{matrix}
 8 & 6   \\
 7 & 5   \\
 \end{matrix}
-\right| - 3 \cdot 
-\left| 
+\right| - 3 \cdot
+\left|
 \begin{matrix}
 -7 & -5   \\
 7 & 5   \\
@@ -690,14 +690,14 @@ a_{11} & \cdots & a_{1n} \\
 \alpha a_{i1} + \beta b_{i1}  & \cdots & \alpha a_{in} + \beta b_{in} \\
 \vdots &  & \vdots \\
 a_{n1} & \cdots & a_{nn}
-\end{bmatrix} = 
+\end{bmatrix} =
 \alpha \det \begin{bmatrix}
 a_{11} & \cdots & a_{1n} \\
 \vdots &  & \vdots \\
 a_{i1} & \cdots & a_{in} \\
 \vdots &  & \vdots \\
 a_{n1} & \cdots & a_{nn}
-\end{bmatrix} + \beta 
+\end{bmatrix} + \beta
 \det \begin{bmatrix}
 a_{11} & \cdots & a_{1n} \\
 \vdots &  & \vdots \\
@@ -740,7 +740,7 @@ a_{11} & \cdots & a_{1n} \\
 \alpha a_{i1} & \cdots & \alpha a_{in} \\
 \vdots &  & \vdots \\
 a_{n1} & \cdots & a_{nn}
-\end{matrix} \right|  = 
+\end{matrix} \right|  =
 \alpha \cdot \left| \begin{matrix}
 a_{11} & \cdots & a_{1n} \\
 \vdots &  & \vdots \\
@@ -842,7 +842,7 @@ No exemplo anterior, vimos como calcular o determinante utilizando escalonamento
 3  & 2 & 1  & 1 \\
 -2 & 2 & 0  & 1
 \end{matrix}
-\right| = 
+\right| =
 \left| \begin{matrix}
 -2 & 3 & 0  & 4 \\
 4  & 2 & 0  & 1 \\
@@ -854,9 +854,9 @@ No exemplo anterior, vimos como calcular o determinante utilizando escalonamento
 + & - & + &  \\
   &   & - &  \\
   &   & + &  \\
-  &   & - & 
+  &   & - &
 \end{bmatrix}
-\right) 
+\right)
 \end{equation} Note que a terceira coluna agora ficou com apenas uma entrada não nula; logo, utilizando a terceira coluna para o cálculo de $\det A$ (como na seção anterior), obtemos
 \begin{equation}
 \left| \begin{matrix}
@@ -865,7 +865,7 @@ No exemplo anterior, vimos como calcular o determinante utilizando escalonamento
 3  & 2 & 1  & 1 \\
 -2 & 2 & 0  & 1
 \end{matrix}
-\right| = 
+\right| =
 \left| \begin{matrix}
 -2 & 3 & 4 \\
 4  & 2 & 1 \\
@@ -886,13 +886,13 @@ No exemplo anterior, vimos como calcular o determinante utilizando escalonamento
 -2  & 2 & 1 \\
 1 & 2 & 1
 \end{matrix}
-\right| = -2 \cdot 
+\right| = -2 \cdot
 \left| \begin{matrix}
 1 & 3 & 4 \\
 0 & 8 & 9 \\
 0 & -1 & -3
 \end{matrix}
-\right|  = -2 \cdot 
+\right|  = -2 \cdot
 \left| \begin{matrix}
 1 & 3 & 4 \\
 0 & 1 & 3 \\
@@ -905,7 +905,7 @@ No exemplo anterior, vimos como calcular o determinante utilizando escalonamento
 \begin{ex}
 Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}, utilizando as propriedades desta seção. Vamos fazer as contas de forma um pouco mais rápidas. Tente acompanhar o que está sendo feito de um passo para outro! Iniciamos aproveitando o fato de a última coluna ter muitos zeros.
 \begin{equation}
-\left| 
+\left|
 \begin{matrix}
 2 & 0 & 0 & 8 & 0 \\
 1 & -7 & -5 & 0 & 0 \\
@@ -913,16 +913,16 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 0 & 7 & 5 & 4 & 0 \\
 2 & 3 & 1 & 1 & 1 \\
 \end{matrix}
-\right| = 
-\left| 
+\right| =
+\left|
 \begin{matrix}
 2 & 0 & 0 & 8 \\
 1 & -7 & -5 & 0  \\
 3 & 8 & 6 & 0  \\
 0 & 7 & 5 & 4  \\
 \end{matrix}
-\right| \stackrel{-2\ell_4 + \ell_1 \text{ em } \ell_1}{=} 
-\left| 
+\right| \stackrel{-2\ell_4 + \ell_1 \text{ em } \ell_1}{=}
+\left|
 \begin{matrix}
 2 & -14 & -10 & 0 \\
 1 & -7 & -5 & 0  \\
@@ -930,7 +930,7 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 0 & 7 & 5 & 4  \\
 \end{matrix}
 \right| =  4 \cdot
-\left| 
+\left|
 \begin{matrix}
 2 & -14 & -10  \\
 1 & -7 & -5  \\
@@ -939,7 +939,7 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 \right|.
 \end{equation} Em seguida, eliminamos o $2$ e o $3$ da primeira coluna sem trocar linhas de lugar (quanto mais trocarmos linhas, mais riscos corremos de errar o sinal):
 \begin{equation}
-\left| 
+\left|
 \begin{matrix}
 2 & 0 & 0 & 8 & 0 \\
 1 & -7 & -5 & 0 & 0 \\
@@ -948,7 +948,7 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 2 & 3 & 1 & 1 & 1 \\
 \end{matrix}
 \right| = 4 \cdot
-\left| 
+\left|
 \begin{matrix}
 0 &  0 &  0  \\
 1 & -7 & -5  \\
@@ -987,9 +987,9 @@ Seja $U \subset \mathbb{R}^2$ um conjunto aberto e $\phi: U \to \mathbb{R}^n$ um
 \end{equation} onde $J\varphi (\vec{u})$ é o \textbf{Jacobiano}: valor absoluto do determinante da matriz formada com as derivadas parciais de $\phi = (\phi_1, \phi_2, \dots, \phi_n)$:
 \begin{equation}
 J\varphi \big(\vec{u}\big) = \left|
-\det \left( \frac{\partial \phi_i}{\partial x_j} \right) 
+\det \left( \frac{\partial \phi_i}{\partial x_j} \right)
 \right| = \left|
-\det 
+\det
 \begin{bmatrix}
 \frac{\partial \phi_1}{\partial x_1} & \frac{\partial \phi_1}{\partial x_2} & \cdots & \frac{\partial \phi_1}{\partial x_n} \\
  &&& \\
@@ -998,7 +998,7 @@ J\varphi \big(\vec{u}\big) = \left|
  &&& \\
 \frac{\partial \phi_n}{\partial x_1} & \frac{\partial \phi_n}{\partial x_2} & \cdots & \frac{\partial \phi_n}{\partial x_n} \\
 \end{bmatrix}
-\right| 
+\right|
 \end{equation}
 \end{teo}
 
@@ -1020,12 +1020,12 @@ x = \phi_1 (r, \theta) = r\cos \theta, \quad y = \phi_2 (r, \theta) = r \sen \th
 \frac{\partial \phi_1}{\partial r} & \frac{\partial \phi_1}{\partial \theta} \\
 & \\
 \frac{\partial \phi_2}{\partial r} & \frac{\partial \phi_2}{\partial \theta} \\
-\end{bmatrix} = 
+\end{bmatrix} =
 \begin{bmatrix}
 \cos \theta & -r \sen \theta \\
 \sen \theta & r \cos \theta \\
 \end{bmatrix}
- \text{ cujo Jacobiano é } \ J\phi = r \cos^2 \theta + r \sen^2 \theta = r. 
+ \text{ cujo Jacobiano é } \ J\phi = r \cos^2 \theta + r \sen^2 \theta = r.
 \end{equation} Portanto, a fórmula de mudança de variáveis implica que, em coordenadas polares:
 \begin{equation}
 \iint_R f \, \, \mathrm{d} A = \iint_R f(x,y) \, \, \mathrm{d} x \, \mathrm{d} y = \iint_{\phi^{-1}(R)} f(r\cos \theta, r\sen \theta) \, r \, \, \mathrm{d} r \, \mathrm{d} \theta.
@@ -1042,8 +1042,8 @@ Para uma região $R$ do espaço $\mathbb{R}^3$, vamos verificar como fazer para 
 \phi (\rho, \theta, \phi) = (\rho \sen \phi \cos \theta, \rho \sen \phi \sen \theta, \rho \cos \phi), \text{ onde } \rho> 0, \theta \in (0,2\pi) \text{ e } \phi \in (0, \pi).
 \end{equation} Isto é, as componentes são
 \begin{equation}
-x = \phi_1 (\rho, \theta, \phi) = \rho \sen \phi \cos \theta, \quad 
-y = \phi_2 (\rho, \theta, \phi) = \rho \sen \phi \sen \theta \quad \text{e} \quad 
+x = \phi_1 (\rho, \theta, \phi) = \rho \sen \phi \cos \theta, \quad
+y = \phi_2 (\rho, \theta, \phi) = \rho \sen \phi \sen \theta \quad \text{e} \quad
 z = \phi_3 (\rho, \theta, \phi) = \rho \cos \phi.
 \end{equation} Assim, a matriz das derivadas parciais é
 \begin{equation}
@@ -1053,7 +1053,7 @@ z = \phi_3 (\rho, \theta, \phi) = \rho \cos \phi.
 \frac{\partial \phi_2}{\partial \rho} & \frac{\partial \phi_2}{\partial \theta} & \frac{\partial \phi_2}{\partial \phi} \\
 & & \\
 \frac{\partial \phi_3}{\partial \rho} & \frac{\partial \phi_3}{\partial \theta} & \frac{\partial \phi_3}{\partial \phi} \\
-\end{bmatrix} = 
+\end{bmatrix} =
 \begin{bmatrix}
 \sen \phi \cos \theta & -\rho \sen \phi \sen \theta   & \rho \cos \phi \cos \theta \\
 \sen \phi \sen \theta &  \rho \sen \phi \cos \theta   & \rho \cos \phi \sen \theta  \\
@@ -1064,13 +1064,13 @@ z = \phi_3 (\rho, \theta, \phi) = \rho \cos \phi.
 \begin{equation}
 \begin{split}
 J\phi & = \left| \rho \sen \phi \sen \theta
-\left| 
+\left|
 \begin{matrix}
 \sen \phi \sen \theta     & \rho \cos \phi \sen \theta  \\
 \cos \phi                 &    -\rho \sen \phi  \\
 \end{matrix}
 \right| + \rho \sen \phi \cos \theta
-\left| 
+\left|
 \begin{matrix}
 \sen \phi \cos \theta      & \rho \cos \phi \cos \theta \\
 \cos \phi                  &    -\rho \sen \phi  \\
@@ -1099,4 +1099,4 @@ Na última igualdade, utilizamos que $\phi \in (0,\pi)$ implica $\sen \phi > 0$,
 
 \construirExer
 
-%\end{document} 
+%\end{document}
