@@ -1,3 +1,22 @@
+<<<<<<< HEAD
+*.aux
+*.log
+*.toc
+*.out
+*~
+*#
+html
+*.html
+*.4ct
+*.4tc
+*.css
+*.dvi
+*.idv
+*.lg
+*.tmp
+*.xref
+*.pdf
+=======
 *.aux
 *.log
 *.toc
@@ -16,3 +35,4 @@ html
 *.xref
 *.pdf
 */*.pdf
+>>>>>>> 5edaf56301b741a287f51829dd7dc48a322ecb58
