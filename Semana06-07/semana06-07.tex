@@ -452,7 +452,7 @@ Nas seções anteriores, vimos que
 \end{equation}
 \begin{equation}
 \operatorname{dim} \operatorname{Nul} A = \text{ número de variáveis livres do sistema homogêneo associado}.
-\end{equation} Ora, mas ou uma coluna é pivô ou sua variável associada pode ser considerada uma variável livre, de modo que temos o
+\end{equation} Ora, mas ou uma coluna é pivô, ou sua variável associada pode ser considerada uma variável livre, de modo que temos o
 
 \begin{teo}[Teorema do núcleo e da imagem]
 	Para qualquer matriz $A$ de ordem $m\times n$, temos
@@ -462,7 +462,7 @@ Nas seções anteriores, vimos que
 \end{teo}
 
 \begin{obs}
-	A dimensão do espaço coluna de $A$ ou, o que é a mesma coisa, dimensão da imagem da transformação linear $\vec{x} \mapsto A\vec{x}$, é também conhecida na literatura como o \textbf{posto de} $A$. Assim, o Teorema do núcleo e da imagem pode ser reenunciado como: Se $A$ é uma matriz $m\times n$, então
+	A dimensão do espaço coluna de $A$ ou, o que é a mesma coisa, dimensão da imagem da transformação linear $\vec{x} \mapsto A\vec{x}$, é também conhecida na literatura como o \textbf{posto de} $A$. Assim, o Teorema do núcleo e da imagem, também conhecido como o \textbf{Teorema do Posto}, pode ser reenunciado como: Se $A$ é uma matriz $m\times n$, então
 	\begin{equation}
 	\operatorname{posto} A + \operatorname{dim} \operatorname{Nul} A = n.
 	\end{equation}
@@ -475,7 +475,7 @@ Nas seções anteriores, vimos que
 	\end{equation}
 \end{obs}
 
-Apesar da conclusão do teorema parecer simples, é muito útil na análise de sistemas lineares.
+Apesar da conclusão do teorema parecer simples, é muito útil na análise de sistemas lineares, ou de transformações lineares.
 
 \begin{ex}
 	Todo sistema linear de ordem $5 \times 9$ deve possuir um espaço nulo de dimensão $4$ ou mais. De fato, como a matriz associada tem apenas cinco linhas, pode ter no máximo $5$ posições de pivô, de modo que
@@ -484,8 +484,19 @@ Apesar da conclusão do teorema parecer simples, é muito útil na análise de s
 	\end{equation} Portanto
 	\begin{equation}
 	\operatorname{dim} \operatorname{Nul} A = 9 - \operatorname{dim} \operatorname{Col} A \ge 9 - 5 = 4.
-	\end{equation} Desta forma, se resolvermos um sistema homogêneo desta ordem e encontrarmos um conjunto solução de dimensão 3, certamente  há algum um erro nas contas!
+	\end{equation} Desta forma, se resolvermos um sistema homogêneo desta ordem e encontrarmos um conjunto solução de dimensão 3, certamente  há algum um erro nas contas, pois o Teorema do núcleo e da imagem nos diz que há pelo menos 4 variáveis livres no conjunto solução deste sistema homogêneo. 
 \end{ex}
+
+\begin{ex}
+ O Teorema do núcleo e da imagem garante que não pode existir uma transformação linear $T(x)=Ax$ sobrejetora de $ \mathbb{R}^3$ em  $ \mathbb{R}^4$, visto que 
+ \begin{equation}
+ \operatorname{posto} A + \operatorname{dim} \operatorname{Nul} A = 3
+ \end{equation}
+ e portanto $\operatorname{posto} A  \leq 3$. Ao lembrarmos que  $\operatorname{posto} A$ é o mesmo que a dimensão da imagem de $T$, concluimos que a imagem de $T$ não coincide com o contradomínio $ \mathbb{R}^4 $.
+\end{ex}
+ Também podemos usar o Teorema do núcleo e da imagem para provar que não existe uma transformação linear injetora de 
+ $ \mathbb{R}^n$ em $ \mathbb{R}^m$ se $n>m$.
+
 
 
 
