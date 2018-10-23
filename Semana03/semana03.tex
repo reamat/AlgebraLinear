@@ -1,6 +1,6 @@
 %Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 3.0 Não Adaptada. Para ver uma cópia desta licença, visite https://creativecommons.org/licenses/by-sa/3.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
-%\documentclass[../livro.tex]{subfiles} 
+%\documentclass[../livro.tex]{subfiles}
 
 
 %define o diretório principal
@@ -27,7 +27,7 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{v}.
    v_{21} & v_{22} & v_{23} & \cdots & v_{2k}  \\
    v_{31} & v_{32} & v_{33} & \cdots & v_{3k}  \\
    \vdots & \vdots & \vdots &        & \vdots  \\
-   v_{m1} & v_{m2} & v_{m3} & \cdots & v_{mk}  
+   v_{m1} & v_{m2} & v_{m3} & \cdots & v_{mk}
   \end{array}
 \right] \left[
   \begin{array}{c}
@@ -35,7 +35,7 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{v}.
     x_{2} \\
     x_{3} \\
     \vdots \\
-    x_{k} 
+    x_{k}
   \end{array}
 \right] =
 \left[
@@ -44,7 +44,7 @@ x_1 \vec{v}_1 + x_2 \vec{v}_2 + \cdots + x_k \vec{v}_k = \vec{v}.
     b_{2} \\
     b_{3} \\
     \vdots \\
-    b_{k} 
+    b_{k}
   \end{array}
 \right].
 \end{equation}
@@ -64,21 +64,21 @@ Vamos verificar se os vetores
   \begin{array}{c}
     1 \\
     0 \\
-    0 
+    0
   \end{array}
 \right], \quad
 \left[
   \begin{array}{c}
     1 \\
     1 \\
-    0 
+    0
   \end{array}
 \right], \quad
 \left[
   \begin{array}{c}
     1 \\
     1 \\
-    1 
+    1
   \end{array}
 \right]
 \end{equation} são LI ou LD.
@@ -89,28 +89,28 @@ x_1 \left[
   \begin{array}{c}
     1 \\
     0 \\
-    0 
+    0
   \end{array}
 \right] +
 x_2\left[
   \begin{array}{c}
     1 \\
     1 \\
-    0 
+    0
   \end{array}
 \right] +
 x_3\left[
   \begin{array}{c}
     1 \\
     1 \\
-    1 
+    1
   \end{array}
 \right] = \vec{0} =
 \left[
   \begin{array}{c}
     0 \\
     0 \\
-    0 
+    0
   \end{array}
 \right].
 \end{equation} Como a equação é homogênea, temos pelo menos a solução trivial: $x_1 = 0$, $x_2=0$ e $x_3 = 0$. Se esta for a única solução, então os vetores são LI. Se existir alguma outra solução que não seja a trivial, então os vetores são LD.
@@ -121,21 +121,21 @@ Resolver a equação vetorial equivale a resolver o sistema linear
   \begin{array}{ccc}
     1 & 1 & 1 \\
     0 & 1 & 1 \\
-    0 & 0 & 1 
+    0 & 0 & 1
   \end{array}
 \right]
 \left[
   \begin{array}{c}
     x_1 \\
     x_2 \\
-    x_3 
+    x_3
   \end{array}
 \right] =
 \left[
   \begin{array}{c}
     0 \\
     0 \\
-    0 
+    0
   \end{array}
 \right].
 \end{equation} É fácil de ver que a única solução deste sistema é a trivial e, portanto, os vetores são LI. Se este sistema não fosse fácil de resolver, deveríamos começar a resolvê-lo por escalonamento, como de costume. $\ \lhd$
@@ -148,28 +148,28 @@ Analisamos agora os vetores
   \begin{array}{c}
     1 \\
     0 \\
-    1 
+    1
   \end{array}
 \right], \quad
 \left[
   \begin{array}{c}
     1 \\
     1 \\
-    0 
+    0
   \end{array}
 \right], \quad
 \left[
   \begin{array}{c}
     1 \\
     1 \\
-    1 
+    1
   \end{array}
 \right], \quad
 \left[
   \begin{array}{c}
     -1 \\
     2 \\
-    1 
+    1
   \end{array}
 \right].
 \end{equation} Como no exemplo anterior, para verificar se são LI, nós devemos considerar a equação vetorial
@@ -178,35 +178,35 @@ x_1 \left[
   \begin{array}{c}
     1 \\
     0 \\
-    0 
+    0
   \end{array}
 \right] +
 x_2\left[
   \begin{array}{c}
     1 \\
     1 \\
-    0 
+    0
   \end{array}
 \right] +
 x_3\left[
   \begin{array}{c}
     1 \\
     1 \\
-    1 
+    1
   \end{array}
 \right]+
 x_4\left[
   \begin{array}{c}
     -1 \\
     2 \\
-    1 
+    1
   \end{array}
 \right] =
 \left[
   \begin{array}{c}
     0 \\
     0 \\
-    0 
+    0
   \end{array}
 \right].
 \end{equation} Como a equação é homogênea, temos pelo menos a solução trivial: $x_1 = 0$, $x_2=0$ e $x_3 = 0$. Se esta for a única solução, então os vetores são LI. Se existir alguma outra solução que não seja a trivial, então os vetores são LD.
@@ -217,7 +217,7 @@ Resolver a equação vetorial equivale a resolver o sistema linear
   \begin{array}{cccc}
     1 & 1 & 1 & -1 \\
     0 & 1 & 1 & 2  \\
-    1 & 0 & 1 & 1 
+    1 & 0 & 1 & 1
   \end{array}
 \right]
 \left[
@@ -225,14 +225,14 @@ Resolver a equação vetorial equivale a resolver o sistema linear
     x_1 \\
     x_2 \\
     x_3 \\
-    x_4 
+    x_4
   \end{array}
 \right] =
 \left[
   \begin{array}{c}
     0 \\
     0 \\
-    0 
+    0
   \end{array}
 \right].
 \end{equation} Em um sistema com mais variáveis do que equações, podemos não ter soluções (no caso de alguma linha inconsistente) ou podemos ter infinitas soluções (no caso de haver variáveis livres). Não é possível ter unicidade. Como já sabemos que em um sistema homogêneo, sempre temos pelo menos a solução trivial $x_1 = 0$, $x_2=0$, $x_3=0$ e $x_4 = 0$, podemos concluir que existem infinitas soluções. Logo, o conjunto de vetores é LD.
@@ -274,7 +274,7 @@ A = \left[
   \begin{array}{ccc}
     1 & 1 & 1  \\
     0 & 1 & 1   \\
-    1 & 0 & 1 
+    1 & 0 & 1
     \end{array}
 \right]
 \end{equation} tem as colunas linearmente independentes (LI). Por outro lado, as colunas da matriz
@@ -283,7 +283,7 @@ B = \left[
   \begin{array}{cccc}
     1 & 1 & 1 & -1 \\
     0 & 1 & 1 & 2  \\
-    1 & 0 & 1 & 1 
+    1 & 0 & 1 & 1
   \end{array}
 \right]
 \end{equation} do Exemplo \ref{exp:2} são linearmente dependentes (LD). $\ \lhd$
@@ -292,7 +292,7 @@ B = \left[
 Podemos pensar ainda de outra forma. Considere uma matriz $A$ de ordem $m\times n.$ Para decidir se as colunas de $A$ são LI, devemos procurar por soluções não triviais do sistema linear cuja matriz associada é $A$. Ao resolver um \textbf{sistema homogêneo} por escalonamento, sabemos que
 \begin{itemize}
   \item Se existirem mais colunas do que linhas ($i.e. \ m<n$), então as colunas de $A$ são necessariamente LD.
-  \item Se existirem mais linhas do que colunas ou o número de linhas e o número de colunas for o mesmo ($i.e. \ m \geq n$), procedemos por escalonamento. Se todas as colunas da matriz $A$ possuirem posição de pivô, então as colunas são LI (pois daí a única solução do sistema homogêneo é a trivial). 
+  \item Se existirem mais linhas do que colunas ou o número de linhas e o número de colunas for o mesmo ($i.e. \ m \geq n$), procedemos por escalonamento. Se todas as colunas da matriz $A$ possuirem posição de pivô, então as colunas são LI (pois daí a única solução do sistema homogêneo é a trivial).
   \item No caso de alguma coluna não possuir posição de pivô, o sistema homogêneo possui pelo menos uma variável livre; logo, as colunas de $A$ são LD.
 \end{itemize}
 
@@ -353,7 +353,7 @@ Em geral, pensamos em uma transformação linear como ``transformando um vetor e
 
 
 \begin{ex}
-A aplicação $T: \mathbb{R}^3 \to \mathbb{R}^3$ dada por $T(\vec{u}) = 3\vec{u}$ é a transformação linear que transforma um vetor de $\mathbb{R}^3$ no vetor que tem o triplo do comprimento. Utilizamos a própria fórmula da transformada para verificar que a tranformação $T$ é de fato linear:
+A aplicação $T: \mathbb{R}^3 \to \mathbb{R}^3$ dada por $T(\vec{u}) = 3\vec{u}$ é a transformação linear que transforma um vetor de $\mathbb{R}^3$ no vetor que tem o triplo do comprimento. Utilizamos a própria fórmula da transformada para verificar que a transformação $T$ é de fato linear:
 \begin{equation}
 T\big( a \vec{u} + b \vec{v} \big) = 3 ( a \vec{u} + b \vec{v} ) = a \cdot 3 \vec{u} + b \cdot 3 \vec{v} = aT(\vec{u}) + bT(\vec{v}). \lhd
 \end{equation}
@@ -378,7 +378,7 @@ T(x_1, x_2) = (x_1 - 3 x_2, 3x_1 + 5x_2, -x_1 + x_2).
     1 \\
     -1 \\
   \end{array}
-\right] \quad \text{e} \quad 
+\right] \quad \text{e} \quad
 \vec{v} =
 \left[
   \begin{array}{c}
@@ -679,7 +679,7 @@ Notem que a afirmação acima é também equivalente a seguinte afirmação.
 
 % \begin{equation}
 % \boxed{\text{$T$ é injetora se, e somente se, as colunas de $A$ são linearmente independentes.}}
-% \end{equation} 
+% \end{equation}
 
 \begin{prop}
   $T$ é injetora se, e somente se, as colunas de $A$ são linearmente independentes.
@@ -761,4 +761,4 @@ Pelas observações das últimas subseções, só é possível da transformaçã
 
 \construirExer
 
-%\end{document} 
+%\end{document}

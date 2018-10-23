@@ -26,11 +26,11 @@ Formas equivalentes de dizer que $A$ é simétrica incluem:
 	\begin{bmatrix}
 	1 & -3 \\
 	-3 &  2
-	\end{bmatrix}, \ \ 
+	\end{bmatrix}, \ \
 	\begin{bmatrix}
 	1 & -3 \\
 	-3 &  1
-	\end{bmatrix}, \ \ 
+	\end{bmatrix}, \ \
 	\begin{bmatrix}
 	1 & -3 & 0 \\
 	-3 & -1 & 4 \\
@@ -41,11 +41,11 @@ Formas equivalentes de dizer que $A$ é simétrica incluem:
 	\begin{bmatrix}
 	1 & -3 \\
 	3 &  1
-	\end{bmatrix},\ \ 
+	\end{bmatrix},\ \
 	\begin{bmatrix}
 	1 &  3 \\
 	-3 &  2
-	\end{bmatrix},\ \ 
+	\end{bmatrix},\ \
 	\begin{bmatrix}
 	1 & -3 &  0 \\
 	4 & -1 & -3 \\
@@ -63,7 +63,7 @@ Um dos resultados mais importantes de Álgebra Linear é o Teorema Espectral, qu
 		\item autovetores associados a autovalores distintos são ortogonais.
 		\item a dimensão do autoespaço associado a um autovalor é igual à multiplicidade deste autovalor como raiz do polinômio característico;
 		\item existe uma base ortonormal de $\mathbb{R}^n$ formada por autovetores de $A$;
-		\item $A$ é diagonalizável por uma matriz de mudança de coordenadas ortonormal $P$: a matriz $P$ cujas colunas são os autovetores (ortonormais) de $A$ é tal que 
+		\item $A$ é diagonalizável por uma matriz de mudança de coordenadas ortonormal $P$: a matriz $P$ cujas colunas são os autovetores (ortonormais) de $A$ é tal que
 		\begin{equation}
 		P^{T} A P = P^{-1} A P = D.
 		\end{equation}
@@ -87,18 +87,18 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	\end{bmatrix} = (1-\lambda)^2 - 25 = \lambda^2 - 2 \lambda - 24
 	\end{equation} cujas raízes são $6$ e  $-4$. Os autovetores são calculados como
 	\begin{equation}
-	A + 4 I = 
+	A + 4 I =
 	\begin{bmatrix}
 	5 & -5 \\
 	-5 & 5
-	\end{bmatrix} \sim 
+	\end{bmatrix} \sim
 	\begin{bmatrix}
 	1 & -1 \\
 	0 & 0
-	\end{bmatrix} \implies 
+	\end{bmatrix} \implies
 	\left\{
 	\begin{array}{l}
-	v_1 = v_2 \\ 
+	v_1 = v_2 \\
 	\text{uma variável livre}
 	\end{array}
 	\right. \implies \vec{v}_1 = v_2
@@ -108,18 +108,18 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	\end{bmatrix}.
 	\end{equation} Associado com $6$:
 	\begin{equation}
-	A - 6 I = 
+	A - 6 I =
 	\begin{bmatrix}
 	-5 & -5 \\
 	-5 & -5
-	\end{bmatrix} \sim 
+	\end{bmatrix} \sim
 	\begin{bmatrix}
 	1 & 1 \\
 	0 & 0
-	\end{bmatrix} \implies 
+	\end{bmatrix} \implies
 	\left\{
 	\begin{array}{l}
-	v_2 = - v_1 \\ 
+	v_2 = - v_1 \\
 	\text{uma variável livre}
 	\end{array}
 	\right. \implies \vec{v}_2 = v_2
@@ -129,11 +129,11 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	\end{bmatrix}.
 	\end{equation} Uma base de autovetores é
 	\begin{equation}
-	\left\lbrace 
+	\left\lbrace
 	\begin{bmatrix}
 	1 \\
 	1
-	\end{bmatrix}, 
+	\end{bmatrix},
 	\begin{bmatrix}
 	1 \\
 	-1
@@ -141,11 +141,11 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	\right\rbrace.
 	\end{equation} Observe que são de fato reais os autovalores e que os autovetores associados são ortogonais (faça a conta!). Se quisermos uma base ortonormal para $\mathbb{R}^2$ formada por autovetores, normalizamos os que já obtivemos:
 	\begin{equation}
-	\mathbb{R}^2 = \Span \left\lbrace 
+	\mathbb{R}^2 = \Span \left\lbrace
 	\begin{bmatrix}
 	1/\sqrt{2} \\
 	1/\sqrt{2}
-	\end{bmatrix}, 
+	\end{bmatrix},
 	\begin{bmatrix}
 	1/\sqrt{2} \\
 	-1/\sqrt{2}
@@ -153,15 +153,15 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	\right\rbrace.
 	\end{equation} Lembrando do nosso processo de diagonalização, sabemos que
 	\begin{equation}
-	P =  
+	P =
 	\begin{bmatrix}
 	1/\sqrt{2} &  1/\sqrt{2} \\
-	1/\sqrt{2} & -1/\sqrt{2} 
-	\end{bmatrix} \implies 
-	P^{-1} A P = 
+	1/\sqrt{2} & -1/\sqrt{2}
+	\end{bmatrix} \implies
+	P^{-1} A P =
 	\begin{bmatrix}
 	1/\sqrt{2} &  1/\sqrt{2} \\
-	1/\sqrt{2} & -1/\sqrt{2} 
+	1/\sqrt{2} & -1/\sqrt{2}
 	\end{bmatrix}
 	\begin{bmatrix}
 	1 & -5 \\
@@ -169,8 +169,8 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	\end{bmatrix}
 	\begin{bmatrix}
 	1/\sqrt{2} &  1/\sqrt{2} \\
-	1/\sqrt{2} & -1/\sqrt{2} 
-	\end{bmatrix} = 
+	1/\sqrt{2} & -1/\sqrt{2}
+	\end{bmatrix} =
 	\begin{bmatrix}
 	-4 & 0 \\
 	0  & 6
@@ -182,18 +182,18 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 \begin{ex}
 	Vamos aplicar o procedimento de diagonalização para encontrar uma base ortonormal de autovetores de uma matriz de ordem $3 \times 3$. Considere a matriz simétrica
 	\begin{equation}
-	A = 
+	A =
 	\begin{bmatrix}
-	3 & -2 & 4 \\  
+	3 & -2 & 4 \\
 	-2 & 6 & 2 \\
 	4 & 2 & 3 \\
 	\end{bmatrix}.
-	\end{equation} O polinômio característico de $A$ é 
+	\end{equation} O polinômio característico de $A$ é
           \begin{align*}
-	p(\lambda) = \det (A - \lambda I ) & = 
-	\det 
+	p(\lambda) = \det (A - \lambda I ) & =
+	\det
 	\begin{bmatrix}
-	3- \lambda & -2 & 4 \\  
+	3- \lambda & -2 & 4 \\
 	-2 & 6- \lambda & 2 \\
 	4 & 2 & 3- \lambda \\
 	\end{bmatrix} \\
@@ -202,80 +202,80 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	& = 3\lambda^2 - 27 \lambda + 42  - \left[ \lambda^3 - 9 \lambda^2 + 14 \lambda \right] + 20 \lambda - 140  \\
 	& = -\lambda^3 + 12 \lambda^2 - 21 \lambda - 98.
           \end{align*}
- Como sabemos, se os coeficientes da matriz simétrica acima fossem escolhidos de maneira aleatória, dificilmente conseguiríamos encontrar as raízes deste polinômio com precisão. De qualquer forma, quaisquer raízes racionais (este exemplo foi construido artificialmente) deste polinômio só podem ser divisores de $98$ dividido pelos divisores de $-1$, isto é: $\pm 1, \pm 2, \pm 7, \pm 14, \pm 21$. Testando os primeiros, vemos que $-2$ é uma raiz. Pela divisão de polinômios, fatoramos
+ Como sabemos, se os coeficientes da matriz simétrica acima fossem escolhidos de maneira aleatória, dificilmente conseguiríamos encontrar as raízes deste polinômio com precisão. De qualquer forma, quaisquer raízes racionais (este exemplo foi construído artificialmente) deste polinômio só podem ser divisores de $98$ dividido pelos divisores de $-1$, isto é: $\pm 1, \pm 2, \pm 7, \pm 14, \pm 21$. Testando os primeiros, vemos que $-2$ é uma raiz. Pela divisão de polinômios, fatoramos
 	\begin{equation}
 	p(\lambda) = -(\lambda + 2) (\lambda^2 - 14 \lambda + 49) = -(\lambda + 2)(\lambda - 7)^2.
 	\end{equation} Logo, os autovalores de $A$ são $-2$ (simples) e $7$ (duplo).
 	\begin{itemize}
 		\item Autoespaço associado com o autovalor $-2$:
 		\begin{equation}
-		A + 2 I = 
+		A + 2 I =
 		\begin{bmatrix}
-		5 & -2 & 4 \\  
+		5 & -2 & 4 \\
 		-2 & 8 & 2 \\
 		4 & 2 & 5 \\
 		\end{bmatrix} \sim
 		\begin{bmatrix}
 		-1 & 4 & 1 \\
-		5 & -2 & 4 \\  
+		5 & -2 & 4 \\
 		4 & 2 & 5 \\
-		\end{bmatrix} \sim 
+		\end{bmatrix} \sim
 		\begin{bmatrix}
 		-1 & 4 & 1 \\
-		0 & 18 & 9 \\  
+		0 & 18 & 9 \\
 		0 & 18 & 9 \\
 		\end{bmatrix} \sim
 		\begin{bmatrix}
 		-1 & 2 & 0 \\
-		0 &  2 & 1 \\  
+		0 &  2 & 1 \\
 		0 &  0 & 0 \\
 		\end{bmatrix} \leftrightsquigarrow
-		\left\lbrace 
+		\left\lbrace
 		\begin{array}{l}
 		v_1 = 2 v_2 \\
 		v_3 = - 2 v_2 \\
 		\text{1 variável livre}
 		\end{array}
-		\right. 
+		\right.
 		\end{equation} Assim, um autovetor associado é ($v_2 = 1$)
 		\begin{equation}
-		\vec{v}_1 = 
+		\vec{v}_1 =
 		\begin{bmatrix}
 		2 \\ 1 \\ -2
 		\end{bmatrix}.
 		\end{equation}
 		\item Autoespaço associado com o autovalor $7$:
 		\begin{equation}
-		A - 7 I = 
+		A - 7 I =
 		\begin{bmatrix}
-		-4 & -2 & 4 \\  
+		-4 & -2 & 4 \\
 		-2 & -1 & 2 \\
 		4 & 2 & -4 \\
 		\end{bmatrix} \sim
 		\begin{bmatrix}
 		-2 & -1 & 2 \\
-		2 & 1 & -2 \\  
+		2 & 1 & -2 \\
 		0 & 0 & 0 \\
-		\end{bmatrix} \sim 
+		\end{bmatrix} \sim
 		\begin{bmatrix}
 		-2 & -1 & 2 \\
-		0 & 0 & 0 \\  
+		0 & 0 & 0 \\
 		0 & 0 & 0 \\
 		\end{bmatrix} \leftrightsquigarrow
-		\left\lbrace 
+		\left\lbrace
 		\begin{array}{l}
 		v_2 = - 2 v_1 + 2 v_3  \\
 		\text{2 variáveis livres}
 		\end{array}
-		\right. 
+		\right.
 		\end{equation} Assim, qualquer autovetor pode ser escrito parametricamente como
 		\begin{equation}
-		\vec{v} = 
+		\vec{v} =
 		\begin{bmatrix}
 		v_1 \\
 		- 2 v_1 + 2v_3 \\
 		v_3
-		\end{bmatrix} = v_1 
+		\end{bmatrix} = v_1
 		\begin{bmatrix}
 		1 \\ -2 \\ 0
 		\end{bmatrix} + v_2
@@ -287,31 +287,31 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 		\left\lbrace
 		\vec{v}_2 = \begin{bmatrix}
 		1 \\ -2 \\ 0
-		\end{bmatrix}, \vec{v}_3 = 
+		\end{bmatrix}, \vec{v}_3 =
 		\begin{bmatrix}
 		0 \\ 2 \\ 1
 		\end{bmatrix}
 		\right\rbrace.
 		\end{equation}
 	\end{itemize}
-	
+
 	Observamos que, em concordância com o item $(ii)$ do Teorema Espectral, autovetores associados a autovalores distintos são ortogonais: temos que $\vec{v}_1$ é ortogonal a cada um dos vetores $\vec{v}_2$ e $\vec{v}_3$ (faça as contas!). No entanto, estes três vetores não são ortogonais, pois os dois autovetores que estão associados com o mesmo autovalor satisfazem $\vec{v}_2 \cdot \vec{v}_3 = -4 \neq 0.$
-	
+
 	O fato de que os três autovetores que encontramos não são ortogonais não contradiz o Teorema Espectral. Pelo que vimos, o autoespaço associado com o autovalor $7$ tem dimensão dois. Encontramos uma base da maneira usual, mas ocorre que esta base não é ortogonal. Para obter uma base ortogonal, aplicamos o procedimento de Gram-Schmidt:
 	\begin{equation}
-	\vec{u}_2 = \vec{v}_2 = 
+	\vec{u}_2 = \vec{v}_2 =
 	\begin{bmatrix}
 	1 \\ -2 \\ 0
 	\end{bmatrix}
 	\end{equation}
 	\begin{equation}
-	\vec{u}_3 = \vec{v}_3 - \proj_{\vec{u}_2} \vec{v}_3 = \vec{v}_3 - \frac{\vec{v}_3 \cdot \vec{u}_2}{\vec{u}_2 \cdot \vec{u}_2} \, \vec{u}_2 = 
+	\vec{u}_3 = \vec{v}_3 - \proj_{\vec{u}_2} \vec{v}_3 = \vec{v}_3 - \frac{\vec{v}_3 \cdot \vec{u}_2}{\vec{u}_2 \cdot \vec{u}_2} \, \vec{u}_2 =
 	\begin{bmatrix}
 	0 \\ 2 \\ 1
 	\end{bmatrix} - \frac{-4}{5}
 	\begin{bmatrix}
 	1 \\ -2 \\ 0
-	\end{bmatrix} = 
+	\end{bmatrix} =
 	\begin{bmatrix}
 	4/5 \\ 2/5 \\ 1
 	\end{bmatrix} \xrightarrow{\text{podemos considerar } \times 5}
@@ -344,31 +344,31 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	4/(3\sqrt{5}) \\ 2/(3\sqrt{5}) \\ 5/(3\sqrt{5})
 	\end{bmatrix}
 	\right\rbrace.
-	\end{equation} Pelo método de diagonalização de matrizes, concluimos que $A$ pode ser diagonalizada pela matriz 
+	\end{equation} Pelo método de diagonalização de matrizes, concluimos que $A$ pode ser diagonalizada pela matriz
 	\begin{equation}
-	P = 
+	P =
 	\begin{bmatrix}
-	2/3  & 1/\sqrt{5}  & 4/(3\sqrt{5}) \\ 
-	1/3  & -2/\sqrt{5} & 2/(3\sqrt{5}) \\ 
+	2/3  & 1/\sqrt{5}  & 4/(3\sqrt{5}) \\
+	1/3  & -2/\sqrt{5} & 2/(3\sqrt{5}) \\
 	-2/3 &       0     & 5/(3\sqrt{5})
 	\end{bmatrix},
 	\end{equation} que, neste caso (em que $A$ é matriz simétrica), pode ser obtida ortogonal. Sendo $P$ ortogonal, tem-se $P^{-1} = P^T$ e portanto $P^{T} A P =  D$, isto é,
 	\begin{equation}
 	\begin{bmatrix}
-	2/3  & 1/\sqrt{5}  & 4/(3\sqrt{5}) \\ 
-	1/3  & -2/\sqrt{5} & 2/(3\sqrt{5}) \\ 
+	2/3  & 1/\sqrt{5}  & 4/(3\sqrt{5}) \\
+	1/3  & -2/\sqrt{5} & 2/(3\sqrt{5}) \\
 	-2/3 &       0     & 5/(3\sqrt{5})
 	\end{bmatrix}
 	\begin{bmatrix}
-	5 & -2 & 4 \\  
+	5 & -2 & 4 \\
 	-2 & 8 & 2 \\
 	4 & 2 & 5 \\
 	\end{bmatrix}
 	\begin{bmatrix}
-	2/3  & 1/\sqrt{5}  & 4/(3\sqrt{5}) \\ 
-	1/3  & -2/\sqrt{5} & 2/(3\sqrt{5}) \\ 
+	2/3  & 1/\sqrt{5}  & 4/(3\sqrt{5}) \\
+	1/3  & -2/\sqrt{5} & 2/(3\sqrt{5}) \\
 	-2/3 &       0     & 5/(3\sqrt{5})
-	\end{bmatrix} = 
+	\end{bmatrix} =
 	\begin{bmatrix}
 	-2& 0 & 0 \\
 	0 & 7 & 0 \\
@@ -387,11 +387,11 @@ Enfatizamos ainda mais uma vez a aplicação do Teorema Espectral: ele afirma qu
 Nesta seção, apresentamos uma aplicação matemática de matrizes simétricas. Uma \textbf{forma quadrática} em $\mathbb{R}^n$ é uma função polinomial em que todos os termos são de grau 2.
 
 \begin{ex}\label{exemplo1}
-	A função $Q : \mathbb{R}^2 \to \mathbb{R}$, definida por 
+	A função $Q : \mathbb{R}^2 \to \mathbb{R}$, definida por
 	\begin{equation}
 	Q(x_1, x_2) = 3 x_1^2 + x_1x_2
 	\end{equation} é uma forma quadrática em $\mathbb{R}^2$, já que cada um dos termos tem grau 2.
-	
+
 	Mais geralmente, qualquer forma quadrática em $\mathbb{R}^2$ pode ser escrita como
 	\begin{equation}
 	Q(x_1, x_2) = a x_1^2 + 2 b x_1x_2 + cx_2^2,
@@ -402,7 +402,7 @@ Nesta seção, apresentamos uma aplicação matemática de matrizes simétricas.
 
 
 \begin{ex}\label{exemplo2}
-	A função $Q : \mathbb{R}^3 \to \mathbb{R}$, definida por 
+	A função $Q : \mathbb{R}^3 \to \mathbb{R}$, definida por
 	\begin{equation}
 	Q(x_1, x_2, x_3) = x_2^2 - x_3^2 + 3 x_1 x_2 - 8 x_1 x_3
 	\end{equation} é uma forma quadrática em $\mathbb{R}^3$. Qualquer forma quadrática em $\mathbb{R}^3$ pode ser escrita como
@@ -442,7 +442,7 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 \begin{ex}
 	Voltamos a analisar os Exemplos \ref{exemplo1} e \ref{exemplo2} acima. Uma forma quadrática em $\mathbb{R}^2$ pode ser escrita na forma
 	\begin{equation}
-	Q(x_1, x_2) = a x_1^2 + 2 b x_1x_2 + cx_2^2 = 
+	Q(x_1, x_2) = a x_1^2 + 2 b x_1x_2 + cx_2^2 =
 	\begin{bmatrix}
 	x_1 & x_2
 	\end{bmatrix}
@@ -454,12 +454,12 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 	\end{bmatrix}
 	\end{equation} Assim,
 	\begin{equation}
-	Q(x_1, x_2) = 3 x_1^2 + x_1x_2 = 
+	Q(x_1, x_2) = 3 x_1^2 + x_1x_2 =
 	\begin{bmatrix}
 	x_1 & x_2
 	\end{bmatrix}
 	\begin{bmatrix}
-	3 & 1/2 \\ 
+	3 & 1/2 \\
 	1/2 & 0
 	\end{bmatrix}
 	\begin{bmatrix}
@@ -471,12 +471,12 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 	x_1 & x_2
 	\end{bmatrix}
 	\begin{bmatrix}
-	3 & 1/2 \\ 
+	3 & 1/2 \\
 	1/2 & 0
 	\end{bmatrix}
 	\begin{bmatrix}
 	x_1 \\ x_2
-	\end{bmatrix} = 
+	\end{bmatrix} =
 	\begin{bmatrix}
 	x_1 & x_2
 	\end{bmatrix}
@@ -485,15 +485,15 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 	x_1/2
 	\end{bmatrix} = 3 x_1^2 + \frac{x_1x_2}{2} + \frac{x_1x_2}{2}.
 	\end{equation}
-	
+
 	No caso $3\times 3$, aplicamos a mesma ideia
 	\begin{equation}
-	Q(x_1, x_2, x_3) = x_2^2 - x_3^2 + 3 x_1 x_2 - 8 x_1 x_3 = 
+	Q(x_1, x_2, x_3) = x_2^2 - x_3^2 + 3 x_1 x_2 - 8 x_1 x_3 =
 	\begin{bmatrix}
 	x_1 & x_2 & x_3
 	\end{bmatrix}
 	\begin{bmatrix}
-	0 & 3/2 & -4 \\ 
+	0 & 3/2 & -4 \\
 	3/2 & 1 & 0 \\
 	-4 & 0 & -1
 	\end{bmatrix}
@@ -513,12 +513,12 @@ Q(x_1, x_2, \dots, x_n) = A \vec{x}  \cdot \vec{x} = \vec{x}^T A \vec{x}.
 
 \subsection{Diagonalização de formas quadráticas}
 
-Embora não tenhamos dito explicitamente, estávamos trabalhando na base canônica de $\mathbb{R}^n$. Da forma usual, é possível fazer mudança de coordenadas. Do ponto de vista da matriz $A$, que é simétrica e portanto diagonalizável, a base (ortonormal) de autovetores associados é a mais natural de todas. Suponhamos que 
+Embora não tenhamos dito explicitamente, estávamos trabalhando na base canônica de $\mathbb{R}^n$. Da forma usual, é possível fazer mudança de coordenadas. Do ponto de vista da matriz $A$, que é simétrica e portanto diagonalizável, a base (ortonormal) de autovetores associados é a mais natural de todas. Suponhamos que
 \begin{equation}
 Q(\vec{x}) = \vec{x}^T A \vec{x}
 \end{equation} e que $\mathcal{B} = \{ \vec{v}_1, \vec{v}_2, \dots, \vec{v}_n\}$ é base ortonormal de $\mathbb{R}^n$ formada por autovetores de $A$. Desta forma,
 \begin{equation}
-P = 
+P =
 \begin{bmatrix}
 | & | &   & |  \\
 \vec{v}_1 & \vec{v}_2 & \cdots & \vec{v}_n \\
@@ -526,10 +526,10 @@ P =
 \end{bmatrix} \ \text{satisfaz} \ P^{-1}AP = D,
 \end{equation} onde $D$ é a matriz diagonal, com os respectivos autovalores na diagonal principal. Além disso, $P$ é ortogonal: $P^T = P^{-1}$. O vetor $\vec{x}$ pode ser representado na base $\mathcal{B}$ por:
 \begin{equation}
-\vec{x} = y_1 \vec{v}_1 + y_2 \vec{v}_2 + \cdots + y_n \vec{v}_n = P\vec{y}, \quad \text{onde denotamos} \quad \vec{y} = 
+\vec{x} = y_1 \vec{v}_1 + y_2 \vec{v}_2 + \cdots + y_n \vec{v}_n = P\vec{y}, \quad \text{onde denotamos} \quad \vec{y} =
 \begin{bmatrix}
 y_1 \\ y_2 \\ \vdots \\ y_n
-\end{bmatrix} = 
+\end{bmatrix} =
 \begin{bmatrix}
 \vec{x}
 \end{bmatrix}_{\mathcal{B}}.
@@ -546,7 +546,7 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 	Considere a forma quadrática
 	\begin{equation}
 	Q(x_1, x_2) = 6x_1^2 - 2 x_1x_2 + 4 x_2^2 \quad \leftrightsquigarrow \quad Q(\vec{x}) = \vec{x}^T A \vec{x}, \quad \text{onde} \quad
-	A = 
+	A =
 	\begin{bmatrix}
 	6 & -2 \\
 	-2 &  3
@@ -564,15 +564,15 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 	\begin{itemize}
 		\item Autovetor unitário associado ao autovalor $\lambda_1 = 2$:
 		\begin{equation}
-		A -2I = 
+		A -2I =
 		\begin{bmatrix}
 		4 & -2 \\
 		-2 &  1
-		\end{bmatrix} \sim 
+		\end{bmatrix} \sim
 		\begin{bmatrix}
 		2 & -1 \\
 		0 &  0
-		\end{bmatrix} \implies v_2 = 2v_1 \rightsquigarrow 
+		\end{bmatrix} \implies v_2 = 2v_1 \rightsquigarrow
 		\begin{bmatrix}
 		1 \\ 2
 		\end{bmatrix} \rightsquigarrow
@@ -582,15 +582,15 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 		\end{equation}
 		\item Autovetor unitário associado ao autovalor $\lambda_2 = 7$:
 		\begin{equation}
-		A -2I = 
+		A -2I =
 		\begin{bmatrix}
 		-1 & -2 \\
 		-2 &  -4
-		\end{bmatrix} \sim 
+		\end{bmatrix} \sim
 		\begin{bmatrix}
 		-1 & -2 \\
 		0 &  0
-		\end{bmatrix} \implies v_1 = -2v_2 \rightsquigarrow 
+		\end{bmatrix} \implies v_1 = -2v_2 \rightsquigarrow
 		\begin{bmatrix}
 		-2 \\ 1
 		\end{bmatrix} \rightsquigarrow
@@ -600,15 +600,15 @@ y_1 \\ y_2 \\ \vdots \\ y_n
 		\end{equation}
 	\end{itemize}  Portanto, encontramos uma base ortonormal (de modo que $P$ abaixo é matriz ortogonal e satisfaz $P = P^T$) e podemos escrever
 	\begin{equation}
-	P = 
+	P =
 	\begin{bmatrix}
-	1/\sqrt{5} & -2/\sqrt{5} \\ 
+	1/\sqrt{5} & -2/\sqrt{5} \\
 	2/\sqrt{5} & 1/\sqrt{5}
-	\end{bmatrix} \implies P^T A P = D = 
+	\end{bmatrix} \implies P^T A P = D =
 	\begin{bmatrix}
 	2 & 0 \\ 0 & 7
 	\end{bmatrix}
-	\end{equation} Assim, 
+	\end{equation} Assim,
 	\begin{equation}
 	Q(x_1, x_2) = Q (\vec{x}) = Q (P\vec{y}) = \vec{x}^T A \vec{x} = \vec{y}^T A \vec{y} =  2 y_1^2 + 7 y_2^2. \ \lhd
 	\end{equation}
@@ -645,7 +645,7 @@ Já conhecemos alguns exemplos:
 	\end{equation} Podemos escrever
 	\begin{equation}
 	\vec{x}^T A \vec{x} = 144, \quad \text{onde} \quad
-	A = 
+	A =
 	\begin{bmatrix}
 	31 & -5\sqrt{3} \\
 	-5\sqrt{3} &  21
@@ -668,8 +668,8 @@ Já conhecemos alguns exemplos:
 		\begin{bmatrix}
 		3 & -\sqrt{3} \\
 		0 &  0
-		\end{bmatrix} \implies 
-		3v_1 = \sqrt{3} v_2 \ \ \xrightarrow[\text{e já normalizando}]{\text{podemos escolher}} \ \  \vec{v}_1 = 
+		\end{bmatrix} \implies
+		3v_1 = \sqrt{3} v_2 \ \ \xrightarrow[\text{e já normalizando}]{\text{podemos escolher}} \ \  \vec{v}_1 =
 		\begin{bmatrix}
 		1/2 \\ \sqrt{3}/2
 		\end{bmatrix}.
@@ -683,8 +683,8 @@ Já conhecemos alguns exemplos:
 		\begin{bmatrix}
 		1 & \sqrt{3} \\
 		0 &  0
-		\end{bmatrix} \implies 
-		v_1 = - \sqrt{3} v_2 \ \ \xrightarrow[\text{e já normalizando}]{\text{podemos escolher}} \ \  \vec{v}_2 = 
+		\end{bmatrix} \implies
+		v_1 = - \sqrt{3} v_2 \ \ \xrightarrow[\text{e já normalizando}]{\text{podemos escolher}} \ \  \vec{v}_2 =
 		\begin{bmatrix}
 		-\sqrt{3}/2 \\ 1/2
 		\end{bmatrix}.
@@ -697,7 +697,7 @@ Já conhecemos alguns exemplos:
 	\end{bmatrix}
 	\end{equation} Assim, na base de $\mathbb{R}^2$ determinada por $\{\vec{v}_1, \vec{v}_2\}$, podemos escrever a equação da equação cônica como
 	\begin{equation}
-	\vec{x}^T A \vec{x} = \vec{y}^T D \vec{y} \implies 
+	\vec{x}^T A \vec{x} = \vec{y}^T D \vec{y} \implies
 	\begin{bmatrix}
 	y_1 & y_2
 	\end{bmatrix}
@@ -714,7 +714,7 @@ Já conhecemos alguns exemplos:
 	\begin{center}
 		\includegraphics[width=0.5\linewidth]{\dir/Semana14-15/semana14-conicas2}
 	\end{center}
-	
+
 	\noindent Observamos que quando a coordenada $y_1 = 0$ devemos ter que $y_2^2 = 2^2$, de modo que deve ser $\vec{x} = y_1 \vec{v}_1 + y_2 \vec{v}_2 = \pm 2 \vec{v}_2$, como na figura. Este é o análogo da análise que normalmente fazemos, só que agora na base ortonormal $\{\vec{v}_1, \vec{v}_2\}$
 \end{ex}
 
@@ -731,7 +731,7 @@ Já conhecemos alguns exemplos:
 Nesta seção, estudamos alguns problemas de otimização bem específicos. Mais precisamente, podemos encontrar valores de máximo e mínimo de formas quadráticas
 \begin{equation}
 Q(\vec{x}) = \vec{x}^T A \vec{x}
-\end{equation} sujeitos à restrição 
+\end{equation} sujeitos à restrição
 \begin{equation}
 x_1^2 + x_2^2 + \cdots + x_n^2 = 1,
 \end{equation} que caracteriza os pontos $(x_1, x_2, \dots, x_n) \in \mathbb{R}^n$ que tem comprimento unitário, isto é, a esfera de raio 1 e centro na origem em $\mathbb{R}^n$. Em outras palavras, nosso problema de otimização restrito consiste em achar, na esfera unitária, os vetores em que a forma quadrática $Q$ assume seu maior valor e seu menor valor.
@@ -746,13 +746,13 @@ Mais resumidamente, queremos:
 \lambda_1 \le \lambda_2 \le \cdots \le \lambda_n.
 \end{equation} Podemos também encontrar uma base ortonormal de autovetores e, com eles, formar uma matriz ortogonal que diagonaliza $A$:
 \begin{equation}
-P =  
+P =
 \begin{bmatrix}
 | & | &  & | \\
 \vec{v}_1 & \vec{v}_2 & \cdots & \vec{v}_n \\
 | & | &  & | \\
 \end{bmatrix} \implies
-P^{-1} A P = D = 
+P^{-1} A P = D =
 \begin{bmatrix}
 \lambda_1 & 0  & \cdots & 0 \\
 0 & \lambda_2  & \cdots & 0 \\
@@ -773,36 +773,36 @@ P^{-1} A P = D =
 
 
 \begin{ex}\label{otimiz}
-	Vamos maximizar a forma quadrática 
+	Vamos maximizar a forma quadrática
 	\begin{equation}
 	Q(x_1, x_2, x_3) = 7 x_1^2 + x_2^2 + 7x_3^2 - 8 x_1x_2 - 4x_1x_3 - 8 x_2x_3,
 	\end{equation} sujeito à restrição $x_1^2 + x_2^2 + x_3^2 = 1$.
-	
+
 	Note que podemos escrever
 	\begin{equation}
-	\vec{x} = 
+	\vec{x} =
 	\begin{bmatrix}
 	x_1 \\ x_2 \\ x_3
-	\end{bmatrix} \implies 
-	Q(\vec{x}) = \vec{x}^T 
+	\end{bmatrix} \implies
+	Q(\vec{x}) = \vec{x}^T
 	\begin{bmatrix}
 	7 & -4 & -2 \\
 	-4 &  1 & -4 \\
 	-2 & -4 &  7 \\
 	\end{bmatrix}\vec{x}.
-	\end{equation} Precisamos determinar o maior autovalor e um autovetor unitário associado. O polinômio característico de $A$ é dado por 
+	\end{equation} Precisamos determinar o maior autovalor e um autovetor unitário associado. O polinômio característico de $A$ é dado por
 	\begin{equation}
-	\det 
+	\det
 	\begin{bmatrix}
 	7 - \lambda & -4 & -2 \\
 	-4 &  1 - \lambda & -4 \\
 	-2 & -4 &  7 - \lambda \\
 	\end{bmatrix} = - \lambda^3 + 15 \lambda^2 - 27 \lambda - 243,
 	\end{equation} cujas raízes são $\lambda_1 = -3$ e $\lambda_2 = 9$. Portanto, o valor máximo que a forma quadrática $Q$ assume na esfera unitária é $9$.
-	
+
 	Além disso, sabemos que qualquer um autovetor unitário associado com o autovalor $\lambda_2 = 9$ assume este valor máximo. Resolvemos
 	\begin{equation}
-	A - 9 I = 
+	A - 9 I =
 	\begin{bmatrix}
 	-2 & -4 & -2 \\
 	-4 & -8 & -4 \\
@@ -827,11 +827,11 @@ P^{-1} A P = D =
 	\frac{1}{\sqrt{2}}
 	\begin{bmatrix}
 	-1 \\ 0 \\ 1
-	\end{bmatrix} = 
+	\end{bmatrix} =
 	\begin{bmatrix}
 	-1/\sqrt{2} \\ 0 \\ 1/\sqrt{2}
 	\end{bmatrix}.
-	\end{equation} Conferimos que 
+	\end{equation} Conferimos que
 	\begin{equation}
 	Q \left(\frac{1}{\sqrt{2}}, 0, \frac{1}{\sqrt{2}}\right) = \frac{7}{2} + 0 + \frac{7}{2} - 0 + \frac{4}{2} - 0 = 9. \ \lhd
 	\end{equation}
@@ -846,11 +846,11 @@ P^{-1} A P = D =
 	\begin{equation}
 	\vec{\nabla} f = \lambda \vec{\nabla} g.
 	\end{equation} Esta constante $\lambda$ é conhecida como um \textbf{multiplicador de Lagrange}. Como mencionamos, esta é uma condição necessária, de modo que não garante que o ponto é de mínimo/máximo. Na prática, depois de encontrarmos os possíveis valores de $\vec{x}$ e de $\lambda$, podemos substituir na função para ver quais são os pontos de mínimo e quais são os de máximo.
-	
+
 	Vejamos como esta técnica se aplicaria no Exemplo \ref{otimiz} que já resolvemos acima. Vamos considerar $f(x_1,x_2,x_3) = Q(x_1,x_2,x_3)$ e $g(x_1,x_2,x_3) = x_1^2 + x_2^2 + x_3^2 - 1$ Se estivermos em um ponto de máximo, então existe a constante $\lambda$ como acima. Calculamos:
 	\begin{equation}
-	\vec{\nabla} Q = \left( 14x_1 - 8x_2 - 4 x_3, 2x_2 - 8 x_1 - 8 x_3, 14x_3 - 4 x_1 - 8 x_2 \right) 
-	\end{equation} e 
+	\vec{\nabla} Q = \left( 14x_1 - 8x_2 - 4 x_3, 2x_2 - 8 x_1 - 8 x_3, 14x_3 - 4 x_1 - 8 x_2 \right)
+	\end{equation} e
 	\begin{equation}
 	\vec{\nabla} g = \left( 2 x_1, 2 x_2, 2 x_3 \right) .
 	\end{equation} A condição $\vec{\nabla} Q = \lambda \vec{\nabla} g$ nos diz que devemos resolver
@@ -864,7 +864,7 @@ P^{-1} A P = D =
 	7 & -4 & -2 \\
 	-4 & 1 & -4 \\
 	-2 & -4 & 7 \\
-	\end{bmatrix} 
+	\end{bmatrix}
 	\begin{bmatrix}
 	x_1 \\ x_2 \\ x_3
 	\end{bmatrix} = \lambda
@@ -898,14 +898,14 @@ Nesta seção vamos utilizar a notação $\langle \vec{u}, \vec{v} \rangle$ para
 	Outras formas de escrever esta mesma coisa (concorda?) são
 	\begin{equation}
 	A \vec{x} \cdot \vec{y} = \vec{x} \cdot A \vec{y}, \quad \text{ para todos } \vec{x}, \vec{y} \in \mathbb{R}^n
-	\end{equation} e 
+	\end{equation} e
 	\begin{equation}
 	\vec{y}^T A \vec{x} = \vec{x}^T A \vec{y}, \quad \text{ para todos } \vec{x}, \vec{y} \in \mathbb{R}^n.
 	\end{equation}
 \end{obs}
 
 \begin{obs}
-	A observação anterior nos permite estender a definição de matriz simétrica para transformações lineares, pois é independente do sistema de coordenadas utilizado (depende apenas de uma escolha de produto interno/escalar). 
+	A observação anterior nos permite estender a definição de matriz simétrica para transformações lineares, pois é independente do sistema de coordenadas utilizado (depende apenas de uma escolha de produto interno/escalar).
 \end{obs}
 
 A equivalência que foi apresentada na Observação \ref{sse} é muito útil na análise de matrizes simétricas. Vamos ver como se aplica diversas vezes na demonstração do Teorema Espectral que será dividida em três proposições preliminares. Cada uma delas apresenta, em ordem, o procedimento usual que viemos utilizando para diagonalizar matrizes: análise dos autovalores, construção dos autoespaços e verificação de que é possível formar uma base de autovetores. Neste caso de uma matriz simétrica, veremos que, além de tudo, é possível encontrar uma base ortonormal de autovetores.
@@ -951,10 +951,10 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na 
 	\begin{equation}
 	\{ \vec{v}_1, \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}
 	\end{equation} é uma base ortonormal de $\mathbb{R}^n$.
-	
+
 	Considere a matriz $Q$ cujas colunas são os elementos desta base:
 	\begin{equation}
-	Q = 
+	Q =
 	\begin{bmatrix}
 	| & | & | & & | \\
 	\vec{v}_1 & \vec{y}_2 & \vec{y}_3 & \cdots &  \vec{y}_n \\
@@ -962,12 +962,12 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na 
 	\end{bmatrix},
 	\end{equation} que é, consequentemente, ortogonal. Vamos calcular $Q^{-1} A Q = Q^T A Q$. O produto $AQ$ pode ser interpretado como o produto de $A$ por cada uma das colunas de $Q$:
 	\begin{equation}
-	AQ = 
+	AQ =
 	\begin{bmatrix}
 	| & | & | & & | \\
 	A \vec{v}_1 & A \vec{y}_2 & A \vec{y}_3 & \cdots &  A\vec{y}_n \\
 	| & | & | & & | \\
-	\end{bmatrix} = 
+	\end{bmatrix} =
 	\begin{bmatrix}
 	| & | & | & & | \\
 	\lambda_1 \vec{v}_1 & A \vec{y}_2 & A \vec{y}_3 & \cdots &  A\vec{y}_n \\
@@ -981,7 +981,7 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na 
 	\text{---} & \vec{y}_2 & \text{---} \\
 	\text{---} & \vec{y}_3 &\text{---} \\
 	& \vdots    &     \\
-	\text{---} & \vec{y}_n & \text{---} \\      
+	\text{---} & \vec{y}_n & \text{---} \\
 	\end{bmatrix}
 	\begin{bmatrix}
 	| & | & | & & | \\
@@ -998,7 +998,7 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na 
 	\vdots & \vdots & \vdots & \ddots & \vdots \\
 	\lambda_1\langle \vec{y}_n, \vec{v}_1 \rangle & \langle \vec{y}_n, A\vec{y}_2 \rangle & \langle \vec{y}_n, A\vec{y}_3 \rangle & \cdots & \langle \vec{y}_n, A\vec{y}_n \rangle \\
 	\end{bmatrix}
-	\end{equation} Observamos que, pela simetria de $A$ e por ser $	\{ \vec{v}_1, \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}$ um conjunto ortonormal, temos 
+	\end{equation} Observamos que, pela simetria de $A$ e por ser $	\{ \vec{v}_1, \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}$ um conjunto ortonormal, temos
 	\begin{equation}
 	\langle \vec{v}_1, A\vec{y}_j \rangle = \langle A\vec{v}_1, \vec{y}_j \rangle = \lambda_1 \langle \vec{v}_1, \vec{y}_j \rangle = 0, \quad \text{para qualquer índice } j.
 	\end{equation}Logo,
@@ -1011,11 +1011,11 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na 
 	\vdots & \vdots & \vdots & \ddots & \vdots \\
 	0 & b_{n2} & b_{n3} & \cdots & b_{nn} \\
 	\end{bmatrix} \stackrel{\text{def}}{=} \hat{A}.
-	\end{equation} Chamamos os coeficientes restantes de $b_{ij}$ simplesmente porque não nos interessa muito quanto valem (notamos, no entanto, que a simetria de $A$ implica que $b_{ij} = b_{ji}$). Observamos que 
+	\end{equation} Chamamos os coeficientes restantes de $b_{ij}$ simplesmente porque não nos interessa muito quanto valem (notamos, no entanto, que a simetria de $A$ implica que $b_{ij} = b_{ji}$). Observamos que
 	\begin{equation}
 	\det \left( A - \lambda I \right) = \det \left( Q^{-1} (A - \lambda I) Q \right) =	\det \left( \hat{A} - \lambda I \right) = (\lambda_1 - \lambda) \cdot \det (B - \lambda I),
 	\end{equation} onde $B$ é a matriz de ordem $(n-1)\times (n-1)$ dada por $(b_{ij})$. Além disso, se a multiplicidade de $\lambda_1$ como autovalor de $A$ for maior do que $1$, devemos ter, pela igualdade acima, que $\lambda_1$ também é um autovalor de $B$. Desta forma, $\hat{A}$ possui um autovetor unitário $\vec{v}_2$ associado com $\lambda_1$ que está contido em $\Span \{ \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}$ e, portanto, é distinto e linearmente independente a $\vec{v}_1$. O processo de Gram-Schmidt permite obter $\{\vec{v}_1, \vec{v}_2\}$ ortonormais.
-	
+
 	A partir daí, repetimos o processo completando o conjunto $\{\vec{v}_1, \vec{v}_2\}$ a uma base ortonormal $\{ \vec{v}_1, \vec{v}_2, \vec{y}_3, \dots, \vec{y}_n \}$ de $\mathbb{R}^n$. Daí vamos obter um terceiro autovetor ortogonal aos anteriores e unitário. Procedemos desta meneira até encontrar $k$ autovetores ortogonais e unitários associados ao autovalor $\lambda_1$. Assim, o autoespaço $\operatorname{Nul} (A - \lambda_1 I)$ tem dimensão $k$, que é igual à multiplicidade do autovalor $\lambda_1$.
 \end{proof}
 
@@ -1038,21 +1038,21 @@ Além disso, a Proposição \ref{ortog} garante que todo autovetor de um autoesp
 
 Explicitamente, a matriz
 \begin{equation}
-P = 
+P =
 \begin{bmatrix}
 | & | & & | \\
 \vec{v}_1 & \vec{v}_2 & \cdots &  \vec{v}_n \\
 | & | &  & | \\
 \end{bmatrix}
-\end{equation} formada pelos autovetores é ortogonal e 
+\end{equation} formada pelos autovetores é ortogonal e
 \begin{equation}
-P^{-1} A P = D = 
+P^{-1} A P = D =
 \begin{bmatrix}
-\lambda_1 & 0 & 0 & \cdots & 0 \\ 
-0 & \lambda_2 & 0 & \cdots & 0 \\ 
-0 & 0 & \lambda_3 & \cdots & 0 \\ 
-\vdots & \vdots & \vdots & \ddots & \vdots \\ 
-0 & 0 & 0 & \cdots & \lambda_n \\ 
+\lambda_1 & 0 & 0 & \cdots & 0 \\
+0 & \lambda_2 & 0 & \cdots & 0 \\
+0 & 0 & \lambda_3 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+0 & 0 & 0 & \cdots & \lambda_n \\
 \end{bmatrix}.
 \end{equation} Sendo $P$ ortogonal, tem-se ainda que $P^{-1} = P^T$.
 
@@ -1068,4 +1068,4 @@ P^{-1} A P = D =
 
 \construirExer
 
-%\end{document} 
+%\end{document}
