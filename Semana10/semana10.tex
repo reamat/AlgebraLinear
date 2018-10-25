@@ -16,7 +16,7 @@
 
 \section{Cadeias de Markov como introdução a autovalores e autovetores}
 
-Suponha que em um determindo país existam dois sistemas operacionais para telefones celulares, os sistemas A e B.
+Suponha que em um determinado país existam dois sistemas operacionais para telefones celulares, os sistemas A e B.
 
 Os habitantes deste país são livres para usar qualquer um dos sistemas, podendo trocar a qualquer momento.
 
@@ -89,7 +89,7 @@ No nosso caso $p_A(2)=0,55$ e $p_B(2)=0,45$.
 
 Seguindo, nosso modelo nos permite deduzir que
 
-\begin{equation} \vec p_{n+1} = A^n \vec p_0\end{equation}
+\begin{equation} \vec p_{n} = A^n \vec p_0\end{equation}
 onde $A^n$ significa a n-ésima potência da matriz $A$.
 
 Neste momento surge uma quarta pergunta:
@@ -136,7 +136,7 @@ Dada uma matriz \textit{quadrada} $A$ de ordem $n \times n$, com entradas reais,
 A \vec{v} = \lambda \vec{v}.
 \end{equation} Neste caso, $\vec{v}$ é dito um \textbf{autovetor} de $A$ associado a $\lambda$.
 
-Geometricamente, $\vec{v}$ é um vetor que não muda de direção quando aplicamos a matriz $A$. No entanto, quando permitimos que $\lambda$ seja um número complexo, esta interpretação geométrica é perdida.
+Geometricamente, $\vec{v}$ é um vetor que não muda de direção quando aplicamos a matriz $A$. Em outras palavras, um autovetor é um vetor que é levado em um múltiplo de si próprio. No entanto, quando permitimos que $\lambda$ seja um número complexo, esta interpretação geométrica é perdida.
 
 		\includegraphics[width=1 \linewidth]{Semana10/semana10-eigen}
 
@@ -150,12 +150,21 @@ Geometricamente, $\vec{v}$ é um vetor que não muda de direção quando aplicam
 	\begin{equation}
 	\vec{v}_1 =
 	{\begin{bmatrix}1\\0\\0\end{bmatrix}} \quad \text{ satisfaz } \quad {\begin{bmatrix}2&0&0\\0&3&4\\0&4&9\end{bmatrix}} {\begin{bmatrix}1\\0\\0\end{bmatrix}} = 2 \cdot {\begin{bmatrix}1\\0\\0\end{bmatrix}}.
-	\end{equation} Assim, podemos dizer que $\vec{v}_1$ é um autovetor de $A$ associado ao autovalor $2$. Colocando de outra maneira, podemos dizer também que
+	\end{equation} Assim, podemos dizer que $\vec{v}_1$ é um autovetor de $A$ associado ao autovalor $2$. Além disso, podemos dizer também que
 	\begin{equation}
 	\vec{v}_2 =
 	{\begin{bmatrix}0\\1\\2\end{bmatrix}} \quad \text{ é um autovetor de $A$, pois } \quad {\begin{bmatrix}2&0&0\\0&3&4\\0&4&9\end{bmatrix}} {\begin{bmatrix}0\\1\\2\end{bmatrix}} = {\begin{bmatrix}0\\11\\22\end{bmatrix}} = 11 \cdot {\begin{bmatrix}0\\1\\2\end{bmatrix}}.
-	\end{equation} Neste caso, concluimos também que $11$ é um autovalor de $A. \ \lhd$
+	\end{equation} Neste caso, concluimos também que $11$ é um autovalor de $A.$
+	Finalmente, temos que 
+	\begin{equation}
+	\vec{v}_3 =
+	{\begin{bmatrix}0\\2\\-1\end{bmatrix}} \quad \text{ é um autovetor de $A$, pois } \quad {\begin{bmatrix}2&0&0\\0&3&4\\0&4&9\end{bmatrix}} {\begin{bmatrix}0\\2\\-1\end{bmatrix}} = {\begin{bmatrix}0\\2\\-1\end{bmatrix}} = 1 \cdot {\begin{bmatrix}0\\2\\-1\end{bmatrix}}.
+	\end{equation} e portanto concluimos que $1$ também é  um autovalor de $A. \ \lhd$
+
 \end{ex}
+
+
+
 
 Observamos que, se $\vec{v}$ for um autovetor de uma matriz $A$ associado a um autovalor $\lambda$, então qualquer múltiplo escalar $\alpha \vec{v}$ também é um autovetor de $A$ associado a $\lambda$:
 \begin{equation}
@@ -207,6 +216,31 @@ p(\lambda) = \det (A - \lambda I).
 	\end{equation} Portanto, $A$ tem dois autovalores reais: $\lambda_1 = 1$ e $\lambda_2 = 5$.
 \end{ex}
 
+
+%Muito em breve provaremos que uma matriz $n \times n$ pode ter no máximo $n$ autovalores distintos.
+Acabamos de ver um exemplo de uma matriz $2 \times 2$ com $2$ autovalores distintos. Vamos ver agora, nos próximos dois exemplos, que uma matriz $2\times 2$ pode ter 1 ou nenhum autovalor.
+
+\begin{ex}
+	Seja  a matriz
+	\begin{equation}
+	A={\begin{bmatrix}4&0\\0&4\end{bmatrix}}.
+	\end{equation}
+	A matriz acima representa uma transformação linear no plano que expande um vetor pelo fator 4, mantendo sua direção e sentido. De fato, se $T:\mathbb{R}^2 \rightarrow \mathbb{R}^2$ é dado por $T(\vec{v})=A \vec{v}$, então $T(x,y)=(4x,4y)$.
+	%$T(\vec{v})=4 \vec{v}$.
+    Sendo assim, qualquer vetor satisfaz $Av = 4v$, o que nos mostra que $4$ é o único autovalor de $A$, e qualquer vetor não nulo é autovetor associado a este autovalor.
+\end{ex}
+
+
+\begin{ex}
+	Seja  a matriz
+	\begin{equation}
+	A={\begin{bmatrix}cos(\theta)&-sen(\theta)\\sen(\theta)&cos(\theta)\end{bmatrix}}.
+	\end{equation}
+	A matriz acima representa uma transformação linear no plano que rotaciona um vetor pelo ângulo $\theta$ no sentido anti-horário.
+	Se $0<\theta<\pi$, então nenhum vetor pode ser levado em um múltiplo de si próprio, e portanto não existem autovalores (reais) para a matriz $A$. 
+\end{ex}
+
+Vamos agora analisar uma matriz $3\times 3$.
 
 \begin{ex}\label{3x3}
 	Encontrar os autovalores de
@@ -605,7 +639,7 @@ Observamos que, nos exemplos anteriores, a dimensão do autoespaço associado fi
 \end{bmatrix}
 \end{equation} é igual a $1$, embora a multiplicidade do autovalor seja $2$.
 
-De forma geral, chamamos a multiplicidade do autovalor de \textbf{multiplicidade algébrica}, enquanto que a dimensão do autoespaço associado é chamada de \textbf{multiplicidade geométrica}.
+De forma geral, chamamos a multiplicidade do autovalor de \textbf{multiplicidade algébrica}, enquanto que a dimensão do autoespaço associado é chamada de \textbf{multiplicidade geométrica}. Pode-se provar que a multiplicidade geométrica é sempre menor ou igual que a multiplicidade algébrica de um autovalor.
 
 \subsection*{Exercícios resolvidos}
 
@@ -750,7 +784,7 @@ A = \begin{bmatrix}
 
 Em geral, valem as seguintes propriedades: seja $A$ uma matriz de orden $n \times n$. Então:
 \begin{itemize}
-	\item Se $A$ possui $n$ autovalores reais distintos, então $A$ possui uma base de autovetores e é diagonalizável, pois possui um autovetor associado a cada um dos seus autovalores distintos.
+	\item Se $A$ possui $n$ autovalores reais distintos, então $A$ possui uma base de autovetores e é diagonalizável, pois possui um autovetor associado a cada um dos seus autovalores distintos. Isto é consequência de um resultado que diz que se temos $k$ autovetores associados a $k$ autovalores distintos, então este conjunto de $k$ autovetores é LI.
 	\item No caso de $A$ possuir autovalores reais com multiplicidade maior do que $1$, $A$ apenas será diagonalizável se cada autovalor de multiplicidade $k$ tiver $k$ autovetores linearmente independentes. Em outras palavras, só será possível formar uma base de autovetores de $A$ quando
 	\begin{equation}
 	\operatorname{dim} \operatorname{Nul} (A - \lambda I) = \text{ multiplicidade do autovalor } \lambda.
