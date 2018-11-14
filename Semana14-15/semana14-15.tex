@@ -56,7 +56,7 @@ Formas equivalentes de dizer que $A$ é simétrica incluem:
 
 Um dos resultados mais importantes de Álgebra Linear é o Teorema Espectral, que diz que toda matriz simétrica é diagonalizável por uma base de autovetores que é ortonormal. De forma mais precisa:
 
-\begin{teoespectral}
+\begin{teo}\label{teoespectral}
 	Suponhamos que $A$ é uma matriz simétrica com coeficientes reais. Então:
 	\begin{enumerate}[$(i)$]
 		\item todos os autovalores de $A$ são reais;
@@ -68,7 +68,7 @@ Um dos resultados mais importantes de Álgebra Linear é o Teorema Espectral, qu
 		P^{T} A P = P^{-1} A P = D.
 		\end{equation}
 	\end{enumerate}
-\end{teoespectral}
+\end{teo}
 
 Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de mais nada, faremos alguns exemplos e aplicações que justificam a importância do Teorema Espectral. No entanto, é fortemente aconselhado que o leitor acompanhe os elementos da demonstração, para efetivamente entender as propriedades essenciais das matrizes simétricas.
 
@@ -631,7 +631,7 @@ Já conhecemos alguns exemplos:
 \end{itemize} Graficamente, vemos alguns exemplos na figura abaixo.
 \begin{figure}[h!]
 	\begin{center}
-		\includegraphics[width=0.2\linewidth]{\dir/Semana14-15/semana14-circulo} \ \ \includegraphics[width=0.3\linewidth]{\dir/Semana14-15/semana14-elipse} \ \ \includegraphics[width=0.3\linewidth]{\dir/Semana14-15/semana14-hiperbole}
+		\includegraphics[width=0.2\linewidth]{Semana14-15/semana14-circulo} \ \ \includegraphics[width=0.3\linewidth]{Semana14-15/semana14-elipse} \ \ \includegraphics[width=0.3\linewidth]{Semana14-15/semana14-hiperbole}
 	\end{center}
 \end{figure}
 
@@ -712,7 +712,7 @@ Já conhecemos alguns exemplos:
 	16 y_1^2 + 36 y_2^2 = 144 \ \leftrightsquigarrow \ \frac{y_1^2}{(144/16)} + \frac{y_1^2}{(144/36)} = 1 \ \leftrightsquigarrow \ \frac{y_1^2}{3^2} + \frac{y_1^2}{2^2} = 1.
 	\end{equation} Esta equação é pode ser agora identificada como uma elipse nos ``novos eixos'' $\vec{v}_1$ e $\vec{v}_2$.
 	\begin{center}
-		\includegraphics[width=0.5\linewidth]{\dir/Semana14-15/semana14-conicas2}
+		\includegraphics[width=0.5\linewidth]{Semana14-15/semana14-conicas2}
 	\end{center}
 
 	\noindent Observamos que quando a coordenada $y_1 = 0$ devemos ter que $y_2^2 = 2^2$, de modo que deve ser $\vec{x} = y_1 \vec{v}_1 + y_2 \vec{v}_2 = \pm 2 \vec{v}_2$, como na figura. Este é o análogo da análise que normalmente fazemos, só que agora na base ortonormal $\{\vec{v}_1, \vec{v}_2\}$
