@@ -406,7 +406,7 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\mathbb{R}$} é um con
 \begin{ex}\label{funcoes}
   O conjunto de todas as funções de um intervalo $I$ em $\mathbb{R}$
   \begin{equation}
-    \mathcal{F} (I;\mathbb{R}) = \left\{ f: I \to \mathbb{R} \text{funções} \right\}.  
+    \mathcal{F} (I;\mathbb{R}) = \left\{ f: I \to \mathbb{R} \text{funções} \right\}.
   \end{equation}
   forma um espaço vetorial sobre $\mathbb{R}$, com as operações:
   \begin{itemize}
@@ -438,7 +438,7 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 	Um subconjunto $H \subseteq V$ é subespaço de $V$ se, e somente se, as duas propriedades abaixo são verificadas:
 	\begin{itemize}
 		\item $0 \in H$;
-		\item $a\cdot u + b \cdot v \in V$ para quaisquer $a, b \in \mathbb{R}$ e quaisquer $u,v \in V$.
+		\item $a\cdot u + b \cdot v \in H$ para quaisquer $a, b \in \mathbb{R}$ e quaisquer $u,v \in H$.
 	\end{itemize}
 \end{teo}
 
@@ -461,7 +461,7 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 
 \begin{ex}
 	Mais geralmente, para $\vec{u}, \vec{v} \in \mathbb{R}^n$, o espaço gerado $\Span \{\vec{u}, \vec{v}\}$ é um subespaço de $\mathbb{R}^n$. Caso os vetores sejam LI, este espaço pode ser pensado como o plano que contém os vetores $\vec{u}, \vec{v}$ dentro de $\mathbb{R}^n$ (por quê?).
-	
+
 	Poderíamos argumentar que a reta do Exemplo \ref{reta} é um subespaço, pois todos os pontos da reta satisfazem:
 	\begin{equation}
 	\left[
@@ -602,7 +602,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	x_4 \\
 	x_5 \\
 	\end{array}
-	\right] = 
+	\right] =
 	\left[
 	\begin{array}{c}
 	0 \\
@@ -618,14 +618,14 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	1  & -2 & 2  & 3 & -1 \\
 	2  & -4 & 5  & 8 & -4 \\
 	\end{array}
-	\right] \sim 
+	\right] \sim
 	\left[
 	\begin{array}{ccccc}
 	1 & -2 & 0  & -1 & 3  \\
 	0 & 0  & 1  & 2  & -2 \\
 	0 & 0  & 0  & 0  & 0  \\
 	\end{array}
-	\right] \sim 
+	\right] \sim
 	\left\{
 	\begin{array}{ll}
 	x_1 - 2x_2 - x_4 + 3x_5 = 0 \\
@@ -643,7 +643,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	x_4 \\
 	x_5 \\
 	\end{array}
-	\right] = 
+	\right] =
 	\left[
 	\begin{array}{c}
 	2x_2 + x_4 - 3x_5 \\
@@ -652,7 +652,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	x_4 \\
 	x_5 \\
 	\end{array}
-	\right] = x_2 
+	\right] = x_2
 	\left[
 	\begin{array}{c}
 	2 \\
@@ -680,9 +680,9 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	1 \\
 	\end{array}
 	\right].
-	\end{equation} Isto significa que 
+	\end{equation} Isto significa que
 	\begin{equation}
-	\operatorname{Nul} A = 
+	\operatorname{Nul} A =
 	\Span \left\{
 	\left[
 	\begin{array}{c}
@@ -711,7 +711,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	1 \\
 	\end{array}
 	\right]\right\}. \ \lhd
-	\end{equation} 
+	\end{equation}
 \end{ex}
 
 Uma das importâncias teóricas do espaço nulo é
@@ -745,7 +745,7 @@ A =
 Lembrando ainda que
 \begin{equation}
 x_1 \vec{a}_1 + x_2 \vec{a}_2 + \cdots + x_n \vec{a}_n = \vec{b} \iff A \vec{x} = \vec{b},
-\end{equation} podemos reescrever a definição como 
+\end{equation} podemos reescrever a definição como
 \begin{equation}
 \operatorname{Col} A = \{ \vec{b} \in \mathbb{R}^m \ | \ \text{existe } \vec{x} \text{ tal que } \vec{b} = A \vec{x} \}.
 \end{equation} O espaço coluna trata portanto de vetores na imagem da aplicação linear. Temos:
@@ -768,4 +768,4 @@ A definição do espaço coluna já deixa claro um conjunto gerador (as colunas 
 
 \construirExer
 
-%\end{document} 
+%\end{document}

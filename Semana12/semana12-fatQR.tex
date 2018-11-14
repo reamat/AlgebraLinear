@@ -9,7 +9,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\begin{document}
-	
+
 	\chapter{Semana 12}
 
 \section{Projeção ortogonais sobre subespaços}
@@ -225,7 +225,7 @@ Calcular a distância do ponto $P = (1,2,-1,0,7)$ até o plano $W = \Span\{\vec{
 
 \section{O Processo de ortogonalização de Gram--Schmidt}
 
-O \textbf{Processo de Gram--Schmidt} é um algoritmo para obter uma base ortogonal (ou ortonormal) a partir de uma base qualquer. De maneira mais geral, o método permite transformar um conjunto de vetores linearmente independentes em um conjunto ortogonal que gera o mesmo espaço vetorial. 
+O \textbf{Processo de Gram--Schmidt} é um algoritmo para obter uma base ortogonal (ou ortonormal) a partir de uma base qualquer. De maneira mais geral, o método permite transformar um conjunto de vetores linearmente independentes em um conjunto ortogonal que gera o mesmo espaço vetorial.
 
 Vamos começar com um exemplo.
 
@@ -575,7 +575,7 @@ A =
 
 Como passamos a discutir abaixo, o método de Gram-Schmidt permite fatorar uma matriz $A$ cujas colunas são linearmente independentes em um produto \begin{equation}A=QR,\end{equation} onde Q é uma matriz cujas colunas formam um conjunto ortonormal e $R$ é uma matriz triangular superior. Tal fatoração é muito importante do ponto de vista computacional, como veremos em breve, quando usarmos a fatoração QR como uma alternativa para resolução de sistemas lineareas por mínimos quadrados. Também é a base de um eficiente método numérico para encontrar autovalores de uma matriz quadrada.
 
-Matrizes cujas colunas formam um conjunto ortonormal são muito úteis e por isso recebem um nome especial: são chamadas de \textbf{matrizes ortogonais}. Aqui cabe uma observação relevante: este é um exemplo de uma situação onde a terminologia clássica está longe de ser satisfatória: matrizes  cujas colunas formam um conjunto {\it ortonormal} são chamadas de matrizes {\it ortogonais}.   
+Matrizes cujas colunas formam um conjunto ortonormal são muito úteis e por isso recebem um nome especial: são chamadas de \textbf{matrizes ortogonais}. Aqui cabe uma observação relevante: este é um exemplo de uma situação onde a terminologia clássica está longe de ser satisfatória: matrizes  cujas colunas formam um conjunto {\it ortonormal} são chamadas de matrizes {\it ortogonais}.
 
 \medskip
 
@@ -583,14 +583,14 @@ Faremos agora uma exposição da fatoração QR usando uma matriz inicial $A$ qu
 
 Dada uma matriz $A=\begin{bmatrix}
 \vec{v}_1 & \vec{v}_2 & \vec{v}_3
-\end{bmatrix}$ cujas colunas são LI e são denotadas pelos vetores $\vec{v}_1$, $\vec{v}_2$, e $\vec{v}_3$, 
+\end{bmatrix}$ cujas colunas são LI e são denotadas pelos vetores $\vec{v}_1$, $\vec{v}_2$, e $\vec{v}_3$,
 o processo de Gram-Schmidt começa com a construção de uma base ortogonal formada pelos vetores
 $\vec{u}_1$, $\vec{u}_2$, e $\vec{u}_3$,
 para o espaço-coluna da matriz $A$. Para isso, definimos
 
 \begin{equation}
 \begin{cases}
-\vec{u}_1 = \vec{v}_1 \\ 
+\vec{u}_1 = \vec{v}_1 \\
 \vec{u}_2 = \vec{v}_2 - \proj_{\vec{u}_1} \vec{v}_2 \\
 \vec{u}_3 = \vec{v}_3 - \proj_{\Span\{\vec{u}_1,\vec{u}_2\}} \vec{v}_3
 \end{cases}
@@ -598,7 +598,7 @@ para o espaço-coluna da matriz $A$. Para isso, definimos
 Desta forma, existem coeficientes $b_1$, $c_1$ e $c_2 \in \mathbb{R}$ tais que
 \begin{equation}
 \begin{cases}
-\vec{u}_1 = \vec{v}_1 \\ 
+\vec{u}_1 = \vec{v}_1 \\
 \vec{u}_2 = \vec{v}_2 - b_1 \vec{u}_1 \\
 \vec{u}_3 = \vec{v}_3 - c_1 \vec{u}_1 - c_2 \vec{u}_2
 \end{cases}.
@@ -610,7 +610,7 @@ Em um segundo momento, cada um dos três vetores $\vec{u}_1$, $\vec{u}_2$, e $\v
 \end{equation}}
 \begin{equation}
 \begin{cases}
-\vec{u}_1 = \alpha_1\vec{v}_1 \\ 
+\vec{u}_1 = \alpha_1\vec{v}_1 \\
 \vec{u}_2 = \beta_2 \vec{v}_2 - \beta_1 \vec{u}_1 \\
 \vec{u}_3 = \gamma_3 \vec{v}_3 - \gamma_1 \vec{u}_1 - \gamma_2 \vec{u}_2
 \end{cases}
@@ -620,7 +620,7 @@ Em um segundo momento, cada um dos três vetores $\vec{u}_1$, $\vec{u}_2$, e $\v
 Podemos agora inverter estas equações (que são do tipo triangular -- faça as contas!) para escrever as colunas da matriz $A$ em função dos vetores da base ortonormal $\{\vec{u}_1, \vec{u}_2, \vec{u}_3\}$ que acaba de ser obtida:
 \begin{equation}
 \begin{cases}
-\vec{v}_1 = \alpha_1^{-1}\vec{u}_1 \\ 
+\vec{v}_1 = \alpha_1^{-1}\vec{u}_1 \\
 \vec{v}_2 = \beta_2^{-1}\beta_1 \vec{u}_1 + \beta_2^{-1} \vec{u}_2 \\
 \vec{v}_3 =  \gamma_3^{-1}\gamma_1 \vec{u}_1 +  \gamma_3^{-1}\gamma_2 \vec{u}_2 + \gamma_3^{-1} \vec{u}_3
 \end{cases}
@@ -630,7 +630,7 @@ Podemos agora inverter estas equações (que são do tipo triangular -- faça as
 | & | & | \\
 \vec{v}_1  & \vec{v}_2 & \vec{v}_3\\
 | & | & | \\
-\end{bmatrix} = 
+\end{bmatrix} =
 \begin{bmatrix}
 | & | & | \\
 \vec{u}_1  & \vec{u}_2 & \vec{u}_3 \\
@@ -642,20 +642,20 @@ Podemos agora inverter estas equações (que são do tipo triangular -- faça as
 0 & 0 & \gamma_3^{-1}
 \end{bmatrix},
 \end{equation} visto que cada coluna do produto da direita é definido como a combinação linear das colunas da primeira matriz com pesos dados pela respectiva coluna da segunda matriz.\footnote{Comparar, por exemplo, com as Subseções \ref{scn:resolucao-2-sistemas} e \ref{scn:alg-ordem-maior}, onde este tipo de interpretação para o produto de matrizes foi discutido.}
-Assim, definindo 
+Assim, definindo
 \begin{equation}
 Q=\begin{bmatrix}
 | & | & | \\
 \vec{u}_1 & \vec{u}_2 & \vec{u}_3 \\
 | & | & | \\
-\end{bmatrix} \quad \text{e} \quad 
+\end{bmatrix} \quad \text{e} \quad
 R =
 \begin{bmatrix}
 \alpha_1^{-1}  & \beta_2^{-1}\beta_1  & \gamma_3^{-1}\gamma_1 \\
 0 & \beta_2^{-1} & \gamma_3^{-1}\gamma_2 \\
 0 & 0 & \gamma_3^{-1}
 \end{bmatrix},
-\end{equation} obtemos  
+\end{equation} obtemos
 \begin{equation}
 A=QR,
 \end{equation} que é o que queríamos obter.
@@ -666,15 +666,15 @@ A construção acima é facilmente generalizada para matrizes quaisquer e nos pe
 (lembre que uma matriz ortogonal é uma matriz cujas colunas formam um conjunto ortonormal):
 
 \begin{teo}
-Qualquer matriz $A$ cujas colunas são linearmente independentes pode ser fatorada na forma $A=QR$, onde $Q$ é uma matriz ortogonal 
+Qualquer matriz $A$ cujas colunas são linearmente independentes pode ser fatorada na forma $A=QR$, onde $Q$ é uma matriz ortogonal
 e $R$ é uma matriz triangular superior invertível. Ainda, o espaço coluna das matrizes $A$ e $Q$ é o mesmo, ou seja, as colunas de $Q$ formam uma base ortonormal para o subespaço gerado pelas colunas de $A$.
-\end{teo} 
+\end{teo}
 
 Note que a fatoração QR está para o processo de Gram-Schmidt assim como a fatoração LU está para o método de  eliminação gaussiana à forma escada  %\footnote{Preciso escrever sobre a fatoração LU. Acho que seria interessante também mostrar que matrizes ortogonais preservam comprimento e ângulo.}
 
-Bem, vimos que a matriz $Q$ tem como colunas a base ortonormal gerada pelo processo de Gram-Schmidt. E como podemos calcular a matriz $R$ no caso geral ? 
+Bem, vimos que a matriz $Q$ tem como colunas a base ortonormal gerada pelo processo de Gram-Schmidt. E como podemos calcular a matriz $R$ no caso geral ?
 
-Usando o seguinte fato surpreendente: 
+Usando o seguinte fato surpreendente:
 
 \begin{teo}
 Uma matriz ortogonal é sempre invertível e sua inversa é dada pela sua transposta, ou seja $Q^{-1}= Q^T$.
@@ -722,7 +722,7 @@ Assim, se $A=QR$, basta multiplicar ambos os lados desta equação por $Q^T$ pel
 
 
 No último exemplo da seção anterior, obtemos através do método de Gram-Schmidt uma base ortonormal para $\operatorname{Col} A$
-onde 
+onde
 \begin{equation}
 A =
 \begin{bmatrix}
@@ -739,9 +739,9 @@ Q =
 3/7 & 158/175 & 6/175   \\
 -2/7& 6/35   &-33/35
 \end{bmatrix}
-\end{equation} 
+\end{equation}
 
-%tem, portanto, suas colunas ortonormais. 
+%tem, portanto, suas colunas ortonormais.
 %É possível verificar que ao fazermos $Q^T A$ obtemos uma matriz triangular $R$. Podemos escrever
 Vimos que $R=Q^T A$ e portanto
 \begin{equation}
@@ -761,7 +761,7 @@ R = Q^T A =
 0&175&-70\\
 0&0&35
 \end{bmatrix} .
-\end{equation} 
+\end{equation}
 Finalmente podemos escrever
 \begin{equation}
 A =
@@ -810,36 +810,36 @@ Estas propriedades não são particulares da matriz de rotação: todas as matri
 
 \begin{proof}
 A prova do primeiro item é consequência direta da linearidade do produto interno e da hipótese das colunas formarem uma base ortonormal: se, na base canônica, temos $\vec{v} = (\alpha_1,..., \alpha_n)$ e $\vec{w} = (\beta_1, ..., \beta_n)$, então
-\begin{equation}Q\vec{v} \cdot Q\vec{w} = \left( \sum_{i=1}^n \alpha_i \vec{u}_i \right) \cdot \left(   \sum_{j=1}^n \beta_j \vec{u}_j \right) =  \sum_{i=1}^n \sum_{j=1}^n \alpha_i \beta_j \;\vec{u}_i \cdot \vec{u}_j\end{equation} 
-devido a linearidade do produto interno (ou seja, a propriedade distributiva aplicada tanto na primeira quanto na segunda componente do produto interno). Agora, lembrando que $\vec{u}_i \cdot \vec{u}_j=0$ se $i \neq j$, a ultima expressão iguala-se a 
+\begin{equation}Q\vec{v} \cdot Q\vec{w} = \left( \sum_{i=1}^n \alpha_i \vec{u}_i \right) \cdot \left(   \sum_{j=1}^n \beta_j \vec{u}_j \right) =  \sum_{i=1}^n \sum_{j=1}^n \alpha_i \beta_j \;\vec{u}_i \cdot \vec{u}_j\end{equation}
+devido a linearidade do produto interno (ou seja, a propriedade distributiva aplicada tanto na primeira quanto na segunda componente do produto interno). Agora, lembrando que $\vec{u}_i \cdot \vec{u}_j=0$ se $i \neq j$, a ultima expressão iguala-se a
 \begin{equation} \sum_{i=1}^n \alpha_i \beta_i \; \vec{u}_i \cdot \vec{u}_i.\end{equation}
 Finalmente, lembrando que cada coluna $\vec{u}_i$ de $Q$ tem comprimento unitário, concluimos que
 \begin{equation}Q\vec{v} \cdot Q\vec{w} = \sum_{i=1}^n \alpha_i \beta_i = \vec{v} \cdot \vec{w}.\end{equation}
- 
- 
- Os próximos dois itens seguem diretamente do primeiro item, visto que 
-\begin{equation}\| Q \vec{v} \| = \sqrt{Q\vec{v} \cdot Q\vec{v}} = \sqrt{\vec{v} \cdot \vec{v}} =  \| \vec{v} \| \end{equation} 
-e 
-o ângulo entre $Qv$ e $Qw$ é definido como 
+
+
+ Os próximos dois itens seguem diretamente do primeiro item, visto que
+\begin{equation}\| Q \vec{v} \| = \sqrt{Q\vec{v} \cdot Q\vec{v}} = \sqrt{\vec{v} \cdot \vec{v}} =  \| \vec{v} \| \end{equation}
+e
+o ângulo entre $Qv$ e $Qw$ é definido como
 \begin{equation}
 \arccos\left(\frac{Qv \cdot Qw	}{\|Qv\| \|Qw\|} \right)
-=\arccos\left(\frac{v \cdot w	}{\|v\| \|w\|} \right),\end{equation} 
-que por definição é o ângulo  entre $v$ e $w$. 
-Assim, finalizamos a prova do teorema. 
+=\arccos\left(\frac{v \cdot w	}{\|v\| \|w\|} \right),\end{equation}
+que por definição é o ângulo  entre $v$ e $w$.
+Assim, finalizamos a prova do teorema.
 \end{proof}
- 
- 
+
+
 % \medskip
- 
- 
-Outros exemplos de matrizes ortogonais são obtidos por matrizes de reflexão. Um caso particular é dado pela reflexão em torno do eixo horizontal: 
+
+
+Outros exemplos de matrizes ortogonais são obtidos por matrizes de reflexão. Um caso particular é dado pela reflexão em torno do eixo horizontal:
  \begin{equation}
  Q =
  \begin{bmatrix}
  1 & 0 \\
  0 & -1
  \end{bmatrix}.\end{equation}
- 
+
  \begin{exer}
 Como é a matriz de ordem $2 \times 2$ que representa uma reflexão com respeito ao eixo vertical?
  \end{exer}
@@ -848,10 +848,10 @@ Como é a matriz de ordem $2 \times 2$ que representa uma reflexão com respeito
 Encontrar uma matriz de ordem $2 \times 2$ que representa uma reflexão com respeito à reta que passa pela origem de equação $ax + b y = 0$.
 \end{exer}
 
-%\end{document} 
+%\end{document}
 
 
 
 
 
- 
+

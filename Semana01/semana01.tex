@@ -26,9 +26,9 @@
 
 \bigskip
 
-\begin{defn} Uma equação é dita {\bf linear } se for do tipo 
-\[ 
-a_1 x_1 + a_2 x_2 + \hdots + a_n x_n = b 
+\begin{defn} Uma equação é dita {\bf linear } se for do tipo
+\[
+a_1 x_1 + a_2 x_2 + \hdots + a_n x_n = b
 \]
 onde $a_1, a_2 , \hdots, \ a_n$ são constantes chamadas coeficientes, $b$ é uma constante chamada termo independente e $x_1, x_2 , \hdots \ x_n$ são as variáveis ou incógnitas. Aqui $n$ é o  número de variáveis e pode ser qualquer número natural.
 \end{defn}
@@ -36,15 +36,15 @@ onde $a_1, a_2 , \hdots, \ a_n$ são constantes chamadas coeficientes, $b$ é um
 \bigskip
 
 \begin{ex}
-A equação abaixo 
-\[ 
+A equação abaixo
+\[
 3 x_1 + 5 x_2 - x_3 = 7
 \] é uma equação linear nas variáveis $x_1, x_2$ e $x_3$ com coeficientes 3,5, e -1 e termo independente 7.
 \end{ex}
 
 
 \begin{ex}
-A equação abaixo também é linear 
+A equação abaixo também é linear
 \[
 2x+3y-5z+2w=11
 \]
@@ -52,7 +52,7 @@ com coeficientes 2,3,-5,2, termo independente 11 e variáveis x, y, z e w.
 \end{ex}
 
 \begin{ex}
-A seguir temos um exemplo diferente, 
+A seguir temos um exemplo diferente,
 \[
 5x+3z+14=y+3x-11
 \] que é uma equação linear mas não está escrita na forma usual. Note que ela pode ser reescrita como
@@ -70,7 +70,7 @@ e dessa maneira vemos que ela tem coeficientes 2,-1, e 3,  termo independente 25
 \[(1.02)^x=2.\]
 \end{ex}
 
-\begin{defn} Um sistema de equações lineares (ou sistema linear - SL) é uma coleção finita de equações lineares envolvendo um certo conjunto finito de  variáveis. 
+\begin{defn} Um sistema de equações lineares (ou sistema linear - SL) é uma coleção finita de equações lineares envolvendo um certo conjunto finito de  variáveis.
 \end{defn}
 
 \begin{ex}
@@ -79,9 +79,9 @@ O sistema linear
 \left\{
 \begin{array}{ccccccc}
 2x&+&3y&-&z&=&7 \\
-x&+&8y& & &=&0 
+x&+&8y& & &=&0
 \end{array}
-\right. 
+\right.
 \end{equation*}
 é um exemplo de SL de ordem $2 \times 3$, ou seja tem 2 equações e 3 variáveis. Note que a variável z tem coeficiente zero na segunda equação.
 \end{ex}
@@ -96,15 +96,15 @@ x&+&2y&-&3z& & &=&22 \\
 x& &  &+&z & & &=&17 \\
 &-&y & &  &+&2w&=&6 \\
 \end{array}
-\right. 
+\right.
 \end{equation*}
-é um exemplo de SL de ordem $3 \times 4$, ou seja três equações nas variáveis x, y, z, w. 
+é um exemplo de SL de ordem $3 \times 4$, ou seja três equações nas variáveis x, y, z, w.
 \end{ex}
 
 
 \begin{ex}
 Aqui vale também a observação de que um SL pode aparecer de forma "desorganizada", ou seja, a ordem em que as variáveis aparecem nas equações pode ser diferente de uma equação para outra e as variáveis podem aparecer mais de uma vez. O termo independente também pode aparecer do lado esquerdo da igualdade, ou estar parte a esquerda e parte a direita.
-Por exemplo, 
+Por exemplo,
 
 \begin{equation*}
 \left\{
@@ -112,7 +112,7 @@ Por exemplo,
 2z-3x+1 & = &y \\
 x+4z+3& = & 3x+2z+2y-7.
 \end{array}
-\right. 
+\right.
 \end{equation*}
 
 Veremos que para resolvermos um sistema linear será fundamental reescrevê-lo na forma usual. O sistema dado acima poderia ser reescrito como:
@@ -123,7 +123,7 @@ Veremos que para resolvermos um sistema linear será fundamental reescrevê-lo n
 -3x-y+2z & = & -1 \\
 -2x-2y-2z & = & -10,
 \end{array}
-\right. 
+\right.
 \end{equation*}
 ou ainda na forma
 \begin{equation*}
@@ -132,19 +132,19 @@ ou ainda na forma
 3x+y-2z & = & 1 \\
 x+y-z & = & 5.
 \end{array}
-\right. 
+\right.
 \end{equation*}
 \end{ex}
 
-Note que se qualquer equação do sistema for não-linear, então o sistema não pode ser considerado um SL. 
-Neste texto iremos analisar técnicas de resolução de sistemas lineares apenas. Sistemas não-lineares tem tratamento matemático muito mais difícil e fogem do escopo deste texto
+Note que se qualquer equação do sistema for não-linear, então o sistema não pode ser considerado um SL.
+Neste texto iremos analisar técnicas de resolução de sistemas lineares apenas. Sistemas não-lineares têm tratamento matemático muito mais difícil e fogem do escopo deste texto.
 
 
 \bigskip
 
 \begin{defn}  Uma solução de um sistema linear nas variáveis $x_1, x_2 , \hdots \ x_n$
 é uma %lista  de valores numéricos que fazem com que todas as equações do SL sejam verificadas quando as variáeis s
-atribuição de valores 
+atribuição de valores
 às variáveis que verificam (ou satisfazem) todas as equações do sistema.
 \end{defn}
 
@@ -154,11 +154,11 @@ O sistema linear
 \left\{
 \begin{array}{ccccc}
 x&+&y&=&5 \\
-3x&-&y&=&-1 
+3x&-&y&=&-1
 \end{array}
-\right. 
+\right.
 \end{equation*}
-tem $x=1$ e $y=4$ como solução. 
+tem $x=1$ e $y=4$ como solução.
 
 \end{ex}
 
@@ -168,14 +168,14 @@ tem $x=1$ e $y=4$ como solução.
 \end{defn}
 
 \begin{ex} Vamos estudar sistemas lineares $2 \times 2$ fazendo uso de uma interessante interpretação geométrica.
-O conjunto solução de um sistema linear 
+O conjunto solução de um sistema linear
 \begin{equation*}
 \left\{
 \begin{array}{ccccc}
 a_1 x&+&b_1 y&=&c_1 \\
 a_2 x&+&b_2 y&=&c_2 \\
 \end{array}
-\right. 
+\right.
 \end{equation*}
 é dado, geometricamente, pela intersecção das retas representativas das duas equações acima.
 
@@ -188,7 +188,7 @@ Assim sendo, temos três possibilidades
 x&+& y&=&1 \\
 2 x&+& y&=&8. \\
 \end{array}
-\right. 
+\right.
 \end{equation*}
 
 {\bf Sistemas Lineares compatíveis e Indeterminados}, aqueles que apresentam infinitas soluções: no caso $2 \times 2$ ocorre quando as duas retas são idênticas, e a intersecção de ambas é a própria reta.
@@ -199,7 +199,7 @@ Por exemplo
 2 x&+& y&=&1 \\
 4 x&+& 2 y&=& 2. \\
 \end{array}
-\right. 
+\right.
 \end{equation*}
 
 {\bf Sistemas incompatíveis}, aqueles que não tem solução: no caso $2 \times 2$ ocorre quando as duas retas são paralelas, mas distintas, e a intersecção entre elas é o conjunto vazio.
@@ -210,7 +210,7 @@ Por exemplo
 x&+& y&=&1 \\
 x&+& y&=&3. \\
 \end{array}
-\right. 
+\right.
 \end{equation*}
 
 Os sistemas incompatíveis também são chamados de sistemas impossíveis.
@@ -349,7 +349,7 @@ Consideramos agora um sistema com três equações e três variáveis;
     x -3y + 5z = 1 \\
     2x - y + 3z = 10.
   \end{array}
-\right. 
+\right.
 \end{equation} Vamos diretamente escrever a matriz aumentada associada ao sistema, que é a matriz com os coeficientes da variável $x$ na primeira coluna, os coeficientes da variável $y$ na segunda coluna, os coeficientes de $z$ na terceira coluna e os coeficientes independentes na última coluna:
 \begin{equation}
 \left[
@@ -374,7 +374,7 @@ Consideramos agora um sistema com três equações e três variáveis;
   \begin{array}{ccc|c}
     1 &  2 & 1 & 12 \\
     0 & -5 & 4 & -11 \\
-    2 & -1 & 3 & 10 
+    2 & -1 & 3 & 10
   \end{array}
 \right]
 \quad \xrightarrow{-2\ell_1 + \ell_3 \text{ em } \ell_3} \quad
@@ -382,7 +382,7 @@ Consideramos agora um sistema com três equações e três variáveis;
   \begin{array}{ccc|c}
     1 &  2 & 1 &  12 \\
     0 & -5 & 4 & -11 \\
-    0 & -5 & 1 & -14 
+    0 & -5 & 1 & -14
   \end{array}
 \right]
 \quad \xrightarrow{-\ell_2 + \ell_3 \text{ em } \ell_3} \quad
@@ -390,7 +390,7 @@ Consideramos agora um sistema com três equações e três variáveis;
   \begin{array}{ccc|c}
     1 &  2 &  1 &  12 \\
     0 & -5 &  4 & -11 \\
-    0 &  0 & -3 & -3. 
+    0 &  0 & -3 & -3.
   \end{array}
 \right]
 \end{equation} Voltando à notação original do sistema, obtemos
@@ -404,13 +404,15 @@ Consideramos agora um sistema com três equações e três variáveis;
 \right.
 \end{equation} Por causa do seu formato, este sistema é dito estar em \textbf{forma triangular} ou ainda que o sistema é \textbf{triangular}.
 
-Como já tínhamos percebido no nosso primeiro exemplo, sistemas triangulares são fáceis de resolver. Pela última equação concluimos que $z=1$. Subsituindo este valor na segunda equação, obtemos
+Como já tínhamos percebido no nosso primeiro exemplo, sistemas triangulares são fáceis de resolver. Pela última equação concluímos que $z=1$. Substituindo este valor na segunda equação, obtemos:
 \begin{equation}
 - 5y + 4 = -11 \implies y = 3.
-\end{equation} Finalmente, substituindo estes dois valores na primeira equação, obtemos
+\end{equation}
+Finalmente, substituindo estes dois valores na primeira equação, obtemos:
 \begin{equation}
 x + 2\cdot 3 + 1 = 12 \implies x=5.
-\end{equation} Portanto, a solução para o sistema é $(x,y,z) = (5,3,1). \lhd$
+\end{equation}
+Portanto, a solução para o sistema é $(x,y,z) = (5,3,1). \lhd$
 \end{ex}
 
 
@@ -879,7 +881,7 @@ Os sistemas que vimos até agora possuiam apenas uma solução. Esta propriedade
 \left[
  \begin{array}{cc|c}
   1 & 3 & 1 \\
-  0 & -7 & -4 
+  0 & -7 & -4
  \end{array}
 \right],
 \left[
@@ -902,7 +904,7 @@ Os sistemas que vimos até agora possuiam apenas uma solução. Esta propriedade
 \left[
  \begin{array}{cc|c}
   1 & 0 & -5/7 \\
-  0 & 1 &  4/7 
+  0 & 1 &  4/7
  \end{array}
 \right],
 \left[
@@ -1011,7 +1013,7 @@ Resolver
 \right.
 \end{equation} Neste sistema $x_5$ possui um valor fixo igual a 4, mas as outras variáveis tem dois graus de liberdade. De fato, atribuindo valores quaisquer para $x_3$ e $x_4$, obtemos os valores de $x_1$ e $x_2$ pelas duas primeiras equações acima e temos uma solução do sistema. Diferentes escolhas dos parâmetros $x_3$ e $x_4$ geram soluções diferentes.
 
-Uma forma sistemática de analisar a situação é a seguinte: As variáveis correspondentes a colunas que possuem posição de pivô são chamadas de \textbf{variáveis dependentes} e as demais são chamadas de \textbf{variáveis livres}. Assim, podemos escrever
+Uma forma sistemática de analisar a situação é a seguinte: As variáveis correspondentes a colunas que possuem posição de pivô são chamadas de \textbf{variáveis dependentes} e as demais são chamadas de \textbf{variáveis livres}. Assim, podemos escrever:
 \begin{equation}
 \left\{
   \begin{array}{l}
@@ -1086,7 +1088,7 @@ Faça o escalonamento da seguinte matriz e diga se o sistema possui infinitas so
 \end{equation}
 \end{exeresol}
 \begin{resol}
-Para começar, vamos 
+Para começar, vamos
 \begin{equation}
  \left[
   \begin{array}{ccc|c}
@@ -1122,7 +1124,7 @@ Percebemos então que não há mais nenhum elemento abaixo do primeiro elemento 
     1 & 4 & 6 & 8 \\
     0 & 1 & -3 & 2 \\
     0 & 14 & 25 & 32 \\
-    0 & 0 & 14 & 20 
+    0 & 0 & 14 & 20
   \end{array}
 \right]
 \quad \xrightarrow{-14\ell_2 + \ell_3 \text{ em } \ell_3} \quad
@@ -1131,7 +1133,7 @@ Percebemos então que não há mais nenhum elemento abaixo do primeiro elemento 
     1 & 4 & 6 & 8 \\
     0 & 1 & -3 & 2 \\
     0 & 0 & 67 & 4 \\
-    0 & 0 & 14 & 20 
+    0 & 0 & 14 & 20
   \end{array}
 \right]
 \quad \xrightarrow{\frac{-14}{67}\ell_3 + \ell_4 \text{ em } \ell_4} \quad
@@ -1140,7 +1142,7 @@ Percebemos então que não há mais nenhum elemento abaixo do primeiro elemento 
     1 & 4 & 6 & 8 \\
     0 & 1 & -3 & 2 \\
     0 & 0 & 67 & 4 \\
-    0 & 0 & 0 & \frac{1284}{67} 
+    0 & 0 & 0 & \frac{1284}{67}
   \end{array}
 \right]
 \end{equation}
@@ -1191,4 +1193,4 @@ Isso significa que para qualquer valor de $k$, exceto o $-6$, o sistema tem solu
 \construirExer
 
 
-%\end{document} 
+%\end{document}

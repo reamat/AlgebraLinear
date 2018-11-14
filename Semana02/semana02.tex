@@ -29,11 +29,11 @@ De um ponto de vista intuitivo, um \textbf{vetor} no espaço tridimensional é u
 	\end{center}
 \end{figure}
 
-Mais precisamente, % pode-se dizer que um \textbf{vetor} no espaço tridimensional 
+Mais precisamente, % pode-se dizer que um \textbf{vetor} no espaço tridimensional
 vamos dizer que segmentos de reta orientados  são equivalentes se tem mesmo comprimento, direção e sentido. Um vetor é a {\it classe de equivalência} de todos os segmentos de reta com mesmo comprimento, direção e sentido, ou seja, de maneira simplificada, o conjunto de todos os vetores com estas mesmas três características.
 %Não vamos falar aqui em relações de equivalência
 
-Do ponto de vista algébrico, um vetor é um elemento de um {\it espaço vetorial}. Esta definição por enquanto não faz sentido visto que somente iremos definir espaços vetoriais no futuro, mas podemos nos contentar com uma definição simplificada neste momento: do ponto de vista algébrico um vetor no espaço tridimensional pode ser pensado como um trio ordenado de números reais. A noção de base de um espaço vetorial, a ser introduzida no futuro, juntamente com a noção de coordenadas de um espaço vetorial, dará um significado preciso a esta ultima afirmação. Aqui podemos considerar a {\it base canônica} 
+Do ponto de vista algébrico, um vetor é um elemento de um {\it espaço vetorial}. Esta definição por enquanto não faz sentido visto que somente iremos definir espaços vetoriais no futuro, mas podemos nos contentar com uma definição simplificada neste momento: do ponto de vista algébrico um vetor no espaço tridimensional pode ser pensado como um trio ordenado de números reais. A noção de base de um espaço vetorial, a ser introduzida no futuro, juntamente com a noção de coordenadas de um espaço vetorial, dará um significado preciso a esta ultima afirmação. Aqui podemos considerar a {\it base canônica}:
 
 \begin{equation}
 \vec{e_1} =
@@ -60,7 +60,7 @@ Do ponto de vista algébrico, um vetor é um elemento de um {\it espaço vetoria
 1
 \end{array}
 \right].
-\end{equation} 
+\end{equation}
 
 
 Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referência, podemos introduzir coordenadas:
@@ -74,11 +74,11 @@ Fixando o sistema de coordenadas Cartesiano usual e usando a origem como referê
   \end{array}
 \right]
 = v_1 \vec{e_1} + v_2 \vec{e_2} + v_3 \vec{e_3}.
-\end{equation} 
+\end{equation}
 
 
 
-\noindent Intuitivamente, podemos pensar que o sistema de coordenadas Cartesiano fixa a origem como sendo o ponto inicial do vetor e o ponto $(v_1, v_2, v_3)$ do espaço tridimensional como o ponto final. 
+\noindent Intuitivamente, podemos pensar que o sistema de coordenadas Cartesiano fixa a origem como sendo o ponto inicial do vetor e o ponto $(v_1, v_2, v_3)$ do espaço tridimensional como o ponto final.
 
 \begin{figure}[h!]
 \begin{center}
@@ -144,7 +144,7 @@ k \vec{v} :=
     k v_3
   \end{array}
 \right].
-\end{equation} 
+\end{equation}
 
 
 Geometricamente, temos a seguinte situação
@@ -318,7 +318,7 @@ Uma \textbf{combinação linear} dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{
 		\end{array}
 		\right] = \vec{0}.$
 	\end{itemize} \textbf{Geometricamente}, qualquer vetor do plano pode ser representado como combinação linear de vetores que não são colineares.
-	
+
 	Vamos ilustrar este fato na figura abaixo.
 	\begin{figure}[h!]
 		\begin{center}
@@ -334,7 +334,7 @@ Uma \textbf{combinação linear} dos vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{
 
 
 
-De forma mais geral, nós dizemos que um vetor $\vec{v} \in \mathbb{R}^m$ é combinação linear dos $k$ vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \mathbb{R}^m$ quando conseguirmos encontrar coeficientes $x_1, x_2, \dots, x_k$ tais que
+De forma mais geral, nós dizemos que um vetor $\vec{v} \in \mathbb{R}^m$ é combinação linear dos $k$ vetores $\vec{v}_1, \vec{v}_2, \dots, \vec{v}_k  \in \mathbb{R}^m$ quando existem coeficientes $x_1, x_2, \dots, x_k$ tais que
 \begin{equation}
 x_1 \vec{v}_1 + x_2 \vec{v}_2 + \dots + x_k \vec{v}_k = \vec{v}.
 \end{equation} Nós vamos nos referir a este tipo de equação por \textbf{equação vetorial}. Para decidir se um vetor é combinação linear de outros, devemos decidir se existem estes números reais $x_1, x_2, \dots, x_k$. Escrevendo em coordenadas:
@@ -469,7 +469,7 @@ O \textbf{espaço gerado} por todas as combinações lineares dos vetores $\vec{
 
 
 
-\section{Multiplicação de matriz por vetor e representação matricial para sistemas lineares} 
+\section{Multiplicação de matriz por vetor e representação matricial para sistemas lineares}
 
 Se $A$ é uma matriz com $m$ linhas e $n$ colunas, e $\vec{v}$ é um vetor do $\mathbb{R}^n$, então definimos o {\bf produto da matriz $A$ pelo vetor $\vec{v}$ } como o vetor de $\mathbb{R}^m$ resultante da combinação linear das colunas de $A$ com coeficientes dados pelas entradas do vetor $\vec{v}$.
 
@@ -478,7 +478,7 @@ Se $A$ é uma matriz com $m$ linhas e $n$ colunas, e $\vec{v}$ é um vetor do $\
 	\left[
 	\begin{array}{ccc}
 	2 &  1 & 3  \\
-	4 & -3 & 5  
+	4 & -3 & 5
 	\end{array}
 	\right]
 	\left[
@@ -491,26 +491,26 @@ Se $A$ é uma matriz com $m$ linhas e $n$ colunas, e $\vec{v}$ é um vetor do $\
 	\left[
 	\begin{array}{c}
     2   \\
-	4  
+	4
 	\end{array}
 	\right]
 	+3 \left[
 	\begin{array}{c}
 	1   \\
-	-3  
+	-3
 	\end{array}
 	\right]+
 	5
 	\left[
 	\begin{array}{c}
 	3   \\
-	5 	
+	5
 	\end{array}
 	\right]=
 	\left[
 	\begin{array}{c}
 	22   \\
-	24  
+	24
 	\end{array}
 	\right].
 	\end{equation}
@@ -606,7 +606,7 @@ A = \left[
   \begin{array}{ccc}
     1 &  2 & 1  \\
     1 & -3 & 5  \\
-    2 & -1 & 3  
+    2 & -1 & 3
   \end{array}
 \right], \quad
 \vec{x} = \left[
@@ -669,7 +669,7 @@ a_{m1}&a_{m2}&\cdots &a_{mn}
   a_{11} x_1 + a_{12} x_2 + \cdots + a_{1n} x_n =  b_1 \\
   a_{21} x_1 + a_{22} x_2 + \cdots + a_{2n} x_n =  b_2 \\
     \vdots \\
-  a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n =  b_m 
+  a_{m1} x_1 + a_{m2} x_2 + \cdots + a_{mn} x_n =  b_m
 \end{array}
 \right.
 \end{equation}
@@ -693,7 +693,7 @@ Dado os vetores abaixo, resolva $4\vec{u}$, $10\vec{v}$ e $3\vec{u} + 2\vec{v}$.
     2 \\
     2
   \end{array}
-\right] \quad e \quad 
+\right] \quad e \quad
  \vec{v} =
 \left[
   \begin{array}{c}
@@ -744,7 +744,7 @@ e para $10\vec{v}$:
 \end{equation}
 Por fim, para resolver $3\vec{u} + 2\vec{v}$ primeiro temos que multiplicar os escalares pelos vetores $\vec{u}$ e $\vec{v}$ separadamente e, por último, somamos o resultado de cada um. Fazendo direto, temos o seguinte:
 \begin{equation}
- 3\vec{u} + 2\vec{v} = 
+ 3\vec{u} + 2\vec{v} =
 3\left[
   \begin{array}{c}
     3 \\
@@ -758,7 +758,7 @@ Por fim, para resolver $3\vec{u} + 2\vec{v}$ primeiro temos que multiplicar os e
     4 \\
     9
   \end{array}
-\right] = 
+\right] =
 \left[
   \begin{array}{c}
     9 \\
@@ -772,14 +772,14 @@ Por fim, para resolver $3\vec{u} + 2\vec{v}$ primeiro temos que multiplicar os e
     8 \\
     18
   \end{array}
-\right] = 
+\right] =
 \left[
   \begin{array}{c}
     5 \\
     14 \\
     24
   \end{array}
-\right]. 
+\right].
 \end{equation}
 \end{resol}
 
@@ -808,9 +808,9 @@ Para colocar um sistema de equações na sua forma matricial, temos que represen
   \begin{array}{c}
    x_1 \\
    x_2 \\
-   x_3 
+   x_3
   \end{array}
-  \right] = 
+  \right] =
 \left[
   \begin{array}{c}
    10 \\
@@ -837,7 +837,7 @@ Também podemos dizer que $A$ é a matriz dos coeficientes das variáveis, $\vec
 \begin{exeresol}
 Escreva o vetor $\vec{v}$ como uma combinação linear dos vetores $\vec{e_1}$, $\vec{e_2}$, e $\vec{e_3}$.
 \begin{equation}
- \vec{v} = 
+ \vec{v} =
 \left[
   \begin{array}{c}
   1 \\
@@ -845,7 +845,7 @@ Escreva o vetor $\vec{v}$ como uma combinação linear dos vetores $\vec{e_1}$, 
   3
  \end{array}
 \right] \quad , \quad
- \vec{e_1} = 
+ \vec{e_1} =
   \left[
   \begin{array}{c}
   1 \\
@@ -853,7 +853,7 @@ Escreva o vetor $\vec{v}$ como uma combinação linear dos vetores $\vec{e_1}$, 
   1
  \end{array}
 \right] \quad , \quad
- \vec{e_2} = 
+ \vec{e_2} =
   \left[
   \begin{array}{c}
   1 \\
@@ -861,7 +861,7 @@ Escreva o vetor $\vec{v}$ como uma combinação linear dos vetores $\vec{e_1}$, 
   4
  \end{array}
 \right] \quad , \quad
- \vec{e_3} = 
+ \vec{e_3} =
   \left[
   \begin{array}{c}
   2 \\
@@ -874,11 +874,11 @@ Escreva o vetor $\vec{v}$ como uma combinação linear dos vetores $\vec{e_1}$, 
 \begin{resol}
 Podemos representar o vetor $\vec{v}$ como uma combinação linear dos outros vetores da seguinte maneira:
 \begin{equation}
- \vec{v} = c_1\vec{e_1} + c_2\vec{e_2} + c_3\vec{e_3} 
+ \vec{v} = c_1\vec{e_1} + c_2\vec{e_2} + c_3\vec{e_3}
 \end{equation}
 Assim, temos:
 \begin{equation}
-\vec{v} = 
+\vec{v} =
 \left[
   \begin{array}{c}
   1 \\
@@ -937,7 +937,7 @@ Usando as propriedades anteriormente estudadas, obtemos:
   -c_3 \\
   3c_3
  \end{array}
-\right] = 
+\right] =
 \left[
   \begin{array}{c}
    c_1 + c_2 + 2c_3 \\
@@ -972,7 +972,7 @@ Usando o método já estudado para resolver sistemas lineares, achamos os valore
 \begin{exeresol}
  Para qual valor de $k$ o vetor $\vec{v}$ é uma combinação linear dos vetores $\vec{e_1}$ e $\vec{e_2}$ ?
 \begin{equation}
-  \vec{v} = 
+  \vec{v} =
 \left[
   \begin{array}{c}
   1 \\
@@ -980,7 +980,7 @@ Usando o método já estudado para resolver sistemas lineares, achamos os valore
   k
  \end{array}
 \right] \quad , \quad
- \vec{e_1} = 
+ \vec{e_1} =
   \left[
   \begin{array}{c}
   3 \\
@@ -988,7 +988,7 @@ Usando o método já estudado para resolver sistemas lineares, achamos os valore
   -2
  \end{array}
 \right] \quad , \quad
- \vec{e_2} = 
+ \vec{e_2} =
   \left[
   \begin{array}{c}
   3 \\
@@ -1039,7 +1039,7 @@ c_2\left[
   -2c_2 \\
   5c_2
  \end{array}
-\right] = 
+\right] =
 \left[
 \begin{array}{c}
  3c_1 + 2c_2 \\
@@ -1056,7 +1056,7 @@ Assim, temos:
  -2c_2 \\
  -2c_1+5c_2
 \end{array}
-\right] = 
+\right] =
 \left[
  \begin{array}{c}
   1 \\
@@ -1069,7 +1069,7 @@ Novamente, temos um sistema de equações lineares para resolver. Verifique que 
 \begin{equation}
  k = -2c_1+5c_2 = \frac{2}{3} + 5 = \frac{17}{3}
 \end{equation}
-Ou seja, o valor de $k$ que faz com que $\vec{v}$ possa ser representado como uma combinação linear de $\vec{e_1}$ e $\vec{e_2}$ é $k = \frac{17}{3}$. 
+Ou seja, o valor de $k$ que faz com que $\vec{v}$ possa ser representado como uma combinação linear de $\vec{e_1}$ e $\vec{e_2}$ é $k = \frac{17}{3}$.
 \end{resol}
 
 
@@ -1116,7 +1116,7 @@ x_1 -3x_2 + 5x_3 = 1 \\
 2x_1 - x_2 + 3x_3 = 10
 \end{array}
 \right.
-\end{equation} 
+\end{equation}
 \begin{enumerate}[$(i)$]
 \item Vimos ques este sistema pode ser representado em \textbf{forma matricial} por
 \begin{equation}
@@ -1159,23 +1159,23 @@ x_1
 \begin{array}{c}
 1   \\
 1  \\
-2 
+2
 \end{array}
-\right] + x_2 
+\right] + x_2
 \left[
 \begin{array}{c}
   2   \\
  -3   \\
  -1
 \end{array}
-\right] + x_3 
+\right] + x_3
 \left[
 \begin{array}{c}
  1  \\
  5  \\
  3
 \end{array}
-\right] = 
+\right] =
 \left[
 \begin{array}{c}
 12   \\
@@ -1183,7 +1183,7 @@ x_1
 10
 \end{array}
 \right].
-\end{equation} 
+\end{equation}
 
 Esta maneira de representar o sistema é favorável para descrições geométricas, pois já vimos como interpretar geometricamente combinações lineares de vetores. Também será interessante futuramente no curso quando a imagem de transformações lineares.
 \end{enumerate}  O entendimento dessas interpretações diferentes facilita (e muito!) o entendimento de vários conceitos que veremos mais adiante no nosso curso de Álgebra Linear.
@@ -1202,4 +1202,4 @@ Esta maneira de representar o sistema é favorável para descrições geométric
 
 \construirExer
 
-%\end{document} 
+%\end{document}

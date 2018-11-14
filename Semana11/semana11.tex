@@ -51,7 +51,7 @@ O \textbf{produto escalar} ou \textbf{produto interno} entre dois vetores $\vec{
 \end{equation} Vejamos que realmente o produto escalar tem a ver com o ângulo entre dois vetores. Isto é uma consequência da Lei dos Cossenos, que nos diz que
 \begin{equation}
 \|\vec{v} - \vec{w}\|^2 = \|\vec{v}\|^2 + \|\vec{w}\|^2 - 2 \|\vec{v}\| \|\vec{w}\| \cos \theta,
-\end{equation} onde $\theta$ é o ângulo entre $\vec{v}$ e $\vec{w}$. 
+\end{equation} onde $\theta$ é o ângulo entre $\vec{v}$ e $\vec{w}$.
 
 	\begin{center}
 		\includegraphics[width=0.7\linewidth]{Semana11/semana11-cossenos}
@@ -205,7 +205,7 @@ Se, além de o conjunto ser ortogonal, todos os seus elementos serem unitários 
 	\end{bmatrix}
 	\end{equation} é um conjunto ortogonal, porque quando escolhermos $i\neq j$, temos
 	\begin{equation}
-	\vec{e}_i \cdot \vec{e}_j = 1 \cdot 0 + 0 \cdot 1 = 0. 
+	\vec{e}_i \cdot \vec{e}_j = 1 \cdot 0 + 0 \cdot 1 = 0.
 	\end{equation} É também ortonormal, já que, para todo $i$,
 	\begin{equation}
 	\| \vec{e}_i\|  = \sqrt{0^2 + 0^2 + \cdots + 1^2 + \cdots + 0^2 + 0^2} = 1. \ \lhd
@@ -223,7 +223,7 @@ Uma primeira propriedade de ortogonalidade é uma versão para espaços vetoriai
 
 \begin{proof}
 	Esperamos que esta demonstração auxilie no compreendimento analítico e geométrico dos conceitos que introduzimos até agora. O vetor $\vec{x} + \vec{y} \,$ pode ser considerado a hipotenusa do triângulo retângulo de catetos $\vec{x}$ e $\vec{y}$ (fazer uma figura!).
-	
+
 	Pelas propriedades do comprimento e do produto escalar, temos que, para \textit{quaisquer} dois vetores $\vec{x}$ e $\vec{y}$ (não necessariamente ortogonais), vale que
 	\begin{equation}
 	\|\vec{x} + \vec{y}\|^2 = (\vec{x} + \vec{y}) \cdot (\vec{x} + \vec{y}) =  \vec{x} \cdot \vec{x} + \vec{x} \cdot \vec{y} +  \vec{y} \cdot \vec{x} +  \vec{y} \cdot \vec{y} = \|\vec{x}\|^2 + 2 (\vec{x} \cdot \vec{y}) + \|\vec{y}\|^2.
@@ -254,27 +254,27 @@ Notamos que, de acordo com a nossa definição, o vetor nulo é ortogonal a qual
 \end{proof}
 
 \begin{ex}
-O conjunto 
+O conjunto
 \begin{equation}
-\left\lbrace 
+\left\lbrace
 \vec{u}_1 = \begin{bmatrix}
 1 \\ 2 \\ 2
-\end{bmatrix}, \ 
+\end{bmatrix}, \
 \vec{u}_2 = \begin{bmatrix}
 2 \\ 1 \\ -2
-\end{bmatrix}, \ 
+\end{bmatrix}, \
 \vec{u}_3 = \begin{bmatrix}
 2 \\ -2 \\ 1
 \end{bmatrix}
-\right\rbrace 
+\right\rbrace
 \end{equation} pois
 
 \begin{equation}
 \begin{split}
 \vec{u}_1 \cdot \vec{u}_2 = 2 + 2 - 4 = 0, \\
 \vec{u}_1 \cdot \vec{u}_3 = 2 - 4 + 2 = 0, \\
-\vec{u}_2 \cdot \vec{u}_3 = 4 - 2 - 2 = 0. 
-\end{split} 
+\vec{u}_2 \cdot \vec{u}_3 = 4 - 2 - 2 = 0.
+\end{split}
 \end{equation}
 Logo, pelo teorema acima, o conjunto $\{\vec{u}_1, \vec{u}_2,\vec{u}_3\}$ é linearmente independente. Neste exemplo, são todos elementos de $\mathbb{R}^3$; portanto, formam uma base para $\mathbb{R}^3$ que é também ortogonal (voltaremos a falar sobre bases ortogonais em breve)$. \ \lhd$
 \end{ex}
@@ -346,7 +346,7 @@ As projeções ortogonais também podem ser utilizadas para o cálculo de distâ
 	\begin{bmatrix}
 	1 \\ 2 \\1
 	\end{bmatrix}.$
-	
+
 	Para isto, consideramos o vetor $\vec{v}$ cujas componentes são as componentes do ponto $P$. Assim, estamos na situação da discussão acima e vale que
 	\begin{equation}
 	\proj_{\vec{u}} \vec{v} = \frac{7}{6}
@@ -438,12 +438,12 @@ c_j = \frac{\vec{v} \cdot \vec{v}_j}{\vec{v}_j \cdot \vec{v}_j}.
 	-1 \\ 2
 	\end{bmatrix}
 	\end{equation} formam uma base ortogonal para $\mathbb{R}^2$.
-	
+
 	Em primeiro lugar, formam uma base, pois são vetores linearmente independentes e são dois (que é a dimensão de $\mathbb{R}^2$). Agora, calculamos
 	\begin{equation}
 	\vec{u} \cdot \vec{v} = 4\cdot (-1) + 2\cdot 2 = 0.
 	\end{equation} Segue que $\vec{u}$ e $\vec{v}$ são também ortogonais e, logo, formam uma base ortogonal de $\mathbb{R}^2$.
-	
+
 	Para escrever um vetor $\vec{x} =
 	\begin{bmatrix}
 	2 \\ -7
@@ -480,7 +480,7 @@ Note que a base canônica, como no Exemplo \ref{ortonormal}, tem a propriedade a
 	\begin{bmatrix}
 	0 \\ \sqrt{2}/2 \\ - \sqrt{2}/2
 	\end{bmatrix}
-	\end{equation} formam uma base ortonormal de $\mathbb{R}^3$: verifique! Qualquer vetor $\vec{x} \in \mathbb{R}^3$ pode ser escrito como 
+	\end{equation} formam uma base ortonormal de $\mathbb{R}^3$: verifique! Qualquer vetor $\vec{x} \in \mathbb{R}^3$ pode ser escrito como
 	\begin{equation}
 	\vec{x} = \big( \vec{x} \cdot \vec{u} \big) \vec{u} + \big( \vec{x} \cdot \vec{v} \big) \vec{v} + \big( \vec{x} \cdot \vec{w} \big) \vec{w}
 	\end{equation} Por exemplo,
@@ -488,10 +488,10 @@ Note que a base canônica, como no Exemplo \ref{ortonormal}, tem a propriedade a
 	\vec{x} =
 	\begin{bmatrix}
 	2 \\ -1 \\ 1
-	\end{bmatrix} = 2 \vec{u} + 0 \vec{v} - \sqrt{2} \vec{w} = 2 
+	\end{bmatrix} = 2 \vec{u} + 0 \vec{v} - \sqrt{2} \vec{w} = 2
 	\begin{bmatrix}
 	1 \\ 0 \\ 0
-	\end{bmatrix} + \sqrt{2} 
+	\end{bmatrix} + \sqrt{2}
 	\begin{bmatrix}
 	0 \\ \sqrt{2}/2 \\ - \sqrt{2}/2
 	\end{bmatrix}.
@@ -503,7 +503,7 @@ Observamos finalmente que bases ortogonais podem ser facilmente transformadas em
 
 
 \begin{ex}
-	Os vetores 
+	Os vetores
 	\begin{equation}
 	\vec{u} =
 	\begin{bmatrix}
@@ -531,7 +531,7 @@ Observamos finalmente que bases ortogonais podem ser facilmente transformadas em
 	\frac{\vec{u}}{\|\vec{u}\|} = \frac{1}{\sqrt{3}}
 	\begin{bmatrix}
 	1 \\ 1 \\ 1
-	\end{bmatrix} = 
+	\end{bmatrix} =
 	\begin{bmatrix}
 	1/\sqrt{3} \\ 1/\sqrt{3} \\ 1/\sqrt{3}
 	\end{bmatrix}, \
@@ -545,7 +545,7 @@ Observamos finalmente que bases ortogonais podem ser facilmente transformadas em
 	\frac{\vec{w}}{\|\vec{w}\|} = \frac{1}{\sqrt{6}}
 	\begin{bmatrix}
 	1 \\ -2 \\ 1
-	\end{bmatrix} = 
+	\end{bmatrix} =
 	\begin{bmatrix}
 	1/\sqrt{6} \\ -2/\sqrt{6} \\ 1/\sqrt{6}
 	\end{bmatrix}
@@ -564,4 +564,4 @@ Observamos finalmente que bases ortogonais podem ser facilmente transformadas em
 
 \construirExer
 
-%\end{document} 
+%\end{document}
