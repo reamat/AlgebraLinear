@@ -462,7 +462,7 @@ A =
  -68 \\
  -41
 \end{bmatrix}.
-\end{equation} O Processo começa como:
+\end{equation} O processo começa como:
 \begin{align*}
 \vec{u}_1 & = \vec{v}_1 =
 \begin{bmatrix}
@@ -480,7 +480,8 @@ A =
 12 \\
 6 \\
 -4
-\end{bmatrix} =
+\end{bmatrix}\\
+& =
 \begin{bmatrix}
  -51  \\
  167  \\
@@ -499,7 +500,8 @@ A =
   \end{align*}
  Em seguida (conferir estas contas com o auxílio de uma calculadora)
   \begin{align*}
-\vec{u}_3 & = \vec{v}_3 - \frac{\vec{v}_3 \cdot \vec{u}_1}{\vec{u}_1 \cdot \vec{u}_1} \, \vec{u}_1 - \frac{\vec{v}_3 \cdot \vec{u}_2}{\vec{u}_2 \cdot \vec{u}_2} \, \vec{u}_2 = \begin{bmatrix}
+\vec{u}_3 & = \vec{v}_3 - \frac{\vec{v}_3 \cdot \vec{u}_1}{\vec{u}_1 \cdot \vec{u}_1} \, \vec{u}_1 - \frac{\vec{v}_3 \cdot \vec{u}_2}{\vec{u}_2 \cdot \vec{u}_2} \, \vec{u}_2 \\
+& = \begin{bmatrix}
   4 \\
  -68 \\
  -41
@@ -573,7 +575,7 @@ A =
 \section{Fatoração QR e matrizes ortogonais}
 
 
-Como passamos a discutir abaixo, o método de Gram-Schmidt permite fatorar uma matriz $A$ cujas colunas são linearmente independentes em um produto \begin{equation}A=QR,\end{equation} onde Q é uma matriz cujas colunas formam um conjunto ortonormal e $R$ é uma matriz triangular superior. Tal fatoração é muito importante do ponto de vista computacional, como veremos em breve, quando usarmos a fatoração QR como uma alternativa para resolução de sistemas lineareas por mínimos quadrados. Também é a base de um eficiente método numérico para encontrar autovalores de uma matriz quadrada.
+Como passamos a discutir abaixo, o método de Gram-Schmidt permite fatorar uma matriz $A$ cujas colunas são linearmente independentes em um produto \begin{equation}A=QR,\end{equation} onde Q é uma matriz cujas colunas formam um conjunto ortonormal e $R$ é uma matriz triangular superior. Tal fatoração é muito importante do ponto de vista computacional, como veremos em breve, quando usarmos a fatoração QR como uma alternativa para resolução de sistemas lineares por mínimos quadrados. Também é a base de um eficiente método numérico para encontrar autovalores de uma matriz quadrada.
 
 Matrizes cujas colunas formam um conjunto ortonormal são muito úteis e por isso recebem um nome especial: são chamadas de \textbf{matrizes ortogonais}. Aqui cabe uma observação relevante: este é um exemplo de uma situação onde a terminologia clássica está longe de ser satisfatória: matrizes  cujas colunas formam um conjunto {\it ortonormal} são chamadas de matrizes {\it ortogonais}.
 
