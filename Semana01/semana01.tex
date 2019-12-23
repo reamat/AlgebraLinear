@@ -469,10 +469,195 @@ Por fim, substituímos o valor encontrado de $y$ na primeira equação:
 \end{equation}
 Feito isso, temos que a solução do problema é $(x,y) = (\frac{1}{23}, \frac{37}{23}) \lhd$.
 \end{resol}
+\begin{exeresol}
+        Demonstre que é ou não é linear:
+        \justify
+            \begin{enumerate}
+                \item $x^{2}$
+                \item $a*x + b = 0$
+                \item $(x + k)^{2}$
+                \item $e^{x}$
+            \end{enumerate}
+\end{exeresol}
+\begin{resol}
+        \begin{flushleft}
+        Para resolvermos a questão nos remetemos a definição de linearidade e as proriedade das funções lineares,
+        que seria a aditividade() e : $f(x) + f(x^{'}) = f(x + x^{'})$
+        e homogeniedade : $a*f(x) = f(a*x)$.
+        \end{flushleft}
+        \begin{flushleft}
+            \begin{enumerate}
+                \item Seja $x^{2}$, não é linear pois $f(x^{2}) + f(x^{2}) \neq f(x + x^{'})^2$ e $a*f(x^{2}) \neq f(a*x)^{2}$.
+                \item Seja $a*x + b = 0$, é linear, pois, $f(a*x + b) + f(a*x + b^{'}) = f(a*x + b + (a*x + b)^{'})$ e  $a*f(c*x + b) = f(a*c*x + a*b)$.
+                \item Seja $(x + k)^{2}$, não é liner, pois, $f(x + k)^{2} + f(x + k)^{2}) \neq f((x + k) + (x + k)^{'})^2$
+            e $a*f(x + k)^{2} \neq f((a*x + a*k)^{2})$.
+                \item Seja $e^{x}$, não é linear, pois, $f(e^{x}) + f(e^{x'}) \neq f(e + e)^{x'}$.
+            \end{enumerate}
+        \end{flushleft}
+\end{resol}
+\begin{exeresol}
+        \begin{flushleft}
+        Seja os Sistemas Lineares abaixo, determine se eles são $ \bf { Determinados , Indeterminado}$, ou $\bf{Incompativel}$:
+        \end{flushleft}
+        \begin{enumerate}
+            \item \begin{equation*}
+                    \begin{array}{cccccccc}\label{eq:sistema_A}
+                        x + y - z = 12 \\
+                        3x - 4y + 5z = 40 \\
+                        5x - 10y - 3z = 60 
+                    \end{array}
+            \end{equation*}
+            \item \begin{equation*}
+                    \begin{array}{cccccccc}\label{eq:sistema_B}
+                        x + 3y + 5z = 1 \\
+                        6x - y + z = 2 \\
+                        2x + 3z = 3 
+                    \end{array}
+                \end{equation*}
+            \item \begin{equation*}
+                \begin{array}{cccccccc}\label{eq:sistema_C}
+                    x + 8y = 9  \\
+                    64x + 512y = 28 
+                \end{array}
+        \end{equation*}
+        \end{enumerate}
+\end{exeresol}
+\begin{resol}
+        \begin{flushleft}
+         Para resolver os sistemas lineares foram utilizados a matriz aumentada e a eliminação de Gauss em \ref{eq:sistema_A},
+        \ref{eq:sistema_B} e \ref{eq:sistema_C}:   
+        \end{flushleft}
+        \begin{enumerate}  
+            \item\begin{math}
+                    \begin{bmatrix}
+                        1 & 1 & 1 & 12 \\
+                        3 & -4& 5 & 40 \\
+                        5 & 10& -3& 60
+                    \end{bmatrix} \\
+                        L_{2} \leftarrow L_{2} - 3L_{1}, \\
+                        L_{3} \leftarrow L_{3} - 5L_{1} \\
+                    \begin{bmatrix}
+                        1 & 1 & 1 & 12 \\
+                        0 & -7& 2 & 4 \\
+                        0 & 5 & -8& 0
+                    \end{bmatrix} \\
+            \end{math} 
+             Portanto, o sistema é Indeterminado.
+            \item \begin{math}
+                    \begin{bmatrix}
+                        1 & 3 & 5 & 1 \\
+                        6 & 1 & 1 & 2 \\
+                        2 & 0 & 3 & 3
+                    \end{bmatrix} 
+                        L_{2} \leftarrow L_{2} - 6L_{1},
+                        L_{3} \leftarrow L_{3} - 2L_{1}
+                        =
+                    \left[\begin{matrix}
+                        1 & 3 & 5 & 1 \\
+                        0 & -17& -29& -4 \\
+                        0 & -6& -7& 1
+                    \end{matrix} \right] \\
+                        L_{2} \leftarrow -\frac{1}{17}L_{2}
+                        =
+                    \left[\begin{matrix}
+                        1 & 3 & 5 & 1 \\
+                        0 & 1 & \frac{29}{17} & \frac{4}{17} \\
+                        0 & -6 & -7& 1
+                    \end{matrix} \right] \\
+                        L_{3} \leftarrow L_{3} - 6L_{2}
+                        =
+                    \left[\begin{matrix}
+                        1 & 1 & 1 & 12 \\
+                        0 & 1 & 2 & 4 \\
+                        0 & 0 & \frac{55}{17}& \frac{41}{17}
+                    \end{matrix} \right] \\
+                        L_{3} \leftarrow \frac{17}{55}L_{3}
+                        =
+                    \left[\begin{matrix}
+                        1 & 3 & 5 & 1 \\
+                        0 & 1 & \frac{29}{17}& \frac{4}{17} \\
+                        0 & 0 & 1 & \frac{41}{55}
+                    \end{matrix} \right] \\
+                        L_{2} \leftarrow L_{2} -\frac{29}{17}L_{3}
+                        =
+                    \left[\begin{matrix}
+                        1 & 3 & 5 & 1 \\
+                        0 & 1 & 0 & \frac{-57}{55} \\
+                        0 & 0 & 1 & \frac{41}{55}
+                    \end{matrix} \right] \\
+                        L_{1} \leftarrow L_{1} - 2L_{2},
+                        L_{1} \leftarrow L{1} - 5L_{3}
+                        =
+                    \begin{bmatrix}
+                        1 & 0 & 0 & \frac{21}{55} \\
+                        0 & 1 & 0 & \frac{-57}{55} \\
+                        0 & 0 & 1 & \frac{41}{55}
+                    \end{bmatrix} \\
+                \end{math}
+        Portanto é um sistema Determinado
+            \item\begin{math}
+                \begin{bmatrix}
+                    1 & 8 & 9 \\
+                    64 & 512 & 28
+                \end{bmatrix}
+                    L_{2} \leftarrow L_{2} - 64L_{1}
+                    =
+                \begin{bmatrix}
+                    1 & 8 & 9 \\
+                    0 & 0 & -548
+                \end{bmatrix}
+                \end{math} \\
+        Portanto é um sistema Incompativel.
+        \end{enumerate}
+ \end{resol}
 
 \subsection*{Exercícios}
 
 \construirExer
+
+\begin{exerc}
+        Demostre que se são lineares:
+        \begin{itemize}
+            \item $x^{100}$
+            \item $a*x+c$
+            \item $a*x_1 + b_1 +\ldots+ a*x_n + b_n$
+            \item $e$
+            \item $cos(x)$
+        \end{itemize}
+\end{exerc}
+\begin{exerc}
+        Classifique os sistemas abaixo como Determinado, Indeterminado ou Incompativel,
+        se Determinado, encontre $x,y,z$:
+        \begin{itemize}
+            \item \begin{equation}
+                        \left\{
+                            \begin{array}{rcl}
+                                x+y+z&=&10 \\
+                                10x+1y+z&=&9 \\
+                                x+0y+0z&=&1
+                            \end{array}
+                        \right..
+                   \end{equation}
+            \item \begin{equation}
+                        \left\{
+                        \begin{array}{ccccc|c}
+                            3x+2y+1z&=&10 \\
+                            6x+8y+2z&=&9 \\
+                            1x+\frac{2}{3}y+\frac{1}{3}z&=&1
+                        \end{array}
+                        \right..
+                   \end{equation}
+            \item  \begin{equation}
+                        \left\{
+                            \begin{array}{ccccc|c}
+                                1x+2y+1z&=&4 \\
+                                2x+8y+2z&=&3 \\
+                                8x+2y+8z&=&-18
+                            \end{array}
+                        \right..
+                    \end{equation}
+        \end{itemize}
+\end{exerc}
 
 \section{Formas escalonadas e formas escalonadas reduzidas}
 
