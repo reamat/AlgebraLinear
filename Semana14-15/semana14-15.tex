@@ -10,7 +10,7 @@
 
 \section{Matrizes simétricas}
 
-Uma \textbf{matriz simétrica} é uma matriz que é igual à sua transposta. Para que esta definição faça sentido, apenas podemos considerar matrizes que são quadradas. De forma mais precisa, se $A = \begin{bmatrix} a_{ij} \end{bmatrix}$ é uma matriz de orden $n \times n$, nós dizemos que $A$ é simétrica quando $A = A^T$.
+Uma \textbf{matriz simétrica} é uma matriz que é igual à sua transposta. Para que esta definição faça sentido, apenas podemos considerar matrizes que são quadradas. De forma mais precisa, se $A = \begin{bmatrix} a_{ij} \end{bmatrix}$ é uma matriz de ordem $n \times n$, nós dizemos que $A$ é simétrica quando $A = A^T$.
 
 Formas equivalentes de dizer que $A$ é simétrica incluem:
 \begin{enumerate}[$(1)$]
@@ -282,7 +282,7 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 		\begin{bmatrix}
 		0 \\ 2 \\ 1
 		\end{bmatrix}.
-		\end{equation} Já era de se esperar que encontraríamos duas variáveis livres, porque sabemos (item $(iii)$ do Teorema Espectral) que deve ser dois a dimensão do autoespaço associado com um autovalor de multiplicidade dois.\footnote{Enfatizamos que isto não é verdade para qualquer matriz, apenas para as simétricas!} Concluimos que uma base para o autoespaço $\operatorname{Nul} (A - 7I)$ é
+		\end{equation} Já era de se esperar que encontraríamos duas variáveis livres, porque sabemos (item $(iii)$ do Teorema Espectral) que deve ser dois a dimensão do autoespaço associado com um autovalor de multiplicidade dois.\footnote{Enfatizamos que isto não é verdade para qualquer matriz, apenas para as simétricas!} Concluímos que uma base para o autoespaço $\operatorname{Nul} (A - 7I)$ é
 		\begin{equation}
 		\left\lbrace
 		\vec{v}_2 = \begin{bmatrix}
@@ -344,7 +344,7 @@ Nós vamos apresentar uma prova deste resultado no final destas notas. Antes de 
 	4/(3\sqrt{5}) \\ 2/(3\sqrt{5}) \\ 5/(3\sqrt{5})
 	\end{bmatrix}
 	\right\rbrace.
-	\end{equation} Pelo método de diagonalização de matrizes, concluimos que $A$ pode ser diagonalizada pela matriz
+	\end{equation} Pelo método de diagonalização de matrizes, concluímos que $A$ pode ser diagonalizada pela matriz
 	\begin{equation}
 	P =
 	\begin{bmatrix}
@@ -938,7 +938,7 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na 
 	Sejam $\lambda_1$ e  $\lambda_2$ autovalores distintos de $A$ e $\vec{v}_1, \vec{v}_2$ respectivos autovetores. Então (observe que é necessário que $A$ seja simétrica na segunda e na última igualdade!)
 	\begin{equation}
 	\lambda_1 \langle \vec{v}_1, \vec{v}_2\rangle = \langle \lambda_1 \vec{v}_1, \vec{v}_2\rangle = \langle A \vec{v}_1, \vec{v}_2\rangle = \langle \vec{v}_1, A \vec{v}_2\rangle = \overline{\lambda}_2 \langle \vec{v}_1, \vec{v}_2\rangle = \lambda_2 \langle \vec{v}_1, \vec{v}_2\rangle,
-	\end{equation} de modo que $(\lambda_1 - \lambda_2)\langle \vec{v}_1, \vec{v}_2\rangle = 0$. Já que estamos supondo que os autovalores são distintos, $\lambda_1 \neq \lambda_2$, concluimos que $\langle \vec{v}_1, \vec{v}_2\rangle = 0$.
+	\end{equation} de modo que $(\lambda_1 - \lambda_2)\langle \vec{v}_1, \vec{v}_2\rangle = 0$. Já que estamos supondo que os autovalores são distintos, $\lambda_1 \neq \lambda_2$, concluímos que $\langle \vec{v}_1, \vec{v}_2\rangle = 0$.
 \end{proof}
 
 
@@ -1016,7 +1016,7 @@ A equivalência que foi apresentada na Observação \ref{sse} é muito útil na 
 	\det \left( A - \lambda I \right) = \det \left( Q^{-1} (A - \lambda I) Q \right) =	\det \left( \hat{A} - \lambda I \right) = (\lambda_1 - \lambda) \cdot \det (B - \lambda I),
 	\end{equation} onde $B$ é a matriz de ordem $(n-1)\times (n-1)$ dada por $(b_{ij})$. Além disso, se a multiplicidade de $\lambda_1$ como autovalor de $A$ for maior do que $1$, devemos ter, pela igualdade acima, que $\lambda_1$ também é um autovalor de $B$. Desta forma, $\hat{A}$ possui um autovetor unitário $\vec{v}_2$ associado com $\lambda_1$ que está contido em $\Span \{ \vec{y}_2, \vec{y}_3, \dots, \vec{y}_n \}$ e, portanto, é distinto e linearmente independente a $\vec{v}_1$. O processo de Gram-Schmidt permite obter $\{\vec{v}_1, \vec{v}_2\}$ ortonormais.
 
-	A partir daí, repetimos o processo completando o conjunto $\{\vec{v}_1, \vec{v}_2\}$ a uma base ortonormal $\{ \vec{v}_1, \vec{v}_2, \vec{y}_3, \dots, \vec{y}_n \}$ de $\mathbb{R}^n$. Daí vamos obter um terceiro autovetor ortogonal aos anteriores e unitário. Procedemos desta meneira até encontrar $k$ autovetores ortogonais e unitários associados ao autovalor $\lambda_1$. Assim, o autoespaço $\operatorname{Nul} (A - \lambda_1 I)$ tem dimensão $k$, que é igual à multiplicidade do autovalor $\lambda_1$.
+	A partir daí, repetimos o processo completando o conjunto $\{\vec{v}_1, \vec{v}_2\}$ a uma base ortonormal $\{ \vec{v}_1, \vec{v}_2, \vec{y}_3, \dots, \vec{y}_n \}$ de $\mathbb{R}^n$. Daí vamos obter um terceiro autovetor ortogonal aos anteriores e unitário. Procedemos desta maneira até encontrar $k$ autovetores ortogonais e unitários associados ao autovalor $\lambda_1$. Assim, o autoespaço $\operatorname{Nul} (A - \lambda_1 I)$ tem dimensão $k$, que é igual à multiplicidade do autovalor $\lambda_1$.
 \end{proof}
 
 \subsection{Prova do Teorema Espectral}

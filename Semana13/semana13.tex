@@ -23,7 +23,7 @@ Sistemas lineares aparecem como modelos matemáticos de vários fenômenos e em 
 Como sabemos, resolver o sistema linear
 \begin{equation}
 A \vec{x} = \vec{b}
-\end{equation} consiste em encontrar um vetor $\vec{x}$ que satisfaça a esta equação. Na terminologia que construimos ao longo do curso, isto significa que $\vec{b}$ pertence ao espaço coluna da matriz $A$, isto é, $\vec{b} \in \operatorname{Col} A$. Desta forma, não é possível resolver o sistema quando $\vec{b} \not\in \operatorname{Col} A$.
+\end{equation} consiste em encontrar um vetor $\vec{x}$ que satisfaça a esta equação. Na terminologia que construímos ao longo do curso, isto significa que $\vec{b}$ pertence ao espaço coluna da matriz $A$, isto é, $\vec{b} \in \operatorname{Col} A$. Desta forma, não é possível resolver o sistema quando $\vec{b} \not\in \operatorname{Col} A$.
 \begin{figure}[h!]
   \begin{center}
     \includegraphics[width=0.6\linewidth]{Semana13/semana13-proj-col.png}
@@ -114,7 +114,7 @@ A =
 A^T (\vec{b} - \vec{p}) = \vec{0} \ \ \iff \ \ A^T \vec{b} = A^T \vec{p} = A^T A\vec{x}.
 \end{equation} Esta última linha é válida porque o produto escalar $\vec{a}_j \cdot \big(\vec{b} - \vec{p}\big)$ é justamente a entrada $j$ do vetor obtido ao multiplicar $A^T(\vec{b} - \vec{p})$.
 
-Concluimos, desta forma, que, se $\vec{x}$ é uma solução de mínimos quadrados, ou seja, se $A \vec{x} = \vec{p}$, então necessariamente
+Concluímos, desta forma, que, se $\vec{x}$ é uma solução de mínimos quadrados, ou seja, se $A \vec{x} = \vec{p}$, então necessariamente
 \begin{equation}\label{minquad}
   \boxed{A^T A\vec{x} = A^T \vec{b}.}
 \end{equation}
@@ -268,7 +268,7 @@ Note que o fato de $R$ ser triangular superior torna a resolução do sistema ac
 
 Alternativamente temos uma expressão explícita para solução em mínimos quadrados: \begin{equation}   \vec{x} = R^{-1} Q^T \vec{b}.\end{equation}
 
-É importante notar que existem algoritmos para fatoração QR que são \it{numéricamente estáveis}, ou seja pouco suscetiveis a erros de aproximação ou arredondamento. Tais algorimos são diferentes do processo de Gram Schmidt usual.
+É importante notar que existem algoritmos para fatoração QR que são \it{numéricamente estáveis}, ou seja pouco suscetíveis a erros de aproximação ou arredondamento. Tais algoritmos são diferentes do processo de Gram Schmidt usual.
 
 \subsection*{Exercícios resolvidos}
 
@@ -299,7 +299,7 @@ y = a + b x,
       66 & 350 \\
       \hline
     \end{tabular}
-  \end{center} Podemos pensar em $y$ como a distância e em $x$ como a idade. Gostaríamos de achar uma relacção linear da forma
+  \end{center} Podemos pensar em $y$ como a distância e em $x$ como a idade. Gostaríamos de achar uma relação linear da forma
   \begin{equation}
   y = a + b x.
   \end{equation} Desta forma, os dados obtidos implicam que
@@ -326,7 +326,7 @@ y = a + b x,
   \begin{bmatrix}
     590 \\ 410 \\ 460 \\ 380 \\ 350
   \end{bmatrix}
-  \end{equation} Ora, dificilmente um sistema linear com duas incógnitas e cinco equações terá solução (só terá solução se todos os pontos do conjunto de dados estiverem alinhados em uma reta perfeita!). Vamos procurar por uma solução de mínimos quadrados. Isto é \textbf{regressão linear simpes}.
+  \end{equation} Ora, dificilmente um sistema linear com duas incógnitas e cinco equações terá solução (só terá solução se todos os pontos do conjunto de dados estiverem alinhados em uma reta perfeita!). Vamos procurar por uma solução de mínimos quadrados. Isto é \textbf{regressão linear simples}.
 
   Denotando
   \begin{equation}
@@ -513,7 +513,7 @@ Podemos também procurar (em contraste com a seção anterior) por funções nã
 \end{equation} vamos procurar por uma parábola
 \begin{equation}
 y = a + bx + cx^2
-\end{equation} que melhor se ajuste a este conjunto de pontos, no sentido de que a soma dos quadrados dos erros seja a menor possível. Isto corrensponde a procurar pela solução $(a,b, c)$ de mínimos quadrados do seguinte sistema linear
+\end{equation} que melhor se ajuste a este conjunto de pontos, no sentido de que a soma dos quadrados dos erros seja a menor possível. Isto corresponde a procurar pela solução $(a,b, c)$ de mínimos quadrados do seguinte sistema linear
 \begin{equation}
 \left\{
   \begin{array}{rl}

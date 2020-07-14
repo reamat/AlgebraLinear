@@ -247,7 +247,7 @@ Vamos calcular a projeção do vetor
 \begin{bmatrix}
  1\\0\\2
 \end{bmatrix}.
-\end{equation} Comlculamos
+\end{equation} Calculamos
 \begin{equation}
 \begin{split}
 \proj_W \vec{y} & = \frac{\vec{y} \cdot \vec{w}_1}{\vec{w}_1 \cdot \vec{w}_1} \ \vec{w}_1 + \frac{\vec{y} \cdot \vec{w}_2}{\vec{w}_2 \cdot \vec{w}_2} \ \vec{w}_2 = \frac{3-7}{9 + 49} \ \vec{w}_1 + \frac{1 + 2}{1+4} \ \vec{w}_2 \\
@@ -481,7 +481,7 @@ O processo consiste em fixar qualquer um dos vetores como o primeiro dos vetores
 \end{equation} Temos que $\vec{u}_1$ e $\vec{u}_2$ são ortogonais e que estão no mesmo plano, de modo que também temos
 \begin{equation}
 \Span \{ \vec{u}_1, \vec{u}_2 \} = \Span \{ \vec{v}_1, \vec{v}_2 \}.
-\end{equation} Vamos escrever momentariamente $W = \Span \{ \vec{u}_1, \vec{u}_2 \}$.
+\end{equation} Vamos escrever momentaneamente $W = \Span \{ \vec{u}_1, \vec{u}_2 \}$.
 
 No próximo passo do processo, o terceiro vetor pode ser obtido como
 \begin{equation}
@@ -523,7 +523,7 @@ No próximo passo do processo, o terceiro vetor pode ser obtido como
 \begin{bmatrix}
 -1 \\ 1 \\ 1
 \end{bmatrix}
-\end{equation} Concluimos assim que o conjunto
+\end{equation} Concluímos assim que o conjunto
 \begin{equation}
 \{ \vec{u}_1, \vec{u}_2, \vec{u}_3 \} = \left\{
 \begin{bmatrix}
@@ -781,7 +781,7 @@ A =
 \section{Fatoração QR e matrizes ortogonais}
 
 
-O método de Gram-Schmidt nos permite fatorar uma matriz $A$ cujas colunas são LI em um produto \begin{equation}A=QR,\end{equation} onde Q é uma matriz cujas colunas formam um conjunto ortonormal e $R$ é uma matriz triangular superior. Tal fatoração é muito importante do ponto de vista computacional, como veremos em breve, quando usarmos a fatoração QR como uma alternativa  para resolução de sistemas lineareas por mínimos quadrados. Também é a base de um eficiente método numérico para encontrar autovalores de uma matriz quadrada.
+O método de Gram-Schmidt nos permite fatorar uma matriz $A$ cujas colunas são LI em um produto \begin{equation}A=QR,\end{equation} onde Q é uma matriz cujas colunas formam um conjunto ortonormal e $R$ é uma matriz triangular superior. Tal fatoração é muito importante do ponto de vista computacional, como veremos em breve, quando usarmos a fatoração QR como uma alternativa  para resolução de sistemas lineares por mínimos quadrados. Também é a base de um eficiente método numérico para encontrar autovalores de uma matriz quadrada.
 
 Matrizes cujas colunas formam um conjunto ortonormal são muito úteis e por isso recebem um nome especial:são chamadas de matrizes ortogonais. Aqui cabe uma observação relevante: este é um exemplo de uma situação onde a terminologia clássica está longe de ser satisfatória: matrizes  cujas colunas formam um conjunto {\it ortonormal} são chamadas de matrizes {\it ortogonais}.
 
@@ -1004,7 +1004,7 @@ A prova do primeiro item é consequência direta da linearidade do produto inter
 \begin{equation}Q\vec{v} \cdot Q\vec{w} = \left( \sum_{i=1}^n \alpha_i \vec{u}_i \right) \cdot \left(   \sum_{j=1}^n \beta_j \vec{u}_j \right) =  \sum_{i=1}^n \sum_{j=1}^n \alpha_i \beta_j \;\vec{u}_i \cdot \vec{u}_j\end{equation}
 devido a linearidade do produto interno (ou seja a propriedade distributiva aplicada tanto na primeira quanto na segunda componente do produto interno). Agora, lembrando que $\vec{u}_i \cdot \vec{u}_j=0$ se $i \neq j$, a ultima expressão iguala-se a
 \begin{equation} \sum_{i=1}^n \alpha_i \beta_i \; \vec{u}_i \cdot \vec{u}_i.\end{equation}
-Finalmente, lembrando que cada coluna $\vec{u}_i$ de $Q$ tem comprimento unitário, concluimos que
+Finalmente, lembrando que cada coluna $\vec{u}_i$ de $Q$ tem comprimento unitário, concluímos que
 \begin{equation}Q\vec{v} \cdot Q\vec{w} = \sum_{i=1}^n \alpha_i \beta_i = \vec{v} \cdot \vec{w}.\end{equation}
 
 
@@ -1030,7 +1030,7 @@ Assim finalizamos a prova do teorema.
  0 & -1
  \end{bmatrix} .\end{equation}
 
-Finalizamos esta seção enunciando um teorema cujo primeiro item já foi provado e cujo segundo item é consequencia direta do primeiro e do fato de que $\det(AB)=\det(A) \det (B)$:  PS NAO VALE A PENA PRECISA DE ALGO MAIS...
+Finalizamos esta seção enunciando um teorema cujo primeiro item já foi provado e cujo segundo item é consequência direta do primeiro e do fato de que $\det(AB)=\det(A) \det (B)$:  PS NAO VALE A PENA PRECISA DE ALGO MAIS...
 
 \begin{teo}
 	Seja $Q=[\vec{u}_1,...,\vec{u}_n]$ uma matriz ortogonal. Temos

@@ -143,7 +143,7 @@ Neste texto iremos analisar técnicas de resolução de sistemas lineares apenas
 \bigskip
 
 \begin{defn}  Uma solução de um sistema linear nas variáveis $x_1, x_2 , \hdots \ x_n$
-é uma %lista  de valores numéricos que fazem com que todas as equações do SL sejam verificadas quando as variáeis s
+é uma %lista  de valores numéricos que fazem com que todas as equações do SL sejam verificadas quando as variáveis s
 atribuição de valores
 às variáveis que verificam (ou satisfazem) todas as equações do sistema.
 \end{defn}
@@ -481,15 +481,15 @@ Feito isso, temos que a solução do problema é $(x,y) = (\frac{1}{23}, \frac{3
 \end{exeresol}
 \begin{resol}
         \begin{flushleft}
-        Para resolvermos a questão nos remetemos a definição de linearidade e as proriedade das funções lineares,
+        Para resolvermos a questão nos remetemos a definição de linearidade e as propriedades das funções lineares,
         que seria a aditividade() e : $f(x) + f(x^{'}) = f(x + x^{'})$
-        e homogeniedade : $a*f(x) = f(a*x)$.
+        e homogeneidade : $a*f(x) = f(a*x)$.
         \end{flushleft}
         \begin{flushleft}
             \begin{enumerate}
                 \item Seja $x^{2}$, não é linear pois $f(x^{2}) + f(x^{2}) \neq f(x + x^{'})^2$ e $a*f(x^{2}) \neq f(a*x)^{2}$.
                 \item Seja $a*x + b = 0$, é linear, pois, $f(a*x + b) + f(a*x + b^{'}) = f(a*x + b + (a*x + b)^{'})$ e  $a*f(c*x + b) = f(a*c*x + a*b)$.
-                \item Seja $(x + k)^{2}$, não é liner, pois, $f(x + k)^{2} + f(x + k)^{2}) \neq f((x + k) + (x + k)^{'})^2$
+                \item Seja $(x + k)^{2}$, não é linear, pois, $f(x + k)^{2} + f(x + k)^{2}) \neq f((x + k) + (x + k)^{'})^2$
             e $a*f(x + k)^{2} \neq f((a*x + a*k)^{2})$.
                 \item Seja $e^{x}$, não é linear, pois, $f(e^{x}) + f(e^{x'}) \neq f(e + e)^{x'}$.
             \end{enumerate}
@@ -607,7 +607,7 @@ Feito isso, temos que a solução do problema é $(x,y) = (\frac{1}{23}, \frac{3
                     0 & 0 & -548
                 \end{bmatrix}
                 \end{math} \\
-        Portanto é um sistema Incompativel.
+        Portanto é um sistema Incompatível.
         \end{enumerate}
  \end{resol}
 
@@ -626,7 +626,7 @@ Feito isso, temos que a solução do problema é $(x,y) = (\frac{1}{23}, \frac{3
         \end{itemize}
 \end{exer}
 \begin{exer}
-         Classifique os sistemas abaixo como Determinado, Indeterminado ou Incompativel,
+         Classifique os sistemas abaixo como Determinado, Indeterminado ou Incompatível,
         se Determinado, encontre $x,y,z$:
         \begin{itemize}
             \item \begin{equation}
@@ -814,8 +814,8 @@ Sistematicamente, encontramos a forma escalonada de uma matriz aplicando os segu
   \item A partir de operações elementares, eliminar todos elementos que estão abaixo do elemento na posição de pivô que obtivemos no Passo 1;
   \item Desconsiderando por um momento a primeira linha, procuramos pela próxima coluna pivô -- aquela que tem algum elemento não nulo \textit{abaixo da primeira linha}. Se necessário, aplicar operações elementares para que, na segunda linha, o elemento passe a ser diferente de zero;
   \item A partir de operações elementares, eliminar todos elementos que estão abaixo do elemento na posição de pivô que obtivemos no Passo 3;
-  \item Desconsiderando por um momento a primeira e a segunda linhas, procuramos pela próxima coluna pivô -- aquela que tem algum elemento não nulo \textit{abaixo da primeira linha e da segunda linha}. Se necessário, aplicar operações elementares para que, na segunda linha, o elemento passe a ser diferente de zero;
-  \item A partir de operações elementares, eliminar todos elementos que estão abaixo do elemento na posição de pivô que obtivemos no Passo 5 e ssim por diante.
+  \item Desconsiderando por um momento a primeira e a segunda linhas, procuramos pela próxima coluna pivô -- aquela que tem algum elemento não nulo \textit{abaixo da primeira linha e da segunda linha}. Se necessário, aplicar operações elementares para que, na terceira linha, o elemento passe a ser diferente de zero;
+  \item A partir de operações elementares, eliminar todos elementos que estão abaixo do elemento na posição de pivô que obtivemos no Passo 5 e assim por diante.
 \end{enumerate} Essencialmente, são apenas dois passos que se repetem até que se esgotem as colunas que possuem posição de pivô. Vejamos um exemplo.
 
 \begin{ex}\label{escalonada2}
@@ -1061,7 +1061,7 @@ Observamos que poderíamos ter primeiro realizado o Passo 2 e depois o Passo 1 s
 
 \subsection{Sistemas que possuem apenas uma solução}
 
-Os sistemas que vimos até agora possuiam apenas uma solução. Esta propriedade, como veremos, nem sempre é válida. No entanto, é fácil de identificar quando um sistema possui solução única analisando a forma escalonada da matriz associada: \textbf{quando todas as colunas referentes às variáveis da equação possuirem posição de pivô}. Por exemplo,
+Os sistemas que vimos até agora possuíam apenas uma solução. Esta propriedade, como veremos, nem sempre é válida. No entanto, é fácil de identificar quando um sistema possui solução única analisando a forma escalonada da matriz associada: \textbf{quando todas as colunas referentes às variáveis da equação possuírem posição de pivô}. Por exemplo,
 \begin{equation}
 \left[
  \begin{array}{cc|c}
@@ -1157,7 +1157,7 @@ No sistema da fórmula \eqref{sistemaimpossivel} acima, temos a matriz aumentada
 
 \subsection{Sistemas com mais de uma solução}
 
-Com exceção da subseção anterior, todos os sistemas que resolvemos anteriormente possuiam apenas uma solução. Vejamos um exemplo onde este não é o caso.
+Com exceção da subseção anterior, todos os sistemas que resolvemos anteriormente possuíam apenas uma solução. Vejamos um exemplo onde este não é o caso.
 
 \begin{ex}
 Resolver
@@ -1253,7 +1253,7 @@ Ao analisar a matriz aumentada associada a um sistema linear, concluiremos \text
 \end{itemize}
 
 
-Concluimos assim que \textit{um sistema linear ou não possui solução, ou tem apenas uma solução ou então possui infinitas soluções}. São estes três todos os casos possíveis e podemos decidir em qual estamos apenas olhando para a forma escalonada da matriz aumentada associada ao sistema.
+Concluímos assim que \textit{um sistema linear ou não possui solução, ou tem apenas uma solução ou então possui infinitas soluções}. São estes três todos os casos possíveis e podemos decidir em qual estamos apenas olhando para a forma escalonada da matriz aumentada associada ao sistema.
 
 \subsection*{Exercícios resolvidos}
 
