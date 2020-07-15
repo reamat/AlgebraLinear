@@ -154,12 +154,12 @@ Geometricamente, $\vec{v}$ é um vetor que não muda de direção quando aplicam
 	\begin{equation}
 	\vec{v}_2 =
 	{\begin{bmatrix}0\\1\\2\end{bmatrix}} \quad \text{ é um autovetor de $A$, pois } \quad {\begin{bmatrix}2&0&0\\0&3&4\\0&4&9\end{bmatrix}} {\begin{bmatrix}0\\1\\2\end{bmatrix}} = {\begin{bmatrix}0\\11\\22\end{bmatrix}} = 11 \cdot {\begin{bmatrix}0\\1\\2\end{bmatrix}}.
-	\end{equation} Neste caso, concluimos também que $11$ é um autovalor de $A.$
+	\end{equation} Neste caso, concluímos também que $11$ é um autovalor de $A.$
 	Finalmente, temos que 
 	\begin{equation}
 	\vec{v}_3 =
 	{\begin{bmatrix}0\\2\\-1\end{bmatrix}} \quad \text{ é um autovetor de $A$, pois } \quad {\begin{bmatrix}2&0&0\\0&3&4\\0&4&9\end{bmatrix}} {\begin{bmatrix}0\\2\\-1\end{bmatrix}} = {\begin{bmatrix}0\\2\\-1\end{bmatrix}} = 1 \cdot {\begin{bmatrix}0\\2\\-1\end{bmatrix}}.
-	\end{equation} e portanto concluimos que $1$ também é  um autovalor de $A. \ \lhd$
+	\end{equation} e portanto concluímos que $1$ também é  um autovalor de $A. \ \lhd$
 
 \end{ex}
 
@@ -172,7 +172,7 @@ A (\alpha \vec{v}) = \alpha A \vec{v} = \alpha \lambda \vec{v} = \lambda (\alpha
 \end{equation} Da mesma maneira, se dois vetores $\vec{v}$ e $\vec{w}$ forem autovetores associados a um mesmo autovalor $\lambda$, então a soma $\vec{v} + \vec{w}$ também é um autovetor associado a $\lambda$:
 \begin{equation}
 A (\vec{v} + \vec{w}) = A \vec{v} + A \vec{w} =  \lambda \vec{v} + \lambda \vec{w} = \lambda (\vec{v} + \vec{w}).
-\end{equation} Logo, concluimos que o conjunto de todos os autovetores associados a um autovalor $\lambda$, união com o vetor nulo, forma um subespaço vetorial de $\mathbb{R}^n$, denominado \textbf{autoespaço} associado ao autovalor $\lambda$:
+\end{equation} Logo, concluímos que o conjunto de todos os autovetores associados a um autovalor $\lambda$, união com o vetor nulo, forma um subespaço vetorial de $\mathbb{R}^n$, denominado \textbf{autoespaço} associado ao autovalor $\lambda$:
 \begin{equation}
 \text{autoespaço associado a } \lambda = \big\{ \vec{v} \in \mathbb{R}^n \, | \, \vec{v} \text{ é autovetor associado a } \lambda \big\} \cup \{\, \vec{0}\, \}.
 \end{equation}
@@ -677,7 +677,7 @@ P = \begin{bmatrix}
 \end{equation}
 
 \begin{proof}[Justificativa do método de diagonalização]
-Vamos verificar que $P^{-1} A P = D$ mostrando que as colunas da matriz $P^{-1} A P$ são iguais às colunas de $D$. Pela forma que construimos a matriz $P$, sabemos que a primeira coluna de $P$ é $\vec{v}_1$:
+Vamos verificar que $P^{-1} A P = D$ mostrando que as colunas da matriz $P^{-1} A P$ são iguais às colunas de $D$. Pela forma que construímos a matriz $P$, sabemos que a primeira coluna de $P$ é $\vec{v}_1$:
 \begin{equation}
 P \vec{e}_1 = \vec{v}_1 \qquad \qquad \text{ou, ainda, } \qquad  \vec{e}_1 = P^{-1} \vec{v}_1.
 \end{equation} Assim, já que $A \vec{v}_1 = \lambda_1 \vec{v}_1$, temos
@@ -691,7 +691,7 @@ P \vec{e}_1 = \vec{v}_1 \qquad \qquad \text{ou, ainda, } \qquad  \vec{e}_1 = P^{
                                        & = \text{primeira coluna de } D.
 \end{split}
 \end{equation}
-Este mesmo raciocício, repetido $n$ vezes, para cada uma das colunas, prova que todas as colunas são iguais; portanto, $P^{-1} A P = D$.
+Este mesmo raciocínio, repetido $n$ vezes, para cada uma das colunas, prova que todas as colunas são iguais; portanto, $P^{-1} A P = D$.
 \end{proof}
 
 \begin{ex}[de volta ao Exemplo \ref{3x3}]\label{exp:3x3denovo}
@@ -782,7 +782,7 @@ A = \begin{bmatrix}
 
 \vspace{0.3cm}
 
-Em geral, valem as seguintes propriedades: seja $A$ uma matriz de orden $n \times n$. Então:
+Em geral, valem as seguintes propriedades: seja $A$ uma matriz de ordem $n \times n$. Então:
 \begin{itemize}
 	\item Se $A$ possui $n$ autovalores reais distintos, então $A$ possui uma base de autovetores e é diagonalizável, pois possui um autovetor associado a cada um dos seus autovalores distintos. Isto é consequência de um resultado que diz que se temos $k$ autovetores associados a $k$ autovalores distintos, então este conjunto de $k$ autovetores é LI.
 	\item No caso de $A$ possuir autovalores reais com multiplicidade maior do que $1$, $A$ apenas será diagonalizável se cada autovalor de multiplicidade $k$ tiver $k$ autovetores linearmente independentes. Em outras palavras, só será possível formar uma base de autovetores de $A$ quando

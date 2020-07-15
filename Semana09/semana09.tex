@@ -239,7 +239,7 @@ A = \begin{bmatrix}
 1 & 2 & -1 \\
 0 & 2 & 1
 \end{bmatrix}.
-\end{equation} A notação de ``barrinhas'' para o determinante é particularmente adequada para escrever o determinante como aparece na fórmula \eqref{detminor}, pois assim podemos ir mentalmente desconsiderando (ou tapando com um lápis) as linhas e colunas que não devemos escrever (indentifique que tudo o que fizemos foi escrever a fórmula \eqref{detminor}):
+\end{equation} A notação de ``barrinhas'' para o determinante é particularmente adequada para escrever o determinante como aparece na fórmula \eqref{detminor}, pois assim podemos ir mentalmente desconsiderando (ou tapando com um lápis) as linhas e colunas que não devemos escrever (identifique que tudo o que fizemos foi escrever a fórmula \eqref{detminor}):
 \begin{equation}
 \det A = \left| \begin{matrix}
 2 & 4 & 3  \\
@@ -277,7 +277,7 @@ A = \begin{bmatrix}
 	1 & 0 & -1 \\
 	0 & 2 & 1
 	\end{bmatrix}.
-	\end{equation} A notação de ``barrinhas'' para o determinante é particularmente adequada para escrever o determinante como aparece na fórmula \eqref{detminor}, pois assim podemos ir mentalmente desconsiderando (ou tapando com um lápis) as linhas e colunas que não devemos escrever (indentifique que tudo o que fizemos foi escrever a fórmula \eqref{detminor}):
+	\end{equation} A notação de ``barrinhas'' para o determinante é particularmente adequada para escrever o determinante como aparece na fórmula \eqref{detminor}, pois assim podemos ir mentalmente desconsiderando (ou tapando com um lápis) as linhas e colunas que não devemos escrever (identifique que tudo o que fizemos foi escrever a fórmula \eqref{detminor}):
         \begin{equation}
 	\begin{split}
 	\det B = \left| \begin{matrix}
@@ -321,7 +321,7 @@ Podemos calcular o determinante de $A$ a partir de qualquer linha ou de qualquer
 \end{itemize}
 \end{teo}
 
-É prático de calcular o determinante pensando como vínhamos fazendo antes, alternando os sinais. Isto é possível de fazer utilizando qualquer linha ou qualquer coluna. Basta descobrirmos com qual sinal devemos começar. Construimos uma ``matriz'' com os sinais que cada posição da matriz nos dá. Vamos colocar o sinal de $(-1)^{i+j}$ na posição $ij$ da matriz:
+É prático de calcular o determinante pensando como vínhamos fazendo antes, alternando os sinais. Isto é possível de fazer utilizando qualquer linha ou qualquer coluna. Basta descobrirmos com qual sinal devemos começar. Construímos uma ``matriz'' com os sinais que cada posição da matriz nos dá. Vamos colocar o sinal de $(-1)^{i+j}$ na posição $ij$ da matriz:
 \begin{equation}
 \begin{bmatrix}
 (-1)^{1+1} & (-1)^{1+2} & (-1)^{1+3}\\
@@ -493,7 +493,7 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
     3  & 2 & 1  & 1 \\
     -2 & 2 & 0  & 1
 	\end{bmatrix}.
-	\end{equation} Na tentativa de evitar muitas contas, vamos escolher para começar, uma linha ou coluna que possua o menor número de zeros possível. Neste caso, poderia ser a segunda linha ou a terceira coluna. Vamos escolher a segunda linha (calcule, como exercício, o determinante utilizando a terceira coluna). Os sinais são:
+	\end{equation} Na tentativa de evitar muitas contas, vamos escolher para começar, uma linha ou coluna que possua o maior número de zeros possível. Neste caso, poderia ser a segunda linha ou a terceira coluna. Vamos escolher a segunda linha (calcule, como exercício, o determinante utilizando a terceira coluna). Os sinais são:
 	\begin{equation}
 	\begin{bmatrix}
 	+ &  &  &  \\
@@ -682,7 +682,7 @@ Nesta seção, vamos apontar as principais propriedades do determinante. A prova
 \begin{teo}\label{thm:prop-det}
 Valem as seguintes propriedades:
 \begin{enumerate}[$(i)$]
-\item O determinante depende linearmente de cada uma das linhas, isto é, se fizermos uma combinação linear de uma linha apenas, poderíamos ter feito uma cobinação linear dos determinantes:
+\item O determinante depende linearmente de cada uma das linhas, isto é, se fizermos uma combinação linear de uma linha apenas, poderíamos ter feito uma combinação linear dos determinantes:
 \begin{equation}
 \det \begin{bmatrix}
 a_{11} & \cdots & a_{1n} \\
@@ -976,7 +976,7 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 Como já é conhecido de primeiros cursos de cálculo\footnote{Esta seção é opcional e necessita de conhecimentos básicos de Cálculo.}, é possível fazer mudanças de coordenadas em integrais unidimensionais (também conhecido como integrar por substituição): para $I \subseteq \mathbb{R}$ um intervalo e $\phi : [a,b] \to I$ é diferenciável com derivada contínua e $f: I \to \mathbb{R}$ é uma função contínua, então
 \begin{equation}
 \int_{\phi (a)}^{\phi (b)} f(x) \, \, \mathrm{d} x = \int_{a}^{b} f \big(\phi (t)\big) \phi'(t) \, \, \mathrm{d} t.
-\end{equation} Intuitivemente, pensamos na substituição $x = \phi (t) \implies \, \mathrm{d} x = \phi' (t)\, \mathrm{d} t$.
+\end{equation} Intuitivamente, pensamos na substituição $x = \phi (t) \implies \, \mathrm{d} x = \phi' (t)\, \mathrm{d} t$.
 
 Um tópico que nem sempre é abordado em cursos de Cálculo em várias variáveis é a fórmula de mudança de variáveis para integrais múltiplas, onde o determinante aparece de forma fundamental.
 
