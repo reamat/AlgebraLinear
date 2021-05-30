@@ -34,18 +34,18 @@ Se no dia de hoje temos 40\% da população usando o sistema A e 60\% usando o s
 
 (b) podemos calcular a distribuição da população daqui a 20 anos? Como fazer isso de maneira prática?
 
-(c) existe uma distribuição de equilíbrio, que permaneça invariante a longo do tempo?
+(c) existe uma distribuição de equilíbrio, que permaneça invariante ao longo do tempo?
 
 \medskip
 Qual a ligação disto com matrizes ou álgebra linear?
 Para responder a primeira questão, seja
 \medskip
 
-$p_A(0)=0.4$ a fração da população em A no dia de hoje
+$p_A(0)=0,4$ a fração da população em A no dia de hoje
 
 e
 
-$p_B(0)=0.6$ a fração da população em B neste mesmo dia de hoje.
+$p_B(0)=0,6$ a fração da população em B neste mesmo dia de hoje.
 
 Se chamarmos $p_A(1)$ e $p_B(1)$ a distribuição de população daqui a um ano, teremos
 
@@ -78,7 +78,7 @@ Fazendo as contas com $p_A(0)=0,4$ e $p_B(0)=0,6$, temos $p_A(1)=0,5$ e $p_B(1)=
 
 \medskip
 
-Para responder a pergunta (b), note que se chamarmos $\vec{p_n}$ a distribuição de população no tempo $n$ (ou seja daqui a n anos), vale seguinte formula
+Para responder a pergunta (b), note que se chamarmos $\vec{p_n}$ a distribuição de população no tempo $n$ (ou seja, daqui a $n$ anos), vale seguinte fórmula
 
 \begin{equation}\label{cmark-2}
 \vec p_{n+1} = A \vec p_n
@@ -121,7 +121,7 @@ Estudaremos em detalhes autovetores e autovalores a partir de agora. Veremos, en
 %(além de conhecermos distribuições de equilíbrio para cadeias de Markov)
 poderemos, em muitos casos, escrever a matriz $A$ na forma
 \begin{equation}A = P D P^{-1},\end{equation}
-no que é chamada uma {\it diagonalização} de $A$, onde $D$ é uma matriz diagonal, ou seja que tem todas as entradas fora da diagonal principal nulas. Desta maneira poderemos calcular potências de $A$ através da expressão
+no que é chamada uma {\it diagonalização} de $A$, onde $D$ é uma matriz diagonal, ou seja, que tem todas as entradas fora da diagonal principal nulas. Desta maneira poderemos calcular potências de $A$ através da expressão
 \begin{equation}A^n = P D^n P^{-1},\end{equation}
 algo que é muito útil do ponto vista computacional, visto que o cálculo de potências de matrizes diagonais é muito simples. Isto nos dá uma resposta à pergunta (d) acima.
 
