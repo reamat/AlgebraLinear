@@ -35,7 +35,7 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	\begin{array}{ccc|c}
 	7 & -3 & 0 & 2 \\
 	3 & -1 & 1 & 0 \\
-	0 & 1 & 2 & -2 \\
+	0 & 1 & 2 & -2
 	\end{array}
 	\right]
 	\end{equation} Esta forma é adequada para resolver o sistema por escalonamento (também conhecido como método de eliminação gaussiana). Poderíamos fazer eliminação gaussiana sem recorrer à matriz aumentada associada, mas isto implicaria em ter que ficar reescrevendo as variáveis independentes a todo momento, além de tomar certo cuidado para não se confundir com os coeficientes nulos. O escalonamento de uma matriz torna o procedimento mais automatizado e minimiza as chances de erro.
@@ -45,21 +45,21 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	\begin{array}{ccc}
 	7 & -3 & 0  \\
 	3 & -1 & 1  \\
-	0 & 1 & 2  \\
+	0 & 1 & 2
 	\end{array}
 	\right]
 	\left[
 	\begin{array}{c}
 	x_1   \\
 	x_2   \\
-	x_3   \\
+	x_3
 	\end{array}
 	\right] =
 	\left[
 	\begin{array}{c}
 	2   \\
 	0   \\
-	-2  \\
+	-2
 	\end{array}
 	\right]  \quad \text{ ou } \quad A \vec{x} = \vec{b}.
 	\end{equation} Nesta forma, aparece o produto de uma matriz por um vetor. Depois podemos considerar produto de matrizes e a resolução de sistemas lineares concomitantemente (ver também capítulo da Semana 04). Caso a matriz $A$ acima seja invertível, sabemos que o sistema possui apenas uma solução e que
@@ -72,28 +72,28 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	\begin{array}{ccc}
 	7   \\
 	3   \\
-	0   \\
+	0
 	\end{array}
 	\right] + x_2
 	\left[
 	\begin{array}{c}
 	-3   \\
 	-1   \\
-	1   \\
+	1
 	\end{array}
 	\right] + x_3
 	\left[
 	\begin{array}{c}
 	0  \\
 	1  \\
-	2  \\
+	2
 	\end{array}
 	\right] =
 	\left[
 	\begin{array}{c}
 	2  \\
 	0  \\
-	-2  \\
+	-2
 	\end{array}
 	\right]
 	\end{equation} Aqui, há uma interpretação mais geométrica. Estudar a existência de soluções do sistema linear é equivalente a se perguntar se o vetor
@@ -103,7 +103,7 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	\begin{array}{c}
 	2  \\
 	0  \\
-	-2  \\
+	-2
 	\end{array}
 	\right]
 	\end{equation} pode ser escrito como combinação linear dos vetores
@@ -112,21 +112,21 @@ Um sistema linear pode ser reescrito de diversas maneiras.
 	\begin{array}{ccc}
 	7   \\
 	3   \\
-	0   \\
+	0
 	\end{array}
 	\right], \quad \vec{v}_2 =
 	\left[
 	\begin{array}{c}
 	-3   \\
 	-1   \\
-	1   \\
+	1
 	\end{array}
 	\right] \quad \text{e} \quad \vec{v}_3 =
 	\left[
 	\begin{array}{c}
 	0  \\
 	1  \\
-	2  \\
+	2
 	\end{array}
 	\right],
 	\end{equation} que são as colunas da matriz $A$. Logo, resolver o sistema linear é equivalente a perguntar se $\vec{b}$ está no espaço gerado por $\vec{v}_1, \vec{v}_2$ e $\vec{v}_3$, isto é, se $\vec{b} \in \Span\{\vec{v}_1, \vec{v}_2, \vec{v}_3\}$.
@@ -156,7 +156,7 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 	\begin{array}{ccc|c}
 	7 & -3 & 0 & 2 \\
 	3 & -1 & 1 & 0 \\
-	0 & 1 & 2 & -2 \\
+	0 & 1 & 2 & -2
 	\end{array}
 	\right].
 	\end{equation} Nossa técnica básica de escalonamento permite fazer uma análise de todos os pontos de vista acima. Os primeiros passos do escalonamento podem ser:
@@ -166,14 +166,14 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 	\begin{array}{ccc|c}
 	7 & -3 & 0 & 2 \\
 	0 & 1 & 2 & -2 \\
-	3 & -1 & 1 & 0 \\
+	3 & -1 & 1 & 0
 	\end{array}
 	\right]\xrightarrow{-(3/7)\ell_1 + \ell_3 \text{ em } \ell_3}
 	\left[
 	\begin{array}{ccc|c}
 	7 & -3 & 0 & 2 \\
 	0 & 1 & 2 & -2 \\
-	0 & 2/7 & 1 & -6/7 \\
+	0 & 2/7 & 1 & -6/7
 	\end{array}
 	\right]
 	\end{equation}
@@ -183,14 +183,14 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 	\begin{array}{ccc|c}
 	7 & -3 & 0 & 2 \\
 	0 & 1 & 2 & -2 \\
-	0 & 2 & 7 & -6 \\
+	0 & 2 & 7 & -6
 	\end{array}
 	\right] \xrightarrow{-2\ell_2 + \ell_3 \text{ em } \ell_3}
 	\left[
 	\begin{array}{ccc|c}
 	7 & -3 & 0 & 2 \\
 	0 & 1 & 2 & -2 \\
-	0 & 0 & 3 & -2 \\
+	0 & 0 & 3 & -2
 	\end{array}
 	\right]
 	\end{equation} Estas continhas iniciais já revelam muito! Por exemplo:
@@ -222,7 +222,7 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 	\begin{array}{ccc|c}
 	1 & -3 & 0 & 2 \\
 	0 &  4 & 1 & -3 \\
-	3 & -1 & 2 & 0 \\
+	3 & -1 & 2 & 0
 	\end{array}
 	\right].
 	\end{equation} Nossa técnica básica de escalonamento permite fazer uma análise de todos os pontos de vista acima. Os primeiros passos do escalonamento podem ser:
@@ -232,14 +232,14 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 	\begin{array}{ccc|c}
 	1 & -3 & 0 & 2 \\
 	0 &  4 & 1 & -3 \\
-	0 &  8 & 2 & -6 \\
+	0 &  8 & 2 & -6
 	\end{array}
 	\right] \xrightarrow{-2\ell_2 + \ell_3 \text{ em } \ell_3}
 	\left[
 	\begin{array}{ccc|c}
 	1 & -3 & 0 & 2 \\
 	0 &  4 & 1 & -3 \\
-	0 &  0 & 0 & 0 \\
+	0 &  0 & 0 & 0
 	\end{array}
 	\right].
 	\end{equation} Assim como no exemplo anterior, estas contas também revelam toda a estrutura do sistema linear e de sua matriz associada.
@@ -251,7 +251,7 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 		\begin{array}{ccc|c}
 		1 & -3 & 0 & 2 \\
 		0 &  4 & 1 & 1 \\
-		3 & -1 & 2 & 0 \\
+		3 & -1 & 2 & 0
 		\end{array}
 		\right]
 		\xrightarrow{-3\ell_1 + \ell_3 \text{ em } \ell_3}
@@ -259,14 +259,14 @@ Os exemplos abaixo são de sistemas lineares cuja matriz associada é \textbf{qu
 		\begin{array}{ccc|c}
 		1 & -3 & 0 & 2 \\
 		0 &  4 & 1 & 1 \\
-		0 &  8 & 2 & -6 \\
+		0 &  8 & 2 & -6
 		\end{array}
 		\right] \xrightarrow{-2\ell_2 + \ell_3 \text{ em } \ell_3}
 		\left[
 		\begin{array}{ccc|c}
 		1 & -3 & 0 & 2 \\
 		0 &  4 & 1 & 1 \\
-		0 &  0 & 0 & -8 \\
+		0 &  0 & 0 & -8
 		\end{array}
 		\right].
 		\end{equation}
@@ -367,7 +367,7 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\mathbb{R}$} é um con
 	a_{11} & a_{12} & \cdots & a_{1n} \\
 	a_{21} & a_{22} & \cdots & a_{2n} \\
 	\vdots & \vdots &        & \vdots \\
-	a_{m1} & a_{m2} & \cdots & a_{mn} \\
+	a_{m1} & a_{m2} & \cdots & a_{mn}
 	\end{array}
 	\right] \quad \text{e} \quad
 	B =
@@ -376,7 +376,7 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\mathbb{R}$} é um con
 	b_{11} & b_{12} & \cdots & b_{1n} \\
 	b_{21} & b_{22} & \cdots & b_{2n} \\
 	\vdots & \vdots &        & \vdots \\
-	b_{m1} & b_{m2} & \cdots & b_{mn} \\
+	b_{m1} & b_{m2} & \cdots & b_{mn}
 	\end{array}
 	\right],
 	\end{equation} definimos
@@ -387,7 +387,7 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\mathbb{R}$} é um con
 	a_{11} + b_{11} & a_{12} + b_{12} & \cdots & a_{1n} + b_{1n} \\
 	a_{21} + b_{21} & a_{22} + b_{22} & \cdots & a_{2n} + b_{2n} \\
 	\vdots & \vdots &        & \vdots \\
-	a_{m1} + b_{m1} & a_{m2} + b_{m2} & \cdots & a_{mn} + b_{mn} \\
+	a_{m1} + b_{m1} & a_{m2} + b_{m2} & \cdots & a_{mn} + b_{mn}
 	\end{array}
 	\right] \quad \text{e} \quad
 	k\cdot A =
@@ -396,7 +396,7 @@ De forma mais precisa, um \textbf{espaço vetorial sobre $\mathbb{R}$} é um con
 	k\cdot a_{11} & k\cdot a_{12} & \cdots & k\cdot a_{1n} \\
 	k\cdot a_{21} & k\cdot a_{22} & \cdots & k\cdot a_{2n} \\
 	\vdots & \vdots &        & \vdots \\
-	k\cdot a_{m1} & k\cdot a_{m2} & \cdots & k\cdot a_{mn} \\
+	k\cdot a_{m1} & k\cdot a_{m2} & \cdots & k\cdot a_{mn}
 	\end{array}
 	\right].
 	\end{equation} É imediato verificar que valem todas as 8 propriedades acima (faça!).
@@ -467,25 +467,25 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 	\left[
 	\begin{array}{c}
 	x \\
-	y \\
+	y
 	\end{array}
 	\right] =
 	\left[
 	\begin{array}{c}
 	x \\
-	2x \\
+	2x
 	\end{array}
 	\right] = x \cdot
 	\left[
 	\begin{array}{c}
 	1 \\
-	2 \\
+	2
 	\end{array}
 	\right],
 	\end{equation} isto é, $H = \Span \left\{ \left[
 	\begin{array}{c}
 	1 \\
-	2 \\
+	2
 	\end{array}
 	\right] \right\}$.
 \end{ex}
@@ -498,28 +498,28 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 	\begin{array}{c}
 	x \\
 	y \\
-	z \\
+	z
 	\end{array}
 	\right] =
 	\left[
 	\begin{array}{c}
 	x \\
 	2x +3z \\
-	z \\
+	z
 	\end{array}
 	\right] = x \cdot
 	\left[
 	\begin{array}{c}
 	1 \\
 	2 \\
-	0 \\
+	0
 	\end{array}
 	\right] + z \cdot
 	\left[
 	\begin{array}{c}
 	0 \\
 	3 \\
-	1 \\
+	1
 	\end{array}
 	\right],
 	\end{equation} isto é,
@@ -529,14 +529,14 @@ Na prática, para decidir se um subconjunto $H$ é subespaço de $V$, não preci
 	\begin{array}{c}
 	1 \\
 	2 \\
-	0 \\
+	0
 	\end{array}
 	\right],
 	\left[
 	\begin{array}{c}
 	0 \\
 	3 \\
-	1 \\
+	1
 	\end{array}
 	\right]
 	\right\}
@@ -582,7 +582,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	\begin{array}{ccccc}
 	-3 & 6  & -1 & 1 & -7 \\
 	1  & -2 & 2  & 3 & -1 \\
-	2  & -4 & 5  & 8 & -4 \\
+	2  & -4 & 5  & 8 & -4
 	\end{array}
 	\right]
 	\end{equation} Nós queremos determinar as soluções do sistema linear homogêneo
@@ -591,7 +591,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	\begin{array}{ccccc}
 	-3 & 6  & -1 & 1 & -7 \\
 	1  & -2 & 2  & 3 & -1 \\
-	2  & -4 & 5  & 8 & -4 \\
+	2  & -4 & 5  & 8 & -4
 	\end{array}
 	\right]
 	\left[
@@ -600,14 +600,14 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	x_2 \\
 	x_3 \\
 	x_4 \\
-	x_5 \\
+	x_5
 	\end{array}
 	\right] =
 	\left[
 	\begin{array}{c}
 	0 \\
 	0 \\
-	0 \\
+	0
 	\end{array}
 	\right].
 	\end{equation} Poderíamos escrever a matriz associada aumentada e escalonar, mas como este é um sistema homogêneo, não faz diferença escrevermos a última coluna com os zeros ou não (nenhuma operação elementar fará com que desapareçam os zeros). Logo, vamos obter a forma escalonada reduzida da matriz $A$ (contas como exercício):
@@ -616,14 +616,14 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	\begin{array}{ccccc}
 	-3 & 6  & -1 & 1 & -7 \\
 	1  & -2 & 2  & 3 & -1 \\
-	2  & -4 & 5  & 8 & -4 \\
+	2  & -4 & 5  & 8 & -4
 	\end{array}
 	\right] \sim
 	\left[
 	\begin{array}{ccccc}
 	1 & -2 & 0  & -1 & 3  \\
 	0 & 0  & 1  & 2  & -2 \\
-	0 & 0  & 0  & 0  & 0  \\
+	0 & 0  & 0  & 0  & 0
 	\end{array}
 	\right] \sim
 	\left\{
@@ -641,7 +641,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	x_2 \\
 	x_3 \\
 	x_4 \\
-	x_5 \\
+	x_5
 	\end{array}
 	\right] =
 	\left[
@@ -650,7 +650,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	x_2 \\
 	- 2 x_4 + 2 x_5 \\
 	x_4 \\
-	x_5 \\
+	x_5
 	\end{array}
 	\right] = x_2
 	\left[
@@ -659,7 +659,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	1 \\
 	0 \\
 	0 \\
-	0 \\
+	0
 	\end{array}
 	\right] + x_4
 	\left[
@@ -668,7 +668,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	0 \\
 	-2 \\
 	1 \\
-	0 \\
+	0
 	\end{array}
 	\right] + x_5
 	\left[
@@ -677,7 +677,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	0 \\
 	2 \\
 	0 \\
-	1 \\
+	1
 	\end{array}
 	\right].
 	\end{equation} Isto significa que
@@ -690,7 +690,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	1 \\
 	0 \\
 	0 \\
-	0 \\
+	0
 	\end{array}
 	\right],
 	\left[
@@ -699,7 +699,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	0 \\
 	-2 \\
 	1 \\
-	0 \\
+	0
 	\end{array}
 	\right],
 	\left[
@@ -708,7 +708,7 @@ A (a\vec{u} + b\vec{v}) = a \cdot A\vec{u} + b\cdot A\vec{v} = a\cdot \vec{0} + 
 	0 \\
 	2 \\
 	0 \\
-	1 \\
+	1
 	\end{array}
 	\right]\right\}. \ \lhd
 	\end{equation}
