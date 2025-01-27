@@ -767,6 +767,51 @@ T(\vec{x}) = \left[
 \end{equation}
 \end{ex}
 
+O mesmo resultado pode ser alcançado algebricamente através de identidades trigonométricas simples, para isso considere um vetor \(\mathbf{v} = \begin{pmatrix} x \\ y \end{pmatrix}\) no plano.
+
+1. Suponha que o vetor \(\mathbf{v}\) faz um ângulo \(\phi\) com o eixo \(x\). Então, suas coordenadas podem ser expressas como:
+   \[
+   x = r \cos(\phi), \quad y = r \sin(\phi),
+   \]
+   onde \(r = \sqrt{x^2 + y^2}\) é o comprimento do vetor.
+
+2. Aplicando uma rotação por um ângulo \(\theta\), o novo ângulo com o eixo \(x\) será \(\phi + \theta\) e as novas coordenadas \((x', y')\) serão dadas por:
+   \[
+   x' = r \cos(\phi + \theta), \quad y' = r \sin(\phi + \theta).
+   \]
+
+3. Tomando as identidades para \(\cos(\phi + \theta)\) e \(\sin(\phi + \theta)\):
+   \[
+   \cos(\phi + \theta) = \cos(\phi)\cos(\theta) - \sin(\phi)\sin(\theta),
+   \]
+   \[
+   \sin(\phi + \theta) = \sin(\phi)\cos(\theta) + \cos(\phi)\sin(\theta).
+   \]
+   Substituindo nas expressões para \(x'\) e \(y'\), obtemos:
+   \[
+   x' = r \cos(\phi)\cos(\theta) - r \sin(\phi)\sin(\theta),
+   \]
+   \[
+   y' = r \sin(\phi)\cos(\theta) + r \cos(\phi)\sin(\theta).
+   \]
+
+4. Como \(x = r \cos(\phi)\) e \(y = r \sin(\phi)\), podemos reescrever \(x'\) e \(y'\):
+   \[
+   x' = x \cos(\theta) - y \sin(\theta),
+   \]
+   \[
+   y' = y \cos(\theta) + x \sin(\theta).
+   \]
+
+5. O sistema de equações acima podem ser então escrito na forma matricial:
+   \[
+   \begin{pmatrix} x' \\ y' \end{pmatrix} = \begin{pmatrix} \cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{pmatrix} \begin{pmatrix} x \\ y \end{pmatrix}.
+   \]
+   Portanto, a matriz de rotação \(T(\theta)\) é:
+   \[
+   T(\theta) = \begin{pmatrix} \cos(\theta) & -\sin(\theta) \\ \sin(\theta) & \cos(\theta) \end{pmatrix}.
+   \]
+
 \subsection*{Exercícios resolvidos}
 
 \construirExeresol
