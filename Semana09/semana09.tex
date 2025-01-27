@@ -82,14 +82,14 @@ A =
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33} \\
+a_{31} & a_{32} & a_{33}
 \end{bmatrix}.
 \end{equation} Suponhamos que $a_{11} \neq 0$. Por escalonamento:
 \begin{equation}
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33} \\
+a_{31} & a_{32} & a_{33}
 \end{bmatrix} \xrightarrow[- \frac{a_{31}}{a_{11}} \ell_1 + \ell_3 \text{ em } \ell_3]{- \frac{a_{21}}{a_{11}} \ell_1 + \ell_2 \text{ em } \ell_2}
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\ && \\
@@ -101,16 +101,16 @@ a_{11} & a_{12} & a_{13} \\ && \\
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33} \\
+a_{31} & a_{32} & a_{33}
 \end{bmatrix} \sim
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 0 & a_{11} a_{22} - a_{21} a_{12} & a_{11} a_{23} - a_{21} a_{13} \\
-0 & a_{11} a_{32} - a_{31} a_{12} & a_{11} a_{33} - a_{31} a_{13} \\
+0 & a_{11} a_{32} - a_{31} a_{12} & a_{11} a_{33} - a_{31} a_{13}
 \end{bmatrix} \ \ \stackrel{\text{notação}}{===} \ \  \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 0 & A_{33} & A_{32} \\
-0 & A_{23} & A_{22} \\
+0 & A_{23} & A_{22}
 \end{bmatrix}.
 \end{equation} Em breve (esperamos que) ficará clara a escolha da notação acima. O passo seguinte no escalonamento será, supondo que $A_{33} \neq 0$, eliminar o elemento $A_{23}$ que está na posição $32$. Temos assim
 \begin{equation}\label{notaminors}
@@ -118,17 +118,17 @@ A =
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33} \\
+a_{31} & a_{32} & a_{33}
 \end{bmatrix} \sim
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 0 & A_{33} & A_{32} \\
-0 & A_{23} & A_{22} \\
+0 & A_{23} & A_{22}
 \end{bmatrix} \sim
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 0 & A_{33} & A_{32} \\
-0 & 0 & A_{22} A_{33} - A_{32} A_{23} \\
+0 & 0 & A_{22} A_{33} - A_{32} A_{23}
 \end{bmatrix}.
 \end{equation}
 Nosso raciocínio é que nossa matriz $A$ é uma matriz invertível se esta última coluna possuir uma posição de pivô, isto é, se $A_{22} A_{33} - A_{32} A_{23} \neq 0$. Este último pode ser escrito mais explicitamente como
@@ -154,13 +154,13 @@ Observamos que a expressão acima está cheia de simetrias, por exemplo, cada um
 \det A & = a_{11} \big( a_{22} a_{33} - a_{32} a_{23} \big) - a_{12} \big( a_{21} a_{33} + a_{31} a_{23} \big) + a_{13} \big( a_{21} a_{32} - a_{31} a_{22}\big). \\
        & = a_{11} \cdot \det \begin{bmatrix}
         a_{22} & a_{23} \\
-        a_{32} & a_{33} \\
+        a_{32} & a_{33}
        \end{bmatrix} - a_{12} \cdot \det \begin{bmatrix}
        a_{21}  & a_{23} \\
-       a_{31}  & a_{33} \\
+       a_{31}  & a_{33}
        \end{bmatrix} +  a_{13} \cdot \det \begin{bmatrix}
        a_{21} & a_{22} \\
-       a_{31} & a_{32} \\
+       a_{31} & a_{32}
        \end{bmatrix}
 \end{split}
 \end{equation}
@@ -169,16 +169,16 @@ Esta última fórmula (que é apenas uma outra forma de escrever a nossa defini�
 \det \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33} \\
+a_{31} & a_{32} & a_{33}
 \end{bmatrix} = a_{11} \cdot \det \begin{bmatrix}
 a_{22} & a_{23} \\
-a_{32} & a_{33} \\
+a_{32} & a_{33}
 \end{bmatrix} - a_{12} \cdot \det \begin{bmatrix}
 a_{21}  & a_{23} \\
-a_{31}  & a_{33} \\
+a_{31}  & a_{33}
 \end{bmatrix} +  a_{13} \cdot \det \begin{bmatrix}
 a_{21} & a_{22} \\
-a_{31} & a_{32} \\
+a_{31} & a_{32}
 \end{bmatrix}.
 \end{equation} Podemos pensar como segue:
 \begin{itemize}
@@ -188,16 +188,16 @@ a_{31} & a_{32} \\
 \begin{bmatrix}
 a_{11} & a_{12} & a_{13} \\
 a_{21} & a_{22} & a_{23} \\
-a_{31} & a_{32} & a_{33} \\
+a_{31} & a_{32} & a_{33}
 \end{bmatrix} \quad \rightsquigarrow \quad
 \begin{bmatrix}
 \square & \square & \square \\
 \square & a_{22}  & a_{23} \\
-\square & a_{32}  & a_{33} \\
+\square & a_{32}  & a_{33}
 \end{bmatrix} \quad \rightsquigarrow \quad A_{11} \stackrel{\text{def}}{=}
 \begin{bmatrix}
 a_{22}  & a_{23} \\
-a_{32}  & a_{33} \\
+a_{32}  & a_{33}
 \end{bmatrix}.
 \end{equation} Denotamos por $A_{11}$ a matriz obtida ao remover a linha e a coluna no elemento $a_{11}$.
 \item Em seguida, vamos para o segundo elemento da primeira linha, que é $a_{12}$. \textit{Alteramos} o sinal e multiplicamos pelo determinante menor da matriz $A_{12}$, obtida de $A$ ao eliminar a linha e a coluna de $a_{12}$:
@@ -205,11 +205,11 @@ a_{32}  & a_{33} \\
 \begin{bmatrix}
 \square & \square & \square \\
 a_{21}  & \square & a_{23} \\
-a_{31}  & \square & a_{33} \\
+a_{31}  & \square & a_{33}
 \end{bmatrix} \quad \rightsquigarrow \quad A_{12} \stackrel{\text{def}}{=}
 \begin{bmatrix}
 a_{21}  & a_{23} \\
-a_{31}  & a_{33} \\
+a_{31}  & a_{33}
 \end{bmatrix}.
 \end{equation}
 \item Finalmente consideramos $a_{31}$. \textit{Não alteramos} o sinal e multiplicamos pelo determinante menor da matriz $A_{13}$, obtida de $A$ ao eliminar a linha e a coluna de $a_{13}$:
@@ -217,11 +217,11 @@ a_{31}  & a_{33} \\
 \begin{bmatrix}
 \square & \square & \square \\
 a_{21}  & a_{22}  & \square \\
-a_{31}  & a_{32}  & \square \\
+a_{31}  & a_{32}  & \square
 \end{bmatrix} \quad \rightsquigarrow \quad A_{13} \stackrel{\text{def}}{=}
 \begin{bmatrix}
 a_{21}  & a_{22} \\
-a_{31}  & a_{32} \\
+a_{31}  & a_{32}
 \end{bmatrix}.
 \end{equation}
 \item Podemos então escrever
@@ -343,7 +343,7 @@ A =
 \begin{bmatrix}
 -1 & 1 & 4 \\
  3 & 0 & -1 \\
- 1 & 0 & 3 \\
+ 1 & 0 & 3
 \end{bmatrix}.
 \end{equation} Pela nossa definição
 \begin{equation}
@@ -351,24 +351,24 @@ A =
 \begin{matrix}
 -1 & 1 & 4 \\
 3 & 0 & -1 \\
-1 & 0 & 3 \\
+1 & 0 & 3
 \end{matrix}
 \right| =
 -1 \left|
 \begin{matrix}
  0 & -1 \\
- 0 & 3 \\
+ 0 & 3
 \end{matrix}
 \right| - 1 \left|
 \begin{matrix}
 3  & -1 \\
-1  & 3 \\
+1  & 3
 \end{matrix}
 \right| + 4
 \left|
 \begin{matrix}
 3 & 0  \\
-1 & 0  \\
+1 & 0
 \end{matrix}
 \right| = (-1)\cdot 0 - 1 (9 + 1) + 4 \cdot 0 = -10.
 \end{equation} Uma boa escolha seria uma linha ou coluna que tenha o maior número de zeros! Pois assim, economizamos tanto nos cálculos quanto na escrita. Por exemplo, escolhemos a segunda coluna. Para saber o sinal adequado, podemos proceder da seguinte maneira: começando na posição $11$ com o sinal ``$+$'', vamos alternando o sinal até completar a segunda coluna:
@@ -402,13 +402,13 @@ A =
 \begin{matrix}
 -1 & 1 & 4 \\
 3 & 0 & -1 \\
-1 & 0 & 3 \\
+1 & 0 & 3
 \end{matrix}
 \right| = -1 \cdot
 \left|
 \begin{matrix}
 3  & -1 \\
-1  & 3 \\
+1  & 3
 \end{matrix}
 \right| + 0 - 0 = -1 (9 + 1) = -10.
 \end{equation} Observe que nem escrevemos as determinantes menores que estão multiplicados por zero. De fato, nem precisaríamos ter escrito os zeros, apenas o fizemos para exemplificar os sinais alternando de forma correta.
@@ -429,19 +429,19 @@ A segunda coluna, neste caso, era a melhor escolha para o cálculo do determinan
 \begin{matrix}
 -1 & 1 & 4 \\
 3 & 0 & -1 \\
-1 & 0 & 3 \\
+1 & 0 & 3
 \end{matrix}
 \right| = 1 \cdot
 \left|
 \begin{matrix}
  1 & 4 \\
- 0 & -1 \\
+ 0 & -1
 \end{matrix}
 \right| - 0 + 3 \cdot
 \left|
 \begin{matrix}
 -1 & 1 \\
-3 & 0  \\
+3 & 0
 \end{matrix}
 \right| = 1 \cdot (-1) + 3 \cdot (-3) = -10.
 \end{equation} Como exercício, calcule o determinante utilizando outras linhas ou colunas$. \ \lhd$
@@ -499,7 +499,7 @@ Assim como na seção anterior, podemos utilizar qualquer linha ou coluna desde 
 	+ &  &  &  \\
 	- &  + & - & + \\
 	 &     &   & \\
-	 &     &   & \\
+	 &     &   &
 	\end{bmatrix}\rightsquigarrow \text{ sinais segunda linha são }
 	\begin{bmatrix}
 	- & + & - & +
@@ -571,7 +571,7 @@ A =
 1 & -7 & -5 & 0 & 0 \\
 3 & 8 & 6 & 0 & 0 \\
 0 & 7 & 5 & 4 & 0 \\
-2 & 3 & 1 & 1 & 1 \\
+2 & 3 & 1 & 1 & 1
 \end{bmatrix}.
 \end{equation} Começamos pela última coluna, pois esta possui apenas uma entrada não nula. Assim, nosso determinante já é reduzido a calcular apenas um determinante de ordem $4 \times 4$ (em contraste com calcular cinco determinantes $4\times 4$).
 
@@ -581,8 +581,8 @@ Análise dos sinais da quinta coluna:
 + & - & + & - & + \\
  &&&& - \\
  &&&& + \\
- &&&& - \\
- &&&& + \\
+ &&&& - \|
+ &&&& +
 \end{bmatrix}\rightsquigarrow \text{ sinais quinta coluna são }
 \begin{bmatrix}
 + \\ - \\ + \\ - \\ +
@@ -595,7 +595,7 @@ Análise dos sinais da quinta coluna:
 1 & -7 & -5 & 0 & 0 \\
 3 & 8 & 6 & 0 & 0 \\
 0 & 7 & 5 & 4 & 0 \\
-2 & 3 & 1 & 1 & 1 \\
+2 & 3 & 1 & 1 & 1
 \end{matrix}
 \right| = 0 - 0 + 0 - 0 + 1\cdot
 \left|
@@ -603,7 +603,7 @@ Análise dos sinais da quinta coluna:
 2 & 0 & 0 & 8  \\
 1 & -7 & -5 & 0  \\
 3 & 8 & 6 & 0  \\
-0 & 7 & 5 & 4  \\
+0 & 7 & 5 & 4
 \end{matrix}
 \right| =
 \left|
@@ -611,7 +611,7 @@ Análise dos sinais da quinta coluna:
 2 & 0 & 0 & 8  \\
 1 & -7 & -5 & 0  \\
 3 & 8 & 6 & 0  \\
-0 & 7 & 5 & 4  \\
+0 & 7 & 5 & 4
 \end{matrix}
 \right|.
 \end{equation} Em seguida, escolhemos (por exemplo) a primeira linha da nova matriz $4 \times 4$:
@@ -621,20 +621,20 @@ Análise dos sinais da quinta coluna:
 2 & 0 & 0 & 8  \\
 1 & -7 & -5 & 0  \\
 3 & 8 & 6 & 0  \\
-0 & 7 & 5 & 4  \\
+0 & 7 & 5 & 4
 \end{matrix}
 \right| = 2 \cdot\left|
 \begin{matrix}
  -7 & -5 & 0  \\
  8 & 6 & 0  \\
- 7 & 5 & 4  \\
+ 7 & 5 & 4
 \end{matrix}
 \right| - 8 \cdot
 \left|
 \begin{matrix}
 1 & -7 & -5   \\
 3 & 8 & 6   \\
-0 & 7 & 5   \\
+0 & 7 & 5
 \end{matrix}
 \right|.
 \end{equation} Finalmente, temos dois determinantes de matrizes de ordem $3 \times 3$ para calcular:
@@ -645,18 +645,18 @@ Análise dos sinais da quinta coluna:
 \left|
 \begin{matrix}
 -7 & -5 \\
-8 & 6   \\
+8 & 6
 \end{matrix}
 \right|  - 8 \left(  \left|
 \begin{matrix}
 8 & 6   \\
-7 & 5   \\
+7 & 5
 \end{matrix}
 \right| - 3 \cdot
 \left|
 \begin{matrix}
 -7 & -5   \\
-7 & 5   \\
+7 & 5
 \end{matrix}
 \right|
 \right) \\
@@ -818,7 +818,7 @@ Vamos calcular o determinante da matriz $A$ do Exemplo \ref{exp:det1} utilizando
 1  & 0 & -1   & 0 \\
 0  & 3 & -2   & 4 \\
 0  & 0 & 2    & 5 \\
-0  & 0 & 0    & -45 \\
+0  & 0 & 0    & -45
 \end{matrix}
 \right| = -\frac{1}{9} \cdot 1 \cdot 3 \cdot 2 \cdot (-45) = 30. \ \lhd
 \end{equation}
@@ -896,7 +896,7 @@ No exemplo anterior, vimos como calcular o determinante utilizando escalonamento
 \left| \begin{matrix}
 1 & 3 & 4 \\
 0 & 1 & 3 \\
-0 & 0 & -15 \\
+0 & 0 & -15
 \end{matrix}
 \right| = -2 \cdot(-15) = 30.\ \lhd
 \end{equation}
@@ -911,7 +911,7 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 1 & -7 & -5 & 0 & 0 \\
 3 & 8 & 6 & 0 & 0 \\
 0 & 7 & 5 & 4 & 0 \\
-2 & 3 & 1 & 1 & 1 \\
+2 & 3 & 1 & 1 & 1
 \end{matrix}
 \right| =
 \left|
@@ -919,7 +919,7 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 2 & 0 & 0 & 8 \\
 1 & -7 & -5 & 0  \\
 3 & 8 & 6 & 0  \\
-0 & 7 & 5 & 4  \\
+0 & 7 & 5 & 4
 \end{matrix}
 \right| \stackrel{-2\ell_4 + \ell_1 \text{ em } \ell_1}{=}
 \left|
@@ -927,7 +927,7 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 2 & -14 & -10 & 0 \\
 1 & -7 & -5 & 0  \\
 3 & 8 & 6 & 0  \\
-0 & 7 & 5 & 4  \\
+0 & 7 & 5 & 4
 \end{matrix}
 \right| =  4 \cdot
 \left|
@@ -945,14 +945,14 @@ Por fim, recalculamos também o determinante da matriz do Exemplo \ref{exp:det2}
 1 & -7 & -5 & 0 & 0 \\
 3 & 8 & 6 & 0 & 0 \\
 0 & 7 & 5 & 4 & 0 \\
-2 & 3 & 1 & 1 & 1 \\
+2 & 3 & 1 & 1 & 1
 \end{matrix}
 \right| = 4 \cdot
 \left|
 \begin{matrix}
 0 &  0 &  0  \\
 1 & -7 & -5  \\
-0 & 29 & -9   \\
+0 & 29 & -9
 \end{matrix}
 \right| 4 \cdot 0 = 0.
 \end{equation} Nota: antes de eliminarmos o $3$, já reparamos que o determinante vai ser nulo, graças à propriedade $(ii). \ \lhd$
@@ -996,7 +996,7 @@ J\varphi \big(\vec{u}\big) = \left|
 \frac{\partial \phi_2}{\partial x_1} & \frac{\partial \phi_2}{\partial x_2} & \cdots & \frac{\partial \phi_2}{\partial x_n} \\
 \vdots & \vdots & \ddots & \vdots \\
  &&& \\
-\frac{\partial \phi_n}{\partial x_1} & \frac{\partial \phi_n}{\partial x_2} & \cdots & \frac{\partial \phi_n}{\partial x_n} \\
+\frac{\partial \phi_n}{\partial x_1} & \frac{\partial \phi_n}{\partial x_2} & \cdots & \frac{\partial \phi_n}{\partial x_n}
 \end{bmatrix}
 \right|
 \end{equation}
@@ -1019,11 +1019,11 @@ x = \phi_1 (r, \theta) = r\cos \theta, \quad y = \phi_2 (r, \theta) = r \sen \th
 \begin{bmatrix}
 \frac{\partial \phi_1}{\partial r} & \frac{\partial \phi_1}{\partial \theta} \\
 & \\
-\frac{\partial \phi_2}{\partial r} & \frac{\partial \phi_2}{\partial \theta} \\
+\frac{\partial \phi_2}{\partial r} & \frac{\partial \phi_2}{\partial \theta}
 \end{bmatrix} =
 \begin{bmatrix}
 \cos \theta & -r \sen \theta \\
-\sen \theta & r \cos \theta \\
+\sen \theta & r \cos \theta
 \end{bmatrix}
  \text{ cujo Jacobiano é } \ J\phi = r \cos^2 \theta + r \sen^2 \theta = r.
 \end{equation} Portanto, a fórmula de mudança de variáveis implica que, em coordenadas polares:
@@ -1052,12 +1052,12 @@ z = \phi_3 (\rho, \theta, \phi) = \rho \cos \phi.
 & & \\
 \frac{\partial \phi_2}{\partial \rho} & \frac{\partial \phi_2}{\partial \theta} & \frac{\partial \phi_2}{\partial \phi} \\
 & & \\
-\frac{\partial \phi_3}{\partial \rho} & \frac{\partial \phi_3}{\partial \theta} & \frac{\partial \phi_3}{\partial \phi} \\
+\frac{\partial \phi_3}{\partial \rho} & \frac{\partial \phi_3}{\partial \theta} & \frac{\partial \phi_3}{\partial \phi}
 \end{bmatrix} =
 \begin{bmatrix}
 \sen \phi \cos \theta & -\rho \sen \phi \sen \theta   & \rho \cos \phi \cos \theta \\
 \sen \phi \sen \theta &  \rho \sen \phi \cos \theta   & \rho \cos \phi \sen \theta  \\
-\cos \phi         &            0                  &    -\rho \sen \phi  \\
+\cos \phi         &            0                  &    -\rho \sen \phi
 \end{bmatrix}.
 \end{equation} cujo Jacobiano é (usando, por exemplo a segunda coluna para expandir em cofatores)
 
@@ -1067,13 +1067,13 @@ J\phi & = \left| \rho \sen \phi \sen \theta
 \left|
 \begin{matrix}
 \sen \phi \sen \theta     & \rho \cos \phi \sen \theta  \\
-\cos \phi                 &    -\rho \sen \phi  \\
+\cos \phi                 &    -\rho \sen \phi
 \end{matrix}
 \right| + \rho \sen \phi \cos \theta
 \left|
 \begin{matrix}
 \sen \phi \cos \theta      & \rho \cos \phi \cos \theta \\
-\cos \phi                  &    -\rho \sen \phi  \\
+\cos \phi                  &    -\rho \sen \phi
 \end{matrix}
 \right| \right|  \\
 & = \left| \rho \sen \phi \sen \theta \Big(- \rho \sen^2 \phi \sen \theta - \rho \cos^2 \phi \sen \theta \Big)  + \rho \sen \phi \cos \theta \Big(- \rho \sen^2 \phi \cos \theta - \rho \cos^2 \phi \cos \theta \Big) \right|  \\
